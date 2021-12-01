@@ -363,6 +363,11 @@ $(document).ready(function(){
         
         // Brand Sprint Color Animation - Ends Here //
 var styles = `
+
+.header {
+    mix-blend-mode: difference;
+}
+
 .brand-sprint {
   background-color: #3821c3;
   -webkit-transition: background-color 200ms ease;
