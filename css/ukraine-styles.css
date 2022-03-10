@@ -25,7 +25,7 @@
     margin: 0px;
     color: #ffc300;
     font-size: 134px;
-    line-height: 110%;
+    line-height: 100%;
     font-family: degular;
     font-weight: 600;
     font-style: normal;
@@ -170,6 +170,7 @@ body {
 @media (max-width: 480px) {
     .heading {
         font-size: 80px;
+
     }
 }
 
