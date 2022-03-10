@@ -132,6 +132,7 @@ body {
 
     .heading {
         font-size: 120px;
+	  line-height: 90%;
     }
 
     .content {
