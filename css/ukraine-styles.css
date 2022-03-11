@@ -9,6 +9,24 @@
     background-color: #353cec;
 }
 
+.btn {
+    margin: 0px;
+    padding-top: 12px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    background-color: #353cec;
+    border-style: none;
+    background-color: #ffc300;
+    color: #353cec;
+    font-size: 20px;
+    text-decoration: none;
+    position: fixed;
+    right: 24px;
+    top: 26px;
+    cursor: pointer;
+}
+
 .section {
     background-color: #353cec;
     padding-top: 120px;
@@ -29,6 +47,10 @@
     font-family: degular;
     font-weight: 600;
     font-style: normal;
+}
+
+.font-yellow {
+    color: #ffc300;
 }
 
 .divider {
