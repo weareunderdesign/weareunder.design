@@ -8,6 +8,12 @@ body {
     font-weight: 400;
 }
 
+.degular { 
+   font-family: degular;
+    font-weight: 600;
+    font-style: normal;
+}
+
 .hero-section {
     height: 100vh;
     background-image: url('../images/hero-section-demo.jpg');
