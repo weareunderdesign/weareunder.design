@@ -70,6 +70,18 @@ $('.sidebar').on('mouseout',function() {
   });
 });
 
+$('.close-menu').on('click',function() {
+$('.sidebar').css({
+'display':'none'+' ',
+});
+$('#menu-wrapper').css({
+'display':'block'+' ',
+});
+$('#logo').css({
+'display':'block'+' ',
+});
+});
+
 // Lottie Animation
 
 

@@ -284,10 +284,26 @@ img {
         font-size: 40px;
         line-height: 48px;
         margin-bottom: 8px;
+        text-align: center;
     }
 
     .sidebar-project-link {
     color: white;
+    }
+
+    .close-menu {
+        position: fixed;
+        right: 40px;
+        bottom: 24px;
+        background-image: url('../images/close-menu.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+    }
+
+    .sidebar:hover {
+        color: white;
     }
 
     .footer {
@@ -310,21 +326,21 @@ img {
     .ukraine {
         width: 200px;
         height: 200px;
-        bottom: 350px;
-        right: 170px;
+        bottom: 170px;
+        right: 30px;
     }
 
     .work {
-        width: 150px;
-        height: 150px;
-        top: 8vw;
+        width: 120px;
+        height: 110px;
+        top: 5vw;
     }
 
     .sprint-menu {
         width: 180px;
         height: 180px;
-        bottom: 290px;
-        left: 15vw;
+        bottom: 310px;
+        left: 40px;
     }
 
     .cursor {
