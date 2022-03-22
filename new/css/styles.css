@@ -279,9 +279,24 @@ img {
         display: auto;
     }
 
+    .sidebar {
+        width: 100%;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 8px;
+    }
+
+    .sidebar-project-link {
+    color: white;
+    }
+
     .footer {
         flex-direction: column;
         gap: 40px 80px;
+    }
+
+    .f-logo {
+        max-width: 100px;
     }
 
     .section {
@@ -295,7 +310,7 @@ img {
     .ukraine {
         width: 200px;
         height: 200px;
-        bottom: 250px;
+        bottom: 350px;
         right: 170px;
     }
 
@@ -308,8 +323,8 @@ img {
     .sprint-menu {
         width: 180px;
         height: 180px;
-        bottom: 390px;
-        left: 20vw;
+        bottom: 290px;
+        left: 15vw;
     }
 
     .cursor {
