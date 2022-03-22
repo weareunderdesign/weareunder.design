@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:400');
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    line-height: 120%;
+    color: black;
+    font-weight: 400;
+}
+
+.hero-section {
+    height: 100vh;
+    background-image: url('../images/hero-section-demo.jpg');
+    background-size: cover;
+    position: relative;
+    background-position-x: 50%;
+}
+
+.cursor {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.font-size-primary {
+    margin: 0px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding: 40px;
+    background-color: black;
+    color: white;
+    height: 100%;
+    z-index: 19;
+    display: none;
+    overflow: auto;
+}
+
+.sidebar-project-image {
+    display: none;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    padding: 40px;
+    column-gap: 80px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.info-menu {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    bottom: 100px;
+    left: 40px;
+    z-index: 2;
+}
+
+.sprint-menu {
+    width: 250px;
+    height: 250px;
+    background-color: #fd3c2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 20vw;
+    left: 25vw;
+    z-index: 2;
+}
+
+.ukraine {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fec415;
+    color: white;
+    position: absolute;
+    bottom: 6vw;
+    right: 15vw;
+    z-index: 2;
+}
+
+.work {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffbfe1;
+    border-radius: 100%;
+    position: absolute;
+    top: 4vw;
+    right: 4vw;
+    z-index: 2;
+}
+
+.sidebar:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebar-project-link:hover {
+    color: #ffffff;
+}
+
+.about-page {
+    background-image: url('../images/about-hero.png');
+}
+
+.section {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 80px;
+    flex-direction: row;
+}
+
+.box {
+    flex: 0 0 auto;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-40 {
+    gap: 40px 40px;
+}
+
+.logo {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 99;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch
+ }
+
+.hero-animation {
+    position: static;
+    z-index: 1;
+}
+
+.footer-content-wp {
+    display: flex;
+    flex-direction: row;
+    gap: 40px 40px;
+    flex: 1;
+    max-width: 70%;
+}
+
+/* New CSS */
+
+body:hover .cursor {opacity: 100%;}
+.home-body { cursor:none; }
+a {cusror:pointer;}
+a {
+    text-decoration: none;
+}
+
+.cursor {
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    position: fixed;
+    z-index: 99;
+    opacity: 0%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.sidebar-project-link {
+    color: grey;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.project-link {
+    display: inline;
+    color: #000000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.sidebar {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding: 40px;
+    background-color: black;
+    color: white;
+    height: 100%;
+    z-index: 19;
+    display: none;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height:4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+
+@media (max-width: 768px) {
+
+    body { cursor: auto; }
+    a {cusror:pointer;}
+
+    .cursor {
+        display: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 40px 80px;
+    }
+
+    .section {
+        padding: 24px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .ukraine {
+        width: 200px;
+        height: 200px;
+        bottom: 250px;
+        right: 170px;
+    }
+
+    .work {
+        width: 150px;
+        height: 150px;
+        top: 8vw;
+    }
+
+    .sprint-menu {
+        width: 180px;
+        height: 180px;
+        bottom: 390px;
+        left: 20vw;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .info-menu {
+        bottom: 120px;
+    }
+
+    .footer {
+        padding: 24px;
+    }
+
+    .footer-content-wp {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .font-size-primary {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
