@@ -1,0 +1,217 @@
+.brand-sprint-hero {
+    padding: 80px;
+    min-height: 100vh;
+    background-color: rgb(129, 89, 251);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 50%;
+}
+
+.h1 {
+    font-size: 160px;
+    line-height: 80%;
+    margin: 0px;
+}
+
+.h2 {
+    font-size: 75px;
+    line-height: 100%;
+    margin: 0px;
+}
+
+.brand-sprint-black-section {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 80px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-sprint-timeline {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 120px;
+    color: black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.inactive {
+    color: grey;
+}
+
+.is-logo {
+    color: #8159fb;
+}
+
+.is-typo {
+    color: #ffbfe1;
+}
+
+.is-color-palette {
+    color: #fd3c2d;
+}
+
+.is-guidelines {
+    color: #fdc800;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 16px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.get-wp {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.d-margin-40 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+}
+
+.cta {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 100%;
+    background-color: rgb(129, 89, 251);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.is-cta-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.is-left {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.black-font {
+    color: black;
+}
+
+.is-review {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .box {
+        max-width: 100%;
+        row-gap: 0px;
+    }
+
+    .wrapper {
+        gap: 40px 40px;
+    }
+
+    .brand-sprint-hero {
+        padding-top: 120px;
+        padding-right: 24px;
+        padding-bottom: 80px;
+        padding-left: 24px;
+    }
+
+    .brand-sprint-black-section {
+        padding: 24px;
+        min-height: 80vh;
+    }
+
+    .brand-sprint-timeline {
+        padding: 24px;
+        row-gap: 80px;
+    }
+
+    .h1 {
+        font-size: 90px;
+    }
+
+    .is-cta-section {
+        flex-direction: column;
+    }
+
+    .cta {
+        width: 320px;
+        height: 320px;
+    }
+
+    .h2 {
+        padding-top: 0px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width:768px) {
+    .brand-sprint-black-section {
+        padding-top: 80px;
+        padding-right: 24px;
+        padding-bottom: 80px;
+        padding-left: 24px;
+    }
+
+    .brand-sprint-timeline {
+        padding-top: 80px;
+        padding-right: 24px;
+        padding-bottom: 80px;
+        padding-left: 24px;
+    }
+
+    .logo {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        width: 180px;
+    }
+}

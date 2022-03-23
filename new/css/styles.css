@@ -59,7 +59,7 @@ body {
     display: flex;
     padding: 40px;
     column-gap: 80px;
-    max-width: 1440px;
+    max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
     align-items: flex-start;
@@ -69,6 +69,7 @@ body {
 .footer-logo {
     padding: 10px;
     flex: 0 0 auto;
+    max-width: 150px;
 }
 
 img {
@@ -196,7 +197,7 @@ img {
     flex-direction: row;
     gap: 40px 40px;
     flex: 1;
-    max-width: 70%;
+    max-width: 60%;
 }
 
 /* New CSS */
@@ -265,6 +266,17 @@ span {
     line-height: inherit;
 }
 
+#color-animation {
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+#cta-animation {
+  transition-property: background-color;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
 
 ::-webkit-scrollbar {
   width: 4px;
