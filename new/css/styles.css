@@ -317,6 +317,7 @@ span {
 
     .info-menu {
         position: static;
+        flex: 0 0 auto;
     }
 
     .sprint-menu {
@@ -325,18 +326,21 @@ span {
         bottom: 390px;
         left: 20vw;
         position: static;
+        flex: 0 0 auto;
     }
 
     .ukraine {
         width: 200px;
         height: 200px;
         position: static;
+        flex: 0 0 auto;
     }
 
     .work {
         width: 120px;
         height: 120px;
         position: static;
+        flex: 0 0 auto;
     }
 
     .sidebar {
