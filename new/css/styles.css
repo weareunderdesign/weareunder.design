@@ -32,8 +32,8 @@ body {
 
 .font-size-primary {
     margin: 0px;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 42px;
     font-weight: 400;
 }
 
@@ -219,11 +219,13 @@ a {
 
 img {
     display: block;
+    width: 100%;
     max-width: 100%;
 }
 
 .sidebar-project-link {
     color: grey;
+    margin-bottom: 16px;
 }
 
 .project-body {
@@ -257,6 +259,10 @@ img {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+span {
+    line-height: inherit;
 }
 
 
