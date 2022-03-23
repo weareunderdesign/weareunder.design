@@ -75,7 +75,7 @@ $('.sidebar').css({
 'display':'none'+' ',
 });
 $('#menu-wrapper').css({
-'display':'block'+' ',
+'display':'flex'+' ',
 });
 $('#logo').css({
 'display':'block'+' ',
