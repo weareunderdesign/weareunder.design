@@ -17,12 +17,14 @@
 
 .h1 {
     font-size: 160px;
+    font-weight: 500;
     line-height: 80%;
     margin: 0px;
 }
 
 .h2 {
     font-size: 75px;
+    font-weight: 500;
     line-height: 100%;
     margin: 0px;
 }
@@ -143,7 +145,17 @@
     justify-content: flex-start;
 }
 
+.page-heading {
+    position: sticky;
+    top: 24px;
+    left: 0px;
+}
+
 @media (max-width: 768px) {
+
+    .page-heading {
+        position: static;
+    }
     .row {
         flex-direction: column;
     }

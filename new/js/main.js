@@ -110,7 +110,7 @@ $(document).ready(function(){
                             a++;
                             break;
                     }
-            },3000);
+            },6000);
         });
 
 // Lottie Animation - Took from Senseip Project :)

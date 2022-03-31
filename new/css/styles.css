@@ -11,7 +11,7 @@ body {
 
 .degular { 
    font-family: degular;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -268,13 +268,13 @@ span {
 
 #color-animation {
   transition-property: background-color;
-  transition-duration: 200ms;
+  transition-duration: 999ms;
   transition-timing-function: linear;
 }
 
 #cta-animation {
   transition-property: background-color;
-  transition-duration: 200ms;
+  transition-duration: 999ms;
   transition-timing-function: linear;
 }
 
