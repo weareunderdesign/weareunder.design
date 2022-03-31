@@ -224,6 +224,10 @@ img {
     max-width: 100%;
 }
 
+.review-content {
+    display: none;
+}
+
 .sidebar-project-link {
     color: grey;
     margin-bottom: 16px;
