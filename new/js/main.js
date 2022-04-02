@@ -1,6 +1,28 @@
 // New Site JS
+
+const lottieAnimations = [
+  {
+    bg: '../images/hero-red-bg.jpg',
+    animation: 'https://assets2.lottiefiles.com/packages/lf20_b6crvylp.json'
+  },
+  {
+    bg: '../images/hero-pink-bg.jpg',
+    animation: 'https://assets4.lottiefiles.com/packages/lf20_wnwoluzh.json'
+  },
+  {
+    bg: '../images/hero-blue-bg.jpg',
+    animation: 'https://assets1.lottiefiles.com/packages/lf20_r8fqooa8.json'
+  }
+]
+
+const randomIndex = getRandomInt(0, lottieAnimations.length - 1);
+const randomAnimation = lottieAnimations[randomIndex].animation;
+const randomBackground = lottieAnimations[randomIndex].bg;
+
 (function () { "use strict";
- 
+
+
+
 const sidebar = document.getElementsByClassName("sidebar")[0]
 if (sidebar) {
     sidebar.setAttribute("data-ix", "sidebar")
@@ -253,7 +275,7 @@ Main.previewProject = function(id) {
     }
 };
 Main.hideProjects = function() {
-  Main.heroElement.style.backgroundImage = "url(images/hero-section-demo.jpg)";
+  Main.heroElement.style.backgroundImage = "url("+randomBackground+")";
   $('.hero-section svg').show();
 };
 Main.setStopMotionFrame = function(position,sequence) {
@@ -523,12 +545,13 @@ $(document).ready(function(){
 
     }
 
+    
     ScrollLottie({
         target: '.hero-section',
-        path: 'https://assets10.lottiefiles.com/packages/lf20_b6crvylp.json',
+        path: randomAnimation,
         duration: .1,
         speed: 'medium'
-    })
+    });
     
 const animations = $(".lottie-animation")
 animations.map((index, item) => {
@@ -540,3 +563,9 @@ autoplay: true,
 path: $(item).attr('animation')
 });
 })
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
