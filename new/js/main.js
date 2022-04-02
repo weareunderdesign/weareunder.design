@@ -15,6 +15,57 @@ const lottieAnimations = [
   }
 ]
 
+
+
+var newq;
+let h,w,nh,nw,s; 
+
+function newPosition(){   
+  h = window.innerHeight - 50;
+  w = window.innerWidth - 50;
+  nh = Math.floor(Math.random() * h);
+  nw = Math.floor(Math.random() * w);
+  s = Math.floor(Math.random()*7000) + 500
+  return [nh,nw,s];       
+}
+
+var circ = document.querySelectorAll('.circle');
+circ.forEach(function circ(myclass) {
+  startCircleAnimation(myclass, circ);
+});
+
+
+
+$(document).on('mouseenter', '.circle', function() {
+  console.log('stop')
+  $(this).addClass('stoped');
+  $(this).stop();
+});
+
+$(document).on('mouseleave', '.circle', function() {
+  var that = this
+  $(this).removeClass('stoped');
+  var circ = document.querySelectorAll('.circle');
+  circ.forEach(function circ(myclass) {
+    if (myclass.className === that.className) {
+      startCircleAnimation(myclass, circ);
+    }
+   
+  });
+});
+
+function startCircleAnimation(circle, circ) {
+  var newq = newPosition();
+  $(circle).animate({ 
+    top: newq[0], left: newq[1] 
+    },
+    newq[2],   function(){
+    circ(circle);        
+  });
+}
+
+
+
 const randomIndex = getRandomInt(0, lottieAnimations.length - 1);
 const randomAnimation = lottieAnimations[randomIndex].animation;
 const randomBackground = lottieAnimations[randomIndex].bg;
