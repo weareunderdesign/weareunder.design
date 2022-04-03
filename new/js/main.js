@@ -611,6 +611,43 @@ $(document).ready(function(){
     setTimeout(() => {
         window.dispatchEvent(new Event('resize'));
     }, 1)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 10)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 50)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 100)
+    
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 200)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 500)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 700)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 1000)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 1500)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 2000)
+    
     
 const animations = $(".lottie-animation")
 animations.map((index, item) => {
