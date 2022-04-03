@@ -16,11 +16,13 @@ body {
 }
 
 .hero-section {
-    height: 100vh;
-    background-image: url('../images/hero-section-demo.jpg');
+    height: auto!important;
     background-size: cover;
     position: relative;
     background-position-x: 50%;
+}
+.hero-section.show-project {
+    height: 1100vh!important;
 }
 
 .cursor {
@@ -143,7 +145,7 @@ img {
 }
 
 .sidebar-project-link:hover {
-    color: #ffffff;
+    color: gray;
 }
 
 .about-page {
@@ -229,7 +231,7 @@ img {
 }
 
 .sidebar-project-link {
-    color: grey;
+    color: #fff;
     margin-bottom: 16px;
 }
 
@@ -308,14 +310,22 @@ span {
         display: auto;
     }
 
+    .hero-section svg {
+        position: fixed;
+        top: 0;
+        width: auto!important;
+        height: 82vh!important;
+        margin: 0 -82%;
+    }
+
     .menu-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        row-gap: 16px;
-        padding-bottom: 16px;
-        padding-top: 16px;
+        row-gap: 10px;
+        padding-bottom: 10px;
+        padding-top: 110px;
         height: 100%;
     }
 
@@ -325,8 +335,8 @@ span {
     }
 
     .sprint-menu {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
         bottom: 390px;
         left: 20vw;
         position: static;
@@ -334,8 +344,8 @@ span {
     }
 
     .ukraine {
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         position: static;
         flex: 0 0 auto;
     }
@@ -391,24 +401,10 @@ span {
         width: 100%;
     }
 
-    .ukraine {
-        width: 200px;
-        height: 200px;
-        bottom: 170px;
-        right: 30px;
-    }
-
     .work {
         width: 120px;
         height: 110px;
         top: 5vw;
-    }
-
-    .sprint-menu {
-        width: 180px;
-        height: 180px;
-        bottom: 310px;
-        left: 40px;
     }
 
     .cursor {
