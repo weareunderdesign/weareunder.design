@@ -8,13 +8,13 @@ function isMobile() {
 
 const lottieAnimations = [
   {
-    animation: 'https://weareunder.design/new/animations/animation_1.json'
+    animation: 'https://weareunder.design/animations/animation_1.json'
   },
   {
-    animation: 'https://weareunder.design/new/new/animations/animation_1.json'
+    animation: 'https://weareunder.design/animations/animation_1.json'
   },
   {
-    animation: 'https://weareunder.design/new/animations/animation_1.json'
+    animation: 'https://weareunder.design/animations/animation_1.json'
   }
 ]
 
@@ -647,6 +647,14 @@ $(document).ready(function(){
     setTimeout(() => {
         window.dispatchEvent(new Event('resize'));
     }, 2000)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 2500)
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 3000)
     
     
 const animations = $(".lottie-animation")
