@@ -144,10 +144,6 @@ img {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.sidebar-project-link:hover {
-    color: gray;
-}
-
 .section {
     padding: 80px;
     display: flex;
