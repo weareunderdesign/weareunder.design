@@ -103,122 +103,8 @@ Main.init = function() {
     Main.heroElement = window.document.getElementsByClassName("hero-section")[0];
     Main.projectsElement = window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
-    if(window.document.getElementById("sequence" + 1) != null) {
-        var seq = { images : [], id : "sequence" + 1};
-        Main.animations.push(seq);
-        var key = seq.id;
-        var _this = Main.animationMap;
-        if(__map_reserved[key] != null) {
-            _this.setReserved(key,seq);
-        } else {
-            _this.h[key] = seq;
-        }
-    }
-    if(window.document.getElementById("sequence" + 2) != null) {
-        var seq1 = { images : [], id : "sequence" + 2};
-        Main.animations.push(seq1);
-        var key1 = seq1.id;
-        var _this1 = Main.animationMap;
-        if(__map_reserved[key1] != null) {
-            _this1.setReserved(key1,seq1);
-        } else {
-            _this1.h[key1] = seq1;
-        }
-    }
-    if(window.document.getElementById("sequence" + 3) != null) {
-        var seq2 = { images : [], id : "sequence" + 3};
-        Main.animations.push(seq2);
-        var key2 = seq2.id;
-        var _this2 = Main.animationMap;
-        if(__map_reserved[key2] != null) {
-            _this2.setReserved(key2,seq2);
-        } else {
-            _this2.h[key2] = seq2;
-        }
-    }
-    if(window.document.getElementById("sequence" + 4) != null) {
-        var seq3 = { images : [], id : "sequence" + 4};
-        Main.animations.push(seq3);
-        var key3 = seq3.id;
-        var _this3 = Main.animationMap;
-        if(__map_reserved[key3] != null) {
-            _this3.setReserved(key3,seq3);
-        } else {
-            _this3.h[key3] = seq3;
-        }
-    }
-    if(window.document.getElementById("sequence" + 5) != null) {
-        var seq4 = { images : [], id : "sequence" + 5};
-        Main.animations.push(seq4);
-        var key4 = seq4.id;
-        var _this4 = Main.animationMap;
-        if(__map_reserved[key4] != null) {
-            _this4.setReserved(key4,seq4);
-        } else {
-            _this4.h[key4] = seq4;
-        }
-    }
-    if(window.document.getElementById("sequence" + 6) != null) {
-        var seq5 = { images : [], id : "sequence" + 6};
-        Main.animations.push(seq5);
-        var key5 = seq5.id;
-        var _this5 = Main.animationMap;
-        if(__map_reserved[key5] != null) {
-            _this5.setReserved(key5,seq5);
-        } else {
-            _this5.h[key5] = seq5;
-        }
-    }
-    if(window.document.getElementById("sequence" + 7) != null) {
-        var seq6 = { images : [], id : "sequence" + 7};
-        Main.animations.push(seq6);
-        var key6 = seq6.id;
-        var _this6 = Main.animationMap;
-        if(__map_reserved[key6] != null) {
-            _this6.setReserved(key6,seq6);
-        } else {
-            _this6.h[key6] = seq6;
-        }
-    }
-    if(window.document.getElementById("sequence" + 8) != null) {
-        var seq7 = { images : [], id : "sequence" + 8};
-        Main.animations.push(seq7);
-        var key7 = seq7.id;
-        var _this7 = Main.animationMap;
-        if(__map_reserved[key7] != null) {
-            _this7.setReserved(key7,seq7);
-        } else {
-            _this7.h[key7] = seq7;
-        }
-    }
-    if(window.document.getElementById("sequence" + 9) != null) {
-        var seq8 = { images : [], id : "sequence" + 9};
-        Main.animations.push(seq8);
-        var key8 = seq8.id;
-        var _this8 = Main.animationMap;
-        if(__map_reserved[key8] != null) {
-            _this8.setReserved(key8,seq8);
-        } else {
-            _this8.h[key8] = seq8;
-        }
-    }
-    var _g = 0;
-    var _g1 = Main.animations;
-    while(_g < _g1.length) {
-        var seq9 = _g1[_g];
-        ++_g;
-        seq9.container = window.document.getElementById(seq9.id);
-        var len = seq9.container.children.length;
-        var _g2 = 0;
-        while(_g2 < len) {
-            var child = seq9.container.children.item(_g2++);
-            var image;
-            if(child.tagName == "IMG") {
-                image = child;
-                seq9.images.push(image);
-            }
-        }
-    }
+   
+ 
     var img_len = Main.projectsElement.children.length;
     var _g21 = 0;
     while(_g21 < img_len) {
@@ -266,29 +152,7 @@ Main.init = function() {
             }
         }
     }
-    if(Main.animations.length > 1) {
-        var storage = js_Browser.getSessionStorage();
-        if(storage != null) {
-            if(storage.getItem("latest_animation_index") != null) {
-                var latest = storage.getItem("latest_animation_index");
-                if(latest != null) {
-                    var n = Std.parseInt(latest);
-                    if(n < Main.animations.length - 1) {
-                        ++n;
-                    } else {
-                        n = 0;
-                    }
-                    Main.currentSequence = Main.animations[n];
-                    storage.setItem("latest_animation_index",n == null ? "null" : "" + n);
-                }
-            } else {
-                storage.setItem("latest_animation_index","0");
-                Main.currentSequence = Main.animations[Math.floor(Math.random() * Main.animations.length)];
-            }
-        }
-    } else if(Main.animations.length == 1) {
-        Main.currentSequence = Main.animations[0];
-    }
+   
     new haxe_Timer(24).run = function() {
         if(Main.latestScrollY != window.scrollY) {
             Main.latestScrollY = window.scrollY;
@@ -307,12 +171,6 @@ Main.init = function() {
 };
 Main.updateScroll = function() {
     Main.hideProjects();
-    Main.relatedScroll = Main.latestScrollY / (window.document.body.clientHeight - window.innerHeight);
-    if(Main.stopMotionMode == true) {
-        if(Main.currentSequence != null) {
-            Main.setStopMotionFrame(Main.relatedScroll,Main.currentSequence);
-        }
-    }
 };
 Main.previewProject = function(id) {
     var _this = Main.navLinks.colors;
@@ -389,21 +247,7 @@ haxe_ds_StringMap.prototype = {
         return this.rh.hasOwnProperty("$" + key);
     }
 };
-var js_Browser = function() { };
-js_Browser.getSessionStorage = function() {
-    try {
-        var s = window.sessionStorage;
-        s.getItem("");
-        if(s.length == 0) {
-            var key = "_hx_" + Math.random();
-            s.setItem(key,key);
-            s.removeItem(key);
-        }
-        return s;
-    } catch( e ) {
-        return null;
-    }
-};
+
 var __map_reserved = {};
 Main.latestScrollY = 0;
 Main.relatedScroll = 0;

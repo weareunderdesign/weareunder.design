@@ -22,7 +22,7 @@ body {
     background-position-x: 50%;
 }
 .hero-section.show-project {
-    height: 1100vh!important;
+    height: 100vh!important;
 }
 
 .cursor {
