@@ -8,13 +8,13 @@ function isMobile() {
 
 const lottieAnimations = [
   {
-    animation: 'https://assets2.lottiefiles.com/packages/lf20_b6crvylp.json'
+    animation: 'https://weareunder.design/new/animations/animation_1.json'
   },
   {
-    animation: 'https://assets4.lottiefiles.com/packages/lf20_wnwoluzh.json'
+    animation: 'https://weareunder.design/new/new/animations/animation_1.json'
   },
   {
-    animation: 'https://assets1.lottiefiles.com/packages/lf20_r8fqooa8.json'
+    animation: 'https://weareunder.design/new/animations/animation_1.json'
   }
 ]
 
