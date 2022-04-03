@@ -148,10 +148,6 @@ img {
     color: gray;
 }
 
-.about-page {
-    background-image: url('../images/about-hero.png');
-}
-
 .section {
     padding: 80px;
     display: flex;

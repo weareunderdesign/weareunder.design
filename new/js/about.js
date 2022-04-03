@@ -62,7 +62,7 @@ const ScrollLottie = (obj) => {
 }
 
 const lottieAnimations = [
-  'https://assets2.lottiefiles.com/packages/lf20_3fmy9ivt.json'
+  'https://weareunder.design/animations/about.json'
 ];
 
 const randomAnimation = lottieAnimations[getRandomInt(0, lottieAnimations.length - 1)];
@@ -74,16 +74,54 @@ ScrollLottie({
     speed: 'medium'
 });
 
-const animations = $(".lottie-animation")
-animations.map((index, item) => {
-lottie.loadAnimation({
-container: item,
-renderer: 'svg',
-loop: true,
-autoplay: true,
-path: $(item).attr('animation')
-});
-})
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 1)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 10)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 50)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 100)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 200)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 500)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 700)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 1000)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 1500)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 2000)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 2500)
+
+setTimeout(() => {
+    window.dispatchEvent(new Event('resize'));
+}, 3000)
+
 
 function getRandomInt(min, max) {
 min = Math.ceil(min);
