@@ -5,10 +5,10 @@ const lottieAnimations = [
     animation: 'https://weareunder.design/animations/animation_1.json'
   },
   {
-    animation: 'https://weareunder.design/animations/animation_1.json'
+    animation: 'https://weareunder.design/animations/animation_2.json'
   },
   {
-    animation: 'https://weareunder.design/animations/animation_1.json'
+    animation: 'https://weareunder.design/animations/animation_3.json'
   }
 ]
 
