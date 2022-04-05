@@ -466,11 +466,11 @@ body:hover .cursor {opacity: 100%;}
     }
 
     .hero-section svg {
-        position: fixed;
+        position: absolute;
         top: 0;
         width: auto!important;
-        height: 82vh!important;
-        margin: 0 -82%;
+        height: 65vh!important;
+        margin: 0 -35%;
     }
 
     .menu-wrapper {
