@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:400');
+@import url('https://fonts.googleapis.com/css?family=Inter:300,400,700');
 @import url("https://use.typekit.net/pzx5ijr.css");
 
 body {
@@ -266,13 +266,13 @@ span {
 
 #color-animation {
   transition-property: background-color;
-  transition-duration: 999ms;
+  transition-duration: 1000ms;
   transition-timing-function: linear;
 }
 
 #cta-animation {
   transition-property: background-color;
-  transition-duration: 999ms;
+  transition-duration: 1000ms;
   transition-timing-function: linear;
 }
 

@@ -358,7 +358,7 @@ $(document).ready(function(){
                             a++;
                             break;
                     }
-            },3000);
+            },000);
         });
         
         // Brand Sprint Color Animation - Ends Here //
@@ -370,8 +370,8 @@ var styles = `
 
 .brand-sprint {
   background-color: #3821c3;
-  -webkit-transition: background-color 200ms ease;
-  transition: background-color 200ms ease;
+  -webkit-transition: background-color 999ms ease;
+  transition: background-color 999ms ease;
 }
 
 .gradient {
