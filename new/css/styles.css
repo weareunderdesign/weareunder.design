@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:400');
+@import url('https://fonts.googleapis.com/css?family=Inter:300,400,700');
 @import url("https://use.typekit.net/pzx5ijr.css");
 
 body {
@@ -9,8 +9,58 @@ body {
     font-weight: 400;
 }
 
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+video {
+    width: 100%;
+    min-height: 100vh;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span {
+    line-height: inherit;
+}
+
+.cursor {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    position: fixed;
+    z-index: 99;
+    opacity: 0%;
+}
+
+
+.logo {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 99;
+}
+
+.hide {
+    display: none;
+}
+
+.yt-video-rosh {
+    width: 100%;
+    height: 100vh;
+}
+
 .degular { 
-   font-family: degular;
+    font-family: degular;
     font-weight: 500;
     font-style: normal;
 }
@@ -20,16 +70,13 @@ body {
     background-size: cover;
     position: relative;
     background-position-x: 50%;
-}
-.hero-section.show-project {
-    height: 100vh!important;
+    transition-property: all;
+    transition-duration: 10ms;
+    transition-timing-function: linear;
 }
 
-.cursor {
-    width: 24px;
-    height: 24px;
-    background-color: white;
-    border-radius: 100%;
+.hero-section.show-project {
+    height: 100vh!important;
 }
 
 .font-size-primary {
@@ -50,11 +97,27 @@ body {
     z-index: 19;
     display: none;
     overflow: auto;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
+    
+}
+
+.sidebar:hover {
+    color: grey);
 }
 
 .sidebar-project-image {
     display: none;
     width: 100%;
+}
+
+.sidebar-project-link {
+    color: #fff;
+    margin-bottom: 16px;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: ease;
 }
 
 .footer {
@@ -74,9 +137,18 @@ body {
     max-width: 150px;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+.footer-link-wp {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-content-wp {
+    display: flex;
+    flex-direction: row;
+    gap: 40px 40px;
+    flex: 1;
+    max-width: 60%;
 }
 
 .info-menu {
@@ -140,10 +212,6 @@ img {
     z-index: 2;
 }
 
-.sidebar:hover {
-    color: rgba(255, 255, 255, 0.5);
-}
-
 .section {
     padding: 80px;
     display: flex;
@@ -178,101 +246,33 @@ img {
 .project-body {
     display: flex;
     flex-direction: column;
-    align-items: stretch
- }
-
-.hero-animation {
-    position: static;
-    z-index: 1;
+    align-items: stretch; /* was added in new */
+    justify-content: center; /* was added in new */
 }
-
-.footer-content-wp {
-    display: flex;
-    flex-direction: row;
-    gap: 40px 40px;
-    flex: 1;
-    max-width: 60%;
-}
-
-/* New CSS */
 
 body:hover .cursor {opacity: 100%;}
 .home-body { cursor:none; }
-a {cusror:pointer;}
-a {
-    color: black;
-    text-decoration: none;
-}
-
-.cursor {
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    position: fixed;
-    z-index: 99;
-    opacity: 0%;
-}
-
-img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-}
 
 .review-content {
     display: none;
 }
 
-.sidebar-project-link {
-    color: #fff;
-    margin-bottom: 16px;
-}
-
-.project-body {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-}
-
 .project-link {
     display: inline;
-    color: #000000;
+    color: black;
     border-bottom-width: 1px;
     border-bottom-style: solid;
 }
 
-.sidebar {
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    padding: 40px;
-    background-color: black;
-    color: white;
-    height: 100%;
-    z-index: 19;
-    display: none;
-    overflow: auto;
-}
-
-.footer-link-wp {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-span {
-    line-height: inherit;
-}
-
 #color-animation {
   transition-property: background-color;
-  transition-duration: 999ms;
+  transition-duration: 1000ms;
   transition-timing-function: linear;
 }
 
 #cta-animation {
   transition-property: background-color;
-  transition-duration: 999ms;
+  transition-duration: 1000ms;
   transition-timing-function: linear;
 }
 
@@ -292,6 +292,169 @@ span {
 ::-webkit-scrollbar-thumb:hover {
   background: #000; 
 }
+
+/* Brand Sprint Styles */
+
+.brand-sprint-hero {
+    padding: 80px;
+    min-height: 100vh;
+    background-color: rgb(129, 89, 251);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h1 {
+    font-size: 160px;
+    font-weight: 500;
+    line-height: 80%;
+    margin: 0px;
+}
+
+.h2 {
+    font-size: 75px;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 0px;
+}
+
+.brand-sprint-black-section {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 80px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-sprint-timeline {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 120px;
+    color: black;
+}
+
+.sprint-box {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 50%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.inactive {
+    color: grey;
+}
+
+.is-logo {
+    color: #8159fb;
+}
+
+.is-typo {
+    color: #ffbfe1;
+}
+
+.is-color-palette {
+    color: #fd3c2d;
+}
+
+.is-guidelines {
+    color: #fdc800;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 16px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.get-wp {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.d-margin-40 {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 40px;
+    margin-left: 0px;
+}
+
+.cta {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 100%;
+    background-color: rgb(129, 89, 251);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.is-cta-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.is-left {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.black-font {
+    color: black;
+}
+
+.is-review {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.page-heading {
+    position: sticky;
+    top: 24px;
+    left: 0px;
+}
+
+.is-hero {
+    margin-top: -24px;
+}
+
+
+
+/* Responsive Styles */
 
 @media (max-width: 768px) {
 
@@ -358,7 +521,7 @@ span {
     }
 
     .sidebar-project-link {
-    color: white;
+    color: grey;
     }
 
     .close-menu {
@@ -370,10 +533,6 @@ span {
         background-repeat: no-repeat;
         width: 32px;
         height: 32px;
-    }
-
-    .sidebar:hover {
-        color: white;
     }
 
     .footer {
@@ -409,6 +568,8 @@ span {
 
     .footer {
         padding: 24px;
+        flex-direction: column; /* added */
+        gap: 40px 80px; /* added */
     }
 
     .footer-content-wp {
@@ -419,5 +580,79 @@ span {
     .font-size-primary {
         font-size: 32px;
         line-height: 40px;
+    }
+
+    /* Brand Sprint */
+
+    .page-heading {
+        position: static;
+    }
+    .row {
+        flex-direction: column;
+    }
+
+    .sprint-box {
+        max-width: 100%;
+        row-gap: 0px;
+    }
+
+    .wrapper {
+        gap: 40px 40px;
+    }
+
+    .brand-sprint-hero {
+        padding-top: 120px;
+        padding-right: 24px;
+        padding-bottom: 80px;
+        padding-left: 24px;
+    }
+
+    .brand-sprint-black-section {
+        padding: 24px;
+        min-height: 80vh;
+    }
+
+    .brand-sprint-timeline {
+        padding: 24px;
+        row-gap: 80px;
+    }
+
+    .h1 {
+        font-size: 90px;
+    }
+
+    .is-cta-section {
+        flex-direction: column;
+    }
+
+    .cta {
+        width: 320px;
+        height: 320px;
+    }
+
+    .h2 {
+        padding-top: 0px;
+        font-size: 40px;
+    }
+
+    .brand-sprint-black-section {
+        padding-top: 80px;
+        padding-right: 24px;
+        padding-bottom: 80px;
+        padding-left: 24px;
+    }
+
+    .brand-sprint-timeline {
+        padding-top: 80px;
+        padding-right: 24px;
+        padding-bottom: 80px;
+        padding-left: 24px;
+    }
+
+    .logo {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        width: 180px;
     }
 }

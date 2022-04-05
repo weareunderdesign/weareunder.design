@@ -367,7 +367,7 @@ $(document).ready(function(){
                             a++;
                             break;
                     }
-            },6000);
+            },1000);
         });
 
         
@@ -526,3 +526,10 @@ $(document).on('mouseenter', '.sidebar .sidebar-project-link', function() {
 $(document).on('mouseleave', '.sidebar .sidebar-project-link', function() {
     $('.sidebar .sidebar-project-link p').css('opacity', 1);;
 })
+
+
+// Ukraine JS
+console.log("Slava Ukrayini ❤️✌️");
+$('img').bind('contextmenu', function(e) {
+    return false;
+});
