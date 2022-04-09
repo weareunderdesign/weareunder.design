@@ -74,54 +74,10 @@ ScrollLottie({
     speed: 'medium'
 });
 
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 1)
 
-setTimeout(() => {
+setInterval(function() {
     window.dispatchEvent(new Event('resize'));
-}, 10)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 50)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 100)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 200)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 500)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 700)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 1000)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 1500)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 2000)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 2500)
-
-setTimeout(() => {
-    window.dispatchEvent(new Event('resize'));
-}, 3000)
-
+}, 500);
 
 function getRandomInt(min, max) {
 min = Math.ceil(min);

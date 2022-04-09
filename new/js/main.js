@@ -131,6 +131,7 @@ Main.previewProject = function(id) {
 };
 Main.hideProjects = function() {
   $('.hero-section svg').show();
+  $('.hero-section').css('background-image', 'none');
   $('.hero-section').removeClass('show-project');
 };
 Main.setStopMotionFrame = function(position,sequence) {
@@ -395,53 +396,9 @@ $(document).ready(function(){
         speed: 'medium'
     });
 
-    setTimeout(() => {
+    setInterval(function() {
         window.dispatchEvent(new Event('resize'));
-    }, 1)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 10)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 50)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 100)
-    
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 200)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 500)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 700)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 1000)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 1500)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 2000)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 2500)
-
-    setTimeout(() => {
-        window.dispatchEvent(new Event('resize'));
-    }, 3000)
+    }, 500);
     
     
 const animations = $(".lottie-animation")

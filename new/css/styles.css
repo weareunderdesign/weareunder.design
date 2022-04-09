@@ -67,16 +67,16 @@ span {
 
 .hero-section {
     height: auto!important;
+}
+
+.hero-section.show-project {
+    height: 100vh!important;
     background-size: cover;
     position: relative;
     background-position-x: 50%;
     transition-property: all;
     transition-duration: 10ms;
     transition-timing-function: linear;
-}
-
-.hero-section.show-project {
-    height: 100vh!important;
 }
 
 .font-size-primary {
@@ -466,11 +466,11 @@ body:hover .cursor {opacity: 100%;}
     }
 
     .hero-section svg {
-        position: absolute;
+        position: fixed;
         top: 0;
         width: auto!important;
-        height: 65vh!important;
-        margin: 0 -35%;
+        height: 100vh!important;
+        margin: 0 -92%;
     }
 
     .menu-wrapper {
