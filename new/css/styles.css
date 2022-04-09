@@ -466,7 +466,7 @@ body:hover .cursor {opacity: 100%;}
     }
 
     .hero-section svg {
-        position: fixed;
+        position: absolute;
         top: 0;
         width: auto!important;
         height: 100vh!important;
