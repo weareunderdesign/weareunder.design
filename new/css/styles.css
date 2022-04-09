@@ -469,8 +469,8 @@ body:hover .cursor {opacity: 100%;}
         position: fixed;
         top: 0;
         width: auto!important;
-        height: 100vh!important;
-        margin: 0 -92%;
+        height: 80vh!important;
+        margin: 0 -65%;
     }
 
     .menu-wrapper {
