@@ -305,7 +305,9 @@ body:hover .cursor {opacity: 100%;}
     align-items: center;
     justify-content: space-between;
 }
-
+.color-white {
+    color: white;
+}
 .h1 {
     font-size: 160px;
     font-weight: 500;
