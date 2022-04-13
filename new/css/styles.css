@@ -48,6 +48,7 @@ span {
     top: 40px;
     left: 40px;
     z-index: 99;
+    text-decoration: none;
 }
 
 .hide {
@@ -161,7 +162,7 @@ span {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    bottom: 100px;
+    bottom: 28vw;
     left: 40px;
     z-index: 2;
 }
@@ -177,7 +178,7 @@ span {
     color: white;
     border-radius: 100%;
     position: absolute;
-    bottom: 20vw;
+    bottom: 35vw;
     left: 25vw;
     z-index: 2;
 }
@@ -193,7 +194,7 @@ span {
     background-color: #fec415;
     color: white;
     position: absolute;
-    bottom: 6vw;
+    bottom: 22vw;
     right: 15vw;
     z-index: 2;
 }
@@ -305,6 +306,7 @@ body:hover .cursor {opacity: 100%;}
     align-items: center;
     justify-content: space-between;
 }
+
 .color-white {
     color: white;
 }
@@ -457,6 +459,37 @@ body:hover .cursor {opacity: 100%;}
     margin-top: -24px;
 }
 
+/* 404 page */
+
+.fof-wp {
+    height: 100vh;
+    background-image: url('../images/fof-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fof-link {
+    height: 220px;
+    width: 220px;
+    background-color: #fd3c2d;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 1em;
+}
+
+.fof-img {
+    max-width: 90vw;
+}
 
 
 /* Responsive Styles */
