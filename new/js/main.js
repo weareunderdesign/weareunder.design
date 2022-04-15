@@ -207,7 +207,7 @@ var styles = `
 
 #menu-wrapper {
     position: static
-    z-index: 99;
+    z-index: 9999;
 }
 `
 var styleSheet = document.createElement("style")
@@ -264,7 +264,7 @@ $('.sidebar').on('mouseout',function() {
     'display':'none'+' ',
   });
   $('#menu-wrapper').css({
-    'display':'block'+' ',
+    'display':'flex'+' ',
   });
   $('#logo').css({
     'display':'block'+' ',
@@ -272,15 +272,17 @@ $('.sidebar').on('mouseout',function() {
 });
 
 $('.close-menu').on('click',function() {
-$('.sidebar').css({
-'display':'none'+' ',
-});
-$('#menu-wrapper').css({
-'display':'flex'+' ',
-});
-$('#logo').css({
-'display':'block'+' ',
-});
+    $('.sidebar').css({
+    'display':'none'+' ',
+    });
+
+        $('#menu-wrapper').css({
+    'display':'flex',
+    });
+
+    $('#logo').css({
+    'display':'block'+' ',
+    });
 });
 
 
@@ -419,18 +421,16 @@ function getRandomInt(min, max) {
 }
 
 // Sidebar links hover
-$(document).on('mouseenter', '.sidebar .sidebar-project-link', function() {
-    $('.sidebar .sidebar-project-link p').css('opacity', 0.5);
-    $(this).children('p').css('opacity', 1);
-})
+// $(document).on('mouseenter', '.sidebar .sidebar-project-link', function() {
+//     $('.sidebar .sidebar-project-link p').css('opacity',0.5);
+//     $(this).children('p').css('opacity', 1);
+// })
 
-$(document).on('mouseleave', '.sidebar .sidebar-project-link', function() {
-    $('.sidebar .sidebar-project-link p').css('opacity', 1);;
-})
-
+// $(document).on('mouseleave', '.sidebar .sidebar-project-link', function() {
+//     $('.sidebar .sidebar-project-link p').css('opacity',1);;
+// })
 
 // Ukraine JS
-console.log("Slava Ukrayini ❤️✌️");
 $('img').bind('contextmenu', function(e) {
     return false;
 });

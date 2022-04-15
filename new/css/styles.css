@@ -161,7 +161,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    bottom: 28vw;
+    bottom: 18vw;
     left: 40px;
     z-index: 2;
     cursor: none;
@@ -245,10 +245,6 @@ a {
     flex-direction: column;
     align-items: stretch; /* was added in new */
     justify-content: center; /* was added in new */
-}
-
-.home-body {
-    font-family: 'Inter', sans-serif;
 }
 
 body:hover .cursor {opacity: 100%;}
@@ -714,6 +710,8 @@ p {
 
     body { cursor: auto; }
     a {cusror:pointer;}
+
+    .home-body { cursor:auto; }
 
     .cursor {
         display: auto;
