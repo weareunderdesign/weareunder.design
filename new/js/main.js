@@ -421,14 +421,14 @@ function getRandomInt(min, max) {
 }
 
 // Sidebar links hover
-// $(document).on('mouseenter', '.sidebar .sidebar-project-link', function() {
-//     $('.sidebar .sidebar-project-link p').css('opacity',0.5);
-//     $(this).children('p').css('opacity', 1);
-// })
+$(document).on('mouseenter', '.sidebar .sidebar-project-link', function() {
+    $('.sidebar .sidebar-project-link p').css('opacity',0.5);
+    $(this).children('p').css('opacity', 1);
+})
 
-// $(document).on('mouseleave', '.sidebar .sidebar-project-link', function() {
-//     $('.sidebar .sidebar-project-link p').css('opacity',1);;
-// })
+$(document).on('mouseleave', '.sidebar .sidebar-project-link', function() {
+    $('.sidebar .sidebar-project-link p').css('opacity',1);;
+})
 
 // Ukraine JS
 $('img').bind('contextmenu', function(e) {
