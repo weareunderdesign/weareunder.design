@@ -11,9 +11,10 @@
 *:after {
     box-sizing: inherit;
     color: inherit;
-    margin:0px;
+    margin: 0px;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Inter', sans-serif;
     font-size: 36px;
@@ -21,6 +22,7 @@ body {
     font-weight: 400;
     color: black;
 }
+
 h1 {
     font-size: 160px;
     font-weight: 600;
@@ -30,12 +32,11 @@ h1 {
 }
 
 h2 {
-    margin-top: 36px;
-    margin-bottom: 12px;
+    margin-top: 24px;
+    margin-bottom: 36px;
     font-size: 82px;
     font-weight: 600;
     line-height: 100%;
-    margin: 0px;
     font-family: var(--base-font);
 }
 
@@ -61,55 +62,6 @@ h6 {
     font-size: 18px;
     margin-top: 18px;
     margin-bottom: 4px;
-}
-
-input {
-    margin-bottom: 8px;
-}
-
-textarea {
-    margin-bottom: 8px;
-}
-
-select {
-    margin-bottom: 8px;
-}
-
-button {
-    margin-top: 8px;
-}
-
-li {
-    padding-bottom: 2px;
-    padding-top: 2px;
-    line-height: 160%;
-}
-
-figure {
-    margin: 0px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-span {
-    line-height: inherit;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
 }
 
 iframe {
@@ -225,13 +177,6 @@ a {
     max-width: 70%;
 }
 
-.circle-info {
-    width: 140px;
-    height: 140px;
-    background-color: white;
-    bottom: 18vw;
-    left: 40px;
-}
 .circle {
     display: flex;
     align-items: center;
@@ -241,7 +186,16 @@ a {
     position: absolute;
     z-index: 2;
 }
-.circle-brandsprint{
+
+.circle-info {
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    bottom: 18vw;
+    left: 40px;
+}
+
+.circle-brandsprint {
     width: 250px;
     height: 250px;
     background-color: #fd3c2d;
@@ -298,35 +252,6 @@ a {
     color: black;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-}
-
-#color-animation {
-    transition-property: background-color;
-    transition-duration: 9999ms;
-    transition-timing-function: linear;
-}
-
-#cta-animation {
-    transition-property: background-color;
-    transition-duration: 9999ms;
-    transition-timing-function: linear;
-}
-
-::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-}
-
-::-webkit-scrollbar-track {
-    background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #999;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #000;
 }
 
 /* Brand Sprint Styles */
@@ -387,48 +312,11 @@ a {
     width: 100%;
 }
 
-.inactive {
-    color: grey;
-}
-
-.is-logo {
-    color: #8159fb;
-}
-
-.is-typo {
-    color: #ffbfe1;
-}
-
-.is-color-palette {
-    color: #fd3c2d;
-}
-
-.is-guidelines {
-    color: #fdc800;
-}
-
 .review-card {
     display: flex;
     flex-direction: column;
     gap: 16px 16px;
     margin-top: 120px;
-}
-
-#show-more {
-    margin-top: 40px;
-}
-
-.get {
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-}
-
-.d-margin-40 {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 40px;
-    margin-left: 0px;
 }
 
 .cta {
@@ -681,22 +569,10 @@ a {
         width: 100%;
     }
 
-    .work {
-        width: 120px;
-        height: 110px;
-        top: 5vw;
-    }
-
-    .info-menu {
-        bottom: 120px;
-    }
-
     .footer {
         padding: 24px;
         flex-direction: column;
-        /* added */
         gap: 40px 80px;
-        /* added */
     }
 
     .footer-content {
