@@ -202,38 +202,6 @@ Main.navLinks = { images : new haxe_ds_StringMap(), anchors : new haxe_ds_String
 Main.main();
 })();
 
-// Custom CSS
-var styles = `
-
-#menu-wrapper {
-    position: static
-    z-index: 9999;
-}
-`
-var styleSheet = document.createElement("style")
-styleSheet.type = "text/css"
-styleSheet.innerText = styles
-document.head.appendChild(styleSheet)
-
-
-// Mouse Logic
-let tricksCursor = document.querySelector('.cursor');
-window.addEventListener('mousemove', cursor);
-
-function cursor(e) {
-  tricksCursor.style.top = e.clientY + 'px';
-  tricksCursor.style.left = e.clientX + 'px';
-}
-
-$( "a" ).mouseenter(function() {
-  $('.cursor').addClass('is-hover');
-});
-
-$( "a" ).mouseleave(function() {
-  $('.cursor').removeClass('is-hover');
-});
-
-
 // Projects Sidebar
 $('.work').on('click',function() {
   $('.sidebar').css({
