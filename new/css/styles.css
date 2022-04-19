@@ -160,7 +160,6 @@ a {
 
 .footer-logo {
     flex: 0 0 auto;
-    max-width: 150px;
 }
 
 .footer-link {
@@ -226,6 +225,7 @@ a {
     padding: 80px;
     display: flex;
     flex-direction: column;
+    row-gap: 80px;
 }
 
 .column {
@@ -305,12 +305,12 @@ a {
     column-gap: 40px;
 }
 
-.wrapper {
+/* .wrapper {
     max-width: 1440px;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
-}
+} */
 
 .review-card {
     display: flex;
@@ -501,32 +501,49 @@ a {
         height: 100%;
     }
 
-    .info-menu {
+    .circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 100%;
         position: static;
-        flex: 0 0 auto;
+        z-index: 2;
     }
-
-    .sprint-menu {
-        width: 160px;
-        height: 160px;
-        bottom: 390px;
-        left: 20vw;
-        position: static;
-        flex: 0 0 auto;
+    
+    .circle-info {
+        width: 140px;
+        height: 140px;
+        background-color: white;
+        bottom: 18vw;
+        left: 40px;
     }
-
-    .ukraine {
-        width: 180px;
-        height: 180px;
-        position: static;
-        flex: 0 0 auto;
+    
+    .circle-brandsprint {
+        width: 250px;
+        height: 250px;
+        background-color: #fd3c2d;
+        color: white;
+        bottom: 35vw;
+        left: 25vw;
     }
-
-    .work {
-        width: 120px;
-        height: 120px;
-        position: static;
-        flex: 0 0 auto;
+    
+    .circle-ukraine {
+        width: 300px;
+        height: 300px;
+        background-color: #fec415;
+        color: white;
+        bottom: 22vw;
+        right: 15vw;
+    }
+    
+    .circle-work {
+        width: 200px;
+        height: 200px;
+        background-color: #ffbfe1;
+        border-radius: 100%;
+        top: 4vw;
+        right: 4vw;
     }
 
     .sidebar {
@@ -595,9 +612,9 @@ a {
         row-gap: 0px;
     }
 
-    .wrapper {
+    /* .wrapper {
         gap: 40px 40px;
-    }
+    } */
 
     .brand-sprint-hero {
         padding-top: 120px;
