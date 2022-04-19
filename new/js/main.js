@@ -286,7 +286,7 @@ $(document).ready(function(){
 
         
         $('#show-more').on('click',function() {
-          $('.review-content').css({
+          $('.hidden').css({
             'display':'block'+' ',
           });
           $('#show-more').css({

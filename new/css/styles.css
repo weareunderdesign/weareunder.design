@@ -14,6 +14,7 @@
     margin:0px;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Inter', sans-serif;
     font-size: 36px;
@@ -128,8 +129,9 @@ video {
 }
 
 a {
-    color: #000;
+    color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .logo {
@@ -170,6 +172,8 @@ a {
     height: 100%;
     z-index: 19;
     display: none;
+    flex-direction: row;
+    row-gap: 8px;
     overflow: auto;
     transition-property: color, background-color;
     transition-duration: 250ms;
@@ -224,13 +228,6 @@ a {
     max-width: 70%;
 }
 
-.circle-info {
-    width: 140px;
-    height: 140px;
-    background-color: white;
-    bottom: 18vw;
-    left: 40px;
-}
 .circle {
     display: flex;
     align-items: center;
@@ -240,6 +237,15 @@ a {
     position: absolute;
     z-index: 2;
 }
+
+.circle-info {
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    bottom: 18vw;
+    left: 40px;
+}
+
 .circle-brandsprint{
     width: 250px;
     height: 250px;
@@ -274,11 +280,11 @@ a {
     row-gap: 80px;
 }
 
-.column {
+.gallery-wp {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 80px 80px;
-    flex-direction: row;
 }
 
 .box {
@@ -289,7 +295,7 @@ a {
     gap: 40px 40px;
 }
 
-.review-content {
+.hidden {
     display: none;
 }
 
@@ -312,23 +318,6 @@ a {
     transition-timing-function: linear;
 }
 
-::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-}
-
-::-webkit-scrollbar-track {
-    background: #fff;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #999;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #000;
-}
-
 /* Brand Sprint Styles */
 
 .brand-sprint-hero {
@@ -340,10 +329,6 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-}
-
-.color-white {
-    color: white;
 }
 
 .brand-sprint-black-section {
@@ -367,6 +352,9 @@ a {
 }
 
 .sprint-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     flex: 0 0 auto;
     width: 100%;
     max-width: 50%;
@@ -379,13 +367,6 @@ a {
     justify-content: space-between;
     column-gap: 40px;
 }
-
-/* .wrapper {
-    max-width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-} */
 
 .inactive {
     color: grey;
@@ -416,12 +397,6 @@ a {
 
 #show-more {
     margin-top: 40px;
-}
-
-.get {
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
 }
 
 .d-margin-40 {
@@ -460,10 +435,6 @@ a {
     justify-content: center;
 }
 
-.black-font {
-    color: black;
-}
-
 .is-review {
     display: flex;
     flex-direction: column;
@@ -471,7 +442,7 @@ a {
     justify-content: flex-start;
 }
 
-.page-heading {
+.sticky-title {
     position: sticky;
     top: 24px;
     left: 0px;
@@ -493,7 +464,6 @@ a {
     padding-right: 24px;
     padding-bottom: 12px;
     padding-left: 24px;
-    background-color: #353cec;
     border-style: none;
     background-color: #ffc300;
     color: #353cec;
@@ -506,6 +476,7 @@ a {
 
 .u-section {
     background-color: #353cec;
+    color: white;
     padding-top: 120px;
     padding-right: 80px;
     padding-bottom: 120px;
@@ -514,6 +485,12 @@ a {
     flex-direction: column;
     row-gap: 80px;
     font-family: 'Inter', sans-serif;
+}
+
+.content-wp {
+    display: flex;
+    flex-direction: column;
+    gap: 140px;
 }
 
 .u-heading {
@@ -526,23 +503,11 @@ a {
     font-style: normal;
 }
 
-.font-yellow {
-    color: #ffc300;
-}
-
 .divider {
     width: 100%;
     height: 1px;
     background-color: white;
     opacity: 0.5;
-}
-
-.content {
-    font-size: 40px;
-    line-height: 132%;
-    color: white;
-    margin: 0px;
-    letter-spacing: -0.02em;
 }
 
 .width-250 {
@@ -555,17 +520,6 @@ a {
     row-gap: 24px;
     width: 50%;
     padding: 40px;
-}
-
-.row-is-center {
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 140px;
 }
 
 .fof {
@@ -723,7 +677,7 @@ a {
 
     /* Brand Sprint */
 
-    .page-heading {
+    .sticky-title {
         position: static;
     }
 
