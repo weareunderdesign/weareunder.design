@@ -203,9 +203,9 @@ Main.main();
 })();
 
 // Projects Sidebar
-$('.work').on('click',function() {
+$('.circle-work').on('click',function() {
   $('.sidebar').css({
-    'display':'block'+' ',
+    'display':'flex',
   });
   $('#menu-wrapper').css({
     'display':'none'+' ',
@@ -217,7 +217,7 @@ $('.work').on('click',function() {
 
 $('.sidebar').on('mouseover',function() {
   $('.sidebar').css({
-    'display':'block'+' ',
+    'display':'flex'+' ',
   });
   $('#menu-wrapper').css({
     'display':'none'+' ',

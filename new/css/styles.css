@@ -172,7 +172,7 @@ a {
     height: 100%;
     z-index: 19;
     display: none;
-    flex-direction: row;
+    flex-direction: column;
     row-gap: 8px;
     overflow: auto;
     transition-property: color, background-color;
