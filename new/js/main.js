@@ -23,7 +23,7 @@ const sidebar = document.getElementsByClassName("sidebar")[0]
 if (sidebar) {
     sidebar.setAttribute("data-ix", "sidebar")
 }
-const rotateMenu = document.getElementsByClassName("circle-work")[0]
+const rotateMenu = document.getElementsByClassName("work")[0]
 if (rotateMenu) {
     rotateMenu.setAttribute("data-ix", "show-sidebar")
 }
@@ -203,7 +203,7 @@ Main.main();
 })();
 
 // Projects Sidebar
-$('.circle-work').on('click',function() {
+$('.work').on('click',function() {
   $('.sidebar').css({
     'display':'block'+' ',
   });
@@ -255,6 +255,36 @@ $('.close-menu').on('click',function() {
 
 
 // Brand Sprint Page
+$(document).ready(function(){
+            var a =1;
+            setInterval(function(){
+               if(a>4)
+                   {
+                       a = 1;
+                   }
+                switch(a)
+                    {
+                        case 1:
+                            $("#color-animation, #cta-animation").css({"background-color":"#8159fb"});
+                            a++;
+                            break;
+                        case 2:
+                            $("#color-animation, #cta-animation").css({"background-color":"#fd3c2d"});
+                            a++;
+                            break;
+                        case 3:
+                            $("#color-animation, #cta-animation").css({"background-color":"#ffbfe1"});
+                            a++;
+                            break;
+                        case 4:
+                            $("#color-animation, #cta-animation").css({"background-color":"#fdc800"});
+                            a++;
+                            break;
+                    }
+            },1000);
+        });
+
+        
         $('#show-more').on('click',function() {
           $('.review-content').css({
             'display':'block'+' ',
@@ -263,6 +293,8 @@ $('.close-menu').on('click',function() {
             'display':'none'+' ',
           });
         });
+
+// Lottie Animation - Took from Senseip Project :)
 
 
 /*!
