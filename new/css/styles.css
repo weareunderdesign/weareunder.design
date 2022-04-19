@@ -22,6 +22,7 @@ body {
     font-weight: 400;
     color: black;
 }
+
 h1 {
     font-size: 160px;
     font-weight: 600;
@@ -361,6 +362,7 @@ a {
 }
 
 .row {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -372,22 +374,6 @@ a {
     color: grey;
 }
 
-.is-logo {
-    color: #8159fb;
-}
-
-.is-typo {
-    color: #ffbfe1;
-}
-
-.is-color-palette {
-    color: #fd3c2d;
-}
-
-.is-guidelines {
-    color: #fdc800;
-}
-
 .review-card {
     display: flex;
     flex-direction: column;
@@ -397,13 +383,6 @@ a {
 
 #show-more {
     margin-top: 40px;
-}
-
-.d-margin-40 {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 40px;
-    margin-left: 0px;
 }
 
 .cta {
@@ -552,16 +531,45 @@ a {
     max-width: 90vw;
 }
 
-
 /* Responsive Styles */
 
 @media (max-width: 768px) {
+
+    body {
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    h1 {
+        font-size: 80px;
+        font-weight: 600;
+        line-height: 80%;
+        margin: 0px;
+        font-family: var(--base-font);
+    }
+    
+    h2 {
+        font-size: 65px;
+        font-weight: 600;
+        line-height: 100%;
+        margin-top: 36px;
+        margin-bottom: 12px;
+        margin: 0px;
+        font-family: var(--base-font);
+    }
+    
+    h3 {
+        font-size: 48px;
+        margin-top: 32px;
+        margin-bottom: 12px;
+    }
+
     .menu-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
-        row-gap: 10px;
+        justify-content: flex-start;
+        row-gap: 8px;
         padding-bottom: 10px;
         padding-top: 110px;
         height: 100%;
@@ -578,16 +586,15 @@ a {
     }
     
     .circle-info {
-        width: 140px;
-        height: 140px;
+        width: 180px;
+        height: 180px;
         background-color: white;
-        bottom: 18vw;
-        left: 40px;
+        top: 20px;
     }
     
     .circle-brandsprint {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         background-color: #fd3c2d;
         color: white;
         bottom: 35vw;
@@ -604,8 +611,8 @@ a {
     }
     
     .circle-work {
-        width: 200px;
-        height: 200px;
+        width: 140px;
+        height: 140px;
         background-color: #ffbfe1;
         border-radius: 100%;
         top: 4vw;
@@ -645,7 +652,10 @@ a {
     }
 
     .section {
-        padding: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 
     .box {
@@ -687,12 +697,8 @@ a {
 
     .sprint-box {
         max-width: 100%;
-        row-gap: 0px;
+        row-gap: 40px;
     }
-
-    /* .wrapper {
-        gap: 40px 40px;
-    } */
 
     .brand-sprint-hero {
         padding-top: 120px;
@@ -777,10 +783,5 @@ a {
 
     .content {
         row-gap: 120px;
-    }
-
-    .row-is-center {
-        align-items: flex-start;
-        justify-content: center;
     }
 }
