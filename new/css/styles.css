@@ -11,16 +11,21 @@
 *:after {
     box-sizing: inherit;
     color: inherit;
-    margin:0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 40px;
+    line-height: 124%;
     font-weight: 400;
     color: black;
+}
+
+p {
+    font-size: 24px;
+    line-height: 124%;
 }
 
 h1 {
@@ -247,7 +252,7 @@ a {
     left: 40px;
 }
 
-.circle-brandsprint{
+.circle-brandsprint {
     width: 250px;
     height: 250px;
     background-color: #fd3c2d;
@@ -366,7 +371,6 @@ a {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
     column-gap: 40px;
 }
 
@@ -378,11 +382,9 @@ a {
     display: flex;
     flex-direction: column;
     gap: 16px 16px;
-    margin-top: 120px;
-}
-
-#show-more {
-    margin-top: 40px;
+    font-size: 24px;
+    line-height: 124%;
+    margin-bottom: 64px;
 }
 
 .cta {
@@ -414,15 +416,9 @@ a {
     justify-content: center;
 }
 
-.is-review {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
 .sticky-title {
     position: sticky;
+    width: 50%;
     top: 24px;
     left: 0px;
 }
@@ -482,13 +478,6 @@ a {
     font-style: normal;
 }
 
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: white;
-    opacity: 0.5;
-}
-
 .width-250 {
     min-width: 250px;
 }
@@ -539,7 +528,7 @@ a {
         font-size: 36px;
         line-height: 42px;
     }
-    
+
     h1 {
         font-size: 80px;
         font-weight: 600;
@@ -547,7 +536,7 @@ a {
         margin: 0px;
         font-family: var(--base-font);
     }
-    
+
     h2 {
         font-size: 65px;
         font-weight: 600;
@@ -557,7 +546,7 @@ a {
         margin: 0px;
         font-family: var(--base-font);
     }
-    
+
     h3 {
         font-size: 48px;
         margin-top: 32px;
@@ -584,14 +573,14 @@ a {
         position: static;
         z-index: 2;
     }
-    
+
     .circle-info {
         width: 180px;
         height: 180px;
         background-color: white;
         top: 20px;
     }
-    
+
     .circle-brandsprint {
         width: 200px;
         height: 200px;
@@ -600,7 +589,7 @@ a {
         bottom: 35vw;
         left: 25vw;
     }
-    
+
     .circle-ukraine {
         width: 300px;
         height: 300px;
@@ -609,7 +598,7 @@ a {
         bottom: 22vw;
         right: 15vw;
     }
-    
+
     .circle-work {
         width: 140px;
         height: 140px;
@@ -675,9 +664,7 @@ a {
     .footer {
         padding: 24px;
         flex-direction: column;
-        /* added */
         gap: 40px 80px;
-        /* added */
     }
 
     .footer-content {
@@ -689,6 +676,7 @@ a {
 
     .sticky-title {
         position: static;
+        width: auto;
     }
 
     .row {
@@ -697,7 +685,6 @@ a {
 
     .sprint-box {
         max-width: 100%;
-        row-gap: 40px;
     }
 
     .brand-sprint-hero {
@@ -759,12 +746,6 @@ a {
         padding-bottom: 80px;
         padding-left: 24px;
         row-gap: 40px;
-    }
-
-    .u-heading {
-        font-size: 60px;
-        line-height: 90%;
-        color: #fec415;
     }
 
     .content {

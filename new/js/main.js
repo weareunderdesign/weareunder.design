@@ -284,16 +284,6 @@ $(document).ready(function(){
             },1000);
         });
 
-        
-        $('#show-more').on('click',function() {
-          $('.hidden').css({
-            'display':'block'+' ',
-          });
-          $('#show-more').css({
-            'display':'none'+' ',
-          });
-        });
-
 // Lottie Animation - Took from Senseip Project :)
 
 
