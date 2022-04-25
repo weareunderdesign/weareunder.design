@@ -156,8 +156,8 @@ a {
 
 footer {
     display: flex;
-    padding: 80px;
-    column-gap: 80px;
+    padding: var(--base-size);
+    column-gap: var(--base-size);
     margin-left: auto;
     margin-right: auto;
     align-items: flex-start;
@@ -230,12 +230,12 @@ section {
     row-gap: 80px;
     min-height: 100vh;
     align-items: center;
-
+    font-family: var(--base-font);
 }
 
 .box {
     flex: 0 0 auto;
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     gap: 40px 40px;
@@ -332,10 +332,9 @@ section {
     }
 
     section {
-        padding: calc(var(--base-size) / 2);;
+        padding: calc(var(--base-size) / 2);
         flex-direction: column;
         justify-content: center;
-
     }
 
     .box {
@@ -352,4 +351,29 @@ section {
         position: static;
         width: auto;
     }
+}
+
+/* Trash CSS */
+
+.flex-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.gap-40 {
+    row-gap: var(--base-size);
+    column-gap: var(--base-size);
+}
+
+.gap-16 {
+    row-gap: 16px;
+    column-gap: 16px;
 }
