@@ -253,40 +253,6 @@ $('.close-menu').on('click',function() {
     });
 });
 
-
-// Brand Sprint Page
-$(document).ready(function(){
-            var a =1;
-            setInterval(function(){
-               if(a>4)
-                   {
-                       a = 1;
-                   }
-                switch(a)
-                    {
-                        case 1:
-                            $("#color-animation, #cta-animation").css({"background-color":"#8159fb"});
-                            a++;
-                            break;
-                        case 2:
-                            $("#color-animation, #cta-animation").css({"background-color":"#fd3c2d"});
-                            a++;
-                            break;
-                        case 3:
-                            $("#color-animation, #cta-animation").css({"background-color":"#ffbfe1"});
-                            a++;
-                            break;
-                        case 4:
-                            $("#color-animation, #cta-animation").css({"background-color":"#fdc800"});
-                            a++;
-                            break;
-                    }
-            },1000);
-        });
-
-// Lottie Animation - Took from Senseip Project :)
-
-
 /*!
  * GSAP 3.3.1
  * https://greensock.com
@@ -377,18 +343,3 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-// Sidebar links hover
-$(document).on('mouseenter', '.sidebar .sidebar-project-link', function() {
-    $('.sidebar .sidebar-project-link p').css('opacity',0.5);
-    $(this).children('p').css('opacity', 1);
-})
-
-$(document).on('mouseleave', '.sidebar .sidebar-project-link', function() {
-    $('.sidebar .sidebar-project-link p').css('opacity',1);;
-})
-
-// Ukraine JS
-$('img').bind('contextmenu', function(e) {
-    return false;
-});
