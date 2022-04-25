@@ -2,7 +2,7 @@
 @import url("https://use.typekit.net/pzx5ijr.css");
 
 :root {
-    --base-size: 40px;
+    --base-size: 48px;
     --base-font: degular;
 }
 
@@ -25,7 +25,7 @@ body {
 
 p {
     font-size: 24px;
-    line-height: 124%;
+    line-height: 132%;
 }
 
 h1 {
@@ -82,56 +82,14 @@ select {
     margin-bottom: 8px;
 }
 
-button {
-    margin-top: 8px;
-}
-
-li {
-    padding-bottom: 2px;
-    padding-top: 2px;
-    line-height: 160%;
-}
-
-figure {
-    margin: 0px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
 span {
     line-height: inherit;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    column-gap: 24px;
-}
-
-iframe {
-    border-style: none;
 }
 
 img {
     display: block;
     width: 100%;
     max-width: 100%;
-}
-
-video {
-    width: 100%;
-    min-height: 100vh;
 }
 
 a {
@@ -153,12 +111,7 @@ a {
     height: 100vh;
 }
 
-.hero {
-    height: 100vh;
-    background-color: #000;
-}
-
-.hero-section.show-project {
+.show-project {
     height: 100vh !important;
     background-size: cover;
     position: relative;
@@ -187,10 +140,6 @@ a {
 
 }
 
-.sidebar:hover {
-    color: grey;
-}
-
 .sidebar-project-image {
     display: none;
     transition-property: all;
@@ -200,13 +149,12 @@ a {
 }
 
 .sidebar-project-link {
-    color: #fff;
     transition-property: color, background-color;
     transition-duration: 200ms;
     transition-timing-function: ease;
 }
 
-.footer {
+footer {
     display: flex;
     padding: 80px;
     column-gap: 80px;
@@ -220,18 +168,14 @@ a {
     flex: 0 0 auto;
 }
 
-.footer-link {
+.footer-content {
+    max-width: 75%;
+}
+
+.footer-links {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: row;
-    gap: 40px 40px;
-    flex: 1;
-    max-width: 70%;
 }
 
 .circle {
@@ -279,23 +223,19 @@ a {
     right: 4vw;
 }
 
-.section {
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 80px;
-}
-
-.gallery-wp {
+section {
+    padding: var(--base-size);
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 80px 80px;
+    row-gap: 80px;
+    min-height: 100vh;
+    align-items: center;
+
 }
 
 .box {
     flex: 0 0 auto;
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px 40px;
@@ -312,217 +252,26 @@ a {
     border-bottom-style: solid;
 }
 
-#color-animation {
-    transition-property: background-color;
-    transition-duration: 9999ms;
-    transition-timing-function: linear;
-}
-
-#cta-animation {
-    transition-property: background-color;
-    transition-duration: 9999ms;
-    transition-timing-function: linear;
-}
-
-/* Brand Sprint Styles */
-
-.brand-sprint-hero {
-    padding: 80px;
-    min-height: 100vh;
+.color-primary {
     background-color: rgb(129, 89, 251);
     color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.brand-sprint-black-section {
-    min-height: 100vh;
+.primary-background {
     background-color: black;
     color: white;
-    padding: 80px;
-    display: flex;
-    flex-direction: row;
-    column-gap: 80px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand-sprint-timeline {
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 120px;
-    color: black;
-}
-
-.sprint-box {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 50%;
-}
-
-.row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    column-gap: 40px;
 }
 
 .inactive {
     color: grey;
 }
 
-.review-card {
-    display: flex;
-    flex-direction: column;
-    gap: 16px 16px;
-    font-size: 24px;
-    line-height: 124%;
-    margin-bottom: 64px;
-}
-
-.cta {
-    width: 30vw;
-    height: 30vw;
-    border-radius: 100%;
-    background-color: rgb(129, 89, 251);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    max-width: 400px;
-    max-height: 400px;
-}
-
-.is-cta-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 40px;
-}
-
-.is-left {
-    align-self: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.sticky-title {
+.sticky {
     position: sticky;
-    width: 50%;
-    top: 24px;
-    left: 0px;
+    top: 0px;
 }
 
-/* Ukrain */
-
-.u-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: #353cec;
-}
-
-.btn {
-    margin: 0px;
-    padding-top: 12px;
-    padding-right: 24px;
-    padding-bottom: 12px;
-    padding-left: 24px;
-    border-style: none;
-    background-color: #ffc300;
-    color: #353cec;
-    font-size: 20px;
-    text-decoration: none;
-    position: fixed;
-    right: 24px;
-    top: 26px;
-}
-
-.u-section {
-    background-color: #353cec;
-    color: white;
-    padding-top: 120px;
-    padding-right: 80px;
-    padding-bottom: 120px;
-    padding-left: 80px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 80px;
-    font-family: 'Inter', sans-serif;
-}
-
-.content-wp {
-    display: flex;
-    flex-direction: column;
-    gap: 140px;
-}
-
-.u-heading {
-    margin: 0px;
-    color: #ffc300;
-    font-size: 160px;
-    line-height: 80%;
-    font-family: degular;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.width-250 {
-    min-width: 250px;
-}
-
-.poster {
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
-    width: 50%;
-    padding: 40px;
-}
-
-.fof {
-    height: 100vh;
-    background-image: url('../images/fof-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    padding: 4em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.fof-link {
-    height: 220px;
-    width: 220px;
-    background-color: #fd3c2d;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    padding: 1em;
-}
-
-.fof-img {
-    max-width: 90vw;
-}
-
-/* Responsive Styles */
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     body {
         font-size: 36px;
@@ -553,7 +302,7 @@ a {
         margin-bottom: 12px;
     }
 
-    .menu-wrapper {
+    .navigation {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -574,40 +323,6 @@ a {
         z-index: 2;
     }
 
-    .circle-info {
-        width: 180px;
-        height: 180px;
-        background-color: white;
-        top: 20px;
-    }
-
-    .circle-brandsprint {
-        width: 200px;
-        height: 200px;
-        background-color: #fd3c2d;
-        color: white;
-        bottom: 35vw;
-        left: 25vw;
-    }
-
-    .circle-ukraine {
-        width: 300px;
-        height: 300px;
-        background-color: #fec415;
-        color: white;
-        bottom: 22vw;
-        right: 15vw;
-    }
-
-    .circle-work {
-        width: 140px;
-        height: 140px;
-        background-color: #ffbfe1;
-        border-radius: 100%;
-        top: 4vw;
-        right: 4vw;
-    }
-
     .sidebar {
         width: 100%;
         font-size: 40px;
@@ -616,153 +331,25 @@ a {
         text-align: center;
     }
 
-    .sidebar-project-link {
-        color: grey;
-    }
-
-    .close-menu {
-        position: fixed;
-        right: 40px;
-        bottom: 24px;
-        background-image: url('../images/close-menu.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 32px;
-        height: 32px;
-    }
-
-    .footer {
+    section {
+        padding: calc(var(--base-size) / 2);;
         flex-direction: column;
-        gap: 40px 80px;
-    }
+        justify-content: center;
 
-    .f-logo {
-        max-width: 100px;
-    }
-
-    .section {
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-top: 40px;
-        padding-bottom: 40px;
     }
 
     .box {
         width: 100%;
     }
 
-    .work {
-        width: 120px;
-        height: 110px;
-        top: 5vw;
-    }
-
-    .info-menu {
-        bottom: 120px;
-    }
-
-    .footer {
-        padding: 24px;
+    footer {
+        padding: calc(var(--base-size) / 2);
         flex-direction: column;
         gap: 40px 80px;
     }
 
-    .footer-content {
-        flex-direction: column;
-        max-width: 100%;
-    }
-
-    /* Brand Sprint */
-
-    .sticky-title {
+    .sticky {
         position: static;
         width: auto;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .sprint-box {
-        max-width: 100%;
-    }
-
-    .brand-sprint-hero {
-        padding-top: 120px;
-        padding-right: 24px;
-        padding-bottom: 80px;
-        padding-left: 24px;
-    }
-
-    .brand-sprint-black-section {
-        padding: 24px;
-        min-height: 80vh;
-    }
-
-    .brand-sprint-timeline {
-        padding: 24px;
-        row-gap: 80px;
-    }
-
-    .is-cta-section {
-        flex-direction: column;
-    }
-
-    .cta {
-        width: 320px;
-        height: 320px;
-    }
-
-    .brand-sprint-black-section {
-        padding-top: 80px;
-        padding-right: 24px;
-        padding-bottom: 80px;
-        padding-left: 24px;
-    }
-
-    .brand-sprint-timeline {
-        padding-top: 80px;
-        padding-right: 24px;
-        padding-bottom: 80px;
-        padding-left: 24px;
-    }
-
-    .logo {
-        position: fixed;
-        top: 24px;
-        left: 24px;
-        width: 180px;
-    }
-
-    /* Ukrain */
-
-    .u-header {
-        padding: 24px;
-    }
-
-    .u-section {
-        padding-top: 80px;
-        padding-right: 24px;
-        padding-bottom: 80px;
-        padding-left: 24px;
-        row-gap: 40px;
-    }
-
-    .content {
-        font-size: 40px;
-        line-height: 110%;
-    }
-
-    .row {
-        flex-direction: column;
-        gap: 40px 40px;
-    }
-
-    .poster {
-        width: 100%;
-    }
-
-    .content {
-        row-gap: 120px;
     }
 }
