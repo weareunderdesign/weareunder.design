@@ -17,14 +17,14 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 40px;
+    font-size:  var(--base-size);
     line-height: 124%;
     font-weight: 400;
     color: black;
 }
 
 p {
-    font-size: 40px; /* It was 24px */
+    font-size:  var(--base-size);
     line-height: 122%;
 }
 
@@ -228,10 +228,8 @@ section {
     display: flex;
     flex-direction: row;
     row-gap: 80px;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     align-items: center;
-    font-family: var(--base-font);
-    font-size: var(--base-size);
 }
 
 .box {
@@ -270,13 +268,13 @@ section {
 
 .sticky {
     position: sticky;
-    top: 0%;
+    top: 24px;
 }
 
 @media (max-width: 1024px) {
 
     body {
-        font-size: 36px;
+        font-size: 20px;
         line-height: 42px;
     }
 
@@ -371,29 +369,4 @@ section {
         flex-wrap: wrap;
     }
 
-}
-
-/* Trash CSS */
-
-.flex-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.gap-40 {
-    row-gap: var(--base-size);
-    column-gap: var(--base-size);
-}
-
-.gap-16 {
-    row-gap: 16px;
-    column-gap: 16px;
 }
