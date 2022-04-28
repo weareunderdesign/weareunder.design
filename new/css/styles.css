@@ -270,6 +270,7 @@ section {
   top: 24px;
 }
 
+/* Added media query for mobile devices */
 @media only screen and (max-width: 980px) {
   #navigation {
     position: absolute;
@@ -314,7 +315,7 @@ section {
     margin-top: 32px;
     margin-bottom: 12px;
   }
-
+  /* Changed selector to # from . as navigation is an id */
   #navigation {
     display: flex;
     flex-direction: column;
@@ -323,8 +324,8 @@ section {
     row-gap: 8px;
     padding-bottom: 10px;
     padding-top: 110px;
-    width: 100%;
     height: 100%;
+    width: 100%; /* added*/
   }
 
   .circle {
