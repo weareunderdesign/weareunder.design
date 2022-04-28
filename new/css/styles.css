@@ -17,14 +17,14 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 40px;
+  font-size: var(--base-size);
   line-height: 124%;
   font-weight: 400;
   color: black;
 }
 
 p {
-  font-size: 40px; /* It was 24px */
+  font-size: var(--base-size);
   line-height: 122%;
 }
 
@@ -229,8 +229,6 @@ section {
   row-gap: 80px;
   /* min-height: 100vh; */
   align-items: center;
-  font-family: var(--base-font);
-  font-size: var(--base-size);
 }
 
 .box {
@@ -269,10 +267,9 @@ section {
 
 .sticky {
   position: sticky;
-  top: 0%;
+  top: 24px;
 }
 
-/* To make lootie animation work in other devices */
 @media only screen and (max-width: 980px) {
   .hero-section {
     display: flex;
@@ -290,6 +287,11 @@ section {
 @media (max-width: 1024px) {
   body {
     font-size: 36px;
+    line-height: 42px;
+  }
+
+  body {
+    font-size: 20px;
     line-height: 42px;
   }
 
@@ -376,59 +378,50 @@ section {
     z-index: 99;
     text-decoration: none;
   }
-
-  .flex-row {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
 }
 
-/* Trash CSS */
-
-.flex-row {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+h3 {
+  font-size: 48px;
+  margin-top: 32px;
+  margin-bottom: 12px;
 }
 
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.gap-40 {
-  row-gap: var(--base-size);
-  column-gap: var(--base-size);
-}
-
-.gap-16 {
-  row-gap: 16px;
-  column-gap: 16px;
+.gallery {
+  column-gap: 40px;
+  align-items: flex-start;
 }
 
 /*Color Change Animation*/
 .random-color-change {
-  -webkit-animation: random-color-change 3s linear infinite alternate both;
-  animation: random-color-change 3s linear infinite alternate both;
+  -webkit-animation: random-color-change 6s linear infinite alternate both;
+  animation: random-color-change 6s linear infinite alternate both;
 }
 
 @-webkit-keyframes random-color-change {
   0% {
-    background: #19dcea;
+    background: #8159fb;
+  }
+  25% {
+    background: #ffbfe1;
+  }
+  50% {
+    background: #fdc800;
   }
   100% {
-    background: #b22cff;
+    background: #fd3c2d;
   }
 }
 @keyframes random-color-change {
   0% {
-    background: #19dcea;
+    background: #8159fb;
+  }
+  25% {
+    background: #ffbfe1;
+  }
+  50% {
+    background: #fdc800;
   }
   100% {
-    background: #b22cff;
+    background: #fd3c2d;
   }
 }
