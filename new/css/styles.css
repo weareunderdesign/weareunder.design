@@ -70,18 +70,6 @@ h6 {
     margin-bottom: 4px;
 }
 
-input {
-    margin-bottom: 8px;
-}
-
-textarea {
-    margin-bottom: 8px;
-}
-
-select {
-    margin-bottom: 8px;
-}
-
 span {
     line-height: inherit;
 }
@@ -241,10 +229,6 @@ section {
     position: relative;
 }
 
-.hidden {
-    display: none;
-}
-
 .project-link {
     display: inline;
     color: black;
@@ -300,17 +284,6 @@ section {
         font-size: 48px;
         margin-top: 32px;
         margin-bottom: 12px;
-    }
-
-    .navigation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        row-gap: 8px;
-        padding-bottom: 10px;
-        padding-top: 110px;
-        height: 100%;
     }
 
     .circle {
