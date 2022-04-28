@@ -228,7 +228,7 @@ section {
     display: flex;
     flex-direction: row;
     row-gap: 80px;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     align-items: center;
 }
 
@@ -352,8 +352,6 @@ section {
         width: auto;
     }
 
-    /* Trash CSS */
-
     .logo {
         position: fixed;
         top: calc(var(--base-size) / 2);
@@ -361,11 +359,4 @@ section {
         z-index: 99;
         text-decoration: none;
     }
-}
-
-/* Trash CSS */
-
-.gallery {
-    column-gap: 40px;
-    align-items: flex-start;
 }
