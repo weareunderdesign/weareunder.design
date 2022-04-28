@@ -289,6 +289,9 @@ const ScrollLottie = (obj) => {
     loop: false,
     autoplay: false,
     path: obj.path,
+    rendererSettings: {
+      preserveAspectRatio: "none",
+    },
   });
 
   let timeObj = { currentFrame: 0 };
