@@ -303,7 +303,6 @@ const ScrollLottie = (obj) => {
       : obj.speed === undefined
       ? "+=1250"
       : "+=500";
-  console.log("endString", endString);
   ScrollTrigger.create({
     trigger: obj.target,
     scrub: true,
@@ -334,14 +333,15 @@ ScrollLottie({
   speed: "medium",
 });
 
-//Added this to improve performance as setInterval was getting called again and again. This will only call it once, after the page has loaded.
-window.onload = function () {
-  window.dispatchEvent(new Event("resize"));
-};
+//Implemented count to call resize for n number of times to prevent infinite triggering of resize.
+var count = 0;
 
-// setInterval(function () {
-//   window.dispatchEvent(new Event("resize"));
-// }, 500);
+const resizerInterval = setInterval(function () {
+  if (count < 50) {
+    window.dispatchEvent(new Event("resize"));
+    count++;
+  } else clearInterval(resizerInterval);
+}, 500);
 
 const animations = $(".lottie-animation");
 animations.map((index, item) => {
