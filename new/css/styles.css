@@ -70,18 +70,6 @@ h6 {
   margin-bottom: 4px;
 }
 
-input {
-  margin-bottom: 8px;
-}
-
-textarea {
-  margin-bottom: 8px;
-}
-
-select {
-  margin-bottom: 8px;
-}
-
 span {
   line-height: inherit;
 }
@@ -240,10 +228,6 @@ section {
   position: relative;
 }
 
-.hidden {
-  display: none;
-}
-
 .project-link {
   display: inline;
   color: black;
@@ -362,6 +346,53 @@ section {
     padding-top: 110px;
     height: 100%;
     width: 100%; /* added*/
+  }
+
+  .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 100%;
+    position: static;
+    z-index: 2;
+  }
+
+  .sidebar {
+    width: 100%;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  body {
+    font-size: 20px;
+    line-height: 42px;
+  }
+
+  h1 {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 80%;
+    margin: 0px;
+    font-family: var(--base-font);
+  }
+
+  h2 {
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-top: 36px;
+    margin-bottom: 12px;
+    margin: 0px;
+    font-family: var(--base-font);
+  }
+
+  h3 {
+    font-size: 48px;
+    margin-top: 32px;
+    margin-bottom: 12px;
   }
 
   .circle {
