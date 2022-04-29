@@ -290,7 +290,7 @@ const ScrollLottie = (obj) => {
     autoplay: false,
     path: obj.path,
     rendererSettings: {
-      preserveAspectRatio: "none",
+      preserveAspectRatio: "xMidYMid slice",
     },
   });
 
