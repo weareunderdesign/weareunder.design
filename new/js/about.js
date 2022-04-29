@@ -62,7 +62,7 @@ const resizerInterval = setInterval(function () {
     window.dispatchEvent(new Event("resize"));
     count++;
   } else clearInterval(resizerInterval);
-}, 500);
+}, 100);
 
 //Replaced previous method as it was taking min max where min was always 0, so it was vague to use it. And it was trying to generate it randomly with manual code even though we have random number generation functions already available to do so.
 function getRandomInt(max) {
