@@ -190,6 +190,8 @@ footer {
   color: white;
   bottom: 35vw;
   left: 25vw;
+  -webkit-animation: random-color-change 6s linear infinite alternate both;
+  animation: random-color-change 6s linear infinite alternate both;
 }
 
 .circle-ukraine {
