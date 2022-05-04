@@ -2,7 +2,7 @@
 @import url("https://use.typekit.net/pzx5ijr.css");
 
 :root {
-  --base-size: 48px;
+  --base-size: 40px;
   --base-font: degular;
 }
 
@@ -50,24 +50,6 @@ h3 {
   font-size: 48px;
   margin-top: 32px;
   margin-bottom: 12px;
-}
-
-h4 {
-  font-size: 36px;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-h5 {
-  font-size: 24px;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-h6 {
-  font-size: 18px;
-  margin-top: 18px;
-  margin-bottom: 4px;
 }
 
 span {
@@ -168,6 +150,7 @@ footer {
 .hero-section {
   height: 100vh;
 }
+
 .circle {
   display: flex;
   align-items: center;
@@ -223,12 +206,13 @@ section {
   flex-direction: row;
   row-gap: 80px;
   min-height: 100vh;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .box {
   flex: 0 0 auto;
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 40px 40px;
@@ -267,38 +251,26 @@ section {
   animation: random-color-change 6s linear infinite alternate both;
 }
 
-@-webkit-keyframes random-color-change {
-  0% {
-    background: #8159fb;
-  }
-  25% {
-    background: #ffbfe1;
-  }
-  50% {
-    background: #fdc800;
-  }
-  100% {
-    background: #fd3c2d;
-  }
-}
-
 @keyframes random-color-change {
   0% {
     background: #8159fb;
   }
+
   25% {
     background: #ffbfe1;
   }
+
   50% {
     background: #fdc800;
   }
+
   100% {
     background: #fd3c2d;
   }
 }
 
 /* Added media query for mobile devices */
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 1024px) {
   #navigation {
     position: absolute;
   }
@@ -310,13 +282,8 @@ section {
     line-height: 42px;
   }
 
-  body {
-    font-size: 20px;
-    line-height: 42px;
-  }
-
   h1 {
-    font-size: 80px;
+    font-size: 96px;
     font-weight: 600;
     line-height: 80%;
     margin: 0px;
@@ -324,7 +291,7 @@ section {
   }
 
   h2 {
-    font-size: 65px;
+    font-size: 56px;
     font-weight: 600;
     line-height: 100%;
     margin-top: 36px;
@@ -339,7 +306,6 @@ section {
     margin-bottom: 12px;
   }
 
-  /* Changed selector to # from . as navigation is an id */
   #navigation {
     display: flex;
     flex-direction: column;
@@ -349,54 +315,7 @@ section {
     padding-bottom: 10px;
     padding-top: 110px;
     height: 100%;
-    width: 100%; /* added*/
-  }
-
-  .circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 100%;
-    position: static;
-    z-index: 2;
-  }
-
-  .sidebar {
     width: 100%;
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 8px;
-    text-align: center;
-  }
-
-  body {
-    font-size: 20px;
-    line-height: 42px;
-  }
-
-  h1 {
-    font-size: 80px;
-    font-weight: 600;
-    line-height: 80%;
-    margin: 0px;
-    font-family: var(--base-font);
-  }
-
-  h2 {
-    font-size: 65px;
-    font-weight: 600;
-    line-height: 100%;
-    margin-top: 36px;
-    margin-bottom: 12px;
-    margin: 0px;
-    font-family: var(--base-font);
-  }
-
-  h3 {
-    font-size: 48px;
-    margin-top: 32px;
-    margin-bottom: 12px;
   }
 
   .circle {
@@ -408,7 +327,9 @@ section {
     position: static;
     z-index: 2;
   }
-
+p {
+  font-size: 32px;
+}
   .sidebar {
     width: 100%;
     font-size: 40px;
@@ -418,7 +339,6 @@ section {
   }
 
   section {
-    padding: calc(var(--base-size) / 2);
     flex-direction: column;
     justify-content: center;
   }
@@ -433,16 +353,11 @@ section {
     gap: 40px 80px;
   }
 
-  .sticky {
-    position: static;
-    width: auto;
+  .footer-content {
+    max-width: 100%;
   }
 
-  .logo {
-    position: fixed;
-    top: calc(var(--base-size) / 2);
-    left: calc(var(--base-size) / 2);
-    z-index: 99;
-    text-decoration: none;
+  .sticky {
+    position: static;
   }
 }
