@@ -1,7 +1,7 @@
 const TEMPLATE = `
 <footer>
 <a class="footer-logo" href="./index.html">
-    <img src="./images/under-footer.svg" style="padding: 12px;">
+    <img src="./images/under-footer.svg">
 </a>
 <div class="footer-content">
     We are a creative team, designing digital brands & products through solid
