@@ -287,6 +287,12 @@ section {
     line-height: 42px;
   }
 
+  .footer-logo {
+    width: 64px;
+    padding: 0px;
+    margin: 0px;
+  }
+
   h1 {
     font-size: 96px;
     font-weight: 600;
