@@ -42,7 +42,7 @@ const ScrollLottie = (obj) => {
   });
 };
 
-const lottieAnimations = ["https://weareunder.design/animations/about.json"];
+const lottieAnimations = ["./animations/about.json"];
 
 const randomAnimation =
   lottieAnimations[getRandomInt(0, lottieAnimations.length - 1)];
