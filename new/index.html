@@ -1,223 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta property="og:title" content="Under Design Studio" />
-    <link rel="icon" href="./images/favicon.svg" />
-    <link rel="apple-touch-icon" href="./images/webclip.svg" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./js/lottie_scroll.js"></script>
-    <script src="./js/pingpong.js"></script>
-    <script defer src="./js/main.js"></script>
-    <title>Under</title>
-  </head>
-  <body>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <div class="hero-section">
-      <a class="logo" href="https://weareunder.design/">
-        <img src="./images/under-header-logo.svg" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="Under Design Studio" />
+  <link rel="icon" href="./images/favicon.svg" />
+  <link rel="apple-touch-icon" href="./images/webclip.svg" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="./js/lottie_scroll.js"></script>
+  <script src="./js/pingpong.js"></script>
+  <script defer src="./js/main.js"></script>
+  <title>Under</title>
+</head>
+
+<body>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <div class="hero-section">
+    <a class="logo" href="https://weareunder.design/">
+      <img src="./images/under-header-logo.svg" />
+    </a>
+    <div id="navigation" class="menu-wrapper">
+      <a class="circle circle-work">
+        <span>Work</span>
       </a>
-      <div id="navigation" class="menu-wrapper">
-        <a class="circle circle-work">
-          <span>Work</span>
-        </a>
-        <a class="circle circle-info" href="./about-us">
-          <span>Info</span>
-        </a>
-        <a class="circle circle-brandsprint" href="./brand-sprint">
-          <span>Brand<br />Sprint</span>
-        </a>
-        <a class="circle circle-ukraine" href="./for-ukraine">
-          <span>
-            Empathy
-            <br />for Ukraine
-          </span>
-        </a>
-      </div>
-    </div>
-    <div class="sidebar">
-      <div class="close-menu"></div>
-      <a href="./work/mesh" id="mesh-19F08B" class="sidebar-project-link">
-        <span>Mesh Payments</span>
+      <a class="circle circle-info" href="./about-us">
+        <span>Info</span>
       </a>
-      <a
-        href="./work/unleash"
-        class="sidebar-project-link"
-        id="unleash-BE8DF6"
-      >
-        <span>Unleash</span>
+      <a class="circle circle-brandsprint" href="./brand-sprint">
+        <span>Brand<br />Sprint</span>
       </a>
-      <a
-        href="./work/per-diem"
-        class="sidebar-project-link"
-        id="perdiem-0171EA"
-      >
-        <span>Per Diem</span>
-      </a>
-      <a
-        href="./work/upword"
-        class="sidebar-project-link"
-        id="upword-B8A4FD"
-      >
-        <span>Upword</span>
-      </a>
-      <a
-        href="./work/balance"
-        class="sidebar-project-link"
-        id="balance-1d1d1d"
-      >
-        <span>Balance</span>
-      </a>
-      <a
-        href="./work/reeco"
-        class="sidebar-project-link"
-        id="reeco-0FCB71"
-      >
-        <span>Reeco</span>
-      </a>
-      <a href="./work/zigi" class="sidebar-project-link" id="zigi-22D285">
-        <span>Zigi</span>
-      </a>
-      <a href="./work/zoog" class="sidebar-project-link" id="zoog-FF7051">
-        <span>Zoog</span>
-      </a>
-      <a
-        href="./work/faintlines"
-        class="sidebar-project-link"
-        id="faintlines-FF0DBD"
-      >
-        <span>Faintlines</span>
-      </a>
-      <a
-        href="./work/reflect"
-        class="sidebar-project-link"
-        id="reflect-D1A8FD"
-      >
-        <span>Reflect</span>
-      </a>
-      <a href="./work/unit" class="sidebar-project-link" id="unit-000000">
-        <span>Unit</span>
-      </a>
-      <a
-        href="./work/everafter"
-        class="sidebar-project-link"
-        id="everafter-FF7051"
-      >
-        <span>EverAfter</span>
-      </a>
-      <a
-        href="./work/karma"
-        class="sidebar-project-link"
-        id="karmaco-FCAC8B"
-      >
-        <span>Karma Co</span>
-      </a>
-      <a
-        href="./work/avenue"
-        class="sidebar-project-link"
-        id="avenue-7545FF"
-      >
-        <span>Avenue</span>
-      </a>
-      <a
-        href="./work/la-rosh"
-        class="sidebar-project-link"
-        id="larosh-C0815F"
-      >
-        <span>La Rosh</span>
-      </a>
-      <a
-        href="./work/le-salon"
-        class="sidebar-project-link"
-        id="lasalon-000000"
-      >
-        <span>Le Salon</span>
-      </a>
-      <a
-        href="./work/the-lovers"
-        class="sidebar-project-link"
-        id="thelovers-000000"
-      >
-        <span>The Lovers</span>
+      <a class="circle circle-ukraine" href="./for-ukraine">
+        <span>
+          Ukraine
+          <br />Empathy
+        </span>
       </a>
     </div>
-    <div class="projects">
-      <img
-        src="./images/mesh-payments.svg"
-        class="sidebar-project-image"
-        id="mesh"
-      />
-      <img
-        src="./images/unleash.png"
-        class="sidebar-project-image"
-        id="unleash"
-      />
-      <img
-        src="./images/per-diem.png"
-        class="sidebar-project-image"
-        id="perdiem"
-      />
-      <img
-        src="./images/upword.png"
-        class="sidebar-project-image"
-        id="upword"
-      />
-      <img
-        src="./images/balanace.png"
-        class="sidebar-project-image"
-        id="balance"
-      />
-      <img src="./images/reeco.png" class="sidebar-project-image" id="reeco" />
-      <img src="./images/zigi.svg" class="sidebar-project-image" id="zigi" />
-      <img src="./images/zoog.png" class="sidebar-project-image" id="zoog" />
-      <img
-        src="./images/faintlines.png"
-        class="sidebar-project-image"
-        id="faintlines"
-      />
-      <img
-        class="sidebar-project-image"
-        id="reflect"
-        src="./images/reflect.png"
-      />
-      <img src="./images/unit.png" class="sidebar-project-image" id="unit" />
-      <img
-        src="./images/everafter.png"
-        class="sidebar-project-image"
-        id="everafter"
-      />
-      <img src="./images/darna.png" id="darna" class="sidebar-project-image" />
-      <img
-        src="./images/karma.png"
-        id="karmaco"
-        class="sidebar-project-image"
-      />
-      <img
-        src="./images/avenue.png"
-        id="avenue"
-        class="sidebar-project-image"
-      />
-      <img
-        src="./images/la-rosh.png"
-        id="larosh"
-        class="sidebar-project-image"
-      />
-      <img
-        src="./images/La Salon - Hero.png"
-        id="lasalon"
-        class="sidebar-project-image"
-      />
-      <img
-        src="./images/lovers.png"
-        class="sidebar-project-image"
-        id="thelovers"
-      />
-    </div>
-    <under-footer></under-footer>
-    <script src="./js/footer.js"></script>
-  </body>
+  </div>
+  <div class="sidebar">
+    <div class="close-menu"></div>
+    <a href="./work/mesh" id="mesh-19F08B" class="sidebar-project-link">
+      <span>Mesh Payments</span>
+    </a>
+    <a href="./work/unleash" class="sidebar-project-link" id="unleash-BE8DF6">
+      <span>Unleash</span>
+    </a>
+    <a href="./work/per-diem" class="sidebar-project-link" id="perdiem-0171EA">
+      <span>Per Diem</span>
+    </a>
+    <a href="./work/upword" class="sidebar-project-link" id="upword-B8A4FD">
+      <span>Upword</span>
+    </a>
+    <a href="./work/balance" class="sidebar-project-link" id="balance-1d1d1d">
+      <span>Balance</span>
+    </a>
+    <a href="./work/reeco" class="sidebar-project-link" id="reeco-0FCB71">
+      <span>Reeco</span>
+    </a>
+    <a href="./work/zigi" class="sidebar-project-link" id="zigi-22D285">
+      <span>Zigi</span>
+    </a>
+    <a href="./work/notch" class="sidebar-project-link" id="notch-CF6AFF">
+      <span>Notch</span>
+    </a>
+    <a href="./work/zoog" class="sidebar-project-link" id="zoog-FF7051">
+      <span>Zoog</span>
+    </a>
+    <a href="./work/faintlines" class="sidebar-project-link" id="faintlines-FF0DBD">
+      <span>Faintlines</span>
+    </a>
+    <a href="./work/reflect" class="sidebar-project-link" id="reflect-D1A8FD">
+      <span>Reflect</span>
+    </a>
+    <a href="./work/unit" class="sidebar-project-link" id="unit-000000">
+      <span>Unit</span>
+    </a>
+    <a href="./work/everafter" class="sidebar-project-link" id="everafter-FF7051">
+      <span>EverAfter</span>
+    </a>
+    <a href="./work/karma" class="sidebar-project-link" id="karmaco-FCAC8B">
+      <span>Karma Co</span>
+    </a>
+    <a class="sidebar-project-link" id="flume-FF6E15" href="./work/flume"> 
+      <span>Flume</span>
+    </a>
+    <a href="./work/alcide" class="sidebar-project-link" id="alcide-FF0000">
+      <span>Alcide</span>
+    </a>
+    <a href="./work/avenue" class="sidebar-project-link" id="avenue-7545FF">
+      <span>Avenue</span>
+    </a>
+    <a href="./work/la-rosh" class="sidebar-project-link" id="larosh-C0815F">
+      <span>La Rosh</span>
+    </a>
+    <a href="./work/le-salon" class="sidebar-project-link" id="lasalon-000000">
+      <span>Le Salon</span>
+    </a>
+    <a href="./work/the-lovers" class="sidebar-project-link" id="thelovers-000000">
+      <span>The Lovers</span>
+    </a>
+  </div>
+  <div class="projects">
+    <img src="./images/mesh-payments.svg" class="sidebar-project-image" id="mesh" />
+    <img src="./images/notch.png" id="notch" class="sidebar-project-image" />
+    <img src="./images/unleash.png" class="sidebar-project-image" id="unleash" />
+    <img src="./images/per-diem.png" class="sidebar-project-image" id="perdiem" />
+    <img src="./images/upword.png" class="sidebar-project-image" id="upword" />
+    <img src="./images/balanace.png" class="sidebar-project-image" id="balance" />
+    <img src="./images/flume.png" class="sidebar-project-image" id="flume" />
+    <img src="./images/reeco.png" class="sidebar-project-image" id="reeco" />
+    <img src="./images/zigi.svg" class="sidebar-project-image" id="zigi" />
+    <img src="./images/zoog.png" class="sidebar-project-image" id="zoog" />
+    <img src="./images/faintlines.png" class="sidebar-project-image" id="faintlines" />
+    <img class="sidebar-project-image" id="reflect" src="./images/reflect.png" />
+    <img src="./images/unit.png" class="sidebar-project-image" id="unit" />
+    <img src="./images/everafter.png" class="sidebar-project-image" id="everafter" />
+    <img src="./images/darna.png" id="darna" class="sidebar-project-image" />
+    <img src="./images/karma.png" id="karmaco" class="sidebar-project-image" />
+    <img src="./images/avenue.png" id="avenue" class="sidebar-project-image" />
+    <img src="./images/la-rosh.png" id="larosh" class="sidebar-project-image" />
+    <img src="./images/La Salon - Hero.png" id="lasalon" class="sidebar-project-image" />
+    <img src="./images/lovers.png" class="sidebar-project-image" id="thelovers" />
+  </div>
+  <under-footer></under-footer>
+  <script src="./js/footer.js"></script>
+</body>
+
 </html>
