@@ -118,9 +118,6 @@ window.addEventListener("resize", () => {
     tweenWork?.kill && tweenWork.kill();
     tweenBrandsprint?.kill && tweenBrandsprint.kill();
     tweenUkraine?.kill && tweenUkraine.kill();
-    // tweenWork.kill();
-    // tweenBrandsprint.kill();
-    // tweenUkraine.kill();
 
     //Setting the circles to their initial position
     if (infoElement) infoElement.style.transform = "none";
