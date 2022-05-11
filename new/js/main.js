@@ -242,6 +242,9 @@ $(".circle-work").on("click", function () {
   $("#logo").css({
     display: "none" + " ",
   });
+  $(".circle").css({
+    display: "none" + " ",
+  });
 });
 
 $(".sidebar").on("mouseover", function () {
@@ -265,6 +268,9 @@ $(".sidebar").on("mouseout", function () {
   });
   $("#logo").css({
     display: "block" + " ",
+  });
+  $(".circle").css({
+    display: "flex" + " ",
   });
 });
 
