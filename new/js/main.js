@@ -257,6 +257,9 @@ $(".sidebar").on("mouseover", function () {
   $("#logo").css({
     display: "none" + " ",
   });
+  $(".circle").css({
+    display: "none" + " ",
+  });
 });
 
 $(".sidebar").on("mouseout", function () {
@@ -285,6 +288,9 @@ $(".close-menu").on("click", function () {
 
   $("#logo").css({
     display: "block" + " ",
+  });
+  $(".circle").css({
+    display: "none" + " ",
   });
 });
 

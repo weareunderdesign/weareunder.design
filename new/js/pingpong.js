@@ -112,19 +112,23 @@ window.addEventListener("resize", () => {
     console.log("error");
   }
   if (window.innerWidth < 768) {
-    //Killing the bounce aniamtion if device is not desktop or if the device is mobile
-    tweenInfo.kill();
-    tweenWork.kill();
-    tweenBrandsprint.kill();
-    tweenUkraine.kill();
+    //Killing the bounce animation if device is not desktop or if the device is mobile
+
+    tweenInfo?.kill && tweenInfo.kill();
+    tweenWork?.kill && tweenWork.kill();
+    tweenBrandsprint?.kill && tweenBrandsprint.kill();
+    tweenUkraine?.kill && tweenUkraine.kill();
+    // tweenWork.kill();
+    // tweenBrandsprint.kill();
+    // tweenUkraine.kill();
 
     //Setting the circles to their initial position
-    infoElement.style.transform = "none";
-    workElement.style.transform = "none";
-    brandsprintElement.style.transform = "none";
-    ukraineElement.style.transform = "none";
+    if (infoElement) infoElement.style.transform = "none";
+    if (workElement) workElement.style.transform = "none";
+    if (brandsprintElement) brandsprintElement.style.transform = "none";
+    if (ukraineElement) ukraineElement.style.transform = "none";
   } else {
-    //Restauring the bounce animation if device is desktop
+    //Restoring the bounce animation if device is desktop
     intervalId1 = setInterval(() => ping(".circle-info"), 1000);
     intervalId2 = setInterval(() => ping(".circle-work"), 1000);
     intervalId3 = setInterval(() => ping(".circle-brandsprint"), 1000);
