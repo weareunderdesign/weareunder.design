@@ -242,6 +242,10 @@ $(".circle-work").on("click", function () {
   $("#logo").css({
     display: "none" + " ",
   });
+  $(".circle").css({
+    display: "none" + " ",
+  });
+  document.body.style.overflow = "hidden";
 });
 
 $(".sidebar").on("mouseover", function () {
@@ -254,6 +258,10 @@ $(".sidebar").on("mouseover", function () {
   $("#logo").css({
     display: "none" + " ",
   });
+  $(".circle").css({
+    display: "none" + " ",
+  });
+  document.body.style.overflow = "hidden";
 });
 
 $(".sidebar").on("mouseout", function () {
@@ -266,6 +274,10 @@ $(".sidebar").on("mouseout", function () {
   $("#logo").css({
     display: "block" + " ",
   });
+  $(".circle").css({
+    display: "flex" + " ",
+  });
+  document.body.style.overflow = "auto";
 });
 
 $(".close-menu").on("click", function () {
@@ -280,6 +292,11 @@ $(".close-menu").on("click", function () {
   $("#logo").css({
     display: "block" + " ",
   });
+  $(".circle").css({
+    display: "flex" + " ",
+  });
+
+  document.body.style.overflow = "auto";
 });
 
 const ScrollLottie = (obj) => {
@@ -343,6 +360,14 @@ const resizerInterval = setInterval(function () {
   } else clearInterval(resizerInterval);
 }, 100);
 
+window.addEventListener("resize", () => {
+  setInterval(function () {
+    if (count < 50) {
+      window.dispatchEvent(new Event("resize"));
+      count++;
+    } else clearInterval(resizerInterval);
+  }, 100);
+});
 const animations = $(".lottie-animation");
 animations.map((index, item) => {
   lottie.loadAnimation({

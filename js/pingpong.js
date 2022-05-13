@@ -1,15 +1,21 @@
 let tweenInfo, tweenWork, tweenBrandsprint, tweenUkraine;
 let infoElement, workElement, brandsprintElement, ukraineElement;
+
+var dot, container, containerBounds, xMax, xMin, yMax, yMin;
+
+function updatePlayground(class_target) {
+  dot = document.querySelector(class_target);
+  container = document.querySelector(".hero-section");
+  dotBounds = dot.getBoundingClientRect();
+  containerBounds = container.getBoundingClientRect();
+  xMax = containerBounds.right - dotBounds.right;
+  xMin = containerBounds.left - dotBounds.left;
+  yMax = containerBounds.bottom - dotBounds.bottom;
+  yMin = containerBounds.top - dotBounds.top;
+}
 function ping(class_target) {
   try {
-    var dot = document.querySelector(class_target),
-      container = document.querySelector(".hero-section"),
-      dotBounds = dot.getBoundingClientRect(),
-      containerBounds = container.getBoundingClientRect(),
-      xMax = containerBounds.right - dotBounds.right,
-      xMin = containerBounds.left - dotBounds.left,
-      yMax = containerBounds.bottom - dotBounds.bottom,
-      yMin = containerBounds.top - dotBounds.top;
+    updatePlayground(class_target);
     if (containerBounds && containerBounds.bottom > 0) {
       let gsapTween = gsap.to(class_target, {
         x: "+=3000",
@@ -102,32 +108,47 @@ var intervalId2 = setInterval(() => ping(".circle-work"), 1000);
 var intervalId3 = setInterval(() => ping(".circle-brandsprint"), 1000);
 var intervalId4 = setInterval(() => ping(".circle-ukraine"), 1000);
 
-window.addEventListener("resize", () => {
-  try {
-    clearInterval(intervalId1);
-    clearInterval(intervalId2);
-    clearInterval(intervalId3);
-    clearInterval(intervalId4);
-  } catch (err) {
-    console.log("error");
-  }
-  if (window.innerWidth < 768) {
-    //Killing the bounce aniamtion if device is not desktop or if the device is mobile
-    tweenInfo.kill();
-    tweenWork.kill();
-    tweenBrandsprint.kill();
-    tweenUkraine.kill();
+//Setting the circles to their initial position
+function bringCircleToInitialPosition() {
+  if (infoElement) infoElement.style.transform = "none";
+  if (workElement) workElement.style.transform = "none";
+  if (brandsprintElement) brandsprintElement.style.transform = "none";
+  if (ukraineElement) ukraineElement.style.transform = "none";
+}
 
-    //Setting the circles to their initial position
-    infoElement.style.transform = "none";
-    workElement.style.transform = "none";
-    brandsprintElement.style.transform = "none";
-    ukraineElement.style.transform = "none";
-  } else {
-    //Restauring the bounce animation if device is desktop
-    intervalId1 = setInterval(() => ping(".circle-info"), 1000);
-    intervalId2 = setInterval(() => ping(".circle-work"), 1000);
-    intervalId3 = setInterval(() => ping(".circle-brandsprint"), 1000);
-    intervalId4 = setInterval(() => ping(".circle-ukraine"), 1000);
+//Pause Bouncing Animation
+function pauseBouncingAnimation() {
+  try {
+    tweenInfo.pause();
+    tweenWork.pause();
+    tweenBrandsprint.pause();
+    tweenUkraine.pause();
+  } catch (err) {
+    console.log(err);
   }
+}
+
+//Restart Bouncing Animation
+function restartBouncingAnimation() {
+  try {
+    tweenInfo.restart();
+    tweenWork.restart();
+    tweenBrandsprint.restart();
+    tweenUkraine.restart();
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+window.addEventListener("resize", () => {
+  setTimeout(() => {
+    if (window.innerWidth < 992) {
+      bringCircleToInitialPosition();
+      pauseBouncingAnimation();
+    } else {
+      bringCircleToInitialPosition();
+      restartBouncingAnimation();
+    }
+  }, 500);
+  //timeout because resizing event takes time to complete and register the final size.
 });
