@@ -325,7 +325,6 @@ section {
     align-items: center;
     justify-content: center;
     padding-bottom: 10px;
-    padding-top: 110px;
     width: 100%;
     height: 100%;
     align-content: center;
@@ -336,6 +335,7 @@ section {
     top: var(--base-size);
     z-index: 99;
     text-decoration: none;
+    width: ;
   }
 
   .circle {
@@ -385,5 +385,9 @@ section {
 
   .sticky {
     position: static;
+  }
+
+  .hideonmobile {
+    display: none;
   }
 }
