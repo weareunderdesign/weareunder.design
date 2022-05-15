@@ -2,7 +2,7 @@
 @import url("https://use.typekit.net/pzx5ijr.css");
 
 :root {
-  --base-size: 40px;
+  --base-size: 64px;
   --base-font: degular;
 }
 
@@ -17,14 +17,14 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: var(--base-size);
+  font-size: 40px;
   line-height: 124%;
   font-weight: 400;
   color: black;
 }
 
 p {
-  font-size: var(--base-size);
+  font-size: 40px;
   line-height: 122%;
 }
 
@@ -332,7 +332,8 @@ section {
 
   .logo {
     position: absolute;
-    top: var(--base-size);
+    top: calc(var(--base-size) / 2);
+    left: calc(var(--base-size) / 2);
     z-index: 99;
     text-decoration: none;
     width: ;
@@ -367,6 +368,7 @@ section {
   section {
     flex-direction: column;
     justify-content: center;
+    padding: calc(var(--base-size) / 2);
   }
 
   .box {
