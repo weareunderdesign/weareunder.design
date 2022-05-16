@@ -69,11 +69,13 @@ a {
 }
 
 .logo {
-  position: absolute;
+  position: fixed;
   top: var(--base-size);
   left: var(--base-size);
   z-index: 99;
   text-decoration: none;
+  mix-blend-mode: difference;
+  width: 152px;
 }
 
 .video {
@@ -135,6 +137,7 @@ footer {
 
 .footer-logo {
   flex: 0 0 auto;
+  width: 142px;
 }
 
 .footer-content {
@@ -331,12 +334,10 @@ section {
   }
 
   .logo {
-    position: absolute;
     top: calc(var(--base-size) / 2);
     left: calc(var(--base-size) / 2);
     z-index: 99;
     text-decoration: none;
-    width: ;
   }
 
   .circle {
