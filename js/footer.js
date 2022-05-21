@@ -1,6 +1,6 @@
 const TEMPLATE = `
 <footer>
-<a class="footer-logo" href="./index.html">
+<a class="footer-logo" href="/">
     <img src="./images/under-footer.svg">
 </a>
 <div class="footer-content">
