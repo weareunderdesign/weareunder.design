@@ -1,5 +1,5 @@
-let tweenInfo, tweenWork, tweenBrandsprint, tweenUkraine;
-let infoElement, workElement, brandsprintElement, ukraineElement;
+let tweenInfo, tweenWork, tweenBrandsprint, tweendynamic;
+let infoElement, workElement, brandsprintElement, dynamicElement;
 
 var dot, container, containerBounds, xMax, xMin, yMax, yMin;
 
@@ -63,15 +63,15 @@ function ping(class_target) {
         brandsprintElement.addEventListener("mouseleave", () => {
           tweenBrandsprint.resume();
         });
-      } else if (class_target === ".circle-ukraine") {
+      } else if (class_target === ".circle-dynamic") {
         clearInterval(intervalId4);
-        tweenUkraine = gsapTween;
-        ukraineElement = document.querySelector(".circle-ukraine");
-        ukraineElement.addEventListener("mouseenter", () => {
-          tweenUkraine.pause();
+        tweendynamic = gsapTween;
+        dynamicElement = document.querySelector(".circle-dynamic");
+        dynamicElement.addEventListener("mouseenter", () => {
+          tweendynamic.pause();
         });
-        ukraineElement.addEventListener("mouseleave", () => {
-          tweenUkraine.resume();
+        dynamicElement.addEventListener("mouseleave", () => {
+          tweendynamic.resume();
         });
       }
     }
@@ -106,14 +106,14 @@ function ping(class_target) {
 var intervalId1 = setInterval(() => ping(".circle-info"), 1000);
 var intervalId2 = setInterval(() => ping(".circle-work"), 1000);
 var intervalId3 = setInterval(() => ping(".circle-brandsprint"), 1000);
-var intervalId4 = setInterval(() => ping(".circle-ukraine"), 1000);
+var intervalId4 = setInterval(() => ping(".circle-dynamic"), 1000);
 
 //Setting the circles to their initial position
 function bringCircleToInitialPosition() {
   if (infoElement) infoElement.style.transform = "none";
   if (workElement) workElement.style.transform = "none";
   if (brandsprintElement) brandsprintElement.style.transform = "none";
-  if (ukraineElement) ukraineElement.style.transform = "none";
+  if (dynamicElement) dynamicElement.style.transform = "none";
 }
 
 //Pause Bouncing Animation
@@ -122,7 +122,7 @@ function pauseBouncingAnimation() {
     tweenInfo.pause();
     tweenWork.pause();
     tweenBrandsprint.pause();
-    tweenUkraine.pause();
+    tweendynamic.pause();
   } catch (err) {
     console.log(err);
   }
@@ -134,7 +134,7 @@ function restartBouncingAnimation() {
     tweenInfo.restart();
     tweenWork.restart();
     tweenBrandsprint.restart();
-    tweenUkraine.restart();
+    tweendynamic.restart();
   } catch (err) {
     console.log(err);
   }
