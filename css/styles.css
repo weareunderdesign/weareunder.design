@@ -183,10 +183,10 @@ footer {
   z-index: 2;
 }
 
-.circle-ukraine {
+.circle-dynamic {
   width: 240px;
   height: 240px;
-  background-color: #fec415;
+  background-color: black;
   color: white;
   bottom: 22vw;
   right: 15vw;
