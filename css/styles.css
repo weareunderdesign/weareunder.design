@@ -2,7 +2,7 @@
 
 :root {
   --base-size: 64px;
-  --base-font: degular;
+  --base-font: degular display;
 }
 
 *,
