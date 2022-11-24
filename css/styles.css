@@ -30,7 +30,7 @@ p {
 
 h1 {
   font-size: 186px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 80%;
   margin: 0px;
   font-family: var(--base-font);
@@ -40,7 +40,7 @@ h2 {
   margin-top: 36px;
   margin-bottom: 12px;
   font-size: 82px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 100%;
   margin: 0px;
   font-family: var(--base-font);
