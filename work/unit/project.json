@@ -1,0 +1,27 @@
+{
+  "heroImage": "unit_0.png",
+  "ogImage": "unit_0.png",
+  "title": "Unit",
+  "info": {
+    "title": "Unit",
+    "class": "sidebar-project-link",
+
+    "bgColor": "#000000",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

@@ -1,0 +1,27 @@
+{
+  "heroImage": "groundcover_0.png",
+  "ogImage": "groundcover_0.png",
+  "title": "Groundcover",
+  "info": {
+    "title": "Groundcover",
+    "class": "sidebar-project-link",
+
+    "bgColor": "#1BB485",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

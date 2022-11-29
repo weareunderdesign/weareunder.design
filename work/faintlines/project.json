@@ -1,0 +1,26 @@
+{
+  "heroImage": "faintless_0.png",
+  "ogImage": "faintless_0.png",
+  "title": "Faintlines",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#FF0DBD",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

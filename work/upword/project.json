@@ -1,0 +1,26 @@
+{
+  "heroImage": "upword_0.png",
+  "ogImage": "upword_0.png",
+  "title": "Upword",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#B8A4FD",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

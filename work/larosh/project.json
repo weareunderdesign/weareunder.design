@@ -1,0 +1,26 @@
+{
+  "heroImage": "larosh_0.png",
+  "ogImage": "larosh_0.png",
+  "title": "La Rosh",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#C0815F",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

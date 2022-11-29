@@ -1,0 +1,26 @@
+{
+  "heroImage": "tagbox_0.png",
+  "ogImage": "tagbox_0.png",
+  "title": "Tagbox",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#C2A78D",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

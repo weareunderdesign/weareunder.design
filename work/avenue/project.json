@@ -1,0 +1,26 @@
+{
+  "heroImage": "avenue_0.png",
+  "ogImage": "avenue_0.png",
+  "title": "Avenue",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#7545FF",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

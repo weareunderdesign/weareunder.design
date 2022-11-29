@@ -1,0 +1,27 @@
+{
+  "heroImage": "healthquarters_0.png",
+  "ogImage": "healthquarters_0.png",
+
+  "info": {
+    "title": "HealthQuarters",
+    "class": "sidebar-project-link",
+
+    "bgColor": "#0E305A",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

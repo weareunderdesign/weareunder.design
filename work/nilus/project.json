@@ -1,0 +1,26 @@
+{
+  "heroImage": "nilus_0.png",
+  "ogImage": "nilus_0.png",
+  "title": "Nilus",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#db160d",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

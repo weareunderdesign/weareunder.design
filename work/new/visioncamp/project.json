@@ -1,0 +1,26 @@
+{
+  "heroImage": "visioncamp_0.png",
+  "ogImage": "visioncamp_0.png",
+  "title": "Vision Camp",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#FF0000",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

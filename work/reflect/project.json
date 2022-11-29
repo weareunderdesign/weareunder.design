@@ -1,0 +1,26 @@
+{
+  "heroImage": "reflect_0.png",
+  "ogImage": "reflect_0.png",
+  "title": "Reflect",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#D1A8FD",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

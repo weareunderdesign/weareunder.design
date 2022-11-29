@@ -1,0 +1,26 @@
+{
+  "heroImage": "mesh_0.png",
+  "ogImage": "mesh_0.png",
+  "title": "Mesh Payments",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#19F08B",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}

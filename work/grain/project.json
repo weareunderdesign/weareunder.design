@@ -1,0 +1,26 @@
+{
+  "heroImage": "grain_0.png",
+  "ogImage": "grain_0.png",
+  "title": "Grain",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#FED164",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.linkedin.com/in/alcide/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": []
+}
