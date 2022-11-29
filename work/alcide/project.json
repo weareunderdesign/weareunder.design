@@ -1,0 +1,31 @@
+{
+  "heroImage": "alcide_0.png",
+  "ogImage": "alcide_0.png",
+  "title": "Alcide",
+  "info": {
+    "class": "sidebar-project-link",
+
+    "bgColor": "#FF0000",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Alcide",
+        "link": "https://www.alcide.io/"
+      },
+      {
+        "role": "Designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Art direction",
+        "name": "Eden Vidal & Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "Brand & Product design for Alcide.io - Alcide’s Data Center & Cloud Ops Security Platform protects any combination of container, serverless, VM and bare metal."
+    ],
+    "images": []
+  }
+}
