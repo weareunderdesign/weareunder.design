@@ -329,6 +329,8 @@ if (url === "/") {
   async function setHtml() {
     let _url = url;
     let fileName = _url.slice(0, -1).split("/").pop();
+    let projectTitle = fileName.replace("_", " ");
+    projectTitle = projectTitle[0].toUpperCase() + projectTitle.slice(1);
 
     let jsonDir = url + "project.json";
     projectJSONObj = await $.ajax({
@@ -337,7 +339,7 @@ if (url === "/") {
     });
     let bodyHtml = `<a id="logo" class="logo" href="/"><img src="/images/under-header-logo.svg" /></a><img src="0.png" /> <section class="content">`;
 
-    let contentHtml = `<p>${fileName} <br/> <br/>`;
+    let contentHtml = `<p>${projectTitle} <br/> <br/>`;
 
     let textContent = projectJSONObj.content.text;
     for (let i = 0; i < textContent.length; i++) {
