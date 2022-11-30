@@ -299,9 +299,6 @@ if (url === "/") {
     projectLink.setAttribute("class", "sidebar-project-link");
     projectLink.setAttribute("id", project?.id ?? "");
 
-    if (!project?.title) {
-      console.log(project);
-    }
     projectLink.innerHTML = `<span>${projectTitle}</span>`;
 
     let projectBGCode = `<img src="${project.directory}/0.png" class="sidebar-project-image" id="${fileName}"/>`;
