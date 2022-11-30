@@ -12,6 +12,7 @@ let subSearchList = ["/work", "/work/new", "/work/archive"];
 let sidebar = document.getElementsByClassName("sidebar")[0];
 
 let url = window.location.pathname;
+url = url.replace("index.html", "").replace("index.htm", "");
 
 if (url === "/") {
   async function getProjects(directory) {
@@ -275,6 +276,7 @@ if (url === "/") {
   }
   await getProjects(workDirectory);
   await getProjects(subSearchList[1]);
+  // this is for archive projects (to show archive projects also uncommenet this line below)
   // await getProjects(subSearchList[1]);
 
   let allWorksList = [].concat(newWorkArr, workArr, archivedWorkArr);
@@ -287,10 +289,7 @@ if (url === "/") {
     let projectLink = document.createElement("a");
 
     projectLink.setAttribute("href", project.directory);
-    projectLink.setAttribute(
-      "class",
-      project?.info?.class ?? "sidebar-project-link"
-    );
+    projectLink.setAttribute("class", "sidebar-project-link");
     projectLink.setAttribute("id", project?.id ?? "");
 
     projectLink.innerHTML = `<span>${project?.title ?? "Unknown"}</span>`;
@@ -310,7 +309,7 @@ if (url === "/") {
         let _url = url;
         let fileName = _url.slice(0, -1).split("/").pop();
         fileName = fileName[0].toUpperCase() + fileName.slice(1);
-        let imgUrl = `${url}${fileName}%20${i}.png`;
+        let imgUrl = `${url}${i}.png`;
         try {
           await $.ajax({
             url: imgUrl,
@@ -328,14 +327,17 @@ if (url === "/") {
   }
 
   async function setHtml() {
+    let _url = url;
+    let fileName = _url.slice(0, -1).split("/").pop();
+
     let jsonDir = url + "project.json";
     projectJSONObj = await $.ajax({
       url: jsonDir,
       type: "GET",
     });
-    let bodyHtml = `<a id="logo" class="logo" href="/"><img src="/images/under-header-logo.svg" /></a><img src="alcide_0.png" /> <section class="content">`;
+    let bodyHtml = `<a id="logo" class="logo" href="/"><img src="/images/under-header-logo.svg" /></a><img src="0.png" /> <section class="content">`;
 
-    let contentHtml = `<p>${projectJSONObj.title} <br/> <br/>`;
+    let contentHtml = `<p>${fileName} <br/> <br/>`;
 
     let textContent = projectJSONObj.content.text;
     for (let i = 0; i < textContent.length; i++) {
