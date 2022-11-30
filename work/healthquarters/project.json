@@ -1,11 +1,5 @@
 {
-  "heroImage": "healthquarters_0.png",
-  "ogImage": "healthquarters_0.png",
-
   "info": {
-    "title": "HealthQuarters",
-    "class": "sidebar-project-link",
-
     "bgColor": "#0E305A",
     "roles": [
       {

@@ -284,19 +284,32 @@ if (url === "/") {
   //create dynamic sidebar from allWorksList
 
   //insert link to sidebar
+  let projectBackground = "";
+
   for (let i = 0; i < allWorksList.length; i++) {
     let project = allWorksList[i];
     let projectLink = document.createElement("a");
+
+    let _url = project.directory;
+    let fileName = _url.split("/").pop();
+    let projectTitle = fileName.replace("_", " ");
+    projectTitle = projectTitle[0].toUpperCase() + projectTitle.slice(1);
 
     projectLink.setAttribute("href", project.directory);
     projectLink.setAttribute("class", "sidebar-project-link");
     projectLink.setAttribute("id", project?.id ?? "");
 
-    projectLink.innerHTML = `<span>${project?.title ?? "Unknown"}</span>`;
+    if (!project?.title) {
+      console.log(project);
+    }
+    projectLink.innerHTML = `<span>${projectTitle}</span>`;
+
+    let projectBGCode = `<img src="${project.directory}/0.png" class="sidebar-project-image" id="${fileName}"/>`;
+    projectBackground = projectBackground + projectBGCode;
 
     document.getElementsByClassName("sidebar")[0].appendChild(projectLink);
   }
-
+  document.getElementsByClassName("projects")[0].innerHTML = projectBackground;
   await SideBarFunctionality();
 } else {
   let projectJSONObj = {};
