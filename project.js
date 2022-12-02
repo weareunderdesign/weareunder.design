@@ -26,7 +26,10 @@ if (url === "/") {
     for (let i = 0; i < projects.length; i++) {
       // get a tag's innerHTML and href attr
       let a_href = $(projects[i]).attr("href");
-
+      a_href = a_href.replace(/\\/g, "/");
+      if (a_href[a_href.length - 1] === "/") {
+        a_href = a_href.slice(0, -1);
+      }
       if (subSearchList.includes(a_href) || a_href === "/") {
         continue;
       }
@@ -274,7 +277,7 @@ if (url === "/") {
     };
     Main.main();
   }
-  await getProjects(workDirectory);
+  await getProjects(subSearchList[0]);
   await getProjects(subSearchList[1]);
   // this is for archive projects (to show archive projects also uncommenet this line below)
   // await getProjects(subSearchList[1]);
@@ -291,8 +294,12 @@ if (url === "/") {
     let projectLink = document.createElement("a");
 
     let _url = project.directory;
+
+    if (_url[_url.length - 1] === "/")
+      _url = _url.substring(0, _url.length - 1);
     let fileName = _url.split("/").pop();
     let projectTitle = fileName.replace("_", " ");
+    console.log(fileName, projectTitle, "fileName, projectTitle");
     projectTitle = projectTitle[0].toUpperCase() + projectTitle.slice(1);
 
     projectLink.setAttribute("href", project.directory);
