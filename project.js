@@ -390,6 +390,9 @@ if (url === "/") {
     metaTag.setAttribute("property", "og:title");
     metaTag.setAttribute("content", projectTitle);
     document.head.appendChild(metaTag);
+    let titleTag = document.createElement("title");
+    titleTag.innerHTML = projectTitle;
+    document.head.appendChild(titleTag);
   }
 
   await getImagesArr();
