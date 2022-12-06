@@ -323,20 +323,34 @@ if (url === "/") {
   async function getImagesArr() {
     try {
       let i = 1;
-      while (true) {
+
+      let mediaFails = 0;
+      /*media fails is 2 because 1 is for image and 2 is for video.
+      If neither image nor video is found means we need to stop the loop*/
+      while (mediaFails < 2) {
         let _url = url;
+        let extension = mediaFails === 0 ? "png" : "mp4";
         let fileName = _url.slice(0, -1).split("/").pop();
         fileName = fileName[0].toUpperCase() + fileName.slice(1);
-        let imgUrl = `${url}${i}.png`;
+        let imgUrl = `${url}${i}.${extension}`;
         try {
           await $.ajax({
             url: imgUrl,
             type: "GET",
           });
-          images.push(imgUrl);
+
+          let mediaElement =
+            mediaFails === 0
+              ? `<img src="${imgUrl}" />`
+              : `<video src="${imgUrl}" autoplay loop muted playsinline width="100%"></video>`;
+          images.push(mediaElement);
+
           i++;
+          mediaFails = 0;
+          //if media is found reset the media fails to 0
         } catch (e) {
-          break;
+          mediaFails++;
+          //if media is not found increase the media fails by 1
         }
       }
     } catch (e) {
@@ -378,14 +392,13 @@ if (url === "/") {
     bodyHtml += contentHtml;
 
     for (let i = 0; i < images.length; i++) {
-      let image = images[i];
-      bodyHtml += `<img src="${image}" />`;
+      // let image = images[i];
+      bodyHtml += images[i];
     }
 
     document.body.innerHTML = bodyHtml + document.body.innerHTML;
-    document.title = projectTitle;
-    // <meta property="og:title" content="Alcide" />
-    //insert meta tags
+
+    //insert meta tags and title tags
     let metaTag = document.createElement("meta");
     metaTag.setAttribute("property", "og:title");
     metaTag.setAttribute("content", projectTitle);
