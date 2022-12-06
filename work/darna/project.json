@@ -1,10 +1,5 @@
 {
-  "heroImage": "darna_0.png",
-  "ogImage": "darna_0.png",
-  "title": "Darna Hotel",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#2a52cf",
     "roles": [
       {
