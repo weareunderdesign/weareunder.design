@@ -1,16 +1,10 @@
 {
-  "heroImage": "avenue_0.png",
-  "ogImage": "avenue_0.png",
-  "title": "Avenue",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#7545FF",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Avenue"
       },
       {
         "role": "Designer",
@@ -22,5 +16,8 @@
       }
     ]
   },
-  "content": []
+  "content": [
+    "Avenue",
+    "In this world of long-distance-professional-relationships, you have to Design-Build-Release with someone you can trust → Avenue connects designers, developers, and marketers to entrepreneurs so they can create great things → Design-Build-Release → Together"
+  ]
 }

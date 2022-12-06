@@ -374,7 +374,8 @@ if (url === "/") {
     let contentHtml = `<p>${projectTitle} <br/> <br/>`;
 
     let textContent = projectJSONObj.content.text;
-    for (let i = 0; i < textContent.length; i++) {
+
+    for (let i = 0; i < textContent?.length; i++) {
       contentHtml += `${textContent[i]} <br/> <br/>`;
     }
 
@@ -383,7 +384,9 @@ if (url === "/") {
     for (let i = 0; i < roles.length; i++) {
       let role = roles[i];
       if (role.role === "Client") {
-        contentHtml += `Client | <a href="${role?.link}" target="_blank" class="project-link">${role?.name}</a> <br/>`;
+        contentHtml += `Client | <a href="${
+          role?.link ?? "#"
+        }" target="_blank" class="project-link">${role?.name}</a> <br/>`;
       } else {
         contentHtml += `${role?.role} | ${role?.name} <br/>`;
       }
