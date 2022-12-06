@@ -297,9 +297,10 @@ if (url === "/") {
 
     if (_url[_url.length - 1] === "/")
       _url = _url.substring(0, _url.length - 1);
+
     let fileName = _url.split("/").pop();
     let projectTitle = fileName.replace("_", " ");
-    console.log(fileName, projectTitle, "fileName, projectTitle");
+
     projectTitle = projectTitle[0].toUpperCase() + projectTitle.slice(1);
 
     projectLink.setAttribute("href", project.directory);
@@ -382,6 +383,13 @@ if (url === "/") {
     }
 
     document.body.innerHTML = bodyHtml + document.body.innerHTML;
+    document.title = projectTitle;
+    // <meta property="og:title" content="Alcide" />
+    //insert meta tags
+    let metaTag = document.createElement("meta");
+    metaTag.setAttribute("property", "og:title");
+    metaTag.setAttribute("content", projectTitle);
+    document.head.appendChild(metaTag);
   }
 
   await getImagesArr();
