@@ -318,9 +318,9 @@ if (url === "/") {
   await SideBarFunctionality();
 } else {
   let projectJSONObj = {};
-  let images = [];
+  let medias = [];
 
-  async function getImagesArr() {
+  async function getMediaArr() {
     try {
       let i = 1;
 
@@ -332,18 +332,18 @@ if (url === "/") {
         let extension = mediaFails === 0 ? "png" : "mp4";
         let fileName = _url.slice(0, -1).split("/").pop();
         fileName = fileName[0].toUpperCase() + fileName.slice(1);
-        let imgUrl = `${url}${i}.${extension}`;
+        let mediaUrl = `${url}${i}.${extension}`;
         try {
           await $.ajax({
-            url: imgUrl,
+            url: mediaUrl,
             type: "GET",
           });
 
           let mediaElement =
             mediaFails === 0
-              ? `<img src="${imgUrl}" />`
-              : `<video src="${imgUrl}" autoplay loop muted playsinline width="100%"></video>`;
-          images.push(mediaElement);
+              ? `<img src="${mediaUrl}" />`
+              : `<video src="${mediaUrl}" autoplay loop muted playsinline width="100%"></video>`;
+          medias.push(mediaElement);
 
           i++;
           mediaFails = 0;
@@ -391,9 +391,9 @@ if (url === "/") {
     contentHtml += `</p></section>`;
     bodyHtml += contentHtml;
 
-    for (let i = 0; i < images.length; i++) {
+    for (let i = 0; i < medias.length; i++) {
       // let image = images[i];
-      bodyHtml += images[i];
+      bodyHtml += medias[i];
     }
 
     document.body.innerHTML = bodyHtml + document.body.innerHTML;
@@ -408,6 +408,6 @@ if (url === "/") {
     document.head.appendChild(titleTag);
   }
 
-  await getImagesArr();
+  await getMediaArr();
   await setHtml();
 }
