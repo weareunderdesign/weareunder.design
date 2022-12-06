@@ -1,10 +1,5 @@
 {
-  "heroImage": "alcide_0.png",
-  "ogImage": "alcide_0.png",
-  "title": "Alcide",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#FF0000",
     "roles": [
       {
