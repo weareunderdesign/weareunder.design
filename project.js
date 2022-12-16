@@ -383,8 +383,8 @@ if (url === "/") {
 
     for (let i = 0; i < roles.length; i++) {
       let role = roles[i];
-      if (role.role === "Client") {
-        contentHtml += `Client | <a href="${
+      if (role.link) {
+        contentHtml += `${role?.role} | <a href="${
           role?.link ?? "#"
         }" target="_blank" class="project-link">${role?.name}</a> <br/>`;
       } else {

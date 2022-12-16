@@ -1,26 +1,35 @@
 {
-  "heroImage": "balance_0.png",
-  "ogImage": "balance_0.png",
-  "title": "Balance",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#1d1d1d",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Balance",
+        "link": "https://www.getbalance.com/"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Strategic",
         "name": "Anastasia Vlasenko"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Web Development",
+        "name": "Michael Schwartz"
+      },
+      {
+        "role": "Video",
+        "name": "Yuval Leizerman",
+        "link": "https://www.youtube.com/watch?v=PzvAifwMu6Y&feature=youtu.be&ab_channel=Balance"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A Brand sprint for Balance, a streamline digital B2B payments that enabling new ways to get paid which includes secure bank payments, digital checks, powering payment terms, automatic invoice collection, and pay after delivery. This is achieved by Balance's ML engine of real-time authentication and financial risk assessment.",
+      "In 10 days, we created a full visual identity, from brand strategy & positioning to brand guidelines, logo & sub-logos, icons, and a complete assets library."
+    ]
+  }
 }
