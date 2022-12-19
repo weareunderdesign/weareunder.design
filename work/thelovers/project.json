@@ -1,26 +1,20 @@
 {
-  "heroImage": "thelovers_0.png",
-  "ogImage": "thelovers_0.png",
-  "title": "The Lovers",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#000000",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Studio Under"
       },
       {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Photography",
+        "name": "Aya Wind"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "The design process starts with a mystery and uncovers the truth slowly as you proceed. Inspired by 'The Lovers II' (1928 by Rene Magritte), we wanted to be those lovers, under these scarves, getting uncovered. We designed scarves to celebrate the birth and uncover what is Under."
+    ]
+  }
 }

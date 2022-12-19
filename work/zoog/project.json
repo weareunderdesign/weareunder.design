@@ -1,26 +1,21 @@
 {
-  "heroImage": "zoog_0.png",
-  "ogImage": "zoog_0.png",
-  "title": "Zoog",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#FF7051",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Zoog",
+        "link": "https://zoog.ai/"
       },
       {
-        "role": "Designer",
+        "role": "Illustration",
         "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Brand sprint for Zoog, a cross generational video platform that creates memorable family moments by engaging kids through play and storytelling. In 10 days, we created a full visual identity, from brand strategy & positioning to brand guidelines, logo & sub-logos, icons, and a complete assets library."
+    ]
+  }
 }

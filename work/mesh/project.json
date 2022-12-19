@@ -1,26 +1,33 @@
 {
-  "heroImage": "mesh_0.png",
-  "ogImage": "mesh_0.png",
-  "title": "Mesh Payments",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#19F08B",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Mesh Payments"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Brand lead designer",
         "name": "Anastasia Vlasenko"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Illustrator",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "UI/UX designer",
+        "name": "Anna Osyatinskaya"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A 10-day Brand sprint for Mesh.",
+      "Mesh transforms the way finance teams operate with a centralized and automated spend platform. Mesh empowers finance managers with a whole new level of visibility over their entire business spend so they are equipped with all the insights they need to optimize and control their corporate payments."
+    ]
+  }
 }

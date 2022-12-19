@@ -1,26 +1,24 @@
 {
-  "heroImage": "tagbox_0.png",
-  "ogImage": "tagbox_0.png",
-  "title": "Tagbox",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#C2A78D",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Tagbox, Guy Barner, Oz Meir"
       },
       {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
+        "role": "Art Director",
+        "name": "Liri Argov"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Brand Designer",
+        "name": "Kateryna Holub"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Using Tagbox, creative teams can manage, organize, and easily find their visual assets. Tagbox uses artificial intelligence to learn and catalog the media within your organization to make it easily searchable, filterable, and discoverable to everyone."
+    ]
+  }
 }

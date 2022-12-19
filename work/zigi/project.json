@@ -1,26 +1,24 @@
 {
-  "heroImage": "zigi_0.png",
-  "ogImage": "zigi_0.png",
-  "title": "Zigi",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#22D285",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Zigi"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Brand lead designer",
         "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A 10-day Brand sprint for Zigi, a developer’s assistant for non-coding tasks. Zigi reduces the noise that developers face by handling all their non-coding mundane tasks, so they can focus on coding and innovation."
+    ]
+  }
 }

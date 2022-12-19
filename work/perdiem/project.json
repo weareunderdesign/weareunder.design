@@ -1,26 +1,28 @@
 {
-  "heroImage": "perdiem_0.png",
-  "ogImage": "perdiem_0.png",
-  "title": "Per Diem",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#0171EA",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Per Diem"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Brand lead designer",
         "name": "Anastasia Vlasenko"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Illustrator",
+        "name": "Anastasia Vlasenko"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Per Diem makes it easy for local businesses to sell subscriptions online and give them all the marketing and fulfillment tools they need to build their own Amazon Prime."
+    ]
+  }
 }

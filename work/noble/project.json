@@ -1,10 +1,5 @@
 {
-  "heroImage": "noble_0.png",
-  "ogImage": "noble_0.png",
-  "title": "Noble",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#FF0000",
     "roles": [
       {
@@ -22,5 +17,9 @@
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Brand & Product design for Alcide.io - Alcide’s Data Center & Cloud Ops Security Platform protects any combination of container, serverless, VM and bare metal."
+    ]
+  }
 }

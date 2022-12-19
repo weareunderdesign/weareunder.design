@@ -1,26 +1,21 @@
 {
-  "heroImage": "karma_0.png",
-  "ogImage": "karma_0.png",
-  "title": "Karma Co",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#FCAC8B",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Karma Company TLV"
       },
       {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Photography",
+        "name": "Aya Wind",
+        "link": "https://www.ayawind.com/"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Brand and identity for Karma Company TLV - Natural remedies and lifestyle products."
+    ]
+  }
 }

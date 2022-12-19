@@ -1,26 +1,29 @@
 {
-  "heroImage": "upword_0.png",
-  "ogImage": "upword_0.png",
-  "title": "Upword",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#B8A4FD",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Upword"
       },
       {
-        "role": "Designer",
+        "role": "Strategic",
+        "name": "Ori Luzia",
+        "link": "https://www.linkedin.com/in/ori-luzia/"
+      },
+      {
+        "role": "Brand designer",
         "name": "Anastasia Vlasenko"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "UI/UX designer",
+        "name": "Eden Offer"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Upword is a young, promising company with an ambitious vision - to change the way students, professionals, and passionate learners interact with the content they need to learn. While the scientific understanding of what makes people learn effectively is ever-growing, in practice, learning is still based mostly on a systematic reading of books, papers, and articles. Upword is building a technological platform that puts together the best paradigms and scientifically recognized learning methods, to provide an engaging, more result-oriented reading experience. Put simply, the tools provided by the Upword platform manipulate texts in various science-based ways to help learners learn faster and more efficiently than ever."
+    ]
+  }
 }

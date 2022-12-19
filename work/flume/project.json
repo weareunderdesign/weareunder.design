@@ -1,16 +1,11 @@
 {
-  "heroImage": "flume_0.png",
-  "ogImage": "flume_0.png",
-  "title": "Flume",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#FF6E15",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Flume",
+        "link": "https://flumehealth.com/"
       },
       {
         "role": "Designer",
@@ -18,9 +13,13 @@
       },
       {
         "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "name": "Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Brand & Web Design for Flume, a Health care insurance company. Flume is changing how we build and run healthcare plans by aligning incentives in healthcare to make using plans seamless and sustainable."
+    ]
+  }
 }

@@ -1,27 +1,27 @@
 {
-  "heroImage": "groundcover_0.png",
-  "ogImage": "groundcover_0.png",
-  "title": "Groundcover",
   "info": {
-    "title": "Groundcover",
-    "class": "sidebar-project-link",
-
     "bgColor": "#1BB485",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Groundcover",
+        "link": "https://groundcover.com/"
       },
       {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
+        "role": "Designer and Illustrator",
+        "name": "Kate Holub"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Art Director",
+        "name": "Eden Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A Kubernetes observability platform for DevOps teams.",
+      "By making a cutting-edge technology (called eBPF) more accessible - Groundcover is replacing traditional data collection mechanisms. They strive to be a leading standard for visibility and monitoring in a new eBPF world.",
+      "By creating a colourful world of friendly creatures from the botanic world, we tried to express a human perspective, a sense of uniqueness, and innovation. Our goal was to create a warm, friendly, human, and empathic brand, so developers feel comfort, knowing we understand their pain and can troubleshoot effectively."
+    ]
+  }
 }

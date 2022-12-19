@@ -1,26 +1,24 @@
 {
-  "heroImage": "faintless_0.png",
-  "ogImage": "faintless_0.png",
-  "title": "Faintlines",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#FF0DBD",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Faintlines"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Brand lead designer",
         "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Faintlines create a platform that enable storytellers to easily create immersive adventures. They provide players the opportunity to experience adventures they wouldn't be able to experience otherwise."
+    ]
+  }
 }

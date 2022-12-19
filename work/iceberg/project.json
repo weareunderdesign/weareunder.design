@@ -1,26 +1,21 @@
 {
-  "heroImage": "iceberg_0.png",
-  "ogImage": "iceberg_0.png",
-  "title": "Iceberg & The juice",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#EC7926",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "ICEBERG & The Juice"
       },
       {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Architect",
+        "name": "Baranowitz Amit Studio",
+        "link": "https://baranowitz-goldberg.com/about/"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Brand design & identity for ICEBERG & The Juice – the new energetic sub-brand of ICEBERG ice Cream."
+    ]
+  }
 }

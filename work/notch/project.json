@@ -1,26 +1,32 @@
 {
-  "heroImage": "notch_0.png",
-  "ogImage": "notch_0.png",
-  "title": "Notch",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#CF6AFF",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Notch"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Strategic Director",
+        "name": "Ori Luzia"
+      },
+      {
+        "role": "Brand lead designer",
         "name": "Anastasia Vlasenko"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Brand designer",
+        "name": "Ketrin Holub"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "Notch A 10-day brand sprint for Notch. Notch provides tailored insurance for digital businesses - affordable, fast, and specific to their needs. Notch covers the most critical components to keep the business running."
+    ]
+  }
 }

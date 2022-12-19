@@ -1,26 +1,23 @@
 {
-  "heroImage": "larosh_0.png",
-  "ogImage": "larosh_0.png",
-  "title": "La Rosh",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#C0815F",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "La Rosh"
       },
       {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
+        "role": "Photography",
+        "name": "Karin Lapidot, Liz Kadar"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Video",
+        "name": "Nerya Shohat",
+        "link": "https://www.alcide.io/"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": ["Brand design & identity for La Rosh, hand crafted hats brand."]
+  }
 }

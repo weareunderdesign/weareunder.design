@@ -1,26 +1,28 @@
 {
-  "heroImage": "reeco_0.png",
-  "ogImage": "reeco_0.png",
-  "title": "Reeco",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#0FCB71",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Reeco"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Strategic Director",
+        "name": "Grant Harris"
+      },
+      {
+        "role": "Brand lead designer",
         "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A 10-day Brand sprint for Reeco. Reeco makes it easier for hotels and their suppliers to do business and grow from each other's success. Hotels can now buy quality fast-moving products at the best value, while suppliers have ready access to customers and business-friendly terms."
+    ]
+  }
 }

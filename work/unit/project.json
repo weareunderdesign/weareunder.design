@@ -1,27 +1,30 @@
 {
-  "heroImage": "unit_0.png",
-  "ogImage": "unit_0.png",
-  "title": "Unit",
   "info": {
-    "title": "Unit",
-    "class": "sidebar-project-link",
-
     "bgColor": "#000000",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Unit",
+        "link": "https://www.unit.co/"
+      },
+      {
+        "role": "Strategist",
+        "name": "Uri Ar"
       },
       {
         "role": "Designer",
         "name": "Anastasia Vlasenko"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Art Director",
+        "name": "Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A Brand Sprint & Web design for Unit, a one-stop-shop that radically simplifies things like Stripe did for payment acceptance.",
+      "Unit does the heavy lifting on tech & compliance and exposes modern APIs and docs to their clients. They isolate their clients from 90% of the daunting tech & compliance tasks. Their accessible approach helps clients avoid brain damage and costs that come with bank partnerships."
+    ]
+  }
 }

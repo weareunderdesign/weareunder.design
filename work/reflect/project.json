@@ -1,26 +1,28 @@
 {
-  "heroImage": "reflect_0.png",
-  "ogImage": "reflect_0.png",
-  "title": "Reflect",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#D1A8FD",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Reflect, Noga Sapir"
       },
       {
-        "role": "Designer",
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Brand Lead Designer",
         "name": "Anastasia Vlasenko"
       },
       {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "role": "Strategic director",
+        "name": "Ori Luzia"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A Brand Sprint for Reflect, a science-backed biofeedback device that helps users gain control over their relaxation and well being. Through an interactive, multisensory experience, Reflect leads users to discover their unique relaxation techniques through a journey of discovery. The engaging interface and a strong positive feedback loop help users internalize and improve how they manage their mental states and well being."
+    ]
+  }
 }
