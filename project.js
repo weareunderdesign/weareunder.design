@@ -321,7 +321,7 @@ if (url === "/") {
   let medias = [];
 
   async function getMediaArr() {
-    let mediaTypes = ["png", "mp4", "svg", "gif"];
+    let mediaTypes = ["png", "mp4", "svg", "gif", "m4v"];
     try {
       let i = 1;
 
@@ -338,10 +338,14 @@ if (url === "/") {
             type: "GET",
           });
 
-          let mediaElement =
-            mediaFails === 2
-              ? `<video src="${mediaUrl}" autoplay loop muted playsinline width="100%"></video>`
-              : `<img src="${mediaUrl}" />`;
+          let mediaElement = "";
+
+          if (mediaTypes[mediaFails] === "mp4")
+            mediaElement = `<video src="${mediaUrl}" autoplay loop muted playsinline width="100%"></video>`;
+          else if (mediaTypes[mediaFails] === "m4v")
+            mediaElement = `<video src="${mediaUrl}" autoplay="" loop="" muted="" width="100%" style="margin: 0px;"></video>`;
+          else mediaElement = `<img src="${mediaUrl}" />`;
+
           medias.push(mediaElement);
 
           i++;
