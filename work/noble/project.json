@@ -4,22 +4,26 @@
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
-      },
-      {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
+        "name": "Noble",
+        "link": "http://projecturl.com"
       },
       {
         "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "name": "Eden Vidal"
+      },
+      {
+        "role": " Brand Designer",
+        "name": "Kateryna Holub"
       }
     ]
   },
   "content": {
     "text": [
-      "Brand & Product design for Alcide.io - Alcide’s Data Center & Cloud Ops Security Platform protects any combination of container, serverless, VM and bare metal."
+      "A 10-day brand sprint for Noble.",
+      "Building products is complex enough, but building credit-based products is even more challenging.<br/> Big companies can afford it with a lot of money, time, and effort, while others find it hard to provide credit offerings to customers.",
+      "At Noble, we believe any business should be able to give it customers some credit without much effort.",
+      "To simplify the credit journey, we have created a holistic, modular, and insightful platform that helps online businesses build, launch, and scale custom credit solutions, minus the complications.",
+      "And we're just getting started."
     ]
   }
 }
