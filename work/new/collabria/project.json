@@ -1,26 +1,32 @@
 {
-  "heroImage": "collabria_0.png",
-  "ogImage": "collabria_0.png",
-  "title": "Collabria",
   "info": {
-    "class": "sidebar-project-link",
-
     "bgColor": "#FF0000",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Collabria, Harmon.ie"
       },
       {
-        "role": "Designer",
+        "role": "Art Director",
+        "name": "Eden Vidal"
+      },
+      {
+        "role": "Designer and Illustrator",
         "name": "Anastasia Vlasenko"
-      },
-      {
-        "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": {
+    "text": [
+      "A 10-day brand sprint for <a href='http://projecturl.com' target='_blank' class='project-link'>Collabria</a></br></br>",
+      "Hello there! If you deal with customers on a daily basis, chances are you spend most of the day in front of your inbox.Chances are you now have way too many threads open.",
+      "Have you ever wondered why there are so many? Why don't they seem organized?",
+      "This is because you're probably creating or forwarding separate emails to colleagues, combining external communication with internal collaboration. Too many emails, points of contact, or leaking proprietary information (Oops!) confuses you, your team, and, more importantly, your customers.",
+      "What if you could work with your team on top of that single email that started it all?",
+      "Collabria can do that. It turns emails into a collaborative canvas that ensures you, your customer, and your teammates are always in context. It's as simple as knocking on your colleague's door or picking their brain at the coffee machine.",
+
+      "Think of it as the motherboard for your financial operations. We imagined an immutable, traceable, single source of financial truth - an infrastructure that makes money transfer at scale possible, so companies can create more value for customers and build better products faster.",
+      "We're Nilus, and we're money runners."
+    ]
+  }
 }

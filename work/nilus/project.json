@@ -3,11 +3,6 @@
     "bgColor": "#db160d",
     "roles": [
       {
-        "role": "Full website",
-        "name": "nilus.com/",
-        "link": "https://www.nilus.com/"
-      },
-      {
         "role": "Client",
         "name": "Nilus"
       },
