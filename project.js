@@ -7,7 +7,7 @@ let workDirectory = "/work";
 let workArr = [];
 let newWorkArr = [];
 let archivedWorkArr = [];
-
+let projectsWithVideoAsHero = ["karma"];
 let subSearchList = ["/work", "/work/new", "/work/archive"];
 let sidebar = document.getElementsByClassName("sidebar")[0];
 
@@ -372,7 +372,16 @@ if (url === "/") {
       url: jsonDir,
       type: "GET",
     });
-    let bodyHtml = `<a id="logo" class="logo" href="/"><img src="/images/under-header-logo.svg" /></a><img src="0.png" /> <section class="content">`;
+
+    let bodyHtml = `<a id="logo" class="logo" href="/"><img src="/images/under-header-logo.svg" /></a>`;
+
+    let heroHTML = "";
+
+    if (projectsWithVideoAsHero?.includes(fileName))
+      heroHTML = `<video src="0.mp4" autoplay loop muted width="100%"></video>`;
+    else heroHTML = `<img src="0.png" />`;
+
+    bodyHtml = bodyHtml + heroHTML + `<section class="content">`;
 
     let contentHtml = `<p>${projectTitle} <br/> <br/>`;
 
