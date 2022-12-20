@@ -378,6 +378,9 @@ if (url === "/") {
       contentHtml += `${textContent[i]} <br/> <br/>`;
     }
 
+    let preRoleContent = projectJSONObj?.content?.extra?.preRole ?? "";
+    contentHtml += preRoleContent;
+
     let roles = projectJSONObj?.info?.roles;
 
     for (let i = 0; i < roles.length; i++) {
@@ -390,6 +393,9 @@ if (url === "/") {
         contentHtml += `${role?.role} | ${role?.name} <br/>`;
       }
     }
+
+    let postRoleContent = projectJSONObj?.content?.extra?.postRole ?? "";
+    contentHtml += postRoleContent;
 
     contentHtml += `</p></section>`;
     bodyHtml += contentHtml;
