@@ -391,8 +391,11 @@ if (url === "/") {
         contentHtml += `${role?.role} | ${role?.name} <br/>`;
       }
     }
+
     contentHtml += `</p></section>`;
     bodyHtml += contentHtml;
+    let postSection = projectJSONObj?.content?.extra?.postSection ?? "";
+    bodyHtml += postSection;
 
     for (let i = 0; i < medias.length; i++) {
       // let image = images[i];

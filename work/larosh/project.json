@@ -18,6 +18,11 @@
     ]
   },
   "content": {
-    "text": ["Brand design & identity for La Rosh, hand crafted hats brand."]
+    "text": ["Brand design & identity for La Rosh, hand crafted hats brand."],
+    "extra": {
+      "postSection": [
+        "<iframe src='https://www.youtube.com/embed/xJmD4a7YDgg' class='video'></iframe>"
+      ]
+    }
   }
 }
