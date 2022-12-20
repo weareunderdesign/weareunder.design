@@ -27,6 +27,11 @@
   "content": {
     "text": [
       "Notch A 10-day brand sprint for Notch. Notch provides tailored insurance for digital businesses - affordable, fast, and specific to their needs. Notch covers the most critical components to keep the business running."
-    ]
+    ],
+    "extra": {
+      "preRole": [
+        "Full website - <a class='project-link' target='_blank' href='https://www.get-notch.com/'>https://www.getnotch.com/</a><br/>"
+      ]
+    }
   }
 }

@@ -19,6 +19,11 @@
   "content": {
     "text": [
       "Faintlines create a platform that enable storytellers to easily create immersive adventures. They provide players the opportunity to experience adventures they wouldn't be able to experience otherwise."
-    ]
+    ],
+    "extra": {
+      "preRole": [
+        "Full website - <a class='project-link' target='_blank' href='https://faintlines.com/'>faintlines.com</a><br/>"
+      ]
+    }
   }
 }

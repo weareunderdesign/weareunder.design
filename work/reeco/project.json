@@ -23,6 +23,11 @@
   "content": {
     "text": [
       "A 10-day Brand sprint for Reeco. Reeco makes it easier for hotels and their suppliers to do business and grow from each other's success. Hotels can now buy quality fast-moving products at the best value, while suppliers have ready access to customers and business-friendly terms."
-    ]
+    ],
+    "extra": {
+      "preRole": [
+        "Full website - <a class='project-link' target='_blank' href='https://www.reeco.io/'>https://www.reeco.io/</a><br/>"
+      ]
+    }
   }
 }
