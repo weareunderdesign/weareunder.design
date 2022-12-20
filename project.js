@@ -326,8 +326,6 @@ if (url === "/") {
       let i = 1;
 
       let mediaFails = 0;
-      /*media fails is 2 because 1 is for image and 2 is for video.
-      If neither image nor video is found means we need to stop the loop*/
       while (mediaFails < mediaTypes.length) {
         let _url = url;
         let extension = mediaTypes[mediaFails];
