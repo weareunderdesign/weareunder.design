@@ -321,15 +321,16 @@ if (url === "/") {
   let medias = [];
 
   async function getMediaArr() {
+    let mediaTypes = ["png", "mp4", "svg", "gif"];
     try {
       let i = 1;
 
       let mediaFails = 0;
       /*media fails is 2 because 1 is for image and 2 is for video.
       If neither image nor video is found means we need to stop the loop*/
-      while (mediaFails < 2) {
+      while (mediaFails < mediaTypes.length) {
         let _url = url;
-        let extension = mediaFails === 0 ? "png" : "mp4";
+        let extension = mediaTypes[mediaFails];
         let fileName = _url.slice(0, -1).split("/").pop();
         fileName = fileName[0].toUpperCase() + fileName.slice(1);
         let mediaUrl = `${url}${i}.${extension}`;
@@ -340,9 +341,9 @@ if (url === "/") {
           });
 
           let mediaElement =
-            mediaFails === 0
-              ? `<img src="${mediaUrl}" />`
-              : `<video src="${mediaUrl}" autoplay loop muted playsinline width="100%"></video>`;
+            mediaFails === 2
+              ? `<video src="${mediaUrl}" autoplay loop muted playsinline width="100%"></video>`
+              : `<img src="${mediaUrl}" />`;
           medias.push(mediaElement);
 
           i++;
