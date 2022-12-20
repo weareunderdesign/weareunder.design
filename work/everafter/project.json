@@ -15,9 +15,10 @@
   },
   "content": {
     "text": [
-      "EverAfter is a creative, easy-to-use customer success manager communication platform.",
-      "This platform provides a creative framework & bridges the gap between the actual and the fairy tale.",
-      "In 10 days, we created a full visual identity, from brand strategy & positioning to brand guidelines, logo & sub-logos, icons, and a complete assets library."
-    ]
+      "EverAfter is a creative, easy-to-use customer success manager communication platform. This platform provides a creative framework & bridges the gap between the actual and the fairy tale. <br/>In 10 days, we created a full visual identity, from brand strategy & positioning to brand guidelines, logo & sub-logos, icons, and a complete assets library."
+    ],
+    "extra": {
+      "postRole": ["Tel Aviv, 2020"]
+    }
   }
 }
