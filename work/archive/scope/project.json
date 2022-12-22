@@ -1,25 +1,27 @@
 {
-  "heroImage": "scope_0.png",
-  "ogImage": "scope_0.png",
-  "title": "Scope",
   "info": {
-    "class": "sidebar-project-link",
     "bgColor": "#FF0000",
     "roles": [
       {
         "role": "Client",
-        "name": "Alcide",
-        "link": "https://www.linkedin.com/in/alcide/"
+        "name": "Komodor",
+        "link": "https://komodor.com/"
       },
       {
-        "role": "Designer",
-        "name": "Anastasia Vlasenko"
+        "role": "UI/UX Design",
+        "name": "Alexandra Bolotova"
+      },
+      {
+        "role": "Illustration",
+        "name": "Alexandra Bolotova"
       },
       {
         "role": "Art direction",
-        "name": "Eden Vidal & Inbal Lapidot Vidal"
+        "name": "Inbal Lapidot Vidal"
       }
     ]
   },
-  "content": []
+  "content": [
+    "A brand sprint for Scope, a platform that provides fast and high-quality software implementations for vendors and their customers."
+  ]
 }
