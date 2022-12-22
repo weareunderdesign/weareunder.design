@@ -131,10 +131,10 @@ function pauseBouncingAnimation() {
 //Restart Bouncing Animation
 function restartBouncingAnimation() {
   try {
-    tweenInfo.restart();
-    tweenWork.restart();
-    tweenBrandsprint.restart();
-    tweendynamic.restart();
+    tweenInfo?.restart();
+    tweenWork?.restart();
+    tweenBrandsprint?.restart();
+    tweendynamic?.restart();
   } catch (err) {
     console.log(err);
   }
