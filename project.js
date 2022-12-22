@@ -409,9 +409,6 @@ if (url === "/") {
       }
     }
 
-    let postRoleContent = projectJSONObj?.content?.extra?.postRole ?? "";
-    contentHtml += postRoleContent;
-
     contentHtml += `</p></section>`;
     bodyHtml += contentHtml;
     let postSection = projectJSONObj?.content?.extra?.postSection ?? "";
