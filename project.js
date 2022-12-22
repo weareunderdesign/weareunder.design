@@ -323,7 +323,7 @@ if (url === "/") {
   async function getMediaArr() {
     let mediaTypes = ["png", "mp4", "svg", "gif", "m4v"];
     try {
-      let i = 1;
+      let i = 2;
 
       let mediaFails = 0;
       while (mediaFails < mediaTypes.length) {
@@ -378,21 +378,18 @@ if (url === "/") {
     let heroHTML = "";
 
     if (projectsWithVideoAsHero?.includes(fileName))
-      heroHTML = `<video src="0.mp4" autoplay loop muted width="100%"></video>`;
-    else heroHTML = `<img src="0.png" />`;
+      heroHTML = `<video src="1.mp4" autoplay loop muted width="100%"></video>`;
+    else heroHTML = `<img src="1.png" />`;
 
     bodyHtml = bodyHtml + heroHTML + `<section class="content">`;
 
-    let contentHtml = `<p>${projectTitle} <br/> <br/>`;
+    let contentHtml = `<p>`;
 
     let textContent = projectJSONObj.content.text;
 
     for (let i = 0; i < textContent?.length; i++) {
       contentHtml += `${textContent[i]} <br/> <br/>`;
     }
-
-    let preRoleContent = projectJSONObj?.content?.extra?.preRole ?? "";
-    contentHtml += preRoleContent;
 
     let roles = projectJSONObj?.info?.roles;
 
