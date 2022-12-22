@@ -321,7 +321,7 @@ if (url === "/") {
   let medias = [];
 
   async function getMediaArr() {
-    let mediaTypes = ["png", "mp4", "svg", "gif", "jpg", "m4v"];
+    let mediaTypes = ["png", "mp4", "svg", "gif", "jpg", "jpeg", "m4v"];
     try {
       let i = 2;
 
