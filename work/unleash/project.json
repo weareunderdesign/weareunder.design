@@ -32,11 +32,6 @@
     "text": [
       "Data today is overwhelmingly scattered across multiple platforms and SaaS applications, making it incredibly hard to find when it is needed.",
       "Unleash helps you find files, emails, meetings, code repositories, issues, tickets and everything else."
-    ],
-    "extra": {
-      "preRole": [
-        "Full website - <a class='project-link' target='_blank' href='https://www.unleash.so/'>unleash.so</a><br/>"
-      ]
-    }
+    ]
   }
 }
