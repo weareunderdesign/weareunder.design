@@ -8,6 +8,7 @@ let workArr = [];
 let newWorkArr = [];
 let archivedWorkArr = [];
 let projectsWithVideoAsHero = ["karma"];
+let projectWithSvgAsBg = ["mesh_payments"];
 let subSearchList = ["/work", "/work/new", "/work/archive"];
 let sidebar = document.getElementsByClassName("sidebar")[0];
 
@@ -310,6 +311,10 @@ if (url === "/") {
     projectLink.innerHTML = `<span>${projectTitle}</span>`;
 
     let projectBGCode = `<img src="${project.directory}/0.png" class="sidebar-project-image" id="${fileName}"/>`;
+
+    if (projectWithSvgAsBg.includes(fileName?.toLowerCase()))
+      projectBGCode = `<img src="${project.directory}/0.svg" class="sidebar-project-image" id="${fileName}"/>`;
+
     projectBackground = projectBackground + projectBGCode;
 
     document.getElementsByClassName("sidebar")[0].appendChild(projectLink);
