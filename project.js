@@ -8,7 +8,7 @@ let workArr = [];
 let newWorkArr = [];
 let archivedWorkArr = [];
 let projectsWithVideoAsHero = ["karma"];
-let projectWithSvgAsBg = ["mesh_payments"];
+let projectWithSvgAsBg = ["mesh_payments", "zigi"];
 let subSearchList = ["/work", "/work/new", "/work/archive"];
 let sidebar = document.getElementsByClassName("sidebar")[0];
 

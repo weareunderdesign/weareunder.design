@@ -19,11 +19,6 @@
   "content": {
     "text": [
       "A 10-day Brand sprint for Zigi, a developer’s assistant for non-coding tasks. Zigi reduces the noise that developers face by handling all their non-coding mundane tasks, so they can focus on coding and innovation."
-    ],
-    "extra": {
-      "preRole": [
-        "Full website - <a class='project-link' target='_blank' href='https://www.zigi.ai/'>zigi.ai</a><br/>"
-      ]
-    }
+    ]
   }
 }
