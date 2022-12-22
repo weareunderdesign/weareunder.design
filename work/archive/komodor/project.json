@@ -1,11 +1,6 @@
 {
-  "heroImage": "komodor_0.png",
-  "ogImage": "komodor_0.png",
-  "title": "Komodor",
   "info": {
-    "class": "sidebar-project-link",
-
-    "bgColor": "#FF0000",
+    "bgColor": "#7545FF",
     "roles": [
       {
         "role": "Client",
@@ -26,11 +21,7 @@
       }
     ]
   },
-  "content": {
-    "text": [
-      "Brand & Product design for Alcide.io - Alcide’s Data Center & Cloud Ops Security Platform protects any combination of container, serverless, VM and bare metal.",
-      "In 10 days, we created a full visual identity, from brand strategy & positioning to brand guidelines, logo & sub-logos, icons, and a complete assets library."
-    ],
-    "images": []
-  }
+  "content": [
+    "A Brand sprint for Komodor, a platform that helps DevOps troubleshoot efficiently. Komodor tracks changes across your complete K8s-based stack understands their ripple effect and gives dev & ops teams the context they need to troubleshoot efficiently. Independently. In 10 days, we created a full visual identity, from brand strategy & positioning to brand guidelines, logo & sub-logos, icons, and a complete assets library."
+  ]
 }
