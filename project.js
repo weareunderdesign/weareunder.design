@@ -37,10 +37,6 @@ if (genericUrl === "") {
       return item.path;
     });
 
-    console.log(projects);
-
-    // let projects = $(directoryContentHTML).find("a");
-
     for (let i = 0; i < projects.length; i++) {
       let a_href = projects[i];
       if (subSearchList.includes(a_href) || a_href === "/") {
