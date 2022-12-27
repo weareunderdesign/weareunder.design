@@ -11,7 +11,9 @@ let projectsWithVideoAsHero = ["karma"];
 let projectWithSvgAsBg = ["mesh_payments", "zigi"];
 let subSearchList = ["work", "work/new", "work/archive"];
 let sidebar = document.getElementsByClassName("sidebar")[0];
-
+const octokit = new Octokit({
+  auth: "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",
+});
 let url = window.location.pathname;
 url = url.replace("index.html", "").replace("index.htm", "");
 
@@ -20,10 +22,6 @@ if (url.includes("work")) genericUrl = url;
 
 if (genericUrl === "") {
   async function getProjects(directory) {
-    const octokit = new Octokit({
-      auth: "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",
-    });
-
     const repositoryContent = await octokit
       .request("GET /repos/{owner}/{repo}/contents/{path}", {
         owner: "weareunder",
@@ -340,9 +338,22 @@ if (genericUrl === "") {
   document.getElementsByClassName("projects")[0].innerHTML = projectBackground;
   await SideBarFunctionality();
 } else {
+  const projectContent = await octokit
+    .request("GET /repos/{owner}/{repo}/contents/{path}", {
+      owner: "weareunder",
+      repo: "under",
+      path: genericUrl.slice(1, -1),
+      ref: "cms",
+      recursive: true,
+    })
+    .catch((e) => {
+      console.error(e);
+    });
+
+  let projectData = projectContent?.data?.map((item) => item?.name);
+
   let projectJSONObj = {};
   let medias = [];
-
   async function getMediaArr() {
     let mediaTypes = ["png", "mp4", "svg", "gif", "jpg", "jpeg", "m4v"];
     try {
@@ -355,28 +366,23 @@ if (genericUrl === "") {
         let fileName = _url.slice(0, -1).split("/").pop();
         fileName = fileName[0].toUpperCase() + fileName.slice(1);
         let mediaUrl = `${i}.${extension}`;
-        try {
-          await $.ajax({
-            url: mediaUrl,
-            type: "GET",
-          });
 
+        if (projectData.includes(mediaUrl)) {
           let mediaElement = "";
 
           if (mediaTypes[mediaFails] === "mp4")
             mediaElement = `<video src="${mediaUrl}" autoplay loop muted playsinline width="100%"></video>`;
           else if (mediaTypes[mediaFails] === "m4v")
             mediaElement = `<video src="${mediaUrl}" autoplay="" loop="" muted="" width="100%" style="margin: 0px;"></video>`;
-          else mediaElement = `<img src="${mediaUrl}" />`;
+          else mediaElement = `<img src="${mediaUrl}" loading="lazy" />`;
 
           medias.push(mediaElement);
 
           i++;
           mediaFails = 0;
           //if media is found reset the media fails to 0
-        } catch (e) {
+        } else {
           mediaFails++;
-          //if media is not found increase the media fails by 1
         }
       }
     } catch (e) {
