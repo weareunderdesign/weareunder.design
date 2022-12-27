@@ -1,5 +1,5 @@
 //CMS module for work/projects
-
+import { Octokit } from "https://cdn.skypack.dev/@octokit/rest";
 let workDirectory = "/work";
 
 // get /work directory structure html
@@ -9,28 +9,42 @@ let newWorkArr = [];
 let archivedWorkArr = [];
 let projectsWithVideoAsHero = ["karma"];
 let projectWithSvgAsBg = ["mesh_payments", "zigi"];
-let subSearchList = ["/work", "/work/new", "/work/archive"];
+let subSearchList = ["work", "work/new", "work/archive"];
 let sidebar = document.getElementsByClassName("sidebar")[0];
 
 let url = window.location.pathname;
 url = url.replace("index.html", "").replace("index.htm", "");
 
-if (url === "/") {
+let genericUrl = "";
+if (url.includes("work")) genericUrl = url;
+
+if (genericUrl === "") {
   async function getProjects(directory) {
-    let directoryContentHTML = await $.ajax({
-      url: directory,
-      type: "GET",
+    const octokit = new Octokit({
+      auth: "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",
     });
 
-    let projects = $(directoryContentHTML).find("a");
+    const repositoryContent = await octokit
+      .request("GET /repos/{owner}/{repo}/contents/{path}", {
+        owner: "weareunder",
+        repo: "under",
+        path: directory,
+        ref: "cms",
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+
+    let projects = repositoryContent.data.map((item) => {
+      return item.path;
+    });
+
+    console.log(projects);
+
+    // let projects = $(directoryContentHTML).find("a");
 
     for (let i = 0; i < projects.length; i++) {
-      // get a tag's innerHTML and href attr
-      let a_href = $(projects[i]).attr("href");
-      a_href = a_href.replace(/\\/g, "/");
-      if (a_href[a_href.length - 1] === "/") {
-        a_href = a_href.slice(0, -1);
-      }
+      let a_href = projects[i];
       if (subSearchList.includes(a_href) || a_href === "/") {
         continue;
       }
@@ -52,13 +66,13 @@ if (url === "/") {
 
       projectJSONObj["directory"] = a_href;
 
-      if (directory === "/work" && a_href.includes("/work/")) {
+      if (directory === "work" && a_href.includes("work/")) {
         workArr.push(projectJSONObj);
-      } else if (directory === "/work/new" && a_href.includes("/work/new/")) {
+      } else if (directory === "work/new" && a_href.includes("work/new/")) {
         newWorkArr.push(projectJSONObj);
       } else if (
-        directory === "/work/archive" &&
-        a_href.includes("/work/archive/")
+        directory === "work/archive" &&
+        a_href.includes("work/archive/")
       ) {
         archivedWorkArr.push(projectJSONObj);
       }
@@ -291,33 +305,37 @@ if (url === "/") {
   let projectBackground = "";
 
   for (let i = 0; i < allWorksList.length; i++) {
-    let project = allWorksList[i];
-    let projectLink = document.createElement("a");
+    try {
+      let project = allWorksList[i];
+      let projectLink = document.createElement("a");
 
-    let _url = project.directory;
+      let _url = project?.directory;
 
-    if (_url[_url.length - 1] === "/")
-      _url = _url.substring(0, _url.length - 1);
+      if (_url[_url.length - 1] === "/")
+        _url = _url.substring(0, _url.length - 1);
 
-    let fileName = _url.split("/").pop();
-    let projectTitle = fileName.replace("_", " ");
+      let fileName = _url.split("/").pop();
+      let projectTitle = fileName.replace("_", " ");
 
-    projectTitle = projectTitle[0].toUpperCase() + projectTitle.slice(1);
+      projectTitle = projectTitle[0].toUpperCase() + projectTitle.slice(1);
 
-    projectLink.setAttribute("href", project.directory);
-    projectLink.setAttribute("class", "sidebar-project-link");
-    projectLink.setAttribute("id", project?.id ?? "");
+      projectLink.setAttribute("href", project.directory);
+      projectLink.setAttribute("class", "sidebar-project-link");
+      projectLink.setAttribute("id", project?.id ?? "");
 
-    projectLink.innerHTML = `<span>${projectTitle}</span>`;
+      projectLink.innerHTML = `<span>${projectTitle}</span>`;
 
-    let projectBGCode = `<img src="${project.directory}/0.png" class="sidebar-project-image" id="${fileName}"/>`;
+      let projectBGCode = `<img src="${project?.directory}/0.png" class="sidebar-project-image" id="${fileName}"/>`;
 
-    if (projectWithSvgAsBg.includes(fileName?.toLowerCase()))
-      projectBGCode = `<img src="${project.directory}/0.svg" class="sidebar-project-image" id="${fileName}"/>`;
+      if (projectWithSvgAsBg.includes(fileName?.toLowerCase()))
+        projectBGCode = `<img src="${project?.directory}/0.svg" class="sidebar-project-image" id="${fileName}"/>`;
 
-    projectBackground = projectBackground + projectBGCode;
+      projectBackground = projectBackground + projectBGCode;
 
-    document.getElementsByClassName("sidebar")[0].appendChild(projectLink);
+      document.getElementsByClassName("sidebar")[0].appendChild(projectLink);
+    } catch (e) {
+      console.log(e);
+    }
   }
   document.getElementsByClassName("projects")[0].innerHTML = projectBackground;
   await SideBarFunctionality();
@@ -336,7 +354,7 @@ if (url === "/") {
         let extension = mediaTypes[mediaFails];
         let fileName = _url.slice(0, -1).split("/").pop();
         fileName = fileName[0].toUpperCase() + fileName.slice(1);
-        let mediaUrl = `${url}${i}.${extension}`;
+        let mediaUrl = `${i}.${extension}`;
         try {
           await $.ajax({
             url: mediaUrl,
