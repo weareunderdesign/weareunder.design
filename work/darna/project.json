@@ -1,0 +1,20 @@
+{
+  "info": {
+    "bgColor": "#2a52cf",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Darna Hotel"
+      },
+      {
+        "role": "Art direction",
+        "name": "Inbal Lapidot Vidal"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "Brand sprint for Darna hotel, Eilat, Israel. Discovery, visual identity, and implementation in space."
+    ]
+  }
+}

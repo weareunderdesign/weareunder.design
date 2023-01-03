@@ -1,0 +1,28 @@
+{
+  "info": {
+    "bgColor": "#0FCB71",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Reeco"
+      },
+      {
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Strategic Director",
+        "name": "Grant Harris"
+      },
+      {
+        "role": "Brand lead designer",
+        "name": "Anastasia Vlasenko"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "A 10-day Brand sprint for Reeco. Reeco makes it easier for hotels and their suppliers to do business and grow from each other's success. Hotels can now buy quality fast-moving products at the best value, while suppliers have ready access to customers and business-friendly terms."
+    ]
+  }
+}

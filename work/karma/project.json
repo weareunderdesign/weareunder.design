@@ -1,0 +1,21 @@
+{
+  "info": {
+    "bgColor": "#FCAC8B",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Karma Company TLV"
+      },
+      {
+        "role": "Photography",
+        "name": "Aya Wind",
+        "link": "https://www.ayawind.com/"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "Brand and identity for Karma Company TLV - Natural remedies and lifestyle products."
+    ]
+  }
+}

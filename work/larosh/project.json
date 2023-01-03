@@ -1,0 +1,23 @@
+{
+  "info": {
+    "bgColor": "#C0815F",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "La Rosh"
+      },
+      {
+        "role": "Photography",
+        "name": "Karin Lapidot, Liz Kadar"
+      },
+      {
+        "role": "Video",
+        "name": "Nerya Shohat",
+        "link": "https://www.alcide.io/"
+      }
+    ]
+  },
+  "content": {
+    "text": ["Brand design & identity for La Rosh, hand crafted hats brand."]
+    }
+}

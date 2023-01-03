@@ -1,0 +1,20 @@
+{
+  "info": {
+    "bgColor": "#000000",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Le Salón Agency"
+      },
+      {
+        "role": "Photography",
+        "name": "Rotem Rachel Chen"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "Website design and identity for alternative model agency Le Salón."
+    ]
+  }
+}

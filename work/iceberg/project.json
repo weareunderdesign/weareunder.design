@@ -1,0 +1,21 @@
+{
+  "info": {
+    "bgColor": "#EC7926",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "ICEBERG & The Juice"
+      },
+      {
+        "role": "Architect",
+        "name": "Baranowitz Amit Studio",
+        "link": "https://baranowitz-goldberg.com/about/"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "Brand design & identity for ICEBERG & The Juice – the new energetic sub-brand of ICEBERG ice Cream."
+    ]
+  }
+}

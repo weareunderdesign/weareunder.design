@@ -1,0 +1,36 @@
+{
+  "info": {
+    "bgColor": "#0C6BEA",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Raftt"
+      },
+      {
+        "role": "Art Director",
+        "name": "Eden Vidal"
+      },
+      {
+        "role": "Brand Designer",
+        "name": "Anastasia Vlasenko, Kate Holub"
+      },
+      {
+        "role": "Illustrator",
+        "name": "Kate Holub"
+      },
+      {
+        "role": "Animation",
+        "name": "Thoughts In Motion"
+      },
+      {
+        "role": "Web Devlopment",
+        "name": "Michael Schwartz"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "Raftt (as in rafting, yes) creates modern, flexible environments that seamlessly integrate SW developers' tools, workflows, and features. With Raftt, developers no longer have to be confined by their hardware. Instead, they can create an unlimited number of environments, collaborate and share, and enjoy stability, consistency, and performance."
+    ]
+  }
+}

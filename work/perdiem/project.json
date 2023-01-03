@@ -1,0 +1,28 @@
+{
+  "info": {
+    "bgColor": "#0171EA",
+    "roles": [
+      {
+        "role": "Client",
+        "name": "Per Diem"
+      },
+      {
+        "role": "Art Direction",
+        "name": "Studio Under"
+      },
+      {
+        "role": "Brand lead designer",
+        "name": "Anastasia Vlasenko"
+      },
+      {
+        "role": "Illustrator",
+        "name": "Anastasia Vlasenko"
+      }
+    ]
+  },
+  "content": {
+    "text": [
+      "Per Diem makes it easy for local businesses to sell subscriptions online and give them all the marketing and fulfillment tools they need to build their own Amazon Prime."
+    ]
+  }
+}

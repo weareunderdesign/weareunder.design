@@ -152,6 +152,7 @@ footer {
 
 .hero-section {
   height: 100vh;
+  display: none;
 }
 
 .circle {
