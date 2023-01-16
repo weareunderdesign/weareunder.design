@@ -339,7 +339,7 @@ if (genericUrl === "") {
       owner: "weareunder",
       repo: "under",
       path: genericUrl.slice(1, -1),
-      ref: "cms",
+      ref: "main",
       recursive: true,
     })
     .catch((e) => {
