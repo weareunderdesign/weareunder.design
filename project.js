@@ -27,7 +27,7 @@ if (genericUrl === "") {
         owner: "weareunder",
         repo: "under",
         path: directory,
-        ref: "cms",
+        ref: "main",
       })
       .catch((e) => {
         console.error(e);
