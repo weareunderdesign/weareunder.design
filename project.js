@@ -326,13 +326,13 @@ if (genericUrl === "") {
 
       projectBackground = projectBackground + projectBGCode;
 
-      document.getElementsByClassName("sidebar")[0].appendChild(projectLink);
+      // document.getElementsByClassName("sidebar")[0].appendChild(projectLink);
     } catch (e) {
       console.log(e);
     }
   }
-  document.getElementsByClassName("projects")[0].innerHTML = projectBackground;
-  await SideBarFunctionality();
+  // document.getElementsByClassName("projects")[0].innerHTML = projectBackground;
+  // await SideBarFunctionality();
 } else {
   const projectContent = await octokit
     .request("GET /repos/{owner}/{repo}/contents/{path}", {
