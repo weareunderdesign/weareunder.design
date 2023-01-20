@@ -1,8 +1,9 @@
 @import url("https://use.typekit.net/pzx5ijr.css");
+@import url("https://unpkg.com/renecss/dist/rene.min.css");
 
 :root {
-  --base-size: 64px;
-  --base-font: degular-display, sans-serif;
+  --size-base: 64px;
+  --font-primary: degular-display, sans-serif;
 }
 
 *,
@@ -33,23 +34,15 @@ h1 {
   font-weight: 500;
   line-height: 80%;
   margin: 0px;
-  font-family: var(--base-font);
+  font-family: var(--font-primary);
 }
 
 h2 {
-  margin-top: 36px;
-  margin-bottom: 12px;
   font-size: 82px;
   font-weight: 500;
   line-height: 100%;
   margin: 0px;
-  font-family: var(--base-font);
-}
-
-h3 {
-  font-size: 48px;
-  margin-top: 32px;
-  margin-bottom: 12px;
+  font-family: var(--font-primary);
 }
 
 span {
@@ -57,21 +50,18 @@ span {
 }
 
 img {
-  display: block;
   width: 100%;
-  max-width: 100%;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
   cursor: pointer;
 }
 
 .logo {
   position: fixed;
-  top: var(--base-size);
-  left: var(--base-size);
+  top: var(--size-base);
+  left: var(--size-base);
   z-index: 99;
   text-decoration: none;
   mix-blend-mode: difference;
@@ -127,8 +117,8 @@ a {
 
 footer {
   display: flex;
-  padding: var(--base-size);
-  column-gap: var(--base-size);
+  padding: var(--size-base);
+  column-gap: var(--size-base);
   margin-left: auto;
   margin-right: auto;
   align-items: flex-start;
@@ -163,6 +153,10 @@ footer {
   border-radius: 100%;
   position: absolute;
   z-index: 2;
+}
+
+.circle:hover span {
+  text-decoration: none; /* to override renecss */
 }
 
 .circle-info {
@@ -205,7 +199,7 @@ footer {
 }
 
 section {
-  padding: var(--base-size);
+  padding: var(--size-base);
   display: flex;
   flex-direction: row;
   row-gap: 80px;
@@ -302,23 +296,15 @@ section {
     font-weight: 600;
     line-height: 80%;
     margin: 0px;
-    font-family: var(--base-font);
+    font-family: var(--font-primary);
   }
 
   h2 {
     font-size: 56px;
     font-weight: 600;
     line-height: 100%;
-    margin-top: 36px;
-    margin-bottom: 12px;
     margin: 0px;
-    font-family: var(--base-font);
-  }
-
-  h3 {
-    font-size: 48px;
-    margin-top: 32px;
-    margin-bottom: 12px;
+    font-family: var(--font-primary);
   }
 
   #navigation {
@@ -335,8 +321,8 @@ section {
   }
 
   .logo {
-    top: calc(var(--base-size) / 2);
-    left: calc(var(--base-size) / 2);
+    top: calc(var(--size-base) / 2);
+    left: calc(var(--size-base) / 2);
     z-index: 99;
     text-decoration: none;
   }
@@ -370,7 +356,7 @@ section {
   section {
     flex-direction: column;
     justify-content: center;
-    padding: calc(var(--base-size) / 2);
+    padding: calc(var(--size-base) / 2);
   }
 
   .box {
@@ -378,7 +364,7 @@ section {
   }
 
   footer {
-    padding: calc(var(--base-size) / 2);
+    padding: calc(var(--size-base) / 2);
     flex-direction: column;
     gap: 40px 80px;
   }
