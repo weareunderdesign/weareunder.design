@@ -12,21 +12,16 @@ const lottieAnimations = [
   },
 ];
 
+function dynamicallyLoadScript(url) {
+  var script = document.createElement("script"); // create a script DOM node
+  script.src = url; // set its src to the provided URL
+  document.body.appendChild(script); // add it to the end of the body section of the page
+}
+
 const randomIndex = getRandomInt(lottieAnimations.length);
 const randomAnimation = lottieAnimations[randomIndex].animation;
 
 const ScrollLottie = async (obj) => {
-  // let anim = lottie.loadAnimation({
-  //   container: document.querySelector(obj.target),
-  //   renderer: "svg",
-  //   loop: false,
-  //   autoplay: false,
-  //   path: obj.path,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // });
-
   fetch(obj.path)
     .then((response) => response.arrayBuffer())
     .then((buffer) => {
@@ -81,8 +76,7 @@ const ScrollLottie = async (obj) => {
           }
         },
       });
-
-      addFooter();
+      dynamicallyLoadScript("/js/footer.js");
     });
 };
 
