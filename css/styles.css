@@ -1,5 +1,5 @@
+@import url("https://unpkg.com/renecss/dist/rene.min.css");
 @import url("https://use.typekit.net/pzx5ijr.css");
-
 :root {
   --size-base: 64px;
   --font-primary: degular-display, sans-serif;
@@ -18,7 +18,6 @@ body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 40px;
-  line-height: 124%;
   font-weight: 400;
   color: black;
 }
@@ -94,7 +93,6 @@ a {
   z-index: 19;
   display: none;
   flex-direction: column;
-  row-gap: 8px;
   overflow: auto;
   transition-property: color, background-color;
   transition-duration: 250ms;
