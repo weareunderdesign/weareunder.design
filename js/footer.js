@@ -1,28 +1,44 @@
 function addFooter() {
   const TEMPLATE = `
   <footer>
-  <a class="footer-logo" href="/">
-      <img src="/images/under-footer.svg">
-  </a>
-  <p>
+  <div class="direction-column padding-xl gap-xl">
+    <a href="/">
+      <img src="/images/under.svg" style="width: 160px;">
+    </a>
+    <h4 class="box">
       We are a creative team, designing digital brands & products through solid
       strategy and research. We admire simplicity, communication and focused process.
-  </p>
-  <div class="footer-links">
+    </h4>
+    <div class="direction-row">
       <a href="https://www.behance.net/weareunder" target="_blank">
-          Behance
+        <h4>Behance</h4>
       </a>
       <a href="https://www.linkedin.com/company/underdesign/" target="_blank">
-          Linkedin
+        <h4>Linkedin</h4>
       </a>
       <a href="https://www.instagram.com/under.design/" target="_blank">
-          Instagram
+        <h4>Instagram</h4>
       </a>
       <a href="mailto:hello@weareunder.design">
-          Email
+        <h4>Email</h4>
       </a>
+    </div>
+    <div class="direction-row">
+      <a href="https://www.behance.net/weareunder" target="_blank">
+        <h4>Behance</h4>
+      </a>
+      <a href="https://www.linkedin.com/company/underdesign/" target="_blank">
+        <h4>Linkedin</h4>
+      </a>
+      <a href="https://www.instagram.com/under.design/" target="_blank">
+        <h4>Instagram</h4>
+      </a>
+      <a href="mailto:hello@weareunder.design">
+        <h4>Email</h4>
+      </a>
+    </div>
   </div>
-  </footer>
+</footer>
   `;
 
   class UnderFooter extends HTMLElement {
