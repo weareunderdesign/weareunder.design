@@ -1,85 +1,11 @@
-@import url("https://unpkg.com/renecss/dist/rene.min.css");
-@import url("https://use.typekit.net/pzx5ijr.css");
-:root {
-  --size-base: 64px;
-  --font-primary: degular-display, sans-serif;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  color: inherit;
-  margin: 0px;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  color: black;
-}
-
-p {
-  font-size: 40px;
-  line-height: 122%;
-}
-
-h1 {
-  font-size: 186px;
-  font-weight: 500;
-  line-height: 80%;
-  margin: 0px;
-  font-family: var(--font-primary);
-}
-
-h2 {
-  font-size: 82px;
-  font-weight: 500;
-  line-height: 100%;
-  margin: 0px;
-  font-family: var(--font-primary);
-}
-
-span {
-  line-height: inherit;
-}
-
-img {
-  width: 100%;
-}
-
-a {
-  color: inherit;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .logo {
   position: fixed;
-  top: var(--size-base);
-  left: var(--size-base);
   z-index: 99;
-  text-decoration: none;
   mix-blend-mode: difference;
-  width: 152px;
 }
 
-.video {
+body img {
   width: 100%;
-  height: 100vh;
-}
-
-.show-project {
-  height: 100vh !important;
-  background-size: cover;
-  position: relative;
-  background-position-x: 50%;
-  transition-property: color, background-color;
-  transition-duration: 50ms;
-  transition-timing-function: ease;
 }
 
 .sidebar {
@@ -113,34 +39,8 @@ a {
   transition-timing-function: ease;
 }
 
-footer {
-  display: flex;
-  padding: var(--size-base);
-  column-gap: var(--size-base);
-  margin-left: auto;
-  margin-right: auto;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.footer-logo {
-  flex: 0 0 auto;
-  width: 142px;
-}
-
-.footer-content {
-  max-width: 75%;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .hero-section {
   height: 100vh;
-  display: none;
 }
 
 .circle {
@@ -154,7 +54,8 @@ footer {
 }
 
 .circle:hover span {
-  text-decoration: none; /* to override renecss */
+  text-decoration: none;
+  /* to override renecss */
 }
 
 .circle-info {
@@ -196,57 +97,6 @@ footer {
   z-index: 3;
 }
 
-section {
-  padding: var(--size-base);
-  display: flex;
-  flex-direction: row;
-  row-gap: 80px;
-  min-height: 100vh;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.box {
-  flex: 0 0 auto;
-  width: 48.5%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px 40px;
-  position: relative;
-}
-
-.project-link {
-  display: inline;
-  color: black;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-}
-
-.color-primary {
-  background-color: rgb(129, 89, 251);
-  color: white;
-}
-
-.primary-background {
-  background-color: black;
-  color: white;
-}
-
-.inactive {
-  color: grey;
-}
-
-.sticky {
-  position: sticky;
-  top: 24px;
-}
-
-.content {
-  flex-direction: column;
-  min-height: auto;
-}
-
-/*Color Change Animation*/
 .random-color-change {
   -webkit-animation: random-color-change 6s linear infinite alternate both;
   animation: random-color-change 6s linear infinite alternate both;
@@ -278,33 +128,6 @@ section {
 }
 
 @media (max-width: 1024px) {
-  body {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .footer-logo {
-    width: 64px;
-    padding: 0px;
-    margin: 0px;
-  }
-
-  h1 {
-    font-size: 96px;
-    font-weight: 600;
-    line-height: 80%;
-    margin: 0px;
-    font-family: var(--font-primary);
-  }
-
-  h2 {
-    font-size: 56px;
-    font-weight: 600;
-    line-height: 100%;
-    margin: 0px;
-    font-family: var(--font-primary);
-  }
-
   #navigation {
     display: flex;
     flex-direction: row;
@@ -316,13 +139,6 @@ section {
     width: 100%;
     height: 100%;
     align-content: center;
-  }
-
-  .logo {
-    top: calc(var(--size-base) / 2);
-    left: calc(var(--size-base) / 2);
-    z-index: 99;
-    text-decoration: none;
   }
 
   .circle {
@@ -339,43 +155,11 @@ section {
     z-index: 2;
   }
 
-  p {
-    font-size: 32px;
-  }
-
   .sidebar {
     width: 100%;
     font-size: 40px;
     line-height: 48px;
     margin-bottom: 8px;
     text-align: center;
-  }
-
-  section {
-    flex-direction: column;
-    justify-content: center;
-    padding: calc(var(--size-base) / 2);
-  }
-
-  .box {
-    width: 100%;
-  }
-
-  footer {
-    padding: calc(var(--size-base) / 2);
-    flex-direction: column;
-    gap: 40px 80px;
-  }
-
-  .footer-content {
-    max-width: 100%;
-  }
-
-  .sticky {
-    position: static;
-  }
-
-  .hideonmobile {
-    display: none;
   }
 }
