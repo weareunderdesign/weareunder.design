@@ -12,12 +12,6 @@ const lottieAnimations = [
   },
 ];
 
-function dynamicallyLoadScript(url) {
-  var script = document.createElement("script"); // create a script DOM node
-  script.src = url; // set its src to the provided URL
-  document.body.appendChild(script); // add it to the end of the body section of the page
-}
-
 const randomIndex = getRandomInt(lottieAnimations.length);
 const randomAnimation = lottieAnimations[randomIndex].animation;
 
@@ -76,7 +70,6 @@ const ScrollLottie = async (obj) => {
           }
         },
       });
-      dynamicallyLoadScript("/js/footer.js");
     });
 };
 
