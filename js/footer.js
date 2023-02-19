@@ -1,6 +1,5 @@
 function addFooter() {
   const TEMPLATE = `
-  <footer>
   <div class="direction-column padding-xl gap-xl">
     <a href="/">
       <img src="/images/under.svg" style="width: 160px;">
@@ -38,7 +37,6 @@ function addFooter() {
       </a>
     </div>
   </div>
-</footer>
   `;
 
   class UnderFooter extends HTMLElement {
