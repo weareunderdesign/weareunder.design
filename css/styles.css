@@ -10,11 +10,13 @@
 body img {
   width: 100%;
 }
+body {
+  font-family: "HelveticaNeue-light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 
-h1,
-h2,
-h3 {
-  font-family: degular display;
+h1, h2, h3 {
+  letter-spacing: -1px;
 }
 
 .product {
@@ -37,6 +39,11 @@ h3 {
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: ease;
+  gap: 8px;
+}
+
+.sidebar a {
+  font-size: 36px;
 }
 
 .sidebar-project-image {
