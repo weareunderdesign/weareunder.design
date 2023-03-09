@@ -15,8 +15,9 @@ body {
   Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-h1, h2, h3 {
-  letter-spacing: -1px;
+h1, h2 {
+  font-family: degular display;
+  line-height: 110%;
 }
 
 .product {
