@@ -12,17 +12,17 @@ body img {
 }
 body {
   font-family: "HelveticaNeue-light", "Helvetica Neue Light", "Helvetica Neue",
-  Helvetica, Arial, "Lucida Grande", sans-serif;
+    Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: degular display;
   line-height: 110%;
 }
 
 .product {
   background: no-repeat center/cover;
-
 }
 
 .sidebar {
@@ -63,6 +63,11 @@ h1, h2 {
 
 .hero-section {
   height: 100vh;
+}
+
+.show-project {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .circle {
