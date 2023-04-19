@@ -1,8 +1,8 @@
 function addFooter() {
-  const TEMPLATE = `
+    const TEMPLATE = `
   <div class="direction-column padding-xl gap-xl">
     <a href="/">
-      <img src="/images/under-footer.svg" style="width: 102px;">
+      <img src="./images/under-footer.svg" style="width: 102px;">
     </a>
     <h4 class="box">
       under creates high-quality,<br>
@@ -28,13 +28,13 @@ function addFooter() {
   </div>
   `;
 
-  class UnderFooter extends HTMLElement {
-    constructor() {
-      super();
-      this.innerHTML = TEMPLATE;
+    class UnderFooter extends HTMLElement {
+        constructor() {
+            super();
+            this.innerHTML = TEMPLATE;
+        }
     }
-  }
-  customElements.define("under-footer", UnderFooter);
+    customElements.define("under-footer", UnderFooter);
 }
 
 addFooter();

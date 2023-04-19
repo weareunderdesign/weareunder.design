@@ -11,14 +11,7 @@ body img {
   width: 100%;
 }
 body {
-  font-family: "HelveticaNeue-light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-h1,
-h2 {
-  font-family: degular display;
-  line-height: 110%;
+  font-family: "HelveticaNeue-light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .product {
