@@ -2,7 +2,7 @@ function addFooter() {
     const TEMPLATE = `
   <div class="direction-column padding-xl gap-xl">
     <a href="/">
-      <img src="./images/under-footer.svg" style="width: 102px;">
+      <img src="https://weareunder.design/images/under-footer.svg" style="width: 102px;">
     </a>
     <h4 class="box">
       under creates high-quality,<br>
