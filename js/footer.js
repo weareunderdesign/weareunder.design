@@ -10,6 +10,9 @@ function addFooter() {
       and products for creative people.
     </h4>
     <div class="direction-row">
+      <a href="https://store.weareunder.design/">
+        <h4>Store</h4>
+      </a>
       <a href="https://www.figma.com/file/UTvs6k6N1lAOLBerchdKFV/Under?node-id=351%3A772&t=lUyeBYt3fKsDLcU9-1" target="_blank">
         <h4>Press</h4>
       </a>
