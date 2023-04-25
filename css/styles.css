@@ -1,14 +1,4 @@
 @import url("https://unpkg.com/renecss/dist/rene.min.css");
-@import url("https://use.typekit.net/kxo4uot.css");
-
-body {
-  font-family: "neue-haas-grotesk-display";
-}
-p, span {
-  font-family: "neue-haas-grotesk-text", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 
 .logo {
   position: fixed;
