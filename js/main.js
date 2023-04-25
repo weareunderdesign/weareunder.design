@@ -1,14 +1,17 @@
 // New Site JS
 
 const lottieAnimations = [
-  {
-    animation: "./animations/animation_1.json.gz",
-  },
+  // {
+  //   animation: "./animations/animation_1.json.gz",
+  // },
   {
     animation: "./animations/animation_2.json.gz",
   },
   {
     animation: "./animations/animation_3.json.gz",
+  },
+  {
+    animation: "./animations/light_0.json.gz",
   },
 ];
 
