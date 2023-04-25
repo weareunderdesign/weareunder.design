@@ -1,5 +1,14 @@
-@import url("https://use.typekit.net/pzx5ijr.css");
 @import url("https://unpkg.com/renecss/dist/rene.min.css");
+@import url("https://use.typekit.net/kxo4uot.css");
+
+body {
+  font-family: "neue-haas-grotesk-display";
+}
+p, span {
+  font-family: "neue-haas-grotesk-text", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .logo {
   position: fixed;
@@ -9,9 +18,6 @@
 
 body img {
   width: 100%;
-}
-body {
-  font-family: "HelveticaNeue-light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .product {
