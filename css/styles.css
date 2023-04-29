@@ -119,25 +119,25 @@ body img {
 }
 
 .random-color-change {
-  -webkit-animation: random-color-change 6s linear infinite alternate both;
-  animation: random-color-change 6s linear infinite alternate both;
+  -webkit-animation: random-color-change 10s linear infinite alternate both;
+  animation: random-color-change 10s linear infinite alternate both;
 }
 
 @keyframes random-color-change {
   0% {
-    background: #8159fb;
+    background: #fd3c2d;
   }
 
-  25% {
+  33% {
+    background: #014ADD;
+  }
+
+  66% {
     background: #ffbfe1;
   }
 
-  50% {
-    background: #fdc800;
-  }
-
   100% {
-    background: #fd3c2d;
+    background: #fdc800;
   }
 }
 
