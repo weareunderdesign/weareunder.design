@@ -1,15 +1,6 @@
 const lottieAnimations = [
   {
-    animation: "./animations/animation_1.json.gz",
-  },
-  {
     animation: "./animations/animation_2.json.gz",
-  },
-  {
-    animation: "./animations/animation_3.json.gz",
-  },
-  {
-    animation: "./animations/light_0.json.gz",
   },
 ];
 
@@ -73,26 +64,6 @@ const ScrollLottie = async (obj) => {
 await ScrollLottie({
   target: "animation-1",
   path: lottieAnimations[0].animation,
-  duration: 0.1,
-  speed: "medium",
-});
-await ScrollLottie({
-  target: "animation-2",
-  path: lottieAnimations[1].animation,
-  duration: 0.1,
-  speed: "medium",
-});
-
-await ScrollLottie({
-  target: "animation-3",
-  path: lottieAnimations[2].animation,
-  duration: 0.1,
-  speed: "medium",
-});
-
-await ScrollLottie({
-  target: "animation-4",
-  path: lottieAnimations[3].animation,
   duration: 0.1,
   speed: "medium",
 });
