@@ -1,6 +1,6 @@
 const lottieAnimations = [
   {
-    animation: "./animations/animation_2.json.gz",
+    animation: "./animations/animation_3.json.gz",
   },
 ];
 
