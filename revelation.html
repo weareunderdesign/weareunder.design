@@ -36,6 +36,25 @@
         .revelation-blue {
             color: #221c35;
         }
+
+        .ellipse {
+            height: 33px;
+            width: 33px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .pink {
+            background: #FFBFE1;
+        }
+
+        .red {
+            background: #FD3C2D;
+        }
+
+        .blue {
+            background: #014ADD;
+        }
     </style>
 </head>
 
@@ -65,7 +84,17 @@
                 </h4>
             </div>
         </section>
-        <div class="animation-1"></div>
+
+        <!-- create toggle -->
+
+        <nav>
+            <div class="ellipse pink" id="animation-1"></div>
+            <div class="ellipse red" id="animation-2"></div>
+            <div class="ellipse blue" id="animation-3"></div>
+        </nav>
+
+        <div class="animation-1" id="animation-container"></div>
+
 
         <section class="page">
             <h3 class="text-center revelation-blue">

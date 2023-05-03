@@ -1,5 +1,11 @@
 const lottieAnimations = [
   {
+    animation: "./animations/animation_1.json.gz",
+  },
+  {
+    animation: "./animations/animation_2.json.gz",
+  },
+  {
     animation: "./animations/animation_3.json.gz",
   },
 ];
@@ -61,12 +67,74 @@ const ScrollLottie = async (obj) => {
     });
 };
 
+// document.getElementsByClassName("ellipse")?.forEach((element) => {
+//   //add event listener to each ellipse
+//   element.addEventListener("click", (e) => {
+//     //get the id of the ellipse
+//     let id = e.target.id;
+//     console.log(id);
+//   });
+// });
+
+let ellipses = document.getElementsByClassName("ellipse");
+let ellipseArray = Array.from(ellipses);
+
+ellipseArray.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    let id = e.target.id;
+    let animationContainer = document.getElementById("animation-container");
+    //remove child nodes
+    while (animationContainer.firstChild) {
+      animationContainer.removeChild(animationContainer.firstChild);
+    }
+    //remove classname which is eqaul to id
+    animationContainer.classList.remove(...animationContainer.classList);
+    animationContainer.classList.add(id);
+    if (id === "animation-1") {
+      (async () =>
+        await ScrollLottie({
+          target: "animation-1",
+          path: lottieAnimations[0].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    } else if (id === "animation-2") {
+      (async () =>
+        await ScrollLottie({
+          target: "animation-2",
+          path: lottieAnimations[1].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    } else if (id === "animation-3") {
+      (async () =>
+        await ScrollLottie({
+          target: "animation-3",
+          path: lottieAnimations[2].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    }
+  });
+});
 await ScrollLottie({
   target: "animation-1",
   path: lottieAnimations[0].animation,
   duration: 0.1,
   speed: "medium",
 });
+// await ScrollLottie({
+//   target: "animation-2",
+//   path: lottieAnimations[1].animation,
+//   duration: 0.1,
+//   speed: "medium",
+// });
+// await ScrollLottie({
+//   target: "animation-3",
+//   path: lottieAnimations[2].animation,
+//   duration: 0.1,
+//   speed: "medium",
+// });
 
 //Implemented count to call resize for n number of times to prevent infinite triggering of resize.
 var count = 0;
@@ -86,4 +154,5 @@ window.addEventListener("resize", () => {
     } else clearInterval(resizerInterval);
   }, 100);
 });
+
 const animations = $(".lottie-animation");
