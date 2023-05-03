@@ -67,15 +67,6 @@ const ScrollLottie = async (obj) => {
     });
 };
 
-// document.getElementsByClassName("ellipse")?.forEach((element) => {
-//   //add event listener to each ellipse
-//   element.addEventListener("click", (e) => {
-//     //get the id of the ellipse
-//     let id = e.target.id;
-//     console.log(id);
-//   });
-// });
-
 let ellipses = document.getElementsByClassName("ellipse");
 let ellipseArray = Array.from(ellipses);
 
@@ -123,18 +114,6 @@ await ScrollLottie({
   duration: 0.1,
   speed: "medium",
 });
-// await ScrollLottie({
-//   target: "animation-2",
-//   path: lottieAnimations[1].animation,
-//   duration: 0.1,
-//   speed: "medium",
-// });
-// await ScrollLottie({
-//   target: "animation-3",
-//   path: lottieAnimations[2].animation,
-//   duration: 0.1,
-//   speed: "medium",
-// });
 
 //Implemented count to call resize for n number of times to prevent infinite triggering of resize.
 var count = 0;
