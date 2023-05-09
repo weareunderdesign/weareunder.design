@@ -1,7 +1,8 @@
 function addHeader() {
+  const imagePath = `${location.origin}/images/under-header-logo.svg`;
   const TEMPLATE = `
         <a class="logo padding-xl" href="/">
-            <img src="https://weareunder.design/images/under-header-logo.svg" />
+            <img src="${imagePath}" />
         </a>
   `;
 
