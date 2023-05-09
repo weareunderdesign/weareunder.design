@@ -1,17 +1,17 @@
 function addHeader() {
-    const TEMPLATE = `
+  const TEMPLATE = `
         <a class="logo padding-xl" href="/">
-            <img src="././images/under-header-logo.svg" />
+            <img src="https://weareunder.design/images/under-header-logo.svg" />
         </a>
   `;
 
-    class UnderHeader extends HTMLElement {
-        constructor() {
-            super();
-            this.innerHTML = TEMPLATE;
-        }
+  class UnderHeader extends HTMLElement {
+    constructor() {
+      super();
+      this.innerHTML = TEMPLATE;
     }
-    customElements.define("under-header", UnderHeader);
+  }
+  customElements.define("under-header", UnderHeader);
 }
 
 addHeader();
