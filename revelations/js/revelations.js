@@ -14,7 +14,8 @@ const ScrollLottie = async (obj) => {
   fetch(obj.path)
     .then((response) => response.arrayBuffer())
     .then((buffer) => {
-      document.getElementsByClassName(obj.target)[0].style.display = "block";
+      document.getElementsByClassName("hero-section")[0].style.display =
+        "block";
       // decompress the buffer using pako
       const decompressed = pako.inflate(buffer);
       // convert the decompressed buffer to a string
@@ -24,7 +25,7 @@ const ScrollLottie = async (obj) => {
 
       // load lottie animation
       let anim = lottie.loadAnimation({
-        container: document.querySelector(`.${obj.target}`),
+        container: document.querySelector(obj.target),
         animationData: json,
         renderer: "svg",
         loop: false,
@@ -67,49 +68,8 @@ const ScrollLottie = async (obj) => {
     });
 };
 
-let ellipses = document.getElementsByClassName("ellipse");
-let ellipseArray = Array.from(ellipses);
-
-ellipseArray.forEach((element) => {
-  element.addEventListener("click", (e) => {
-    let id = e.target.id;
-    let animationContainer = document.getElementById("animation-container");
-    //remove child nodes
-    while (animationContainer.firstChild) {
-      animationContainer.removeChild(animationContainer.firstChild);
-    }
-    //remove classname which is eqaul to id
-    animationContainer.classList.remove(...animationContainer.classList);
-    animationContainer.classList.add(id);
-    if (id === "animation-1") {
-      (async () =>
-        await ScrollLottie({
-          target: "animation-1",
-          path: lottieAnimations[0].animation,
-          duration: 0.1,
-          speed: "medium",
-        }))();
-    } else if (id === "animation-2") {
-      (async () =>
-        await ScrollLottie({
-          target: "animation-2",
-          path: lottieAnimations[1].animation,
-          duration: 0.1,
-          speed: "medium",
-        }))();
-    } else if (id === "animation-3") {
-      (async () =>
-        await ScrollLottie({
-          target: "animation-3",
-          path: lottieAnimations[2].animation,
-          duration: 0.1,
-          speed: "medium",
-        }))();
-    }
-  });
-});
 await ScrollLottie({
-  target: "animation-1",
+  target: ".hero-section",
   path: lottieAnimations[0].animation,
   duration: 0.1,
   speed: "medium",
@@ -133,5 +93,50 @@ window.addEventListener("resize", () => {
     } else clearInterval(resizerInterval);
   }, 100);
 });
-
 const animations = $(".lottie-animation");
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+//Toggle Animations
+let ellipses = document.getElementsByClassName("ellipse");
+let ellipseArray = Array.from(ellipses);
+
+ellipseArray.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    let id = e.target.id;
+    let animationContainer = document.querySelector(".hero-section");
+    //remove child nodes
+    while (animationContainer.firstChild) {
+      animationContainer.removeChild(animationContainer.firstChild);
+    }
+    animationContainer.setAttribute("id", id);
+
+    if (id === "animation-1") {
+      (async () =>
+        await ScrollLottie({
+          target: ".hero-section",
+          path: lottieAnimations[0].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    } else if (id === "animation-2") {
+      (async () =>
+        await ScrollLottie({
+          target: ".hero-section",
+          path: lottieAnimations[1].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    } else if (id === "animation-3") {
+      (async () =>
+        await ScrollLottie({
+          target: ".hero-section",
+          path: lottieAnimations[2].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    }
+  });
+});
