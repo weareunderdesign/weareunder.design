@@ -24,68 +24,16 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-$(".circle-work").on("click", function () {
-  $(".sidebar").css({
-    display: "flex",
-  });
-  $("#menu-wrapper").css({
-    display: "none" + " ",
-  });
-  $("#logo").css({
-    display: "none" + " ",
-  });
-  $(".circle").css({
-    display: "none" + " ",
-  });
-  document.body.style.overflow = "hidden";
-});
-
 $(".sidebar").on("mouseover", function () {
-  $(".sidebar").css({
-    display: "flex" + " ",
-  });
-  $("#menu-wrapper").css({
-    display: "none" + " ",
-  });
-  $("#logo").css({
-    display: "none" + " ",
-  });
-  $(".circle").css({
-    display: "none" + " ",
-  });
   document.body.style.overflow = "hidden";
 });
 
 $(".sidebar").on("mouseout", function () {
-  $(".sidebar").css({
-    display: "none" + " ",
-  });
   $("#menu-wrapper").css({
     display: "flex" + " ",
   });
   $("#logo").css({
     display: "block" + " ",
-  });
-  $(".circle").css({
-    display: "flex" + " ",
-  });
-  document.body.style.overflow = "auto";
-});
-
-$(".close-menu").on("click", function () {
-  $(".sidebar").css({
-    display: "none" + " ",
-  });
-
-  $("#menu-wrapper").css({
-    display: "flex",
-  });
-
-  $("#logo").css({
-    display: "block" + " ",
-  });
-  $(".circle").css({
-    display: "flex" + " ",
   });
 
   document.body.style.overflow = "auto";
@@ -101,10 +49,6 @@ async function SideBarFunctionality() {
   const rotateMenu = document.getElementsByClassName("work")[0];
   if (rotateMenu) {
     rotateMenu.setAttribute("data-ix", "show-sidebar");
-  }
-  const bigbutton = document.getElementsByClassName("bigbutton")[0];
-  if (bigbutton) {
-    bigbutton.setAttribute("data-ix", "circlebutton");
   }
 
   var Main = function () {};
@@ -122,7 +66,7 @@ async function SideBarFunctionality() {
   };
   Main.init = function () {
     Main.heroElement =
-      window.document.getElementsByClassName("hero-section")[0];
+      window.document.getElementsByClassName("project-stage")[0];
     Main.projectsElement =
       window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
@@ -206,9 +150,7 @@ async function SideBarFunctionality() {
         : _this.h.hasOwnProperty(id)) == true
     ) {
       var _this1 = Main.navLinks.colors;
-      $(".hero-section svg").hide();
-      Main.sidebarElement.style.backgroundColor =
-        __map_reserved[id] != null ? _this1.getReserved(id) : _this1.h[id];
+      $(".project-stage svg").hide();
     }
     var _this2 = Main.navLinks.images;
     if (
@@ -222,13 +164,13 @@ async function SideBarFunctionality() {
         (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id])
           .src +
         ")";
-      $(".hero-section").addClass("show-project");
+      $(".project-stage").addClass("show-project");
     }
   };
   Main.hideProjects = function () {
-    $(".hero-section svg").show();
-    $(".hero-section").css("background-image", "none");
-    $(".hero-section").removeClass("show-project");
+    $(".project-stage svg").show();
+    $(".project-stage").css("background-image", "none");
+    $(".project-stage").removeClass("show-project");
   };
   Main.setStopMotionFrame = function (position, sequence) {
     if (sequence.images.length > 0) {

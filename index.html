@@ -11,9 +11,6 @@
     <meta property="og:image" content="./revelations/images/5.png" />
     <link rel="apple-touch-icon" href="./images/webclip.svg" />
     <link rel="stylesheet" href="./css/styles.css" />
-
-    <script src="./js/lottie_scroll.js"></script> <!-- gsap reuqired for circle animation  -->
-    <script src="./js/pingpong.js"></script>
     <title>Under</title>
 </head>
 
@@ -24,21 +21,46 @@
     <div class="hero-section" style="background-color: black;">
         <video src="./animations/dark.webm" autoplay muted loop
             style="object-fit: contain; height: 100%;width: 100%;"></video>
-        <div id="navigation" class="menu-wrapper">
-            <a class="circle circle-work">
-                <h4>Work</h4>
-            </a>
-            <a class="circle circle-info" href="mailto:hello@weareunder.design">
-                <h4>Contact</h4>
-            </a>
-            <a class="circle circle-brandsprint" href="./brand-sprint">
-                <h4>Brand<br />Sprint</h4>
-            </a>
-            <a class="circle circle-dynamic" href="https://store.weareunder.design/">
-                <h4>Store</h4>
-            </a>
+    </div>
+
+    <div class="view direction-column project-stage" style="position: relative;background-color: black;">
+        <div class="sidebar flex direction-row" data-ix="sidebar">
+            <div class="close-menu"></div>
+            <a href="./work/balance" class="sidebar-project-link" id="balance-1d1d1d">Balance</a>
+            <a href="./work/utila" class="sidebar-project-link" id="utila-00794E">Utila</a>
+            <a href="./work/finaloop" class="sidebar-project-link" id="finaloop-FF0000">Finaloop</a>
+            <a href="./work/dymension/" class="sidebar-project-link" id="dymension-24201F">Dymension</a>
+            <a href="./work/groundcover" class="sidebar-project-link" id="groundcover-1BB485">Groundcover</a>
+            <a href="./work/nilus" class="sidebar-project-link" id="nilus-db160d">Nilus</a>
+            <a href="./work/raftt" class="sidebar-project-link" id="raftt-0C6BEA">Raftt</a>
+            <a href="./work/togetherr" class="sidebar-project-link" id="togetherr-000000">Togetherr</a>
+            <a href="./work/upword" class="sidebar-project-link" id="upword-B8A4FD">Upword</a>
+            <a href="./work/alcide" class="sidebar-project-link" id="alcide-FF0000">Alcide</a>
+            <a href="./work/darna" class="sidebar-project-link" id="darna-2a52cf">Darna</a>
+            <a href="./work/everafter" class="sidebar-project-link" id="everafter-FF7051">Everafter</a>
+            <a href="./work/faintlines" class="sidebar-project-link" id="faintlines-FF0DBD">Faintlines</a>
+            <a href="./work/flume" class="sidebar-project-link" id="flume-FF6E15">Flume</a>
+            <a href="./work/grain" class="sidebar-project-link" id="grain-FED164">Grain</a>
+            <a href="./work/healthquarters" class="sidebar-project-link" id="healthquarters-0E305A">Healthquarters</a>
+            <a href="./work/iceberg" class="sidebar-project-link" id="iceberg-EC7926">Iceberg</a>
+            <a href="./work/karma" class="sidebar-project-link" id="karma-FCAC8B">Karma</a>
+            <a href="./work/komodor" class="sidebar-project-link" id="komodor-7545FF">Komodor</a>
+            <a href="./work/larosh" class="sidebar-project-link" id="larosh-C0815F">Larosh</a>
+            <a href="./work/le_salon" class="sidebar-project-link" id="le_salon-000000">Le salon</a>
+            <a href="./work/mesh_payments" class="sidebar-project-link" id="mesh_payments-19F08B">Mesh payments</a>
+            <a href="./work/notch" class="sidebar-project-link" id="notch-CF6AFF">Notch</a>
+            <a href="./work/perdiem" class="sidebar-project-link" id="perdiem-0171EA">Perdiem</a>
+            <a href="./work/reeco" class="sidebar-project-link" id="reeco-0FCB71">Reeco</a>
+            <a href="./work/reflect" class="sidebar-project-link" id="reflect-D1A8FD">Reflect</a>
+            <a href="./work/tagbox" class="sidebar-project-link" id="tagbox-C2A78D">Tagbox</a>
+            <a href="./work/revelations" class="sidebar-project-link" id="revelations-000000">Revelations</a>
+            <a href="./work/unit" class="sidebar-project-link" id="unit-000000">Unit</a>
+            <a href="./work/unleash" class="sidebar-project-link" id="unleash-BE8DF6">Unleash</a>
+            <a href="./work/zigi" class="sidebar-project-link" id="zigi-22D285">Zigi</a>
+            <a href="./work/zoog" class="sidebar-project-link" id="zoog-FF7051">Zoog</a>
         </div>
     </div>
+
     <a class="padding-xl view direction-column product" style="background-image: url(./images/justripe.png)">
         <div class="align-end">
             <p>Justripe - Coming soon</p>
@@ -56,41 +78,7 @@
             <p>Dad hat</p>
         </div>
     </a>
-    <div class="sidebar" data-ix="sidebar">
-        <div class="close-menu"></div>
-        <a href="./work/balance" class="sidebar-project-link" id="balance-1d1d1d">Balance</a>
-        <a href="./work/utila" class="sidebar-project-link" id="utila-00794E">Utila</a>
-        <a href="./work/finaloop" class="sidebar-project-link" id="finaloop-FF0000">Finaloop</a>
-        <a href="./work/dymension/" class="sidebar-project-link" id="dymension-24201F">Dymension</a>
-        <a href="./work/groundcover" class="sidebar-project-link" id="groundcover-1BB485">Groundcover</a>
-        <a href="./work/nilus" class="sidebar-project-link" id="nilus-db160d">Nilus</a>
-        <a href="./work/raftt" class="sidebar-project-link" id="raftt-0C6BEA">Raftt</a>
-        <a href="./work/togetherr" class="sidebar-project-link" id="togetherr-000000">Togetherr</a>
-        <a href="./work/upword" class="sidebar-project-link" id="upword-B8A4FD">Upword</a>
-        <a href="./work/alcide" class="sidebar-project-link" id="alcide-FF0000">Alcide</a>
-        <a href="./work/darna" class="sidebar-project-link" id="darna-2a52cf">Darna</a>
-        <a href="./work/everafter" class="sidebar-project-link" id="everafter-FF7051">Everafter</a>
-        <a href="./work/faintlines" class="sidebar-project-link" id="faintlines-FF0DBD">Faintlines</a>
-        <a href="./work/flume" class="sidebar-project-link" id="flume-FF6E15">Flume</a>
-        <a href="./work/grain" class="sidebar-project-link" id="grain-FED164">Grain</a>
-        <a href="./work/healthquarters" class="sidebar-project-link" id="healthquarters-0E305A">Healthquarters</a>
-        <a href="./work/iceberg" class="sidebar-project-link" id="iceberg-EC7926">Iceberg</a>
-        <a href="./work/karma" class="sidebar-project-link" id="karma-FCAC8B">Karma</a>
-        <a href="./work/komodor" class="sidebar-project-link" id="komodor-7545FF">Komodor</a>
-        <a href="./work/larosh" class="sidebar-project-link" id="larosh-C0815F">Larosh</a>
-        <a href="./work/le_salon" class="sidebar-project-link" id="le_salon-000000">Le salon</a>
-        <a href="./work/mesh_payments" class="sidebar-project-link" id="mesh_payments-19F08B">Mesh payments</a>
-        <a href="./work/notch" class="sidebar-project-link" id="notch-CF6AFF">Notch</a>
-        <a href="./work/perdiem" class="sidebar-project-link" id="perdiem-0171EA">Perdiem</a>
-        <a href="./work/reeco" class="sidebar-project-link" id="reeco-0FCB71">Reeco</a>
-        <a href="./work/reflect" class="sidebar-project-link" id="reflect-D1A8FD">Reflect</a>
-        <a href="./work/tagbox" class="sidebar-project-link" id="tagbox-C2A78D">Tagbox</a>
-        <a href="./work/revelations" class="sidebar-project-link" id="revelations-000000">Revelations</a>
-        <a href="./work/unit" class="sidebar-project-link" id="unit-000000">Unit</a>
-        <a href="./work/unleash" class="sidebar-project-link" id="unleash-BE8DF6">Unleash</a>
-        <a href="./work/zigi" class="sidebar-project-link" id="zigi-22D285">Zigi</a>
-        <a href="./work/zoog" class="sidebar-project-link" id="zoog-FF7051">Zoog</a>
-    </div>
+
 
     <div class="projects">
         <img src="./work/balance/0.png" class="sidebar-project-image box-l" id="balance" />
