@@ -137,7 +137,7 @@ async function SideBarFunctionality() {
         : _this2.h.hasOwnProperty(id)) == true
     ) {
       var _this3 = Main.navLinks.images;
-      console.log(__map_reserved, _this3, _this3.h["balance"].src);
+
       Main.heroElement.style.backgroundImage =
         "url(" +
         (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id])
