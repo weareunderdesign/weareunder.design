@@ -25,17 +25,10 @@ function getRandomInt(max) {
 }
 
 $(".sidebar").on("mouseover", function () {
-  document.body.style.overflow = "hidden";
+  // document.body.style.overflow = "hidden";
 });
 
 $(".sidebar").on("mouseout", function () {
-  $("#menu-wrapper").css({
-    display: "flex" + " ",
-  });
-  $("#logo").css({
-    display: "block" + " ",
-  });
-
   document.body.style.overflow = "auto";
 });
 
@@ -66,7 +59,7 @@ async function SideBarFunctionality() {
   };
   Main.init = function () {
     Main.heroElement =
-      window.document.getElementsByClassName("project-stage")[0];
+      window.document.getElementsByClassName("brand-sprints")[0];
     Main.projectsElement =
       window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
@@ -125,33 +118,18 @@ async function SideBarFunctionality() {
     new haxe_Timer(24).run = function () {
       if (Main.latestScrollY != window.scrollY) {
         Main.latestScrollY = window.scrollY;
-        Main.updateScroll();
       }
       if (Main.sidebarElement.style.display == "none") {
         if (Main.stopMotionMode == false) {
           Main.stopMotionMode = true;
-          Main.updateScroll();
         }
       } else {
         Main.stopMotionMode = false;
       }
     };
-    Main.updateScroll();
   };
 
-  Main.updateScroll = function () {
-    Main.hideProjects();
-  };
   Main.previewProject = function (id) {
-    var _this = Main.navLinks.colors;
-    if (
-      (__map_reserved[id] != null
-        ? _this.existsReserved(id)
-        : _this.h.hasOwnProperty(id)) == true
-    ) {
-      var _this1 = Main.navLinks.colors;
-      $(".project-stage svg").hide();
-    }
     var _this2 = Main.navLinks.images;
     if (
       (__map_reserved[id] != null
@@ -159,19 +137,15 @@ async function SideBarFunctionality() {
         : _this2.h.hasOwnProperty(id)) == true
     ) {
       var _this3 = Main.navLinks.images;
+      console.log(__map_reserved, _this3, _this3.h["balance"].src);
       Main.heroElement.style.backgroundImage =
         "url(" +
         (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id])
           .src +
         ")";
-      $(".project-stage").addClass("show-project");
     }
   };
-  Main.hideProjects = function () {
-    $(".project-stage svg").show();
-    $(".project-stage").css("background-image", "none");
-    $(".project-stage").removeClass("show-project");
-  };
+
   Main.setStopMotionFrame = function (position, sequence) {
     if (sequence.images.length > 0) {
       var framePos = Math.floor((sequence.images.length - 1) * position);
