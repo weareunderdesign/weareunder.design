@@ -26,10 +26,10 @@ body img {
   transition-duration: 250ms;
   transition-timing-function: ease;
   gap: 8px;
+  max-height: 100vh;
 }
 
 .sidebar a {
-  font-size: 36px;
   display: block;
 }
 
