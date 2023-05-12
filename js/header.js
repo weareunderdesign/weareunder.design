@@ -4,11 +4,12 @@ function addHeader() {
         <a class="logo padding-xl" href="/">
             <img src="https://weareunder.design/images/under-header-logo.svg" />
         </a>
-        <div class="panel padding-xl gap-xs" style="color:white;position:fixed; right:0;z-index:999;  mix-blend-mode: difference;">
+        <nav class="direction-row padding-xl gap-xs" style="color:white;position:absolute; right:0;z-index:999;  mix-blend-mode: difference;">
             <a class="header-link" href="#"><h4>Work</h4></a>
+            <a class="header-link" href="https://weareunder.design/about"><h4>Brand Sprints</h4></a>
             <a class="header-link" href="https://store.weareunder.design"><h4>Store</h4></a>
             <a class="header-link" href="mailto:hello@weareunder.design"><h4>Contact</h4></a>
-        </div>
+        </nav>
     </div>
   `;
 
