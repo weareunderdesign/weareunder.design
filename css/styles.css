@@ -16,6 +16,8 @@ body img {
 
 .sidebar {
   display: block;
+  position: absolute;
+  right:0;
   padding: 40px;
   color: white;
   height: 100%;
@@ -27,6 +29,12 @@ body img {
   transition-timing-function: ease;
   gap: 8px;
   max-height: 100vh;
+  
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .sidebar a {
