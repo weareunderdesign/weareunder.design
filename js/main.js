@@ -137,12 +137,15 @@ async function SideBarFunctionality() {
         : _this2.h.hasOwnProperty(id)) == true
     ) {
       var _this3 = Main.navLinks.images;
+      var newImage = (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id]);
 
-      Main.heroElement.style.backgroundImage =
-        "url(" +
-        (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id])
-          .src +
-        ")";
+      // Add CSS transition property to hero element
+      Main.heroElement.style.transition = "background-image 0.5s ease-in-out";
+
+      // Set new background image after a short delay to allow the transition to take effect
+      setTimeout(function() {
+        Main.heroElement.style.backgroundImage = "url(" + newImage.src + ")";
+      }, 50);
     }
   };
 

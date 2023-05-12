@@ -107,36 +107,42 @@ ellipseArray.forEach((element) => {
   element.addEventListener("click", (e) => {
     let id = e.target.id;
     let animationContainer = document.querySelector(".hero-section");
-    //remove child nodes
-    while (animationContainer.firstChild) {
-      animationContainer.removeChild(animationContainer.firstChild);
-    }
-    animationContainer.setAttribute("id", id);
+    // add fade-out effect
+    animationContainer.style.opacity = 0;
+    setTimeout(() => {
+      //remove child nodes
+      while (animationContainer.firstChild) {
+        animationContainer.removeChild(animationContainer.firstChild);
+      }
+      animationContainer.setAttribute("id", id);
 
-    if (id === "animation-1") {
-      (async () =>
-        await ScrollLottie({
-          target: ".hero-section",
-          path: lottieAnimations[0].animation,
-          duration: 0.1,
-          speed: "medium",
-        }))();
-    } else if (id === "animation-2") {
-      (async () =>
-        await ScrollLottie({
-          target: ".hero-section",
-          path: lottieAnimations[1].animation,
-          duration: 0.1,
-          speed: "medium",
-        }))();
-    } else if (id === "animation-3") {
-      (async () =>
-        await ScrollLottie({
-          target: ".hero-section",
-          path: lottieAnimations[2].animation,
-          duration: 0.1,
-          speed: "medium",
-        }))();
-    }
+      if (id === "animation-1") {
+        (async () =>
+          await ScrollLottie({
+            target: ".hero-section",
+            path: lottieAnimations[0].animation,
+            duration: 0.1,
+            speed: "medium",
+          }))();
+      } else if (id === "animation-2") {
+        (async () =>
+          await ScrollLottie({
+            target: ".hero-section",
+            path: lottieAnimations[1].animation,
+            duration: 0.1,
+            speed: "medium",
+          }))();
+      } else if (id === "animation-3") {
+        (async () =>
+          await ScrollLottie({
+            target: ".hero-section",
+            path: lottieAnimations[2].animation,
+            duration: 0.1,
+            speed: "medium",
+          }))();
+      }
+      // add fade-in effect
+      animationContainer.style.opacity = 1;
+    }, 500);
   });
 });
