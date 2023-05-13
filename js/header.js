@@ -1,7 +1,7 @@
 function addHeader() {
-  const TEMPLATE = `
+    const TEMPLATE = `
   <div class="flex" >
-        <a class="logo padding-xl" href="/">
+        <a class="logo padding-xl mix-diff" href="/">
             <img src="https://weareunder.design/images/under-header-logo.svg" />
         </a>
         <nav class="direction-row padding-xl gap-xs" style="color:white;position:absolute; right:0;z-index:999;  mix-blend-mode: difference;">
@@ -13,13 +13,13 @@ function addHeader() {
     </div>
   `;
 
-  class UnderHeader extends HTMLElement {
-    constructor() {
-      super();
-      this.innerHTML = TEMPLATE;
+    class UnderHeader extends HTMLElement {
+        constructor() {
+            super();
+            this.innerHTML = TEMPLATE;
+        }
     }
-  }
-  customElements.define("under-header", UnderHeader);
+    customElements.define("under-header", UnderHeader);
 }
 
 addHeader();
