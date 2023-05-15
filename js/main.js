@@ -244,3 +244,15 @@ function hideSidebar() {
 }
 hideCtaAnimation();
 hideSidebar();
+
+//if the display is mobile, hide the circle element
+
+function hideCircle() {
+  if (window.innerWidth < 768) {
+    document.getElementById("cta-animation").style.display = "none";
+  }
+}
+
+//trigger the hideCircle function on resize
+window.addEventListener("resize", hideCircle);
+
