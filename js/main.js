@@ -221,17 +221,14 @@ async function SideBarFunctionality() {
 SideBarFunctionality();
 
 function hideCtaAnimation() {
-  let sidebarLinks = document.getElementsByClassName("sidebar-project-link");
-  for (let i = 0; i < sidebarLinks.length; i++) {
-    //on hover
-    sidebarLinks[i].addEventListener("mouseover", function () {
-      document.getElementById("cta-animation").style.display = "none";
-    });
-    //on mouseout
-    sidebarLinks[i].addEventListener("mouseout", function () {
+  let sidebar = document.getElementById("sidebar-work");
+  sidebar.addEventListener("mouseover", function () {
+    document.getElementById("cta-animation").style.display = "none";
+    sidebar.addEventListener("mouseout", function () {
       document.getElementById("cta-animation").style.display = "flex";
     });
-  }
+  });
+
 }
 
 function hideSidebar() {
