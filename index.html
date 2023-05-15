@@ -22,7 +22,26 @@
   <body>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <under-header></under-header>
-
+    <nav
+      class="column padding-xl gap-xs"
+      style="
+        color: white;
+        position: absolute;
+        right: 0;
+        z-index: 999;
+        mix-blend-mode: difference;
+      "
+    >
+      <a class="header-link" href="#brand-sprints-section"
+        ><h4>Brand Sprints</h4></a
+      >
+      <a class="header-link" href="https://store.weareunder.design"
+        ><h4>Store</h4></a
+      >
+      <a class="header-link" href="mailto:hello@weareunder.design"
+        ><h4>Contact</h4></a
+      >
+    </nav>
     <div class="hero-section" style="background-color: black">
       <video
         src="./animations/dark.webm"
@@ -34,7 +53,7 @@
     </div>
 
     <div
-      class="view direction-column brand-sprints show-project"
+      class="view row brand-sprints show-project"
       style="position: relative"
       id="brand-sprints-section"
     >
@@ -51,7 +70,11 @@
         </a>
       </div>
 
-      <div class="sidebar mix-diff flex direction-row" data-ix="sidebar" id="sidebar-work">
+      <div
+        class="sidebar mix-diff flex column"
+        data-ix="sidebar"
+        id="sidebar-work"
+      >
         <a href="./work/utila" class="sidebar-project-link" id="utila-00794E"
           >Utila</a
         >
@@ -202,7 +225,7 @@
     </div>
 
     <a
-      class="padding-xl view direction-column product"
+      class="padding-xl view row product"
       style="background-image: url(./images/justripe.png)"
     >
       <div class="align-end mix-diff">
@@ -211,7 +234,7 @@
     </a>
     <a
       href="./revelations"
-      class="padding-xl view direction-column product"
+      class="padding-xl view row product"
       style="background-image: url(./revelations/images/5.png)"
     >
       <div class="align-end mix-diff">
