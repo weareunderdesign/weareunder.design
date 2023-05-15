@@ -152,4 +152,8 @@ body img {
         height: 100%;
         align-content: center;
     }
+
+    #cta-animation {
+        display: none;
+    }
 }

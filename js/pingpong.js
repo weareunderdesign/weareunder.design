@@ -93,7 +93,7 @@ function pauseBouncingAnimation() {
 //Restart Bouncing Animation
 function restartBouncingAnimation() {
   try {
-    tweenBrandsprint?.restart();z
+    tweenBrandsprint?.restart();
   } catch (err) {
     console.log(err);
   }
