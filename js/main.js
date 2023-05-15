@@ -139,13 +139,8 @@ async function SideBarFunctionality() {
       var _this3 = Main.navLinks.images;
       var newImage = (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id]);
 
-      // Add CSS transition property to hero element
-      Main.heroElement.style.transition = "background-image 0.5s ease-in-out";
-
-      // Set new background image after a short delay to allow the transition to take effect
-      setTimeout(function() {
-        Main.heroElement.style.backgroundImage = "url(" + newImage.src + ")";
-      }, 50);
+      Main.heroElement.style.backgroundImage = "url(" + newImage.src + ")";
+      
     }
   };
 
