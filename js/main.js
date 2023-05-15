@@ -137,10 +137,10 @@ async function SideBarFunctionality() {
         : _this2.h.hasOwnProperty(id)) == true
     ) {
       var _this3 = Main.navLinks.images;
-      var newImage = (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id]);
+      var newImage =
+        __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 
       Main.heroElement.style.backgroundImage = "url(" + newImage.src + ")";
-      
     }
   };
 
@@ -219,3 +219,31 @@ async function SideBarFunctionality() {
   Main.main();
 }
 SideBarFunctionality();
+
+function hideCtaAnimation() {
+  let sidebarLinks = document.getElementsByClassName("sidebar-project-link");
+  for (let i = 0; i < sidebarLinks.length; i++) {
+    //on hover
+    sidebarLinks[i].addEventListener("mouseover", function () {
+      document.getElementById("cta-animation").style.display = "none";
+    });
+    //on mouseout
+    sidebarLinks[i].addEventListener("mouseout", function () {
+      document.getElementById("cta-animation").style.display = "flex";
+    });
+  }
+}
+
+function hideSidebar() {
+  let cta = document.getElementById("cta-animation");
+  //on hover
+  cta.addEventListener("mouseover", function () {
+    document.getElementById("sidebar-work").style.display = "none";
+  });
+  //on mouseout
+  cta.addEventListener("mouseout", function () {
+    document.getElementById("sidebar-work").style.display = "block";
+  });
+}
+hideCtaAnimation();
+hideSidebar();
