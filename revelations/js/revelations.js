@@ -23,6 +23,20 @@ const ScrollLottie = async (obj) => {
       // convert the string to a JSON object
       const json = JSON.parse(string);
 
+      //remove previous animation
+      let animationContainer = document.querySelector(".hero-section");
+   
+      //animation effect
+      gsap.fromTo(
+        animationContainer,
+        { opacity: 0.5 },
+        { opacity: 1, duration: 5, ease: "expo" }
+      );
+
+      while (animationContainer.firstChild) {
+        animationContainer.removeChild(animationContainer.firstChild);
+      }
+
       // load lottie animation
       let anim = lottie.loadAnimation({
         container: document.querySelector(obj.target),
@@ -107,60 +121,41 @@ ellipseArray.forEach((element) => {
   element.addEventListener("click", (e) => {
     let id = e.target.id;
     let animationContainer = document.querySelector(".hero-section");
-    // add fade-out effect
-    let fadeOut = setInterval(() => {
-      if (!animationContainer.style.opacity) {
-        animationContainer.style.opacity = 1;
-      }
-      if (animationContainer.style.opacity > 0) {
-        animationContainer.style.opacity -= 0.1;
-      } else {
-        clearInterval(fadeOut);
-        setTimeout(() => {
-          //remove child nodes
-          while (animationContainer.firstChild) {
-            animationContainer.removeChild(animationContainer.firstChild);
-          }
-          animationContainer.setAttribute("id", id);
+   
+    //current animation id
+    let currentAnimationId = animationContainer.getAttribute("id");
 
-          if (id === "animation-1") {
-            (async () =>
-              await ScrollLottie({
-                target: ".hero-section",
-                path: lottieAnimations[0].animation,
-                duration: 0.1,
-                speed: "medium",
-              }))();
-          } else if (id === "animation-2") {
-            (async () =>
-              await ScrollLottie({
-                target: ".hero-section",
-                path: lottieAnimations[1].animation,
-                duration: 0.1,
-                speed: "medium",
-              }))();
-          } else if (id === "animation-3") {
-            (async () =>
-              await ScrollLottie({
-                target: ".hero-section",
-                path: lottieAnimations[2].animation,
-                duration: 0.1,
-                speed: "medium",
-              }))();
-          }
-          // add fade-in effect
-          let fadeIn = setInterval(() => {
-            if (!animationContainer.style.opacity) {
-              animationContainer.style.opacity = 0;
-            }
-            if (animationContainer.style.opacity < 1) {
-              animationContainer.style.opacity = parseFloat(animationContainer.style.opacity) + 0.1;
-            } else {
-              clearInterval(fadeIn);
-            }
-          }, 50);
-        }, 200);
-      }
-    }, 50);
+    //if current animation id is same as clicked animation id, do nothing
+    if (currentAnimationId === id) return;
+    
+    animationContainer.setAttribute("id", id);
+
+    if (id === "animation-1") {
+      (async () =>
+        await ScrollLottie({
+          target: ".hero-section",
+          path: lottieAnimations[0].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    } else if (id === "animation-2") {
+      (async () =>
+        await ScrollLottie({
+          target: ".hero-section",
+          path: lottieAnimations[1].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    } else if (id === "animation-3") {
+      (async () =>
+        await ScrollLottie({
+          target: ".hero-section",
+          path: lottieAnimations[2].animation,
+          duration: 0.1,
+          speed: "medium",
+        }))();
+    }
+    
   });
 });
+
