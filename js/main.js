@@ -166,7 +166,7 @@ async function SideBarFunctionality() {
   var haxe_Timer = function (time_ms) {
     var me = this;
     this.id = setInterval(function () {
-      me.run();
+      me?.run();
     }, time_ms);
   };
   haxe_Timer.prototype = {
@@ -222,13 +222,14 @@ SideBarFunctionality();
 
 function hideCtaAnimation() {
   let sidebar = document.getElementById("sidebar-work");
-  sidebar.addEventListener("mouseover", function () {
-    document.getElementById("cta-animation").style.display = "none";
-    sidebar.addEventListener("mouseout", function () {
-      document.getElementById("cta-animation").style.display = "flex";
+  if (!!sidebar) {
+    sidebar.addEventListener("mouseover", function () {
+      document.getElementById("cta-animation").style.display = "none";
+      sidebar.addEventListener("mouseout", function () {
+        document.getElementById("cta-animation").style.display = "flex";
+      });
     });
-  });
-
+  }
 }
 
 function hideSidebar() {
@@ -255,4 +256,3 @@ function hideCircle() {
 
 //trigger the hideCircle function on resize
 window.addEventListener("resize", hideCircle);
-
