@@ -63,8 +63,9 @@ async function SideBarFunctionality() {
     Main.projectsElement =
       window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
-
+    if (!Main.projectsElement) return;
     var img_len = Main.projectsElement.children.length;
+
     var _g21 = 0;
     while (_g21 < img_len) {
       var child1 = Main.projectsElement.children.item(_g21++);
@@ -130,6 +131,18 @@ async function SideBarFunctionality() {
   };
 
   Main.previewProject = function (id) {
+    var _this = Main.navLinks.colors;
+    if (
+      (__map_reserved[id] != null
+        ? _this.existsReserved(id)
+        : _this.h.hasOwnProperty(id)) == true
+    ) {
+      var _this1 = Main.navLinks.colors;
+      $(".hero-section svg").hide();
+      Main.sidebarElement.style.backgroundColor =
+        __map_reserved[id] != null ? _this1.getReserved(id) : _this1.h[id];
+    }
+    
     var _this2 = Main.navLinks.images;
     if (
       (__map_reserved[id] != null
@@ -234,6 +247,8 @@ function hideCtaAnimation() {
 
 function hideSidebar() {
   let cta = document.getElementById("cta-animation");
+
+  if (!cta) return;
   //on hover
   cta.addEventListener("mouseover", function () {
     document.getElementById("sidebar-work").style.display = "none";
@@ -250,7 +265,9 @@ hideSidebar();
 
 function hideCircle() {
   if (window.innerWidth < 768) {
-    document.getElementById("cta-animation").style.display = "none";
+    const cta = document.getElementById("cta-animation");
+    if (!cta) return;
+    cta.style.display = "none";
   }
 }
 

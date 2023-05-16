@@ -27,6 +27,8 @@ body img {
     max-height: 100vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    background-color: rgb(0, 121, 78);
+    color: #fff;
     &::-webkit-scrollbar {
         display: none;
     }
