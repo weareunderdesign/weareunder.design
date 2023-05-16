@@ -1,4 +1,4 @@
-@import url("https://renecss.org/src/index.css");
+@import url("https://unpkg.com/@rainbowapp/svg-icon.js/dist/svg-icon.min.js");
 
 .logo {
     position: absolute;
