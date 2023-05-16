@@ -142,7 +142,7 @@ async function SideBarFunctionality() {
       Main.sidebarElement.style.backgroundColor =
         __map_reserved[id] != null ? _this1.getReserved(id) : _this1.h[id];
     }
-    
+
     var _this2 = Main.navLinks.images;
     if (
       (__map_reserved[id] != null
@@ -233,43 +233,24 @@ async function SideBarFunctionality() {
 }
 SideBarFunctionality();
 
-function hideCtaAnimation() {
-  let sidebar = document.getElementById("sidebar-work");
-  if (!!sidebar) {
-    sidebar.addEventListener("mouseover", function () {
-      document.getElementById("cta-animation").style.display = "none";
-      sidebar.addEventListener("mouseout", function () {
-        document.getElementById("cta-animation").style.display = "flex";
-      });
-    });
-  }
-}
-
 function hideSidebar() {
   let cta = document.getElementById("cta-animation");
-
+  let sidebar = document.getElementById("sidebar-work");
   if (!cta) return;
   //on hover
   cta.addEventListener("mouseover", function () {
-    document.getElementById("sidebar-work").style.display = "none";
+    sidebar.style.display = "none";
+  });
+  sidebar.addEventListener("mouseover", function () {
+    cta.style.display = "none";
   });
   //on mouseout
   cta.addEventListener("mouseout", function () {
-    document.getElementById("sidebar-work").style.display = "block";
+    sidebar.style.display = "block";
+  });
+  sidebar.addEventListener("mouseout", function () {
+    cta.style.display = "flex";
   });
 }
-hideCtaAnimation();
+
 hideSidebar();
-
-//if the display is mobile, hide the circle element
-
-function hideCircle() {
-  if (window.innerWidth < 768) {
-    const cta = document.getElementById("cta-animation");
-    if (!cta) return;
-    cta.style.display = "none";
-  }
-}
-
-//trigger the hideCircle function on resize
-window.addEventListener("resize", hideCircle);
