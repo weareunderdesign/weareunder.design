@@ -34,8 +34,17 @@ const ScrollLottie = async (obj) => {
         { opacity: 1, duration: 5, ease: "expo" }
       );
 
+      let element = null
       while (animationContainer.firstChild) {
+        
+        if(animationContainer?.firstChild?.tagName?.toLowerCase()=== "under-header") {
+          element = animationContainer.firstChild;
+        }
         animationContainer.removeChild(animationContainer.firstChild);
+      }
+
+      if(element) {
+        animationContainer.appendChild(element);
       }
 
       // load lottie animation
