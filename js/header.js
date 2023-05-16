@@ -1,10 +1,8 @@
 function addHeader() {
     const TEMPLATE = `
-  <div class="flex" >
-        <a class="logo padding-xl mix-diff" href="/">
+        <a class="logo padding-xl mix-diff" href="/" style="position: fixed; z-index: 99;">
             <img src="https://weareunder.design/images/under-header-logo.svg" />
         </a>
-    </div>
   `;
 
     class UnderHeader extends HTMLElement {
