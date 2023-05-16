@@ -2,11 +2,12 @@ const lottieAnimations = [
   {
     animation: "../animations/animation_1.json.gz",
   },
-  {
-    animation: "../animations/animation_2.json.gz",
-  },
+
   {
     animation: "../animations/animation_3.json.gz",
+  },
+  {
+    animation: "../animations/animation_2.json.gz",
   },
 ];
 
@@ -25,7 +26,7 @@ const ScrollLottie = async (obj) => {
 
       //remove previous animation
       let animationContainer = document.querySelector(".hero-section");
-   
+
       //animation effect
       gsap.fromTo(
         animationContainer,
@@ -121,13 +122,13 @@ ellipseArray.forEach((element) => {
   element.addEventListener("click", (e) => {
     let id = e.target.id;
     let animationContainer = document.querySelector(".hero-section");
-   
+
     //current animation id
     let currentAnimationId = animationContainer.getAttribute("id");
 
     //if current animation id is same as clicked animation id, do nothing
     if (currentAnimationId === id) return;
-    
+
     animationContainer.setAttribute("id", id);
 
     if (id === "animation-1") {
@@ -155,7 +156,5 @@ ellipseArray.forEach((element) => {
           speed: "medium",
         }))();
     }
-    
   });
 });
-
