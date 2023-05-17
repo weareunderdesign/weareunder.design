@@ -146,26 +146,18 @@ function restartBouncingAnimation() {
   }
 }
 
-window.addEventListener("resize", () => {
-  setTimeout(() => {
-    if (window.innerWidth < 992) {
-      bringCircleToInitialPosition();
-      pauseBouncingAnimation();
-    } else {
-      bringCircleToInitialPosition();
-      restartBouncingAnimation();
-    }
-  }, 500);
-  //timeout because resizing event takes time to complete and register the final size.
-});
+const mediaQuery = window.matchMedia("(max-width: 992px)");
+mediaQuery.addEventListener("change", handleMediaQueryChange);
+handleMediaQueryChange(mediaQuery);
 
-//if the display is mobile, hide the circle element
-
-function hideCircle() {
+function handleMediaQueryChange(mediaQuery) {
   const cta = document.getElementById("cta-animation");
   const brandsprintCircles = document.querySelectorAll(".brand-sprint-circle");
   let circlesArray = Array.from(brandsprintCircles);
-  if (window.innerWidth < 992) {
+  if (mediaQuery.matches) {
+    bringCircleToInitialPosition();
+    pauseBouncingAnimation();
+
     if (!!cta) {
       cta.style.display = "none";
     }
@@ -175,6 +167,9 @@ function hideCircle() {
       });
     }
   } else {
+    bringCircleToInitialPosition();
+    restartBouncingAnimation();
+
     if (!!cta) {
       cta.style.display = "flex";
     }
@@ -185,7 +180,3 @@ function hideCircle() {
     }
   }
 }
-hideCircle();
-
-//trigger the hideCircle function on resize
-window.addEventListener("resize", hideCircle);
