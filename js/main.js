@@ -1,99 +1,5 @@
 // New Site JS
 
-const lottieAnimations = [
-  // {
-  //   animation: "./animations/animation_2.json.gz",
-  // },
-  // {
-  //   animation: "./animations/animation_3.json.gz",
-  // },
-  // {
-  //   animation: "./animations/shell_light.json.gz",
-  // },
-  // {
-  //   animation: "./animations/shell_light.json.gz",
-  // },
-  // {
-  //   animation: "./animations/wau_light.json.gz",
-  // },
-  {
-    animation: "./animations/wau_dark.json.gz",
-  },
-];
-
-const randomIndex = getRandomInt(lottieAnimations.length);
-const randomAnimation = lottieAnimations[randomIndex].animation;
-
-const ScrollLottie = async (obj) => {
-  fetch(obj.path)
-    .then((response) => response.arrayBuffer())
-    .then((buffer) => {
-      document.getElementsByClassName("hero-section")[0].style.display =
-        "block";
-      // decompress the buffer using pako
-      const decompressed = pako.inflate(buffer);
-      // convert the decompressed buffer to a string
-      const string = new TextDecoder("utf-8").decode(decompressed);
-      // convert the string to a JSON object
-      const json = JSON.parse(string);
-
-      // load lottie animation
-      let anim = lottie.loadAnimation({
-        container: document.querySelector(obj.target),
-        animationData: json,
-        renderer: "svg",
-        loop: false,
-        autoplay: true,
-        rendererSettings: {
-          preserveAspectRatio: "xMidYMid slice",
-        },
-      });
-
-      //run the animation in loop
-      anim.addEventListener("complete", () => {
-        anim.playSegments([0, anim.totalFrames], true);
-      });
-
-      // let timeObj = { currentFrame: 0 };
-      // let endString =
-      //   obj.speed === "slow"
-      //     ? "+=2000"
-      //     : obj.speed === "medium"
-      //     ? "+=1000"
-      //     : obj.speed === undefined
-      //     ? "+=1250"
-      //     : "+=500";
-      // ScrollTrigger.create({
-      //   trigger: obj.target,
-      //   scrub: true,
-      //   pin: true,
-      //   start: "top top",
-      //   end: endString,
-      //   onUpdate: (self) => {
-      //     if (obj.duration) {
-      //       gsap.to(timeObj, {
-      //         duration: obj.duration,
-      //         currentFrame: Math.floor(self.progress * (anim.totalFrames - 1)),
-      //         onUpdate: () => {
-      //           anim.goToAndStop(timeObj.currentFrame, true);
-      //         },
-      //         ease: "expo",
-      //       });
-      //     } else {
-      //       anim.goToAndStop(self.progress * (anim.totalFrames - 1), true);
-      //     }
-      //   },
-      // });
-    });
-};
-
-await ScrollLottie({
-  target: ".hero-section",
-  path: randomAnimation,
-  duration: 0.1,
-  speed: "medium",
-});
-
 //Implemented count to call resize for n number of times to prevent infinite triggering of resize.
 var count = 0;
 
@@ -118,70 +24,11 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-$(".circle-work").on("click", function () {
-  $(".sidebar").css({
-    display: "flex",
-  });
-  $("#menu-wrapper").css({
-    display: "none" + " ",
-  });
-  $("#logo").css({
-    display: "none" + " ",
-  });
-  $(".circle").css({
-    display: "none" + " ",
-  });
-  document.body.style.overflow = "hidden";
-});
-
 $(".sidebar").on("mouseover", function () {
-  $(".sidebar").css({
-    display: "flex" + " ",
-  });
-  $("#menu-wrapper").css({
-    display: "none" + " ",
-  });
-  $("#logo").css({
-    display: "none" + " ",
-  });
-  $(".circle").css({
-    display: "none" + " ",
-  });
-  document.body.style.overflow = "hidden";
+  // document.body.style.overflow = "hidden";
 });
 
 $(".sidebar").on("mouseout", function () {
-  $(".sidebar").css({
-    display: "none" + " ",
-  });
-  $("#menu-wrapper").css({
-    display: "flex" + " ",
-  });
-  $("#logo").css({
-    display: "block" + " ",
-  });
-  $(".circle").css({
-    display: "flex" + " ",
-  });
-  document.body.style.overflow = "auto";
-});
-
-$(".close-menu").on("click", function () {
-  $(".sidebar").css({
-    display: "none" + " ",
-  });
-
-  $("#menu-wrapper").css({
-    display: "flex",
-  });
-
-  $("#logo").css({
-    display: "block" + " ",
-  });
-  $(".circle").css({
-    display: "flex" + " ",
-  });
-
   document.body.style.overflow = "auto";
 });
 
@@ -195,10 +42,6 @@ async function SideBarFunctionality() {
   const rotateMenu = document.getElementsByClassName("work")[0];
   if (rotateMenu) {
     rotateMenu.setAttribute("data-ix", "show-sidebar");
-  }
-  const bigbutton = document.getElementsByClassName("bigbutton")[0];
-  if (bigbutton) {
-    bigbutton.setAttribute("data-ix", "circlebutton");
   }
 
   var Main = function () {};
@@ -216,12 +59,13 @@ async function SideBarFunctionality() {
   };
   Main.init = function () {
     Main.heroElement =
-      window.document.getElementsByClassName("hero-section")[0];
+      window.document.getElementById("brand-sprints-section");
     Main.projectsElement =
       window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
-
+    if (!Main.projectsElement) return;
     var img_len = Main.projectsElement.children.length;
+
     var _g21 = 0;
     while (_g21 < img_len) {
       var child1 = Main.projectsElement.children.item(_g21++);
@@ -275,23 +119,17 @@ async function SideBarFunctionality() {
     new haxe_Timer(24).run = function () {
       if (Main.latestScrollY != window.scrollY) {
         Main.latestScrollY = window.scrollY;
-        Main.updateScroll();
       }
       if (Main.sidebarElement.style.display == "none") {
         if (Main.stopMotionMode == false) {
           Main.stopMotionMode = true;
-          Main.updateScroll();
         }
       } else {
         Main.stopMotionMode = false;
       }
     };
-    Main.updateScroll();
   };
 
-  Main.updateScroll = function () {
-    Main.hideProjects();
-  };
   Main.previewProject = function (id) {
     var _this = Main.navLinks.colors;
     if (
@@ -304,6 +142,7 @@ async function SideBarFunctionality() {
       Main.sidebarElement.style.backgroundColor =
         __map_reserved[id] != null ? _this1.getReserved(id) : _this1.h[id];
     }
+
     var _this2 = Main.navLinks.images;
     if (
       (__map_reserved[id] != null
@@ -311,19 +150,13 @@ async function SideBarFunctionality() {
         : _this2.h.hasOwnProperty(id)) == true
     ) {
       var _this3 = Main.navLinks.images;
-      Main.heroElement.style.backgroundImage =
-        "url(" +
-        (__map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id])
-          .src +
-        ")";
-      $(".hero-section").addClass("show-project");
+      var newImage =
+        __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
+
+      Main.heroElement.style.backgroundImage = "url(" + newImage.src + ")";
     }
   };
-  Main.hideProjects = function () {
-    $(".hero-section svg").show();
-    $(".hero-section").css("background-image", "none");
-    $(".hero-section").removeClass("show-project");
-  };
+
   Main.setStopMotionFrame = function (position, sequence) {
     if (sequence.images.length > 0) {
       var framePos = Math.floor((sequence.images.length - 1) * position);
@@ -346,7 +179,7 @@ async function SideBarFunctionality() {
   var haxe_Timer = function (time_ms) {
     var me = this;
     this.id = setInterval(function () {
-      me.run();
+      me?.run();
     }, time_ms);
   };
   haxe_Timer.prototype = {
@@ -399,3 +232,25 @@ async function SideBarFunctionality() {
   Main.main();
 }
 SideBarFunctionality();
+
+function hideSidebar() {
+  let cta = document.getElementById("cta-animation");
+  let sidebar = document.getElementById("sidebar-work");
+  if (!cta) return;
+  //on hover
+  cta.addEventListener("mouseover", function () {
+    sidebar.style.display = "none";
+  });
+  sidebar.addEventListener("mouseover", function () {
+    cta.style.display = "none";
+  });
+  //on mouseout
+  cta.addEventListener("mouseout", function () {
+    sidebar.style.display = "block";
+  });
+  sidebar.addEventListener("mouseout", function () {
+    cta.style.display = "flex";
+  });
+}
+
+hideSidebar();

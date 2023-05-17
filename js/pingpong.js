@@ -1,11 +1,12 @@
-let tweenInfo, tweenWork, tweenBrandsprint, tweendynamic;
-let infoElement, workElement, brandsprintElement, dynamicElement;
+let tweenBrandsprint, tween1, tween2, tween3, tween4, tween5;
+let circle1, circle2, brandsprintElement, circle3, circle4, circle5;
 
 var dot, container, containerBounds, xMax, xMin, yMax, yMin;
 
 function updatePlayground(class_target) {
   dot = document.querySelector(class_target);
-  container = document.querySelector(".hero-section");
+  if (!dot) return;
+  container = document.querySelector(".ping-pong");
   dotBounds = dot.getBoundingClientRect();
   containerBounds = container.getBoundingClientRect();
   xMax = containerBounds.right - dotBounds.right;
@@ -13,66 +14,59 @@ function updatePlayground(class_target) {
   yMax = containerBounds.bottom - dotBounds.bottom;
   yMin = containerBounds.top - dotBounds.top;
 }
+
+function animationToClass(class_target) {
+  let gsapTween = gsap.to(class_target, {
+    x: "+=3000",
+    y: "+=2000",
+    duration: 50,
+    repeat: -1,
+    repeatRefresh: true,
+    ease: "none",
+    modifiers: {
+      x: bounceModifier(xMin, xMax),
+      y: bounceModifier(yMin, yMax),
+    },
+  });
+
+  let targetElement = document.querySelector(class_target);
+  if (!!targetElement) {
+    targetElement.addEventListener("mouseenter", () => {
+      gsapTween.pause();
+    });
+    targetElement.addEventListener("mouseleave", () => {
+      gsapTween.resume();
+    });
+  }
+  return gsapTween;
+}
 function ping(class_target) {
   try {
     updatePlayground(class_target);
     if (containerBounds && containerBounds.bottom > 0) {
-      let gsapTween = gsap.to(class_target, {
-        x: "+=3000",
-        y: "+=2000",
-        duration: 100,
-        repeat: -1,
-        repeatRefresh: true,
-        ease: "none",
-        modifiers: {
-          x: bounceModifier(xMin, xMax),
-          y: bounceModifier(yMin, yMax),
-        },
-      });
-      if (class_target === ".circle-info") {
-        clearInterval(intervalId1);
-        tweenInfo = gsapTween;
-        infoElement = document.querySelector(".circle-info");
-        infoElement.addEventListener("mouseenter", () => {
-          tweenInfo.pause();
-        });
-
-        infoElement.addEventListener("mouseleave", () => {
-          tweenInfo.resume();
-        });
-      } else if (class_target === ".circle-work") {
-        clearInterval(intervalId2);
-        tweenWork = gsapTween;
-        workElement = document.querySelector(".circle-work");
-        workElement.addEventListener("mouseenter", () => {
-          tweenWork.pause();
-        });
-
-        workElement.addEventListener("mouseleave", () => {
-          tweenWork.resume();
-        });
-      } else if (class_target === ".circle-brandsprint") {
+      if (class_target === ".circle-brandsprint") {
+        tweenBrandsprint = animationToClass(class_target);
         clearInterval(intervalId3);
-        tweenBrandsprint = gsapTween;
-
-        brandsprintElement = document.querySelector(".circle-brandsprint");
-
-        brandsprintElement.addEventListener("mouseenter", () => {
-          tweenBrandsprint.pause();
-        });
-        brandsprintElement.addEventListener("mouseleave", () => {
-          tweenBrandsprint.resume();
-        });
-      } else if (class_target === ".circle-dynamic") {
-        clearInterval(intervalId4);
-        tweendynamic = gsapTween;
-        dynamicElement = document.querySelector(".circle-dynamic");
-        dynamicElement.addEventListener("mouseenter", () => {
-          tweendynamic.pause();
-        });
-        dynamicElement.addEventListener("mouseleave", () => {
-          tweendynamic.resume();
-        });
+      }
+      if (class_target === ".circle1") {
+        tween1 = animationToClass(class_target);
+        clearInterval(interval1);
+      }
+      if (class_target === ".circle2") {
+        tween2 = animationToClass(class_target);
+        clearInterval(interval2);
+      }
+      if (class_target === ".circle3") {
+        tween3 = animationToClass(class_target);
+        clearInterval(interval3);
+      }
+      if (class_target === ".circle4") {
+        tween4 = animationToClass(class_target);
+        clearInterval(interval4);
+      }
+      if (class_target === ".circle5") {
+        tween5 = animationToClass(class_target);
+        clearInterval(interval5);
       }
     }
 
@@ -80,49 +74,59 @@ function ping(class_target) {
   } catch (err) {
     console.log(err);
   }
-
-  //this function spits back a modifier function that'll keep the value within a range, bouncing off the min/max boundaries.
-  function bounceModifier(min, max) {
-    var range = max - min;
-    return function (value) {
-      value = parseFloat(value); // comes in as px, like "10px"
-      var cycle, clippedValue;
-      if (value > max) {
-        cycle = (value - max) / range;
-        clippedValue = (cycle % 1) * range;
-        value =
-          (cycle | 0) & (1 !== 0) ? min + clippedValue : max - clippedValue; //on even cycles, go backwards.
-      } else if (value < min) {
-        cycle = (min - value) / range;
-        clippedValue = (cycle % 1) * range;
-        value =
-          (cycle | 0) & (1 !== 0) ? max - clippedValue : min + clippedValue; //on even cycles, go backwards.
-      }
-      return value + "px";
-    };
-  }
 }
-
-var intervalId1 = setInterval(() => ping(".circle-info"), 1000);
-var intervalId2 = setInterval(() => ping(".circle-work"), 1000);
+//this function spits back a modifier function that'll keep the value within a range, bouncing off the min/max boundaries.
+function bounceModifier(min, max) {
+  var range = max - min;
+  return function (value) {
+    value = parseFloat(value); // comes in as px, like "10px"
+    var cycle, clippedValue;
+    if (value > max) {
+      cycle = (value - max) / range;
+      clippedValue = (cycle % 1) * range;
+      value = (cycle | 0) & (1 !== 0) ? min + clippedValue : max - clippedValue; //on even cycles, go backwards.
+    } else if (value < min) {
+      cycle = (min - value) / range;
+      clippedValue = (cycle % 1) * range;
+      value = (cycle | 0) & (1 !== 0) ? max - clippedValue : min + clippedValue; //on even cycles, go backwards.
+    }
+    return value + "px";
+  };
+}
 var intervalId3 = setInterval(() => ping(".circle-brandsprint"), 1000);
-var intervalId4 = setInterval(() => ping(".circle-dynamic"), 1000);
+var interval1 = setInterval(() => ping(".circle1"), 1000);
+var interval2 = setInterval(() => ping(".circle2"), 1000);
+var interval3 = setInterval(() => ping(".circle3"), 1000);
+var interval4 = setInterval(() => ping(".circle4"), 1000);
+var interval5 = setInterval(() => ping(".circle5"), 1000);
 
 //Setting the circles to their initial position
 function bringCircleToInitialPosition() {
-  if (infoElement) infoElement.style.transform = "none";
-  if (workElement) workElement.style.transform = "none";
+  let circle1 = document.querySelector(".circle1");
+  let circle2 = document.querySelector(".circle2");
+  let circle3 = document.querySelector(".circle3");
+  let circle4 = document.querySelector(".circle4");
+  let circle5 = document.querySelector(".circle5");
+  let brandsprintElement = document.querySelector(".circle-brandsprint");
+
+  if (circle1) circle1.style.transform = "none";
+  if (circle2) circle2.style.transform = "none";
+  if (circle3) circle3.style.transform = "none";
+  if (circle4) circle4.style.transform = "none";
+  if (circle5) circle5.style.transform = "none";
+
   if (brandsprintElement) brandsprintElement.style.transform = "none";
-  if (dynamicElement) dynamicElement.style.transform = "none";
 }
 
 //Pause Bouncing Animation
 function pauseBouncingAnimation() {
   try {
-    tweenInfo.pause();
-    tweenWork.pause();
     tweenBrandsprint.pause();
-    tweendynamic.pause();
+    tween1?.pause();
+    tween2?.pause();
+    tween3?.pause();
+    tween4?.pause();
+    tween5?.pause();
   } catch (err) {
     console.log(err);
   }
@@ -131,24 +135,48 @@ function pauseBouncingAnimation() {
 //Restart Bouncing Animation
 function restartBouncingAnimation() {
   try {
-    tweenInfo?.restart();
-    tweenWork?.restart();
     tweenBrandsprint?.restart();
-    tweendynamic?.restart();
+    tween1?.restart();
+    tween2?.restart();
+    tween3?.restart();
+    tween4?.restart();
+    tween5?.restart();
   } catch (err) {
     console.log(err);
   }
 }
 
-window.addEventListener("resize", () => {
-  setTimeout(() => {
-    if (window.innerWidth < 992) {
-      bringCircleToInitialPosition();
-      pauseBouncingAnimation();
-    } else {
-      bringCircleToInitialPosition();
-      restartBouncingAnimation();
+const pingPongMediaQuery = window.matchMedia("(max-width: 992px)");
+pingPongMediaQuery.addEventListener("change", handlePingPongMediaQueryChange);
+handlePingPongMediaQueryChange(pingPongMediaQuery);
+
+function handlePingPongMediaQueryChange(mediaQuery) {
+  const cta = document.getElementById("cta-animation");
+  const brandsprintCircles = document.querySelectorAll(".brand-sprint-circle");
+  let circlesArray = Array.from(brandsprintCircles);
+  if (mediaQuery.matches) {
+    bringCircleToInitialPosition();
+    pauseBouncingAnimation();
+
+    if (!!cta) {
+      cta.style.display = "none";
     }
-  }, 500);
-  //timeout because resizing event takes time to complete and register the final size.
-});
+    if (!!brandsprintCircles) {
+      circlesArray.forEach((circle) => {
+        circle.style.display = "none";
+      });
+    }
+  } else {
+    bringCircleToInitialPosition();
+    restartBouncingAnimation();
+
+    if (!!cta) {
+      cta.style.display = "flex";
+    }
+    if (!!brandsprintCircles) {
+      circlesArray.forEach((circle) => {
+        circle.style.display = "flex";
+      });
+    }
+  }
+}

@@ -1,52 +1,33 @@
 @import url("https://unpkg.com/renecss/dist/rene.min.css");
 
-.logo {
-    position: fixed;
-    z-index: 99;
-    mix-blend-mode: difference;
-}
-
-body img {
-    width: 100%;
-}
-.pink {
-    background: #ffbfe1;
-}
-
-.red {
-    background: #fd3c2d;
-}
-
-.blue {
-    background: #014add;
-}
-.yellow {
-    background: #fdc800;
-}
 .product {
     background: no-repeat center/cover;
 }
-
-.sidebar {
-    position: fixed;
-    right: 0px;
-    top: 0px;
-    padding: 40px;
-    background-color: black;
+.mix-diff {
+    mix-blend-mode: difference;
     color: white;
+}
+.sidebar {
+    display: block;
+    position: absolute;
+    right: 0;
+    padding: 40px;
     height: 100%;
-    z-index: 19;
-    display: none;
     flex-direction: column;
     overflow: auto;
-    transition-property: color, background-color;
-    transition-duration: 250ms;
-    transition-timing-function: ease;
-    gap: 8px;
+    max-height: 100vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: rgb(0, 121, 78);
+    color: #fff;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .sidebar a {
-    font-size: 36px;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .sidebar-project-image {
@@ -71,6 +52,22 @@ body img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-image: url("../work/utila/0.png");
+}
+
+.buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 124px;
+    width: 124px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.random-color-change {
+    -webkit-animation: random-color-change 10s linear infinite alternate both;
+    animation: random-color-change 10s linear infinite alternate both;
 }
 
 .circle {
@@ -92,57 +89,14 @@ body img {
     /* to override renecss */
 }
 
-.circle-info {
-    width: 190px;
-    height: 190px;
-    background-color: #fdc800;
-    bottom: 18vw;
-    left: 40px;
-    z-index: 4;
-}
-
 .circle-brandsprint {
-    width: 250px;
-    height: 250px;
-    background-color: #fd3c2d;
-    color: white;
-    bottom: 35vw;
-    left: 25vw;
-    z-index: 2;
-}
-
-.circle-dynamic {
-    width: 240px;
-    height: 240px;
-    background-color: #014add;
-    color: white;
-    bottom: 22vw;
-    right: 15vw;
-    z-index: 1;
-}
-
-.circle-work {
     width: 200px;
     height: 200px;
-    background-color: #ffbfe1;
-    border-radius: 100%;
-    top: 4vw;
-    right: 4vw;
-    z-index: 3;
-}
-.buy-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    height: 124px;
-    width: 124px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.random-color-change {
-    -webkit-animation: random-color-change 10s linear infinite alternate both;
-    animation: random-color-change 10s linear infinite alternate both;
+    color: white;
+    background: rgb(129, 89, 251);
+    z-index: 2;
+    right: 50%;
+    top: 30%;
 }
 
 @keyframes random-color-change {
@@ -171,6 +125,13 @@ body img {
 }
 
 @media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
     #navigation {
         display: flex;
         flex-direction: row;
@@ -182,27 +143,5 @@ body img {
         width: 100%;
         height: 100%;
         align-content: center;
-    }
-
-    .circle {
-        display: flex;
-        width: 132px;
-        height: 132px;
-        font-size: 24px;
-        line-height: 110%;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        border-radius: 100%;
-        position: static;
-        z-index: 2;
-    }
-
-    .sidebar {
-        width: 100%;
-        font-size: 40px;
-        line-height: 48px;
-        margin-bottom: 8px;
-        text-align: center;
     }
 }
