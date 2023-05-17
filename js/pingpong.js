@@ -146,11 +146,11 @@ function restartBouncingAnimation() {
   }
 }
 
-const mediaQuery = window.matchMedia("(max-width: 992px)");
-mediaQuery.addEventListener("change", handleMediaQueryChange);
-handleMediaQueryChange(mediaQuery);
+const pingPongMediaQuery = window.matchMedia("(max-width: 992px)");
+pingPongMediaQuery.addEventListener("change", handlePingPongMediaQueryChange);
+handlePingPongMediaQueryChange(pingPongMediaQuery);
 
-function handleMediaQueryChange(mediaQuery) {
+function handlePingPongMediaQueryChange(mediaQuery) {
   const cta = document.getElementById("cta-animation");
   const brandsprintCircles = document.querySelectorAll(".brand-sprint-circle");
   let circlesArray = Array.from(brandsprintCircles);
