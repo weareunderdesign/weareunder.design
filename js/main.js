@@ -59,7 +59,7 @@ async function SideBarFunctionality() {
   };
   Main.init = function () {
     Main.heroElement =
-      window.document.getElementsByClassName("brand-sprints")[0];
+      window.document.getElementById("brand-sprints-section");
     Main.projectsElement =
       window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
