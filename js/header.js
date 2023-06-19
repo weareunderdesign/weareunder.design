@@ -1,8 +1,8 @@
 function addHeader() {
   const TEMPLATE = `
       <a class="logo padding-xl mix-diff" href="/" style="position: fixed; z-index: 99;">
-        <img src="https://weareunder.design/images/under-header-logo.svg" class="desktop"/>
-        <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile"/>
+        <img src="https://weareunder.design/images/under-header-logo.svg" class="desktop" alt="under header icon"/>
+        <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile" alt="under header icon"/>
       </a>
     `;
 
