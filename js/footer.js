@@ -1,5 +1,5 @@
 function addFooter() {
-    const TEMPLATE = `
+  const TEMPLATE = `
   <div class="row padding-xl gap-xl">
     <a href="/">
       <img src="https://weareunder.design/images/under-footer.svg" style="width: 92px;">
@@ -31,13 +31,13 @@ function addFooter() {
   </div>
   `;
 
-    class UnderFooter extends HTMLElement {
-        constructor() {
-            super();
-            this.innerHTML = TEMPLATE;
-        }
+  class UnderFooter extends HTMLElement {
+    constructor() {
+      super();
+      this.innerHTML = TEMPLATE;
     }
-    customElements.define("under-footer", UnderFooter);
+  }
+  customElements.define("under-footer", UnderFooter);
 }
 
 addFooter();
