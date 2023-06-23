@@ -32,6 +32,18 @@ $(".sidebar").on("mouseout", function () {
   document.body.style.overflow = "auto";
 });
 
+$("#nav-work").on("click", function () {
+  $(".hero-section").css("display", "none");
+  $("#under-nav").css("display", "none");
+  $("#works-wrapper").css("display", "block");
+});
+
+$("#sidebar-work").on("mouseleave", function () {
+  $(".hero-section").css("display", "block");
+  $("#under-nav").css("display", "block");
+  $("#works-wrapper").css("display", "none");
+});
+
 async function SideBarFunctionality() {
   "use strict";
 
@@ -58,8 +70,7 @@ async function SideBarFunctionality() {
     };
   };
   Main.init = function () {
-    Main.heroElement =
-      window.document.getElementById("brand-sprints-section");
+    Main.heroElement = window.document.getElementById("brand-sprints-section");
     Main.projectsElement =
       window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
@@ -232,25 +243,3 @@ async function SideBarFunctionality() {
   Main.main();
 }
 SideBarFunctionality();
-
-function hideSidebar() {
-  let cta = document.getElementById("cta-animation");
-  let sidebar = document.getElementById("sidebar-work");
-  if (!cta) return;
-  //on hover
-  cta.addEventListener("mouseover", function () {
-    sidebar.style.display = "none";
-  });
-  sidebar.addEventListener("mouseover", function () {
-    cta.style.display = "none";
-  });
-  //on mouseout
-  cta.addEventListener("mouseout", function () {
-    sidebar.style.display = "block";
-  });
-  sidebar.addEventListener("mouseout", function () {
-    cta.style.display = "flex";
-  });
-}
-
-hideSidebar();
