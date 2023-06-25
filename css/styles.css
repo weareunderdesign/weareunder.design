@@ -90,10 +90,10 @@
 }
 
 .circle-brandsprint {
-    width: 200px;
-    height: 200px;
+    width: 310px;
+    height: 310px;
     color: white;
-    background: rgb(129, 89, 251);
+    background: #000000;
     z-index: 2;
     right: 50%;
     top: 30%;
