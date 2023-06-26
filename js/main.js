@@ -36,12 +36,14 @@ $("#nav-work").on("click", function () {
   $(".hero-section").css("display", "none");
   $("#under-nav").css("display", "none");
   $("#works-wrapper").css("display", "block");
+  $("#body-content").css("display", "none");
 });
 
 $("#sidebar-work").on("mouseleave", function () {
   $(".hero-section").css("display", "block");
   $("#under-nav").css("display", "block");
   $("#works-wrapper").css("display", "none");
+  $("#body-content").css("display", "block");
 });
 
 async function SideBarFunctionality() {
