@@ -121,7 +121,7 @@ function bringCircleToInitialPosition() {
 //Pause Bouncing Animation
 function pauseBouncingAnimation() {
   try {
-    tweenBrandsprint.pause();
+    tweenBrandsprint?.pause();
     tween1?.pause();
     tween2?.pause();
     tween3?.pause();
