@@ -99,6 +99,10 @@
     top: 30%;
 }
 
+    .hide-on-desktop {
+        display: none;
+    }
+
 @keyframes random-color-change {
     0% {
         background: #fd3c2d;
@@ -127,9 +131,12 @@
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
-
         margin-bottom: 8px;
         text-align: center;
+    }
+
+    .hide-on-desktop {
+        display: block;
     }
 
     #navigation {
