@@ -11,21 +11,21 @@ function addFooter() {
     </h4>
     <div class="column">
       <a href="https://store.weareunder.design/">
-        <h4>Store</h4>
+        <h4>store</h4>
       </a>
       <a href="https://www.figma.com/file/UTvs6k6N1lAOLBerchdKFV/Under?node-id=351%3A772&t=lUyeBYt3fKsDLcU9-1" target="_blank">
-        <h4>Press</h4>
+        <h4>press</h4>
       </a>
       <a href="https://www.instagram.com/under.design/" target="_blank">
-      <h4>Instagram</h4>
+      <h4>instagram</h4>
     </a>
     </div>
     <div class="column">
       <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
-        <h4>Newsletter</h4>
+        <h4>newsletter</h4>
       </a>
       <a href="mailto:hello@weareunder.design">
-        <h4>Contact</h4>
+        <h4>contact</h4>
       </a>
     </div>
   </div>
