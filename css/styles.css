@@ -105,11 +105,11 @@
 
 @keyframes random-color-change {
   0% {
-    background: #fd3c2d;
+    background: #014add;
   }
 
   50% {
-    background: #014add;
+    background: #fd3c2d;
   }
 
   100% {
