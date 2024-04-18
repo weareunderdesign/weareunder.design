@@ -1,4 +1,4 @@
-@import url("https://unpkg.com/renecss/dist/rene.min.css");
+@import url("rene.min.css");
 
 .product {
   background: no-repeat center/cover;
