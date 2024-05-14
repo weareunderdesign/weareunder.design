@@ -1,12 +1,65 @@
 @import url("https://unpkg.com/@rnbws/renecss@0.0.2/dist/rene.min.css");
 
+@font-face {
+  font-family: 'VcNudge';
+  src: url('../vc-nudge/VCNudge-BoldItalic-Trial.otf');
+}
+
+@font-face {
+  font-family: 'HelveticaMedium';
+  src: url('../vc-nudge/VCNudge-BoldItalic-Trial.otf');
+}
+
+@font-face {
+  font-family: 'HelveticaRegular';
+  src: url('../vc-nudge/VCNudge-BoldItalic-Trial.otf');
+}
+
+.nudge_font {
+  font-family: 'VcNudge';
+  font-size: 300px;
+  line-height: 89%;
+}
+
+.helvetica_medium {
+  font-family: 'HelveticaMedium';
+  font-size: 150px;
+  line-height: 92%;
+}
+
+.helvetica_medium_big {
+  font-family: 'HelveticaMedium';
+  font-size: 300px;
+  line-height: 92%;
+}
+
+.helvetica_regular {
+  font-family: 'HelveticaRegular';
+  font-size: 150px;
+  line-height: 92%;
+}
+
+.logo_images_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo_images {
+  margin-top: 100px;
+  height: 40px;
+  width: auto;
+}
+
 .product {
   background: no-repeat center/cover;
 }
+
 .mix-diff {
   mix-blend-mode: difference;
   color: white;
 }
+
 .sidebar {
   display: block;
   position: absolute;
@@ -20,6 +73,7 @@
   -ms-overflow-style: none;
   background-color: rgb(0, 121, 78);
   color: #fff;
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -65,6 +119,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
 .random-color-change {
   -webkit-animation: random-color-change 10s linear infinite alternate both;
   animation: random-color-change 10s linear infinite alternate both;
@@ -147,4 +202,39 @@
     height: 100%;
     align-content: center;
   }
+}
+
+/* colors */
+
+.yellow_background {
+  background-color: #FDC800;
+}
+
+.green_background {
+  background-color: #02903B;
+}
+
+.blue_background {
+  background-color: #014ADD;
+}
+
+.purple_background {
+  background-color: #8159FB;
+}
+
+.orange_background {
+  background-color: #FF4B00;
+}
+
+.pink_background {
+  background-color: #FFBFE1;
+}
+
+.black_background {
+  background-color: #000000;
+}
+
+
+.white {
+  color: #fff;
 }
