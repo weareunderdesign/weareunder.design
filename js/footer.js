@@ -1,15 +1,15 @@
 function addFooter() {
   const TEMPLATE = `
-  <div class="row padding-xl gap-xl">
+  <div class="row padding-xl gap-xl black_background">
     <a href="/">
-      <img src="https://weareunder.design/images/under-footer.svg" style="width: 92px;">
+      <img src="./images/under-footer.svg" style="width: 92px;">
     </a>
-    <h4 class="box">
+    <h4 class="box white">
       under creates high-quality,<br>
       well-designed, creative brands <br>
       and products for creative people.
     </h4>
-    <div class="column">
+    <div class="column white">
       <a href="https://store.weareunder.design/">
         <h4>store</h4>
       </a>
@@ -20,7 +20,7 @@ function addFooter() {
       <h4>instagram</h4>
     </a>
     </div>
-    <div class="column">
+    <div class="column white">
       <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
         <h4>newsletter</h4>
       </a>

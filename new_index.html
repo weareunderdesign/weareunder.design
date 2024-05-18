@@ -20,9 +20,77 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <under-header></under-header>
-
     <style>
+        .blue_rectangle {
+            width: 100%;
+            height: 1000px;
+            background-color: #014ADD;
+            transition: all 0.5s ease;
+            z-index: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
+        .blue_circle {
+            width: 700px;
+            height: 700px;
+            background-color: #014ADD;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .yellow_circle {
+            width: 300px;
+            height: 300px;
+            background-color: #FDC800;
+            border-radius: 50%;
+            z-index: 0;
+            position: absolute;
+            bottom: 5%;
+            left: -6%;
+        }
+
+        .pink_circle {
+            width: 300px;
+            height: 300px;
+            background-color: #FFBFE1;
+            border-radius: 50%;
+            z-index: 0;
+            position: absolute;
+            top: 5%;
+            right: 10%;
+        }
+
+        .white_header_animation {
+            color: white;
+            position: absolute;
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .black_header_animation {
+            position: absolute;
+            top: calc(var(--size-base) * 20);
+            left: calc(var(--size-base) * 20);
+            z-index: 1;
+            margin: 10px;
+        }
+
+        .blue_circle_small {
+            display: flex;
+            width: 175px;
+            height: 175px;
+            background-color: #014ADD;
+            border-radius: 50%;
+            z-index: 0;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 
     <div class="green_background padding-xl" id="body-content">
@@ -35,14 +103,14 @@
                 full of&nbsp;brands
             </h1>
             <div class="logo_images_box">
-                <img class="logo_images" src="/images/image1.png" />
-                <img class="logo_images" src="/images/image2.png" />
-                <img class="logo_images" src="/images/image3.png" />
-                <img class="logo_images" src="/images/image4.png" />
-                <img class="logo_images" src="/images/image5.png" />
-                <img class="logo_images" src="/images/image6.png" />
-                <img class="logo_images" src="/images/image7.png" />
-                <img class="logo_images" src="/images/image8.png" />
+                <img class="logo_images" src="./images/image1.png" />
+                <img class="logo_images" src="./images/image2.png" />
+                <img class="logo_images" src="./images/image3.png" />
+                <img class="logo_images" src="./images/image4.png" />
+                <img class="logo_images" src="./images/image5.png" />
+                <img class="logo_images" src="./images/image6.png" />
+                <img class="logo_images" src="./images/image7.png" />
+                <img class="logo_images" src="./images/image8.png" />
             </div>
         </div>
     </div>
@@ -67,18 +135,20 @@
             </div>
             <div class="white row"
                 style="width: 100%; height: fit-content; align-items: center; justify-content: space-between; padding-top: 100px;">
-                <img class="arrow" src="/images/image1.png" />
+                <img class="arrow" src="./images/image1.png" />
                 <p>Collabria</p>
-                <img class="arrow" src="/images/image1.png" />
+                <img class="arrow" src="./images/image1.png" />
             </div>
         </div>
     </div>
+
     <a href="./work/nilus" class="padding-xl view row product" style="background-image: url(./work/nilus/0.png)">
         <div class="align-end mix-diff" style="width: 100%; justify-content: space-between;">
             <p>revelations</p>
-            <img class="arrow" src="/images/image1.png" />
+            <img class="arrow" src="./images/image1.png" />
         </div>
     </a>
+
     <div class="padding-xl" id="body-content">
         <div class="padding-xl row gap-xl" style="justify-content: space-between;">
             <div class="helvetica_medium_big">
@@ -95,7 +165,7 @@
         <div class="row" style="flex-wrap: nowrap;
         justify-content: space-between;">
             <div class="padding-xl column gap-xl">
-                <img class="icon_no_background" src="/images/image1.png" />
+                <img class="icon_no_background" src="./images/image1.png" />
                 <div class="column gap-m">
                     <h3>brand strategy</h3>
                     <p>
@@ -107,7 +177,7 @@
                 </div>
             </div>
             <div class="padding-xl column gap-xl">
-                <img class="icon_no_background" src="/images/image1.png" />
+                <img class="icon_no_background" src="./images/image1.png" />
                 <div class="column gap-m">
                     <h3>brand system</h3>
                     <p>
@@ -119,7 +189,7 @@
                 </div>
             </div>
             <div class="padding-xl column gap-xl">
-                <img class="icon_no_background" src="/images/image1.png" />
+                <img class="icon_no_background" src="./images/image1.png" />
                 <div class="column gap-m">
                     <h3>ui/digital</h3>
                     <p>
@@ -131,7 +201,7 @@
                 </div>
             </div>
             <div class="padding-xl column gap-xl">
-                <img class="icon_no_background" src="/images/image1.png" />
+                <img class="icon_no_background" src="./images/image1.png" />
                 <div class="column gap-m">
                     <h3>marketing</h3>
                     <p>
@@ -144,6 +214,7 @@
             </div>
         </div>
     </div>
+
     <div class="padding-xl" id="body-content">
         <div class="helvetica_medium padding-xl row gap-xl">
             why </br>
@@ -151,6 +222,7 @@
             sprint?
         </div>
     </div>
+
     <a href="./work/nilus" class="view row product"
         style="justify-content: space-between; background-image: url(./work/justripe/006.png)">
 
@@ -166,7 +238,7 @@
         <div class="column">
             <div class="orange_background padding-xl column"
                 style="justify-content: space-between; width: 550px; height: 50%;">
-                <img class="icon_no_background" src="/images/image1.png" />
+                <img class="icon_no_background" src="./images/image1.png" />
                 <div class="column gap-m">
                     <h1>quick</h1>
                     <p>
@@ -179,7 +251,7 @@
             </div>
             <div class="pink_background padding-xl column"
                 style="justify-content: space-between; width: 550px; height: 50%;">
-                <img class="icon_no_background" src="/images/image1.png" />
+                <img class="icon_no_background" src="./images/image1.png" />
                 <div class="column gap-m">
                     <h1>fancy</h1>
                     <p>
@@ -192,6 +264,7 @@
             </div>
         </div>
     </a>
+
     <div class="padding-xl" id="body-content" style="padding-bottom: 0 !important;">
         <div class="padding-xl row gap-xl" style="justify-content: space-between;">
             <div class="helvetica_medium">
@@ -213,11 +286,13 @@
             <div class="padding-l column" style="width: 25%; border-left: 1px solid black">
                 <h3>april
                 </h3>
-                <p class="padding-l background-secondary opacity-m text-center" style="margin-top: 2.5vw;">not available</p>
+                <p class="padding-l background-secondary opacity-m text-center" style="margin-top: 2.5vw;">not available
+                </p>
             </div>
             <div class="padding-l" style="width: 25%; border-left: 1px solid black">
                 <h3>may</h3>
-                <p class="padding-l background-secondary opacity-m text-center" style="margin-top: 5vw;">not available</p>
+                <p class="padding-l background-secondary opacity-m text-center" style="margin-top: 5vw;">not available
+                </p>
             </div>
             <div class="padding-l" style="width: 25%; border-left: 1px solid black">
                 <h3>june</h3>
@@ -225,11 +300,12 @@
             </div>
             <div class="padding-l" style="width: 25%; border-left: 1px solid black; padding-right: 0 !important;">
                 <h3>july</h3>
-                <p class="padding-l background-secondary opacity-m text-center" style="margin-top: 10vw;">not available</p>
+                <p class="padding-l background-secondary opacity-m text-center" style="margin-top: 10vw;">not available
+                </p>
             </div>
         </div>
     </div>
-    <div></div>
+
     <div class="blue_background padding-xl" id="body-content">
         <div class="padding-xl row gap-xl" style="justify-content: space-between;">
             <div class="white">
@@ -239,7 +315,7 @@
             </div>
             <div class="white">
                 <h3>
-                    <img src="/images/image1.png" style="display: inline-block;" /> under’s superpower is their </br>
+                    <img src="./images/image1.png" style="display: inline-block;" /> under’s superpower is their </br>
                     willingness to break every egg in sight to </br>
                     cook the world's greatest omlette. Don't </br>
                     hire them if you want somebody to chew </br>
@@ -250,12 +326,13 @@
             </div>
             <div class="white row"
                 style="width: 100%; height: fit-content; align-items: center; justify-content: space-between; padding-top: 100px;">
-                <img class="arrow" src="/images/image1.png" />
+                <img class="arrow" src="./images/image1.png" />
                 <p>Collabria</p>
-                <img class="arrow" src="/images/image1.png" />
+                <img class="arrow" src="./images/image1.png" />
             </div>
         </div>
     </div>
+
     <div class="padding-xl" id="body-content">
         <div class="helvetica_medium padding-xl row gap-xl">
             the </br>
@@ -263,43 +340,92 @@
             plan
         </div>
     </div>
-    <div id="body-content" >
+
+    <div id="body-content">
         <div class="row" style="flex-wrap: nowrap;">
             <div class="yellow_background padding-l column" style="flex-grow: 1; justify-content: space-between;">
-                <h4 >let's stretch it out! we gain deeper insights into your </br>
+                <h4>let's stretch it out! we gain deeper insights into your </br>
                     brand strategy, point of view, approach, and tone of </br>
                     voice. we'll write the brand story and use it as our </br>
                     pillar while exploring potential concepts. we collect </br>
                     visuals—images, textures, typography, and colors </br>
                     —to portray a different brand experience and </br>
                     commit to one direction we all agree on</h4>
-                    <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">day 1-3  research</h4>
+                <div style="writing-mode: vertical-lr;">
+                    <h4 style="transform: rotate(180deg);">day 1-3 research</h4>
                 </div>
             </div>
             <div class="orange_background padding-l column" style="height: 100%; writing-mode: vertical-lr;">
-                <h4 style="transform: rotate(180deg);">day 1-3  research</h4>
+                <h4 style="transform: rotate(180deg);">day 1-3 research</h4>
             </div>
             <div class="pink_background padding-l column" style="height: 100%; writing-mode: vertical-lr;">
-                <h4 style="transform: rotate(180deg);">day 4-5-6  Design</h4>
+                <h4 style="transform: rotate(180deg);">day 4-5-6 Design</h4>
             </div>
             <div class="purple_background padding-l column" style="height: 100%; writing-mode: vertical-lr;">
-                <h4 style="transform: rotate(180deg);">day 9  present</h4>
+                <h4 style="transform: rotate(180deg);">day 9 present</h4>
             </div>
             <div class="blue_background padding-l column" style="height: 100%; writing-mode: vertical-lr;">
-                <h4 style="transform: rotate(180deg);">day 10  purify</h4>
+                <h4 style="transform: rotate(180deg);">day 10 purify</h4>
             </div>
             <div class="green_background padding-l column" style="height: 100%; writing-mode: vertical-lr;">
-                <h4 style="transform: rotate(180deg);">day 11  handoff</h4>
+                <h4 style="transform: rotate(180deg);">day 11 handoff</h4>
             </div>
             <div class="white black_background padding-l column" style="height: 100%; writing-mode: vertical-lr;">
                 <h4 style="transform: rotate(180deg);">handshake</h4>
             </div>
         </div>
     </div>
+
+    <div class="background_yellow" id="body-content" style="width: 100%; height: 1000px; position: relative;">
+        <h3 class="black_header_animation">
+            something about </br>
+            the book read the </br>
+            blog post article.
+        </h3>
+        <h1 class="white_header_animation">
+            let’s chat
+        </h1>
+        <div class="yellow_circle">
+        </div>
+        <div class="pink_circle">
+        </div>
+        <div class="blue_rectangle">
+        </div>
+    </div>
+
+    <div class="green_background padding-xl" id="body-content" style="overflow: hidden;">
+        <div class="padding-xl view row gap-xl">
+            <div class="nudge_font white padding-l" style="width: 50%;">the book</div>
+            <h3 class="white" style="width: 45%; display: flex; justify-content: flex-end; padding-top: 10%;">
+                something about the book </br>
+                read the blog post article. </br>
+                something about the book </br>
+                read the blog post.
+            </h3>
+            <img src="./images/book.png" style="margin-left: 12.5%; margin-top: -10%;" />
+        </div>
+    </div>
+    
+    <div class="padding-xl view row product" style="background-image: url(./images/template.png)">
+        <div class="padding-xl column gap-xl">
+            <h1>the template</h1>
+            <h2>thinking about running a </br>
+                brand sprint? take this, it'll </br>
+                help you kick things off.</h2>
+            <div class="blue_circle_small">
+                <p class="white" style="text-align: center;">
+                    let's start </br>
+                    running
+                </p>
+            </div>
+        </div>
+    </div>
+
     <under-footer></under-footer>
+    <script src="./js/circle_animation.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
+
 </body>
 
 </html>
