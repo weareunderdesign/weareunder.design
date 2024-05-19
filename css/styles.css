@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: 'VcNudge';
-  src: url('../vc-nudge/VCNudge-BoldItalic-Trial.otf');
+  src: url('../fonts/VCNudge-BoldItalic-Trial.otf');
 }
 
 @font-face {
   font-family: 'HelveticaMedium';
-  src: url('../vc-nudge/VCNudge-BoldItalic-Trial.otf');
+  src: url('../fonts/VCNudge-BoldItalic-Trial.otf');
 }
 
 @font-face {
   font-family: 'HelveticaRegular';
-  src: url('../vc-nudge/VCNudge-BoldItalic-Trial.otf');
+  src: url('../fonts/VCNudge-BoldItalic-Trial.otf');
 }
 
 .nudge_font {
