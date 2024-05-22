@@ -39,17 +39,52 @@
   line-height: 92%;
 }
 
-.logo_images_box {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .logo_images {
+  display: inline-block;
   margin-top: 100px;
   height: 40px;
   width: auto;
+  padding-right: 5vw;
 }
+
+
+
+
+@keyframes tickerblock1 {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-150%); }
+}
+
+.ticker1{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tickerblock1 {
+  display: inline-block;
+  animation: tickerblock1 10s linear infinite;
+}
+
+@keyframes tickerblock {
+  from { transform: translateX(-115%); }
+  to { transform: translateX(150%); }
+}
+
+.ticker{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tickerblock {
+  animation: tickerblock 10s linear infinite;
+}
+
+
+
+
+
 
 .product {
   background: no-repeat center/cover;
