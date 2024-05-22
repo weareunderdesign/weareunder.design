@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add('blue_circle');
+                    entry.target.classList.add('random-color-change');
                 }, 500);
             }
         });

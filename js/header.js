@@ -3,7 +3,6 @@ function addHeader() {
       <a class="logo padding-xl mix-diff" href="/" style="display: flex; position: fixed; z-index: 99; width: 100%; justify-content: space-between;">
         <img src="https://weareunder.design/images/under-header-logo.svg" class="desktop"/>
         <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile"/>
-        <img src="https://weareunder.design/images/circle.svg"/>
       </a>
     `;
 
