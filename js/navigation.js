@@ -35,14 +35,9 @@ function addSidebar() {
     <a href="https://weareunder.design/work/raftt/" class="sidebar-project-link" id="raftt-0C6BEA">raftt</a>
     <a href="https://weareunder.design/work/togetherr/" class="sidebar-project-link" id="togetherr-000000">togetherr</a>
     <a href="https://weareunder.design/work/upword/" class="sidebar-project-link" id="upword-B8A4FD">upword</a>
-    <a href="https://weareunder.design/work/alcide/" class="sidebar-project-link" id="alcide-FF0000">alcide</a>
     <a href="https://weareunder.design/work/darna/" class="sidebar-project-link" id="darna-2a52cf">darna</a>
-    <a href="https://weareunder.design/work/everafter/" class="sidebar-project-link" id="everafter-FF7051">everafter</a>
     <a href="https://weareunder.design/work/faintlines/" class="sidebar-project-link" id="faintlines-FF0DBD">faintlines</a>
-    <a href="https://weareunder.design/work/flume/" class="sidebar-project-link" id="flume-FF6E15">flume</a>
     <a href="https://weareunder.design/work/grain/" class="sidebar-project-link" id="grain-FED164">grain</a>
-    <a href="https://weareunder.design/work/healthquarters/" class="sidebar-project-link" id="healthquarters-0E305A">healthquarters</a>
-    <a href="https://weareunder.design/work/iceberg/" class="sidebar-project-link" id="iceberg-EC7926">iceberg</a>
     <a href="https://weareunder.design/work/karma/" class="sidebar-project-link" id="karma-FCAC8B">karma</a>
     <a href="https://weareunder.design/work/larosh/" class="sidebar-project-link" id="larosh-C0815F">larosh</a>
     <a href="https://weareunder.design/work/le_salon/" class="sidebar-project-link" id="le_salon-000000">le salon</a>
@@ -50,12 +45,10 @@ function addSidebar() {
     <a href="https://weareunder.design/work/notch/" class="sidebar-project-link" id="notch-CF6AFF">notch</a>
     <a href="https://weareunder.design/work/perdiem/" class="sidebar-project-link" id="perdiem-0171EA">perdiem</a>
     <a href="https://weareunder.design/work/reeco/" class="sidebar-project-link" id="reeco-0FCB71">reeco</a>
-    <a href="https://weareunder.design/work/reflect/" class="sidebar-project-link" id="reflect-D1A8FD">reflect</a>
     <a href="https://weareunder.design/work/tagbox/" class="sidebar-project-link" id="tagbox-C2A78D">tagbox</a>
     <a href="https://weareunder.design/work/revelations/" class="sidebar-project-link" id="revelations-000000">Revelations</a>
     <a href="https://weareunder.design/work/unit/" class="sidebar-project-link" id="unit-000000">unit</a>
     <a href="https://weareunder.design/work/unleash/" class="sidebar-project-link" id="unleash-BE8DF6">unleash</a>
-    <a href="https://weareunder.design/work/zigi/" class="sidebar-project-link" id="zigi-22D285">zigi</a>
     <a href="https://weareunder.design/work/zoog/" class="sidebar-project-link" id="zoog-FF7051">zoog</a>
   </div>
 </div>
@@ -76,27 +69,20 @@ function addSidebar() {
   <img src="https://weareunder.design/work/raftt/0.png" class="sidebar-project-image" id="raftt" loading="lazy"></img>
   <img src="https://weareunder.design/work/togetherr/0.png" class="sidebar-project-image" id="togetherr" loading="lazy"></img>
   <img src="https://weareunder.design/work/upword/0.png" class="sidebar-project-image" id="upword" loading="lazy"></img>
-  <img src="https://weareunder.design/work/alcide/0.png" class="sidebar-project-image" id="alcide" loading="lazy"></img>
   <img src="https://weareunder.design/work/darna/0.png" class="sidebar-project-image" id="darna" loading="lazy"></img>
-  <img src="https://weareunder.design/work/everafter/0.png" class="sidebar-project-image" id="everafter" loading="lazy"></img>
   <img src="https://weareunder.design/work/faintlines/0.png" class="sidebar-project-image" id="faintlines" loading="lazy"></img>
-  <img src="https://weareunder.design/work/flume/0.png" class="sidebar-project-image" id="flume" loading="lazy"></img>
   <img src="https://weareunder.design/work/grain/0.png" class="sidebar-project-image" id="grain" loading="lazy"></img>
-  <img src="https://weareunder.design/work/healthquarters/0.png" class="sidebar-project-image" id="healthquarters" loading="lazy"></img>
-  <img src="https://weareunder.design/work/iceberg/0.png" class="sidebar-project-image" id="iceberg" loading="lazy"></img>
   <img src="https://weareunder.design/work/karma/0.png" class="sidebar-project-image" id="karma" loading="lazy"></img>
   <img src="https://weareunder.design/work/larosh/0.png" class="sidebar-project-image" id="larosh" loading="lazy"></img>
   <img src="https://weareunder.design/work/le_salon/0.png" class="sidebar-project-image" id="le_salon" loading="lazy"></img>
-  <img src="https://weareunder.design/work/mesh_payments/0.png" class="sidebar-project-image" id="mesh_payments" loading="lazy"></img>
+  <img src="https://weareunder.design/work/mesh_payments/0.svg" class="sidebar-project-image" id="mesh_payments" loading="lazy"></img>
   <img src="https://weareunder.design/work/notch/0.png" class="sidebar-project-image" id="notch" loading="lazy"></img>
   <img src="https://weareunder.design/work/perdiem/0.png" class="sidebar-project-image" id="perdiem" loading="lazy"></img>
   <img src="https://weareunder.design/work/reeco/0.png" class="sidebar-project-image" id="reeco" loading="lazy"></img>
-  <img src="https://weareunder.design/work/reflect/0.png" class="sidebar-project-image" id="reflect" loading="lazy"></img>
   <img src="https://weareunder.design/work/tagbox/0.png" class="sidebar-project-image" id="tagbox" loading="lazy"></img>
   <img src="https://weareunder.design/work/revelations/0.png" class="sidebar-project-image" id="revelations" loading="lazy"></img>
   <img src="https://weareunder.design/work/unit/0.png" class="sidebar-project-image" id="unit" loading="lazy"></img>
   <img src="https://weareunder.design/work/unleash/0.png" class="sidebar-project-image" id="unleash" loading="lazy"></img>
-  <img src="https://weareunder.design/work/zigi/0.png" class="sidebar-project-image" id="zigi" loading="lazy"></img>
   <img src="https://weareunder.design/work/zoog/0.png" class="sidebar-project-image" id="zoog" loading="lazy"></img>
 </div>
       `;
