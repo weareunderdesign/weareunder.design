@@ -1,4 +1,13 @@
-<svg width="84" height="131" viewBox="0 0 84 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M62.572 127.57H83.8715V35.0635H62.572V89.7802C62.572 102.967 54.2889 110.84 40.6809 110.84C26.284 110.84 21.3536 100.999 21.3536 89.7802V35.0635H0.0540931V95.488C0.0540931 115.367 8.53444 130.129 30.82 130.129C46.4002 130.129 58.2332 122.059 62.3748 102.18H62.572V127.57Z" fill="white"/>
-<path d="M0 0H84V21.2617H0V0Z" fill="white"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 84 131">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1d1d1b;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M62.6,127.6h21.3V35.1h-21.3v54.7c0,13.2-8.3,21.1-21.9,21.1s-19.3-9.8-19.3-21.1v-54.7H0v60.4c0,19.9,8.5,34.6,30.8,34.6s27.4-8.1,31.6-27.9h.2v25.4Z"/>
+  <path class="cls-1" d="M0,0h84v21.3H0V0Z"/>
 </svg>

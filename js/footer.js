@@ -1,31 +1,31 @@
 function addFooter() {
   const TEMPLATE = `
-  <div class="row padding-xl gap-xl black_background">
+  <div class="row padding-xl gap-xl">
     <a href="/">
-      <img src="./images/under-footer.svg" style="width: 92px;">
+      <img src="../images/under-footer.svg" style="width: 92px;">
     </a>
-    <h4 class="box white">
+    <h4 class="box">
       under creates high-quality,<br>
       well-designed, creative brands <br>
       and products for creative people.
     </h4>
-    <div class="column white">
+    <div class="column">
       <a href="https://store.weareunder.design/">
-        <h4>store</h4>
+        <h4>Privacy</h4>
       </a>
-      <a href="https://www.figma.com/file/UTvs6k6N1lAOLBerchdKFV/Under?node-id=351%3A772&t=lUyeBYt3fKsDLcU9-1" target="_blank">
-        <h4>press</h4>
+      <a href="https://store.weareunder.design/">
+        <h4>Terms & conditions</h4>
+      </a>
+    </div>
+    <div class="column">
+      <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
+        <h4>Newsletter</h4>
       </a>
       <a href="https://www.instagram.com/under.design/" target="_blank">
-      <h4>instagram</h4>
+      <h4>Instagram</h4>
     </a>
-    </div>
-    <div class="column white">
-      <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
-        <h4>newsletter</h4>
-      </a>
       <a href="mailto:hello@weareunder.design">
-        <h4>contact</h4>
+        <h4>Contact</h4>
       </a>
     </div>
   </div>

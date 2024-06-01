@@ -4,19 +4,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const yellowAccordion = document.querySelector('.yellow_background#accordion');
     const purpleAccordion = document.querySelector('.purple_background#accordion');
     const pinkAccordion = document.querySelector('.pink_background#accordion');
+    const blueAccordion = document.querySelector('.blue_background#accordion');
     const orangeAccordion = document.querySelector('.orange_background#accordion');
     const blackAccordion = document.querySelector('.black_background#accordion');
 
     function handleAccordionClick(clickedAccordion) {
         accordions.forEach(accordion => {
             if (accordion === clickedAccordion) {
-                const visibleH4 = accordion.querySelector('h4');
+                const visibleH4 = accordion.querySelector('p');
+                const imageDiv = accordion.querySelector('.imageaccordion');
                 accordion.style.flexGrow = '1';
                 visibleH4.style.display = 'flex';
+                imageDiv.style.display = 'flex';
             } else {
-                const hiddenH4 = accordion.querySelector('h4');
+                const hiddenH4 = accordion.querySelector('p');
+                const imageDiv = accordion.querySelector('.imageaccordion');
                 hiddenH4.style.display = 'none';
                 accordion.style.flexGrow = '0';
+                imageDiv.style.display = 'none';
             }
         });
     }
@@ -41,6 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     pinkAccordion.addEventListener('click', function () {
         handleAccordionClick(pinkAccordion);
+    });
+
+    blueAccordion.addEventListener('click', function () {
+        handleAccordionClick(blueAccordion);
     });
 
     blackAccordion.addEventListener('click', function () {
