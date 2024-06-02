@@ -22,216 +22,264 @@
     <under-header></under-header>
     <under-navigation></under-navigation>
 
-    <style>
-        #accordion {
-            transition: flex-grow 0.3s ease;
-        }
+    <div class="view random-color-change column align-center gap-xl">
+        <section class="row ping-pong align-center padding-xl" style="position: relative">
+            <a href="#faqs" class="circle brand-sprint-circle circle1 yellow_background">
+                <h4>what</h4>
+            </a>
 
-        .blue_rectangle {
-            width: 100%;
-            height: 1000px;
-            background-color: #014ADD;
-            transition: all 0.5s ease;
-            z-index: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .blue_circle {
-            width: 700px;
-            height: 700px;
-            background-color: #014ADD;
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .yellow_circle {
-            width: 300px;
-            height: 300px;
-            background-color: #FDC800;
-            border-radius: 50%;
-            z-index: 0;
-            position: absolute;
-            bottom: 5%;
-            left: -6%;
-        }
-
-        .pink_circle {
-            width: 300px;
-            height: 300px;
-            background-color: #FFBFE1;
-            border-radius: 50%;
-            z-index: 0;
-            position: absolute;
-            top: 5%;
-            right: 10%;
-        }
-
-        .white_header_animation {
-            color: white;
-            position: absolute;
-            z-index: 1;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .black_header_animation {
-            position: absolute;
-            top: calc(var(--size-base) * 20);
-            left: calc(var(--size-base) * 20);
-            z-index: 1;
-            margin: 10px;
-        }
-
-        .blue_circle_small {
-            display: flex;
-            width: 175px;
-            height: 175px;
-            background-color: #014ADD;
-            border-radius: 50%;
-            z-index: 0;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
-
-    <div class="random-color-change padding-xl" id="body-content">
-        <div class="view column gap-xl">
-            <section class="view row ping-pong align-center padding-xl" style="position: relative"
-                id="brand-sprints-section">
-                <a href="#faqs" class="circle brand-sprint-circle circle1 yellow_background"
-                    style="height: 170px; width: 170px;">
-                    <h4>what</h4>
-                </a>
-
-                <a href="#how" class="circle brand-sprint-circle circle2 pink_background" style="
-                height: 170px;
-                width: 170px;
+            <a href="#how" class="circle brand-sprint-circle circle2 pink_background" style="
                 bottom: -15vh;
                 left: 70vw;
               ">
-                    <h4>when</h4>
-                </a>
+                <h4>when</h4>
+            </a>
 
-                <a href="#testimonials" class="circle brand-sprint-circle circle3 blue_background" style="
-                height: 170px;
-                width: 170px;
+            <a href="#testimonials" class="circle brand-sprint-circle circle3 blue_background" style="
                 bottom: -5vh;
                 left: 20vw;
               ">
-                    <h4>how</h4>
-                </a>
+                <h4>how</h4>
+            </a>
 
-                <a href="#what" class="circle brand-sprint-circle circle4 orange_background" style="
-                height: 170px;
-                width: 170px;
+            <a href="#what" class="circle brand-sprint-circle circle4 orange_background" style="
                 bottom: 25vh;
                 left: 70vw;
               ">
-                    <h4>why</h4>
-                </a>
-                <img class="box-m" src="./images/brandsprint.svg">
-                <h2 class="white text-center align-center" style="width: 60%;">
-                    stand out better and faster
-                    in&nbsp;a&nbsp;world full of&nbsp;brands
-                </h2>
-            </section>
+                <h4>why</h4>
+            </a>
+            <img class="box-m" src="./images/brandsprint.svg">
+            <h2 class="white text-center align-center box-s">
+                stand out better and faster
+                in a world full of brands
+            </h2>
+        </section>
+
+        <div class="tickertext row gap-xl">
+            <div class="box-l tickerblock1 row gap-xl" style="flex-wrap: nowrap;">
+                <div class="column white text-center box-l ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>under’s superpower is their
+                        willingness to break every
+                        egg in sight to cook the
+                        world's greatest omlette.
+                    </h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+                <div class="column white text-center box-m ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>don't hire them if you
+                        want somebody to chew
+                        up and spit your own
+                        ideas back at you.</h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+                <div class="column white text-center box-m ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>hire them if you want
+                        your ideas challenged,
+                        broken down, and
+                        made better.</h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+            </div>
+            <div class="box-l tickerblock2 row gap-xl" style="flex-wrap: nowrap;">
+                <div class="column white text-center box-l ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>under’s superpower is their
+                        willingness to break every
+                        egg in sight to cook the
+                        world's greatest omlette.
+                    </h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+                <div class="column white text-center box-m ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>don't hire them if you
+                        want somebody to chew
+                        up and spit your own
+                        ideas back at you.</h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+                <div class="column white text-center box-m ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>hire them if you want
+                        your ideas challenged,
+                        broken down, and
+                        made better.</h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+            </div>
+            <div class="box-l tickerblock3 row gap-xl" style="flex-wrap: nowrap;">
+                <div class="column white text-center box-l ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>under’s superpower is their
+                        willingness to break every
+                        egg in sight to cook the
+                        world's greatest omlette.
+                    </h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+                <div class="column white text-center box-m ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>don't hire them if you
+                        want somebody to chew
+                        up and spit your own
+                        ideas back at you.</h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+                <div class="column white text-center box-m ticker-image gap-m ">
+                    <img src="./images/quotes.svg">
+                    <h3>hire them if you want
+                        your ideas challenged,
+                        broken down, and
+                        made better.</h3>
+                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                </div>
+            </div>
         </div>
-        <div class="tickertext row" style="flex-wrap: nowrap;">
-
-            <div class="tickerblock1 row justify-stretch" style="flex-wrap: nowrap; width: 110vw;">
-
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 32.5vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>under’s superpower is their </br>
-                        willingness to break every </br>
-                        egg in sight to cook the </br>
-                        world's greatest omlette.</h3>
-                    <p class="padding-m">menachem pritzker, head of growth, harmon.ie</p>
+        <div class="tickerimages row gap-xl">
+            <div class="tickerblockimages1 gap-xl row justify-stretch">
+                <div class="logo_images">
+                    <img class="box-s" src="./logos/Logo1.svg" />
                 </div>
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 30vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>don't hire them if you </br>
-                        want somebody to chew </br>
-                        up and spit your own </br>
-                        ideas back at you.</h3>
-                    <p>menachem pritzker, head of growth, harmon.ie</p>
+                <div class="logo_images">
+                    <img class="box-s" src="./logos/Logo2.svg" />
                 </div>
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 27.5vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>hire them if you want </br>
-                        your ideas challenged, </br>
-                        broken down, and </br>
-                        made better.</h3>
-                    <p>menachem pritzker, head of growth, Harmon.ie</p>
+                <div class="logo_images">
+                    <img class="box-s" src="./logos/Logo3.svg" />
                 </div>
-
+                <div class="logo_images">
+                    <img src="./logos/Logo4.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo5.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo6.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo7.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo8.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo9.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo10.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo11.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo12.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo13.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo14.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo15.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo16.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo17.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo18.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo19.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo20.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo21.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo22.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo23.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo24.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo25.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo26.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo27.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo28.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo29.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo30.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo31.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo32.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo33.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo34.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo35.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo36.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo37.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo38.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo39.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo40.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo41.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo42.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo43.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo44.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo45.svg" />
+                </div>
+                <div class="logo_images">
+                    <img src="./logos/Logo46.svg" />
+                </div>
             </div>
-
-            <div class="tickerblock2 row justify-stretch" style="flex-wrap: nowrap; width: 110vw;">
-
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 32.5vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>under’s superpower is their </br>
-                        willingness to break every </br>
-                        egg in sight to cook the </br>
-                        world's greatest omlette.</h3>
-                    <p class="padding-m">menachem pritzker, head of growth, harmon.ie</p>
-                </div>
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 30vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>don't hire them if you </br>
-                        want somebody to chew </br>
-                        up and spit your own </br>
-                        ideas back at you.</h3>
-                    <p>menachem pritzker, head of growth, harmon.ie</p>
-                </div>
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 27.5vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>hire them if you want </br>
-                        your ideas challenged, </br>
-                        broken down, and </br>
-                        made better.</h3>
-                    <p>menachem pritzker, head of growth, Harmon.ie</p>
-                </div>
-
-            </div>
-            <div class="tickerblock3 row justify-stretch" style="flex-wrap: nowrap; width: 110vw;">
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 32.5vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>under’s superpower is their </br>
-                        willingness to break every </br>
-                        egg in sight to cook the </br>
-                        world's greatest omlette.</h3>
-                    <p class="padding-m">menachem pritzker, head of growth, harmon.ie</p>
-                </div>
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 30vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>don't hire them if you </br>
-                        want somebody to chew </br>
-                        up and spit your own </br>
-                        ideas back at you.</h3>
-                    <p>menachem pritzker, head of growth, harmon.ie</p>
-                </div>
-                <div class="column align-center gap-l white text-center" style="margin-left: 5vw; width: 27.5vw;">
-                    <img src="./images/quotes.svg">
-                    <h3>hire them if you want </br>
-                        your ideas challenged, </br>
-                        broken down, and </br>
-                        made better.</h3>
-                    <p>menachem pritzker, head of growth, harmon.ie</p>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="tickerimages row" style="flex-wrap: nowrap;">
-            <div class="tickerblockimages1 row justify-stretch" style="flex-wrap: nowrap; width: 600vw;">
+            <div class="tickerblockimages2 gap-xl row justify-stretch">
                 <div class="logo_images">
                     <img src="./logos/Logo1.svg" />
                 </div>
@@ -371,7 +419,7 @@
                     <img src="./logos/Logo46.svg" />
                 </div>
             </div>
-            <div class="tickerblockimages2 row justify-stretch" style="flex-wrap: nowrap; width: 600vw;">
+            <div class="tickerblockimages3 gap-xl row justify-stretch">
                 <div class="logo_images">
                     <img src="./logos/Logo1.svg" />
                 </div>
@@ -382,147 +430,7 @@
                     <img src="./logos/Logo3.svg" />
                 </div>
                 <div class="logo_images">
-                    <img src="./logos/Logo4.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo5.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo6.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo7.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo8.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo9.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo10.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo11.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo12.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo13.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo14.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo15.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo16.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo17.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo18.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo19.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo20.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo21.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo22.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo23.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo24.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo25.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo26.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo27.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo28.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo29.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo30.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo31.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo32.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo33.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo34.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo35.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo36.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo37.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo38.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo39.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo40.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo41.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo42.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo43.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo44.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo45.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo46.svg" />
-                </div>
-            </div>
-            <div class="tickerblockimages3 row justify-stretch" style="flex-wrap: nowrap; width: 600vw;">
-                <div class="logo_images">
-                    <img src="./logos/Logo1.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo2.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo3.svg" />
-                </div>
-                <div class="logo_images">
-                    <img src="./logos/Logo4.svg" />
+                    <img class="box-s" src="./logos/Logo4.svg" />
                 </div>
                 <div class="logo_images">
                     <img src="./logos/Logo5.svg" />
@@ -652,383 +560,382 @@
                 </div>
             </div>
         </div>
+        <div class="box-l padding-s"></div>
     </div>
 
     <under-slider></under-slider>
 
-    <div class="padding-xl" id="body-content">
-        <div class="padding-xl column gap-xl align-center">
-            <div class="nudge_font text-center padding-xl">
+    <div class="view column padding-xl gap-xl">
+        <div class="box-l column padding-xl gap-xl align-center text-center">
+            <div class="nudge_font">
                 wait, what?
             </div>
-            <h3 class="text-center">
-                yes. in just 10 days, we develop a clear vision, identify </br>
+            <h3 class="box-m">
+                yes. in just 10 days, we develop a clear vision, identify
                 key values, and create a fresh brand identity. really.
             </h3>
         </div>
-        <div class="row justify-stretch" style="flex-wrap: nowrap; margin-top: 7.5vw;;">
-            <div class="padding-m column gap-xl align-start box-l">
+        <div class="box-l row gap-l justify-stretch" style="flex-wrap: nowrap;">
+            <div class="box-l column gap-l align-start">
                 <img class="box-l" src="./images/BrandStrategy.svg">
-                <div class="column gap-m">
-                    <h3>brand strategy</h3>
-                    <span class="text-m">
-                        as early as you can - like 2-3 months ahead. </br>
-                        we're almost always booked with too much </br>
-                        time on. that being said, S#!% happens, and it </br>
+                <div class="column">
+                    <h4>brand strategy</h4>
+                    <p>
+                        as early as you can - like 2-3 months ahead.
+                        we're almost always booked with too much
+                        time on. that being said, S#!% happens, and it
                         is worth reaching out anyway.
-                    </span>
+                    </p>
                 </div>
             </div>
-            <div class="padding-m column gap-xl align-start box-l">
+            <div class="box-l column gap-l align-start">
                 <img class="box-l" src="./images/BrandSystem.svg">
-                <div class="column gap-m">
-                    <h3>brand system</h3>
-                    <span class="text-m">
-                        as early as you can - like 2-3 months ahead. </br>
-                        we're almost always booked with too much </br>
-                        time on. that being said, S#!% happens, and it </br>
+                <div class="column">
+                    <h4>brand system</h4>
+                    <p>
+                        as early as you can - like 2-3 months ahead.
+                        we're almost always booked with too much
+                        time on. that being said, S#!% happens, and it
                         is worth reaching out anyway.
-                    </span>
+                    </p>
                 </div>
             </div>
-            <div class="padding-m column gap-xl align-start box-l">
+            <div class="box-l column gap-l align-start">
                 <img class="box-l" src="./images/Marketing.svg">
-                <div class="column gap-m">
-                    <h3>ui/digital</h3>
-                    <span class="text-m">
-                        as early as you can - like 2-3 months ahead. </br>
-                        we're almost always booked with too much </br>
-                        time on. that being said, S#!% happens, and it </br>
+                <div class="column">
+                    <h4>ui/digital</h4>
+                    <p>
+                        as early as you can - like 2-3 months ahead.
+                        we're almost always booked with too much
+                        time on. that being said, S#!% happens, and it
                         is worth reaching out anyway.
-                    </span>
+                    </p>
                 </div>
             </div>
-            <div class="padding-m column gap-l align-start box-l">
+            <div class="box-l column gap-l align-start">
                 <img class="box-l" src="./images/Web.svg">
-                <div class="column gap-m">
-                    <h3>marketing</h3>
-                    <span class="text-m">
-                        as early as you can - like 2-3 months ahead. </br>
-                        we're almost always booked with too much </br>
-                        time on. that being said, S#!% happens, and it </br>
+                <div class="column">
+                    <h4>marketing</h4>
+                    <p>
+                        as early as you can - like 2-3 months ahead.
+                        we're almost always booked with too much
+                        time on. that being said, S#!% happens, and it
                         is worth reaching out anyway.
-                    </span>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="padding-xl column align-center gap-xl" id="body-content">
-        <div class="nudge_font text-center padding-xl">
-            but why?
+    <div class="view column padding-xl gap-xl">
+        <div class="box-l column padding-xl gap-xl align-center text-center">
+            <div class="nudge_font">
+                but why?
+            </div>
+            <h3 class="box-m">
+                yes. in just 10 days, we develop a clear vision, identify
+                key values, and create a fresh brand identity. really.
+            </h3>
         </div>
-        <h3 class="text-center">
-            yes. in just 10 days, we develop a clear vision, identify </br>
-            key values, and create a fresh brand identity. really.
-        </h3>
-        <div class="column justify-stretch padding-xl" style="width: 100%;">
-            <div class="row" style="flex-wrap: nowrap;">
-                <div class="orange_background column padding-xl gap-l box-l"
-                    style="justify-content: flex-end; margin-right: 2vw;">
-                    <img src="./images/quick.svg" style="width: 25vw; margin-left: 7.5vw;">
-                    <div class="column gap-m">
+        <div class="box-l column justify-stretch gap-xl">
+            <div class="row gap-xl" style="flex-wrap: nowrap;">
+                <div class="orange_background column padding-xl box-l justify-stretch">
+                    <div class="box-l justify-end">
+                        <img src="./images/quick.svg">
+                    </div>
+                    <div class="column">
                         <h2>quick</h2>
-                        <p>
-                            as early as you can - like 2-3 months ahead. we're almost </br>
-                            always booked with too much time on. that being said, </br>
+                        <p class="box-m">
+                            as early as you can - like 2-3 months ahead. we're almost
+                            always booked with too much time on. that being said,
                             s#!% happens, and it is worth reaching out anyway.
                         </p>
                     </div>
                 </div>
-                <div class="yellow_background column padding-xl gap-l box-l" style="justify-content: flex-end;">
-                    <img src="./images/fancy.svg" style="width: 25vw; margin-left: 7.5vw;">
-                    <div class="column gap-m">
+                <div class="yellow_background column padding-xl box-l justify-stretch">
+                    <div class="box-l justify-end">
+                        <img src="./images/fancy.svg">
+                    </div>
+                    <div class="column">
                         <h2>fancy</h2>
-                        <p>
-                            as early as you can - like 2-3 months ahead. we're almost </br>
-                            always booked with too much time on. that being said, </br>
+                        <p class="box-m">
+                            as early as you can - like 2-3 months ahead. we're almost
+                            always booked with too much time on. that being said,
                             s#!% happens, and it is worth reaching out anyway.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="blue_background row padding-xl justify-stretch"
-                style="width: 100%; height: 45vw; margin-top: 2vw;">
-                <div class="gap-l column">
-                    <div class="column gap-m white">
-                        <h2>team</h2>
-                        <p>
-                            as early as you can - like 2-3 months ahead. we're almost </br>
-                            always booked with too much time on. that being said, </br>
-                            s#!% happens, and it is worth reaching out anyway.
-                        </p>
-                    </div>
-                </div>
-                <img src="./images/team.svg" style="width: 40vw; height: 40vw;" />
-            </div>
-        </div>
-    </div>
-
-    <div class="padding-xl column align-center gap-xl" id="body-content">
-        <div class="nudge_font text-center padding-xl">
-            10-day plan
-        </div>
-        <h3 class="text-center">
-            as early as you can - like 2-3 months ahead. we're almost </br>
-            always booked with too much time on. that being said, s#!% </br>
-            happens, and it is worth reaching out anyway.
-        </h3>
-    </div>
-
-    <div id="body-content">
-        <div class="row" style="flex-wrap: nowrap; margin-top: 7.5vw;">
-            <div class="yellow_background padding-l row" id="accordion"
-                style="flex-grow: 1; flex-wrap: nowrap;">
-                <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">day 0 strategy</h4>
-                </div>
-                <div class="column justify-stretch align-end">
-                    <div class="imageaccordion">
-                        <img src="./images/Strategy.svg" style="height: 32.5vw;" />
-                    </div>
-                    <p class="box-s">let's stretch it out! we gain deeper insights into your 
-                        brand strategy, point of view, approach, and tone of 
-                        voice. we'll write the brand story and use it as our 
-                        pillar while exploring potential concepts. we collect 
-                        visuals—images, textures, typography, and colors 
-                        —to portray a different brand experience and 
-                        commit to one direction we all agree on
+            <div class="blue_background row padding-xl justify-stretch box-l" style="flex-wrap: nowrap;">
+                <div class="column white">
+                    <h2>team</h2>
+                    <p class="box-l">
+                        as early as you can - like 2-3 months ahead. we're almost
+                        always booked with too much time on. that being said,
+                        s#!% happens, and it is worth reaching out anyway.
                     </p>
                 </div>
+                <img src="./images/team.svg">
             </div>
-            <div class="orange_background padding-l row justify-stretch" id="accordion" style="flex-wrap: nowrap;">
+        </div>
+    </div>
+
+    <div class="view column gap-xl">
+        <div class="box-l column padding-xl gap-xl align-center text-center">
+            <div class="nudge_font">
+                10-day plan
+            </div>
+            <h3 class="box-m">
+                as early as you can - like 2-3 months ahead. we're almost
+                always booked with too much time on. that being said, s#!%
+                happens, and it is worth reaching out anyway.
+            </h3>
+        </div>
+        <div class="row" style="flex-wrap: nowrap;">
+
+            <div class="yellow_background padding-l row accordion-main-div" id="accordion" style="flex-grow: 1; flex-wrap: nowrap;">
                 <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">day 1-3 research</h4>
+                    <h4 class="accordion-header">day 0 strategy</h4>
                 </div>
-                <div class="column justify-stretch align-end">
-                    <div class="imageaccordion" style="display: none;">
-                        <img src="./images/Research.svg" style="height: 40vw;" />
+                <div class="column justify-stretch align-end accordion-div">
+                    <div class="imageaccordion box-l justify-end">
+                        <img src="./images/Strategy.svg" />
                     </div>
-                    <p class="box-s" style="display: none;">let's stretch it out! we gain deeper insights into your </br>
-                        brand strategy, point of view, approach, and tone of 
-                        voice. we'll write the brand story and use it as our 
-                        pillar while exploring potential concepts. we collect 
-                        visuals—images, textures, typography, and colors 
+                    <p class="box-s accordion-text">let's stretch it out! we gain deeper insights into your
+                        brand strategy, point of view, approach, and tone of
+                        voice. we'll write the brand story and use it as our
+                        pillar while exploring potential concepts. we collect
+                        visuals—images, textures, typography, and colors
                         —to portray a different brand experience and
                         commit to one direction we all agree on
                     </p>
                 </div>
             </div>
-            <div class="pink_background padding-l row justify-stretch" id="accordion" style="flex-wrap: nowrap;">
+
+            <div class="orange_background padding-l row accordion-main-div" id="accordion" style="flex-wrap: nowrap;">
                 <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">day 4-6 design</h4>
+                    <h4 class="accordion-header">day 1-3 research</h4>
                 </div>
-                <div class="column justify-stretch align-end">
-                    <div class="imageaccordion" style="display: none;">
-                        <img src="./images/Design.svg" style="height: 40vw;" />
+                <div class="column justify-stretch align-end accordion-div">
+                    <div class="imageaccordion box-l justify-end" style="display: none;">
+                        <img src="./images/Research.svg" />
                     </div>
-                    <p class="box-s" style="display: none;">let's stretch it out! we gain deeper insights into your </br>
-                        brand strategy, point of view, approach, and tone of 
-                        voice. we'll write the brand story and use it as our 
-                        pillar while exploring potential concepts. we collect 
-                        visuals—images, textures, typography, and colors 
+                    <p class="box-s accordion-text" style="display: none;">let's stretch it out! we gain deeper insights into your
+                        brand strategy, point of view, approach, and tone of
+                        voice. we'll write the brand story and use it as our
+                        pillar while exploring potential concepts. we collect
+                        visuals—images, textures, typography, and colors
                         —to portray a different brand experience and
                         commit to one direction we all agree on
                     </p>
                 </div>
             </div>
-            <div class="purple_background padding-l row justify-stretch" id="accordion" style="flex-wrap: nowrap;">
+
+            <div class="pink_background padding-l row accordion-main-div" id="accordion" style="flex-wrap: nowrap;">
                 <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">day 9 present</h4>
+                    <h4 class="accordion-header">day 4-6 design</h4>
                 </div>
-                <div class="column justify-stretch align-end">
-                    <div class="imageaccordion" style="display: none;">
-                        <img src="./images/Present.svg" style="height: 25vw;" />
+                <div class="column justify-stretch align-end accordion-div">
+                    <div class="imageaccordion box-l justify-end" style="display: none;">
+                        <img src="./images/Design.svg" />
                     </div>
-                    <p class="box-s" style="display: none;">let's stretch it out! we gain deeper insights into your </br>
-                        brand strategy, point of view, approach, and tone of 
+                    <p class="box-s accordion-text" style="display: none;">let's stretch it out! we gain deeper insights into your
+                        brand strategy, point of view, approach, and tone of
                         voice. we'll write the brand story and use it as our
-                        pillar while exploring potential concepts. we collect 
-                        visuals—images, textures, typography, and colors 
-                        —to portray a different brand experience and 
+                        pillar while exploring potential concepts. we collect
+                        visuals—images, textures, typography, and colors
+                        —to portray a different brand experience and
                         commit to one direction we all agree on
                     </p>
                 </div>
             </div>
-            <div class="blue_background padding-l row justify-stretch" id="accordion" style="flex-wrap: nowrap;">
+
+            <div class="purple_background padding-l row accordion-main-div" id="accordion" style="flex-wrap: nowrap;">
                 <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">day 10 purify</h4>
+                    <h4 class="accordion-header">day 9 present</h4>
                 </div>
-                <div class="column justify-stretch align-end">
-                    <div class="imageaccordion" style="display: none;">
-                        <img src="./images/Purify.svg" style="height: 25vw;" />
+                <div class="column justify-stretch align-end accordion-div">
+                    <div class="imageaccordion box-l justify-end" style="display: none;">
+                        <img src="./images/Present.svg" />
                     </div>
-                    <p class="box-s" style="display: none;">let's stretch it out! we gain deeper insights into your </br>
-                        brand strategy, point of view, approach, and tone of 
-                        voice. we'll write the brand story and use it as our 
-                        pillar while exploring potential concepts. we collect 
-                        visuals—images, textures, typography, and colors 
-                        —to portray a different brand experience and 
-                        commit to one direction we all agree on
-                    </p>
-                </div>
-            </div>
-            <div class="green_background padding-l row justify-stretch" id="accordion" style="flex-wrap: nowrap;">
-                <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">day 11 handoff</h4>
-                </div>
-                <div class="column justify-stretch align-end">
-                    <div class="imageaccordion" style="display: none;">
-                        <img src="./images/Handoff.svg" style="height: 30vw;" />
-                    </div>
-                    <p class="box-s" style="display: none;">let's stretch it out! we gain deeper insights into your </br>
-                        brand strategy, point of view, approach, and tone of 
+                    <p class="box-s accordion-text" style="display: none;">let's stretch it out! we gain deeper insights into your
+                        brand strategy, point of view, approach, and tone of
                         voice. we'll write the brand story and use it as our
-                        pillar while exploring potential concepts. we collect 
-                        visuals—images, textures, typography, and colors 
-                        —to portray a different brand experience and 
+                        pillar while exploring potential concepts. we collect
+                        visuals—images, textures, typography, and colors
+                        —to portray a different brand experience and
                         commit to one direction we all agree on
                     </p>
                 </div>
             </div>
-            <div class="black_background padding-l row justify-stretch white" id="accordion" style="flex-wrap: nowrap;">
+
+            <div class="blue_background padding-l row accordion-main-div" id="accordion" style="flex-wrap: nowrap;">
                 <div style="writing-mode: vertical-lr;">
-                    <h4 style="transform: rotate(180deg);">handshake</h4>
+                    <h4 class="accordion-header">day 10 purify</h4>
                 </div>
-                <div class="column justify-stretch align-end">
-                    <div class="imageaccordion" style="display: none;">
-                        <img src="./images/Handshake.svg" style="height: 25vw;" />
+                <div class="column justify-stretch align-end accordion-div">
+                    <div class="imageaccordion box-l justify-end" style="display: none;">
+                        <img src="./images/Purify.svg" />
                     </div>
-                    <p class="box-s" style="display: none;">let's stretch it out! we gain deeper insights into your </br>
-                        brand strategy, point of view, approach, and tone of 
+                    <p class="box-s accordion-text" style="display: none;">let's stretch it out! we gain deeper insights into your
+                        brand strategy, point of view, approach, and tone of
                         voice. we'll write the brand story and use it as our
-                        pillar while exploring potential concepts. we collect 
-                        visuals—images, textures, typography, and colors 
-                        —to portray a different brand experience and 
+                        pillar while exploring potential concepts. we collect
+                        visuals—images, textures, typography, and colors
+                        —to portray a different brand experience and
                         commit to one direction we all agree on
                     </p>
                 </div>
             </div>
-            <div class="white black_background column" style="height: 100%; writing-mode: vertical-lr;">
+
+            <div class="green_background padding-l row accordion-main-div" id="accordion" style="flex-wrap: nowrap;">
+                <div style="writing-mode: vertical-lr;">
+                    <h4 class="accordion-header">day 11 handoff</h4>
+                </div>
+                <div class="column justify-stretch align-end accordion-div">
+                    <div class="imageaccordion box-l justify-end" style="display: none;">
+                        <img src="./images/Handoff.svg" />
+                    </div>
+                    <p class="box-s accordion-text" style="display: none;">let's stretch it out! we gain deeper insights into your
+                        brand strategy, point of view, approach, and tone of
+                        voice. we'll write the brand story and use it as our
+                        pillar while exploring potential concepts. we collect
+                        visuals—images, textures, typography, and colors
+                        —to portray a different brand experience and
+                        commit to one direction we all agree on
+                    </p>
+                </div>
+            </div>
+
+            <div class="black_background padding-l row accordion-main-div white" id="accordion" style="flex-wrap: nowrap;">
+                <div style="writing-mode: vertical-lr;">
+                    <h4 class="accordion-header">handshake</h4>
+                </div>
+                <div class="column justify-stretch align-end accordion-div">
+                    <div class="imageaccordion box-l justify-end" style="display: none;">
+                        <img src="./images/Handshake.svg" />
+                    </div>
+                    <p class="box-s accordion-text" style="display: none;">let's stretch it out! we gain deeper insights into your
+                        brand strategy, point of view, approach, and tone of
+                        voice. we'll write the brand story and use it as our
+                        pillar while exploring potential concepts. we collect
+                        visuals—images, textures, typography, and colors
+                        —to portray a different brand experience and
+                        commit to one direction we all agree on
+                    </p>
+                </div>
+            </div>
+
+            <div class="white black-accordion black_background column" style="height: 100%; writing-mode: vertical-lr;">
             </div>
         </div>
     </div>
 
-    <div class="padding-xl column align-center gap-xl" id="body-content">
-        <div class="nudge_font text-center padding-xl">
-            ok, when?
+    <div class="view padding-xl column gap-xl">
+        <div class="box-l column padding-xl gap-xl align-center text-center">
+            <div class="nudge_font">
+                ok, when?
+            </div>
+            <h3 class="box-m">
+                as early as you can - like 2-3 months ahead. we're almost
+                always booked with too much time on. that being said, s#!%
+                happens, and it is worth reaching out anyway.
+            </h3>
         </div>
-        <h3 class="text-center">
-            as early as you can - like 2-3 months ahead. we're almost </br>
-            always booked with too much time on. that being said, s#!% </br>
-            happens, and it is worth reaching out anyway.
-        </h3>
+
+        <div class="row gap-xl justify-stretch box-l nowarp-schedule">
+            <div class="row gap-xl justify-stretch box-l nowarp-schedule-div">
+                <div class="box-s padding-xl column opacity-m align-center gap-xl schedule-div">
+                    <div class="row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
+                        <h3>
+                            april
+                        </h3>
+                        <h1>
+                            04
+                        </h1>
+                    </div>
+                    <div class="box-s border text-center align-center schedule-circle">
+                        <p class="text-center">not available</p>
+                    </div>
+                </div>
+                <div class="line">
+                </div>
+                <div class="box-s padding-xl column opacity-m align-center gap-xl schedule-div">
+                    <div class="row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
+                        <h3>
+                            may
+                        </h3>
+                        <h1>
+                            05
+                        </h1>
+                    </div>
+                    <div class="box-s border text-center align-center schedule-circle">
+                        <p class="text-center">not available</p>
+                    </div>
+                </div>
+                <div class="line line1">
+                </div>
+            </div>
+            <div class="row gap-xl justify-stretch box-l nowarp-schedule-div">
+                <div class="box-s padding-xl column opacity-m align-center gap-xl schedule-div">
+                    <div class="row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
+                        <h3>
+                            june
+                        </h3>
+                        <h1>
+                            06
+                        </h1>
+                    </div>
+                    <div class="box-s text-center align-center random-color-change schedule-color-circle">
+                        <p class="text-center white">let's chat</p>
+                    </div>
+                </div>
+                <div class="line">
+                </div>
+                <div class="box-s padding-xl column opacity-m align-center gap-xl schedule-div">
+                    <div class="row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
+                        <h3>
+                            juli
+                        </h3>
+                        <h1>
+                            07
+                        </h1>
+                    </div>
+                    <div class="box-s border text-center align-center schedule-circle">
+                        <p class="text-center">not available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="row justify-stretch" style="padding: 10vw 0 7.5vw 0; height: 850px; flex-wrap: nowrap;">
-        <div class="padding-l column opacity-m " style="width: 25%; align-items: center;">
-            <div class="row justify-stretch" style="width: 100%;">
-                <h3 style="padding-left: 2.5vw;">
-                    april
-                </h3>
-                <h1>
-                    04
-                </h1>
-            </div>
-            <div class="box-s border text-center align-center"
-                style="border-radius: 100%; height: 15vw; width: 15vw; border: 1px solid black; margin-top: 5vw;">
-                <p class="text-center">not available</p>
-            </div>
-        </div>
-        <div style="border: 1px solid black; transform: rotate(5deg);">
-        </div>
-        <div class="padding-l column opacity-m " style="width: 25%; align-items: center;">
-            <div class="row justify-stretch" style="width: 100%;">
-                <h3 style="padding-left: 2.5vw;">
-                    may
-                </h3>
-                <h1>
-                    05
-                </h1>
-            </div>
-            <div class="box-s border text-center align-center"
-                style="border-radius: 100%; height: 15vw; width: 15vw; border: 1px solid black; margin-top: 5vw;">
-                <p class="text-center">not available</p>
-            </div>
-        </div>
-        <div style="border: 1px solid black; transform: rotate(5deg);">
-        </div>
-        <div class="padding-l column" style="width: 25%; align-items: center;">
-            <div class="row justify-stretch" style="width: 100%;">
-                <h3 style="padding-left: 2.5vw;">
-                    june
-                </h3>
-                <h1>
-                    06
-                </h1>
-            </div>
-            <div class="box-s border text-center align-center random-color-change"
-                style="border-radius: 100%; height: 15vw; width: 15vw;margin-top: 5vw;">
-                <p class="text-center white">let's chat</p>
-            </div>
-        </div>
-        <div style="border: 1px solid black; transform: rotate(5deg);">
-        </div>
-        <div class="padding-l column opacity-m " style="width: 25%; align-items: center;">
-            <div class="row justify-stretch" style="width: 100%;">
-                <h3 style="padding-left: 2.5vw;">
-                    july
-                </h3>
-                <h1>
-                    07
-                </h1>
-            </div>
-            <div class="box-s border text-center align-center"
-                style="border-radius: 100%; height: 15vw; width: 15vw; border: 1px solid black; margin-top: 5vw;">
-                <p class="text-center">not available</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="green_background padding-xl column gap-xl align-center" id="body-content"
+    <div class="view green_background padding-xl column gap-xl align-center text-center"
         style="overflow: hidden; position: relative;">
         <div class="nudge_font white padding-xl" style="z-index: 1;">the book</div>
-        <img src="./images/book.png" style="flex-grow: 0; margin-right: -25vw;" />
-        <h3 class="white text-center padding-xl">
-            as early as you can - like 2-3 months ahead. we're almost </br>
-            always booked with too much time on. that being said, s#!% </br>
+        <img class="box-l" src="./images/book.png" style="flex-grow: 0;" />
+        <h3 class="white text-center padding-xl box-m">
+            as early as you can - like 2-3 months ahead. we're almost
+            always booked with too much time on. that being said, s#!%
             happens, and it is worth reaching out anyway.
         </h3>
-        <div class="align-center" style="width: 250px;
-        height: 250px;
-        background-color: #FDC800;
-        border-radius: 50%;
-        z-index: 0;
-        position: absolute;
-        top: 12.5%;
-        left: 82.5%;
-        transform: translate(-50%, -50%);">
+        <div class="align-center book-circle1">
             <h3>preorder</h3>
         </div>
-        <div class="align-center white" style="width: 250px;
-        height: 250px;
-        background-color: #8159FB;
-        border-radius: 50%;
-        position: absolute;
-        top: 37.5%;
-        left: 37.5%;
-        transform: translate(-50%, -50%);">
+        <div class="align-center white book-circle2">
             <h3>read</h3>
         </div>
     </div>
 
-    <div class="padding-xl column gap-xl align-center" id="body-content"
+    <div class="view padding-xl align-center text-center column gap-xl"
         style="overflow: hidden; position: relative; background-color: #E5E5E5;">
-        <div class="nudge_font padding-xl text-center" style="z-index: 1;">the template</div>
-        <img src="./images/template.png" style="width: 70vw;" />
-        <h3 class="text-center padding-xl" style="padding-bottom: 5vw;">
-            thinking about running a brand sprint? </br>
-            take this, it'll help you kick things off.
+        <div class="box-l padding-xl align-center nudge_font">
+            the template
+        </div>
+        <img class="box-m" src="./images/template.png" />
+        <h3 class="box-m padding-xl">
+            as early as you can - like 2-3 months ahead. we're almost
+            always booked with too much time on. that being said, s#!%
+            happens, and it is worth reaching out anyway.
         </h3>
     </div>
 
