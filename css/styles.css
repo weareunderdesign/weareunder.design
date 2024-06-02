@@ -7,24 +7,9 @@
 
 .nudge_font {
   font-family: 'VcNudge';
-  font-size: 300px;
+  font-size: 17.35vw;
   line-height: 89%;
 }
-
-.helvetica_regular {
-  font-family: 'HelveticaRegular';
-  font-size: 150px;
-  line-height: 92%;
-}
-
-/* .logo_images {
-  display: inline-block;
-  margin-top: 100px;
-  height: 40px;
-  width: auto;
-  padding-right: 5vw;
-} */
-
 
 
 .tickerimages {
@@ -276,15 +261,27 @@
 
 @keyframes random-color-change {
   0% {
+    background: #EC5A29;
+  }
+
+  20% {
+    background: #F5CA44;
+  }
+
+  40% {
+    background: #F5C2DF;
+  }
+
+  60% {
+    background: #7B5BF2;
+  }
+
+  80% {
     background: #014add;
   }
 
-  50% {
-    background: #fd3c2d;
-  }
-
   100% {
-    background: #fdc800;
+    background: #3F8E45;
   }
 }
 
