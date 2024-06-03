@@ -21,6 +21,7 @@ function addSidebar() {
 <div id="works-wrapper" class="hidden">
 <div class="view row show-project" style="position: relative; z-index: 100;" id="brand-sprints-section">
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
+  <a href="https://weareunder.design/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
   <a href="https://weareunder.design/work/blockaid/" class="sidebar-project-link" id="blockaid-FF4500">blockaid</a>
   <a href="https://weareunder.design/work/soli/" class="sidebar-project-link" id="soli-FF8A00">soli</a>
   <a href="https://weareunder.design/work/justripe/" class="sidebar-project-link" id="justripe-221C35">justripe</a>
@@ -60,6 +61,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
+<img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
 <img src="https://weareunder.design/work/soli/19.png" class="sidebar-project-image box-l" id="soli" loading="lazy"></img>
 <img src="https://weareunder.design/work/justripe/09.png" class="sidebar-project-image box-l" id="justripe" loading="lazy"></img>
