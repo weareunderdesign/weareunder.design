@@ -1,7 +1,7 @@
 function addFooter() {
   const TEMPLATE = `
   <div class="row padding-xl gap-xl">
-    <a href="/">
+    <a href="https://weareunder.design/">
       <img src="https://weareunder.design/images/under-footer.svg" style="width: 92px;">
     </a>
     <h4 class="box">
@@ -10,25 +10,25 @@ function addFooter() {
       and products for creative people.
     </h4>
     <div class="column">
-    <a href="https://weareunder.design/articles/">
-        <h4>Articles</h4>
+    <a href="https://weareunder.design/articles/" target="_blank">
+        <h4>articles</h4>
       </a>
-      <a href="https://store.weareunder.design/">
-        <h4>Privacy</h4>
+      <a href="https://store.weareunder.design/ target="_blank">
+        <h4>privacy</h4>
       </a>
-      <a href="https://store.weareunder.design/">
-        <h4>Terms & conditions</h4>
+      <a href="https://store.weareunder.design/" target="_blank">
+        <h4>terms & conditions</h4>
       </a>
     </div>
     <div class="column">
       <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
-        <h4>Newsletter</h4>
+        <h4>newsletter</h4>
       </a>
       <a href="https://www.instagram.com/under.design/" target="_blank">
-      <h4>Instagram</h4>
+      <h4>instagram</h4>
     </a>
       <a href="mailto:hello@weareunder.design">
-        <h4>Contact</h4>
+        <h4>contact</h4>
       </a>
     </div>
   </div>
