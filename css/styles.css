@@ -24,7 +24,7 @@
 }
 
 
-@keyframes tickerblockimages1 {
+@keyframes tickerblockimages {
   0% {
     right: -500vw;
     opacity: 1;
@@ -41,10 +41,10 @@
   }
 }
 
-.tickerblockimages1 {
+.tickerblockimages {
   position: absolute;
   right: -500vw;
-  animation: tickerblockimages1 200s linear infinite;
+  animation: tickerblockimages 320s linear infinite;
   flex-wrap: nowrap;
   width: 600vw;
 }
@@ -56,7 +56,7 @@
   flex-wrap: nowrap;
 }
 
-@keyframes tickerblock1 {
+@keyframes tickerblock {
   0% {
     left: -107vw;
   }
@@ -70,14 +70,21 @@
   }
 }
 
-.tickerblock1 {
+.tickerblock {
   position: absolute;
   left: -107vw;
-  animation: tickerblock1 40s linear infinite;
+  animation: tickerblock 80s linear infinite;
 }
 
 .product {
   background: no-repeat center/cover;
+  position: relative;
+}
+
+.product-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .mix-diff {
@@ -211,7 +218,6 @@
   }
 }
 
-/* Added media query for mobile devices */
 @media only screen and (max-width: 768px) {
   #navigation {
     position: absolute;
@@ -385,6 +391,16 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
   .nocolumn {
     flex-direction: row !important;
@@ -444,138 +460,84 @@
     display: none;
   }
 
-  @keyframes tickerblock1 {
+  .waitwhat {
+    flex-wrap: wrap !important;
+  }
+
+  .waitwhat1 {
+    flex-wrap: wrap !important;
+  }
+
+  @keyframes tickerblockimages {
     0% {
-      left: -175vw;
+      right: -510vw;
       opacity: 1;
     }
-
+  
+    50% {
+      right: 510vw;
+      opacity: 1;
+    }
+  
     100% {
-      left: 175vw;
+      right: -510vw;
       opacity: 1;
     }
   }
-
-  .tickerblock1 {
+  
+  .tickerblockimages {
+    position: absolute;
     flex-direction: row;
-    left: -175vw;
+    right: -510vw;
+    animation: tickerblockimages 320s linear infinite;
+    flex-wrap: nowrap;
+    width: 600vw;
   }
-
-
-  @keyframes tickerblock2 {
-    0% {
-      left: -175vw;
-      opacity: 1;
-    }
-
-    100% {
-      left: 175vw;
-      opacity: 1;
-    }
-  }
-
-  .tickerblock2 {
+  
+  .tickertext {
+    position: relative;
     flex-direction: row;
-    left: -175vw;
+    width: 500vw;
+    overflow: hidden;
+    flex-wrap: nowrap;
   }
-
-  @keyframes tickerblock3 {
+  
+  @keyframes tickerblock {
     0% {
+      left: -420vw;
+    }
+  
+    50% {
       left: 0vw;
-      opacity: 1;
     }
-
-    50% {
-      left: 175vw;
-      /* left: 0vw; */
-      opacity: 1;
-    }
-
+  
     100% {
-      left: 175vw;
-      /* left: 0vw; */
-      opacity: 0;
+      left: -420vw;
     }
   }
-
-  .tickerblock3 {
+  
+  .tickerblock {
+    position: absolute;
     flex-direction: row;
-    left: 0vw;
+    left: -420vw;
+    animation: tickerblock 80s linear infinite;
   }
+  
 
-  .ticker-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @keyframes tickerblockimages1 {
-    0% {
-      right: -2005vw;
-      opacity: 1;
-    }
-
-    100% {
-      right: 2005vw;
-      opacity: 1;
-    }
-  }
-
-  .tickerblockimages1 {
-    flex-direction: row;
-    width: 2000vw;
-    opacity: 0;
-  }
-
-  @keyframes tickerblockimages2 {
-    0% {
-      right: -2005vw;
-      opacity: 1;
-    }
-
-    100% {
-      right: 2005vw;
-      opacity: 1;
-    }
-  }
-
-  .tickerblockimages2 {
-    flex-direction: row;
-    width: 2000vw;
-  }
-
-  @keyframes tickerblockimages3 {
-    0% {
-      right: 0vw;
-      opacity: 1;
-    }
-
-    50% {
-      right: 2005vw;
-      opacity: 1;
-    }
-
-    100% {
-      right: 2005vw;
-      opacity: 0;
-    }
-  }
-
-  .tickerblockimages3 {
-    flex-direction: row;
-    width: 2000vw;
-  }
-
-  .waitwhat{
-    flex-wrap: wrap !important;
-  }
-
-  .waitwhat1{
-    flex-wrap: wrap !important;
-  }
+  
 }
 
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait){
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
   .nudge_font {
     font-size: 25vw;
   }
@@ -603,79 +565,63 @@
   .accordion-text {
     width: 100%;
   }
-
-  @keyframes tickerblockimages1 {
+  @keyframes tickerblockimages {
     0% {
-      right: -950vw;
-      opacity: 1;
-    }
-
-    100% {
-      right: 950vw;
-      opacity: 1;
-    }
-  }
-
-  .tickerblockimages1 {
-    position: absolute;
-    right: -950vw;
-    animation: tickerblockimages1 240s linear infinite;
-    animation-delay: 120s;
-    flex-wrap: nowrap;
-    width: 925vw;
-  }
-
-  @keyframes tickerblockimages2 {
-    0% {
-      right: -950vw;
-      opacity: 1;
-    }
-
-    100% {
-      right: 950vw;
-      opacity: 1;
-    }
-  }
-
-  .tickerblockimages2 {
-    position: absolute;
-    right: -950vw;
-    animation: tickerblockimages2 240s linear infinite;
-    flex-wrap: nowrap;
-    width: 925vw;
-  }
-
-  @keyframes tickerblockimages3 {
-    0% {
-      right: 0vw;
+      right: -455vw;
       opacity: 1;
     }
 
     50% {
-      right: 950vw;
+      right: 455vw;
       opacity: 1;
     }
 
     100% {
-      right: 950vw;
-      opacity: 0;
+      right: -455vw;
+      opacity: 1;
     }
   }
 
-  .tickerblockimages3 {
+  .tickerblockimages {
     position: absolute;
-    right: 0vw;
-    opacity: 0;
-    animation: tickerblockimages3 240s linear;
+    right: -455vw;
+    animation: tickerblockimages 320s linear infinite;
     flex-wrap: nowrap;
-    width: 925vw;
+    width: 550vw;
   }
 
-  .blue_background{
+  .tickertext {
+    position: relative;
+    width: 220vw;
+    overflow: hidden;
+    flex-wrap: nowrap;
+  }
+
+  @keyframes tickerblock {
+    0% {
+      left: -120vw;
+    }
+
+    50% {
+      left: 0vw;
+    }
+
+    100% {
+      left: -120vw;
+    }
+  }
+
+  .tickerblock {
+    position: absolute;
+    left: -120vw;
+    animation: tickerblock 80s linear infinite;
+  }
+
+  .blue_background {
     flex-direction: column;
   }
 
-  .waitwhat{
+  .waitwhat {
     flex-wrap: wrap !important;
   }
 
