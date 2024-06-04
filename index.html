@@ -19,138 +19,55 @@
 <body>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <under-header></under-header>
-  <nav class="column padding-xl gap-xs" style="
-        color: white;
-        position: fixed;
-        right: 0;
-        z-index: 999;
-        mix-blend-mode: difference;
-      " id="under-nav">
-    <span class="header-link" style="cursor: pointer" id="nav-work">
-      <h5>design</h5>
-    </span>
-    <a class="header-link" href="https://store.weareunder.design">
-      <h5>store</h5>
-    </a>
-    <a class="header-link" href="mailto:hello@weareunder.design">
-      <h5>contact</h5>
-    </a>
-  </nav>
+  <under-navigation></under-navigation>
 
-
-  <div id="works-wrapper" style="display: none">
-    <div class="view row show-project" style="position: relative" id="brand-sprints-section">
-      <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
-        <a href="./work/blockaid" class="sidebar-project-link" id="blockaid-FF4500">blockaid</a>
-        <!-- <a href="./work/pointfive" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a> -->
-        <a href="./work/soli" class="sidebar-project-link" id="soli-FF8A00">soli</a>
-        <a href="./work/justripe" class="sidebar-project-link" id="justripe-221C35">justripe</a>
-        <a href="./work/utila" class="sidebar-project-link" id="utila-00794E">utila</a>
-        <a href="./work/visioncamp/" class="sidebar-project-link" id="visioncamp-0700FD">visioncamp</a>
-        <a href="./work/balance" class="sidebar-project-link" id="balance-1d1d1d">balance</a>
-
-        <a href="./work/finaloop" class="sidebar-project-link" id="finaloop-FF0000">finaloop</a>
-        <a href="./work/dymension/" class="sidebar-project-link" id="dymension-24201F">dymension</a>
-        <a href="./work/groundcover" class="sidebar-project-link" id="groundcover-1BB485">groundcover</a>
-        <a href="./work/nilus" class="sidebar-project-link" id="nilus-db160d">nilus</a>
-        <a href="./work/raftt" class="sidebar-project-link" id="raftt-0C6BEA">raftt</a>
-        <a href="./work/togetherr" class="sidebar-project-link" id="togetherr-000000">togetherr</a>
-        <a href="./work/upword" class="sidebar-project-link" id="upword-B8A4FD">upword</a>
-        <a href="./work/alcide" class="sidebar-project-link" id="alcide-FF0000">alcide</a>
-        <a href="./work/darna" class="sidebar-project-link" id="darna-2a52cf">darna</a>
-        <a href="./work/everafter" class="sidebar-project-link" id="everafter-FF7051">everafter</a>
-        <a href="./work/faintlines" class="sidebar-project-link" id="faintlines-FF0DBD">faintlines</a>
-        <a href="./work/flume" class="sidebar-project-link" id="flume-FF6E15">flume</a>
-        <a href="./work/grain" class="sidebar-project-link" id="grain-FED164">grain</a>
-        <a href="./work/healthquarters" class="sidebar-project-link" id="healthquarters-0E305A">healthquarters</a>
-        <a href="./work/iceberg" class="sidebar-project-link" id="iceberg-EC7926">iceberg</a>
-        <a href="./work/karma" class="sidebar-project-link" id="karma-FCAC8B">karma</a>
-        <a href="./work/larosh" class="sidebar-project-link" id="larosh-C0815F">larosh</a>
-        <a href="./work/le_salon" class="sidebar-project-link" id="le_salon-000000">le salon</a>
-        <a href="./work/mesh_payments" class="sidebar-project-link" id="mesh_payments-19F08B">mesh payments</a>
-        <a href="./work/notch" class="sidebar-project-link" id="notch-CF6AFF">notch</a>
-        <a href="./work/perdiem" class="sidebar-project-link" id="perdiem-0171EA">perdiem</a>
-        <a href="./work/reeco" class="sidebar-project-link" id="reeco-0FCB71">reeco</a>
-        <a href="./work/reflect" class="sidebar-project-link" id="reflect-D1A8FD">reflect</a>
-        <a href="./work/tagbox" class="sidebar-project-link" id="tagbox-C2A78D">tagbox</a>
-        <a href="./work/revelations" class="sidebar-project-link" id="revelations-000000">Revelations</a>
-        <a href="./work/unit" class="sidebar-project-link" id="unit-000000">unit</a>
-        <a href="./work/unleash" class="sidebar-project-link" id="unleash-BE8DF6">unleash</a>
-        <a href="./work/zigi" class="sidebar-project-link" id="zigi-22D285">zigi</a>
-        <a href="./work/zoog" class="sidebar-project-link" id="zoog-FF7051">zoog</a>
-      </div>
+  <div class="view">
+    <div class="ping-pong">
+      <video src="./animations/light_new.webm" autoplay muted loop
+        style="object-fit: contain; height: 100%; width: 100%">
+      </video>
     </div>
-  </div>
-  <div class="projects">
-    <img src="./work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
-    <!-- <img src="./work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>  -->
-    <img src="./work/soli/19.png" class="sidebar-project-image box-l" id="soli" loading="lazy"></img>
-    <img src="./work/justripe/09.png" class="sidebar-project-image box-l" id="justripe" loading="lazy"></img>
-    <img src="./work/utila/0.png" class="sidebar-project-image box-l" id="utila" loading="lazy"></img>
-    <img src="./work/balance/0.png" class="sidebar-project-image box-l" id="balance" loading="lazy"></img>
-    <img src="./work/visioncamp/6.png" class="sidebar-project-image box-l" id="visioncamp" loading="lazy"></img>
-    <img src="./work/dymension/0.png" class="sidebar-project-image" id="dymension" loading="lazy"></img>
-    <img src="./work/finaloop/0.png" class="sidebar-project-image" id="finaloop" loading="lazy"></img>
-    <img src="./work/groundcover/0.png" class="sidebar-project-image" id="groundcover" loading="lazy"></img>
-    <img src="./work/nilus/0.png" class="sidebar-project-image" id="nilus" loading="lazy"></img>
-    <img src="./work/raftt/0.png" class="sidebar-project-image" id="raftt" loading="lazy"></img>
-    <img src="./work/togetherr/0.png" class="sidebar-project-image" id="togetherr" loading="lazy"></img>
-    <img src="./work/upword/0.png" class="sidebar-project-image" id="upword" loading="lazy"></img>
-    <img src="./work/alcide/0.png" class="sidebar-project-image" id="alcide" loading="lazy"></img>
-    <img src="./work/darna/0.png" class="sidebar-project-image" id="darna" loading="lazy"></img>
-    <img src="./work/everafter/0.png" class="sidebar-project-image" id="everafter" loading="lazy"></img>
-    <img src="./work/faintlines/0.png" class="sidebar-project-image" id="faintlines" loading="lazy"></img>
-    <img src="./work/flume/0.png" class="sidebar-project-image" id="flume" loading="lazy"></img>
-    <img src="./work/grain/0.png" class="sidebar-project-image" id="grain" loading="lazy"></img>
-    <img src="./work/healthquarters/0.png" class="sidebar-project-image" id="healthquarters" loading="lazy"></img>
-    <img src="./work/iceberg/0.png" class="sidebar-project-image" id="iceberg" loading="lazy"></img>
-    <img src="./work/karma/0.png" class="sidebar-project-image" id="karma" loading="lazy"></img>
-
-    <img src="./work/larosh/0.png" class="sidebar-project-image" id="larosh" loading="lazy"></img>
-    <img src="./work/le_salon/0.png" class="sidebar-project-image" id="le_salon" loading="lazy"></img>
-    <img src="./work/mesh_payments/0.svg" class="sidebar-project-image" id="mesh_payments" loading="lazy"></img>
-    <img src="./work/notch/0.png" class="sidebar-project-image" id="notch" loading="lazy"></img>
-    <img src="./work/perdiem/0.png" class="sidebar-project-image" id="perdiem" loading="lazy"></img>
-    <img src="./work/reeco/0.png" class="sidebar-project-image" id="reeco" loading="lazy"></img>
-    <img src="./work/reflect/0.png" class="sidebar-project-image" id="reflect" loading="lazy"></img>
-    <img src="./work/tagbox/0.png" class="sidebar-project-image" id="tagbox" loading="lazy"></img>
-    <img src="./work/revelations/0.png" class="sidebar-project-image" id="revelations" loading="lazy"></img>
-    <img src="./work/unit/0.png" class="sidebar-project-image" id="unit" loading="lazy"></img>
-    <img src="./work/unleash/0.png" class="sidebar-project-image" id="unleash" loading="lazy"></img>
-    <img src="./work/zigi/0.svg" class="sidebar-project-image" id="zigi" loading="lazy"></img>
-    <img src="./work/zoog/0.png" class="sidebar-project-image" id="zoog" loading="lazy"></img>
-  </div>
-  <div id="body-content">
-    <div class="hero-section ping-pong" id="brand-sprints-section" style="background-color: white;">
-      <video src="./animations/light.webm" autoplay muted loop
-        style="object-fit: contain; height: 100%; width: 100%"></video>
-
-      <div class="circle circle-brandsprint random-color-change" id="cta-animation"
-        onclick="window.location.href='./brand-sprint'" style="cursor: pointer;">
-        <h4>brand<br>sprint</h4>
-      </div>
-
-    </div>
-    <a href="./justripe/" class="padding-xl view row product" style="background-image: url(./images/justripe.png)">
-      <div class="align-end mix-diff">
-        <p>justripe</p>
+    <a href="https://weareunder.design/brandsprint/" target="_blank"
+      class="circle circle-brandsprint random-color-change clickable" id="cta-animation" style="cursor: pointer;">
+      <h4>brand<br>sprint</h4>
+    </a>
+    <a href="http://rnbw.company/" target="_blank">
+      <div class="row product">
+        <img class="box-l" src="./images/rnbw.png">
+        <div class="align-end mix-diff product-text padding-xl">
+          <p>rnbw</p>
+        </div>
       </div>
     </a>
-    <a class="padding-xl view row product" style="background-image: url(./images/mouve.png)">
-      <div class="align-end mix-diff">
-        <p>mouve</p>
+    <a href="./justripe/" class="row product" target="_blank">
+      <div class="row product">
+        <img class="box-l" src="./images/justripe.png">
+        <div class="align-end mix-diff product-text padding-xl">
+          <p>justripe</p>
+        </div>
       </div>
     </a>
-    <a href="./revelations" class="padding-xl view row product"
-      style="background-image: url(./revelations/images/5.png)">
-      <div class="align-end mix-diff">
-        <p>revelations</p>
+    <a class="row product">
+      <div class="row product">
+        <img class="box-l" src="./images/mouve.png">
+        <div class="align-end mix-diff product-text padding-xl">
+          <p>mouve — coming soon</p>
+        </div>
       </div>
     </a>
-    <under-footer></under-footer>
+    <a class="random-color-change row product">
+      <div class="row product">
+        <img class="box-l" src="./images/book.png">
+        <div class="align-end mix-diff product-text padding-xl">
+          <p>brand sprint book — coming soon</p>
+        </div>
+      </div>
+    </a>
   </div>
-
-  <script type="module" defer src="./js/main.js"></script>
+  <under-footer></under-footer>
+  </div>
+  </div>
+  <script src="./js/navigation.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/footer.js"></script>
 </body>
