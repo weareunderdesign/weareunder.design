@@ -10,7 +10,10 @@ function addSidebar() {
 <span class="header-link" style="cursor: pointer" id="nav-work">
 <h5>design</h5>
 </span>
-<a class="header-link" href="https://store.weareunder.design">
+<a class="header-link" href="https://weareunder.design/brandsprint/">
+<h5>brandsprint</h5>
+</a>
+<a class="header-link" href="https://store.weareunder.design" target="_blank">
 <h5>store</h5>
 </a>
 <a class="header-link" href="mailto:hello@weareunder.design">

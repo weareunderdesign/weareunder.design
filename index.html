@@ -14,6 +14,8 @@
   <script src="./js/lottie_scroll.js"></script>
   <script src="./js/pingpong.js"></script>
   <title>Under</title>
+  <meta property="og:image" content="./images/cover.png">
+
 </head>
 
 <body>
@@ -21,55 +23,43 @@
   <under-header></under-header>
   <under-navigation></under-navigation>
 
-  <div class="view">
-    <div class="ping-pong">
-      <video src="./animations/light_new.webm" autoplay muted loop
-        style="object-fit: contain; height: 100%; width: 100%">
-      </video>
-    </div>
-    <a href="https://weareunder.design/brandsprint/" target="_blank"
-      class="circle circle-brandsprint random-color-change clickable" id="cta-animation" style="cursor: pointer;">
+  <div class="view view1 ping-pong align-center">
+    <video class="video" id="video1" src="./animations/light_new.webm" autoplay muted></video>
+    <video class="video" id="video2" src="./animations/light.webm" autoplay muted loop style="display: none;"></video>
+    <a href="https://weareunder.design/brandsprint/" class="circle circle-brandsprint random-color-change clickable"
+      id="cta-animation" style="cursor: pointer;">
       <h4>brand<br>sprint</h4>
     </a>
-    <a href="http://rnbw.company/" target="_blank">
-      <div class="row product">
-        <img class="box-l" src="./images/rnbw.png">
-        <div class="align-end mix-diff product-text padding-xl">
-          <p>rnbw</p>
-        </div>
-      </div>
-    </a>
-    <a href="./justripe/" class="row product" target="_blank">
-      <div class="row product">
-        <img class="box-l" src="./images/justripe.png">
-        <div class="align-end mix-diff product-text padding-xl">
-          <p>justripe</p>
-        </div>
-      </div>
-    </a>
-    <a class="row product">
-      <div class="row product">
-        <img class="box-l" src="./images/mouve.png">
-        <div class="align-end mix-diff product-text padding-xl">
-          <p>mouve — coming soon</p>
-        </div>
-      </div>
-    </a>
-    <a class="random-color-change row product">
-      <div class="row product">
-        <img class="box-l" src="./images/book.png">
-        <div class="align-end mix-diff product-text padding-xl">
-          <p>brand sprint book — coming soon</p>
-        </div>
-      </div>
-    </a>
   </div>
+  <a class="view row product" href="http://rnbw.company/" target="_blank"
+    style="background-image: url(./images/rnbw.png)">
+    <div class="align-end mix-diff product-text padding-xl">
+      <p>rnbw</p>
+    </div>
+  </a>
+  <a class="view row product" href="./justripe/" style="background-image: url(./images/justripe.png)">
+    <div class="align-end mix-diff product-text padding-xl">
+      <p>justripe</p>
+    </div>
+  </a>
+  <a class="view row product" style="background-image: url(./images/mouve.png)">
+    <div class="align-end mix-diff product-text padding-xl">
+      <p>mouve — coming soon</p>
+    </div>
+  </a>
+  <a class="view row product random-color-change" href="https://weareunder.design/brandsprint/#brandsprintpagebook" style="background-image: url(./images/book.png);">
+    <div class="align-end mix-diff product-text padding-xl">
+      <p>brand sprint book — coming soon
+      </p>
+    </div>
+  </a>
   <under-footer></under-footer>
   </div>
   </div>
   <script src="./js/navigation.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/footer.js"></script>
+  <script src="./js/video.js"></script>
 </body>
 
 </html>
