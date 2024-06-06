@@ -27,12 +27,12 @@ function addFooter() {
       <a href="https://www.instagram.com/under.design/" target="_blank">
       <h5>instagram</h5>
     </a>
+    <a href="https://x.com/underdesign_" target="_blank">
+    <h5>twitter</h5>
+  </a>
       <a href="mailto:hello@weareunder.design">
         <h5>contact</h5>
       </a>
-      <a href="https://x.com/i/flow/login?redirect_after_login=%2Funderdesign_/" target="_blank">
-      <h5>x</h5>
-    </a>
     </div>
   </div>
   `;

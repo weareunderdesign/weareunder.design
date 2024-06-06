@@ -59,7 +59,7 @@
 .tickerblockimages {
   position: absolute;
   right: -500vw;
-  animation: tickerblockimages 320s linear infinite;
+  animation: tickerblockimages 800s linear infinite;
   flex-wrap: nowrap;
   width: 600vw;
 }
@@ -88,7 +88,7 @@
 .tickerblock {
   position: absolute;
   left: -1900vw;
-  animation: tickerblock 320s linear infinite;
+  animation: tickerblock 1200s linear infinite;
 }
 
 .tickerblock:hover,
