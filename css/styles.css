@@ -59,7 +59,7 @@
 .tickerblockimages {
   position: absolute;
   right: -500vw;
-  animation: tickerblockimages 800s linear infinite;
+  animation: tickerblockimages 400s linear infinite;
   flex-wrap: nowrap;
   width: 600vw;
 }
@@ -505,7 +505,7 @@
     position: absolute;
     flex-direction: row;
     right: -510vw;
-    animation: tickerblockimages 800s linear infinite;
+    animation: tickerblockimages 400s linear infinite;
     flex-wrap: nowrap;
     width: 600vw;
   }
@@ -545,6 +545,14 @@
 
   .blue_background1 {
     flex-direction: column-reverse !important;
+  }
+
+  .display_none_pingpong{
+    display: none;
+  }
+
+  .min_height_pingpong{
+    min-height: 55vh !important;
   }
 }
 
@@ -601,7 +609,7 @@
   .tickerblockimages {
     position: absolute;
     right: -455vw;
-    animation: tickerblockimages 800s linear infinite;
+    animation: tickerblockimages 400s linear infinite;
     flex-wrap: nowrap;
     width: 550vw;
   }
