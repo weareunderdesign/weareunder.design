@@ -59,7 +59,7 @@
 .tickerblockimages {
   position: absolute;
   right: -500vw;
-  animation: tickerblockimages 800s linear infinite;
+  animation: tickerblockimages 400s linear infinite;
   flex-wrap: nowrap;
   width: 600vw;
 }
@@ -443,6 +443,12 @@
     padding: 0;
   }
 
+  .date{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .schedule-circle {
     display: flex;
     align-items: center;
@@ -458,6 +464,7 @@
     justify-content: center;
     height: 60vw;
     width: 60vw;
+    margin-left: 0;
   }
 
   .accordion-header {
@@ -498,7 +505,7 @@
     position: absolute;
     flex-direction: row;
     right: -510vw;
-    animation: tickerblockimages 320s linear infinite;
+    animation: tickerblockimages 400s linear infinite;
     flex-wrap: nowrap;
     width: 600vw;
   }
@@ -529,13 +536,24 @@
     position: absolute;
     flex-direction: row;
     left: -4900vw;
-    animation: tickerblock 320s linear infinite;
+    animation: tickerblock 1200s linear infinite;
   }
 
-  .nostart{
+  .nostart {
     align-items: center;
   }
 
+  .blue_background1 {
+    flex-direction: column-reverse !important;
+  }
+
+  .display_none_pingpong{
+    display: none;
+  }
+
+  .min_height_pingpong{
+    min-height: 55vh !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
@@ -591,7 +609,7 @@
   .tickerblockimages {
     position: absolute;
     right: -455vw;
-    animation: tickerblockimages 320s linear infinite;
+    animation: tickerblockimages 400s linear infinite;
     flex-wrap: nowrap;
     width: 550vw;
   }
@@ -607,11 +625,11 @@
     0% {
       left: -1900vw;
     }
-  
+
     50% {
       left: 10vw;
     }
-  
+
     100% {
       left: -1900vw;
     }
@@ -620,7 +638,7 @@
   .tickerblock {
     position: absolute;
     left: -1900vw;
-    animation: tickerblock 320s linear infinite;
+    animation: tickerblock 1200s linear infinite;
   }
 
   .blue_background1 {
