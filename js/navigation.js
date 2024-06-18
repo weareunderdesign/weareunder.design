@@ -72,6 +72,10 @@ function addSidebar() {
 
 <div id="works-wrapper" class="hidden">
 <div class="view row show-project" style="position: relative; z-index: 100;" id="brand-sprints-section">
+<a href="https://weareunder.design/" class="logo padding-xl mix-diff" href="/" style="">
+        <img src="https://weareunder.design/images/under-header-logo.svg" class="desktop-logo-navigation"/>
+        <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile-logo-navigation"/>
+</a>
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
   <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-EE82EE">rnbw</a>
   <a href="https://weareunder.design/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
@@ -405,6 +409,7 @@ async function SideBarFunctionality() {
   };
   Main.main();
 }
+
 SideBarFunctionality();
 
 addSidebar();
