@@ -172,6 +172,14 @@
   cursor: pointer;
 }
 
+.desktop-logo-navigation{
+  display: block;
+}
+
+.mobile-logo-navigation{
+  display: none;
+}
+
 .random-color-change {
   -webkit-animation: random-color-change 10s linear infinite alternate both;
   animation: random-color-change 10s linear infinite alternate both;
@@ -409,6 +417,20 @@
 .accordion-header {
   transform: rotate(180deg);
 }
+
+@media (max-width: 992px){
+
+  .desktop-logo-navigation{
+    display: none;
+  }
+  
+  .mobile-logo-navigation{
+    display: block;
+  }
+
+}
+  
+
 
 @media (max-width: 768px) {
   .nocolumn {
