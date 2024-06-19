@@ -24,7 +24,7 @@ function preloadImages() {
     "https://weareunder.design/work/karma/0.png",
     "https://weareunder.design/work/larosh/0.png",
     "https://weareunder.design/work/le_salon/0.png",
-    "https://weareunder.design/work/mesh_payments/0.png",
+    "https://weareunder.design/work/mesh_payments/0.svg",
     "https://weareunder.design/work/notch/0.png",
     "https://weareunder.design/work/perdiem/0.png",
     "https://weareunder.design/work/reeco/0.png",
@@ -33,8 +33,9 @@ function preloadImages() {
     "https://weareunder.design/work/revelations/0.png",
     "https://weareunder.design/work/unit/0.png",
     "https://weareunder.design/work/unleash/0.png",
-    "https://weareunder.design/work/zigi/0.png",
-    "https://weareunder.design/work/zoog/0.png"
+    "https://weareunder.design/work/zigi/0.svg",
+    "https://weareunder.design/work/zoog/0.png",
+
   ];
 
   imageUrls.forEach((url) => {
