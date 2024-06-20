@@ -1,5 +1,6 @@
 function preloadImages() {
   const imageUrls = [
+    "https://weareunder.design/work/bounce/0.png",
     "https://weareunder.design/work/rnbw/0.png",
     "https://weareunder.design/work/spacetop/0.png",
     "https://weareunder.design/work/blockaid/0.png",
@@ -78,6 +79,7 @@ function addSidebar() {
         <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile-logo-navigation"/>
 </a>
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
+  <a href="https://weareunder.design/work/bounce/" class="sidebar-project-link" id="bounce-FEF6EA">bounce</a>
   <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-EE82EE">rnbw</a>
   <a href="https://weareunder.design/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
   <a href="https://weareunder.design/work/blockaid/" class="sidebar-project-link" id="blockaid-FF4500">blockaid</a>
@@ -119,6 +121,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
+<img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
 <img src="https://weareunder.design/work/rnbw/0.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
