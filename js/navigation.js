@@ -64,7 +64,7 @@ function addSidebar() {
 <a class="header-link" href="https://weareunder.design/brandsprint/">
 <h5>brandsprint</h5>
 </a>
-<a class="header-link" href="https://store.weareunder.design" target="_blank">
+<a class="header-link" href="https://store.weareunder.design">
 <h5>store</h5>
 </a>
 <a class="header-link" href="mailto:hello@weareunder.design">
@@ -79,8 +79,8 @@ function addSidebar() {
         <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile-logo-navigation"/>
 </a>
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
-  <a href="https://weareunder.design/work/bounce/" class="sidebar-project-link" id="bounce-FEF6EA">bounce</a>
-  <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-EE82EE">rnbw</a>
+  <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-000000">rnbw</a>
+  <a href="https://weareunder.design/work/bounce/" class="sidebar-project-link" id="bounce-03542C">bounce</a>
   <a href="https://weareunder.design/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
   <a href="https://weareunder.design/work/blockaid/" class="sidebar-project-link" id="blockaid-FF4500">blockaid</a>
   <a href="https://weareunder.design/work/soli/" class="sidebar-project-link" id="soli-FF8A00">soli</a>
