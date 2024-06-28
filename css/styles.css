@@ -59,7 +59,7 @@
 .tickerblockimages {
   position: absolute;
   right: -500vw;
-  animation: tickerblockimages 400s linear infinite;
+  animation: tickerblockimages 340s linear infinite;
   flex-wrap: nowrap;
   width: 600vw;
 }
@@ -88,7 +88,7 @@
 .tickerblock {
   position: absolute;
   left: -1900vw;
-  animation: tickerblock 1200s linear infinite;
+  animation: tickerblock 1020s linear infinite;
 }
 
 .tickerblock:hover,
@@ -527,7 +527,7 @@
     position: absolute;
     flex-direction: row;
     right: -510vw;
-    animation: tickerblockimages 400s linear infinite;
+    animation: tickerblockimages 340s linear infinite;
     flex-wrap: nowrap;
     width: 600vw;
   }
@@ -558,7 +558,7 @@
     position: absolute;
     flex-direction: row;
     left: -4900vw;
-    animation: tickerblock 1200s linear infinite;
+    animation: tickerblock 1020s linear infinite;
   }
 
   .nostart {
@@ -631,7 +631,7 @@
   .tickerblockimages {
     position: absolute;
     right: -455vw;
-    animation: tickerblockimages 400s linear infinite;
+    animation: tickerblockimages 340s linear infinite;
     flex-wrap: nowrap;
     width: 550vw;
   }
@@ -660,7 +660,7 @@
   .tickerblock {
     position: absolute;
     left: -1900vw;
-    animation: tickerblock 1200s linear infinite;
+    animation: tickerblock 1020s linear infinite;
   }
 
   .blue_background1 {
