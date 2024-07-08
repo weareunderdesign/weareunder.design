@@ -4,6 +4,8 @@ function addSlider() {
         <div class="slider view">
             <div class="slides view">
 
+                <a href="https://weareunder.design/work/bounce/" target="_blank" class="slide view" id="bounce"
+                    style="background-image: url('https://weareunder.design/work/bounce/0.png');"></a>
                 <a href="https://weareunder.design/work/rnbw/" target="_blank" class="slide view" id="rnbw"
                     style="background-image: url('https://weareunder.design/work/rnbw/0.png');"></a>
                 <a href="https://weareunder.design/work/nilus/" target="_blank" class="slide view" id="nilus"
@@ -96,46 +98,40 @@ function addSlider() {
         }
     }
     customElements.define("under-slider", UnderSlider);
-
+    
     const slides = document.querySelector('.slides');
-        const slide = document.querySelectorAll('.slide');
-        const slideText = document.querySelector('.slidertext');
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-        let currentIndex = 0;
+    const slide = document.querySelectorAll('.slide');
+    const slideText = document.querySelector('.slidertext');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentIndex = 0;
     
-        function updateSlider() {
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-            const currentSlideId = slide[currentIndex].id;
-            slideText.textContent = currentSlideId;
+    let direction = 1; 
+    const interval = 3000; 
     
-            if (currentIndex === 0) {
-                prevButton.style.display = 'none';
-                nextButton.style.display = 'block';
-            } else if (currentIndex === slide.length - 1) {
-                prevButton.style.display = 'block';
-                nextButton.style.display = 'none';
-            } else {
-                prevButton.style.display = 'block';
-                nextButton.style.display = 'block';
-            }
+    function updateSlider() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        const currentSlideId = slide[currentIndex].id;
+        slideText.textContent = currentSlideId;
+    
+        prevButton.style.display = 'none';
+        nextButton.style.display = 'none';
+    }
+    
+    function autoSlide() {
+        if (direction === 1 && currentIndex === slide.length - 1) {
+            direction = -1; 
+        } else if (direction === -1 && currentIndex === 0) {
+            direction = 1; 
         }
     
-        document.querySelector('.next').addEventListener('click', () => {
-            if (currentIndex < slide.length - 1) {
-                currentIndex++;
-                updateSlider();
-            }
-        });
-    
-        document.querySelector('.prev').addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateSlider();
-            }
-        });
-    
+        currentIndex += direction;
         updateSlider();
-}
-
-addSlider();
+    }
+    
+    setInterval(autoSlide, interval);
+    
+    updateSlider();
+    }
+    
+    addSlider();
