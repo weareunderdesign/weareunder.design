@@ -16,7 +16,7 @@ function addFooter() {
       <a href="https://weareunder.design/articles/">
         <h5>articles</h5>
       </a>
-      <a href="https://store.weareunder.design/" target="_blank">
+      <a href="https://store.weareunder.design/">
         <h5>store</h5>
       </a>
     </div>
