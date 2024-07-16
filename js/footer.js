@@ -13,8 +13,8 @@ function addFooter() {
       <a href="https://weareunder.design/brandsprint/">
         <h5>brandsprint</h5>
       </a>
-      <a href="https://weareunder.design/articles/">
-        <h5>articles</h5>
+      <a href="https://weareunder.design/blog/">
+        <h5>blog</h5>
       </a>
       <a href="https://store.weareunder.design/">
         <h5>store</h5>
