@@ -6,8 +6,6 @@ function addSlider() {
 
                 <a href="https://weareunder.design/work/bounce/" target="_blank" class="slide view" id="bounce"
                     style="background-image: url('https://weareunder.design/work/bounce/0.png');"></a>
-                <a href="https://weareunder.design/work/rnbw/" target="_blank" class="slide view" id="rnbw"
-                    style="background-image: url('https://weareunder.design/work/rnbw/0.png');"></a>
                 <a href="https://weareunder.design/work/nilus/" target="_blank" class="slide view" id="nilus"
                     style="background-image: url('https://weareunder.design/work/nilus/0.png');"></a>
                 <a href="https://weareunder.design/work/spacetop/" target="_blank" class="slide view" id="spacetop"
@@ -80,7 +78,8 @@ function addSlider() {
                     style="background-image: url('https://weareunder.design/work/zigi/0.png');"></a>
                 <a href="https://weareunder.design/work/zoog/" target="_blank" class="slide view" id="zoog"
                     style="background-image: url('https://weareunder.design/work/zoog/0.png');"></a>
-
+                <a href="https://weareunder.design/work/rnbw/" target="_blank" class="slide view" id="rnbw"
+                    style="background-image: url('https://weareunder.design/work/rnbw/0.png');"></a>
 
 
             </div>
