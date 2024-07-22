@@ -6,8 +6,8 @@ function addFooter() {
     </a>
     <h5 class="box">
       under creates high-quality,<br>
-      well-designed, creative brands <br>
-      and products for creative people.
+      well-designed, brands <br>
+      products for creative people.
     </h5>
     <div class="column">
       <a href="https://weareunder.design/brandsprint/">
@@ -18,6 +18,9 @@ function addFooter() {
       </a>
       <a href="https://store.weareunder.design/">
         <h5>store</h5>
+      </a>
+            <a href="mailto:hello@weareunder.design">
+        <h5>contact</h5>
       </a>
     </div>
     <div class="column">
@@ -30,9 +33,9 @@ function addFooter() {
     <a href="https://x.com/underdesign0" target="_blank">
     <h5>twitter</h5>
   </a>
-      <a href="mailto:hello@weareunder.design">
-        <h5>contact</h5>
-      </a>
+      <a href="https://github.com/weareunderdesign" target="_blank">
+    <h5>github</h5>
+  </a>
     </div>
   </div>
   `;
