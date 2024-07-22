@@ -27,7 +27,7 @@ function addFooter() {
       <a href="https://www.instagram.com/under.design/" target="_blank">
       <h5>instagram</h5>
     </a>
-    <a href="https://x.com/underdesign_" target="_blank">
+    <a href="https://x.com/underdesign0" target="_blank">
     <h5>twitter</h5>
   </a>
       <a href="mailto:hello@weareunder.design">
