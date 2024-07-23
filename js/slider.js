@@ -1,9 +1,8 @@
 function addSlider() {
     const TEMPLATE = `
     <div class="box-l view row product" id="body-content">
-        <div class="slider view ">
+        <div class="slider view">
             <div class="slides view">
-
                 <a href="https://weareunder.design/work/bounce/" target="_blank" class="slide view" id="bounce"
                     style="background-image: url('https://weareunder.design/work/bounce/0.png');"></a>
                 <a href="https://weareunder.design/work/nilus/" target="_blank" class="slide view" id="nilus"
@@ -80,10 +79,12 @@ function addSlider() {
                     style="background-image: url('https://weareunder.design/work/zoog/0.png');"></a>
                 <a href="https://weareunder.design/work/rnbw/" target="_blank" class="slide view" id="rnbw"
                     style="background-image: url('https://weareunder.design/work/rnbw/0.png');"></a>
-
-
             </div>
-            <p class="slidertext white padding-xl">finaloop</p>
+            <p class="padding-xl white slidertext">finaloop</p>
+            <div class="sliderbuttons padding-xl">
+                <button class="arrow prev"><img src="https://weareunder.design/images/arrow_left.svg" /></button>
+                <button class="arrow next"><img src="https://weareunder.design/images/arrow_right.svg" /></button>
+            </div>
         </div>
     </div>
       `;
@@ -96,39 +97,91 @@ function addSlider() {
     }
     customElements.define("under-slider", UnderSlider);
     
+    const slider = document.querySelector('.slider');
     const slides = document.querySelector('.slides');
     const slide = document.querySelectorAll('.slide');
     const slideText = document.querySelector('.slidertext');
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
-    let currentIndex = 0;
+    let currentPosition = 0;
     
-    let direction = 1; 
-    const interval = 3000; 
+    let isAutoScrolling = true;
+    let scrollDirection = 0.02;
+    let animationFrameId;
+    
+    slides.style.transition = 'none'; 
+    slides.style.willChange = 'transform'; 
     
     function updateSlider() {
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        const currentSlideId = slide[currentIndex].id;
+        const totalWidth = slide.length * 100;
+        currentPosition = (currentPosition + totalWidth) % totalWidth;
+        slides.style.transform = `translateX(${-currentPosition}%)`;
+        
+        const currentSlideIndex = Math.floor(currentPosition / 100);
+        const currentSlideId = slide[currentSlideIndex % slide.length].id;
         slideText.textContent = currentSlideId;
-    
-        prevButton.style.display = 'none';
-        nextButton.style.display = 'none';
     }
     
-    function autoSlide() {
-        if (direction === 1 && currentIndex === slide.length - 1) {
-            direction = -1; 
-        } else if (direction === -1 && currentIndex === 0) {
-            direction = 1; 
+    function moveToSlide(index) {
+        currentPosition = index * 100;
+        if (currentPosition < 0) {
+            currentPosition = (slide.length - 1) * 100;
+        } else if (currentPosition >= slide.length * 100) {
+            currentPosition = 0;
         }
-    
-        currentIndex += direction;
+        slides.style.transition = 'transform 0.5s ease'; 
         updateSlider();
+        setTimeout(() => {
+            slides.style.transition = 'none'; 
+        }, 500);
     }
     
-    setInterval(autoSlide, interval);
+    function autoScroll() {
+        if (!isAutoScrolling) return;
+    
+        currentPosition += scrollDirection;
+        if (currentPosition <= 0 || currentPosition >= (slide.length - 1) * 100) {
+            scrollDirection *= -1; 
+        }
+        updateSlider();
+        animationFrameId = requestAnimationFrame(autoScroll);
+    }
+    
+    function startAutoScroll() {
+        isAutoScrolling = true;
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = requestAnimationFrame(autoScroll);
+    }
+    
+    function stopAutoScroll() {
+        isAutoScrolling = false;
+        cancelAnimationFrame(animationFrameId);
+    }
+    
+    function handleManualScroll() {
+        stopAutoScroll();
+        setTimeout(startAutoScroll, 1000);
+    }
     
     updateSlider();
-    }
+    startAutoScroll();
     
-    addSlider();
+    slider.addEventListener('mouseenter', stopAutoScroll);
+    slider.addEventListener('mouseleave', startAutoScroll);
+    
+    prevButton.addEventListener('click', () => {
+        let index = Math.floor(currentPosition / 100);
+        index = (index - 1 + slide.length) % slide.length;
+        moveToSlide(index);
+        handleManualScroll();
+    });
+    
+    nextButton.addEventListener('click', () => {
+        let index = Math.floor(currentPosition / 100);
+        index = (index + 1) % slide.length;
+        moveToSlide(index);
+        handleManualScroll();
+    });
+}
+
+addSlider();
