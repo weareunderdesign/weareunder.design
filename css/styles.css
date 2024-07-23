@@ -370,8 +370,7 @@
 .slidertext {
   position: absolute;
   bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0%;
   white-space: nowrap;
   /* margin: 0 !important; */
   line-height: 0 !important;

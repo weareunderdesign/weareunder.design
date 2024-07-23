@@ -22,6 +22,9 @@ function addFooter() {
             <a href="mailto:hello@weareunder.design">
         <h5>contact</h5>
       </a>
+      <a href="https://weareunder.design/legal/">
+        <h5>legal</h5>
+      </a>
     </div>
     <div class="column">
       <a href="https://store.weareunder.design/pages/newsletter" target="_blank">

@@ -1,7 +1,7 @@
 function addSlider() {
     const TEMPLATE = `
     <div class="box-l view row product" id="body-content">
-        <div class="slider view">
+        <div class="slider view ">
             <div class="slides view">
 
                 <a href="https://weareunder.design/work/bounce/" target="_blank" class="slide view" id="bounce"
@@ -75,7 +75,7 @@ function addSlider() {
                 <a href="https://weareunder.design/work/unleash/" target="_blank" class="slide view" id="unleash"
                     style="background-image: url('https://weareunder.design/work/unleash/0.png');"></a>
                 <a href="https://weareunder.design/work/zigi/" target="_blank" class="slide view" id="zigi"
-                    style="background-image: url('https://weareunder.design/work/zigi/0.png');"></a>
+                    style="background-image: url('https://weareunder.design/work/zigi/0.svg');"></a>
                 <a href="https://weareunder.design/work/zoog/" target="_blank" class="slide view" id="zoog"
                     style="background-image: url('https://weareunder.design/work/zoog/0.png');"></a>
                 <a href="https://weareunder.design/work/rnbw/" target="_blank" class="slide view" id="rnbw"
@@ -83,9 +83,7 @@ function addSlider() {
 
 
             </div>
-            <button class="arrow prev padding-xl"><img src="./images/arrow_left.svg" /></button>
             <p class="slidertext white padding-xl">finaloop</p>
-            <button class="arrow next padding-xl"><img src="./images/arrow_right.svg" /></button>
         </div>
     </div>
       `;
