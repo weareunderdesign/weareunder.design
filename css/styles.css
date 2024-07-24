@@ -18,6 +18,11 @@
   flex-wrap: nowrap;
 }
 
+.under-logo-footer{
+  width: 140px; 
+  height: 140px;
+}
+
 .view1 {
   overflow: hidden;
   position: relative;
