@@ -37,7 +37,7 @@ const footerTemplate = `
           <h5>legal</h5>
         </a>
       </div>
-      <div class="column">
+      <div class="column align-start">
         <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
           <h5>newsletter</h5>
         </a>
@@ -50,11 +50,12 @@ const footerTemplate = `
         <a href="https://github.com/weareunderdesign" target="_blank">
           <h5>github</h5>
         </a>
-      </div>
-      <div>
-          <button onclick="toggleTheme()" class="border background-primary radius-s padding-s" style="cursor: pointer; margin-top: 0.25rem;">
+                  <button onclick="toggleTheme()" class="border background-primary radius-s" style="cursor: pointer; padding:8px; margin-top:8px;">
             <span class="opacity-m" id="theme-name"></span>
           </button>
+      </div>
+      <div>
+
         </div>
     </div>
     
