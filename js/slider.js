@@ -106,7 +106,7 @@ function addSlider() {
     let currentPosition = 0;
     
     let isAutoScrolling = true;
-    let scrollDirection = 0.02;
+    let scrollDirection = 0.045;
     let animationFrameId;
     
     slides.style.transition = 'none'; 
@@ -160,7 +160,6 @@ function addSlider() {
     
     function handleManualScroll() {
         stopAutoScroll();
-        setTimeout(startAutoScroll, 1000);
     }
     
     updateSlider();
