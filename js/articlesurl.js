@@ -29,9 +29,9 @@ function updateURL() {
   });
 
   if (closestArticle) {
-    const h1 = closestArticle.querySelector('h1');
-    if (h1) {
-      const slug = slugify(h1.textContent);
+    const h4 = closestArticle.querySelector('h4');
+    if (h4) {
+      const slug = slugify(h4.textContent);
       const newURL = window.location.pathname + '#' + slug;
       if (window.location.hash !== '#' + slug) {
         history.replaceState(null, '', newURL);
