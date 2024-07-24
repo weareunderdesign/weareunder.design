@@ -23,6 +23,14 @@
   height: 140px;
 }
 
+.legal-menu{
+  margin-top: 6rem;
+}
+
+.legal-text{
+  margin-top: 5rem;
+}
+
 .view1 {
   overflow: hidden;
   position: relative;
