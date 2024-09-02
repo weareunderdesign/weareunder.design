@@ -13,7 +13,7 @@ const footerTemplate = `
 
     <div class="gap-xl row align-start box-l">
       <a style="width: 5.25vw; height 5.25vw;" href="https://weareunder.design/">
-        <svg-icon src="https://weareunder.design/images/under-footer.svg"></svg-icon>
+        <svg-icon src="../images/under-footer.svg"></svg-icon>
       </a>
       <h5 class="box">
         under creates high-quality,<br>
