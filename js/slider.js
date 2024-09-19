@@ -3,7 +3,7 @@ function addSlider() {
     <div class="box-l view row product" id="body-content">
         <div class="slider view">
             <div class="slides view">
-            <a href="https://weareunder.design/work/pontfive/" target="_blank" class="slide view" id="pointfive"
+            <a href="https://weareunder.design/work/pointfive/" target="_blank" class="slide view" id="pointfive"
                     style="background-image: url('https://weareunder.design/work/pointfive/0.png');"></a>
                 <a href="https://weareunder.design/work/bounce/" target="_blank" class="slide view" id="bounce"
                     style="background-image: url('https://weareunder.design/work/bounce/0.png');"></a>
