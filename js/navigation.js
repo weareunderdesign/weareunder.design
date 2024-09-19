@@ -70,6 +70,9 @@ function addSidebar() {
 <a class="header-link" href="mailto:hello@weareunder.design">
 <h5>contact</h5>
 </a>
+<a class="header-link" target="_blank" href="https://rnbw.design/">
+<h5>rnbw</h5>
+</a>
 </nav>
 
 <div id="works-wrapper" class="hidden">
@@ -79,6 +82,7 @@ function addSidebar() {
         <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile-logo-navigation"/>
 </a>
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
+  <a href="https://weareunder.design/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>
   <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-000000">rnbw</a>
   <a href="https://weareunder.design/work/bounce/" class="sidebar-project-link" id="bounce-03542C">bounce</a>
   <a href="https://weareunder.design/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
@@ -121,6 +125,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
+<img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
 <img src="https://weareunder.design/work/rnbw/0.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
