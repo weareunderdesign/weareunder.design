@@ -1,9 +1,17 @@
 const footerTemplate = `
 <footer class="padding-xl box-l">
   <div class="gap-s row align-start box-l">
+    <div class="gap-l column align-start box" style="display: none;">
+      <a href="https://rnbw.design">
+        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
+      </a>
+      <div class="text-s">
+        © <span id="year"></span> Rainbow Design, Ltd.
+      </div>
+    </div>
     <div class="gap-xl row align-start box-l">
       <a style="width: 5.25vw; height 5.25vw;" href="https://weareunder.design/">
-        <svg-icon src="https://weareunder.design/images/under-footer.svg"></svg-icon>
+        <img style="width: 5.25vw; height 5.25vw;" src="https://weareunder.design/images/under-footer.svg">
       </a>
       <h5 class="box">
         under creates high-quality,<br>
