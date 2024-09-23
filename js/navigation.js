@@ -64,14 +64,14 @@ function addSidebar() {
 <a class="header-link" href="https://weareunder.design/brandsprint/">
 <h5>brandsprint</h5>
 </a>
+<a class="header-link" target="_blank" href="https://rnbw.design/">
+<h5>rnbw</h5>
+</a>
 <a class="header-link" href="https://store.weareunder.design">
 <h5>store</h5>
 </a>
 <a class="header-link" href="mailto:hello@weareunder.design">
 <h5>contact</h5>
-</a>
-<a class="header-link" target="_blank" href="https://rnbw.design/">
-<h5>rnbw</h5>
 </a>
 </nav>
 
