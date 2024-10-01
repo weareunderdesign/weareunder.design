@@ -12,47 +12,38 @@ const footerTemplate = `
 
 
     <div class="gap-xl row align-start box-l">
-      <a style="width: 5.25vw; height 5.25vw;" href="https://weareunder.design/">
-        <svg-icon src="https://weareunder.design/images/under-footer.svg"></svg-icon>
+      <a style="width: 4vw; height 4vw;" href="https://weareunder.design/">
+        <svg-icon src="https://store.weareunder.design/images/underfooter.svg"></svg-icon>
       </a>
-      <h5 class="box">
+      <p class="box">
         under creates high-quality,<br>
         well-designed, creative brands <br>
         and products for creative people.
-      </h5>
-      <div class="column">
-        <a href="https://weareunder.design/brandsprint/">
-          <h5>brandsprint</h5>
-        </a>
+      </p>
+      <div class="column gap-xs">
         <a href="https://weareunder.design/blog/">
-          <h5>blog</h5>
+          <p style="margin:0; padding: 0;">blog</p>
         </a>
-        <a href="https://store.weareunder.design/">
-          <h5>store</h5>
+        <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
+          <p style="margin:0; padding: 0;">newsletter</p>
         </a>
         <a href="mailto:hello@weareunder.design">
-          <h5>contact</h5>
+          <p style="margin:0; padding: 0;">contact</p>
         </a>
         <a href="https://weareunder.design/legal">
-          <h5>legal</h5>
+          <p style="margin:0; padding: 0;">legal</p>
         </a>
       </div>
-      <div class="column align-start">
-        <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
-          <h5>newsletter</h5>
-        </a>
+      <div class="column align-start gap-xs">
         <a href="https://www.instagram.com/under.design/" target="_blank">
-          <h5>instagram</h5>
+          <p style="margin:0; padding: 0;">instagram</p>
         </a>
         <a href="https://x.com/underdesign_" target="_blank">
-          <h5>twitter</h5>
+          <p style="margin:0; padding: 0;">twitter</p>
         </a>
         <a href="https://github.com/weareunderdesign" target="_blank">
-          <h5>github</h5>
+          <p style="margin:0; padding: 0;">github</p>
         </a>
-                  <button onclick="toggleTheme()" class="border background-primary radius-s" style="cursor: pointer; padding:8px; margin-top:8px;">
-            <span class="opacity-m" id="theme-name"></span>
-          </button>
       </div>
       <div>
 
