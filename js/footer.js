@@ -13,7 +13,7 @@ const footerTemplate = `
 
     <div class="gap-xl row align-start box-l">
       <a style="width: 4vw; height 4vw;" href="https://weareunder.design/">
-        <svg-icon src="https://store.weareunder.design/images/underfooter.svg"></svg-icon>
+        <svg-icon src="https://weareunder.design/images/underfooter.svg"></svg-icon>
       </a>
       <p class="box">
         under creates high-quality,<br>
@@ -24,7 +24,7 @@ const footerTemplate = `
         <a href="https://weareunder.design/blog/">
           <p style="margin:0; padding: 0;">blog</p>
         </a>
-        <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
+        <a href="https://weareunder.design/pages/newsletter" target="_blank">
           <p style="margin:0; padding: 0;">newsletter</p>
         </a>
         <a href="mailto:hello@weareunder.design">

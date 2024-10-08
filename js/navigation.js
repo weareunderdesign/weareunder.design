@@ -49,39 +49,37 @@ window.addEventListener('load', preloadImages);
 function addSidebar() {
   const TEMPLATE = `
   <nav class="row padding-xl gap-xl" style="
-  color: white;
   position: fixed;
   right: 0;
   z-index: 999;
-  mix-blend-mode: difference;
 " id="under-nav">
-<a class="header-link" href="https://weareunder.design/brandsprint/">
+<a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
 <div class="column align-center">
-<img src="./images/header/brandsprint.svg">
-<h5>brandsprint</h5>
+<img src="https://weareunder.design/images/header/brandsprint.svg">
+<p>brandsprint</p>
 </div>
 </a>
-<a class="header-link" target="_blank" href="https://rnbw.design/">
+<a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
 <div class="column align-center">
-<img src="./images/header/rnbw.svg">
-<h5>rnbw</h5>
+<img src="https://weareunder.design/images/header/rnbw.svg">
+<p>rnbw</p>
 </div>
 </a>
-<a class="header-link" style="cursor: pointer" target="_blank" href="">
+<a class="header-link" style="cursor: pointer" target="_blank" href="" data-page="handy">
 <div class="column align-center">
-<img src="./images/header/handy.svg">
-<h5>handy</h5>
+<img src="https://weareunder.design/images/header/handy.svg">
+<p>handy</p>
 </div>
 </a>
-<a class="header-link" style="cursor: pointer" href="https://store.weareunder.design">
+<a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
 <div class="column align-center">
-<img src="./images/header/store.svg">
-<h5>store</h5>
+<img src="https://weareunder.design/images/header/store.svg">
+<p>store</p>
 </div>
 </a>
-<div class="column align-center header-link style="cursor: pointer" id="nav-work">
-<img src="./images/header/design.svg">
-<h5>design</h5>
+<div class="column align-center header-link" style="cursor: pointer" id="nav-work" data-page="design">
+<img src="https://weareunder.design/images/header/design.svg">
+<p>design</p>
 </div>
 </nav>
 
@@ -228,21 +226,41 @@ function addSidebar() {
     $("#under-nav").css({
       "display": "flex",
       "flex-direction": "row"
-  });
+    });
     $("#works-wrapper").css("display", "none");
     $("#body-content").css("display", "block");
   });
 
+  function setActiveNavItem() {
+    const pageIdentifier = document.body.dataset.page;
+    if (pageIdentifier) {
+      const navItem = $(`.header-link[data-page="${pageIdentifier}"]`);
+      if (navItem.length) {
+        const img = navItem.find("img");
+        const originalSrc = img.attr("src");
+        img.attr("src", originalSrc.replace(".svg", "h.svg"));
+        navItem.addClass('active');
+      }
+    }
+  }
+
   $(".header-link").on("mouseover", function () {
-    const img = $(this).find("img");
-    const originalSrc = img.attr("src"); 
-    img.attr("src", originalSrc.replace(".svg", "h.svg")); 
+    if (!$(this).hasClass('active')) {
+      const img = $(this).find("img");
+      const originalSrc = img.attr("src"); 
+      img.attr("src", originalSrc.replace(".svg", "h.svg")); 
+    }
   }).on("mouseout", function () {
-    const img = $(this).find("img");
-    const originalSrc = img.attr("src");
-    img.attr("src", originalSrc.replace("h.svg", ".svg")); 
+    if (!$(this).hasClass('active')) {
+      const img = $(this).find("img");
+      const originalSrc = img.attr("src");
+      img.attr("src", originalSrc.replace("h.svg", ".svg")); 
+    }
   });
+
+  setActiveNavItem();
 }
+
 async function SideBarFunctionality() {
   "use strict";
 

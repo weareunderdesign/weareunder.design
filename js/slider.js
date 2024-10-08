@@ -3,11 +3,6 @@ function addSlider() {
     <div class="box-l view row product" id="body-content">
         <div class="slider view">
             <div class="slides view">
-            <a href="#" class="slide view view1 ping-pong align-center" id="brandsprint">
-                    <video class="slider-video video" id="video1" src="https://weareunder.design/animations/light_new.webm" autoplay muted></video>
-                    <video class="slider-video video" id="video2" src="https://weareunder.design/animations/light.webm" autoplay muted loop
-            style="display: none;"></video>
-                </a>
             <a href="https://weareunder.design/work/pointfive/" target="_blank" class="slide view" id="pointfive"
                     style="background-image: url('https://weareunder.design/work/pointfive/0.png');"></a>
                 <a href="https://weareunder.design/work/bounce/" target="_blank" class="slide view" id="bounce"
