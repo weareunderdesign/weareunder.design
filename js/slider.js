@@ -90,15 +90,15 @@ function addSlider() {
         </div>
     </div>
       `;
-  
-    class UnderSlider extends HTMLElement {
+
+      class UnderSlider extends HTMLElement {
         constructor() {
             super();
             this.innerHTML = TEMPLATE;
         }
     }
     customElements.define("under-slider", UnderSlider);
-  
+    
     const slider = document.querySelector('.slider');
     const slides = document.querySelector('.slides');
     const slide = document.querySelectorAll('.slide');
@@ -106,34 +106,24 @@ function addSlider() {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     let currentPosition = 0;
-  
+    
     let isAutoScrolling = true;
     let scrollDirection = 0.045;
     let animationFrameId;
-  
-    slides.style.transition = 'none';
-    slides.style.willChange = 'transform';
-  
-    // Добавляем обработчик для видео
-    const video1 = document.getElementById('video1');
-    const video2 = document.getElementById('video2');
-  
-    video1.addEventListener('ended', () => {
-        video1.style.display = 'none';
-        video2.style.display = 'block';
-        video2.play();
-    });
-  
+    
+    slides.style.transition = 'none'; 
+    slides.style.willChange = 'transform'; 
+    
     function updateSlider() {
         const totalWidth = slide.length * 100;
         currentPosition = (currentPosition + totalWidth) % totalWidth;
         slides.style.transform = `translateX(${-currentPosition}%)`;
-  
+        
         const currentSlideIndex = Math.floor(currentPosition / 100);
         const currentSlideId = slide[currentSlideIndex % slide.length].id;
         slideText.textContent = currentSlideId;
     }
-  
+    
     function moveToSlide(index) {
         currentPosition = index * 100;
         if (currentPosition < 0) {
@@ -141,58 +131,58 @@ function addSlider() {
         } else if (currentPosition >= slide.length * 100) {
             currentPosition = 0;
         }
-        slides.style.transition = 'transform 0.5s ease';
+        slides.style.transition = 'transform 0.5s ease'; 
         updateSlider();
         setTimeout(() => {
-            slides.style.transition = 'none';
+            slides.style.transition = 'none'; 
         }, 500);
     }
-  
+    
     function autoScroll() {
         if (!isAutoScrolling) return;
-  
+    
         currentPosition += scrollDirection;
         if (currentPosition <= 0 || currentPosition >= (slide.length - 1) * 100) {
-            scrollDirection *= -1;
+            scrollDirection *= -1; 
         }
         updateSlider();
         animationFrameId = requestAnimationFrame(autoScroll);
     }
-  
+    
     function startAutoScroll() {
         isAutoScrolling = true;
         cancelAnimationFrame(animationFrameId);
         animationFrameId = requestAnimationFrame(autoScroll);
     }
-  
+    
     function stopAutoScroll() {
         isAutoScrolling = false;
         cancelAnimationFrame(animationFrameId);
     }
-  
+    
     function handleManualScroll() {
         stopAutoScroll();
     }
-  
+    
     updateSlider();
     startAutoScroll();
-  
+    
     slider.addEventListener('mouseenter', stopAutoScroll);
     slider.addEventListener('mouseleave', startAutoScroll);
-  
+    
     prevButton.addEventListener('click', () => {
         let index = Math.floor(currentPosition / 100);
         index = (index - 1 + slide.length) % slide.length;
         moveToSlide(index);
         handleManualScroll();
     });
-  
+    
     nextButton.addEventListener('click', () => {
         let index = Math.floor(currentPosition / 100);
         index = (index + 1) % slide.length;
         moveToSlide(index);
         handleManualScroll();
     });
-  }
-  
-  addSlider();
+}
+
+addSlider();

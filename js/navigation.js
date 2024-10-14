@@ -55,30 +55,30 @@ function addSidebar() {
 " id="under-nav">
 <a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
 <div class="column align-center">
-<img src="https://weareunder.design/images/header/brandsprint.svg">
+<img src="./images/header/brandsprint.svg">
 <p>brandsprint</p>
 </div>
 </a>
 <a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
 <div class="column align-center">
-<img src="https://weareunder.design/images/header/rnbw.svg">
+<img src="./images/header/rnbw.svg">
 <p>rnbw</p>
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" target="_blank" href="" data-page="handy">
 <div class="column align-center">
-<img src="https://weareunder.design/images/header/handy.svg">
+<img src="./images/header/handy.svg">
 <p>handy</p>
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
 <div class="column align-center">
-<img src="https://weareunder.design/images/header/store.svg">
+<img src="./images/header/store.svg">
 <p>store</p>
 </div>
 </a>
 <div class="column align-center header-link" style="cursor: pointer" id="nav-work" data-page="design">
-<img src="https://weareunder.design/images/header/design.svg">
+<img src="./images/header/design.svg">
 <p>design</p>
 </div>
 </nav>
@@ -459,6 +459,22 @@ async function SideBarFunctionality() {
   };
   Main.main();
 }
+
+function hideTextOnMobile() {
+  const navLinks = document.querySelectorAll('.header-link p'); 
+  if (window.innerWidth <= 768) { 
+    navLinks.forEach(link => {
+      link.style.display = 'none'; 
+    });
+  } else {
+    navLinks.forEach(link => {
+      link.style.display = ''; 
+    });
+  }
+}
+
+window.addEventListener('load', hideTextOnMobile);
+window.addEventListener('resize', hideTextOnMobile);
 
 SideBarFunctionality();
 
