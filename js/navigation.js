@@ -54,32 +54,32 @@ function addSidebar() {
   z-index: 999;
 " id="under-nav">
 <a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
-<div class="column align-center">
-<img src="./images/header/brandsprint.svg">
-<p>brandsprint</p>
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/brandsprint.svg">
+<span class="text-l" style="text-decoration: none;">brandsprint</span>
 </div>
 </a>
 <a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
-<div class="column align-center">
-<img src="./images/header/rnbw.svg">
-<p>rnbw</p>
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/rnbw.svg">
+<span class="text-l" style="text-decoration: none;">rnbw</span>
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" target="_blank" href="" data-page="handy">
-<div class="column align-center">
-<img src="./images/header/handy.svg">
-<p>handy</p>
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/handy.svg">
+<span class="text-l" style="text-decoration: none;">handy</span>
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
-<div class="column align-center">
-<img src="./images/header/store.svg">
-<p>store</p>
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/store.svg">
+<span class="text-l" style="text-decoration: none;">store</span>
 </div>
 </a>
-<div class="column align-center header-link" style="cursor: pointer" id="nav-work" data-page="design">
-<img src="./images/header/design.svg">
-<p>design</p>
+<div class="column align-center header-link gap-xs" style="cursor: pointer" id="nav-work" data-page="design">
+<img src="https://rnbw.design/images/under/design.svg">
+<span class="text-l" style="text-decoration: none;">design</span>
 </div>
 </nav>
 
