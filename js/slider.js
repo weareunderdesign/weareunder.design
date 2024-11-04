@@ -3,83 +3,83 @@ function addSlider() {
     <div class="box-l view row product" id="body-content">
         <div class="slider view">
             <div class="slides view">
-            <a href="https://weareunder.design/work/pointfive/" target="_blank" class="slide view" id="pointfive"
+            <a href="https://weareunder.design/work/pointfive/" class="slide view" id="pointfive"
                     style="background-image: url('https://weareunder.design/work/pointfive/0.png');"></a>
-                <a href="https://weareunder.design/work/bounce/" target="_blank" class="slide view" id="bounce"
+                <a href="https://weareunder.design/work/bounce/" class="slide view" id="bounce"
                     style="background-image: url('https://weareunder.design/work/bounce/0.png');"></a>
-                <a href="https://weareunder.design/work/nilus/" target="_blank" class="slide view" id="nilus"
+                <a href="https://weareunder.design/work/nilus/" class="slide view" id="nilus"
                     style="background-image: url('https://weareunder.design/work/nilus/0.png');"></a>
-                <a href="https://weareunder.design/work/spacetop/" target="_blank" class="slide view" id="spacetop"
+                <a href="https://weareunder.design/work/spacetop/" class="slide view" id="spacetop"
                     style="background-image: url('https://weareunder.design/work/spacetop/0.png');"></a>
-                <a href="https://weareunder.design/work/blockaid/" target="_blank" class="slide view" id="blockaid"
+                <a href="https://weareunder.design/work/blockaid/" class="slide view" id="blockaid"
                     style="background-image: url('https://weareunder.design/work/blockaid/0.png');"></a>
-                <a href="https://weareunder.design/work/soli/" target="_blank" class="slide" id="soli"
+                <a href="https://weareunder.design/work/soli/" class="slide" id="soli"
                     style="background-image: url('https://weareunder.design/work/soli/19.png');"></a>
-                <a href="https://weareunder.design/work/justripe/" target="_blank" class="slide view" id="justripe"
+                <a href="https://weareunder.design/work/justripe/" class="slide view" id="justripe"
                     style="background-image: url('https://weareunder.design/work/justripe/09.png');"></a>
-                <a href="https://weareunder.design/work/utila/" target="_blank" class="slide view" id="utila"
+                <a href="https://weareunder.design/work/utila/" class="slide view" id="utila"
                     style="background-image: url('https://weareunder.design/work/utila/0.png');"></a>
-                <a href="https://weareunder.design/work/balance/" target="_blank" class="slide view" id="balance"
+                <a href="https://weareunder.design/work/balance/" class="slide view" id="balance"
                     style="background-image: url('https://weareunder.design/work/balance/0.png');"></a>
-                <a href="https://weareunder.design/work/visioncamp/" target="_blank" class="slide view" id="visioncamp"
+                <a href="https://weareunder.design/work/visioncamp/" class="slide view" id="visioncamp"
                     style="background-image: url('https://weareunder.design/work/visioncamp/6.png');"></a>
-                <a href="https://weareunder.design/work/dymension/" target="_blank" class="slide view" id="dymension"
+                <a href="https://weareunder.design/work/dymension/" class="slide view" id="dymension"
                     style="background-image: url('https://weareunder.design/work/dymension/0.png');"></a>
-                <a href="https://weareunder.design/work/finaloop/" target="_blank" class="slide view" id="finaloop"
+                <a href="https://weareunder.design/work/finaloop/" class="slide view" id="finaloop"
                     style="background-image: url('https://weareunder.design/work/finaloop/0.png');"></a>
-                <a href="https://weareunder.design/work/groundcover/" target="_blank" class="slide view" id="groundcover"
+                <a href="https://weareunder.design/work/groundcover/" class="slide view" id="groundcover"
                     style="background-image: url('https://weareunder.design/work/groundcover/0.png');"></a>
-                <a href="https://weareunder.design/work/raftt/" target="_blank" class="slide view" id="raftt"
+                <a href="https://weareunder.design/work/raftt/" class="slide view" id="raftt"
                     style="background-image: url('https://weareunder.design/work/raftt/0.png');"></a>
-                <a href="https://weareunder.design/work/togetherr/" target="_blank" class="slide view" id="togetherr"
+                <a href="https://weareunder.design/work/togetherr/" class="slide view" id="togetherr"
                     style="background-image: url('https://weareunder.design/work/togetherr/0.png');"></a>
-                <a href="https://weareunder.design/work/upword/" target="_blank" class="slide view" id="upword"
+                <a href="https://weareunder.design/work/upword/" class="slide view" id="upword"
                     style="background-image: url('https://weareunder.design/work/upword/0.png');"></a>
-                <a href="https://weareunder.design/work/alcide/" target="_blank" class="slide view" id="alcide"
+                <a href="https://weareunder.design/work/alcide/" class="slide view" id="alcide"
                     style="background-image: url('https://weareunder.design/work/alcide/0.png');"></a>
-                <a href="https://weareunder.design/work/darna/" target="_blank" class="slide view" id="darna"
+                <a href="https://weareunder.design/work/darna/" class="slide view" id="darna"
                     style="background-image: url('https://weareunder.design/work/darna/0.png');"></a>
-                <a href="https://weareunder.design/work/everafter/" target="_blank" class="slide view" id="everafter"
+                <a href="https://weareunder.design/work/everafter/" class="slide view" id="everafter"
                     style="background-image: url('https://weareunder.design/work/everafter/0.png');"></a>
-                <a href="https://weareunder.design/work/faintlines/" target="_blank" class="slide view" id="faintlines"
+                <a href="https://weareunder.design/work/faintlines/" class="slide view" id="faintlines"
                     style="background-image: url('https://weareunder.design/work/faintlines/0.png');"></a>
-                <a href="https://weareunder.design/work/flume/" target="_blank" class="slide view" id="flume"
+                <a href="https://weareunder.design/work/flume/" class="slide view" id="flume"
                     style="background-image: url('https://weareunder.design/work/flume/0.png');"></a>
-                <a href="https://weareunder.design/work/grain/" target="_blank" class="slide view" id="grain"
+                <a href="https://weareunder.design/work/grain/" class="slide view" id="grain"
                     style="background-image: url('https://weareunder.design/work/grain/0.png');"></a>
-                <a href="https://weareunder.design/work/healthquarters/" target="_blank" class="slide view" id="healthquarters"
+                <a href="https://weareunder.design/work/healthquarters/" class="slide view" id="healthquarters"
                     style="background-image: url('https://weareunder.design/work/healthquarters/0.png');"></a>
-                <a href="https://weareunder.design/work/iceberg/" target="_blank" class="slide view" id="iceberg"
+                <a href="https://weareunder.design/work/iceberg/" class="slide view" id="iceberg"
                     style="background-image: url('https://weareunder.design/work/iceberg/0.png');"></a>
-                <a href="https://weareunder.design/work/karma/" target="_blank" class="slide view" id="karma"
+                <a href="https://weareunder.design/work/karma/" class="slide view" id="karma"
                     style="background-image: url('https://weareunder.design/work/karma/0.png');"></a>
-                <a href="https://weareunder.design/work/larosh/" target="_blank" class="slide view" id="larosh"
+                <a href="https://weareunder.design/work/larosh/" class="slide view" id="larosh"
                     style="background-image: url('https://weareunder.design/work/larosh/0.png');"></a>
-                <a href="https://weareunder.design/work/le_salon/" target="_blank" class="slide view" id="le_salon"
+                <a href="https://weareunder.design/work/le_salon/" class="slide view" id="le_salon"
                     style="background-image: url('https://weareunder.design/work/le_salon/0.png');"></a>
-                <a href="https://weareunder.design/work/mesh_payments/" target="_blank" class="slide view" id="mesh_payments"
+                <a href="https://weareunder.design/work/mesh_payments/" class="slide view" id="mesh_payments"
                     style="background-image: url('https://weareunder.design/work/mesh_payments/0.png');"></a>
-                <a href="https://weareunder.design/work/notch/" target="_blank" class="slide view" id="notch"
+                <a href="https://weareunder.design/work/notch/" class="slide view" id="notch"
                     style="background-image: url('https://weareunder.design/work/notch/0.png');"></a>
-                <a href="https://weareunder.design/work/perdiem/" target="_blank" class="slide view" id="perdiem"
+                <a href="https://weareunder.design/work/perdiem/" class="slide view" id="perdiem"
                     style="background-image: url('https://weareunder.design/work/perdiem/0.png');"></a>
-                <a href="https://weareunder.design/work/reeco/" target="_blank" class="slide view" id="reeco"
+                <a href="https://weareunder.design/work/reeco/" class="slide view" id="reeco"
                     style="background-image: url('https://weareunder.design/work/reeco/0.png');"></a>
-                <a href="https://weareunder.design/work/reflect/" target="_blank" class="slide view" id="reflect"
+                <a href="https://weareunder.design/work/reflect/" class="slide view" id="reflect"
                     style="background-image: url('https://weareunder.design/work/reflect/0.png');"></a>
-                <a href="https://weareunder.design/work/tagbox/" target="_blank" class="slide view" id="tagbox"
+                <a href="https://weareunder.design/work/tagbox/" class="slide view" id="tagbox"
                     style="background-image: url('https://weareunder.design/work/tagbox/0.png');"></a>
-                <a href="https://weareunder.design/work/revelations/" target="_blank" class="slide view" id="revelations"
+                <a href="https://weareunder.design/work/revelations/" class="slide view" id="revelations"
                     style="background-image: url('https://weareunder.design/work/revelations/0.png');"></a>
-                <a href="https://weareunder.design/work/unit/" target="_blank" class="slide view" id="unit"
+                <a href="https://weareunder.design/work/unit/" class="slide view" id="unit"
                     style="background-image: url('https://weareunder.design/work/unit/0.png');"></a>
-                <a href="https://weareunder.design/work/unleash/" target="_blank" class="slide view" id="unleash"
+                <a href="https://weareunder.design/work/unleash/" class="slide view" id="unleash"
                     style="background-image: url('https://weareunder.design/work/unleash/0.png');"></a>
-                <a href="https://weareunder.design/work/zigi/" target="_blank" class="slide view" id="zigi"
+                <a href="https://weareunder.design/work/zigi/" class="slide view" id="zigi"
                     style="background-image: url('https://weareunder.design/work/zigi/0.svg');"></a>
-                <a href="https://weareunder.design/work/zoog/" target="_blank" class="slide view" id="zoog"
+                <a href="https://weareunder.design/work/zoog/" class="slide view" id="zoog"
                     style="background-image: url('https://weareunder.design/work/zoog/0.png');"></a>
-                <a href="https://weareunder.design/work/rnbw/" target="_blank" class="slide view" id="rnbw"
+                <a href="https://weareunder.design/work/rnbw/" class="slide view" id="rnbw"
                     style="background-image: url('https://weareunder.design/work/rnbw/0.png');"></a>
             </div>
             <p class="padding-xl white slidertext">finaloop</p>
