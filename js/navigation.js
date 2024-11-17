@@ -48,7 +48,7 @@ window.addEventListener('load', preloadImages);
 
 function addSidebar() {
   const TEMPLATE = `
-  <div class="row padding-xl gap-m" style="
+  <div class="row padding-xl" style="
   position: fixed;
   right: 0;
   z-index: 999;
@@ -60,16 +60,16 @@ function addSidebar() {
 <span class="text-m white" style="text-decoration: none; display: none;">brandsprint</span> <!-- Скрыть текст -->
 </div>
 </a>
-<a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
-<div class="column align-center gap-xs">
-<img src="https://rnbw.design/images/under/rnbw.svg">
-<span class="text-m white" style="text-decoration: none; display: none;">rnbw</span> <!-- Скрыть текст -->
-</div>
-</a>
 <a class="header-link" style="cursor: pointer" target="_blank" href="https://handy.vision" data-page="handy">
 <div class="column align-center gap-xs">
 <img src="https://rnbw.design/images/under/handy.svg">
 <span class="text-m white" style="text-decoration: none; display: none;">handy</span> <!-- Скрыть текст -->
+</div>
+</a>
+<a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/rnbw.svg">
+<span class="text-m white" style="text-decoration: none; display: none;">rnbw</span> <!-- Скрыть текст -->
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
