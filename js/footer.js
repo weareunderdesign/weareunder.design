@@ -10,48 +10,83 @@ const footerTemplate = `
       </div>
     </div>
 
-
     <div class="gap-xl row align-start box-l">
       <a style="width: 4vw; height 4vw;" href="https://weareunder.design/">
         <svg-icon src="https://rnbw.design/images/under/underfooter.svg"></svg-icon>
       </a>
-      <p class="box">
+      <h5 class="box">
         under creates high-quality,<br>
         well-designed, creative brands <br>
         and products for creative people.
-      </p>
+      </h5>
       <div class="column gap-xs">
-        <a href="https://weareunder.design/blog/">
-          <p style="margin:0; padding: 0;">blog</p>
+        <a href="https://www.youtube.com/@weareunderdesign">
+          <h5 style="margin:0; padding: 0;">youtube</h5>
         </a>
         <a href="https://weareunder.design/pages/newsletter" target="_blank">
-          <p style="margin:0; padding: 0;">newsletter</p>
+          <h5 style="margin:0; padding: 0;">newsletter</h5>
         </a>
         <a href="mailto:hello@weareunder.design">
-          <p style="margin:0; padding: 0;">contact</p>
+          <h5 style="margin:0; padding: 0;">contact</h5>
         </a>
         <a href="https://weareunder.design/legal">
-          <p style="margin:0; padding: 0;">legal</p>
+          <h5 style="margin:0; padding: 0;">legal</h5>
         </a>
       </div>
       <div class="column align-start gap-xs">
         <a href="https://www.instagram.com/under.design/" target="_blank">
-          <p style="margin:0; padding: 0;">instagram</p>
+          <h5 style="margin:0; padding: 0;">instagram</h5>
         </a>
         <a href="https://x.com/underdesign_" target="_blank">
-          <p style="margin:0; padding: 0;">twitter</p>
+          <h5 style="margin:0; padding: 0;">twitter</h5>
         </a>
         <a href="https://github.com/weareunderdesign" target="_blank">
-          <p style="margin:0; padding: 0;">github</p>
+          <h5 style="margin:0; padding: 0;">github</h5>
         </a>
       </div>
-      <div>
-
-        </div>
+      <div class="column gap-m box-m justify-end">
+        <h5>subscribe to our newsletter</h5>
+        <form
+          action="https://buttondown.email/api/emails/embed-subscribe/YOUR_BUTTONDOWN_USERNAME"
+          method="post"
+          id="newsletter-form"
+          class="gap-m row align-start box-s"
+          target="_blank"
+          style="flex-wrap: nowrap;"
+        >
+          <input
+            type="email" 
+            name="email"
+            id="email-input" 
+            placeholder="enter your email" 
+            required
+            class="box-s border padding-s"
+            style="outline: none;"
+          >
+          <button 
+            type="submit"
+            class="box-xs border align-center padding-s subscribe-button"
+            style="background: none; transition: background-color 0.2s ease;"
+          >
+            subscribe
+          </button>
+        </form>
+        <div id="form-message" class="text-s" style="display: none;"></div>
+      </div>
     </div>
-    
   </div>
 </footer>
+
+<style>
+#email-input:focus {
+  outline: none;
+  border-color: inherit;
+}
+
+.subscribe-button:hover {
+  background-color: #EEEEEE !important;
+}
+</style>
 `;
 
 function updateThemeElementsVisibility() {
@@ -110,6 +145,49 @@ class underFooter extends HTMLElement {
     handleSystemThemeChange(
       window.matchMedia("(prefers-color-scheme: dark)")
     );
+    
+    this.initializeNewsletterForm();
+  }
+
+  initializeNewsletterForm() {
+    const form = this.querySelector('#newsletter-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = document.getElementById('email-input').value;
+        const messageDiv = document.getElementById('form-message');
+        
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          showMessage('Please enter a valid email address', 'error');
+          return;
+        }
+
+        fetch(form.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: email,
+            metadata: {}
+          })
+        })
+        .then(response => {
+          if (response.ok) {
+            showMessage('thank you for subscribing!', 'success');
+            document.getElementById('email-input').value = '';
+          } else {
+            throw new Error('Subscription failed');
+          }
+        })
+        .catch(error => {
+          showMessage('something went wrong. please try again.', 'error');
+          console.error('Error:', error);
+        });
+      });
+    }
   }
 }
 
@@ -175,19 +253,36 @@ function switchFavicon(theme) {
 
 function updateThemeImage(theme) {
   const image = document.getElementById('theme-image');
-  if (theme === 'dark') {
-    image.src = 'images/guide-dark.png';
-  } else {
-    image.src = 'images/guide-light.png';
+  if (image) {
+    if (theme === 'dark') {
+      image.src = 'images/guide-dark.png';
+    } else {
+      image.src = 'images/guide-light.png';
+    }
   }
 }
 
 function updateThemeImageNew(theme) {
   const image = document.getElementById('theme-image-new');
-  if (theme === 'dark') {
-    image.src = 'images/new-dark.svg';
-  } else {
-    image.src = 'images/new-light.svg';
+  if (image) {
+    if (theme === 'dark') {
+      image.src = 'images/new-dark.svg';
+    } else {
+      image.src = 'images/new-light.svg';
+    }
+  }
+}
+
+function showMessage(message, type) {
+  const messageDiv = document.getElementById('form-message');
+  if (messageDiv) {
+    messageDiv.textContent = message;
+    messageDiv.style.display = 'block';
+    messageDiv.style.color = type === 'error' ? '#ff4444' : '#00C853';
+    
+    setTimeout(() => {
+      messageDiv.style.display = 'none';
+    }, 3000);
   }
 }
 

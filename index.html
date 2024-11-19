@@ -9,7 +9,7 @@
   <meta property="og:title" content="Under Design Studio">
   <meta property="og:image" content="https://weareunder.design/images/cover.png">
   <meta name="twitter:image" content="https://weareunder.design/images/cover.png">
-  <meta name="twitter:card" content="summary_large_image" /> 
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="./images/favicon.svg">
   <link rel="apple-touch-icon" href="./images/webclip.svg">
   <link rel="stylesheet" href="./css/styles.css">
@@ -30,28 +30,24 @@
       <p>handy</p>
     </div>
   </a>
-  <div class="view view1 ping-pong align-center">
-    <video class="video" id="video1" src="./animations/light_new.webm" autoplay muted></video>
-    <video class="video" id="video2" src="./animations/light.webm" autoplay muted loop style="display: none;"></video>
+  <div class="view ping-pong">
+    <under-slider></under-slider>
     <a href="https://weareunder.design/brandsprint/" class="circle circle-brandsprint random-color-change clickable"
       id="cta-animation" style="cursor: pointer;">
       <h4>brand<br>sprint</h4>
     </a>
   </div>
-  <a class="view row product" href="https://rnbw.design" data-desktop-image="./images/rnbw.png" data-mobile-image="./images/rnbw_mobile.png" target="_blank">
+  <a class="view row product" href="https://rnbw.design" data-desktop-image="./images/rnbw.png"
+    data-mobile-image="./images/rnbw_mobile.png" target="_blank">
     <div class="align-end mix-diff product-text padding-xl">
       <p>rnbw</p>
     </div>
-  </a><a
-        class="view row product"
-        href="./justripe/"
-        data-desktop-image="./images/justripe.png"
-        data-mobile-image="./images/justripe_mobile.png"
-      >
-        <div class="align-end mix-diff product-text padding-xl">
-          <p>justripe</p>
-        </div>
-      </a>
+  </a><a class="view row product" href="./justripe/" data-desktop-image="./images/justripe.png"
+    data-mobile-image="./images/justripe_mobile.png">
+    <div class="align-end mix-diff product-text padding-xl">
+      <p>justripe</p>
+    </div>
+  </a>
   <a class="view row product random-color-change" href="https://weareunder.design/brandsprint/#brandsprintpagebook"
     data-desktop-image="./images/book.png" data-mobile-image="./images/book_mobile.png">
     <div class="align-end mix-diff product-text padding-xl">
@@ -59,13 +55,16 @@
     </div>
   </a>
   <under-footer></under-footer>
+  <div class="view view1 ping-pong align-center">
+    <video src="./animations/light.webm" autoplay muted loop></video>
+  </div>
   </div>
   </div>
   <script src="./js/navigation.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/footer.js"></script>
   <script src="./js/mobile_covers.js"></script>
-  <script src="./js/video.js"></script>
+  <script src="./js/slider.js"></script>
 </body>
 
 </html>
