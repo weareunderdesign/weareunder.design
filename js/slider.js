@@ -55,10 +55,10 @@ function addSlider() {
                     style="background-image: url('https://weareunder.design/work/karma/0.png');"></a>
                 <a href="https://weareunder.design/work/larosh/" class="slide view" id="larosh"
                     style="background-image: url('https://weareunder.design/work/larosh/0.png');"></a>
-                <a href="https://weareunder.design/work/le_salon/" class="slide view" id="le_salon"
+                <a href="https://weareunder.design/work/le_salon/" class="slide view" id="le salon"
                     style="background-image: url('https://weareunder.design/work/le_salon/0.png');"></a>
-                <a href="https://weareunder.design/work/mesh_payments/" class="slide view" id="mesh_payments"
-                    style="background-image: url('https://weareunder.design/work/mesh_payments/0.png');"></a>
+                <a href="https://weareunder.design/work/mesh_payments/" class="slide view" id="mesh payments"
+                    style="background-image: url('https://weareunder.design/work/mesh_payments/0.svg');"></a>
                 <a href="https://weareunder.design/work/notch/" class="slide view" id="notch"
                     style="background-image: url('https://weareunder.design/work/notch/0.png');"></a>
                 <a href="https://weareunder.design/work/perdiem/" class="slide view" id="perdiem"
@@ -80,12 +80,12 @@ function addSlider() {
                 <a href="https://weareunder.design/work/zoog/" class="slide view" id="zoog"
                     style="background-image: url('https://weareunder.design/work/zoog/0.png');"></a>
                 <a href="https://weareunder.design/work/rnbw/" class="slide view" id="rnbw"
-                    style="background-image: url('https://weareunder.design/work/rnbw/0.png');"></a>
+                    style="background-image: url('https://weareunder.design/work/rnbw/1.png');"></a>
             </div>
-            <p class="padding-xl white slidertext">finaloop</p>
+            <p class="padding-xl white slidertext" style="mix-blend-mode: difference;">finaloop</p>
             <div class="sliderbuttons padding-xl">
-                <button class="arrow prev"><img src="https://weareunder.design/images/arrow_left.svg" /></button>
-                <button class="arrow next"><img src="https://weareunder.design/images/arrow_right.svg" /></button>
+                <button class="arrow prev" style="mix-blend-mode: difference;"><img src="https://weareunder.design/images/arrow_left.svg" /></button>
+                <button class="arrow next" style="mix-blend-mode: difference;"><img src="https://weareunder.design/images/arrow_right.svg" /></button>
             </div>
         </div>
     </div>

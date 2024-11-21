@@ -138,7 +138,7 @@ function addSidebar() {
 <div class="projects">
 <img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
-<img src="https://weareunder.design/work/rnbw/0.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
+<img src="https://weareunder.design/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
 <img src="https://weareunder.design/work/soli/19.png" class="sidebar-project-image box-l" id="soli" loading="lazy"></img>
