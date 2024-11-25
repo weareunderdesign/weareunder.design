@@ -40,6 +40,7 @@ function animationToClass(class_target) {
   }
   return gsapTween;
 }
+
 function ping(class_target) {
   try {
     updatePlayground(class_target);
@@ -69,38 +70,48 @@ function ping(class_target) {
         clearInterval(interval5);
       }
     }
-
-    //make x and y go as high (or low) as you want, and the modifier will always keep it within the xMin/xMax and yMin/yMax ranges.
   } catch (err) {
     console.log(err);
   }
 }
-//this function spits back a modifier function that'll keep the value within a range, bouncing off the min/max boundaries.
+
 function bounceModifier(min, max) {
   var range = max - min;
   return function (value) {
-    value = parseFloat(value); // comes in as px, like "10px"
+    value = parseFloat(value);
     var cycle, clippedValue;
     if (value > max) {
       cycle = (value - max) / range;
       clippedValue = (cycle % 1) * range;
-      value = (cycle | 0) & (1 !== 0) ? min + clippedValue : max - clippedValue; //on even cycles, go backwards.
+      value = (cycle | 0) & (1 !== 0) ? min + clippedValue : max - clippedValue;
     } else if (value < min) {
       cycle = (min - value) / range;
       clippedValue = (cycle % 1) * range;
-      value = (cycle | 0) & (1 !== 0) ? max - clippedValue : min + clippedValue; //on even cycles, go backwards.
+      value = (cycle | 0) & (1 !== 0) ? max - clippedValue : min + clippedValue;
     }
     return value + "px";
   };
 }
-var intervalId3 = setInterval(() => ping(".circle-brandsprint"), 1000);
-var interval1 = setInterval(() => ping(".circle1"), 1000);
-var interval2 = setInterval(() => ping(".circle2"), 1000);
-var interval3 = setInterval(() => ping(".circle3"), 1000);
-var interval4 = setInterval(() => ping(".circle4"), 1000);
-var interval5 = setInterval(() => ping(".circle5"), 1000);
 
-//Setting the circles to their initial position
+let intervalId3, interval1, interval2, interval3, interval4, interval5;
+
+document.addEventListener('DOMContentLoaded', function() {
+  intervalId3 = setInterval(() => ping(".circle-brandsprint"), 1000);
+  interval1 = setInterval(() => ping(".circle1"), 1000);
+  interval2 = setInterval(() => ping(".circle2"), 1000);
+  interval3 = setInterval(() => ping(".circle3"), 1000);
+  interval4 = setInterval(() => ping(".circle4"), 1000);
+  interval5 = setInterval(() => ping(".circle5"), 1000);
+
+  // Сразу вызываем первоначальную инициализацию
+  ping(".circle-brandsprint");
+  ping(".circle1");
+  ping(".circle2");
+  ping(".circle3");
+  ping(".circle4");
+  ping(".circle5");
+});
+
 function bringCircleToInitialPosition() {
   let circle1 = document.querySelector(".circle1");
   let circle2 = document.querySelector(".circle2");
@@ -114,11 +125,9 @@ function bringCircleToInitialPosition() {
   if (circle3) circle3.style.transform = "none";
   if (circle4) circle4.style.transform = "none";
   if (circle5) circle5.style.transform = "none";
-
   if (brandsprintElement) brandsprintElement.style.transform = "none";
 }
 
-//Pause Bouncing Animation
 function pauseBouncingAnimation() {
   try {
     tweenBrandsprint?.pause();
@@ -132,7 +141,6 @@ function pauseBouncingAnimation() {
   }
 }
 
-//Restart Bouncing Animation
 function restartBouncingAnimation() {
   try {
     tweenBrandsprint?.restart();
