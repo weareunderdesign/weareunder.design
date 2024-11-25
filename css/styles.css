@@ -600,7 +600,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1366px) and (orientation: portrait) {
+@media (min-width: 768px) and (max-width: 1366px) {
   .nudge_font {
     font-size: 25vw;
   }

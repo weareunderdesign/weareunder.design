@@ -36,7 +36,6 @@ function preloadImages() {
     "https://weareunder.design/work/unleash/0.png",
     "https://weareunder.design/work/zigi/0.svg",
     "https://weareunder.design/work/zoog/0.png",
-
   ];
 
   imageUrls.forEach((url) => {
@@ -47,33 +46,45 @@ function preloadImages() {
 
 window.addEventListener('load', preloadImages);
 
-
-
 function addSidebar() {
   const TEMPLATE = `
-  <nav class="column padding-xl gap-xs" style="
-  color: white;
+  <div class="row padding-xl" style="
   position: fixed;
   right: 0;
   z-index: 999;
   mix-blend-mode: difference;
 " id="under-nav">
-<span class="header-link" style="cursor: pointer" id="nav-work">
-<h5>design</h5>
-</span>
-<a class="header-link" href="https://weareunder.design/brandsprint/">
-<h5>brandsprint</h5>
+<a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/brandsprint.svg">
+<span class="text-m white" style="text-decoration: none; display: none;">brandsprint</span> <!-- Скрыть текст -->
+</div>
 </a>
-<a class="header-link" target="_blank" href="https://rnbw.design/">
-<h5>rnbw</h5>
+<a class="header-link" style="cursor: pointer" target="_blank" href="https://handy.vision" data-page="handy">
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/handy.svg">
+<span class="text-m white" style="text-decoration: none; display: none;">handy</span> <!-- Скрыть текст -->
+</div>
 </a>
-<a class="header-link" href="https://store.weareunder.design">
-<h5>store</h5>
+<a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/rnbw.svg">
+<span class="text-m white" style="text-decoration: none; display: none;">rnbw</span> <!-- Скрыть текст -->
+</div>
 </a>
-<a class="header-link" href="mailto:hello@weareunder.design">
-<h5>contact</h5>
+<a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/store.svg">
+<span class="text-m white" style="text-decoration: none; display: none;">store</span> <!-- Скрыть текст -->
+</div>
 </a>
-</nav>
+<a class="header-link" style="cursor: pointer" id="nav-work" data-page="design">
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/design.svg">
+<span class="text-m white" style="text-decoration: none; display: none;">design</span>
+</div>
+</a>
+</div>
 
 <div id="works-wrapper" class="hidden">
 <div class="view row show-project" style="position: relative; z-index: 100;" id="brand-sprints-section">
@@ -127,7 +138,7 @@ function addSidebar() {
 <div class="projects">
 <img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
-<img src="https://weareunder.design/work/rnbw/0.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
+<img src="https://weareunder.design/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
 <img src="https://weareunder.design/work/soli/19.png" class="sidebar-project-image box-l" id="soli" loading="lazy"></img>
@@ -215,11 +226,53 @@ function addSidebar() {
 
   $("#sidebar-work").on("mouseleave", function () {
     $(".hero-section").css("display", "block");
-    $("#under-nav").css("display", "block");
+    $("#under-nav").css({
+      "display": "flex",
+      "flex-direction": "row"
+    });
     $("#works-wrapper").css("display", "none");
     $("#body-content").css("display", "block");
   });
+
+  function setActiveNavItem() {
+    const pageIdentifier = document.body.dataset.page;
+    if (pageIdentifier) {
+      const navItem = $(`.header-link[data-page="${pageIdentifier}"]`);
+      if (navItem.length) {
+        const img = navItem.find("img");
+        const originalSrc = img.attr("src");
+        img.attr("src", originalSrc.replace(".svg", "h.svg")); 
+        navItem.addClass('active');
+        navItem.find(".text-m").css("display", "none"); 
+      }
+    }
+  }
+
+  $(".header-link").on("mouseover", function () {
+    const img = $(this).find("img");
+    const originalSrc = img.attr("src");
+    
+    if (!$(this).hasClass('active')) {
+      img.attr("src", originalSrc.replace(".svg", "h.svg"));
+      $(this).find(".text-m").css("display", "block"); 
+    } else {
+      $(this).find(".text-m").css("display", "block"); 
+    }
+  }).on("mouseout", function () {
+    const img = $(this).find("img");
+    const originalSrc = img.attr("src");
+    
+    if (!$(this).hasClass('active')) {
+      img.attr("src", originalSrc.replace("h.svg", ".svg"));
+      $(this).find(".text-m").css("display", "none"); 
+    } else {
+      $(this).find(".text-m").css("display", "none"); 
+    }
+  });
+
+  setActiveNavItem();
 }
+
 async function SideBarFunctionality() {
   "use strict";
 
@@ -418,6 +471,22 @@ async function SideBarFunctionality() {
   };
   Main.main();
 }
+
+function hideTextOnMobile() {
+  const navLinks = document.querySelectorAll('.header-link p');
+  if (window.innerWidth <= 768) {
+    navLinks.forEach(link => {
+      link.style.display = 'none';
+    });
+  } else {
+    navLinks.forEach(link => {
+      link.style.display = '';
+    });
+  }
+}
+
+window.addEventListener('load', hideTextOnMobile);
+window.addEventListener('resize', hideTextOnMobile);
 
 SideBarFunctionality();
 

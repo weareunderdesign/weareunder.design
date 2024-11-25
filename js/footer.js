@@ -10,57 +10,54 @@ const footerTemplate = `
       </div>
     </div>
 
-
     <div class="gap-xl row align-start box-l">
-      <a style="width: 5.25vw; height 5.25vw;" href="https://weareunder.design/">
-        <svg-icon src="https://weareunder.design/images/under-footer.svg"></svg-icon>
+      <a style="width: 4vw; height 4vw;" href="https://weareunder.design/">
+        <svg-icon src="https://rnbw.design/images/under/underfooter.svg"></svg-icon>
       </a>
       <h5 class="box">
         under creates high-quality,<br>
         well-designed, creative brands <br>
         and products for creative people.
       </h5>
-      <div class="column">
-        <a href="https://weareunder.design/brandsprint/">
-          <h5>brandsprint</h5>
+      <div class="column gap-xs">
+        <a href="https://www.youtube.com/@weareunderdesign">
+          <h5 style="margin:0; padding: 0;">youtube</h5>
         </a>
-        <a href="https://weareunder.design/blog/">
-          <h5>blog</h5>
-        </a>
-        <a href="https://store.weareunder.design/">
-          <h5>store</h5>
+        <a href="https://weareunder.design/pages/newsletter" target="_blank">
+          <h5 style="margin:0; padding: 0;">newsletter</h5>
         </a>
         <a href="mailto:hello@weareunder.design">
-          <h5>contact</h5>
+          <h5 style="margin:0; padding: 0;">contact</h5>
         </a>
         <a href="https://weareunder.design/legal">
-          <h5>legal</h5>
+          <h5 style="margin:0; padding: 0;">legal</h5>
         </a>
       </div>
-      <div class="column align-start">
-        <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
-          <h5>newsletter</h5>
-        </a>
+      <div class="column align-start gap-xs">
         <a href="https://www.instagram.com/under.design/" target="_blank">
-          <h5>instagram</h5>
+          <h5 style="margin:0; padding: 0;">instagram</h5>
         </a>
         <a href="https://x.com/underdesign_" target="_blank">
-          <h5>twitter</h5>
+          <h5 style="margin:0; padding: 0;">twitter</h5>
         </a>
         <a href="https://github.com/weareunderdesign" target="_blank">
-          <h5>github</h5>
+          <h5 style="margin:0; padding: 0;">github</h5>
         </a>
-                  <button onclick="toggleTheme()" class="border background-primary radius-s" style="cursor: pointer; padding:8px; margin-top:8px;">
-            <span class="opacity-m" id="theme-name"></span>
-          </button>
       </div>
-      <div>
-
-        </div>
     </div>
-    
   </div>
 </footer>
+
+<style>
+#email-input:focus {
+  outline: none;
+  border-color: inherit;
+}
+
+.subscribe-button:hover {
+  background-color: #EEEEEE !important;
+}
+</style>
 `;
 
 function updateThemeElementsVisibility() {
@@ -119,6 +116,7 @@ class underFooter extends HTMLElement {
     handleSystemThemeChange(
       window.matchMedia("(prefers-color-scheme: dark)")
     );
+    
   }
 }
 
@@ -184,19 +182,23 @@ function switchFavicon(theme) {
 
 function updateThemeImage(theme) {
   const image = document.getElementById('theme-image');
-  if (theme === 'dark') {
-    image.src = 'images/guide-dark.png';
-  } else {
-    image.src = 'images/guide-light.png';
+  if (image) {
+    if (theme === 'dark') {
+      image.src = 'images/guide-dark.png';
+    } else {
+      image.src = 'images/guide-light.png';
+    }
   }
 }
 
 function updateThemeImageNew(theme) {
   const image = document.getElementById('theme-image-new');
-  if (theme === 'dark') {
-    image.src = 'images/new-dark.svg';
-  } else {
-    image.src = 'images/new-light.svg';
+  if (image) {
+    if (theme === 'dark') {
+      image.src = 'images/new-dark.svg';
+    } else {
+      image.src = 'images/new-light.svg';
+    }
   }
 }
 
