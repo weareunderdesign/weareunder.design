@@ -79,25 +79,16 @@ function addSlider() {
     const nextButton = document.querySelector('.next');
 
     let currentPosition = 100;
-
     let isAutoScrolling = true;
     let isManualControl = false;
-    const scrollSpeed = 0.03; 
+    const scrollSpeed = 0.02;
     let animationFrameId = null;
     let isTransitioning = false;
 
     slides.style.transition = 'none';
     slides.style.willChange = 'transform';
 
-    function updateSlider(withTransition = true) {
-        if (withTransition) {
-            slides.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-        } else {
-            slides.style.transition = 'none';
-        }
-
-        slides.style.transform = `translateX(${-currentPosition}%)`;
-
+    function updateSlideText() {
         const realIndex = Math.floor(currentPosition / 100) - 1;
         const totalRealSlides = slide.length - 2;
         let normalizedIndex = realIndex;
@@ -114,34 +105,42 @@ function addSlider() {
         const currentIndex = Math.floor(currentPosition / 100);
 
         if (currentIndex === totalSlides - 1) {
+            slides.style.transition = 'none';
             currentPosition = 100;
-            updateSlider(false);
+            slides.style.transform = `translateX(-100%)`;
         } else if (currentIndex === 0) {
+            slides.style.transition = 'none';
             currentPosition = (totalSlides - 2) * 100;
-            updateSlider(false);
+            slides.style.transform = `translateX(-${currentPosition}%)`;
         }
 
         isTransitioning = false;
+        updateSlideText();
     }
 
     slides.addEventListener('transitionend', handleTransitionEnd);
 
     function moveToSlide(direction) {
         if (isTransitioning) return;
-        isTransitioning = true;
-
+        
+        stopAutoScroll();
+        
         currentPosition = Math.round(currentPosition / 100) * 100;
-        updateSlider(false); 
-
-        void slides.offsetHeight;
-
-        if (direction === 'next') {
-            currentPosition += 100;
-        } else {
-            currentPosition -= 100;
-        }
-
-        updateSlider(true);
+        slides.style.transform = `translateX(-${currentPosition}%)`;
+        
+        requestAnimationFrame(() => {
+            isTransitioning = true;
+            slides.style.transition = 'transform 0.5s ease';
+            
+            if (direction === 'next') {
+                currentPosition += 100;
+            } else {
+                currentPosition -= 100;
+            }
+            
+            slides.style.transform = `translateX(-${currentPosition}%)`;
+            updateSlideText();
+        });
     }
 
     function autoScroll() {
@@ -153,9 +152,11 @@ function addSlider() {
         const totalSlides = slide.length;
         if (currentPosition >= (totalSlides - 1) * 100) {
             currentPosition = 100;
+            slides.style.transform = `translateX(-100%)`;
         }
 
-        updateSlider(false);
+        slides.style.transform = `translateX(-${currentPosition}%)`;
+        updateSlideText();
         animationFrameId = requestAnimationFrame(autoScroll);
     }
 
@@ -163,8 +164,6 @@ function addSlider() {
         if (!isManualControl) {
             isAutoScrolling = true;
             if (!animationFrameId) {
-                currentPosition = Math.round(currentPosition / 100) * 100;
-                updateSlider(false);
                 autoScroll();
             }
         }
@@ -175,14 +174,11 @@ function addSlider() {
         if (animationFrameId) {
             cancelAnimationFrame(animationFrameId);
             animationFrameId = null;
-            
-            slides.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            currentPosition = Math.round(currentPosition / 100) * 100;
-            updateSlider(true);
         }
     }
 
-    updateSlider(false);
+    slides.style.transform = `translateX(-${currentPosition}%)`;
+    updateSlideText();
     startAutoScroll();
 
     slider.addEventListener('mouseenter', () => {
