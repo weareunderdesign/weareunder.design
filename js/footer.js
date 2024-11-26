@@ -23,7 +23,7 @@ const footerTemplate = `
         <a href="https://www.youtube.com/@weareunderdesign">
           <h5 style="margin:0; padding: 0;">youtube</h5>
         </a>
-        <a href="https://weareunder.design/pages/newsletter" target="_blank">
+        <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
           <h5 style="margin:0; padding: 0;">newsletter</h5>
         </a>
         <a href="mailto:hello@weareunder.design">
