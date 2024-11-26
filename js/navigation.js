@@ -48,6 +48,47 @@ window.addEventListener('load', preloadImages);
 
 function addSidebar() {
   const TEMPLATE = `
+
+  <style>
+    .sidebar {
+      display: block;
+      position: absolute;
+      right: 0;
+      padding: 40px;
+      height: 100%;
+      flex-direction: column;
+      overflow: auto;
+      max-height: 100vh;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      background-color: rgb(0, 121, 78);
+      color: #fff;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .sidebar a {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-project-image {
+      display: none;
+      transition-property: all;
+      transition-duration: 250ms;
+      transition-timing-function: ease;
+      width: 100%;
+    }
+
+    .sidebar-project-link {
+      transition-property: color, background-color;
+      transition-duration: 200ms;
+      transition-timing-function: ease;
+    }
+  </style>
+
   <div class="row padding-xl" style="
   position: fixed;
   right: 0;
@@ -57,40 +98,40 @@ function addSidebar() {
 <a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
 <div class="column align-center gap-xs">
 <img src="https://rnbw.design/images/under/brandsprint.svg">
-<span class="text-m white" style="text-decoration: none; display: none;">brandsprint</span> <!-- Скрыть текст -->
+<span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" target="_blank" href="https://handy.vision" data-page="handy">
 <div class="column align-center gap-xs">
 <img src="https://rnbw.design/images/under/handy.svg">
-<span class="text-m white" style="text-decoration: none; display: none;">handy</span> <!-- Скрыть текст -->
+<span class="text-m" style="text-decoration: none; display: none; color: white;">handy</span> 
 </div>
 </a>
 <a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
 <div class="column align-center gap-xs">
 <img src="https://rnbw.design/images/under/rnbw.svg">
-<span class="text-m white" style="text-decoration: none; display: none;">rnbw</span> <!-- Скрыть текст -->
+<span class="text-m" style="text-decoration: none; display: none; color: white;">rnbw</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
 <div class="column align-center gap-xs">
 <img src="https://rnbw.design/images/under/store.svg">
-<span class="text-m white" style="text-decoration: none; display: none;">store</span> <!-- Скрыть текст -->
+<span class="text-m" style="text-decoration: none; display: none; color: white;">store</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" id="nav-work" data-page="design">
 <div class="column align-center gap-xs">
 <img src="https://rnbw.design/images/under/design.svg">
-<span class="text-m white" style="text-decoration: none; display: none;">design</span>
+<span class="text-m" style="text-decoration: none; display: none; color: white;">design</span>
 </div>
 </a>
 </div>
 
 <div id="works-wrapper" class="hidden">
-<div class="view row show-project" style="position: relative; z-index: 100;" id="brand-sprints-section">
-<a href="https://weareunder.design/" class="logo padding-xl mix-diff" href="/" style="">
-        <img src="https://weareunder.design/images/under-header-logo.svg" class="desktop-logo-navigation"/>
-        <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile-logo-navigation"/>
+<div class="view row" style="position: relative; z-index: 100; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png';" id="brand-sprints-section">
+<a href="https://weareunder.design/" class="padding-xl" href="/" style=" mix-blend-mode: difference; color: white;">
+        <img src="https://weareunder.design/images/under-header-logo.svg" style="display: block;"/>
+        <img src="https://weareunder.design/images/under-header-logo-small.svg" style="display: none;"/>
 </a>
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
   <a href="https://weareunder.design/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>

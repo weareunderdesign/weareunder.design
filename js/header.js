@@ -1,6 +1,6 @@
 function addHeader() {
   const TEMPLATE = `
-      <a href="https://weareunder.design/" class="logo padding-xl mix-diff" href="/" style="display: flex; position: fixed; z-index: 99; width: 100%; justify-content: space-between;">
+      <a href="https://weareunder.design/" class="padding-xl" href="/" style="display: flex; position: fixed; z-index: 99; width: 100%; justify-content: space-between; mix-blend-mode: difference; color: white;">
         <img src="https://rnbw.design/images/under/under.svg" class="desktop"/>
         <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile"/>
       </a>

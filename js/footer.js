@@ -47,17 +47,6 @@ const footerTemplate = `
     </div>
   </div>
 </footer>
-
-<style>
-#email-input:focus {
-  outline: none;
-  border-color: inherit;
-}
-
-.subscribe-button:hover {
-  background-color: #EEEEEE !important;
-}
-</style>
 `;
 
 function updateThemeElementsVisibility() {
