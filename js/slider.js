@@ -82,7 +82,7 @@ function addSlider() {
 
     let isAutoScrolling = true;
     let isManualControl = false;
-    const scrollSpeed = 0.01;  // Уменьшили скорость автоскролла
+    const scrollSpeed = 0.03; 
     let animationFrameId = null;
     let isTransitioning = false;
 
@@ -130,14 +130,11 @@ function addSlider() {
         if (isTransitioning) return;
         isTransitioning = true;
 
-        // Сначала выравниваем текущую позицию до ближайшего целого слайда
         currentPosition = Math.round(currentPosition / 100) * 100;
-        updateSlider(false);  // Обновляем без анимации
+        updateSlider(false); 
 
-        // Форсируем перерисовку
         void slides.offsetHeight;
 
-        // Теперь делаем переход
         if (direction === 'next') {
             currentPosition += 100;
         } else {
@@ -166,7 +163,6 @@ function addSlider() {
         if (!isManualControl) {
             isAutoScrolling = true;
             if (!animationFrameId) {
-                // Выравниваем позицию перед стартом автоскролла
                 currentPosition = Math.round(currentPosition / 100) * 100;
                 updateSlider(false);
                 autoScroll();
@@ -180,7 +176,6 @@ function addSlider() {
             cancelAnimationFrame(animationFrameId);
             animationFrameId = null;
             
-            // Добавили плавный переход при остановке
             slides.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
             currentPosition = Math.round(currentPosition / 100) * 100;
             updateSlider(true);

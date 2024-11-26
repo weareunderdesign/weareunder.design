@@ -8,6 +8,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const orangeAccordion = document.querySelector('.orange_background#accordion');
     const blackAccordion = document.querySelector('.black_background#accordion');
 
+    accordions.forEach(accordion => {
+        accordion.style.transition = 'flex-grow 0.3s ease';
+        
+        if (window.innerWidth <= 768) {
+            accordion.classList.add('waitwhat');
+        }
+    });
+
+    function setHeaderStyles() {
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        if (window.innerWidth <= 768) {
+            accordionHeaders.forEach(header => {
+                header.style.transform = 'rotate(0deg)';
+                header.style.writingMode = 'horizontal-tb';
+            });
+
+            document.querySelector('.black-accordion')?.style.setProperty('display', 'none');
+            
+            document.querySelectorAll('.waitwhat1').forEach(el => {
+                el.style.flexWrap = 'wrap !important';
+            });
+            
+        } else {
+            accordionHeaders.forEach(header => {
+                header.style.transform = 'rotate(180deg)';
+                header.style.writingMode = 'vertical-lr';
+            });
+            
+            document.querySelector('.black-accordion')?.style.removeProperty('display');
+        }
+    }
+
+    setHeaderStyles();
+
+    window.addEventListener('resize', setHeaderStyles);
+
     function handleAccordionClick(clickedAccordion) {
         accordions.forEach(accordion => {
             if (accordion === clickedAccordion) {
@@ -25,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
-
 
     greenAccordion.addEventListener('click', function () {
         handleAccordionClick(greenAccordion);

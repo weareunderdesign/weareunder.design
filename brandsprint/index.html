@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -11,7 +10,6 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-54NVWMCH');</script>
-    <!-- End Google Tag Manager -->
     <script defer data-domain="weareunder.design" src="https://plausible.io/js/plausible.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +21,7 @@
     <link rel="icon" href="../images/favicon.svg">
     <link rel="apple-touch-icon" href="../images/webclip.svg">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
     <script src="../js/lottie_scroll.js"></script>
     <script src="../js/pingpong.js"></script>
     <title>Brand Sprint</title>
@@ -31,35 +30,34 @@
 </head>
 
 <body data-theme="light" data-page="brandsprint">
-    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NVWMCH" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <under-header></under-header>
     <under-navigation></under-navigation>
 
     <div class="view random-color-change column align-center" style="padding-bottom: 5vw; overflow: hidden;">
-        <div class="view row ping-pong align-center padding-xl min_height_pingpong" style="position: relative;">
-            <a href="#what" class="circle brand-sprint-circle circle1 yellow_background display_none_pingpong">
+        <div class="view row align-center padding-xl ping-pong" style="position: relative;">
+            <a href="#what" class="column align-center text-center circle1"
+                style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FDC800;">
                 <h4>what</h4>
             </a>
 
-            <a href="#when" class="circle brand-sprint-circle circle2 pink_background display_none_pingpong" style="
+            <a href="#when" class="column align-center text-center circle2" style=" position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FFBFE1;
                 bottom: -15vh;
                 left: 70vw;
               ">
                 <h4>when</h4>
             </a>
 
-            <a href="#how" class="circle brand-sprint-circle circle3 blue_background display_none_pingpong" style="
+            <a href="#how" class="column align-center text-center circle3" style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #014ADD;
                 bottom: -5vh;
                 left: 20vw;
               ">
                 <h4>how</h4>
             </a>
 
-            <a href="#why" class="circle brand-sprint-circle circle4 orange_background display_none_pingpong" style="
+            <a href="#why" class="column align-center text-center circle4" style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FF4B00;
                 bottom: 25vh;
                 left: 70vw;
               ">
@@ -67,7 +65,7 @@
             </a>
 
             <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank"
-                class="circle brand-sprint-circle circle5 white_background display_none_pingpong" style="
+                class="column align-center text-center circle5" style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FFFFFF;
             bottom: 15vh;
             left: 40vw;
           ">
@@ -76,12 +74,16 @@
 
             <div class="page" style="align-items: center;">
                 <img src="./images/brandsprint.svg">
-                <h2 class="white text-center box-m">
+                <h2 class="text-center box-m" style="color: white;">
                     stand out better and faster
                     in a world full of brands
                 </h2>
             </div>`
         </div>
+
+
+
+        <!-- to fix -->
         <div class="box-l column gap-xl" style="overflow: hidden;">
             <div class="tickertext row">
                 <div class="row gap-xl" style="flex-wrap: nowrap; opacity: 0; flex-direction: row !important;">
@@ -941,8 +943,11 @@
                     <img src="./logos/Logo46.svg" />
                 </div>
             </div>
-
         </div>
+
+
+
+
     </div>
     <under-slider></under-slider>
     <div class="view column align-center gap-xl">
@@ -955,8 +960,8 @@
                 key values, and create a fresh brand identity. really.
             </h3>
         </div>
-        <div class="page waitwhat gap-l">
-            <div class="row gap-l box-l waitwhat1" style="flex-wrap: nowrap;">
+        <div class="page gap-l">
+            <div class="row gap-l box-l" style="flex-wrap: nowrap;">
                 <div class="box-l column gap-l align-start">
                     <img class="box-l" src="./images/BrandStrategy.svg">
                     <div class="column">
@@ -981,7 +986,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row gap-l box-l waitwhat1" style="flex-wrap: nowrap;">
+            <div class="row gap-l box-l" style="flex-wrap: nowrap;">
                 <div class="box-l column gap-l align-start">
                     <img class="box-l" src="./images/Marketing.svg">
                     <div class="column">
@@ -1026,7 +1031,7 @@
         <div class="page">
             <div class="column justify-stretch gap-l">
                 <div class="row gap-l" style="flex-wrap: nowrap;">
-                    <div class="orange_background column padding-xl box-l justify-stretch">
+                    <div class="column padding-xl box-l justify-stretch" style="background-color: #FF4B00;">
                         <div class="align-center">
                             <img class="box-m" src="videos/quick.gif">
                         </div>
@@ -1041,7 +1046,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="yellow_background column padding-xl box-l justify-stretch">
+                    <div class="column padding-xl box-l justify-stretch" style="background-color: #FDC800;">
                         <div class="align-center">
                             <img class="box-m" src="videos/fancy.gif">
                         </div>
@@ -1057,14 +1062,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="blue_background blue_background1 row padding-xl justify-stretch box-l"
-                    style="flex-wrap: nowrap;">
+                <div class="row padding-xl justify-stretch box-l" style="flex-wrap: nowrap; background-color: #014ADD;">
                     <div class="column white box-s">
                         <h2>team</h2>
-                        <p class="box-m">                            the brand sprint team includes inbal and eden as creative directors. additionally, the core
+                        <p class="box-m"> the brand sprint team includes inbal and eden as creative directors.
+                            additionally, the core
                             team
                             includes a wide range of skills, from 2d/3d design, illustration, and motion to other
-                            disciplines like development and ai. for everything else, we source talent worldwide, which gives us great flexibility.
+                            disciplines like development and ai. for everything else, we source talent worldwide, which
+                            gives us great flexibility.
                         </p>
                     </div>
                     <img class="box-s" src="./images/team.svg">
@@ -1087,8 +1093,8 @@
             </h3>
         </div>
         <div class="row view" style="flex-wrap: nowrap;">
-            <div class="yellow_background row accordion-main-div justify-stretch" id="accordion"
-                style="flex-grow: 1; flex-wrap: nowrap;">
+            <div class="yellow_background row justify-stretch" id="accordion"
+                style="flex-grow: 1; flex-wrap: nowrap; background-color: #FDC800;">
                 <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
                     <h4 class="accordion-header">day 0 strategy</h4>
                     <div class="box-l"></div>
@@ -1107,13 +1113,13 @@
                 </div>
             </div>
 
-            <div class="orange_background row accordion-main-div justify-stretch" id="accordion"
-                style="flex-wrap: nowrap;">
+            <div class="orange_background row justify-stretch" id="accordion"
+                style="flex-wrap: nowrap; background-color: #FF4B00;">
                 <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
                     <h4 class="accordion-header">day 1-3 research</h4>
                     <div class="box-l"></div>
                 </div>
-                <div class="column justify-stretch align-end accordion-div gap-l">
+                <div class="column justify-stretch align-end gap-l">
                     <div class="imageaccordion box-l justify-end padding-l" style="display: none; position: relative;">
                         <img class="box-s" src="videos/orange.gif">
                         <div class="box-l orange_background"
@@ -1129,13 +1135,13 @@
                 </div>
             </div>
 
-            <div class="pink_background row accordion-main-div justify-stretch" id="accordion"
-                style="flex-wrap: nowrap;">
+            <div class="pink_background row justify-stretch" id="accordion"
+                style="flex-wrap: nowrap; background-color: #FFBFE1;">
                 <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
                     <h4 class="accordion-header">day 4-7 design</h4>
                     <div class="box-l"></div>
                 </div>
-                <div class="column justify-stretch align-end accordion-div gap-l">
+                <div class="column justify-stretch align-end gap-l">
                     <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
                         <img class="box-s" src="videos/pink.gif">
                     </div>
@@ -1152,13 +1158,13 @@
                     </p>
                 </div>
             </div>
-            <div class="purple_background row accordion-main-div justify-stretch" id="accordion"
-                style="flex-wrap: nowrap;">
+            <div class="purple_background row justify-stretch" id="accordion"
+                style="flex-wrap: nowrap; background-color: #8159FB;">
                 <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
                     <h4 class="accordion-header">day 10 present</h4>
                     <div class="box-l"></div>
                 </div>
-                <div class="column justify-stretch align-end accordion-div gap-l">
+                <div class="column justify-stretch align-end gap-l">
                     <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
                         <img class="box-s" src="videos/purple.gif">
                     </div>
@@ -1171,13 +1177,13 @@
                 </div>
             </div>
 
-            <div class="blue_background row accordion-main-div justify-stretch" id="accordion"
-                style="flex-wrap: nowrap;">
+            <div class="blue_background row justify-stretch" id="accordion"
+                style="flex-wrap: nowrap; background-color: #014ADD;">
                 <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
                     <h4 class="accordion-header">day 11 handoff</h4>
                     <div class="box-l"></div>
                 </div>
-                <div class="column justify-stretch align-end accordion-div gap-l">
+                <div class="column justify-stretch align-end gap-l">
                     <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
                         <img class="box-s" src="videos/blue.gif">
                     </div>
@@ -1189,13 +1195,13 @@
                 </div>
             </div>
 
-            <div class="green_background row accordion-main-div justify-stretch" id="accordion"
-                style="flex-wrap: nowrap;">
+            <div class="green_background row justify-stretch" id="accordion"
+                style="flex-wrap: nowrap; background-color: #02903B;">
                 <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
                     <h4 class="accordion-header">handshake</h4>
                     <div class="box-l"></div>
                 </div>
-                <div class="column justify-stretch align-end accordion-div gap-l">
+                <div class="column justify-stretch align-end gap-l">
                     <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
                         <img class="box-s" src="videos/green.gif">
                     </div>
@@ -1210,13 +1216,13 @@
                 </div>
             </div>
 
-            <div class="black_background row accordion-main-div white justify-stretch" id="accordion"
-                style="flex-wrap: nowrap;">
+            <div class="black_background row justify-stretch" id="accordion"
+                style="flex-wrap: nowrap; background-color: #000000; color: white;">
                 <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
                     <h4 class="accordion-header">ongoing</h4>
                     <div class="box-l"></div>
                 </div>
-                <div class="column justify-stretch align-end accordion-div gap-l">
+                <div class="column justify-stretch align-end gap-l">
                     <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
                         <img class="box-s" src="videos/black.gif">
                     </div>
@@ -1230,14 +1236,11 @@
                     </p>
                 </div>
             </div>
-
-            <div class="white black-accordion black_background column" style="height: 100%; writing-mode: vertical-lr;">
-            </div>
         </div>
     </div>
 
     <div class="view column padding-xl align-center gap-xl">
-        <div class="page column" style="align-items: center;">
+        <div class="page" style="align-items: center;">
             <div id="when" class="nudge_font text-center">
                 ok, when?
             </div>
@@ -1248,54 +1251,56 @@
             </h3>
         </div>
 
-        <div class="row gap-xl justify-stretch box-l nowarp-schedule">
-            <div class="row gap-xl justify-stretch box-l nowarp-schedule-div">
-                <div class="box-s padding-xl column opacity-m align-center gap-xl schedule-div">
-                    <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                        <h5>                            december</h5>
-                        <h3>                            12</h3>
+        <div class="row box-l gap-xl" style="flex-wrap: nowrap;">
+            <div class="row justify-stretch box-l" style="flex-wrap: nowrap;">
+                <div class="box-s padding-xl column opacity-m align-center gap-xl">
+                    <div class="row justify-stretch align-center" style="flex-wrap: nowrap; width: 100%;">
+                        <h5> december</h5>
+                        <h3> 12</h3>
                     </div>
-                    <div class="box-s border text-center align-center schedule-circle">
+                    <div class="box-s border text-center align-center"
+                        style="border-radius: 100%; height: 15vw; width: 15vw; border: 1px solid black; margin-left: -6vw;">
                         <p class="text-center">not available</p>
                     </div>
                 </div>
-                <div class="line">
+                <div style="border: 0.5px solid black; transform: rotate(13deg); margin-left: -4vw;">
                 </div>
-                <div class="box-s opacity-m padding-xl column align-center gap-xl schedule-div">
-                    <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                        <h5>                            january</h5>
-                        <h3>                            01</h3>
+                <div class="box-s padding-xl column align-center gap-xl">
+                    <div class="row justify-stretch align-center" style="flex-wrap: nowrap; width: 100%;">
+                        <h5> january</h5>
+                        <h3> 01</h3>
                     </div>
-                    <div
-                            class="box-s text-center align-center random-color-change schedule-color-circle"
-                          >
-                            <p class="text-center white">let's talk</p>
-                          </div>
+                    <div class="box-s text-center align-center random-color-change"
+                        style="border-radius: 100%; height: 15vw; width: 15vw; margin-left: -6vw;">
+                        <p class="text-center white">let's talk</p>
+                    </div>
                 </div>
-                <div class="line line1">
+                <div style="display: block; border: 0.5px solid black; transform: rotate(13deg); margin-left: -4vw;">
                 </div>
             </div>
-            <div class="row gap-xl justify-stretch box-l nowarp-schedule-div">
-                <div class="box-s padding-xl column align-center gap-xl schedule-div">
-                    <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                            <h5>february</h5>
-                            <h3>02</h3>
-                          </div>
+            <div class="row justify-stretch box-l" style="flex-wrap: nowrap;">
+                <div class="box-s padding-xl column align-center gap-xl">
+                    <div class="row justify-stretch align-center" style="flex-wrap: nowrap; width: 100%;">
+                        <h5>february</h5>
+                        <h3>02</h3>
+                    </div>
                     <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                        <div class="box-s text-center align-center random-color-change schedule-color-circle">
+                        <div class="box-s text-center align-center random-color-change"
+                            style="border-radius: 100%; height: 15vw; width: 15vw; margin-left: -6vw;">
                             <p class="text-center white">let's talk</p>
                         </div>
                     </a>
                 </div>
-                <div class="line">
+                <div style="border: 0.5px solid black; transform: rotate(13deg); margin-left: -4vw;">
                 </div>
-                <div class="box-s padding-xl column align-center gap-xl schedule-div">
-                    <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                        <h5>                            march</h5>
-                        <h3>                            03                        </h3>
+                <div class="box-s padding-xl column align-center gap-xl">
+                    <div class="row justify-stretch align-center" style="flex-wrap: nowrap; width: 100%;">
+                        <h5> march</h5>
+                        <h3> 03 </h3>
                     </div>
                     <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                        <div class="box-s text-center align-center random-color-change schedule-color-circle">
+                        <div class="box-s text-center align-center random-color-change"
+                            style="border-radius: 100%; height: 15vw; width: 15vw; margin-left: -6vw;">
                             <p class="text-center white">let's talk</p>
                         </div>
                     </a>
@@ -1325,14 +1330,15 @@
                 the template
             </div>
             <img style="padding-top: 2.5rem;" src="./images/template.png" />
-            <h3 class="box-m text-center" style="display: inline-block;">                thinking about running a brand sprint?<br><a style="text-decoration: underline;"
+            <h3 class="box-m text-center" style="display: inline-block;"> thinking about running a brand sprint?<br><a
+                    style="text-decoration: underline;"
                     href="https://www.figma.com/design/jpUIjma2LctAInA1FHuyug/Brand-Sprint-Template?node-id=0-1&t=v0Zl2sdGIiuS3bc5-0"
                     target="_blank"><span>take this</span> </a>, it'll help you kick things off.
             </h3>
         </div>
     </div>
 
-    
+
 
     <under-footer></under-footer>
     <script src="../js/circle.js"></script>
@@ -1342,7 +1348,9 @@
     <script src="../js/pingpong.js"></script>
     <script src="../js/accordion.js"></script>
     <script src="../js/slider.js"></script>
-
+    <script src="../js/randomcolorchange.js"></script>
+    <script src="../js/testimonialsticker.js"></script>
+    <script src="../js/nudgefont.js"></script>
 </body>
 
 </html>
