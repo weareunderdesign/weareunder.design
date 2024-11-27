@@ -105,7 +105,6 @@ class underFooter extends HTMLElement {
     handleSystemThemeChange(
       window.matchMedia("(prefers-color-scheme: dark)")
     );
-    
   }
 }
 
@@ -161,12 +160,12 @@ if (storedTheme) {
 }
 
 function switchFavicon(theme) {
-  const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-  link.type = 'image/png';
-  link.rel = 'shortcut icon';
-  link.href = `https://rnbw.design/images/favicon-${theme}.png`;
-
-  document.getElementsByTagName('head')[0].appendChild(link);
+  const link = document.querySelector("link[rel*='icon']");
+  if (link && link.href.includes('favicon.svg')) {
+    link.type = 'image/png';
+    link.rel = 'shortcut icon';
+    link.href = `https://rnbw.design/images/favicon-${theme}.png`;
+  }
 }
 
 function updateThemeImage(theme) {
