@@ -1,5 +1,6 @@
 function preloadImages() {
   const imageUrls = [
+    "https://weareunder.design/work/aim/0.png",
     "https://weareunder.design/work/bounce/0.png",
     "https://weareunder.design/work/rnbw/0.png",
     "https://weareunder.design/work/spacetop/0.png",
@@ -134,6 +135,7 @@ function addSidebar() {
         <img src="https://weareunder.design/images/under-header-logo-small.svg" style="display: none;"/>
 </a>
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
+  <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
   <a href="https://weareunder.design/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>
   <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-000000">rnbw</a>
   <a href="https://weareunder.design/work/bounce/" class="sidebar-project-link" id="bounce-03542C">bounce</a>
@@ -177,6 +179,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
+<img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
 <img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
 <img src="https://weareunder.design/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
