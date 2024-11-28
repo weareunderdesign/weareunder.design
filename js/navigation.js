@@ -220,6 +220,21 @@ function addSidebar() {
     constructor() {
       super();
       this.innerHTML = TEMPLATE;
+      const element = document.querySelector('#under-nav');
+      if (element) {
+       const adjustPadding = () => {
+         if (window.innerWidth <= 768) {
+           element.classList.remove('padding-xl');
+           element.classList.add('padding-m');
+         } else {
+           element.classList.remove('padding-m');
+           element.classList.add('padding-xl');
+         }
+       }
+      
+       window.addEventListener('load', adjustPadding);
+       window.addEventListener('resize', adjustPadding);
+      }
     }
   }
   customElements.define("under-navigation", UnderNavigation);

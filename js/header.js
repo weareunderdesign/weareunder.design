@@ -1,9 +1,9 @@
 function addHeader() {
   const TEMPLATE = `
     <div class=""box-l>
-      <a href="https://weareunder.design/" class="box-xs padding-xl" href="/" style="display: flex; position: fixed; z-index: 100000; justify-content: space-between; mix-blend-mode: difference; color: white;">
-        <img src="https://rnbw.design/images/under/under.svg" class="desktop"/>
-        <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile"/>
+      <a href="https://weareunder.design/" class="box-xs" href="/" style="display: flex; position: fixed; z-index: 100000; justify-content: space-between; mix-blend-mode: difference; color: white;">
+        <img src="https://rnbw.design/images/under/under.svg" class="desktop padding-xl"/>
+        <img src="https://weareunder.design/images/under-header-logo-small.svg" class="mobile padding-l"/>
       </a>
     </div>
     `;
