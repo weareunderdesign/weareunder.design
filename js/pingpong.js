@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
   interval4 = setInterval(() => ping(".circle4"), 1000);
   interval5 = setInterval(() => ping(".circle5"), 1000);
 
-  // Сразу вызываем первоначальную инициализацию
   ping(".circle-brandsprint");
   ping(".circle1");
   ping(".circle2");

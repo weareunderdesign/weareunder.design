@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
+
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
@@ -11,7 +11,7 @@
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-54NVWMCH');</script>
-  <!-- End Google Tag Manager -->
+
   <script defer data-domain="weareunder.design" src="https://plausible.io/js/plausible.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="./images/favicon.svg">
   <link rel="apple-touch-icon" href="./images/webclip.svg">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
   <script src="./js/lottie_scroll.js"></script>
   <script src="./js/pingpong.js"></script>
   <title>Under Design</title>
@@ -31,56 +31,65 @@
 </head>
 
 <body data-theme="light">
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NVWMCH" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NVWMCH" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
   <under-header></under-header>
   <under-navigation></under-navigation>
-  <a href="https://handy.vision" target="_blank" class="view row product">
-    <video class="slider-video video" src="./animations/handy.webm" autoplay muted loop></video>
-    <div class="align-end mix-diff product-text padding-xl">
+  
+  <a href="https://handy.vision" target="_blank" class="view row"
+    style="background: no-repeat center/cover; position: relative;">
+    <video src="./animations/handy.webm" autoplay muted loop
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"></video>
+    <div class="padding-xl" style="z-index: 99; bottom: 0; position: absolute;">
       <p>handy</p>
     </div>
   </a>
   <div class="view ping-pong">
     <under-slider></under-slider>
-    <a href="https://weareunder.design/brandsprint/" class="circle circle-brandsprint random-color-change clickable"
-      id="cta-animation" style="cursor: pointer;">
+    <a href="https://weareunder.design/brandsprint/" class="align-center text-center circle circle-brandsprint random-color-change" 
+      id="cta-animation" style="cursor: pointer; display: flex; border-radius: 100%; position: absolute; z-index: 4; width: 220px; height: 220px; color: white; right: 50%; top: 30%;">
       <h4>brand<br>sprint</h4>
     </a>
   </div>
-  <a class="view row product" href="https://rnbw.design" data-desktop-image="./images/rnbw.png"
-    data-mobile-image="./images/rnbw_mobile.png" target="_blank">
-    <div class="align-end mix-diff product-text padding-xl">
+  <a class="view row" href="https://rnbw.design" data-desktop-image="./images/rnbw.png"
+    data-mobile-image="./images/rnbw_mobile.png" target="_blank"
+    style="background: no-repeat center/cover; position: relative;">
+    <div class="align-end padding-xl">
       <p>rnbw</p>
     </div>
-  </a><a class="view row product" href="./justripe/" data-desktop-image="./images/justripe.png"
-    data-mobile-image="./images/justripe_mobile.png">
-    <div class="align-end mix-diff product-text padding-xl">
+  </a>
+  <a class="view row" href="./justripe/" data-desktop-image="./images/justripe.png"
+    data-mobile-image="./images/justripe_mobile.png" style="background: no-repeat center/cover; position: relative;">
+    <div class="align-end padding-xl">
       <p>justripe</p>
     </div>
   </a>
-  <a class="view row product random-color-change" href="https://weareunder.design/brandsprint/#brandsprintpagebook"
+  <a class="view row random-color-change" href="https://weareunder.design/brandsprint/#brandsprintpagebook"
     data-desktop-image="./images/book.png" data-mobile-image="./images/book_mobile.png">
-    <div class="align-end mix-diff product-text padding-xl">
+    <div class="align-end padding-xl">
       <p>the brand sprint book — coming soon</p>
     </div>
   </a>
+
   <under-footer></under-footer>
-  <div class="view view1 ping-pong align-center">
+
+  <div class="view">
     <video src="./animations/light.webm" autoplay muted loop></video>
   </div>
   </div>
   </div>
+
   <script src="./js/navigation.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/footer.js"></script>
   <script src="./js/mobile_covers.js"></script>
   <script src="./js/slider.js"></script>
+  <script src="./js/randomcolorchange.js"></script>
+
 </body>
 
 </html>

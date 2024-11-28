@@ -23,7 +23,7 @@ const footerTemplate = `
         <a href="https://www.youtube.com/@weareunderdesign">
           <h5 style="margin:0; padding: 0;">youtube</h5>
         </a>
-        <a href="https://weareunder.design/pages/newsletter" target="_blank">
+        <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
           <h5 style="margin:0; padding: 0;">newsletter</h5>
         </a>
         <a href="mailto:hello@weareunder.design">
@@ -47,17 +47,6 @@ const footerTemplate = `
     </div>
   </div>
 </footer>
-
-<style>
-#email-input:focus {
-  outline: none;
-  border-color: inherit;
-}
-
-.subscribe-button:hover {
-  background-color: #EEEEEE !important;
-}
-</style>
 `;
 
 function updateThemeElementsVisibility() {
@@ -116,7 +105,6 @@ class underFooter extends HTMLElement {
     handleSystemThemeChange(
       window.matchMedia("(prefers-color-scheme: dark)")
     );
-    
   }
 }
 
@@ -172,12 +160,12 @@ if (storedTheme) {
 }
 
 function switchFavicon(theme) {
-  const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
-  link.type = 'image/png';
-  link.rel = 'shortcut icon';
-  link.href = `https://rnbw.design/images/favicon-${theme}.png`;
-
-  document.getElementsByTagName('head')[0].appendChild(link);
+  const link = document.querySelector("link[rel*='icon']");
+  if (link && link.href.includes('favicon.svg')) {
+    link.type = 'image/png';
+    link.rel = 'shortcut icon';
+    link.href = `https://rnbw.design/images/favicon-${theme}.png`;
+  }
 }
 
 function updateThemeImage(theme) {

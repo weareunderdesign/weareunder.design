@@ -16,7 +16,7 @@ function addSlider() {
     function getProjectsFromNavigation() {
         const sidebar = document.querySelector('.sidebar');
         if (!sidebar) return [];
-        
+
         const links = Array.from(sidebar.querySelectorAll('a.sidebar-project-link'));
         return links.map(link => {
             const id = link.id.split('-')[0];
@@ -30,26 +30,32 @@ function addSlider() {
     }
 
     function generateSlidesHTML(projects) {
-        return projects.map(project => `
-            <a href="${project.href}" class="slide view" id="${project.id}"
-                style="background-image: url('${project.imageUrl}');"></a>
+        const clonedProjects = [
+            projects[projects.length - 1],
+            ...projects,
+            projects[0]
+        ];
+
+        return clonedProjects.map((project, index) => `
+            <a href="${project.href}" class="slide view" id="${project.id}" data-index="${index}"
+                style="min-width: 100%; height: 100%; background-size: cover; background-position: center; background-image: url('${project.imageUrl}');"></a>
         `).join('');
     }
 
     const projects = getProjectsFromNavigation();
-    
+
     const TEMPLATE = `
-    <div class="box-l view row product" id="body-content">
-        <div class="slider view">
-            <div class="slides view">
+    <div class="view row box-l" id="body-content" style="background: no-repeat center/cover; position: relative;">
+        <div class="view slider" style="position: relative; width: 100%; height: 61.8vw; overflow: hidden;">
+            <div class="view slides" style="width: 100%; height: 61.8vw; display: flex; transition: transform 0.5s ease-in-out;">
                 ${generateSlidesHTML(projects)}
             </div>
-            <p class="padding-xl white slidertext" style="mix-blend-mode: difference;">finaloop</p>
-            <div class="sliderbuttons padding-xl">
-                <button class="arrow prev" style="mix-blend-mode: difference;">
+            <p class="padding-xl slidertext" style="mix-blend-mode: difference; color: white; position: absolute; bottom: 0px; left: 0%; white-space: nowrap; margin: 0.5rem, 0, 0.5rem, 0 !important; line-height: 1.35 !important;">finaloop</p>
+            <div class="padding-xl sliderbuttons" style="position: absolute; bottom: 0px; right: 0%;">
+                <button class="prev" style="mix-blend-mode: difference; border: none; background: none; cursor: pointer; width: 1.75rem; height: 1.75rem;">
                     <img src="https://weareunder.design/images/arrow_left.svg" />
                 </button>
-                <button class="arrow next" style="mix-blend-mode: difference;">
+                <button class="next" style="mix-blend-mode: difference; border: none; background: none; cursor: pointer; width: 1.75rem; height: 1.75rem;">
                     <img src="https://weareunder.design/images/arrow_right.svg" />
                 </button>
             </div>
@@ -64,103 +70,146 @@ function addSlider() {
         }
     }
     customElements.define("under-slider", UnderSlider);
-    
+
     const slider = document.querySelector('.slider');
     const slides = document.querySelector('.slides');
     const slide = document.querySelectorAll('.slide');
     const slideText = document.querySelector('.slidertext');
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
-    let currentPosition = 0;
-    
+
+    let currentPosition = 100;
     let isAutoScrolling = true;
-    let scrollDirection = 0.02;
-    let animationFrameId;
-    
-    slides.style.transition = 'none'; 
-    slides.style.willChange = 'transform'; 
-    
-    function updateSlider() {
-        const totalWidth = slide.length * 100;
-        currentPosition = (currentPosition + totalWidth) % totalWidth;
-        slides.style.transform = `translateX(${-currentPosition}%)`;
-        
-        const currentSlideIndex = Math.floor(currentPosition / 100);
-        const currentSlideId = slide[currentSlideIndex % slide.length].id;
+    let isManualControl = false;
+    const scrollSpeed = 0.02;
+    let animationFrameId = null;
+    let isTransitioning = false;
+
+    slides.style.transition = 'none';
+    slides.style.willChange = 'transform';
+
+    function updateSlideText() {
+        const realIndex = Math.floor(currentPosition / 100) - 1;
+        const totalRealSlides = slide.length - 2;
+        let normalizedIndex = realIndex;
+
+        if (realIndex < 0) normalizedIndex = totalRealSlides - 1;
+        if (realIndex >= totalRealSlides) normalizedIndex = 0;
+
+        const currentSlideId = slide[normalizedIndex + 1].id;
         slideText.textContent = currentSlideId;
     }
-    
-    function moveToSlide(index) {
-        // Убираем transition перед изменением позиции
-        slides.style.transition = 'none';
-        
-        currentPosition = index * 100;
-        if (currentPosition < 0) {
-            currentPosition = (slide.length - 1) * 100;
-        } else if (currentPosition >= slide.length * 100) {
-            currentPosition = 0;
+
+    function handleTransitionEnd() {
+        const totalSlides = slide.length;
+        const currentIndex = Math.floor(currentPosition / 100);
+
+        if (currentIndex === totalSlides - 1) {
+            slides.style.transition = 'none';
+            currentPosition = 100;
+            slides.style.transform = `translateX(-100%)`;
+        } else if (currentIndex === 0) {
+            slides.style.transition = 'none';
+            currentPosition = (totalSlides - 2) * 100;
+            slides.style.transform = `translateX(-${currentPosition}%)`;
         }
+
+        isTransitioning = false;
+        updateSlideText();
+    }
+
+    slides.addEventListener('transitionend', handleTransitionEnd);
+
+    function moveToSlide(direction) {
+        if (isTransitioning) return;
         
-        // Сразу обновляем позицию без анимации
-        updateSlider();
+        stopAutoScroll();
         
-        // Добавляем transition только для следующего изменения
+        currentPosition = Math.round(currentPosition / 100) * 100;
+        slides.style.transform = `translateX(-${currentPosition}%)`;
+        
         requestAnimationFrame(() => {
+            isTransitioning = true;
             slides.style.transition = 'transform 0.5s ease';
+            
+            if (direction === 'next') {
+                currentPosition += 100;
+            } else {
+                currentPosition -= 100;
+            }
+            
+            slides.style.transform = `translateX(-${currentPosition}%)`;
+            updateSlideText();
         });
     }
-    
+
     function autoScroll() {
         if (!isAutoScrolling) return;
 
-        currentPosition += scrollDirection;
-        
-        // Если достигли края, мгновенно переходим к противоположному краю
-        if (currentPosition <= 0) {
-            currentPosition = (slide.length - 1) * 100;
-            scrollDirection = Math.abs(scrollDirection); // меняем направление на положительное
-        } else if (currentPosition >= (slide.length - 1) * 100) {
-            currentPosition = 0;
-            scrollDirection = -Math.abs(scrollDirection); // меняем направление на отрицательное
+        slides.style.transition = 'none';
+        currentPosition += scrollSpeed;
+
+        const totalSlides = slide.length;
+        if (currentPosition >= (totalSlides - 1) * 100) {
+            currentPosition = 100;
+            slides.style.transform = `translateX(-100%)`;
         }
-        
-        updateSlider();
+
+        slides.style.transform = `translateX(-${currentPosition}%)`;
+        updateSlideText();
         animationFrameId = requestAnimationFrame(autoScroll);
     }
-    
+
     function startAutoScroll() {
-        isAutoScrolling = true;
-        cancelAnimationFrame(animationFrameId);
-        animationFrameId = requestAnimationFrame(autoScroll);
+        if (!isManualControl) {
+            isAutoScrolling = true;
+            if (!animationFrameId) {
+                autoScroll();
+            }
+        }
     }
-    
+
     function stopAutoScroll() {
         isAutoScrolling = false;
-        cancelAnimationFrame(animationFrameId);
+        if (animationFrameId) {
+            cancelAnimationFrame(animationFrameId);
+            animationFrameId = null;
+        }
     }
-    
-    function handleManualScroll() {
-        stopAutoScroll();
-    }
-    
-    updateSlider();
+
+    slides.style.transform = `translateX(-${currentPosition}%)`;
+    updateSlideText();
     startAutoScroll();
-    
-    slider.addEventListener('mouseenter', stopAutoScroll);
-    slider.addEventListener('mouseleave', startAutoScroll);
-    
-    prevButton.addEventListener('click', () => {
-        let index = Math.floor(currentPosition / 100);
-        index = (index - 1 + slide.length) % slide.length;
-        moveToSlide(index);
-        handleManualScroll();
+
+    slider.addEventListener('mouseenter', () => {
+        stopAutoScroll();
     });
-    
+
+    slider.addEventListener('mouseleave', () => {
+        if (!isManualControl) {
+            startAutoScroll();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        isManualControl = true;
+        stopAutoScroll();
+        moveToSlide('prev');
+    });
+
     nextButton.addEventListener('click', () => {
-        let index = Math.floor(currentPosition / 100);
-        index = (index + 1) % slide.length;
-        moveToSlide(index);
-        handleManualScroll();
+        isManualControl = true;
+        stopAutoScroll();
+        moveToSlide('next');
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            isManualControl = false;
+            if (!slider.matches(':hover')) {
+                startAutoScroll();
+            }
+        }, 500);
     });
 }
 
