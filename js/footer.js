@@ -161,7 +161,7 @@ if (storedTheme) {
 
 function switchFavicon(theme) {
   const link = document.querySelector("link[rel*='icon']");
-  if (link && link.href.includes('favicon.svg')) {
+  if (link && link.href.includes('favico.svg')) {
     link.type = 'image/png';
     link.rel = 'shortcut icon';
     link.href = `https://rnbw.design/images/favicon-${theme}.png`;

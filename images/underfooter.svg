@@ -1,4 +1,15 @@
-<svg width="62" height="97" viewBox="0 0 62 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M46.1841 94.2056H61.9052V25.8931H46.1841V66.2992C46.1841 76.0374 40.0704 81.8512 30.0264 81.8512C19.4001 81.8512 15.761 74.5839 15.761 66.2992V25.8931H0.0399258V70.5142C0.0399258 85.1941 6.29923 96.0951 22.7481 96.0951C34.2478 96.0951 42.9817 90.1359 46.0385 75.456H46.1841V94.2056Z" fill="#111111"/>
-<path d="M0 0H62V15.7009H0V0Z" fill="#111111"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_1" data-name="Слой_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 62 97">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M46.2,94.2h15.7V25.9h-15.7v40.4c0,9.7-6.1,15.6-16.2,15.6s-14.3-7.3-14.3-15.6V25.9H0v44.6c0,14.7,6.3,25.6,22.7,25.6s20.2-6,23.3-20.6h.1v18.7Z"/>
+  <path class="st0" d="M0,0h62v15.7H0V0Z"/>
 </svg>
