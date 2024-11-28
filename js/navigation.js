@@ -102,16 +102,16 @@ function addSidebar() {
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
-<a class="header-link" style="cursor: pointer" target="_blank" href="https://handy.vision" data-page="handy">
-<div class="column align-center gap-xs">
-<img src="https://rnbw.design/images/under/handy.svg">
-<span class="text-m" style="text-decoration: none; display: none; color: white;">handy</span> 
-</div>
-</a>
 <a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
 <div class="column align-center gap-xs">
 <img src="https://rnbw.design/images/under/rnbw.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">rnbw</span> 
+</div>
+</a>
+<a class="header-link" style="cursor: pointer" target="_blank" href="https://handy.vision" data-page="handy">
+<div class="column align-center gap-xs">
+<img src="https://rnbw.design/images/under/handy.svg">
+<span class="text-m" style="text-decoration: none; display: none; color: white;">handy</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
