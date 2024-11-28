@@ -130,10 +130,6 @@ function addSidebar() {
 
 <div id="works-wrapper" class="hidden">
 <div class="view row" style="position: relative; z-index: 100; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png';" id="brand-sprints-section">
-<a href="https://weareunder.design/" class="padding-xl" href="/" style=" mix-blend-mode: difference; color: white;">
-        <img src="https://weareunder.design/images/under-header-logo.svg" style="display: block;"/>
-        <img src="https://weareunder.design/images/under-header-logo-small.svg" style="display: none;"/>
-</a>
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
   <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
   <a href="https://weareunder.design/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>
