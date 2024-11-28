@@ -75,15 +75,22 @@ const createStyles = () => {
                 right: -510vw;
                 width: 600vw;
                 animation: tickerblockimages-mobile 340s linear infinite;
+                flex-direction: row;
             }
 
             .tickertext {
                 width: 5000vw;
+                flex-direction: row;
+            }
+
+            .ticker-image {
+                align-items: center !important;
             }
 
             .tickerblock {
                 left: -4900vw;
                 animation: tickerblock-mobile 1020s linear infinite;
+                flex-direction: row;
             }
 
             @keyframes tickerblock-mobile {
@@ -149,37 +156,7 @@ const initAnimations = () => {
     }
 };
 
-const updateStyles = () => {
-    const width = window.innerWidth;
-    const tickerBlocks = document.querySelectorAll('.tickerblock, .tickerblockimages');
-    
-    tickerBlocks.forEach(block => {
-        if (width <= 768) {
-            if (block.classList.contains('tickerblock')) {
-                block.style.left = '-4900vw';
-            } else {
-                block.style.right = '-510vw';
-                block.style.width = '600vw';
-            }
-        } else if (width <= 1366) {
-            if (block.classList.contains('tickerblockimages')) {
-                block.style.right = '-455vw';
-                block.style.width = '550vw';
-            }
-        } else {
-            if (block.classList.contains('tickerblock')) {
-                block.style.left = '-1900vw';
-            } else {
-                block.style.right = '-500vw';
-                block.style.width = '600vw';
-            }
-        }
-    });
-};
-
 document.addEventListener('DOMContentLoaded', () => {
     createStyles();
     initAnimations();
-    updateStyles();
-    window.addEventListener('resize', updateStyles);
 });
