@@ -12,7 +12,7 @@ const footerTemplate = `
 
     <div class="gap-xl row align-start box-l">
       <a style="width: 4vw; height 4vw;" href="https://weareunder.design/">
-        <svg-icon src="https://rnbw.design/images/under/underfooter.svg"></svg-icon>
+        <img src="https://rnbw.design/images/under/underfooter-light.svg"></img>
       </a>
       <h5 class="box">
         under creates high-quality,<br>
@@ -50,14 +50,17 @@ const footerTemplate = `
 `;
 
 function updateThemeElementsVisibility() {
+  const bodyTheme = document.body.getAttribute("data-theme");
+  if (bodyTheme) return;
+ 
   const theme = document.documentElement.getAttribute("data-theme");
   const lightElements = document.querySelectorAll(".light");
   const darkElements = document.querySelectorAll(".dark");
-
+ 
   lightElements.forEach((element) => {
     element.style.display = theme === "dark" ? "none" : "";
   });
-
+ 
   darkElements.forEach((element) => {
     element.style.display = theme === "dark" ? "" : "none";
   });
@@ -68,9 +71,12 @@ function updateThemeElementsVisibility() {
   } finally {
     updateThemeImage(theme); 
   }
-}
-
-function handleSystemThemeChange(e) {
+ }
+ 
+ function handleSystemThemeChange(e) {
+  const bodyTheme = document.body.getAttribute("data-theme");
+  if (bodyTheme) return;
+  
   let theme;
   if (e.matches) {
     theme = "dark";
@@ -81,48 +87,44 @@ function handleSystemThemeChange(e) {
   }
   updateThemeElementsVisibility();
   switchFavicon(theme);
-}
-
-const setSystemTheme = () => {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
+ }
+ 
+ const setSystemTheme = () => {
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     handleSystemThemeChange({ matches: true });
   } else {
     handleSystemThemeChange({ matches: false });
   }
-};
-
-class underFooter extends HTMLElement {
+ };
+ 
+ class underFooter extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = footerTemplate;
   }
-
+ 
   connectedCallback() {
     updateThemeElementsVisibility();
-    handleSystemThemeChange(
-      window.matchMedia("(prefers-color-scheme: dark)")
-    );
+    handleSystemThemeChange(window.matchMedia("(prefers-color-scheme: dark)"));
   }
-}
-
-customElements.define("under-footer", underFooter);
-
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", handleSystemThemeChange);
-
-const currentYear = new Date().getFullYear();
-document.getElementById("year").innerHTML += currentYear;
-
-var body = document.querySelector("body");
-var themeName = document.querySelector("#theme-name");
-
-themeName.textContent = "system";
-
-function toggleTheme() {
+ }
+ 
+ customElements.define("under-footer", underFooter);
+ 
+ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", handleSystemThemeChange);
+ 
+ const currentYear = new Date().getFullYear();
+ document.getElementById("year").innerHTML += currentYear;
+ 
+ var body = document.querySelector("body");
+ var themeName = document.querySelector("#theme-name");
+ 
+ themeName.textContent = "system";
+ 
+ function toggleTheme() {
+  const bodyTheme = document.body.getAttribute("data-theme");
+  if (bodyTheme) return;
+ 
   let theme;
   switch (themeName.textContent) {
     case "system":
@@ -146,40 +148,41 @@ function toggleTheme() {
       break;
   }
   updateThemeElementsVisibility();
-}
-
-var storedTheme = localStorage.getItem("theme");
-
-if (storedTheme) {
+ }
+ 
+ var storedTheme = localStorage.getItem("theme");
+ 
+ if (storedTheme) {
   document.documentElement.setAttribute("data-theme", storedTheme);
   themeName.textContent = storedTheme;
   updateThemeElementsVisibility();
-} else {
+ } else {
   setSystemTheme();
   updateThemeElementsVisibility();
-}
-
-function switchFavicon(theme) {
+ }
+ 
+ function switchFavicon(theme) {
   const link = document.querySelector("link[rel*='icon']");
   if (link && link.href.includes('favico.svg')) {
     link.type = 'image/png';
     link.rel = 'shortcut icon';
     link.href = `https://rnbw.design/images/favicon-${theme}.png`;
   }
-}
-
-function updateThemeImage(theme) {
+ }
+ 
+ function updateThemeImage(theme) {
   const image = document.getElementById('theme-image');
+  const footerLogo = document.querySelector('img[src*="underfooter"]');
+  
   if (image) {
-    if (theme === 'dark') {
-      image.src = 'images/guide-dark.png';
-    } else {
-      image.src = 'images/guide-light.png';
-    }
+    image.src = theme === 'dark' ? 'images/guide-dark.png' : 'images/guide-light.png';
   }
-}
-
-function updateThemeImageNew(theme) {
+  if (footerLogo) {
+    footerLogo.src = `https://rnbw.design/images/under/underfooter-${theme}.svg`;
+  }
+ }
+ 
+ function updateThemeImageNew(theme) {
   const image = document.getElementById('theme-image-new');
   if (image) {
     if (theme === 'dark') {
@@ -188,6 +191,6 @@ function updateThemeImageNew(theme) {
       image.src = 'images/new-light.svg';
     }
   }
-}
-
-setSystemTheme();
+ }
+ 
+ setSystemTheme();
