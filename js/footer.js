@@ -11,9 +11,17 @@ const footerTemplate = `
     </div>
 
     <div class="gap-xl row align-start box-l">
-      <a style="width: 4vw; height 4vw;" href="https://weareunder.design/">
+      <a class="footer-logo" style="width: 4vw; height 4vw;" href="https://weareunder.design/">
         <img src="https://rnbw.design/images/under/underfooter-light.svg"></img>
       </a>
+      <style>
+        @media (max-width: 768px) {
+          .footer-logo {
+            width: 10vw !important;
+            height: 10vw !important;
+          }
+        }
+      </style>
       <h5 class="box">
         under creates high-quality,<br>
         well-designed, creative brands <br>
@@ -71,9 +79,9 @@ function updateThemeElementsVisibility() {
   } finally {
     updateThemeImage(theme); 
   }
- }
+}
  
- function handleSystemThemeChange(e) {
+function handleSystemThemeChange(e) {
   const bodyTheme = document.body.getAttribute("data-theme");
   if (bodyTheme) return;
   
@@ -87,17 +95,17 @@ function updateThemeElementsVisibility() {
   }
   updateThemeElementsVisibility();
   switchFavicon(theme);
- }
+}
  
- const setSystemTheme = () => {
+const setSystemTheme = () => {
   if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     handleSystemThemeChange({ matches: true });
   } else {
     handleSystemThemeChange({ matches: false });
   }
- };
+};
  
- class underFooter extends HTMLElement {
+class underFooter extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = footerTemplate;
@@ -107,21 +115,21 @@ function updateThemeElementsVisibility() {
     updateThemeElementsVisibility();
     handleSystemThemeChange(window.matchMedia("(prefers-color-scheme: dark)"));
   }
- }
+}
  
- customElements.define("under-footer", underFooter);
+customElements.define("under-footer", underFooter);
  
- window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", handleSystemThemeChange);
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", handleSystemThemeChange);
  
- const currentYear = new Date().getFullYear();
- document.getElementById("year").innerHTML += currentYear;
+const currentYear = new Date().getFullYear();
+document.getElementById("year").innerHTML += currentYear;
  
- var body = document.querySelector("body");
- var themeName = document.querySelector("#theme-name");
+var body = document.querySelector("body");
+var themeName = document.querySelector("#theme-name");
  
- themeName.textContent = "system";
+themeName.textContent = "system";
  
- function toggleTheme() {
+function toggleTheme() {
   const bodyTheme = document.body.getAttribute("data-theme");
   if (bodyTheme) return;
  
@@ -148,29 +156,29 @@ function updateThemeElementsVisibility() {
       break;
   }
   updateThemeElementsVisibility();
- }
+}
  
- var storedTheme = localStorage.getItem("theme");
+var storedTheme = localStorage.getItem("theme");
  
- if (storedTheme) {
+if (storedTheme) {
   document.documentElement.setAttribute("data-theme", storedTheme);
   themeName.textContent = storedTheme;
   updateThemeElementsVisibility();
- } else {
+} else {
   setSystemTheme();
   updateThemeElementsVisibility();
- }
+}
  
- function switchFavicon(theme) {
+function switchFavicon(theme) {
   const link = document.querySelector("link[rel*='icon']");
   if (link && link.href.includes('favico.svg')) {
     link.type = 'image/png';
     link.rel = 'shortcut icon';
     link.href = `https://rnbw.design/images/favicon-${theme}.png`;
   }
- }
+}
  
- function updateThemeImage(theme) {
+function updateThemeImage(theme) {
   const image = document.getElementById('theme-image');
   const footerLogo = document.querySelector('img[src*="underfooter"]');
   
@@ -180,9 +188,9 @@ function updateThemeElementsVisibility() {
   if (footerLogo) {
     footerLogo.src = `https://rnbw.design/images/under/underfooter-${theme}.svg`;
   }
- }
+}
  
- function updateThemeImageNew(theme) {
+function updateThemeImageNew(theme) {
   const image = document.getElementById('theme-image-new');
   if (image) {
     if (theme === 'dark') {
@@ -191,6 +199,6 @@ function updateThemeElementsVisibility() {
       image.src = 'images/new-light.svg';
     }
   }
- }
+}
  
- setSystemTheme();
+setSystemTheme();

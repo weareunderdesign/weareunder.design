@@ -5,7 +5,7 @@ function addSlider() {
         'visioncamp': '6',
         'rnbw': '1'
     };
-
+    
     function getImageUrl(id) {
         const isSpecial = ['mesh_payments', 'zigi'].includes(id);
         const ext = isSpecial ? 'svg' : 'png';
@@ -81,7 +81,8 @@ function addSlider() {
     let currentPosition = 100;
     let isAutoScrolling = true;
     let isManualControl = false;
-    const scrollSpeed = 0.02;
+    const isMobile = window.innerWidth <= 768;
+    const scrollSpeed = isMobile ? 0.05 : 0.02;
     let animationFrameId = null;
     let isTransitioning = false;
 

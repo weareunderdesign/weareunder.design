@@ -88,6 +88,16 @@ function addSidebar() {
       transition-duration: 200ms;
       transition-timing-function: ease;
     }
+    .header-link img {
+      width: auto;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .header-link img {
+        width: 17.5vw;
+      }
+    }
   </style>
 
   <div class="row padding-xl" style="
