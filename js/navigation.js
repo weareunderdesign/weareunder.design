@@ -92,12 +92,6 @@ function addSidebar() {
       width: auto;
       height: auto;
     }
-
-    @media (max-width: 768px) {
-      .header-link img {
-        width: 17.5vw;
-      }
-    }
   </style>
 
   <div class="row padding-xl" style="
