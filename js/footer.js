@@ -11,7 +11,7 @@ const footerTemplate = `
     </div>
 
     <div class="gap-xl row align-start box-l">
-      <a class="footer-logo" style="width: 4vw; height 4vw;" href="https://weareunder.design/">
+      <a class="footer-logo" style="href="https://weareunder.design/">
         <img src="https://rnbw.design/images/under/underfooter-light.svg"></img>
       </a>
       <style>
