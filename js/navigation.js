@@ -49,7 +49,6 @@ window.addEventListener('load', preloadImages);
 
 function addSidebar() {
   const TEMPLATE = `
-
   <style>
     .sidebar {
       display: block;
@@ -93,7 +92,11 @@ function addSidebar() {
       height: auto;
     }
   </style>
-
+    <div class="box-l">
+      <a href="https://weareunder.design/" class="box-xs" href="/" style="display: flex; position: fixed; z-index: 998; justify-content: space-between; mix-blend-mode: difference; color: white;">
+        <img src="https://rnbw.design/images/under/under.svg" class="desktop padding-xl"/>
+      </a>
+    </div>
   <div class="row padding-xl" style="
   position: fixed;
   right: 0;
