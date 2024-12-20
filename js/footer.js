@@ -124,10 +124,12 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", han
 const currentYear = new Date().getFullYear();
 document.getElementById("year").innerHTML += currentYear;
  
-var body = document.querySelector("body");
-var themeName = document.querySelector("#theme-name");
- 
-themeName.textContent = "system";
+document.addEventListener('DOMContentLoaded', function() {
+  var themeName = document.querySelector("#theme-name");
+  if (themeName) {
+    themeName.textContent = "system";
+  }
+});
  
 function toggleTheme() {
   const bodyTheme = document.body.getAttribute("data-theme");
