@@ -91,12 +91,25 @@ function addSidebar() {
       width: auto;
       height: auto;
     }
+
+    #under-nav {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media (max-width: 768px) {
+      #under-nav {
+        flex-direction: column-reverse;
+      }
+    }
   </style>
-    <div class="box-l">
-      <a href="https://weareunder.design/" class="box-xs" href="/" style="display: flex; position: fixed; z-index: 998; justify-content: space-between; mix-blend-mode: difference; color: white;">
-        <img src="https://rnbw.design/images/under/under.svg" class="desktop padding-xl"/>
+
+
+      <a href="https://weareunder.design/" class="padding-xl" style="position: fixed; z-index: 998; mix-blend-mode: difference;">
+        <img src="https://rnbw.design/images/under/under.svg">
       </a>
-    </div>
+
+
   <div class="row padding-xl" style="
   position: fixed;
   right: 0;
@@ -227,42 +240,11 @@ function addSidebar() {
     constructor() {
       super();
       this.innerHTML = TEMPLATE;
-      const element = document.querySelector('#under-nav');
-      if (element) {
-       const adjustPadding = () => {
-         if (window.innerWidth <= 768) {
-           element.classList.remove('padding-xl');
-           element.classList.add('padding-m');
-         } else {
-           element.classList.remove('padding-m');
-           element.classList.add('padding-xl');
-         }
-       }
-      
-       window.addEventListener('load', adjustPadding);
-       window.addEventListener('resize', adjustPadding);
-      }
     }
   }
   customElements.define("under-navigation", UnderNavigation);
 
   var count = 0;
-
-  const resizerInterval = setInterval(function () {
-    if (count < 50) {
-      window.dispatchEvent(new Event("resize"));
-      count++;
-    } else clearInterval(resizerInterval);
-  }, 100);
-
-  window.addEventListener("resize", () => {
-    setInterval(function () {
-      if (count < 50) {
-        window.dispatchEvent(new Event("resize"));
-        count++;
-      } else clearInterval(resizerInterval);
-    }, 100);
-  });
 
   const animations = $(".lottie-animation");
 
@@ -289,46 +271,51 @@ function addSidebar() {
   $("#sidebar-work").on("mouseleave", function () {
     $(".hero-section").css("display", "block");
     $("#under-nav").css({
-      "display": "flex",
-      "flex-direction": "row"
+      "display": "flex"
     });
     $("#works-wrapper").css("display", "none");
     $("#body-content").css("display", "block");
   });
 
   function setActiveNavItem() {
-    const pageIdentifier = document.body.dataset.page;
-    if (pageIdentifier) {
-      const navItem = $(`.header-link[data-page="${pageIdentifier}"]`);
-      if (navItem.length) {
-        const img = navItem.find("img");
-        const originalSrc = img.attr("src");
-        img.attr("src", originalSrc.replace(".svg", "h.svg")); 
-        navItem.addClass('active');
-        navItem.find(".text-m").css("display", "none"); 
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.header-link');
+    
+    navLinks.forEach(link => {
+      const dataPage = link.getAttribute('data-page');
+      link.classList.remove('active');
+      
+      // Only set active if we're not on the homepage
+      if (currentPath !== '/' && currentPath.includes(dataPage)) {
+        link.classList.add('active');
+        const img = link.querySelector('img');
+        if (img) {
+          const src = img.getAttribute('src');
+          img.setAttribute('src', src.replace('.svg', 'h.svg'));
+        }
       }
-    }
+    });
   }
 
   $(".header-link").on("mouseover", function () {
     const img = $(this).find("img");
     const originalSrc = img.attr("src");
-    
+
     if (!$(this).hasClass('active')) {
       img.attr("src", originalSrc.replace(".svg", "h.svg"));
-      $(this).find(".text-m").css("display", "block"); 
+      $(this).find(".text-m").css("display", "block");
     } else {
-      $(this).find(".text-m").css("display", "block"); 
+      $(this).find(".text-m").css("display", "block");
     }
   }).on("mouseout", function () {
     const img = $(this).find("img");
     const originalSrc = img.attr("src");
-    
+
     if (!$(this).hasClass('active')) {
       img.attr("src", originalSrc.replace("h.svg", ".svg"));
-      $(this).find(".text-m").css("display", "none"); 
+      $(this).find(".text-m").css("display", "none");
     } else {
-      $(this).find(".text-m").css("display", "none"); 
+      $(this).find(".text-m").css("display", "none");
     }
   });
 
@@ -533,22 +520,6 @@ async function SideBarFunctionality() {
   };
   Main.main();
 }
-
-function hideTextOnMobile() {
-  const navLinks = document.querySelectorAll('.header-link p');
-  if (window.innerWidth <= 768) {
-    navLinks.forEach(link => {
-      link.style.display = 'none';
-    });
-  } else {
-    navLinks.forEach(link => {
-      link.style.display = '';
-    });
-  }
-}
-
-window.addEventListener('load', hideTextOnMobile);
-window.addEventListener('resize', hideTextOnMobile);
 
 SideBarFunctionality();
 
