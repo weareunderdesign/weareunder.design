@@ -3,7 +3,7 @@ const footerTemplate = `
   <div class="gap-s row align-start box-l">
     <div class="gap-xl row align-start box-l">
       <a class="footer-logo" href="https://weareunder.design/">
-        <img src="https://rnbw.design/images/under/underfooter-light.svg"></img>
+        <img src="https://weareunder.design/images/outlinefooter.svg"></img>
       </a>
       <h5 class="box">
         under creates high-quality,<br>
