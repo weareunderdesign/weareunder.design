@@ -1,27 +1,10 @@
 const footerTemplate = `
 <footer class="padding-xl box-l">
   <div class="gap-s row align-start box-l">
-    <div class="gap-l column align-start box" style="display: none;">
-      <a href="https://rnbw.design">
-        <svg-icon src="https://rnbw.design/images/rnbw.svg"></svg-icon>
-      </a>
-      <div class="text-s">
-        © <span id="year"></span> Rainbow Design, Ltd.
-      </div>
-    </div>
-
     <div class="gap-xl row align-start box-l">
-      <a class="footer-logo" style="width: 4vw; height 4vw;" href="https://weareunder.design/">
+      <a class="footer-logo" href="https://weareunder.design/">
         <img src="https://rnbw.design/images/under/underfooter-light.svg"></img>
       </a>
-      <style>
-        @media (max-width: 768px) {
-          .footer-logo {
-            width: 10vw !important;
-            height: 10vw !important;
-          }
-        }
-      </style>
       <h5 class="box">
         under creates high-quality,<br>
         well-designed, creative brands <br>
@@ -29,27 +12,30 @@ const footerTemplate = `
       </h5>
       <div class="column gap-xs">
         <a href="https://www.youtube.com/@weareunderdesign">
-          <h5 style="margin:0; padding: 0;">youtube</h5>
+          <h5>youtube</h5>
         </a>
         <a href="https://store.weareunder.design/pages/newsletter" target="_blank">
-          <h5 style="margin:0; padding: 0;">newsletter</h5>
+          <h5>newsletter</h5>
         </a>
         <a href="mailto:hello@weareunder.design">
-          <h5 style="margin:0; padding: 0;">contact</h5>
+          <h5>contact</h5>
         </a>
         <a href="https://weareunder.design/legal">
-          <h5 style="margin:0; padding: 0;">legal</h5>
+          <h5>legal</h5>
         </a>
       </div>
       <div class="column align-start gap-xs">
         <a href="https://www.instagram.com/under.design/" target="_blank">
-          <h5 style="margin:0; padding: 0;">instagram</h5>
+          <h5>instagram</h5>
         </a>
         <a href="https://x.com/underdesign_" target="_blank">
-          <h5 style="margin:0; padding: 0;">twitter</h5>
+          <h5>twitter</h5>
         </a>
         <a href="https://github.com/weareunderdesign" target="_blank">
-          <h5 style="margin:0; padding: 0;">github</h5>
+          <h5>github</h5>
+        </a>
+        <a href="#" id="theme-toggle">
+          <h5 id="theme-name" class="opacity-l">system</h5>
         </a>
       </div>
     </div>
@@ -112,8 +98,22 @@ class underFooter extends HTMLElement {
   }
  
   connectedCallback() {
+    const themeToggle = this.querySelector('#theme-toggle');
+    const themeName = this.querySelector('#theme-name');
+    
+    if (themeToggle && themeName) {
+      // Set initial theme name
+      const storedTheme = localStorage.getItem("theme");
+      themeName.textContent = storedTheme || "system";
+      
+      // Add click handler
+      themeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleTheme();
+      });
+    }
+    
     updateThemeElementsVisibility();
-    handleSystemThemeChange(window.matchMedia("(prefers-color-scheme: dark)"));
   }
 }
  
@@ -124,31 +124,30 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", han
 const currentYear = new Date().getFullYear();
 document.getElementById("year").innerHTML += currentYear;
  
-var body = document.querySelector("body");
-var themeName = document.querySelector("#theme-name");
- 
-themeName.textContent = "system";
+document.addEventListener('DOMContentLoaded', function() {
+  const themeName = document.querySelector("#theme-name");
+  if (themeName) {
+    const storedTheme = localStorage.getItem("theme");
+    themeName.textContent = storedTheme || "system";
+  }
+});
  
 function toggleTheme() {
-  const bodyTheme = document.body.getAttribute("data-theme");
-  if (bodyTheme) return;
+  const themeName = document.querySelector("#theme-name");
+  if (!themeName) return;
  
-  let theme;
   switch (themeName.textContent) {
     case "system":
-      theme = "light";
       document.documentElement.setAttribute("data-theme", "light");
       themeName.textContent = "light";
       localStorage.setItem("theme", "light");
       break;
     case "light":
-      theme = "dark";
       document.documentElement.setAttribute("data-theme", "dark");
       themeName.textContent = "dark";
       localStorage.setItem("theme", "dark");
       break;
     case "dark":
-      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
       document.documentElement.removeAttribute("data-theme");
       themeName.textContent = "system";
       localStorage.removeItem("theme");
