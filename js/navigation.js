@@ -153,7 +153,7 @@ function addSidebar() {
 <div class="view row" style="position: relative; z-index: 100; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png';" id="brand-sprints-section">
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
   <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
-  <a href="https://weareunder.design/work/artac/" class="sidebar-project-link" id="artac-C9C9C9">artac</a>
+  <a href="https://weareunder.design/work/artac/" class="sidebar-project-link" id="artac-808080">artac</a>
   <a href="https://weareunder.design/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>
   <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-000000">rnbw</a>
   <a href="https://weareunder.design/work/bounce/" class="sidebar-project-link" id="bounce-03542C">bounce</a>
@@ -200,7 +200,7 @@ function addSidebar() {
 <img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
 <img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
-<img src="https://weareunder.design/work/artac/47.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
+<img src="https://weareunder.design/work/artac/47.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
 <img src="https://weareunder.design/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
