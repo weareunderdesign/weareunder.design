@@ -1,7 +1,7 @@
 function preloadImages() {
   const imageUrls = [
     "https://weareunder.design/work/aim/0.png",
-    "https://weareunder.design/work/artac/47.png",
+    "https://weareunder.design/work/artac/0.png",
     "https://weareunder.design/work/bounce/0.png",
     "https://weareunder.design/work/rnbw/0.png",
     "https://weareunder.design/work/spacetop/0.png",
@@ -200,7 +200,7 @@ function addSidebar() {
 <img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
 <img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
-<img src="https://weareunder.design/work/artac/47.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
+<img src="https://weareunder.design/work/artac/0.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
 <img src="https://weareunder.design/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
