@@ -30,9 +30,9 @@
         @font-face {
             font-family: 'Nudge';
             src: url('fonts/VCNudge-BoldItalic.woff2') format('woff2'),
-                 url('fonts/VCNudge-BoldItalic.woff') format('woff');
+                url('fonts/VCNudge-BoldItalic.woff') format('woff');
         }
-        
+
         .nudge_font {
             font-family: 'Nudge', sans-serif;
             font-size: 10rem;
@@ -45,7 +45,11 @@
             }
 
             /* Hide circles on mobile */
-            .circle1, .circle2, .circle3, .circle4, .circle5 {
+            .circle1,
+            .circle2,
+            .circle3,
+            .circle4,
+            .circle5 {
                 display: none !important;
             }
         }
@@ -54,6 +58,7 @@
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-100%);
             }
@@ -115,16 +120,32 @@
             margin: auto 0;
             opacity: 0.2;
         }
-        
+
         @media screen and (max-width: 768px) {
             .divider {
                 display: none;
             }
         }
-        
+
         .schedule-div p {
             color: black;
             text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .schedule-div {
+                text-align: center;
+                align-items: center !important;
+            }
+
+            .schedule-div .date {
+                justify-content: center !important;
+            }
+
+            .schedule-div>div,
+            .schedule-div>a {
+                margin: 0 auto;
+            }
         }
     </style>
 
@@ -141,42 +162,29 @@
 
     <div class="view random-color-change column align-center" style="padding-bottom: 5vw; overflow: hidden;">
         <div class="view row align-center padding-xl ping-pong" style="position: relative;">
-            <a href="#what" class="column align-center text-center circle1"
-                style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FDC800;
+            <a href="#what" class="column align-center text-center circle1" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #FDC800;
                 top: 10vh;
                 left: 15vw;">
                 <h4>what</h4>
             </a>
 
-            <a href="#when" class="column align-center text-center circle2" 
-                style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FFBFE1;
+            <a href="#when" class="column align-center text-center circle2" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #FFBFE1;
                 bottom: -20vh;
                 right: 10vw;">
                 <h4>when</h4>
             </a>
 
-            <a href="#how" class="column align-center text-center circle3" 
-                style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #014ADD;
+            <a href="#how" class="column align-center text-center circle3" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #014ADD;
                 bottom: 5vh;
                 left: 25vw;">
                 <h4>how</h4>
             </a>
 
-            <a href="#why" class="column align-center text-center circle4" 
-                style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FF4B00;
+            <a href="#why" class="column align-center text-center circle4" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #FF4B00;
                 top: 30vh;
                 right: 20vw;">
                 <h4>why</h4>
             </a>
-
-            <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank"
-                class="column align-center text-center circle5" 
-                style="position: absolute; border-radius: 100%; z-index: 2; height: 170px; width: 170px; background-color: #FFFFFF;
-                bottom: -5vh;
-                left: 45vw;">
-                <h4>let's talk!</h4>
-            </a>
-
             <div class="page" style="align-items: center;">
                 <img src="./images/brandsprint.svg">
                 <h2 class="text-center box-m" style="color: white;">
@@ -451,14 +459,20 @@
                 <div class="row padding-xl justify-stretch box-l" style="flex-wrap: nowrap; background-color: #014ADD;">
                     <div class="column white box-s">
                         <h2>team</h2>
-                        <div class="box-m"></class><p> the brand sprint team includes 
-                          <a href="https://www.linkedin.com/in/inbal-lapidot-vidal-17904979/" target="_blank" class="project-link" style="text-decoration: underline;">inbal</a> 
-                          and 
-                          <a href="https://www.linkedin.com/in/edenvidal/" target="_blank" class="project-link" style="text-decoration: underline;">eden</a> 
-                          as creative directors. additionally, the core team includes a wide range of skills, from 2d/3d design, illustration, and motion to other disciplines like development and ai. for everything else, we source talent worldwide, which gives us great flexibility.
-                        </p>
+                        <div class="box-m">
+                            </class>
+                            <p> the brand sprint team includes
+                                <a href="https://www.linkedin.com/in/inbal-lapidot-vidal-17904979/" target="_blank"
+                                    class="project-link" style="text-decoration: underline;">inbal</a>
+                                and
+                                <a href="https://www.linkedin.com/in/edenvidal/" target="_blank" class="project-link"
+                                    style="text-decoration: underline;">eden</a>
+                                as creative directors. additionally, the core team includes a wide range of skills, from
+                                2d/3d design, illustration, and motion to other disciplines like development and ai. for
+                                everything else, we source talent worldwide, which gives us great flexibility.
+                            </p>
+                        </div>
                     </div>
-                </div>
                     <img class="box-s" src="./images/team.svg">
                 </div>
             </div>
@@ -534,7 +548,8 @@
                     <p class="box-s accordion-text justify-end align-end padding-l" style="display: none;">one clear
                         creative visual direction! go! we're crafting a brand. we're talking logos that pop, typography
                         that sings, color palettes that dazzle, and visual assets that wow. we'll explore how your brand
-                        stretches and flexes across all necessary mediums. it's like yoga for your brand identity!                        we'll let you know we're going into "deep work" mode. think of it as our creative hibernation.
+                        stretches and flexes across all necessary mediums. it's like yoga for your brand identity! we'll
+                        let you know we're going into "deep work" mode. think of it as our creative hibernation.
                         no calls, no emails—just pure, uninterrupted brand magic happening behind the scenes while
                         you're enjoying radio silence.
                         finally, we're creating a brand book as detailed as a biology book. every decision, every choice
@@ -642,42 +657,49 @@
                     <h5>december</h5>
                     <h3>12</h3>
                 </div>
-                <div style="border-radius: 100%; height: 170px; width: 170px; border: 1px solid black; display: flex; align-items: center; justify-content: center;">
+                <div
+                    style="border-radius: 100%; height: 196px; width: 196px; border: 1px solid black; display: flex; align-items: center; justify-content: center;">
                     <p>not available</p>
                 </div>
             </div>
-            <div class="divider" style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
+            <div class="divider"
+                style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
                 <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
                     <h5>january</h5>
                     <h3>01</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change" style="border-radius: 100%; height: 170px; width: 170px; display: flex; align-items: center; justify-content: center;">
+                    <div class="random-color-change"
+                        style="border-radius: 100%; height: 196px; width: 196px; display: flex; align-items: center; justify-content: center;">
                         <p>let's talk</p>
                     </div>
                 </a>
             </div>
-            <div class="divider" style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
+            <div class="divider"
+                style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
                 <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
                     <h5>february</h5>
                     <h3>02</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change" style="border-radius: 100%; height: 170px; width: 170px; display: flex; align-items: center; justify-content: center;">
+                    <div class="random-color-change"
+                        style="border-radius: 100%; height: 196px; width: 196px; display: flex; align-items: center; justify-content: center;">
                         <p>let's talk</p>
                     </div>
                 </a>
             </div>
-            <div class="divider" style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
+            <div class="divider"
+                style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
                 <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
                     <h5>march</h5>
                     <h3>03</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change" style="border-radius: 100%; height: 170px; width: 170px; display: flex; align-items: center; justify-content: center;">
+                    <div class="random-color-change"
+                        style="border-radius: 100%; height: 196px; width: 196px; display: flex; align-items: center; justify-content: center;">
                         <p>let's talk</p>
                     </div>
                 </a>
@@ -685,29 +707,24 @@
         </div>
     </div>
 
-    <div
-            id="brandsprintpagebook"
-            class="view column align-center"
-            style="background-color: #02903B; color: white;"
-          >        <div class="page column" style="align-items: center;">
+    <div id="brandsprintpagebook" class="view column align-center" style="background-color: #02903B; color: white;">
+        <div class="page column" style="align-items: center;">
             <div id="when" class="nudge_font text-center">
                 the book
             </div>
-        </div><img src="./images/book.png" class="box-xl" /><div class="page column" style="align-items: center;">
-                                                           <h3 class="box-m text-center" style="display: inline-block;">
-                                                             in the brand sprint book, we show you how this process is changing the game
-                                                             for us and our clients. we invite you to rethink branding and join us in our
-                                                             never-ending project.
-                                                             <a
-                                                               style="text-decoration: underline;"
-                                                               href="https://store.weareunder.design/pages/newsletter"
-                                                               target="_blank"
-                                                               ><span>stay tuned!</span>
-                                                             </a>
-                                                           </h3>
-                                                         </div>
-            
-          </div>
+        </div><img src="./images/book.png" class="box-xl" />
+        <div class="page column" style="align-items: center;">
+            <h3 class="box-m text-center" style="display: inline-block;">
+                in the brand sprint book, we show you how this process is changing the game
+                for us and our clients. we invite you to rethink branding and join us in our
+                never-ending project.
+                <a style="text-decoration: underline;" href="https://store.weareunder.design/pages/newsletter"
+                    target="_blank"><span>stay tuned!</span>
+                </a>
+            </h3>
+        </div>
+
+    </div>
 
     <div class="view column align-center" style="background-color: #E1E1E1;">
         <div class="column gap-xl align-center">
@@ -715,9 +732,9 @@
                 style="color: transparent !important; -webkit-text-stroke: 1px black;">
                 the template
             </div>
-            <img class="padding-xl" src="./images/template.png"/>
-            <h3 class="box-m text-center padding-xl" style="display: inline-block;"> thinking about running a brand sprint?<br><a
-                    style="text-decoration: underline;"
+            <img class="padding-xl" src="./images/template.png" />
+            <h3 class="box-m text-center padding-xl" style="display: inline-block;"> thinking about running a brand
+                sprint?<br><a style="text-decoration: underline;"
                     href="https://www.figma.com/design/jpUIjma2LctAInA1FHuyug/Brand-Sprint-Template?node-id=0-1&t=v0Zl2sdGIiuS3bc5-0"
                     target="_blank"><span>take this</span> </a>, it'll help you kick things off.
             </h3>

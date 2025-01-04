@@ -5,7 +5,7 @@ function addSlider() {
         'visioncamp': '6',
         'rnbw': '1'
     };
-    
+
     function getImageUrl(id) {
         const isSpecial = ['mesh_payments', 'zigi'].includes(id);
         const ext = isSpecial ? 'svg' : 'png';
@@ -52,10 +52,10 @@ function addSlider() {
             </div>
             <p class="padding-xl slidertext" style="mix-blend-mode: difference; color: white; position: absolute; bottom: 0px; left: 0%; white-space: nowrap; margin: 0.5rem, 0, 0.5rem, 0 !important; line-height: 1.35 !important;">finaloop</p>
             <div class="padding-xl sliderbuttons" style="position: absolute; bottom: 0px; right: 0%;">
-                <button class="prev" style="mix-blend-mode: difference; border: none; background: none; cursor: pointer; width: 1.75rem; height: 1.75rem;">
+                <button class="prev" style="mix-blend-mode: difference; border: none; background: none; cursor: pointer;">
                     <img src="https://weareunder.design/images/arrow_left.svg" />
                 </button>
-                <button class="next" style="mix-blend-mode: difference; border: none; background: none; cursor: pointer; width: 1.75rem; height: 1.75rem;">
+                <button class="next" style="mix-blend-mode: difference; border: none; background: none; cursor: pointer;">
                     <img src="https://weareunder.design/images/arrow_right.svg" />
                 </button>
             </div>
@@ -123,22 +123,22 @@ function addSlider() {
 
     function moveToSlide(direction) {
         if (isTransitioning) return;
-        
+
         stopAutoScroll();
-        
+
         currentPosition = Math.round(currentPosition / 100) * 100;
         slides.style.transform = `translateX(-${currentPosition}%)`;
-        
+
         requestAnimationFrame(() => {
             isTransitioning = true;
             slides.style.transition = 'transform 0.5s ease';
-            
+
             if (direction === 'next') {
                 currentPosition += 100;
             } else {
                 currentPosition -= 100;
             }
-            
+
             slides.style.transform = `translateX(-${currentPosition}%)`;
             updateSlideText();
         });
