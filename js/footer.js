@@ -14,7 +14,7 @@ const footerTemplate = `
   <div class="gap-s row align-start box-l">
     <div class="gap-xl row align-start box-l">
       <a class="footer-logo" href="https://weareunder.design/">
-        <img src="https://weareunder.design/images/outlinefooter.svg"></img>
+        <svg-icon src="https://weareunder.design/images/outlinefooter.svg"></svg-icon>
       </a>
       <h5 class="box">
         under creates high-quality,<br>
@@ -97,19 +97,33 @@ const setSystemTheme = () => {
 class underFooter extends HTMLElement {
   constructor() {
     super();
-    this.innerHTML = footerTemplate;
+    this.ensureSvgIconLoaded().then(() => {
+      this.innerHTML = footerTemplate;
+      this.initializeThemeToggle();
+    });
   }
 
-  connectedCallback() {
+  async ensureSvgIconLoaded() {
+    if (!customElements.get('svg-icon')) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/@rnbws/svg-icon.js/dist/svg-icon.min.js';
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    }
+    return Promise.resolve();
+  }
+
+  initializeThemeToggle() {
     const themeToggle = this.querySelector('#theme-toggle');
     const themeName = this.querySelector('#theme-name');
 
     if (themeToggle && themeName) {
-      // Set initial theme name
       const storedTheme = localStorage.getItem("theme");
       themeName.textContent = storedTheme || "system";
 
-      // Add click handler
       themeToggle.addEventListener('click', (e) => {
         e.preventDefault();
         toggleTheme();
