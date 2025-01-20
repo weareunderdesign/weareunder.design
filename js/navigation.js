@@ -107,7 +107,7 @@ function addSidebar() {
 
 
       <a href="https://weareunder.design/" class="padding-xl" style="position: fixed; z-index: 998; mix-blend-mode: difference;">
-        <img src="https://rnbw.design/images/under/under.svg">
+        <img src="https://weareunder.design/images/header/under.svg">
       </a>
 
 
@@ -119,31 +119,31 @@ function addSidebar() {
 " id="under-nav">
 <a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
 <div class="column align-center gap-xs">
-<img src="https://rnbw.design/images/under/brandsprint.svg">
+<img src="https://weareunder.design/images/header/brandsprint.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
 <a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
 <div class="column align-center gap-xs">
-<img src="https://rnbw.design/images/under/rnbw.svg">
+<img src="https://weareunder.design/images/header/rnbw.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">rnbw</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" target="_blank" href="https://handy.vision" data-page="handy">
 <div class="column align-center gap-xs">
-<img src="https://rnbw.design/images/under/handy.svg">
+<img src="https://weareunder.design/images/header/handy.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">handy</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
 <div class="column align-center gap-xs">
-<img src="https://rnbw.design/images/under/store.svg">
+<img src="https://weareunder.design/images/header/store.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">store</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" id="nav-work" data-page="design">
 <div class="column align-center gap-xs">
-<img src="https://rnbw.design/images/under/design.svg">
+<img src="https://weareunder.design/images/header/design.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">design</span>
 </div>
 </a>
