@@ -53,7 +53,7 @@ const footerTemplate = `
           </div>
         </div>
          <h5 id="subscribeButton">newsletter</h5>
-          <div class="hidden row" id="subscribeForm">
+         <div class="hidden row" id="subscribeForm">
             <h5>
               <input type="email" id="emailInput" placeholder="Subscribe" style="outline:none; border:none; max-width:200px;">
             </h5>
@@ -178,6 +178,7 @@ class underFooter extends HTMLElement {
         e.target.style.display = 'block';
         subscribeForm.classList.add('hidden');
         e.target.innerHTML = 'Thanks for subscribing!';
+        e.target.style.pointerEvents = 'none';
         window.open('https://store.weareunder.design/pages/newsletter?email=' + emailInput.value);
       });
     });
