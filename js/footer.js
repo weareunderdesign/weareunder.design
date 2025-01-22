@@ -58,7 +58,7 @@ const footerTemplate = `
               <input type="email" id="emailInput" placeholder="Subscribe" style="outline:none; border:none; max-width:200px;">
             </h5>
             <div class="align-center hidden" id="submit-newsletter">
-              <svg-icon src="https://raincons.rnbw.dev/icons/arrow-right.svg" class="icon-s" ></svg-icon>
+                →
             </div>
           </div>
         </div>
