@@ -24,28 +24,39 @@ const footerTemplate = `
 
       <div class="column gap-xs">
         <div class="row gap-xl">
-          <div class="column gap-xs">
+          <div class="column gap-s">
+
+            <a href="https://store.weareunder.design" target="_blank">
+              <h5>store</h5>
+            </a>  
             <a href="https://github.com/weareunderdesign" target="_blank">
               <h5>github</h5>
             </a>
-            <a href="mailto:hello@weareunder.design">
-              <h5>contact</h5>
-            </a>
             <a href="https://weareunder.design/legal">
-              <h5>legal</h5>
+              <h5>terms</h5>
             </a>
 
           </div>
         
           <div class="column align-start gap-xs">
+            <a href="https://x.com/underdesign_" target="_blank">
+              <h5>x</h5>
+            </a>
+
             <a href="https://www.youtube.com/@weareunderdesign">
               <h5>youtube</h5>
             </a>
             <a href="https://www.instagram.com/under.design/" target="_blank">
               <h5>instagram</h5>
             </a>
-            <a href="https://x.com/underdesign_" target="_blank">
-              <h5>twitter</h5>
+          </div>
+
+           <div class="column align-start gap-xs">
+            <a href="https://www.youtube.com/@weareunderdesign">
+              <h5>press</h5>
+            </a>
+           <a href="mailto:hello@weareunder.design">
+              <h5>contact</h5>
             </a>
             <a href="#" id="theme-toggle">
               <h5 id="theme-name" class="opacity-l">system</h5>
@@ -53,14 +64,13 @@ const footerTemplate = `
           </div>
         </div>
          <h5 id="subscribeButton">newsletter</h5>
-         <div class="hidden row" id="subscribeForm">
-            <h5>
-              <input type="email" id="emailInput" placeholder="Subscribe" style="outline:none; border:none; max-width:200px;">
-            </h5>
-            <div class="align-center hidden" id="submit-newsletter">
-                →
-            </div>
-          </div>
+   
+         <h5 style="display:none; flex-direction:row; align-items:center;" id="subscribeForm">
+          <input type="email" id="emailInput" placeholder="Subscribe" style="outline:none; border:none; max-width:20.5ch; min-width:150px;">
+          <span class="hidden" id="submit-newsletter">
+            →
+          </span>
+         </h5>
         </div>
       </div>
     </div> 
@@ -155,7 +165,7 @@ class underFooter extends HTMLElement {
     subscribeButton.addEventListener('click', (e) => {
 
       const subscribeForm = document.getElementById('subscribeForm');
-      subscribeForm.classList.toggle('hidden');
+      subscribeForm.style.display = 'flex';
       //focus on input
       const emailInput = document.getElementById('emailInput');
       emailInput.focus();
@@ -165,6 +175,9 @@ class underFooter extends HTMLElement {
 
       // Add event listener to email input for validation
       emailInput.addEventListener('input', () => {
+        let chars = emailInput.value.length;
+
+        emailInput.style.width = `${chars}ch`;
         const submitButtonIcon = subscribeForm.querySelector('#submit-newsletter');
         if (emailInput.validity.valid && emailInput.value) {
           submitButtonIcon.classList.remove('hidden');
@@ -173,10 +186,19 @@ class underFooter extends HTMLElement {
         }
       });
 
+      // Add event listener for Enter key press
+      emailInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          const submitButton = document.getElementById('submit-newsletter');
+          submitButton.click();
+        }
+      });
+
+      // Add event listener for submit button
       const submitButton = document.getElementById('submit-newsletter');
       submitButton.addEventListener('click', () => {
         e.target.style.display = 'block';
-        subscribeForm.classList.add('hidden');
+        subscribeForm.style.display = 'none';
         e.target.innerHTML = 'Thanks for subscribing!';
         e.target.style.pointerEvents = 'none';
         window.open('https://store.weareunder.design/pages/newsletter?email=' + emailInput.value);
