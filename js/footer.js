@@ -52,7 +52,7 @@ const footerTemplate = `
           </div>
 
            <div class="column align-start gap-xs">
-            <a href="https://www.youtube.com/@weareunderdesign">
+            <a href="https://www.figma.com/design/UTvs6k6N1lAOLBerchdKFV/under?node-id=2563-581&t=hKaRJeX5Lp9zJkcQ-1">
               <h5>press</h5>
             </a>
            <a href="mailto:hello@weareunder.design">
@@ -66,7 +66,7 @@ const footerTemplate = `
          <h5 id="subscribeButton">newsletter</h5>
    
          <h5 style="display:none; flex-direction:row; align-items:center;" id="subscribeForm">
-          <input type="email" id="emailInput" placeholder="Subscribe" style="outline:none; border:none; max-width:20.5ch; min-width:150px;">
+          <input type="email" id="emailInput" placeholder="subscribe" style="outline:none; border:none; max-width:20.5ch; min-width:150px;">
           <span class="hidden" id="submit-newsletter">
             →
           </span>
@@ -199,7 +199,7 @@ class underFooter extends HTMLElement {
       submitButton.addEventListener('click', () => {
         e.target.style.display = 'block';
         subscribeForm.style.display = 'none';
-        e.target.innerHTML = 'Thanks for subscribing!';
+        e.target.innerHTML = 'thanks for subscribing!';
         e.target.style.pointerEvents = 'none';
         window.open('https://store.weareunder.design/pages/newsletter?email=' + emailInput.value);
       });
