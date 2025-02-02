@@ -105,18 +105,13 @@ function addSidebar() {
     }
   </style>
 
-
-      <a href="https://weareunder.design/" class="padding-xl" style="position: fixed; z-index: 998; mix-blend-mode: difference;">
+<div style="display: flex; position: fixed; z-index: 998; mix-blend-mode: difference; justify-content: space-between; width: 100%;" class="padding-xl">
+      <a href="https://weareunder.design/">
         <img src="https://weareunder.design/images/header/under.svg">
       </a>
 
 
-  <div class="row padding-xl" style="
-  position: fixed;
-  right: 0;
-  z-index: 999;
-  mix-blend-mode: difference;
-" id="under-nav">
+  <div id="under-nav">
 <a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
 <div class="column align-center gap-xs">
 <img src="https://weareunder.design/images/header/brandsprint.svg">
@@ -148,9 +143,11 @@ function addSidebar() {
 </div>
 </a>
 </div>
+</div>
+
 
 <div id="works-wrapper" class="hidden">
-<div class="view row" style="position: relative; z-index: 100; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png';" id="brand-sprints-section">
+<div class="view row" style="position: relative; z-index: 999; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png';" id="brand-sprints-section">
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
   <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
   <a href="https://weareunder.design/work/artac/" class="sidebar-project-link" id="artac-808080">artac</a>
@@ -283,11 +280,11 @@ function addSidebar() {
   function setActiveNavItem() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.header-link');
-    
+
     navLinks.forEach(link => {
       const dataPage = link.getAttribute('data-page');
       link.classList.remove('active');
-      
+
       // Only set active if we're not on the homepage
       if (currentPath !== '/' && currentPath.includes(dataPage)) {
         link.classList.add('active');
