@@ -1,41 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-54NVWMCH');</script>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js"
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-54NVWMCH");
+    </script>
 
     <script defer data-domain="weareunder.design" src="https://plausible.io/js/plausible.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta property="og:title" content="Under — Brand Sprint">
-    <meta property="og:image" content="https://weareunder.design/brandsprint/images/cover.png">
-    <meta name="twitter:image" content="https://weareunder.design/brandsprint/images/cover.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="Under — Brand Sprint" />
+    <meta property="og:image" content="https://weareunder.design/brandsprint/images/cover.png" />
+    <meta name="twitter:image" content="https://weareunder.design/brandsprint/images/cover.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="../images/favicon.svg">
-    <link rel="apple-touch-icon" href="../images/webclip.svg">
+    <link rel="icon" href="../images/favicon.svg" />
+    <link rel="apple-touch-icon" href="../images/webclip.svg" />
     <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
     <script src="../js/pingpong.js"></script>
     <title>brandsprint by ūnder</title>
 
     <style>
         @font-face {
-            font-family: 'Nudge';
-            src: url('fonts/VCNudge-BoldItalic.woff2') format('woff2'),
-                url('fonts/VCNudge-BoldItalic.woff') format('woff');
+            font-family: "Nudge";
+            src: url("fonts/VCNudge-BoldItalic.woff2") format("woff2"),
+                url("fonts/VCNudge-BoldItalic.woff") format("woff");
         }
 
         .nudge_font {
-            font-family: 'Nudge', sans-serif;
-            font-size: 10rem;
+            font-family: "Nudge", sans-serif;
+            font-size: 12rem;
             line-height: 100%;
         }
 
@@ -54,64 +60,38 @@
             }
         }
 
+        /* Single scroll utility with vw-based transform */
+        .scroll {
+            animation: scroll 24s linear infinite;
+            flex-wrap: nowrap;
+            display: flex;
+            gap: 5rem;
+        }
+
         @keyframes scroll {
             0% {
                 transform: translateX(0);
             }
 
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-100vw);
             }
         }
 
-        .quotes-wrapper {
-            display: flex;
-            gap: 2rem;
-            text-align: center;
-            overflow-x: auto;
-            width: 100%;
-            max-width: 100vw;
-            color: white;
-        }
-
-        .quotes-scroll {
-            animation: scroll 180s linear infinite;
-            display: inline-flex;
-            flex-wrap: nowrap;
-            min-width: min-content;
-            padding: 1rem;
-        }
-
+        /* Each testimonial quote is fixed to 400px wide */
         .quote {
             width: 400px;
-            min-width: 400px;
-            flex: 0 0 auto;
-            display: flex;
-            flex-direction: column;
-            padding: 1rem;
-            align-items: center;
-            text-align: center;
-        }
-
-        .logos-wrapper {
-            overflow-x: auto;
-            width: 100%;
-            max-width: 100vw;
-        }
-
-        .logos-scroll {
-            animation: scroll 90s linear infinite;
-            display: inline-flex;
-            flex-wrap: nowrap;
-            min-width: min-content;
-            padding: 1rem;
-            gap: 2rem;
-        }
-
-        .logo-item {
             flex: 0 0 auto;
         }
+        /* New wrapper to prevent horizontal scroll caused by duplicated content */
+        .infinite-wrapper {
+            width: 100vw;
+            overflow-x: hidden;
+            /* The negative margins center the wrapper across the full viewport */
+            margin-left: calc(-50vw + 50%);
+        }
 
+        /* Other styles (divider, schedule-div, etc.) remain unchanged */
         .divider {
             width: 1px;
             height: 240px;
@@ -148,55 +128,80 @@
             }
         }
     </style>
-
 </head>
 
 <body data-theme="light" data-page="brandsprint">
-
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NVWMCH" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <under-header></under-header>
     <under-navigation></under-navigation>
 
-    <div class="view random-color-change column align-center" style="padding-bottom: 5vw; overflow: hidden;">
-        <div class="view row align-center padding-xl ping-pong" style="position: relative;">
-            <a href="#what" class="column align-center text-center circle1" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #FDC800;
-                top: 10vh;
-                left: 15vw;">
+    <div class="view random-color-change column align-center" style="padding-bottom: 5vw; overflow: hidden">
+        <div class="view row align-center padding-xl ping-pong" style="position: relative">
+            <a href="#what" class="column align-center text-center circle1" style="
+            position: absolute;
+            border-radius: 100%;
+            z-index: 2;
+            height: 160px;
+            width: 160px;
+            background-color: #fdc800;
+            top: 10vh;
+            left: 15vw;
+          ">
                 <h4>what</h4>
             </a>
 
-            <a href="#when" class="column align-center text-center circle2" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #FFBFE1;
-                bottom: -20vh;
-                right: 10vw;">
+            <a href="#when" class="column align-center text-center circle2" style="
+            position: absolute;
+            border-radius: 100%;
+            z-index: 2;
+            height: 160px;
+            width: 160px;
+            background-color: #ffbfe1;
+            bottom: -20vh;
+            right: 10vw;
+          ">
                 <h4>when</h4>
             </a>
 
-            <a href="#how" class="column align-center text-center circle3" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #014ADD;
-                bottom: 5vh;
-                left: 25vw;">
+            <a href="#how" class="column align-center text-center circle3" style="
+            position: absolute;
+            border-radius: 100%;
+            z-index: 2;
+            height: 160px;
+            width: 160px;
+            background-color: #014add;
+            bottom: 5vh;
+            left: 25vw;
+          ">
                 <h4>how</h4>
             </a>
 
-            <a href="#why" class="column align-center text-center circle4" style="position: absolute; border-radius: 100%; z-index: 2; height: 196px; width: 196px; background-color: #FF4B00;
-                top: 30vh;
-                right: 20vw;">
+            <a href="#why" class="column align-center text-center circle4" style="
+            position: absolute;
+            border-radius: 100%;
+            z-index: 2;
+            height: 160px;
+            width: 160px;
+            background-color: #ff4b00;
+            top: 30vh;
+            right: 20vw;
+          ">
                 <h4>why</h4>
             </a>
-            <div class="page" style="align-items: center;">
-                <img src="./images/brandsprint.svg">
-                <h2 class="text-center box-m" style="color: white;">
-                    stand out better and faster
-                    in a world full of brands
-                </h2>
-            </div>`
+            <div class="page" style="align-items: center">
+                <img src="./images/brandsprint.svg" />
+            </div>
         </div>
-        <div class="quotes-wrapper">
-            <div class="quotes-scroll">
+    </div>
+    <under-slider></under-slider>
+    <div class="view column align-center gap-xl text-center">
+        <div class="infinite-wrapper">
+            <div class="scroll align-center">
                 <div class="quote">
-                    <h4>what attracted us to them first was the no-holds-barred honesty and results-driven process.</h4>
+                    <h4>
+                        what attracted us to them first was the no-holds-barred honesty and results-driven process.
+                    </h4>
                     <p>menachem pritzker, head of growth, harmon.ie</p>
                 </div>
                 <div class="quote">
@@ -204,78 +209,69 @@
                     <p>yoav oren, ceo, zoog</p>
                 </div>
                 <div class="quote">
-                    <h4>
-                        don't hire them if you want somebody to chew up and spit your own ideas
-                        back at you.
-                    </h4>
+                    <h4>don't hire them if you want somebody to chew up and spit your own ideas back at you.</h4>
                     <p>menachem pritzker, head of growth, harmon.ie</p>
                 </div>
                 <div class="quote">
                     <h4>
-                        under understands exactly what startups at this stage need and
-                        professionally leads this speedy process.
+                        under understands exactly what startups at this stage need and professionally leads this
+                        speedy process.
                     </h4>
                     <p>merav zaks, cmo, komodor</p>
                 </div>
                 <div class="quote">
-                    <h4>
-                        working w/ under is one of those rare cases where trade-offs are almost
-                        non-existent.
-                    </h4>
+                    <h4>working w/ under is one of those rare cases where trade-offs are almost non-existent.</h4>
                     <p>yishay harel, ceo, dymension</p>
                 </div>
                 <div class="quote">
-                    <h4>
-                        always there to hear our ongoing feedback and make sure we are creating
-                        something with our own unique tune and voice.
+                    <h4> always there to hear our feedback and make sure we are creating something with our
+                        own unique tune and voice.
                     </h4>
                     <p>tomer biger, ceo, noble</p>
                 </div>
                 <div class="quote">
                     <h4>
-                        the results are amazing and we really feel they listened to our vision and
-                        created a remarkable brand for mirro!
+                        the results are amazing and we really feel they listened to our vision and created a
+                        remarkable brand for mirro!
                     </h4>
                     <p>mira awwad, co-founder, mirror</p>
                 </div>
                 <div class="quote">
                     <h4>
-                        you are soul players who understand the market needs - efficiency,
-                        creativity, and know-how to smile.
+                        you are soul players who understand the market needs - efficiency, creativity, and know-how
+                        to smile.
                     </h4>
                     <p>bar geron, ceo, balance</p>
                 </div>
                 <div class="quote">
                     <h4>
-                        you would never be able to tell that this high-quality brand work was done
-                        in a single 10-day sprint.
+                        you would never be able to tell that this high-quality brand work was done in a single
+                        10-day sprint.
                     </h4>
                     <p>noga sapir, ceo, reflect innovation</p>
                 </div>
                 <div class="quote">
-                    <h4>
-                        hire them if you want your ideas challenged, broken down, and made better.
-                    </h4>
+                    <h4>hire them if you want your ideas challenged, broken down, and made better.</h4>
                     <p>menachem pritzker, head of growth, harmon.ie</p>
                 </div>
                 <div class="quote">
                     <h4>
-                        i was chasing inbal & eden for a couple of months using every trick in the
-                        book, and it paid off big time.
+                        i was chasing inbal & eden for a couple of months using every trick in the book, and it paid
+                        off big time.
                     </h4>
                     <p>maayan patito, head of marketing, raftt</p>
                 </div>
                 <div class="quote">
                     <h4>
-                        we loved the productive mindset, out-of-the-box thinking, creativity with
-                        openness to feedback, and speedy iterations.
+                        we loved the productive mindset, out-of-the-box thinking, creativity with openness to
+                        feedback, and speedy iterations.
                     </h4>
                     <p>roee bark, ceo, upword</p>
                 </div>
                 <div class="quote">
                     <h4>
-                        the result is a stunning brand and website, which makes komodor stand out
-                        and expresses our values in the best way possible.
+                        the result is a stunning brand and website, which makes us stand out and expresses our
+                        values in the best way possible.
                     </h4>
                     <p>merav zaks, cmo, komodor</p>
                 </div>
@@ -285,126 +281,145 @@
                 </div>
                 <div class="quote">
                     <h4>
-                        while we had concerns about the two-week deadline, we were amazed at how
-                        quickly our feedback was implemented in the project.
+                        while we had concerns about the two-week deadline, we were amazed at how quickly our
+                        feedback was implemented
                     </h4>
                     <p>guy barner | ceo, tagbox</p>
                 </div>
             </div>
         </div>
-        <div class="logos-wrapper">
-            <div class="logos-scroll">
-                <img src="./logos/Logo1.svg" class="logo-item" />
-                <img src="./logos/Logo2.svg" class="logo-item" />
-                <img src="./logos/Logo3.svg" class="logo-item" />
-                <img src="./logos/Logo4.svg" class="logo-item" />
-                <img src="./logos/Logo5.svg" class="logo-item" />
-                <img src="./logos/Logo6.svg" class="logo-item" />
-                <img src="./logos/Logo7.svg" class="logo-item" />
-                <img src="./logos/Logo8.svg" class="logo-item" />
-                <img src="./logos/Logo9.svg" class="logo-item" />
-                <img src="./logos/Logo10.svg" class="logo-item" />
-                <img src="./logos/Logo11.svg" class="logo-item" />
-                <img src="./logos/Logo12.svg" class="logo-item" />
-                <img src="./logos/Logo13.svg" class="logo-item" />
-                <img src="./logos/Logo14.svg" class="logo-item" />
-                <img src="./logos/Logo15.svg" class="logo-item" />
-                <img src="./logos/Logo16.svg" class="logo-item" />
-                <img src="./logos/Logo17.svg" class="logo-item" />
-                <img src="./logos/Logo18.svg" class="logo-item" />
-                <img src="./logos/Logo19.svg" class="logo-item" />
-                <img src="./logos/Logo20.svg" class="logo-item" />
-                <img src="./logos/Logo21.svg" class="logo-item" />
-                <img src="./logos/Logo22.svg" class="logo-item" />
-                <img src="./logos/Logo23.svg" class="logo-item" />
-                <img src="./logos/Logo24.svg" class="logo-item" />
-                <img src="./logos/Logo25.svg" class="logo-item" />
-                <img src="./logos/Logo26.svg" class="logo-item" />
-                <img src="./logos/Logo27.svg" class="logo-item" />
-                <img src="./logos/Logo28.svg" class="logo-item" />
-                <img src="./logos/Logo29.svg" class="logo-item" />
-                <img src="./logos/Logo30.svg" class="logo-item" />
-                <img src="./logos/Logo31.svg" class="logo-item" />
-                <img src="./logos/Logo32.svg" class="logo-item" />
-                <img src="./logos/Logo33.svg" class="logo-item" />
-                <img src="./logos/Logo34.svg" class="logo-item" />
-                <img src="./logos/Logo35.svg" class="logo-item" />
-                <img src="./logos/Logo36.svg" class="logo-item" />
-                <img src="./logos/Logo37.svg" class="logo-item" />
-                <img src="./logos/Logo38.svg" class="logo-item" />
-                <img src="./logos/Logo39.svg" class="logo-item" />
-                <img src="./logos/Logo40.svg" class="logo-item" />
-                <img src="./logos/Logo41.svg" class="logo-item" />
-                <img src="./logos/Logo42.svg" class="logo-item" />
-                <img src="./logos/Logo43.svg" class="logo-item" />
-                <img src="./logos/Logo44.svg" class="logo-item" />
-                <img src="./logos/Logo45.svg" class="logo-item" />
-                <img src="./logos/Logo46.svg" class="logo-item" />
+        <div class="infinite-wrapper">
+            <div class="scroll">
+                <img src="./logos/Logo1.svg" />
+                <img src="./logos/Logo2.svg" />
+                <img src="./logos/Logo3.svg" />
+                <img src="./logos/Logo4.svg" />
+                <img src="./logos/Logo5.svg" />
+                <img src="./logos/Logo6.svg" />
+                <img src="./logos/Logo7.svg" />
+                <img src="./logos/Logo8.svg" />
+                <img src="./logos/Logo9.svg" />
+                <img src="./logos/Logo10.svg" />
+                <img src="./logos/Logo11.svg" />
+                <img src="./logos/Logo12.svg" />
+                <img src="./logos/Logo13.svg" />
+                <img src="./logos/Logo14.svg" />
+                <img src="./logos/Logo15.svg" />
+                <img src="./logos/Logo16.svg" />
+                <img src="./logos/Logo17.svg" />
+                <img src="./logos/Logo18.svg" />
+                <img src="./logos/Logo19.svg" />
+                <img src="./logos/Logo20.svg" />
+                <img src="./logos/Logo21.svg" />
+                <img src="./logos/Logo22.svg" />
+                <img src="./logos/Logo23.svg" />
+                <img src="./logos/Logo24.svg" />
+                <img src="./logos/Logo25.svg" />
+                <img src="./logos/Logo26.svg" />
+                <img src="./logos/Logo27.svg" />
+                <img src="./logos/Logo28.svg" />
+                <img src="./logos/Logo29.svg" />
+                <img src="./logos/Logo30.svg" />
+                <img src="./logos/Logo31.svg" />
+                <img src="./logos/Logo32.svg" />
+                <img src="./logos/Logo33.svg" />
+                <img src="./logos/Logo34.svg" />
+                <img src="./logos/Logo35.svg" />
+                <img src="./logos/Logo36.svg" />
+                <img src="./logos/Logo37.svg" />
+                <img src="./logos/Logo38.svg" />
+                <img src="./logos/Logo39.svg" />
+                <img src="./logos/Logo40.svg" />
+                <img src="./logos/Logo41.svg" />
+                <img src="./logos/Logo42.svg" />
+                <img src="./logos/Logo43.svg" />
+                <img src="./logos/Logo44.svg" />
+                <img src="./logos/Logo45.svg" />
+                <img src="./logos/Logo46.svg" />
             </div>
         </div>
     </div>
-    <under-slider></under-slider>
-    <div class="view column align-center gap-xl">
-        <div class="page column" style="align-items: center;">
-            <div id="what" class="nudge_font text-center gap-xl align-center">
-                wait, what?
+
+    <div class="view column align-center gap-xl background-secondary">
+        <div class="page">
+            <div class="nudge_font text-center gap-xl align-center column">
+                <div class="random-color-change">stand out better and faster in a world full of brands</div>
             </div>
+            <div class="page column" style="align-items: center">
+                <h3 class="box-m text-center">
+                    most brands get lost in the noise. most branding takes too long. we fix
+                    both. 10 days. one team. a brand that stops scrolls, wins deals, and makes
+                    investors lean in.
+                </h3>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="view column align-center gap-xl background-tertiary">
+        <div class="page column" style="align-items: center">
+            <div id="what" class="nudge_font text-center gap-xl align-center">
+                <div>wait, what?</div>
+            </div>
+
             <h3 class="box-m text-center">
-                yes. in just 10 days, we develop a clear vision, identify
-                key values, and create a fresh brand identity. really.
+                yes. in just 10 days, we develop a clear vision, identify key values, and create a fresh brand
+                identity. really.
             </h3>
         </div>
         <div class="page gap-l">
-            <div class="row gap-l box-l" style="flex-wrap: nowrap;">
+            <div class="row gap-l box-l" style="flex-wrap: nowrap">
                 <div class="box-l column gap-l align-start">
-                    <img class="box-l" src="./images/BrandStrategy.svg">
+                    <img class="box-l" src="./images/BrandStrategy.svg" />
                     <div class="column">
                         <h5>brand strategy</h5>
                         <p>
-                            strategy guidelines</br>
+                            strategy guidelines<br />
                             brand story
                         </p>
                     </div>
                 </div>
                 <div class="box-l column gap-l align-start">
-                    <img class="box-l" src="./images/BrandSystem.svg">
+                    <img class="box-l" src="./images/BrandSystem.svg" />
                     <div class="column">
                         <h5>brand system</h5>
                         <p>
-                            logo</br>
-                            typography system</br>
-                            color system</br>
-                            assets library of icons/patterns/textures/illustrations</br>
+                            logo<br />
+                            typography system<br />
+                            color system<br />
+                            assets library of icons/patterns/textures/illustrations<br />
                             brand guidelines
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row gap-l box-l" style="flex-wrap: nowrap;">
+            <div class="row gap-l box-l" style="flex-wrap: nowrap">
                 <div class="box-l column gap-l align-start">
-                    <img class="box-l" src="./images/Marketing.svg">
+                    <img class="box-l" src="./images/Marketing.svg" />
                     <div class="column">
                         <h5>one pager website design</h5>
                         <p>
-                            welcome</br>
-                            introduction</br>
-                            problem</br>
-                            solution</br>
-                            benchmarks / social proof</br>
+                            welcome<br />
+                            introduction<br />
+                            problem<br />
+                            solution<br />
+                            benchmarks / social proof<br />
                             closure. bottom line. call to action.
                         </p>
                     </div>
                 </div>
                 <div class="box-l column gap-l align-start">
-                    <img class="box-l" src="./images/Web.svg">
+                    <img class="box-l" src="./images/Web.svg" />
                     <div class="column">
                         <h5>marketing</h5>
                         <p>
-                            social media templates</br>
-                            presentation template</br>
-                            business card</br>
-                            t-shirt</br>
-                            bag</br>
+                            social media templates<br />
+                            presentation template<br />
+                            business card<br />
+                            t-shirt<br />
+                            bag<br />
                             poster
                         </p>
                     </div>
@@ -412,332 +427,339 @@
             </div>
         </div>
     </div>
-    <div class="view column align-center gap-xl">
-        <div class="page column gap-xl" style="align-items: center;">
-            <div id="why" class="nudge_font text-center">
-                but why?
-            </div>
-            <h3 class="box-m text-center">
-                we found that working within a short period of time helps us stay focused and maintain momentum, which
-                leads to deeper insights and more effective branding strategies
-            </h3>
+
+    <div class="view column padding-xl align-center gap-xl">
+        <div class="page column" style="align-items: center">
+            <div id="when" class="nudge_font text-center">7 spots per year, that's it</div>
+            <h3 class="box-m text-center">spots are limited and usually booked months in advance</h3>
         </div>
-        <div class="page">
-            <div class="column justify-stretch gap-l">
-                <div class="row gap-l" style="flex-wrap: nowrap;">
-                    <div class="column padding-xl box-l justify-stretch" style="background-color: #FF4B00;">
-                        <div class="align-center">
-                            <img class="box-m" src="videos/quick.gif">
-                        </div>
-                        <div class="column">
-                            <h2>quick</h2>
-                            <p class="box-m">
-                                the sprint's essence lies in efficiency, not necessarily speed. the process is
-                                scientific
-                                and straightforward, with decision-making occurring within a short timeframe. it's
-                                almost
-                                like doing yourself a favor: suffer shortly, enjoy longer.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column padding-xl box-l justify-stretch" style="background-color: #FDC800;">
-                        <div class="align-center">
-                            <img class="box-m" src="videos/fancy.gif">
-                        </div>
-                        <div class="column">
-                            <h2>fancy</h2>
-                            <p class="box-m">
-                                this process is a dance - design. test it. repeat. we found ways to ensure that working
-                                fast
-                                didn't mean sacrificing the quality of our work. this balance allowed us to turn
-                                challenges
-                                into wins.
-                            </p>
-                        </div>
-                    </div>
+
+        <div class="row gap-xl box-l nowarp-schedule" style="flex-wrap: wrap; justify-content: center">
+            <div class="column box padding-xl align-center gap-xl schedule-div">
+                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
+                    <h5>february</h5>
+                    <h3>02</h3>
                 </div>
-                <div class="row padding-xl justify-stretch box-l" style="flex-wrap: nowrap; background-color: #014ADD;">
-                    <div class="column white box-s">
-                        <h2>team</h2>
-                        <div class="box-m">
-                            </class>
-                            <p> the brand sprint team includes
-                                <a href="https://www.linkedin.com/in/inbal-lapidot-vidal-17904979/" target="_blank"
-                                    class="project-link" style="text-decoration: underline;">inbal</a>
-                                and
-                                <a href="https://www.linkedin.com/in/edenvidal/" target="_blank" class="project-link"
-                                    style="text-decoration: underline;">eden</a>
-                                as creative directors. additionally, the core team includes a wide range of skills, from
-                                2d/3d design, illustration, and motion to other disciplines like development and ai. for
-                                everything else, we source talent worldwide, which gives us great flexibility.
-                            </p>
-                        </div>
-                    </div>
-                    <img class="box-s" src="./images/team.svg">
+                <div style="
+              border-radius: 100%;
+              height: 160px;
+              width: 160px;
+              border: 1px solid black;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            ">
+                    <p>not available</p>
                 </div>
+            </div>
+            <div class="divider"
+                style="@media (max-width: 768px) {width: 80%; height: 1px; transform: none; margin: 0 auto}"></div>
+            <div class="column box padding-xl align-center gap-xl schedule-div">
+                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
+                    <h5>march</h5>
+                    <h3>03</h3>
+                </div>
+                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
+                    <div class="random-color-change" style="
+                border-radius: 100%;
+                height: 160px;
+                width: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              ">
+                        <p>let's talk</p>
+                    </div>
+                </a>
+            </div>
+            <div class="divider"
+                style="@media (max-width: 768px) {width: 80%; height: 1px; transform: none; margin: 0 auto}"></div>
+            <div class="column box padding-xl align-center gap-xl schedule-div">
+                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
+                    <h5>april</h5>
+                    <h3>04</h3>
+                </div>
+                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
+                    <div style="
+                border-radius: 100%;
+                height: 160px;
+                width: 160px;
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              ">
+                        <p>not available</p>
+                    </div>
+                </a>
+            </div>
+            <div class="divider"
+                style="@media (max-width: 768px) {width: 80%; height: 1px; transform: none; margin: 0 auto}"></div>
+            <div class="column box padding-xl align-center gap-xl schedule-div">
+                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
+                    <h5>may</h5>
+                    <h3>05</h3>
+                </div>
+                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
+                    <div class="random-color-change" style="
+                border-radius: 100%;
+                height: 160px;
+                width: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              ">
+                        <p>let's talk</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
     <div class="view column align-center gap-xl">
-        <div class="page column gap-xl" style="align-items: center;">
-            <div id="how" class="nudge_font text-center">
-                10-day plan
-            </div>
+        <div class="page column gap-xl" style="align-items: center">
+            <div id="how" class="nudge_font text-center">10-day plan</div>
             <h3 class="box-m text-center">
                 creating a brand that sticks can be like solving a big puzzle. our 10-day plan method is like a map
-                to
-                help you find your way. it's all about starting big, then getting more and more focused until you
-                find
-                that perfect fit for your brand.
+                to help you find your way. it's all about starting big, then getting more and more focused until you
+                find that perfect fit for your brand.
             </h3>
         </div>
-        <div class="row view" style="flex-wrap: nowrap;">
+        <div class="row view" style="flex-wrap: nowrap">
             <div class="yellow_background row justify-stretch" id="accordion"
-                style="flex-grow: 1; flex-wrap: nowrap; background-color: #FDC800;">
-                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
+                style="flex-grow: 1; flex-wrap: nowrap; background-color: #fdc800">
+                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
                     <h4 class="accordion-header">day 0 strategy</h4>
                     <div class="box-l"></div>
                 </div>
                 <div class="column justify-stretch align-end accordion-div gap-l">
                     <div class="imageaccordion box-l justify-end padding-l">
-                        <img class="box-s" src="videos/yellow.gif">
+                        <img class="box-s" src="videos/yellow.gif" />
                     </div>
-                    <p class="box-s accordion-text justify-end align-end padding-l">let's go! we kick things off with a
-                        mind-bending three hours brand sprint. it's time to turn those thousand abstract ideas floating
-                        in your head into something tangible. we'll dive into your past, peek into your future, and get
-                        cozy with your present. why do you do what you do? how do you do it? what exactly are you doing?
-                        we'll chat about your values, get to know your audience, and size up the competition. it's like
-                        speed dating, but for your brand!
+                    <p class="box-s accordion-text justify-end align-end padding-l">
+                        we kick things off with a mind-bending three-hour sprint.
+we dig deep—why do you do what you do? who is your audience? why should anyone care?
+it's like speed dating, but for your brand.
                     </p>
                 </div>
             </div>
 
             <div class="orange_background row justify-stretch" id="accordion"
-                style="flex-wrap: nowrap; background-color: #FF4B00;">
-                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
+                style="flex-wrap: nowrap; background-color: #ff4b00">
+                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
                     <h4 class="accordion-header">day 1-3 research</h4>
                     <div class="box-l"></div>
                 </div>
                 <div class="column justify-stretch align-end gap-l">
-                    <div class="imageaccordion box-l justify-end padding-l" style="display: none; position: relative;">
-                        <img class="box-s" src="videos/orange.gif">
+                    <div class="imageaccordion box-l justify-end padding-l" style="display: none; position: relative">
+                        <img class="box-s" src="videos/orange.gif" />
                         <div class="box-l orange_background"
-                            style="position: absolute; bottom: 0; width: 100%; height: 12%;"></div>
+                            style="position: absolute; bottom: 0; width: 100%; height: 12%"></div>
                     </div>
-                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none;">let's stretch
-                        it out! we're going deep, folks. we'll gain insights into your brand strategy that would make
-                        sherlock holmes jealous. we're talking point of view, approach, and tone of voice. together,
-                        we'll craft a brand story so compelling it could be a bestseller. this story becomes our north
-                        star as we explore potential concepts. we'll present our findings, align on the strategy, and
-                        get your stamp of approval. it's like building a roadmap to your brand's promised land!
+                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none">
+                        we absorb, analyze, and decode. this is where raw ideas get refined into brand clarity.
+
+
                     </p>
                 </div>
             </div>
 
             <div class="pink_background row justify-stretch" id="accordion"
-                style="flex-wrap: nowrap; background-color: #FFBFE1;">
-                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
+                style="flex-wrap: nowrap; background-color: #ffbfe1">
+                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
                     <h4 class="accordion-header">day 4-7 design</h4>
                     <div class="box-l"></div>
                 </div>
                 <div class="column justify-stretch align-end gap-l">
-                    <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
-                        <img class="box-s" src="videos/pink.gif">
+                    <div class="imageaccordion box-l justify-end padding-l" style="display: none">
+                        <img class="box-s" src="videos/pink.gif" />
                     </div>
-                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none;">one clear
-                        creative visual direction! go! we're crafting a brand. we're talking logos that pop, typography
-                        that sings, color palettes that dazzle, and visual assets that wow. we'll explore how your brand
-                        stretches and flexes across all necessary mediums. it's like yoga for your brand identity! we'll
-                        let you know we're going into "deep work" mode. think of it as our creative hibernation.
-                        no calls, no emails—just pure, uninterrupted brand magic happening behind the scenes while
-                        you're enjoying radio silence.
-                        finally, we're creating a brand book as detailed as a biology book. every decision, every choice
-                        will have its moment in the spotlight. we're preparing a presentation that brings your brand's
-                        story to life!
+                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none">
+                        we design, test, refine, repeat. no back button. no endless revisions. just high-velocity execution.
                     </p>
                 </div>
             </div>
             <div class="purple_background row justify-stretch" id="accordion"
-                style="flex-wrap: nowrap; background-color: #8159FB;">
-                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
+                style="flex-wrap: nowrap; background-color: #8159fb">
+                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
                     <h4 class="accordion-header">day 10 present</h4>
                     <div class="box-l"></div>
                 </div>
                 <div class="column justify-stretch align-end gap-l">
-                    <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
-                        <img class="box-s" src="videos/purple.gif">
+                    <div class="imageaccordion box-l justify-end padding-l" style="display: none">
+                        <img class="box-s" src="videos/purple.gif" />
                     </div>
-                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none;">drumroll,
-                        please! we're coming to your offices for the grand unveiling. picture this: your office, your
-                        team, and us presenting a visual identity greater than the sum of its parts. we'll walk you
-                        through the brand book, explaining our thought process with the enthusiasm of a kid showing off
-                        a new toy. it's not just a presentation - it's your brand's birthday party!
+                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none">
+                        one presentation. no options. no indecision. just a brand built to dominate.
                     </p>
                 </div>
             </div>
 
             <div class="blue_background row justify-stretch" id="accordion"
-                style="flex-wrap: nowrap; background-color: #014ADD;">
-                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
-                    <h4 class="accordion-header">day 11 handoff</h4>
+                style="flex-wrap: nowrap; background-color: #014add">
+                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
+                    <h4 class="accordion-header">day 11 handover</h4>
                     <div class="box-l"></div>
                 </div>
                 <div class="column justify-stretch align-end gap-l">
-                    <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
-                        <img class="box-s" src="videos/blue.gif">
+                    <div class="imageaccordion box-l justify-end padding-l" style="display: none">
+                        <img class="box-s" src="videos/blue.gif" />
                     </div>
-                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none;">you're ready
-                        to fly, little brand! we'll make sure you and your team can wield these brand assets like pros.
-                        we'll take a moment to refine some final parts and to appreciate the epic journey we've been on
-                        together. it's like graduation day for your brand!
+                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none">
+                        your brand, delivered. ready to launch, grow, and own the market.
                     </p>
                 </div>
             </div>
 
             <div class="green_background row justify-stretch" id="accordion"
-                style="flex-wrap: nowrap; background-color: #02903B;">
-                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
+                style="flex-wrap: nowrap; background-color: #02903b">
+                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
                     <h4 class="accordion-header">handshake</h4>
                     <div class="box-l"></div>
                 </div>
                 <div class="column justify-stretch align-end gap-l">
-                    <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
-                        <img class="box-s" src="videos/green.gif">
+                    <div class="imageaccordion box-l justify-end padding-l" style="display: none">
+                        <img class="box-s" src="videos/green.gif" />
                     </div>
-                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none;">
-                        congratulations! you have a brand!!! 🎉 this is where we cement our partnership and ensure
-                        you're fully equipped to take your brand to new heights. we'll walk you through every aspect of
-                        your new brand identity, from the profound strategy to the nitty-gritty details of using your
-                        visual assets. think of it as handing over the keys to your brand new car – we're making sure
-                        you know how to drive it, maintain it, and make it purr. this handshake isn't just a goodbye –
-                        it's the beginning of a beautiful friendship!
+                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none">
+                        congratulations. you now have a brand that doesn't just exist—it commands attention.
+before we wrap, we make sure you and your team own it.
+we walk you through every part of your new brand—strategy, voice, visuals, and execution.
+think of it as handing over the keys to a high-performance machine. you'll know how to drive it, fine-tune it, and make it roar.
+this isn't just a project. it's the beginning of a legacy.
                     </p>
                 </div>
             </div>
 
             <div class="black_background row justify-stretch" id="accordion"
-                style="flex-wrap: nowrap; background-color: #000000; color: white;">
-                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end;">
+                style="flex-wrap: nowrap; background-color: #000000; color: white">
+                <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
                     <h4 class="accordion-header">ongoing</h4>
                     <div class="box-l"></div>
                 </div>
                 <div class="column justify-stretch align-end gap-l">
-                    <div class="imageaccordion box-l justify-end padding-l" style="display: none;">
-                        <img class="box-s" src="videos/black.gif">
+                    <div class="imageaccordion box-l justify-end padding-l" style="display: none">
+                        <img class="box-s" src="videos/black.gif" />
                     </div>
-                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none;">This isn't
-                        goodbye - it's "see you later"! We'll continue to support your brand as it grows and evolves.
-                        Think of us as your brand's personal trainer, always here to keep it in top shape! From regular
-                        brand check-ups and workshops to trend tracking and crisis control, we've got your back. We'll
-                        help your brand flex its muscles, navigate stormy seas, and reach its full potential. Remember,
-                        a great brand is never "done" – it's a living, breathing entity that grows with your business.
-                        And we're here to nurture it every step of the way. So, let's keep this brand party going! 🎈🌟
+                    <p class="box-s accordion-text justify-end align-end padding-l" style="display: none">
+                        this isn't goodbye. it's just the start.
+
+your brand will evolve. markets shift. opportunities rise.
+we don't just hand over the work and disappear—we stay in your corner.
+
+✅ periodic check-ins to keep your brand sharp
+✅ workshops to refine, optimize, and expand
+✅ creative support when you need it
+
+a great brand isn't static. it's a living, breathing entity.
+let's keep it strong, bold, and always ahead of the game.
+
+�� need a tune-up? we're here.
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="view column padding-xl align-center gap-xl">
-        <div class="page column" style="align-items: center;">
-            <div id="when" class="nudge_font text-center">
-                ok, when?
-            </div>
+    <div class="view column align-center gap-xl">
+        <div class="page column gap-xl" style="align-items: center">
+            <div id="why" class="nudge_font text-center">but why?</div>
             <h3 class="box-m text-center">
-                as early as you can - like 2-3 months ahead. we're almost
-                always booked with too much time on. that being said, s#!%
-                happens, and it is worth reaching out anyway.
+                we found that working within a short period of time helps us stay focused and maintain momentum,
+                which leads to deeper insights and more effective branding strategies
             </h3>
         </div>
-
-        <div class="row gap-xl box-l nowarp-schedule" style="flex-wrap: wrap; justify-content: center;">
-            <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                    <h5>december</h5>
-                    <h3>12</h3>
-                </div>
-                <div
-                    style="border-radius: 100%; height: 196px; width: 196px; border: 1px solid black; display: flex; align-items: center; justify-content: center;">
-                    <p>not available</p>
-                </div>
-            </div>
-            <div class="divider"
-                style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
-            <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                    <h5>january</h5>
-                    <h3>01</h3>
-                </div>
-                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change"
-                        style="border-radius: 100%; height: 196px; width: 196px; display: flex; align-items: center; justify-content: center;">
-                        <p>let's talk</p>
+        <div class="page">
+            <div class="column justify-stretch gap-l">
+                <div class="row gap-l" style="flex-wrap: nowrap">
+                    <div class="column padding-xl box-l justify-stretch" style="background-color: #ff4b00">
+                        <div class="align-center">
+                            <img class="box-m" src="videos/quick.gif" />
+                        </div>
+                        <div class="column">
+                            <h2>quick</h2>
+                            <p class="box-m">
+                                branding, like a startup, is about momentum.
+our process is scientific, not chaotic—tight decisions in a tight timeframe.
+                            </p>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="divider"
-                style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
-            <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                    <h5>february</h5>
-                    <h3>02</h3>
-                </div>
-                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change"
-                        style="border-radius: 100%; height: 196px; width: 196px; display: flex; align-items: center; justify-content: center;">
-                        <p>let's talk</p>
+                    <div class="column padding-xl box-l justify-stretch" style="background-color: #fdc800">
+                        <div class="align-center">
+                            <img class="box-m" src="videos/fancy.gif" />
+                        </div>
+                        <div class="column">
+                            <h2>fancy</h2>
+                            <p class="box-m">
+                                speed doesn't mean sloppy.
+this process is a dance—design, test, refine.
+the result is a brand that feels inevitable.
+                            </p>
+                        </div>
                     </div>
-                </a>
-            </div>
-            <div class="divider"
-                style="@media (max-width: 768px) { width: 80%; height: 1px; transform: none; margin: 0 auto; }"></div>
-            <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%;">
-                    <h5>march</h5>
-                    <h3>03</h3>
                 </div>
-                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change"
-                        style="border-radius: 100%; height: 196px; width: 196px; display: flex; align-items: center; justify-content: center;">
-                        <p>let's talk</p>
+                <div class="row padding-xl justify-stretch box-l" style="flex-wrap: nowrap; background-color: #014add">
+                    <div class="column white box-s">
+                        <h2>resourceful</h2>
+                        <div class="box-m">
+                            <p>
+                                your core team includes
+                                <a href="https://x.com/InbaLapidotVida" target="_blank">inbal</a> & <a href="https://x.com/eden_vid" target="_blank">eden</a> as creative directors.
+                                
+                                your extended team?
+                                a global network of top-tier designers, illustrators, motion artists, and ai specialists.
+                                
+                                we bring in the best, only when needed—so you get the best.
+                            </p>
+                        </div>
                     </div>
-                </a>
+                    <img class="box-s" src="./images/team.svg" />
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="brandsprintpagebook" class="view column align-center" style="background-color: #02903B; color: white;">
-        <div class="page column" style="align-items: center;">
-            <div id="when" class="nudge_font text-center">
-                the book
-            </div>
-        </div><img src="./images/book.png" class="box-xl" />
-        <div class="page column" style="align-items: center;">
-            <h3 class="box-m text-center" style="display: inline-block;">
-                in the brand sprint book, we show you how this process is changing the game
-                for us and our clients. we invite you to rethink branding and join us in our
-                never-ending project.
-                <a style="text-decoration: underline;" href="https://store.weareunder.design/pages/newsletter"
-                    target="_blank"><span>stay tuned!</span>
+    <div class="view column align-center gap-xl">
+        <div class="page column" style="align-items: center">
+            <div class="nudge_font text-center">$55k</div>
+            <h3 class="box-m text-center">
+                the real cost? looking like a budget startup while your competitors eat your lunch. investors ghost
+                you. top talent swipes left. you don't pay for 10 days—you pay for 10 years of market domination.
+            </h3>
+        </div>
+    </div>
+
+    <div id="brandsprintpagebook" class="view column align-center" style="background-color: #02903b; color: white">
+        <div class="page column" style="align-items: center">
+            <div class="nudge_font text-center">book</div>
+        </div>
+        <div class="page column" style="align-items: center">
+            <h3 class="box-m text-center" style="display: inline-block">
+                how we productized branding. how it’s changing the game.
+a deep dive into rethinking branding and killing the traditional process. 📖
+
+
+                <a style="text-decoration: underline" href="https://store.weareunder.design/pages/newsletter"
+                    target="_blank"><span>coming soon</span>
                 </a>
             </h3>
         </div>
-
+        <img src="./images/book.png" class="box-xl" />
     </div>
 
-    <div class="view column align-center" style="background-color: #E1E1E1;">
+    <div class="view column align-center" style="background-color: #e1e1e1">
         <div class="column gap-xl align-center">
-            <div id="when" class="nudge_font text-center padding-xl"
-                style="color: transparent !important; -webkit-text-stroke: 1px black;">
-                the template
+            <div class="nudge_font text-center padding-xl"
+                style="color: transparent !important; -webkit-text-stroke: 1px black">
+                template
             </div>
-            <img class="padding-xl" src="./images/template.png" />
-            <h3 class="box-m text-center padding-xl" style="display: inline-block;"> thinking about running a brand
-                sprint?<br><a style="text-decoration: underline;"
+            <h3 class="box-m text-center padding-xl" style="display: inline-block">
+                thinking about running a brand sprint?<br /><a style="text-decoration: underline"
                     href="https://www.figma.com/design/jpUIjma2LctAInA1FHuyug/Brand-Sprint-Template?node-id=0-1&t=v0Zl2sdGIiuS3bc5-0"
                     target="_blank"><span>take this</span> </a>, it'll help you kick things off.
             </h3>
+            <img class="padding-xl" src="./images/template.png" />
+
         </div>
     </div>
 
@@ -750,6 +772,7 @@
     <script src="../js/slider.js"></script>
     <script src="../js/randomcolorchange.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+
 
 </body>
 

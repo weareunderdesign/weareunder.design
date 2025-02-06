@@ -22,25 +22,54 @@ function updatePlayground(element) {
     vars.yMin = vars.containerBounds.top - dotBounds.top;
 }
 
+// This function ensures that a given ball is fully inside its container
+function ensureInsideContainer(ball) {
+    const container = window.pingPongVars.container || document.querySelector('.ping-pong');
+    if (!container) return;
+    const containerRect = container.getBoundingClientRect();
+    const ballRect = ball.getBoundingClientRect();
+    let deltaX = 0, deltaY = 0;
+    
+    if (ballRect.left < containerRect.left) {
+        deltaX = containerRect.left - ballRect.left;
+    } else if (ballRect.right > containerRect.right) {
+        deltaX = containerRect.right - ballRect.right;
+    }
+    
+    if (ballRect.top < containerRect.top) {
+        deltaY = containerRect.top - ballRect.top;
+    } else if (ballRect.bottom > containerRect.bottom) {
+        deltaY = containerRect.bottom - ballRect.bottom;
+    }
+    
+    // Parse any existing translation and add the delta adjustments
+    let currentX = 0, currentY = 0;
+    const transform = ball.style.transform;
+    if (transform) {
+        const match = transform.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/);
+        if (match) {
+            currentX = parseFloat(match[1]);
+            currentY = parseFloat(match[2]);
+        }
+    }
+    ball.style.transform = `translate(${currentX + deltaX}px, ${currentY + deltaY}px)`;
+}
+
 function animationToElement(element) {
-    const vars = window.pingPongVars;
-    let gsapTween = gsap.to(element, {
-        x: "+=3000",
-        y: "+=2000",
+    let tween = gsap.to(element, {
         duration: 50,
         repeat: -1,
-        repeatRefresh: true,
         ease: "none",
-        modifiers: {
-            x: bounceModifier(vars.xMin, vars.xMax),
-            y: bounceModifier(vars.yMin, vars.yMax),
-        },
+        onUpdate: () => {
+            updateBallPosition(element);
+            resolveCollision(element);
+        }
     });
 
-    element.addEventListener("mouseenter", () => gsapTween.pause());
-    element.addEventListener("mouseleave", () => gsapTween.resume());
+    element.addEventListener("mouseenter", () => tween.pause());
+    element.addEventListener("mouseleave", () => tween.resume());
     
-    return gsapTween;
+    return tween;
 }
 
 function initializeCircles() {
@@ -48,32 +77,79 @@ function initializeCircles() {
         const circles = document.querySelectorAll('[class*="circle"]');
         circles.forEach(circle => {
             updatePlayground(circle);
-            if (window.pingPongVars.containerBounds && window.pingPongVars.containerBounds.bottom > 0) {
+            // Ensure the ball starts inside the container
+            ensureInsideContainer(circle);
+            // Reduced velocity by 50% (from 3,2 to 1.5,1)
+            circle.velocity = { x:2, y: 2 };
+        });
+        if (window.pingPongVars.containerBounds && window.pingPongVars.containerBounds.bottom > 0) {
+            circles.forEach(circle => {
                 const id = circle.className;
                 window.pingPongVars.tweens[id] = animationToElement(circle);
-            }
-        });
+            });
+        }
     } catch (err) {
         console.log(err);
     }
 }
 
-function bounceModifier(min, max) {
-    var range = max - min;
-    return function (value) {
-        value = parseFloat(value);
-        var cycle, clippedValue;
-        if (value > max) {
-            cycle = (value - max) / range;
-            clippedValue = (cycle % 1) * range;
-            value = (cycle | 0) & (1 !== 0) ? min + clippedValue : max - clippedValue;
-        } else if (value < min) {
-            cycle = (min - value) / range;
-            clippedValue = (cycle % 1) * range;
-            value = (cycle | 0) & (1 !== 0) ? max - clippedValue : min + clippedValue;
+function updateBallPosition(ball) {
+    let currentX = 0;
+    let currentY = 0;
+    const transform = ball.style.transform;
+    if (transform) {
+        const match = transform.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/);
+        if (match) {
+            currentX = parseFloat(match[1]);
+            currentY = parseFloat(match[2]);
         }
-        return value + "px";
+    }
+
+    const container = window.pingPongVars.container;
+    const containerBounds = container.getBoundingClientRect();
+    const ballRect = ball.getBoundingClientRect();
+
+    // Bounce off left/right boundaries
+    if ((ballRect.left + ball.velocity.x <= containerBounds.left) || (ballRect.right + ball.velocity.x >= containerBounds.right)) {
+        ball.velocity.x *= -1;
+    }
+    // Bounce off top/bottom boundaries
+    if ((ballRect.top + ball.velocity.y <= containerBounds.top) || (ballRect.bottom + ball.velocity.y >= containerBounds.bottom)) {
+        ball.velocity.y *= -1;
+    }
+
+    currentX += ball.velocity.x;
+    currentY += ball.velocity.y;
+    ball.style.transform = `translate(${currentX}px, ${currentY}px)`;
+}
+
+function resolveCollision(ball) {
+    const balls = document.querySelectorAll('[class*="circle"]');
+    const ballRect = ball.getBoundingClientRect();
+    const ballCenter = {
+        x: ballRect.left + ballRect.width / 2,
+        y: ballRect.top + ballRect.height / 2
     };
+
+    balls.forEach(otherBall => {
+        if (otherBall === ball) return;
+        const otherRect = otherBall.getBoundingClientRect();
+        const otherCenter = {
+            x: otherRect.left + otherRect.width / 2,
+            y: otherRect.top + otherRect.height / 2
+        };
+
+        const dx = ballCenter.x - otherCenter.x;
+        const dy = ballCenter.y - otherCenter.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const minDist = (ballRect.width / 2) + (otherRect.width / 2);
+
+        if (distance < minDist) {
+            const tempVelocity = { ...ball.velocity };
+            ball.velocity = { ...otherBall.velocity };
+            otherBall.velocity = tempVelocity;
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', initializeCircles);
@@ -81,7 +157,8 @@ document.addEventListener('DOMContentLoaded', initializeCircles);
 function bringCircleToInitialPosition() {
     const circles = document.querySelectorAll('[class*="circle"]');
     circles.forEach(circle => {
-        circle.style.transform = "none";
+        // Instead of resetting to "none", ensure they are well positioned inside the container.
+        ensureInsideContainer(circle);
     });
 }
 
