@@ -36,6 +36,8 @@ window.onload = function() {
           if(element.tagName.toLowerCase() === 'a') {
               const image = element.dataset.desktopImage;
               element.style.background = `${interpolatedColor} url(${image}) no-repeat center/cover`;
+          } else if(element.classList.contains('nudge_font') || element.parentElement.classList.contains('nudge_font')) {
+              element.style.color = interpolatedColor;
           } else {
               element.style.backgroundColor = interpolatedColor;
           }
