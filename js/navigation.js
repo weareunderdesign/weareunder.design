@@ -1,5 +1,6 @@
 function preloadImages() {
   const imageUrls = [
+    "https://weareunder.design/work/chargeflow/00.png",
     "https://weareunder.design/work/aim/0.png",
     "https://weareunder.design/work/artac/0.png",
     "https://weareunder.design/work/bounce/0.png",
@@ -149,6 +150,7 @@ function addSidebar() {
 <div id="works-wrapper" class="hidden">
 <div class="view row" style="position: relative; z-index: 999; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png';" id="brand-sprints-section">
 <div class="sidebar column" data-ix="sidebar" id="sidebar-work">
+  <a href="https://weareunder.design/work/chargeflow/" class="sidebar-project-link" id="chargeflow-0B41FC">chargeflow</a>
   <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
   <a href="https://weareunder.design/work/artac/" class="sidebar-project-link" id="artac-808080">artac</a>
   <a href="https://weareunder.design/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>
@@ -162,7 +164,6 @@ function addSidebar() {
   <a href="https://weareunder.design/work/visioncamp/" class="sidebar-project-link" id="visioncamp-0700FD">visioncamp</a>
   <a href="https://weareunder.design/work/balance/" class="sidebar-project-link" id="balance-1d1d1d">balance</a>
   <a href="https://weareunder.design/work/finaloop/" class="sidebar-project-link" id="finaloop-FF0000">finaloop</a>
-  <a href="https://weareunder.design/work/dymension/" class="sidebar-project-link" id="dymension-24201F">dymension</a>
   <a href="https://weareunder.design/work/groundcover/" class="sidebar-project-link" id="groundcover-1BB485">groundcover</a>
   <a href="https://weareunder.design/work/nilus/" class="sidebar-project-link" id="nilus-db160d">nilus</a>
   <a href="https://weareunder.design/work/raftt/" class="sidebar-project-link" id="raftt-0C6BEA">raftt</a>
@@ -194,6 +195,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
+<img src="https://weareunder.design/work/chargeflow/00.png" class="sidebar-project-image" id="chargeflow" loading="lazy"></img>
 <img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
 <img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
