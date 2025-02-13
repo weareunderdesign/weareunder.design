@@ -3,7 +3,8 @@ function addSlider() {
         'soli': '19',
         'justripe': '09',
         'visioncamp': '6',
-        'rnbw': '1'
+        'rnbw': '1',
+        'chargeflow': '00'
     };
 
     function getImageUrl(id) {
