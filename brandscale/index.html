@@ -31,7 +31,25 @@
     <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
     <title>brandscale by ūnder</title>
 
-    
+    <style>
+        @font-face {
+            font-family: "Nudge";
+            src: url("../brandsprint/fonts/VCNudge-BoldItalic.woff2") format("woff2"),
+                url("../brandsprint/fonts/VCNudge-BoldItalic.woff") format("woff");
+        }
+        
+        .nudge_font {
+            font-family: "Nudge", sans-serif;
+            font-size: 12rem;
+            line-height: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nudge_font {
+                font-size: 4rem;
+            }
+        }
+    </style>
 </head>
 
 <body data-page="brandscale">
@@ -46,7 +64,7 @@
             <source src="./video/brandscale_light.mp4" type="video/mp4" data-theme="light">
             <source src="./video/brandscale_dark.mp4" type="video/mp4" data-theme="dark">
           </video>
-          <h1>brandscale</h1>
+          <div class="nudge_font text-center opacity-xl">brandscale</div>
         </div>
     </div>
     
@@ -55,17 +73,17 @@
     
 
     <div class="view column align-center gap-xl background-tertiary">
-        <div class="page column" style="align-items: center">
+        <div class="page column opacity-s" style="align-items: center">
             <div class="page column gap-xl" style="align-items: center">
-                <h3 class="text-center">wait, what?</h3>
-                <h5 class="box-m text-center">
+                <div class="nudge_font text-center opacity-xl">wait, what?</div>
+                <h5 class="box-m text-center opacity-s">
                     yes, in just 12 weeks we'll transform your brand from invisible to unforgettable. no endless meetings, no design by committee—just pure, focused brand building that gets results.
                 </h5>
             </div>
 
             <div class="page">
                 <div class="row gap-l box-l" style="flex-wrap: nowrap">
-                    <div class="box-l column align-start">
+                    <div class="box-l column align-start ">
                         <svg-icon class="icon-l"></svg-icon>
                         <h5>website</h5>
                         <p>
@@ -326,8 +344,8 @@
 
     <div class="view column align-center gap-xl">
         <div class="page column gap-xl" style="align-items: center">
-            <h3 class="text-center">the five-phase, 12-week plan</h3>
-            <h5 class="box-m text-center">
+            <div class="nudge_font text-center opacity-xl">the five-phase, 12-week plan</div>
+            <h5 class="box-m text-center opacity-s">
                 a structured approach to building your brand, designed to deliver comprehensive results while empowering your team for long-term success.
             </h5>
         </div>
@@ -449,11 +467,9 @@ this plan ensures a robust brand identity, empowering your team to maintain, gro
 
     <div class="view column align-center background-secondary">
         <div class="page column gap-xl align-center">
-            <h3 class="text-center padding-xl">
+            <h2 class=" text-center padding-xl">
                 our ultimate goal is to leave you fully prepared to sustain and grow independently with the tools and processes provided.
-
-
-            </h3>
+            </h2>
         </div>
     </div>
 
