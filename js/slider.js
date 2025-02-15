@@ -1,31 +1,25 @@
 function addSlider() {
-    const SPECIAL_CASES = {
-        'soli': '19',
-        'justripe': '09',
-        'visioncamp': '6',
-        'rnbw': '1',
-        'chargeflow': '00'
-    };
-
-    function getImageUrl(id) {
-        const isSpecial = ['mesh_payments', 'zigi'].includes(id);
-        const ext = isSpecial ? 'svg' : 'png';
-        const number = SPECIAL_CASES[id] || '0';
-        return `https://weareunder.design/work/${id}/${number}.${ext}`;
-    }
-
     function getProjectsFromNavigation() {
-        const sidebar = document.querySelector('.sidebar');
+        const sidebar = document.getElementById('sidebar-work');
         if (!sidebar) return [];
 
-        const links = Array.from(sidebar.querySelectorAll('a.sidebar-project-link'));
-        return links.map(link => {
+        return Array.from(sidebar.querySelectorAll('a.sidebar-project-link')).map(link => {
             const id = link.id.split('-')[0];
-            const href = link.href;
+            // Special cases for image paths
+            let imageNumber = '0';
+            if (id === 'chargeflow') imageNumber = '00';
+            if (id === 'justripe') imageNumber = '09';
+            if (id === 'soli') imageNumber = '19';
+            if (id === 'visioncamp') imageNumber = '6';
+            if (id === 'rnbw') imageNumber = '1';
+
+            const ext = (id === 'mesh_payments' || id === 'zigi') ? 'svg' : 'png';
+            
             return {
                 id,
-                href,
-                imageUrl: getImageUrl(id)
+                href: link.href,
+                name: link.textContent,
+                imageUrl: `https://weareunder.design/work/${id}/${imageNumber}.${ext}`
             };
         });
     }
@@ -44,6 +38,7 @@ function addSlider() {
     }
 
     const projects = getProjectsFromNavigation();
+    if (!projects.length) return;
 
     const TEMPLATE = `
     <div class="view row box-l" id="body-content" style="background: no-repeat center/cover; position: relative;">
@@ -51,7 +46,7 @@ function addSlider() {
             <div class="view slides" style="width: 100%; height: 61.8vw; display: flex; transition: transform 0.5s ease-in-out;">
                 ${generateSlidesHTML(projects)}
             </div>
-            <p class="padding-xl slidertext" style="mix-blend-mode: difference; color: white; position: absolute; bottom: 0px; left: 0%; white-space: nowrap; margin: 0.5rem, 0, 0.5rem, 0 !important; line-height: 1.35 !important;">finaloop</p>
+            <p class="padding-xl slidertext" style="mix-blend-mode: difference; color: white; position: absolute; bottom: 0px; left: 0%; white-space: nowrap; margin: 0.5rem, 0, 0.5rem, 0 !important; line-height: 1.35 !important;">${projects[0].name}</p>
             <div class="padding-xl sliderbuttons" style="position: absolute; bottom: 0px; right: 0%;">
                 <button class="prev" style="mix-blend-mode: difference; border: none; background: none; cursor: pointer;">
                     <img src="https://weareunder.design/images/arrow_left.svg" />
@@ -82,8 +77,7 @@ function addSlider() {
     let currentPosition = 100;
     let isAutoScrolling = true;
     let isManualControl = false;
-    const isMobile = window.innerWidth <= 768;
-    const scrollSpeed = isMobile ? 0.05 : 0.02;
+    const scrollSpeed = window.innerWidth <= 768 ? 0.05 : 0.02;
     let animationFrameId = null;
     let isTransitioning = false;
 
@@ -98,8 +92,9 @@ function addSlider() {
         if (realIndex < 0) normalizedIndex = totalRealSlides - 1;
         if (realIndex >= totalRealSlides) normalizedIndex = 0;
 
-        const currentSlideId = slide[normalizedIndex + 1].id;
-        slideText.textContent = currentSlideId;
+        const currentSlide = slide[normalizedIndex + 1];
+        const projectData = projects.find(p => p.id === currentSlide.id);
+        slideText.textContent = projectData ? projectData.name : currentSlide.id;
     }
 
     function handleTransitionEnd() {
@@ -124,22 +119,15 @@ function addSlider() {
 
     function moveToSlide(direction) {
         if (isTransitioning) return;
-
         stopAutoScroll();
-
+        
         currentPosition = Math.round(currentPosition / 100) * 100;
         slides.style.transform = `translateX(-${currentPosition}%)`;
 
         requestAnimationFrame(() => {
             isTransitioning = true;
             slides.style.transition = 'transform 0.5s ease';
-
-            if (direction === 'next') {
-                currentPosition += 100;
-            } else {
-                currentPosition -= 100;
-            }
-
+            currentPosition += direction === 'next' ? 100 : -100;
             slides.style.transform = `translateX(-${currentPosition}%)`;
             updateSlideText();
         });
@@ -147,14 +135,11 @@ function addSlider() {
 
     function autoScroll() {
         if (!isAutoScrolling) return;
-
         slides.style.transition = 'none';
         currentPosition += scrollSpeed;
 
-        const totalSlides = slide.length;
-        if (currentPosition >= (totalSlides - 1) * 100) {
+        if (currentPosition >= (slide.length - 1) * 100) {
             currentPosition = 100;
-            slides.style.transform = `translateX(-100%)`;
         }
 
         slides.style.transform = `translateX(-${currentPosition}%)`;
@@ -163,11 +148,9 @@ function addSlider() {
     }
 
     function startAutoScroll() {
-        if (!isManualControl) {
+        if (!isManualControl && !animationFrameId) {
             isAutoScrolling = true;
-            if (!animationFrameId) {
-                autoScroll();
-            }
+            autoScroll();
         }
     }
 
@@ -179,20 +162,15 @@ function addSlider() {
         }
     }
 
+    // Initialize slider position and start auto-scroll
     slides.style.transform = `translateX(-${currentPosition}%)`;
     updateSlideText();
     startAutoScroll();
 
-    slider.addEventListener('mouseenter', () => {
-        stopAutoScroll();
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        if (!isManualControl) {
-            startAutoScroll();
-        }
-    });
-
+    // Event listeners
+    slider.addEventListener('mouseenter', stopAutoScroll);
+    slider.addEventListener('mouseleave', () => !isManualControl && startAutoScroll());
+    
     prevButton.addEventListener('click', () => {
         isManualControl = true;
         stopAutoScroll();
@@ -215,6 +193,22 @@ function addSlider() {
     });
 }
 
+// Initialize when navigation is ready
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(addSlider, 100);
+    const observer = new MutationObserver((mutations, obs) => {
+        if (document.getElementById('sidebar-work')) {
+            obs.disconnect();
+            addSlider();
+        }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+    
+    // Fallback
+    setTimeout(() => {
+        observer.disconnect();
+        if (!document.getElementById('sidebar-work')) {
+            addSlider();
+        }
+    }, 3000);
 });
