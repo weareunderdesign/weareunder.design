@@ -77,7 +77,7 @@ function addSlider() {
     let currentPosition = 100;
     let isAutoScrolling = true;
     let isManualControl = false;
-    const scrollSpeed = window.innerWidth <= 768 ? 0.05 : 0.02;
+    const scrollSpeed = window.innerWidth <= 768 ? 0.08 : 0.035;
     let animationFrameId = null;
     let isTransitioning = false;
 
