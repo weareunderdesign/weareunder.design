@@ -119,10 +119,10 @@ function addSidebar() {
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
-<a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
+<a class="header-link" href="https://weareunder.design/brandscale/" data-page="brandscale">
 <div class="column align-center gap-xs">
-<img src="https://weareunder.design/images/header/rnbw.svg">
-<span class="text-m" style="text-decoration: none; display: none; color: white;">rnbw</span> 
+<img src="../images/header/brandscale.svg">
+<span class="text-m" style="text-decoration: none; display: none; color: white;">brandscale</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" target="_blank" href="https://handy.vision" data-page="handy">
@@ -131,6 +131,13 @@ function addSidebar() {
 <span class="text-m" style="text-decoration: none; display: none; color: white;">handy</span> 
 </div>
 </a>
+<a class="header-link" target="_blank" href="https://rnbw.design/" data-page="rnbw">
+<div class="column align-center gap-xs">
+<img src="https://weareunder.design/images/header/rnbw.svg">
+<span class="text-m" style="text-decoration: none; display: none; color: white;">rnbw</span> 
+</div>
+</a>
+
 <a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
 <div class="column align-center gap-xs">
 <img src="https://weareunder.design/images/header/store.svg">
