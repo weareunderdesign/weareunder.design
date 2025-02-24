@@ -65,6 +65,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
             mix-blend-mode: difference;
         }
 
@@ -85,17 +86,52 @@
     <under-header></under-header>
     <under-navigation></under-navigation>
 
-    <div class="hero-section">
-        <video id="themeVideo" class="background-video" autoplay loop muted playsinline>
+    <div class="hero-section" id="videoContainer">
+        <video id="lightVideo" class="background-video" autoplay loop muted playsinline>
+            <source src="crown_light_web.webm" type="video/webm">
+        </video>
+        <video id="darkVideo" class="background-video" autoplay loop muted playsinline style="display: none;">
             <source src="crown_dark_web.webm" type="video/webm">
         </video>
         <div class="nudge_font text-center hero-content">brandscale</div>
-
     </div>
-    
-    
 
-    
+    <script>
+        const lightVideo = document.getElementById('lightVideo');
+        const darkVideo = document.getElementById('darkVideo');
+
+        function updateVideoVisibility() {
+            const theme = document.documentElement.getAttribute('data-theme');
+            console.log('Current theme:', theme); // Debug log
+            
+            if (theme === 'dark') {
+                lightVideo.style.display = 'none';
+                darkVideo.style.display = 'block';
+                darkVideo.play();
+            } else {
+                darkVideo.style.display = 'none';
+                lightVideo.style.display = 'block';
+                lightVideo.play();
+            }
+        }
+
+        // Run on page load
+        updateVideoVisibility();
+
+        // Watch for theme changes
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'data-theme') {
+                    updateVideoVisibility();
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-theme']
+        });
+    </script>
 
     <div class="view column align-center gap-xl background-primary">
         <div class="page column opacity-s" style="align-items: center">
