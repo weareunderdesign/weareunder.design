@@ -49,6 +49,33 @@
                 font-size: 4rem;
             }
         }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 99;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            mix-blend-mode: difference;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -58,33 +85,30 @@
     <under-header></under-header>
     <under-navigation></under-navigation>
 
-    <div class="view column align-center" style="padding-bottom: 5vw; overflow: hidden">
-        <div class="page" style="align-items: center">
-          <video id="themeVideo" autoplay loop muted playsinline>
-            <source src="./video/brandscale_light.mp4" type="video/mp4" data-theme="light">
-            <source src="./video/brandscale_dark.mp4" type="video/mp4" data-theme="dark">
-          </video>
-          <div class="nudge_font text-center opacity-xl">brandscale</div>
-        </div>
+    <div class="hero-section">
+        <video id="themeVideo" class="background-video" autoplay loop muted playsinline>
+            <source src="crown_dark_web.webm" type="video/webm">
+        </video>
+        <div class="nudge_font text-center hero-content">brandscale</div>
+
     </div>
     
     
 
     
 
-    <div class="view column align-center gap-xl background-tertiary">
+    <div class="view column align-center gap-xl background-primary">
         <div class="page column opacity-s" style="align-items: center">
             <div class="page column gap-xl" style="align-items: center">
-                <div class="nudge_font text-center opacity-xl">wait, what?</div>
-                <h5 class="box-m text-center opacity-s">
-                    yes, in just 12 weeks we'll transform your brand from invisible to unforgettable. no endless meetings, no design by committee—just pure, focused brand building that gets results.
-                </h5>
+                <h3 class="text-center opacity-s">
+                    in just 12 weeks we'll transform your brand from invisible to unforgettable. no endless meetings, no design by committee—just pure, focused brand building that gets results.
+                </h3>
             </div>
 
             <div class="page">
                 <div class="row gap-l box-l" style="flex-wrap: nowrap">
                     <div class="box-l column align-start ">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="website.svg"></svg-icon>
                         <h5>website</h5>
                         <p>
                             a fully designed and implemented website that reflects your brand, engages your audience, and delivers a seamless user experience.
@@ -114,7 +138,7 @@
                         </div>
                     </div>
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="customizable_web_component_design_system.svg"></svg-icon>
                         <h5>website development</h5>
                         <p>
                             this streamlined process delivers a website that not only embodies your brand but also ensures long-term usability, scalability, and success.
@@ -156,7 +180,7 @@
 
                 <div class="row gap-l box-l" style="flex-wrap: nowrap">
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="design_system_guidelines.svg"></svg-icon>
                         <h5>design system</h5>
                         <p>
                             a code-based design system creation process that builds upon the brand identity established during the brand sprint. this system will be delivered and editable through design and code, providing a comprehensive, immediately usable framework for web design and development.
@@ -174,7 +198,7 @@
                         </div>
                     </div>
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="scalable_and_reusable_design_patterns.svg"></svg-icon>
                         <h5>deck</h5>
                         <p>
                             professional slide deck templates and components that elevate your presentations with consistent branding, making every pitch and presentation impactful and memorable.
@@ -191,7 +215,7 @@
 
                 <div class="row gap-l box-l" style="flex-wrap: nowrap">
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="product.svg"></svg-icon>
                         <h5>product design</h5>
                         <p>
                             strategic design solutions that enhance your product's user experience while maintaining brand consistency, ensuring every interaction reinforces your brand identity.
@@ -210,7 +234,7 @@
                         </div>
                     </div>
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="video.svg"></svg-icon>
                         <h5>photography and videography</h5>
                         <p>
                             conceptualization and art direction for a series of video commercials, complemented by comprehensive visual content.
@@ -243,7 +267,7 @@
 
                 <div class="row gap-l box-l" style="flex-wrap: nowrap">
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="social_media.svg"></svg-icon>
                         <h5>social media & pr</h5>
                         <p>
                             comprehensive social media and public relations toolkit designed to maintain consistent brand messaging and engagement across all channels while building meaningful connections with your audience.
@@ -273,7 +297,7 @@
                         </div>
                     </div>
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="pr.svg"></svg-icon>
                         <h5>design patterns & brand voice</h5>
                         <p>
                             a unified system of visual elements and communication guidelines that ensures your brand maintains a distinctive and consistent presence across all platforms and touchpoints.
@@ -300,7 +324,7 @@
 
                 <div class="row gap-l box-l" style="flex-wrap: nowrap">
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="empowered_internal_design_team.svg"></svg-icon>
                         <h5>empowered internal design team</h5>
                         <p>
                             we provide brand education and knowledge transfer when the client is ready, whether immediately after the sprint or up to a year later.
@@ -322,7 +346,7 @@
                         </div>
                     </div>
                     <div class="box-l column align-start">
-                        <svg-icon class="icon-l"></svg-icon>
+                        <svg-icon class="icon-xl" src="ongoing_support.svg"></svg-icon>
                         <h5>ongoing support framework</h5>
                         <p>
                             brandscale provides a comprehensive framework for guidance and support, ensuring your company is equipped to scale with self-sustaining tools and templates.
@@ -344,10 +368,9 @@
 
     <div class="view column align-center gap-xl">
         <div class="page column gap-xl" style="align-items: center">
-            <div class="nudge_font text-center opacity-xl">the five-phase, 12-week plan</div>
-            <h5 class="box-m text-center opacity-s">
-                a structured approach to building your brand, designed to deliver comprehensive results while empowering your team for long-term success.
-            </h5>
+            <h3 class="text-center opacity-s">
+                a structured approach to building your brand, designed to deliver comprehensive results while empowering your team for long-term success
+            </h3>
         </div>
         <div class="row view border" style="flex-wrap: nowrap">
             <div class="accordion-container row view" style="flex-wrap: nowrap; width: 100%">
@@ -466,10 +489,40 @@ this plan ensures a robust brand identity, empowering your team to maintain, gro
     </div>
 
     <div class="view column align-center background-secondary">
-        <div class="page column gap-xl align-center">
+        <div class="page column gap-xl align-center text">
             <h2 class=" text-center padding-xl">
                 our ultimate goal is to leave you fully prepared to sustain and grow independently with the tools and processes provided.
             </h2>
+            <div class="box align-center">
+            <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank" class="button-xl background-primary-foreground foreground-secondary" style="border-radius: 800px; text-decoration: none; width: 600px; height: 600px; display: flex; align-items: center; justify-content: center; margin: 40px 0; position: relative; overflow: hidden; transition: all 0.3s ease-out;">
+                <div class="magnetic-wrap" style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                    <h3 style="position: relative; z-index: 2; transform-origin: center; transition: transform 0.3s ease-out;">let's talk</h3>
+                </div>
+                <script>
+                    const button = document.querySelector('.button-xl');
+                    const text = document.querySelector('.magnetic-wrap h3');
+                    
+                    button.addEventListener('mousemove', (e) => {
+                        const rect = button.getBoundingClientRect();
+                        const x = (e.clientX - rect.left - rect.width/2) / rect.width;
+                        const y = (e.clientY - rect.top - rect.height/2) / rect.height;
+                        
+                        // Increased sensitivity and bending
+                        text.style.transform = `translate(${x * 80}px, ${y * 80}px) rotate(${x * y * 25}deg)`;
+                        button.style.transform = `perspective(500px) rotateX(${y * 25}deg) rotateY(${x * 25}deg) scale(1.1)`;
+                    });
+                    
+                    button.addEventListener('mouseenter', () => {
+                        button.style.transform = 'scale(1.1)';
+                    });
+                    
+                    button.addEventListener('mouseleave', () => {
+                        text.style.transform = 'translate(0, 0) rotate(0deg)';
+                        button.style.transform = 'scale(1)';
+                    });
+                </script>
+            </a>
+        </div>
         </div>
     </div>
 
@@ -482,41 +535,6 @@ this plan ensures a robust brand identity, empowering your team to maintain, gro
     <script src="../js/slider.js"></script>
     <script src="../js/randomcolorchange.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-
-    <script>
-      // Theme video switcher
-      const themeVideo = document.getElementById('themeVideo');
-      
-      // Function to update video source based on theme
-      function updateVideoSource(theme) {
-        const sources = themeVideo.getElementsByTagName('source');
-        for (const source of sources) {
-          if (source.getAttribute('data-theme') === theme) {
-            themeVideo.src = source.src;
-            themeVideo.load();
-            themeVideo.play();
-            break;
-          }
-        }
-      }
-
-      // Initial video source setup
-      updateVideoSource(document.body.getAttribute('data-theme'));
-
-      // Watch for theme changes
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.attributeName === 'data-theme') {
-            updateVideoSource(document.body.getAttribute('data-theme'));
-          }
-        });
-      });
-
-      observer.observe(document.body, {
-        attributes: true,
-        attributeFilter: ['data-theme']
-      });
-    </script>
 
 </body>
 

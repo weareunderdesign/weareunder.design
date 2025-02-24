@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>under - Markdown Editor</title>
+    <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        .editor-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            height: calc(100vh - 100px);
+        }
+        .editor-pane, .preview-pane {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+        .editor-pane {
+            background: #f8f9fa;
+        }
+        #markdown-editor {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            font-family: monospace;
+            resize: none;
+            padding: 10px;
+        }
+        .toolbar {
+            padding: 10px 20px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .file-select {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background: white;
+            min-width: 200px;
+        }
+        .github-link {
+            margin-left: auto;
+            text-decoration: none;
+            color: #6c757d;
+        }
+        .row {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        aside {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .error-message {
+            color: #dc3545;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <select id="file-select" class="file-select" onchange="loadSelectedFile()">
+            <option value="">Select a markdown file...</option>
+            <option value="/under.md">under.md</option>
+            <option value="/ being-doing-rhythm.md">being-doing-rhythm.md</option>
+        </select>
+        <button class="button" onclick="saveMarkdown()">Save Changes</button>
+        <a href="https://github.com/edenvidal/weareunder.design/issues/new" target="_blank" class="github-link">
+            <button class="button">Suggest Edit on GitHub</button>
+        </a>
+    </div>
+    
+    <div id="error-message" class="error-message"></div>
+    
+    <div class="row">
+        <div>
+            <aside class="column justify-stretch sticky padding-l" style="display: inline-block;">
+            </aside>
+        </div>
+        <div class="view column align-top">
+            <div class="editor-container">
+                <div class="editor-pane">
+                    <textarea id="markdown-editor" placeholder="Enter your markdown here..."></textarea>
+                </div>
+                <div class="preview-pane">
+                    <div class="page" id="markdown-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <under-footer></under-footer>
+
+    <script>
+        let currentFilename = '/under.md';
+        let isScrolling = false;
+        let renderer;
+
+        function setupMarkedRenderer() {
+            marked.setOptions({
+                headerIds: false,
+                mangle: false
+            });
+    
+            renderer = new marked.Renderer();
+            
+            renderer.heading = function(text, level) {
+                if (level === 3) {
+                    return `<h${level}>${text}</h${level}>`;
+                }
+                if (level === 5) {
+                    return `<h${level}>${text}</h${level}>`;
+                }
+                if (level === 6) {
+                    return `<h${level}>${text}</h${level}>`;
+                }
+                return `<h${level}>${text}</h${level}>`;
+            };
+    
+            renderer.paragraph = function(text) {
+                return `<p>${text}</p>`;
+            };
+    
+            renderer.table = function(header, body) {
+                return `
+                    <table class="border radius-s">
+                        <thead>${header}</thead>
+                        <tbody>${body}</tbody>
+                    </table>
+                `;
+            };
+    
+            renderer.tablerow = function(content) {
+                return `<tr>${content}</tr>`;
+            };
+    
+            renderer.tablecell = function(content, flags) {
+                const type = flags.header ? 'th' : 'td';
+                const classes = flags.header ? 'padding-m background-secondary' : 'padding-m';
+                return `<${type} class="${classes}">${content}</${type}>`;
+            };
+    
+            marked.setOptions({ renderer });
+        }
+
+        function showError(message) {
+            const errorElement = document.getElementById('error-message');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+            setTimeout(() => {
+                errorElement.style.display = 'none';
+            }, 5000);
+        }
+
+        function renderMarkdown(markdownText) {
+            const htmlContent = marked(markdownText);
+            document.getElementById('markdown-content').innerHTML = htmlContent;
+
+            // Remove any existing TOC script
+            const existingToc = document.querySelector('script[src="https://rnbw.design/table-of-contents.js"]');
+            if (existingToc) {
+                existingToc.remove();
+            }
+            
+            // Create a new script element
+            const tocScript = document.createElement('script');
+            tocScript.src = 'https://rnbw.design/table-of-contents.js';
+            document.body.appendChild(tocScript);
+        }
+
+        async function loadMarkdownContent(filename = '/under.md') {
+            try {
+                // Use absolute path and encode URI components
+                const filePath = encodeURI(filename.trim());
+                console.log('Attempting to load:', filePath);
+                
+                const response = await fetch(filePath, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'text/markdown,text/plain,*/*',
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache'
+                    },
+                    credentials: 'same-origin'
+                });
+
+                console.log('Response status:', response.status);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${filename}. Status: ${response.status}`);
+                }
+
+                const markdownText = await response.text();
+                console.log('Loaded markdown length:', markdownText.length);
+                
+                document.getElementById('markdown-editor').value = markdownText;
+                currentFilename = filename;
+                document.getElementById('file-select').value = filename;
+                renderMarkdown(markdownText);
+            } catch (error) {
+                console.error('Detailed error:', error);
+                showError(`Error loading ${filename}: ${error.message}`);
+                // Reset to previous content if available
+                if (document.getElementById('markdown-editor').value) {
+                    renderMarkdown(document.getElementById('markdown-editor').value);
+                }
+            }
+        }
+
+        function loadSelectedFile() {
+            const select = document.getElementById('file-select');
+            if (select.value) {
+                loadMarkdownContent(select.value);
+            }
+        }
+
+        function saveMarkdown() {
+            const content = document.getElementById('markdown-editor').value;
+            const blob = new Blob([content], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = currentFilename.replace('./', '');
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Synchronized scrolling
+        function syncScroll(source, target) {
+            if (!isScrolling) {
+                isScrolling = true;
+                const sourceElement = document.querySelector(source);
+                const targetElement = document.querySelector(target);
+                
+                const scrollPercentage = sourceElement.scrollTop / 
+                    (sourceElement.scrollHeight - sourceElement.clientHeight);
+                
+                targetElement.scrollTop = scrollPercentage * 
+                    (targetElement.scrollHeight - targetElement.clientHeight);
+                
+                setTimeout(() => isScrolling = false, 50);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            setupMarkedRenderer();
+            loadMarkdownContent();
+            
+            const editor = document.querySelector('.editor-pane');
+            const preview = document.querySelector('.preview-pane');
+
+            editor.addEventListener('scroll', () => syncScroll('.editor-pane', '.preview-pane'));
+            preview.addEventListener('scroll', () => syncScroll('.preview-pane', '.editor-pane'));
+
+            document.getElementById('markdown-editor').addEventListener('input', () => {
+                renderMarkdown(document.getElementById('markdown-editor').value);
+            });
+        });
+    </script>
+
+    <script src="/js/footer.js"></script>
+    <script src="/js/navigation.js"></script>
+</body>
+</html>
