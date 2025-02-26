@@ -121,7 +121,7 @@ function addSidebar() {
 </a>
 <a class="header-link" href="https://weareunder.design/brandscale/" data-page="brandscale">
 <div class="column align-center gap-xs">
-<img src="../images/header/brandscale.svg">
+<img src="https://weareunder.design/images/header/brandscale.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandscale</span> 
 </div>
 </a>
