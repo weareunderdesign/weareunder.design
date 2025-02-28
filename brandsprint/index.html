@@ -128,6 +128,10 @@
                 margin: 0 auto;
             }
         }
+
+        .flip-container:hover .flipper {
+            transform: rotateY(180deg);
+        }
     </style>
 </head>
 
@@ -355,57 +359,197 @@
         </div>
         <div class="page gap-l">
             <div class="row gap-m" style="flex-wrap: nowrap">
-                <div class="box-s column gap-l align-start">
+                <div class="box column gap-l align-start" style="position: relative;">
+                    <div class="flip-container" style="
+                        position: absolute;
+                        top: 15%;
+                        left: -80px;
+                        transform-style: preserve-3d;
+                        perspective: 1000px;
+                        width: 160px;
+                        height: 160px;
+                        transform: rotate(-15deg);
+                        z-index: 2;
+                    ">
+                        <div class="flipper" style="
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            transition: transform 0.6s;
+                            transform-style: preserve-3d;
+                        ">
+                            <div class="front" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #fdc800;
+                                border-radius: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            ">
+                                <p style="margin: 0; font-size: 1.1em;">24 hours</p>
+                                <h4 style="margin: 0;">$500</h4>
+                            </div>
+                            <div class="back" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #fdc800;
+                                border-radius: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transform: rotateY(180deg);
+                            ">
+                                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank" style="text-decoration: none;">
+                                    <h4 style="margin: 0;">let's go!</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <img class="box-l" src="./images/BrandStrategy.svg" />
                     <div class="column">
-                        <h5>brand strategy</h5>
+                        <h5>brand story</h5>
                         <p>
-                            strategy guidelines<br />
+                            brand guidelines<br />
                             brand story
                         </p>
                     </div>
                 </div>
-                <div class="box-s column gap-l align-start">
+                <div class="box column gap-l align-start" style="position: relative;">
+                    <div class="flip-container" style="
+                        position: absolute;
+                        top: -10%;
+                        left: 65%;
+                        transform-style: preserve-3d;
+                        perspective: 1000px;
+                        width: 160px;
+                        height: 160px;
+                        transform: translateX(-50%) rotate(8deg);
+                        z-index: 2;
+                    ">
+                        <div class="flipper" style="
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            transition: transform 0.6s;
+                            transform-style: preserve-3d;
+                        ">
+                            <div class="front" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #ff4b00;
+                                border-radius: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            ">
+                                <p style="margin: 0; font-size: 1.1em;">48 hours</p>
+                                <h4 style="margin: 0;">+$5k</h4>
+                            </div>
+                            <div class="back" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #ff4b00;
+                                border-radius: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transform: rotateY(180deg);
+                            ">
+                                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank" style="text-decoration: none;">
+                                    <h4 style="margin: 0;">let's talk</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <img class="box-l" src="./images/BrandSystem.svg" />
                     <div class="column">
                         <h5>brand system</h5>
                         <p>
+                            design guidelines <br />
                             logo<br />
                             typography<br />
                             color<br />
                             layout<br />
                             motion<br />
                             interaction<br />
-                            media library<br />
-                            brand guidelines
                         </p>
                     </div>
                 </div>
-                <div class="box-s column gap-l align-start">
+                <div class="box column gap-l align-start" style="position: relative;">
+                    <div class="flip-container" style="
+                        position: absolute;
+                        top: 45%;
+                        left: 70%;
+                        transform-style: preserve-3d;
+                        perspective: 1000px;
+                        width: 160px;
+                        height: 160px;
+                        transform: translateX(-50%) rotate(-5deg);
+                        z-index: 2;
+                    ">
+                        <div class="flipper" style="
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            transition: transform 0.6s;
+                            transform-style: preserve-3d;
+                        ">
+                            <div class="front" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #ffbfe1;
+                                border-radius: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            ">
+                                <p style="margin: 0; font-size: 1.1em;">10 days</p>
+                                <h4 style="margin: 0;">+$50k</h4>
+                            </div>
+                            <div class="back" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #ffbfe1;
+                                border-radius: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transform: rotateY(180deg);
+                            ">
+                                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank" style="text-decoration: none;">
+                                    <h4 style="margin: 0;">let's talk</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <img class="box-l" src="./images/Marketing.svg" />
-                    <div class="column">
-                        <h5>website</h5>
-                        <p>
-                            welcome<br />
-                            introduction<br />
-                            problem<br />
-                            solution<br />
-                            benchmarks<br />
-                            call to action <br />
-                        </p>
-                    </div>
-                </div>
-                <div class="box-s column gap-l align-start">
-                    <img class="box-l" src="./images/Web.svg" />
                     <div class="column">
                         <h5>marketing</h5>
                         <p>
+                            website<br />
                             social media templates<br />
                             presentation template<br />
                             business card<br />
                             t-shirt<br />
                             bag<br />
-                            posters
+                            posters <br />
+                            media library<br />
                         </p>
                     </div>
                 </div>
@@ -466,7 +610,7 @@
                             <img class="box-s" src="videos/yellow.gif" />
                         </div>
                         <p class="box-s accordion-text justify-end align-end padding-l">
-                            we kick things off with a mind-bending three-hour sprint.
+                            we kick things off with a mind-bending workshop.
                             we dig deep—why do you do what you do? who is your audience? why should anyone care?
                             it's like speed dating, but for your brand.
                         </p>
@@ -619,10 +763,11 @@
                     <h3>03</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change" style="
+                    <div style="
                 border-radius: 100%;
                 height: 160px;
                 width: 160px;
+                border: 1px solid black;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -660,10 +805,11 @@
                     <h3>05</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change" style="
+                    <div style="
                 border-radius: 100%;
                 height: 160px;
                 width: 160px;
+                border: 1px solid black;
                 display: flex;
                 align-items: center;
                 justify-content: center;
