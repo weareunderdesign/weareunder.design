@@ -106,7 +106,7 @@ function addSidebar() {
     }
   </style>
 
-<div style="display: flex; position: fixed; z-index: 998; mix-blend-mode: difference; justify-content: space-between; width: 100%;" class="padding-xl">
+<div style="display: flex; position: fixed; z-index: 998; mix-blend-mode: difference; justify-content: space-between; width: 100%; align-items: start;" class="padding-xl">
       <a href="https://weareunder.design/">
         <img src="https://weareunder.design/images/header/under.svg">
       </a>
