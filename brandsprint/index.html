@@ -359,13 +359,13 @@
         </div>
         <div class="page gap-l">
             <div class="row gap-m" style="flex-wrap: nowrap">
-                <div class="box column gap-l align-start">
+                <div class="box column gap-l align-start" style="position: relative;">
                     <img class="box-l" src="./images/BrandStrategy.svg" />
                     <div class="column">
-                        <h5>brand story</h5>
+                        <h5>brand strategy</h5>
                         <p>
-                            brand guidelines<br />
-                            brand story
+                            strategy guidelines<br />
+                            brand story<br />
                         </p>
                     </div>
                     <div class="flip-container" style="
@@ -373,6 +373,11 @@
                         height: 160px;
                         transform-style: preserve-3d;
                         perspective: 1000px;
+                        position: absolute;
+                        top: -40px;
+                        left: -60px;
+                        transform: rotate(-15deg);
+                        z-index: 10;
                     ">
                         <div class="flipper" style="
                             position: relative;
@@ -424,6 +429,8 @@
                             typography<br />
                             color<br />
                             layout<br />
+                            motion<br />
+                            interaction<br />
                         </p>
                     </div>
                 </div>
@@ -439,8 +446,7 @@
                             swag (t-shirt, bag, stickers, etc.)<br />
                             posters <br />
                             media library<br />
-                            motion<br />
-                            interaction<br />
+
                         </p>
                     </div>
                 </div>
@@ -481,7 +487,7 @@
     </div>
     <div class="padding-xl"></div>
     <div class="view column align-center gap-xl">
-        <div class="page column gap-xl" style="align-items: center">
+        <div class="page column" style="align-items: center">
             <div id="how" class="nudge_font text-center box-m">10-day plan</div>
             <h3 class="box-m text-center">
                 it's all about starting big, then getting more and more focused until you
