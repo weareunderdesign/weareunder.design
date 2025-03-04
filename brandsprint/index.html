@@ -359,14 +359,64 @@
         </div>
         <div class="page gap-l">
             <div class="row gap-m" style="flex-wrap: nowrap">
-                <div class="box column gap-l align-start">
+                <div class="box column gap-l align-start" style="position: relative;">
                     <img class="box-l" src="./images/BrandStrategy.svg" />
                     <div class="column">
-                        <h5>brand story</h5>
+                        <h5>brand strategy</h5>
                         <p>
-                            brand guidelines<br />
-                            brand story
+                            strategy guidelines<br />
+                            brand story<br />
                         </p>
+                    </div>
+                    <div class="flip-container" style="
+                        width: 160px;
+                        height: 160px;
+                        transform-style: preserve-3d;
+                        perspective: 1000px;
+                        position: absolute;
+                        top: -40px;
+                        left: -60px;
+                        transform: rotate(-15deg);
+                        z-index: 10;
+                    ">
+                        <div class="flipper" style="
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            transition: transform 0.6s;
+                            transform-style: preserve-3d;
+                        ">
+                            <div class="front" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #fdc800;
+                                border-radius: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            ">
+                                <h4 style="margin: 0;">$500</h4>
+                            </div>
+                            <div class="back" style="
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                background-color: #fdc800;
+                                border-radius: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                transform: rotateY(180deg);
+                            ">
+                                <a href="https://calendar.app.google/ADTpTx1CtDz7ZN9h6" target="_blank" style="text-decoration: none;">
+                                    <h4 style="margin: 0;">let's go!</h4>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="box column gap-l align-start">
@@ -393,16 +443,16 @@
                             social media templates<br />
                             presentation template<br />
                             business card<br />
-                            t-shirt<br />
-                            bag<br />
+                            swag (t-shirt, bag, stickers, etc.)<br />
                             posters <br />
                             media library<br />
+
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
     <div class="padding-xl"></div>
     <div class="infinite-wrapper">
@@ -437,7 +487,7 @@
     </div>
     <div class="padding-xl"></div>
     <div class="view column align-center gap-xl">
-        <div class="page column gap-xl" style="align-items: center">
+        <div class="page column" style="align-items: center">
             <div id="how" class="nudge_font text-center box-m">10-day plan</div>
             <h3 class="box-m text-center">
                 it's all about starting big, then getting more and more focused until you
@@ -566,7 +616,7 @@
                             we don't just hand over the work and disappear—we stay in your corner.
                             periodic check-ins to keep your brand sharp
                             workshops to refine, optimize, and expand
-                            creative support when you need it. 
+                            creative support when you need it.
                             a great brand isn't static. it's a living, breathing entity.
                             let's keep it strong, bold, and always ahead of the game.
                             need a tune-up? we're here.
@@ -610,11 +660,10 @@
                     <h3>03</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div style="
+                    <div class="random-color-change" style="
                 border-radius: 100%;
                 height: 160px;
                 width: 160px;
-                border: 1px solid black;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -652,11 +701,10 @@
                     <h3>05</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div style="
+                    <div class="random-color-change" style="
                 border-radius: 100%;
                 height: 160px;
                 width: 160px;
-                border: 1px solid black;
                 display: flex;
                 align-items: center;
                 justify-content: center;
