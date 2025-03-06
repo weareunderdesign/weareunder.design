@@ -3,6 +3,7 @@ function preloadImages() {
     "https://weareunder.design/work/chargeflow/00.png",
     "https://weareunder.design/work/aim/0.png",
     "https://weareunder.design/work/artac/0.png",
+    "https://weareunder.design/work/alterya/04.png",
     "https://weareunder.design/work/bounce/0.png",
     "https://weareunder.design/work/rnbw/0.png",
     "https://weareunder.design/work/spacetop/0.png",
@@ -182,6 +183,7 @@ function addSidebar() {
   <a href="https://weareunder.design/work/chargeflow/" class="sidebar-project-link" id="chargeflow-0B41FC">chargeflow</a>
   <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
   <a href="https://weareunder.design/work/artac/" class="sidebar-project-link" id="artac-808080">artac</a>
+  <a href="https://weareunder.design/work/alterya/" class="sidebar-project-link" id="alterya-000000">alterya</a>
   <a href="https://weareunder.design/work/iceberg/" class="sidebar-project-link" id="iceberg-EC7926">iceberg</a>
   <a href="https://weareunder.design/work/karma/" class="sidebar-project-link" id="karma-FCAC8B">karma</a>
   <a href="https://weareunder.design/work/larosh/" class="sidebar-project-link" id="larosh-C0815F">larosh</a>
@@ -228,6 +230,7 @@ function addSidebar() {
 <img src="https://weareunder.design/work/chargeflow/00.png" class="sidebar-project-image" id="chargeflow" loading="lazy"></img>
 <img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
 <img src="https://weareunder.design/work/artac/0.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
+<img src="https://weareunder.design/work/alterya/0.png" class="sidebar-project-image" id="alterya" loading="lazy"></img>
 <img src="https://weareunder.design/work/iceberg/0.png" class="sidebar-project-image" id="iceberg" loading="lazy"></img>
 <img src="https://weareunder.design/work/karma/0.png" class="sidebar-project-image" id="karma" loading="lazy"></img>
 <img src="https://weareunder.design/work/larosh/0.png" class="sidebar-project-image" id="larosh" loading="lazy"></img>
