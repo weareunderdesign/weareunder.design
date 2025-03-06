@@ -230,7 +230,7 @@ function addSidebar() {
 <img src="https://weareunder.design/work/chargeflow/00.png" class="sidebar-project-image" id="chargeflow" loading="lazy"></img>
 <img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
 <img src="https://weareunder.design/work/artac/0.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
-<img src="https://weareunder.design/work/alterya/0.png" class="sidebar-project-image" id="alterya" loading="lazy"></img>
+<img src="https://weareunder.design/work/alterya/04.png" class="sidebar-project-image" id="alterya" loading="lazy"></img>
 <img src="https://weareunder.design/work/iceberg/0.png" class="sidebar-project-image" id="iceberg" loading="lazy"></img>
 <img src="https://weareunder.design/work/karma/0.png" class="sidebar-project-image" id="karma" loading="lazy"></img>
 <img src="https://weareunder.design/work/larosh/0.png" class="sidebar-project-image" id="larosh" loading="lazy"></img>
