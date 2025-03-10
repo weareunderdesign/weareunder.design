@@ -16,61 +16,61 @@ const footerTemplate = `
       <a class="footer-logo" href="https://weareunder.design/">
         <svg-icon src="https://weareunder.design/images/outlinefooter.svg"></svg-icon>
       </a>
-      <h5 class="box">
+      <p class="box">
         under creates high-quality,<br>
         well-designed, creative brands <br>
         and products for creative people.
-      </h5>
+      </p>
 
-      <div class="column gap-xs">
+      <div class="column gap-s">
         <div class="row gap-xl">
           <div class="column gap-s">
 
             <a href="https://store.weareunder.design" target="_blank">
-              <h5>store</h5>
+              <span>store</span>
             </a>  
             <a href="https://github.com/weareunderdesign" target="_blank">
-              <h5>github</h5>
+              <span>github</span>
             </a>
             <a href="https://weareunder.design/legal">
-              <h5>terms</h5>
+              <span>terms</span>
             </a>
 
           </div>
         
-          <div class="column align-start gap-xs">
+          <div class="column align-start gap-s">
             <a href="https://x.com/underdesign_" target="_blank">
-              <h5>x</h5>
+              <span>x</span>
             </a>
 
             <a href="https://www.youtube.com/@weareunderdesign">
-              <h5>youtube</h5>
+              <span>youtube</span>
             </a>
             <a href="https://www.instagram.com/under.design/" target="_blank">
-              <h5>instagram</h5>
+              <span>instagram</span>
             </a>
           </div>
 
-           <div class="column align-start gap-xs">
+           <div class="column align-start gap-s">
             <a href="https://www.figma.com/design/UTvs6k6N1lAOLBerchdKFV/under?node-id=2563-581&t=hKaRJeX5Lp9zJkcQ-1">
-              <h5>press</h5>
+              <span>press</span>
             </a>
            <a href="mailto:hello@weareunder.design">
-              <h5>contact</h5>
+              <span>contact</span>
             </a>
             <a href="#" id="theme-toggle">
-              <h5 id="theme-name" class="opacity-l">system</h5>
+              <span id="theme-name" class="opacity-l">system</span>
             </a>
           </div>
         </div>
-         <h5 id="subscribeButton">newsletter</h5>
+         <span id="subscribeButton">newsletter</span>
    
-         <h5 style="display:none; flex-direction:row; align-items:center;" id="subscribeForm">
+         <div style="display:none; flex-direction:row; align-items:center;" id="subscribeForm">
           <input type="email" id="emailInput" placeholder="subscribe" style="outline:none; border:none; max-width:20.5ch; min-width:150px;">
           <span class="hidden" id="submit-newsletter">
             →
           </span>
-         </h5>
+         </div>
         </div>
       </div>
     </div> 
