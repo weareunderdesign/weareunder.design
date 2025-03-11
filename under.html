@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ūnder</title>
-    <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
+    <link rel="stylesheet" href="http://127.0.0.1:3006/src/index.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.3/marked.min.js"></script>
-</head>
-<body>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+</head>
+
+<body>
     <div class="row" style="flex-wrap: nowrap;">
         <div>
             <aside class="column justify-stretch sticky padding-l" style="display: inline-block;">
@@ -19,6 +22,7 @@
             <div class="page" id="markdown-content"></div>
         </div>
     </div>
+
     <under-footer></under-footer>
 </body>
 
@@ -27,15 +31,15 @@
         try {
             const response = await fetch('under.md');
             const markdownText = await response.text();
-            
+
             marked.setOptions({
                 headerIds: false,
                 mangle: false
             });
-    
+
             const renderer = new marked.Renderer();
-            
-            renderer.heading = function(text, level) {
+
+            renderer.heading = function (text, level) {
                 if (level === 3) {
                     return `<h${level}>${text}</h${level}>`;
                 }
@@ -47,49 +51,48 @@
                 }
                 return `<h${level}>${text}</h${level}>`;
             };
-    
-            renderer.paragraph = function(text) {
+
+            renderer.paragraph = function (text) {
                 return `<p>${text}</p>`;
             };
-    
+
             // Добавляем обработку таблиц
-            renderer.table = function(header, body) {
+            renderer.table = function (header, body) {
                 return `
-                    <table class="border radius-s">
+                    <table>
                         <thead>${header}</thead>
                         <tbody>${body}</tbody>
                     </table>
                 `;
             };
-    
-            renderer.tablerow = function(content) {
+
+            renderer.tablerow = function (content) {
                 return `<tr>${content}</tr>`;
             };
-    
-            renderer.tablecell = function(content, flags) {
+
+            renderer.tablecell = function (content, flags) {
                 const type = flags.header ? 'th' : 'td';
-                const classes = flags.header ? 'padding-m background-secondary' : 'padding-m';
-                return `<${type} class="${classes}">${content}</${type}>`;
+                return `<${type}>${content}</${type}>`;
             };
-    
+
             marked.setOptions({ renderer });
-    
+
             const htmlContent = marked(markdownText);
             document.getElementById('markdown-content').innerHTML = htmlContent;
-    
+
             // Create a new script element
             const tocScript = document.createElement('script');
             tocScript.src = 'https://rnbw.design/table-of-contents.js';
             document.body.appendChild(tocScript);
-    
+
         } catch (error) {
             console.error('Error loading markdown:', error);
         }
     }
-    
+
     document.addEventListener('DOMContentLoaded', loadMarkdownContent);
-    </script>
+</script>
 
 <script src="/js/footer.js"></script>
-<script src="/js/navigation.js"></script>
+
 </html>
