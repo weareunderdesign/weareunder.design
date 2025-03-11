@@ -1,83 +1,81 @@
-# under
+# ūnder
 
 welcome to the wild ride that is under, born in the sunny streets of atlit, israel.  
 this handbook is your ticket to understanding our world.
 
-### genesis
+### start
 
 under is a creative movement. founded in 2017 by the dynamic duo eden vidal and inbal lapidot vidal, we're all about empowering creatives.  
-eden started his journey as a designer engineer, with a passion for connecting the worlds of creativity and technology.  
-inbal began as a brand designer, aiming to create remarkable brand identities, studying the edges of design and art.  
-over the years, they moved between design studios, several startups, and large companies, launched a few ventures, and accumulated quite a few successes and injuries along the way.  
-in 2017, they founded under. over time, their vision crystallized \- to create tools that empower the creativity of humans. they call it meta-creativity, but essentially it simply means that they want to help humans, (especially those who like to call themselves designers) create amazing things.  
-we're know for our "brandsprint" \- a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
+eden started his journey as a designer engineer, connecting the worlds of creativity and technology.  
+inbal began as a brand designer, creating remarkable brand identities and studying the edges of design and art.  
+over the years, they moved between design studios, startups, and companies, launching ventures and gathering experience along the way.  
+in 2017, they founded under. their vision crystallized - to create tools that empower the creativity of humans. they call it meta-creativity, helping humans (especially designers) create amazing things.  
+we're know for our "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
 
 ### being
 
-at under, we believe humanity is evolving into a truly interdisciplinary species. we seamlessly integrate and mix design practices through sound, motion, visual design, interaction, and other unexpected fields. by breaking down creative barriers, we can finally craft holistic solutions that engage all senses, pushing the boundaries of innovation to deliver impactful experiences that resonate across all storytelling mediums.  
-we believe that the future of digital creation is a place where technology doesn't separate us from our creation but connects us to it more deeply. technology is going to sort of "disappear". and there's an opportunity here to reconnect the creator with their creation, removing the barrier between idea and execution, between intention and result.  
-this isn't new territory for us. we've been crafting our own tools since day one, engaging in a perpetual dance of creation and optimization. our journey has always been about developing tools and methodologies that strip away barriers from the creative process itself.  
-this approach of building tools for ourselves first is at the core of our philosophy. we create tools that solve our own problems, scratching our own itch. by doing so, we ensure that our products are not just theoretical solutions, but practical tools born out of real needs and experiences.  
+at under, we believe humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond. by breaking barriers, we craft holistic solutions that engage all senses and resonate across mediums.  
+we see a future where technology connects us more deeply to creation rather than separating us from it. as technology "disappears", we can reconnect creators with their work, removing barriers between idea and execution.  
+this isn't new for us. since day one, we've crafted tools and optimized our creative process. our journey focuses on developing methodologies that eliminate barriers to creation.  
+building tools for ourselves first is core to our philosophy. we solve our own problems first, ensuring our products are practical solutions born from real experience.  
 building for ourselves allows us to:
 
-* deeply understand the problem we're solving  
-* create more intuitive and user-friendly solutions  
-* iterate quickly based on our own usage and feedback  
-* maintain a clear vision and purpose for each product
+* understand problems deeply  
+* create intuitive solutions  
+* iterate quickly  
+* maintain clear vision
 
-this self-focused approach doesn't mean we ignore our users. rather, it ensures that our initial product is solid, tested, and truly valuable before we expand to meet wider market needs. it's about creating a strong foundation upon which we can build and grow.  
-in rnbw, for example, we blur the line between design and code. because ultimately, there is no real boundary. there is only creation.  
-we believe that today's technological tools allow us to blur the boundaries between the creator and the medium. when playing the piano or driving a car, you don't think about the piano \- the person and the piano become one entity. this is exactly what we want and can achieve with our digital tools.  
-our latest exciting project, handy, embodies this vision. we aim to use current and future technology to directly connect our hands to our design and development tools. think about it this way: when a sculptor sculpts in stone, he feels the material, he is directly connected to it. there is no separation between his idea and the creation itself. this is exactly what we want to achieve in the digital world.  
-with handy, we aim to create a situation where craft will truly be craft. there will be no difference between creating a physical thing and a virtual thing, it will essentially be the same thing. you can touch, feel, create in the digital world as if you were creating in real material.  
-during this journey, we developed a philosophy that guides us in everything we do. we call it the "holy trinity":
+our self-focused approach ensures solid, tested products before expanding to wider markets, building strong foundations for growth.  
+in rnbw, we eliminate the boundary between design and code, recognizing them as one creative act.  
+modern tools can merge creator and medium - like a pianist becoming one with their instrument, we enable this unity in digital creation.  
+our project handy exemplifies this, connecting hands directly to design tools. just as sculptors feel their material, we want creators to have that same tactile connection in the digital realm.  
+with handy, physical and virtual creation become indistinguishable - you'll touch, feel and craft digital work as naturally as physical materials.  
+this journey led us to our guiding philosophy, the "holy trinity":
 
-#### simplicity
+#### simple & complex
 
-we're allergic to complexity. whether you're a design newbie or a seasoned pro, our stuff is so intuitive, you'll wonder why you ever struggled before. have fun instantly. like a good musical instrument, our tools need to be intuitive. you pick up a guitar, feel the strings, and start playing. that's how we want using our tools to feel.
+we embrace both simplicity and complexity. our tools welcome beginners with intuitive basics - like picking up a guitar for the first time - while offering depths for masters to explore. simple to start, rich with potential, they grow alongside you.
 
-#### complexity
+our tools adapt and grow with you, like musical instruments. whether beginner or master, they flex to your needs - me, you, or santana, the guitar remains the same guitar.
 
-our products are like musical instruments \- they bend and stretch to fit your needs. start small, dream big, and watch our tools grow with you. a good tool adapts itself to the creator, not the other way around. it grows with you, changes with you. it allows you to start as a beginner and become a virtuoso. me, you, or santana, the guitar is the same guitar.
+- adaptive mastery: like water, we shape our tools to be simple to start yet infinitely deep
+- continuous growth: the path of mastery has no end, our tools grow with you
+- meta-creativity: we shape not just work, but the very way we create
 
-#### openness
+#### open
 
-we're as transparent as a freshly cleaned window. most of our stuff is open source and we believe in sharing knowledge. it's not just about open source, it's about an open approach to knowledge, ideas, collaboration. creation, and the creation of creation, is an ongoing dialogue.
+we believe in radical transparency. our open source approach extends beyond code to knowledge sharing and collaborative creation. we see creativity as an ongoing dialogue.
 
-in summary, we believe in...
-
-1. real-world impact \- creation without purpose is a tree without roots. let your work solve real problems and nourish real needs.  
-2. joyful engagement \- in the garden of creativity, joy is the sunlight. cultivate play, nurture wonder, and watch your ideas bloom.  
-3. continuous growth \- the path of mastery has no end. each step, each stumble, is a lesson. embrace the journey of eternal becoming.  
-4. community synergy \- a single bamboo does not make a forest. grow together, support each other, and create a canopy of shared wisdom.  
-5. tool transcendence \- the brush does not limit the painter. become one with your tools, then move beyond them.  
-6. holistic creation \- mind, body, and spirit are not separate streams, but one river. let your creations flow from your whole being.  
-7. open exchange \- ideas are seeds that multiply when shared. plant them freely, nurture them collectively, and harvest abundance for all.  
-8. adaptive mastery \- be like water, shaping yourself to any vessel. true expertise flows and adapts, never stagnant, always fresh.  
-9. purposeful play \- work and play are two sides of the same leaf. find joy in purpose, purpose in joy, and watch your creations flourish.  
-10. meta-creativity \- the greatest art is the art of creating. shape not just your work, but the very way you create.
+- open exchange: ideas multiply when shared freely
+- community synergy: we grow stronger together, supporting each other
+- joyful engagement: creativity thrives in an environment of play and wonder
 
 ## doing
 
-#### liberating
+at under, we're not just dreamers - we're doers. our work spans across multiple dimensions of creativity, from brand strategy to tool development. we create tools and methodologies that empower creators, build systems that evolve with their users, and foster a community of innovation and collaboration. here's what keeps us busy.
 
-at under, we're unlocking the full spectrum of human creativity. we've seen the spark in your eyes when inspiration hits, and the frustration when traditional tools can't capture your vision \- whether it's a visual masterpiece, a symphonic opus, or an interactive experience. that's why we're crafting "liberation" for all creators.  
-our tools are the bridge between your imagination and reality, seamlessly blending visuals, sound, motion, and code. with ai as your collaborator and your own body as the interface, we're redefining creative expression and problem solving across all mediums.  
-you know the feeling when you create something, but don't share it with anyone. time passes, you get no feedback or motivation, and it turns into a cycle of regret and guilt.
+- holistic creation: unifying mind, body and spirit in the creative process
+- purposeful impact: solving real problems and meeting real needs
+- tool transcendence: becoming one with our tools to transcend their limitations
 
-#### educating
 
-at under, we believe that education is the cornerstone of innovation and creativity. we're committed to fostering a culture of continuous learning and growth, not just within our team, but across the entire creative community. our approach to education is multifaceted, designed to empower creators at every stage of their journey.  
-showcase real-world usage: highlight how people (or we) are using our products in creative ways (or embrace the "fake it till you make it" mentality: even if we're still growing, show the potential of our products)
+#### free
 
-#### designing in public
+at under, we're unlocking human creativity by bridging the gap between inspiration and execution. we understand the frustration when tools limit your vision, whether visual, musical, or interactive. our tools seamlessly blend all creative mediums, using ai and natural interfaces to redefine expression.  
 
-building in public means openly sharing our development process, progress, and challenges with our community. through regular updates and milestone celebrations, we engage feedback and build transparency.  
-we craft narratives around our products and brand that reflect our essence. we're designing in public, not just building.  
-by incorporating user feedback into our development and marketing, we generate interest throughout the product lifecycle.  
-this open approach is core to under's values, ensuring our design process remains accessible and collaborative within the open-source community.
+#### teach
 
-## products/services
+education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our products, demonstrating their creative potential even as we grow.
+
+#### design
+
+we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout the product lifecycle, we maintain transparency and collaboration at the core of our open-source design process.
+we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. we're here to change that.
+
+"you're successful as soon as you send your work out into the world."
+rick rubin via twitter (2023)
+
+## products
 
 our products are the embodiment of our vision and philosophy. each one is crafted with care, designed to empower creators and push the boundaries of what's possible in the digital realm. from our flagship brand sprint process to our cutting-edge tools like rnbw and handy, we're constantly innovating to meet the evolving needs of the creative community.
 
@@ -90,20 +88,20 @@ our products are the embodiment of our vision and philosophy. each one is crafte
 
 ## who?
 
-by addressing the specific pain points of creative professionals (simple, complex, open), under is cultivating a community of users who feel understood and supported. this approach allows under to build solutions that resonate deeply with its users, turning their frustration into enthusiasm and loyalty.  
-moreover, frustrated creatives are often vocal about their experiences, both good and bad. when under successfully alleviates their pain points, they become the most fervent champions, eagerly spreading the word about under's products. this word-of-mouth marketing is invaluable, as it comes from a place of genuine relief and excitement.
+by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite and empower our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
 
 | users | pain points / needs |
 | :---- | :---- |
-| designers | ·ui/ux designers: frustrated with design-development gap |
-| ·brand designers: tired of inefficient branding processes |  |
-| solopreneurs, entrepreneurs  | ·overwhelmed by multiple services and tools·frustrated by high costs and steep learning curves·seeking scalable all-in-one solutions |
-| ·product designers: seeking intuitive, hands-on creation tools |  |
-| ·creative coders: yearning for tactile, expressive coding |  |
-| creative directors, vps, etc. | ·seeking efficient brand strategy execution·frustrated by design-development miscommunication·wanting to push digital creativity boundaries |
-| students and educators | ·dissatisfied with academic-industry practice gap·seeking affordable professional-grade tools·eager for cutting-edge tech experience |
+| designers | frustrated with design-development gap, inefficient branding processes, seeking better collaboration tools |
+| developers | struggling with design handoff, wanting more creative coding experiences, seeking better designer collaboration |
+| entrepreneurs & founders | overwhelmed by tool fragmentation, need affordable all-in-one solutions, want scalable processes |
+| creative directors & leaders | seeking efficient brand execution, frustrated by team miscommunication, wanting to innovate |
+| students & educators | facing industry-academia gap, need affordable pro tools, want cutting-edge experience |
+| freelancers & agencies | juggling multiple tools, need streamlined workflows, seeking competitive advantage |
+| product teams | wanting better prototyping tools, need seamless handoff, seeking unified design systems |
+| digital artists | seeking expressive tools, want to blend code and design, need intuitive interfaces |
 
-# communicating
+# talk
 
 * crafting and maintaining under's unique voice across all platforms  
 * developing compelling narratives around our products (rnbw, handy, brand sprint)  
@@ -123,7 +121,7 @@ we approach content in two ways:
 both strategies work together to tell our story and engage our community effectively.  
 the garyvee model: document → create → distribute → listen → create → distribute
 
-#### content routines
+#### routines
 
 * newsletter: weekly updates sent to our community, sharing insights, updates, and stories
 * social media: daily posts across our channels to maintain engagement and share our journey
@@ -141,71 +139,67 @@ the garyvee model: document → create → distribute → listen → create → 
 | behance | behance.net/weareunder |
 | product hunt | [https://www.producthunt.com/products/rnbw-dev](https://www.producthunt.com/products/rnbw-dev) |
 
-### talk the talk
+### voice
 
 at under, our tone of voice and writing style is like that friend who always knows what to say.
 
-* approachable af: we talk like real humans, not robots or boring corporate drones.  
-* authentic to the core: we're genuine, passionate, and not afraid to show it.  
-* inspiring as heck: we light fires under feet and spark imaginations.  
-* share the real stuff from your life. the messier, the better.  
-* write like you're chatting with friends. be real, be helpful, be chill.  
-* live life, then write about it. stories from experience resonate more than made-up scenarios.  
-* emotion is your superpower. make people feel something, seriously\!  
-* be positive \- always use positive words or phrases. say what something is, not what it isn't. example: instead of "under isn't just a company \- it's a movement", try "under is a…"  
-* share, don't sell. we're about experiences, not transactions.  
-* keep it simple. short sentences pack a punch.  
-* channel your inner hemingway. if it's complicated, it's probably not ready.  
-* rewrite until a 5th grader gets it. your readers will thank you.  
-* less is more. make it skimmable. people are busy (including us).  
-* commas and periods are your besties. forget the rest.  
-* write everything in lowercase. it's our jam. it's approachable and distinctive.  
-* keep it visual. let the images and designs speak for themselves.  
-* embrace minimalism in stories. clean, tight visuals make a stronger impact than cluttered designs.  
-* quality over quantity. fewer, more impactful visuals trump numerous mediocre posts.  
-* share others' stories authentically. repost and amplify without adding our own text or elements.  
-* think like a visionary. channel the mindset of innovators like neri oxman \- bold, clean, and forward-thinking.  
-* be unpredictable. predictable writing fades into the background.  
-* headlines are your invitation. make 'em intriguing, make 'em curious.  
-* start with a bang. grab attention from word one.  
-* sprinkle powerful words throughout your stories.  
-* structure is key. use sub-headlines, keep paragraphs short, make it flow.  
-* speak from experience, not from a pedestal. we're all learners here.  
-* suggest, don't command. inspiration comes from possibility, not authority.
+* approachable: talk like real humans - builds trust and connection with readers
+* authentic: be genuine and passionate - people can spot fake from miles away
+* inspiring: spark imagination - motivation drives action and engagement
+* share real stories: personal experiences resonate - authenticity creates impact
+* write conversationally: friendly tone helps information stick
+* show emotion: feelings create memorable content - facts tell, emotions sell
+* stay positive: focus on possibilities - negativity pushes readers away
+* experience over sales: build relationships first - sales follow naturally
+* keep it simple: short sentences win - complexity loses readers
+* write clearly: if a kid can't understand it, simplify - clarity is king
+* make it skimmable: busy readers need quick value - structure matters
+* minimal punctuation: periods and commas only - keeps flow natural
+* use lowercase: our signature style - stands out while staying approachable
+* strong visuals: images communicate faster than words
+* quality focus: fewer, better posts beat quantity - respect attention spans
+* share authentically: amplify others without editing - builds community
+* be bold: innovation needs courage - mediocrity is forgettable
+* compelling headlines: intrigue readers from the start
+* strong openings: hook attention immediately - first impressions count
+* powerful words: choose language that moves people
+* clear structure: organized thoughts are easier to follow
+* peer voice: teach through sharing - nobody likes being lectured
+* suggest don't command: inspiration beats instruction - trust readers' judgment
 
 # culture
 
 where creativity thrives and innovation flourishes...  
 at under, we've cultivated an environment that seamlessly blends the excitement of a startup with the focus of a creative powerhouse. our workspace is a dynamic fusion of productivity and playfulness, where groundbreaking ideas are born and nurtured.
 
-* we embrace the chaos of remote work \- our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.  
-* four-day sprint madness \- we work monday to thursday, 9am-6pm. but hey, if inspiration strikes at 3am on a tuesday, who are we to judge? do your best work when you're at your best.  
+* we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.  
+* four-day sprint madness - we work monday to thursday, 9am-6pm. but hey, if inspiration strikes at 3am on a tuesday, who are we to judge? do your best work when you're at your best.  
 * communicate and stay active, ask questions, share your crazy ideas. we're all ears (and eyes, in this case).  
-* feedback: give it, take it, love it \- we thrive on feedback like plants thrive on sunlight. be open, be honest, be kind. remember: iteration is the mother of innovation (or something like that).  
-* stay inspired, stay weird \- take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
+* feedback: give it, take it, love it - we thrive on feedback like plants thrive on sunlight. be open, be honest, be kind. remember: iteration is the mother of innovation (or something like that).  
+* stay inspired, stay weird - take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
 
-# make. tell. sell. bell. scale
+# launch by lunch
 
 a foolproof, fast-track go-to-market checklist for launching products and services.  
 launching a product is like throwing the party of the century – you need the right mix of hype, substance, and a dash of insanity.  
-we follow a "make. tell. sell. bell. scale" method \- means we don't sell what we can't make. we don't produce what we can't sell.  
+we follow a "make. tell. sell. bell. scale" method - means we don't sell what we can't make. we don't produce what we can't sell.  
 every product starts with a prototype—designed, tested, and validated. only after sales cover design costs do we scale. no waste. no guesswork. just smart, strategic launches.
 
 here's our recipe:
 
-### 1\. make (v0)
+### 1\. make
 
 innovate → design something impossible to ignore. if it's not bold, it's not worth making.  
 break it down → prototype, refine, and define every spec before selling.  
 lead the conversation → publish unique insights, trends, and future predictions.
 
-### 2\. tell (v0.1)
+### 2\. tell
 
 craft the narrative → part manifesto, part magic—make people believe.  
 compelling messaging, and storytelling that sticks.  
 visuals that pop → stand out. make it so eye-catching, people can't look away. strong visuals. 
 
-### 3\. sell (fomo)
+### 3\. sell
 
 fomo effect → build anticipation → tease, intrigue, and excite before launch. create exclusivity—make it look like everyone wants in.  
 exclusive access initiatives → offer beta programs or invite-only opportunities.  
@@ -215,7 +209,7 @@ mutual wins → communicate why partnering with under design is a no-brainer.
 social dominance → show up on every relevant platform, engage, and spark conversations.  
 guest appearances → feature on industry podcasts, panels, and blogs.
 
-### 4\. bell (v1)
+### 4\. bell
 
 make noise → whether online or irl, turn it into an event.  
 press release magic → craft announcements so irresistible, journalists can't ignore.  
@@ -238,240 +232,196 @@ result: under design becomes a must-collaborate brand. always in front of the ri
 
 # frmwrk
 
-frmwrk is a… well, framework (\!) designed to deliver outstanding products and services through a smart, efficient, and transparent approach. we integrate automation, clear objectives, and optimized workflows while ensuring simplicity and rapid results.
+our framework for delivering exceptional products through three core principles:
+* smart automation - let tools do the heavy lifting
+* clear goals - know exactly where we're heading
+* rapid results - ship fast, learn faster
 
-## sprint → milestone
+## principles
 
-* milestone must be achievable within 1-3 weeks  
-* milestones move the project forward – not small tasks  
-* large projects are divided into multiple sprints with breaks  
-* focus on outcomes, not time spent.  
-* own your milestone: assign yourself, manage issues, ensure completion  
-* "instead of getting stuck creating more tasks, focus on moving the milestone forward"  
-* define the milestone, estimate cost (+25-50% buffer if needed)  
-* if a task creates another, it's either part of the milestone or a new milestone
+* focused 1-3 week sprints with clear deliverables
+* value outcomes over hours
+* own your milestones: assign, manage, complete
+* estimate cost (+25-50% buffer)
+* break large projects into manageable sprints
+* move forward, not sideways
 
-## daily wrkflw
+## workflow
 
-set up and update daily:
+track in figma 📌:
+* 🟢 to-do - ready to tackle
+* 🟡 in progress - crushing it now
+* 🔴 blocked - need help
+* ✅ done - shipped it
 
-1. create a frame in figma called "📌 tasks" (place it somewhere visible)  
-2. inside, outline:  
-   * 🟢 to-do → tasks (design \+ ops)  
-   * 🟡 in progress → actively worked-on tasks  
-   * 🔴 blocked / waiting → approval/info needed  
-   * ✅ done → completed tasks  
-3. each task is either…  
-   * design-related? → link to a figma frame/comment  
-   * ops task? → add a note or google doc link
+comments = action items:
+* tagged = your responsibility
+* open = to-do, resolved = done
+* review first, understand, then act
+* resolve immediately when complete
+* new topic = new comment
 
-✅ why this works:
+## tools
 
-* keeps design & ops tasks inside figma without clutter  
-* centralized, clear task tracking  
-* no scattered comments that get lost
+* design → figma
+* planning → calendar
+* tasks → github
+* communication → whatsapp, email
+* files → google drive
+* payments → payoneer, upwork
 
-### figma comments \= tasks
+## talent
 
-* tagged in an open comment? it's your responsibility.  
-* open \= to-do | resolved \= done  
-* goal: clear all comments to keep projects moving.
+we believe in:
+* sprint-based collaboration (1-3 weeks)
+* value-based pricing, not hourly
+* clear deliverables and fixed timelines
+* measurable results and accountability
 
-### how to work with comments
+selection criteria:
+* fixed pricing
+* remote-ready
+* proven expertise
+* milestone-based payments
+* ip protection
+* clear terms
 
-1. before starting  
-   * review all comments in your area.  
-   * understand what needs to be done before acting.  
-2. making a change  
-   * complete the task.  
-   * resolve the comment immediately.  
-   * if more discussion is needed, open a new comment in the new context.  
-3. no backtracking  
-   * once resolved, don't reopen unless it's a continuous discussion.  
-   * keep the history clean to avoid confusion.  
-4. own your work  
-   * open comments \= unfinished tasks.  
-   * take responsibility—closing comments ensures progress.
+## quality metrics
 
-bottom line: comments are tasks. handle them efficiently, resolve quickly, and keep moving forward.
+* technical excellence & brand alignment
+* response time & communication clarity
+* documentation quality
+* deadline adherence
+* stakeholder engagement
 
-## infrastructure & tools
+## sprint rhythm
 
-task tracking & workflow automation → figma, github, calendar  
-decentralized messaging → whatsapp, email, figma, github  
-distributed storage & version control → google drive  
-multi-currency payment processing → payoneer, upwork
+1. scope → validate vision and plan
+2. build → execute with daily progress checks
+3. ship → assess deliverables and verify satisfaction
 
-## pricing model: value-based over hourly
+remember: move fast, stay focused, deliver excellence.
 
-we hire for the job, not forever.  
-work takes one week, maybe three—no full-time ties.  
-you match our speed, we roll together.  
-slow down, we swap you out, keep moving.
-
-* clear objectives → "hourly asks 'how long?', value-based asks 'how well?'"  
-* cost control → "hourly fluctuates, value-based locks it down"  
-* quality over quantity → "hourly fills time, value-based fulfills objectives"  
-* reward for expertise → "hourly pays for presence, value-based rewards skill"  
-* motivation to excel → "hourly maintains pace, value-based accelerates impact"  
-* career growth → "hourly limits, value-based leverages it"
-
-every project includes:
-
-* clear deliverables, roi expectations, and success metrics  
-* a specific timeline (max 3 weeks)  
-* a resource allocation plan  
-* a results-oriented mindset
-
-### selection criteria for team & projects
-
-* fixed pricing preference  
-* remote work capability  
-* relevant experience  
-* milestone-based payments  
-* ip rights protection  
-* cancellation terms  
-* milestone-based performance metrics
-
-## project evaluation criteria
-
-quality \-\> technical excellence, brand alignment, client satisfaction  
-availability \-\> response time, meeting attendance, timezone coverage  
-communication \-\> update frequency, documentation quality, stakeholder engagement  
-deadlines \-\> deadline compliance, sprint completion rate, milestone accuracy
-
-## sprint phases
-
-1. pre-sprint → scope validation  
-2. mid-sprint → progress review  
-3. end-sprint → deliverable assessment & satisfaction verification
-
-# being-doing-rhythm
+# rhythm
 
 weekly:  
 mon to thu: doing  
-fri \- saturday: being  
+fri - saturday: being  
 sunday: reflecting
 
 monthly:  
 3 weeks: doing  
 1 week: being, reflecting
 
-doing (monday \- thursday) \- creating, building, executing, learning, growing, sharing, celebrating, experimenting, collaborating, planning, achieving, moving forward, making progress, taking action, solving problems  
-\- morning ritual: 15-min intention setting  
-\- 90-min deep work blocks with 15-min breaks  
-\- end-of-day review: 10-min accomplishment log
+doing (monday - thursday) - creating, building, executing, learning, growing, sharing, celebrating, experimenting, collaborating, planning, achieving, moving forward, making progress, taking action, solving problems  
+- morning ritual: 15-min intention setting  
+- 90-min deep work blocks with 15-min breaks  
+- end-of-day review: 10-min accomplishment log
 
-being (friday \- saturday) \- resting, reflecting, exploring, existing without pressure, enjoying, appreciating, connecting, relaxing, rejuvenating  
-\- no scheduled obligations  
-\- nature connection time  
-\- creative exploration without goals  
-\- social connection and rest
+being (friday - saturday) - resting, reflecting, exploring, existing without pressure, enjoying, appreciating, connecting, relaxing, rejuvenating  
+- no scheduled obligations  
+- nature connection time  
+- creative exploration without goals  
+- social connection and rest
 
 reflection (sunday)  
-\- morning: review week's progress  
-\- midday: adjust next week's priorities  
-\- afternoon: document learnings and insights
+- morning: review week's progress  
+- midday: adjust next week's priorities  
+- afternoon: document learnings and insights
 
-monthly rhythm  
+## monthly rhythm  
 doing weeks (weeks 1-3)  
-\- week 1: vision and planning focus  
-\- week 2: deep execution  
-\- week 3: refinement and completion
+- week 1: vision and planning focus  
+- week 2: deep execution  
+- week 3: refinement and completion
 
 being and reflecting week (week 4\)  
-\- life admin and organization  
-\- skill exploration and learning  
-\- social connections and community  
-\- creative exploration and play  
-\- mindfulness and meditation  
-\- nature immersion  
-\- community contribution  
-\- extended rest and recovery
+- life admin and organization  
+- skill exploration and learning  
+- social connections and community  
+- creative exploration and play  
+- mindfulness and meditation  
+- nature immersion  
+- community contribution  
+- extended rest and recovery
 
-seasonal flow:  
-spring (mar \- may): fresh starts, planting seeds, building momentum  
-summer (jun \- aug): deep work, expansion, peak energy  
-fall (sep \- nov): harvesting, refining, adjusting, transitioning  
-winter (dec \- feb): slowing down, reflecting, resting, visioning  
+## seasonal flow
+spring (mar - may): fresh starts, planting seeds, building momentum  
+theme: emergence  
+- project initiation  
+- skill development  
+- network building  
+- energy building practices
+
+summer (jun - aug): deep work, expansion, peak energy
+theme: peak expression  
+- major project execution  
+- public sharing and visibility  
+- high-energy collaboration  
+- outdoor activities
+
+fall (sep - nov): harvesting, refining, adjusting, transitioning
+theme: integration  
+- project completion  
+- knowledge documentation  
+- relationship deepening  
+- gratitude practices
+
+winter (dec - feb): slowing down, reflecting, resting, visioning
+theme: restoration  
+- vision boarding  
+- deep rest  
+- inner work  
+- minimal commitments
+
 balance between doing and being keeps energy sustainable and creativity alive. 
 
-yearly rhythm  
+## yearly  
 doing phase (january-september)  
-\- q1 (jan-mar): foundation setting  
-\- q2 (apr-jun): growth and expansion  
-\- q3 (jul-sep): peak execution
+- q1 (jan-mar): foundation setting  
+- q2 (apr-jun): growth and expansion  
+- q3 (jul-sep): peak execution
 
 being phase (october-december)  
-\- october: harvest and celebration  
-\- november: integration and reflection  
-\- december: vision and renewal
+- october: harvest and celebration  
+- november: integration and reflection  
+- december: vision and renewal
 
-seasonal alignment
+## transitions
 
-spring (march \- may)  
-theme: emergence  
-\- project initiation  
-\- skill development  
-\- network building  
-\- energy building practices
-
-summer (june \- august)  
-theme: peak expression  
-\- major project execution  
-\- public sharing and visibility  
-\- high-energy collaboration  
-\- outdoor activities
-
-fall (september \- november)  
-theme: integration  
-\- project completion  
-\- knowledge documentation  
-\- relationship deepening  
-\- gratitude practices
-
-winter (december \- february)  
-theme: restoration  
-\- vision boarding  
-\- deep rest  
-\- inner work  
-\- minimal commitments
-
-transition rituals
-
-doing to being  
+do→be  
 1 complete open loops  
 2 brain dump remaining tasks  
 3 physical environment reset  
 4 digital detox initiation  
 5 transition activity (walk, meditation, etc)
 
-being to doing  
+be→do  
 1 gentle planning session  
 2 environment preparation  
 3 priority setting  
 4 energy check-in  
 5 intention setting
 
-flexibility mechanisms
+## fallbacks
 
-unexpected work during being time  
+work in be-time  
 1 assess true urgency  
 2 time-box the intervention  
 3 schedule compensation time  
 4 document the exception  
 5 adjust systems if pattern emerges
 
-energy misalignment  
+energy issues  
 1 check physical needs (sleep, nutrition, movement)  
 2 adjust work intensity  
 3 shift task types to match energy  
 4 take micro-breaks  
 5 consider schedule adjustment
 
-tracking templates
+## tracking
 
-daily check-in  
+daily  
 date:   
 mode: \[doing/being\]  
 energy level (1-10):   
@@ -479,7 +429,7 @@ main focus:
 support needed:   
 success looks like: 
 
-weekly review  
+weekly  
 week of:   
 accomplishments:  
 learnings:  
@@ -487,7 +437,7 @@ energy patterns:
 adjustments needed:  
 next week's focus:
 
-monthly integration  
+monthly  
 month:   
 theme:   
 key milestones:  
@@ -495,21 +445,21 @@ pattern recognition:
 system improvements:  
 next month's intentions:
 
-success metrics
+## success metrics
 
-quantitative  
-\- deep work hours  
-\- rest quality (sleep metrics)  
-\- project completion rate  
-\- recovery time ratio
+quant  
+- deep work hours  
+- rest quality (sleep metrics)  
+- project completion rate  
+- recovery time ratio
 
-qualitative  
-\- energy sustainability  
-\- creative output quality  
-\- relationship depth  
-\- personal growth sense
+qual  
+- energy sustainability  
+- creative output quality  
+- relationship depth  
+- personal growth sense
 
-implementation guidelines
+## implementation
 
 1 start with weekly rhythm  
 2 add monthly layer after 4 weeks  
@@ -517,23 +467,23 @@ implementation guidelines
 4 build yearly rhythm understanding  
 5 regular system review and adjustment
 
-emergency protocols
+## emergency
 
-energy crashes  
+energy crash  
 1 immediate rest period  
 2 basic needs audit  
 3 support system activation  
 4 schedule adjustment  
 5 recovery plan creation
 
-deadline conflicts  
+deadline issues  
 1 priority assessment  
 2 resource reallocation  
 3 support request  
 4 timeline negotiation  
 5 recovery scheduling
 
-balance principles
+## balance
 
 1 energy over time  
 2 quality over quantity  
