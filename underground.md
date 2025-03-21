@@ -1,4 +1,4 @@
-# ūnder
+# ūnderground
 
 welcome to the wild ride that is under, born in the sunny streets of atlit, israel.  
 this handbook is your ticket to understanding our world.
