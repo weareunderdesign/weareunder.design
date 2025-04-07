@@ -201,11 +201,12 @@ customElements.define("under-footer", underFooter);
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", handleSystemThemeChange);
 
 const currentYear = new Date().getFullYear();
-try {
-  document.getElementById("year").innerHTML += currentYear;
-} catch (error) {
-  console.error('Error in setting year:', error);
-}
+document.addEventListener('DOMContentLoaded', function () {
+  const yearElement = document.getElementById("year");
+  if (yearElement) {
+    yearElement.textContent = currentYear;
+  }
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   const themeName = document.querySelector("#theme-name");
