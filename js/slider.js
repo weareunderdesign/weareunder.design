@@ -3,28 +3,42 @@ function addSlider() {
         const sidebar = document.getElementById('sidebar-work');
         if (!sidebar) return [];
 
+        // Get all project images from the DOM to extract their actual paths
+        const projectImages = document.querySelectorAll('.sidebar-project-image');
+        const imagePathMap = {};
+        
+        // Create a map of project IDs to their actual image paths
+        projectImages.forEach(img => {
+            if (img.id && img.src) {
+                // Extract the image number from the src URL
+                const match = img.src.match(/\/([^\/]+)\/([^\/]+)\.(png|svg)$/);
+                if (match && match[1] && match[2]) {
+                    imagePathMap[match[1]] = {
+                        number: match[2],
+                        ext: match[3]
+                    };
+                }
+            }
+        });
+
         return Array.from(sidebar.querySelectorAll('a.sidebar-project-link')).map(link => {
             const id = link.id.split('-')[0];
-            // Special cases for image paths
-            let imageNumber = '0';
-            if (id === 'chargeflow') imageNumber = '00';
-            if (id === 'justripe') imageNumber = '09';
-            if (id === 'soli') imageNumber = '19';
-            if (id === 'visioncamp') imageNumber = '6';
-            if (id === 'rnbw') imageNumber = '1';
-
-            const ext = (id === 'mesh_payments' || id === 'zigi') ? 'svg' : 'png';
+            
+            // Use the actual image path from our map, or fall back to defaults
+            const imageInfo = imagePathMap[id] || { number: '0', ext: 'png' };
             
             return {
                 id,
                 href: link.href,
                 name: link.textContent,
-                imageUrl: `https://weareunder.design/work/${id}/${imageNumber}.${ext}`
+                imageUrl: `https://weareunder.design/work/${id}/${imageInfo.number}.${imageInfo.ext}`
             };
         });
     }
 
     function generateSlidesHTML(projects) {
+        if (!projects || projects.length === 0) return '';
+        
         const clonedProjects = [
             projects[projects.length - 1],
             ...projects,
@@ -38,7 +52,10 @@ function addSlider() {
     }
 
     const projects = getProjectsFromNavigation();
-    if (!projects.length) return;
+    if (!projects.length) {
+        console.warn('No projects found for slider');
+        return;
+    }
 
     const TEMPLATE = `
     <div class="view row box-l" id="body-content" style="background: no-repeat center/cover; position: relative;">
@@ -65,136 +82,155 @@ function addSlider() {
             this.innerHTML = TEMPLATE;
         }
     }
-    customElements.define("under-slider", UnderSlider);
-
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelector('.slides');
-    const slide = document.querySelectorAll('.slide');
-    const slideText = document.querySelector('.slidertext');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    let currentPosition = 100;
-    let isAutoScrolling = true;
-    let isManualControl = false;
-    const scrollSpeed = window.innerWidth <= 768 ? 0.08 : 0.035;
-    let animationFrameId = null;
-    let isTransitioning = false;
-
-    slides.style.transition = 'none';
-    slides.style.willChange = 'transform';
-
-    function updateSlideText() {
-        const realIndex = Math.floor(currentPosition / 100) - 1;
-        const totalRealSlides = slide.length - 2;
-        let normalizedIndex = realIndex;
-
-        if (realIndex < 0) normalizedIndex = totalRealSlides - 1;
-        if (realIndex >= totalRealSlides) normalizedIndex = 0;
-
-        const currentSlide = slide[normalizedIndex + 1];
-        const projectData = projects.find(p => p.id === currentSlide.id);
-        slideText.textContent = projectData ? projectData.name : currentSlide.id;
+    if (!customElements.get('under-slider')) {
+        customElements.define("under-slider", UnderSlider);
     }
 
-    function handleTransitionEnd() {
-        const totalSlides = slide.length;
-        const currentIndex = Math.floor(currentPosition / 100);
+    // Wait for the DOM to be fully updated before accessing elements
+    setTimeout(() => {
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelector('.slides');
+        const slide = document.querySelectorAll('.slide');
+        const slideText = document.querySelector('.slidertext');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
 
-        if (currentIndex === totalSlides - 1) {
-            slides.style.transition = 'none';
-            currentPosition = 100;
-            slides.style.transform = `translateX(-100%)`;
-        } else if (currentIndex === 0) {
-            slides.style.transition = 'none';
-            currentPosition = (totalSlides - 2) * 100;
-            slides.style.transform = `translateX(-${currentPosition}%)`;
+        if (!slider || !slides || !slide.length || !slideText || !prevButton || !nextButton) {
+            console.error('Slider elements not found');
+            return;
         }
 
-        isTransitioning = false;
-        updateSlideText();
-    }
+        let currentPosition = 100;
+        let isAutoScrolling = true;
+        let isManualControl = false;
+        const scrollSpeed = window.innerWidth <= 768 ? 0.08 : 0.035;
+        let animationFrameId = null;
+        let isTransitioning = false;
 
-    slides.addEventListener('transitionend', handleTransitionEnd);
+        slides.style.transition = 'none';
+        slides.style.willChange = 'transform';
 
-    function moveToSlide(direction) {
-        if (isTransitioning) return;
-        stopAutoScroll();
-        
-        currentPosition = Math.round(currentPosition / 100) * 100;
-        slides.style.transform = `translateX(-${currentPosition}%)`;
+        function updateSlideText() {
+            const realIndex = Math.floor(currentPosition / 100) - 1;
+            const totalRealSlides = slide.length - 2;
+            let normalizedIndex = realIndex;
 
-        requestAnimationFrame(() => {
-            isTransitioning = true;
-            slides.style.transition = 'transform 0.5s ease';
-            currentPosition += direction === 'next' ? 100 : -100;
+            if (realIndex < 0) normalizedIndex = totalRealSlides - 1;
+            if (realIndex >= totalRealSlides) normalizedIndex = 0;
+
+            const currentSlide = slide[normalizedIndex + 1];
+            if (!currentSlide) return;
+            
+            const projectData = projects.find(p => p.id === currentSlide.id);
+            slideText.textContent = projectData ? projectData.name : currentSlide.id;
+        }
+
+        function handleTransitionEnd() {
+            const totalSlides = slide.length;
+            const currentIndex = Math.floor(currentPosition / 100);
+
+            if (currentIndex === totalSlides - 1) {
+                slides.style.transition = 'none';
+                currentPosition = 100;
+                slides.style.transform = `translateX(-100%)`;
+            } else if (currentIndex === 0) {
+                slides.style.transition = 'none';
+                currentPosition = (totalSlides - 2) * 100;
+                slides.style.transform = `translateX(-${currentPosition}%)`;
+            }
+
+            isTransitioning = false;
+            updateSlideText();
+        }
+
+        slides.addEventListener('transitionend', handleTransitionEnd);
+
+        function moveToSlide(direction) {
+            if (isTransitioning) return;
+            stopAutoScroll();
+            
+            currentPosition = Math.round(currentPosition / 100) * 100;
+            slides.style.transform = `translateX(-${currentPosition}%)`;
+
+            requestAnimationFrame(() => {
+                isTransitioning = true;
+                slides.style.transition = 'transform 0.5s ease';
+                currentPosition += direction === 'next' ? 100 : -100;
+                slides.style.transform = `translateX(-${currentPosition}%)`;
+                updateSlideText();
+            });
+        }
+
+        function autoScroll() {
+            if (!isAutoScrolling) return;
+            slides.style.transition = 'none';
+            currentPosition += scrollSpeed;
+
+            if (currentPosition >= (slide.length - 1) * 100) {
+                currentPosition = 100;
+            }
+
             slides.style.transform = `translateX(-${currentPosition}%)`;
             updateSlideText();
-        });
-    }
-
-    function autoScroll() {
-        if (!isAutoScrolling) return;
-        slides.style.transition = 'none';
-        currentPosition += scrollSpeed;
-
-        if (currentPosition >= (slide.length - 1) * 100) {
-            currentPosition = 100;
+            animationFrameId = requestAnimationFrame(autoScroll);
         }
 
+        function startAutoScroll() {
+            if (!isManualControl && !animationFrameId) {
+                isAutoScrolling = true;
+                autoScroll();
+            }
+        }
+
+        function stopAutoScroll() {
+            isAutoScrolling = false;
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
+        }
+
+        // Initialize slider position and start auto-scroll
         slides.style.transform = `translateX(-${currentPosition}%)`;
         updateSlideText();
-        animationFrameId = requestAnimationFrame(autoScroll);
-    }
+        startAutoScroll();
 
-    function startAutoScroll() {
-        if (!isManualControl && !animationFrameId) {
-            isAutoScrolling = true;
-            autoScroll();
-        }
-    }
+        // Event listeners
+        slider.addEventListener('mouseenter', stopAutoScroll);
+        slider.addEventListener('mouseleave', () => !isManualControl && startAutoScroll());
+        
+        prevButton.addEventListener('click', () => {
+            isManualControl = true;
+            stopAutoScroll();
+            moveToSlide('prev');
+        });
 
-    function stopAutoScroll() {
-        isAutoScrolling = false;
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-            animationFrameId = null;
-        }
-    }
+        nextButton.addEventListener('click', () => {
+            isManualControl = true;
+            stopAutoScroll();
+            moveToSlide('next');
+        });
 
-    // Initialize slider position and start auto-scroll
-    slides.style.transform = `translateX(-${currentPosition}%)`;
-    updateSlideText();
-    startAutoScroll();
-
-    // Event listeners
-    slider.addEventListener('mouseenter', stopAutoScroll);
-    slider.addEventListener('mouseleave', () => !isManualControl && startAutoScroll());
-    
-    prevButton.addEventListener('click', () => {
-        isManualControl = true;
-        stopAutoScroll();
-        moveToSlide('prev');
-    });
-
-    nextButton.addEventListener('click', () => {
-        isManualControl = true;
-        stopAutoScroll();
-        moveToSlide('next');
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-            isManualControl = false;
-            if (!slider.matches(':hover')) {
-                startAutoScroll();
-            }
-        }, 500);
-    });
+        slider.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                isManualControl = false;
+                if (!slider.matches(':hover')) {
+                    startAutoScroll();
+                }
+            }, 500);
+        });
+    }, 100);
 }
 
 // Initialize when navigation is ready
 document.addEventListener('DOMContentLoaded', () => {
+    // First check if the sidebar already exists
+    if (document.getElementById('sidebar-work')) {
+        addSlider();
+        return;
+    }
+    
+    // If not, set up an observer to wait for it
     const observer = new MutationObserver((mutations, obs) => {
         if (document.getElementById('sidebar-work')) {
             obs.disconnect();
@@ -208,6 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         observer.disconnect();
         if (!document.getElementById('sidebar-work')) {
+            console.warn('Sidebar not found after timeout, attempting to add slider anyway');
             addSlider();
         }
     }, 3000);
