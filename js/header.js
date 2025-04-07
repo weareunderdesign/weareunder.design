@@ -5,7 +5,7 @@ function preloadImages() {
     "https://weareunder.design/work/artac/0.png",
     "https://weareunder.design/work/alterya/04.png",
     "https://weareunder.design/work/bounce/0.png",
-    "https://weareunder.design/work/rnbw/0.png",
+    "https://weareunder.design/work/rnbw/1.png",
     "https://weareunder.design/work/spacetop/0.png",
     "https://weareunder.design/work/blockaid/0.png",
     "https://weareunder.design/work/soli/19.png",
@@ -39,6 +39,7 @@ function preloadImages() {
     "https://weareunder.design/work/unit/0.png",
     "https://weareunder.design/work/zigi/0.svg",
     "https://weareunder.design/work/zoog/0.png",
+    "https://weareunder.design/work/pointfive/0.png",
   ];
 
   imageUrls.forEach((url) => {
@@ -271,6 +272,13 @@ function addSidebar() {
     $("#under-nav").css("display", "none");
     $("#works-wrapper").css("display", "block");
     $("#body-content").css("display", "none");
+    
+    // Ensure the slider is initialized
+    setTimeout(() => {
+      if (typeof addSlider === 'function') {
+        addSlider();
+      }
+    }, 100);
   });
 
   $("#sidebar-work").on("mouseleave", function () {
@@ -357,7 +365,22 @@ async function SideBarFunctionality() {
     Main.projectsElement =
       window.document.getElementsByClassName("projects")[0];
     Main.sidebarElement = window.document.getElementsByClassName("sidebar")[0];
-    if (!Main.projectsElement) return;
+    
+    if (!Main.projectsElement) {
+      console.warn("Projects element not found");
+      return;
+    }
+    
+    if (!Main.sidebarElement) {
+      console.warn("Sidebar element not found");
+      return;
+    }
+    
+    if (!Main.heroElement) {
+      console.warn("Hero element not found");
+      return;
+    }
+    
     var img_len = Main.projectsElement.children.length;
 
     var _g21 = 0;
@@ -425,6 +448,8 @@ async function SideBarFunctionality() {
   };
 
   Main.previewProject = function (id) {
+    if (!id) return;
+    
     var _this = Main.navLinks.colors;
     if (
       (__map_reserved[id] != null
@@ -447,7 +472,9 @@ async function SideBarFunctionality() {
       var newImage =
         __map_reserved[id] != null ? _this3.getReserved(id) : _this3.h[id];
 
-      Main.heroElement.style.backgroundImage = "url(" + newImage.src + ")";
+      if (newImage && newImage.src) {
+        Main.heroElement.style.backgroundImage = "url(" + newImage.src + ")";
+      }
     }
   };
 
