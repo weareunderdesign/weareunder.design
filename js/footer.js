@@ -16,26 +16,21 @@ const footerTemplate = `
       <a class="footer-logo" href="https://weareunder.design/">
         <svg-icon src="https://weareunder.design/images/outlinefooter.svg"></svg-icon>
       </a>
-      <p class="box">
-        under creates high-quality,<br>
-        well-designed, creative brands <br>
-        and products for creative people.
-      </p>
+      <span class="box" style="align-self:flex-end;">
+        high-quality, well-designed, <br>
+        creative brands and products<br>
+         for creative people.
+      </span>
 
       <div class="column gap-s">
         <div class="row gap-xl">
           <div class="column gap-s">
-
-            <a href="https://store.weareunder.design" target="_blank">
-              <span>store</span>
-            </a>  
             <a href="https://github.com/weareunderdesign" target="_blank">
               <span>github</span>
             </a>
-            <a href="https://weareunder.design/legal">
-              <span>terms</span>
+                        <a href="https://www.instagram.com/under.design/" target="_blank">
+              <span>instagram</span>
             </a>
-
           </div>
         
           <div class="column align-start gap-s">
@@ -46,15 +41,9 @@ const footerTemplate = `
             <a href="https://www.youtube.com/@weareunderdesign">
               <span>youtube</span>
             </a>
-            <a href="https://www.instagram.com/under.design/" target="_blank">
-              <span>instagram</span>
-            </a>
           </div>
 
            <div class="column align-start gap-s">
-            <a href="https://www.figma.com/design/UTvs6k6N1lAOLBerchdKFV/under?node-id=2563-581&t=hKaRJeX5Lp9zJkcQ-1">
-              <span>press</span>
-            </a>
            <a href="mailto:hello@weareunder.design">
               <span>contact</span>
             </a>

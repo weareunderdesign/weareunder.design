@@ -1,7 +1,10 @@
 # ūnderground
 
-welcome to the wild ride that is under, born in the sunny streets of atlit, israel.  
-this handbook is your ticket to understanding our world.
+this handbook is your ticket to understanding our world. it's a living document that captures our philosophy, methods, and vision. as you explore these pages, you'll discover not just what we do, but why and how we do it.
+
+whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative revolution.
+
+let's create something extraordinary together.
 
 ### start
 
@@ -9,42 +12,38 @@ under is a creative movement. founded in 2017 by the dynamic duo eden vidal and 
 eden started his journey as a designer engineer, connecting the worlds of creativity and technology.  
 inbal began as a brand designer, creating remarkable brand identities and studying the edges of design and art.  
 over the years, they moved between design studios, startups, and companies, launching ventures and gathering experience along the way.  
-in 2017, they founded under. their vision crystallized - to create tools that empower the creativity of humans. they call it meta-creativity, helping humans (especially designers) create amazing things.  
-we're know for our "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
+in 2017, they founded under. their vision crystallized - to empower the creativity of humans, especially designers. they call it meta-creativity, helping humans create amazing things.  
+we're known for our "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
 
 ### being
 
 at under, we believe humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond. by breaking barriers, we craft holistic solutions that engage all senses and resonate across mediums.  
-we see a future where technology connects us more deeply to creation rather than separating us from it. as technology "disappears", we can reconnect creators with their work, removing barriers between idea and execution.  
-this isn't new for us. since day one, we've crafted tools and optimized our creative process. our journey focuses on developing methodologies that eliminate barriers to creation.  
-building tools for ourselves first is core to our philosophy. we solve our own problems first, ensuring our products are practical solutions born from real experience.  
-building for ourselves allows us to:
+we see a future where creativity connects us more deeply to our work rather than separating us from it. as technology "disappears", we can reconnect creators with their work, removing barriers between idea and execution.  
+this isn't new for us. since day one, we've optimized our creative process. our journey focuses on developing methodologies that eliminate barriers to creation.  
+solving our own problems first is core to our philosophy. we ensure our products and services are practical solutions born from real experience.  
+this approach allows us to:
 
 * understand problems deeply  
 * create intuitive solutions  
 * iterate quickly  
 * maintain clear vision
 
-our self-focused approach ensures solid, tested products before expanding to wider markets, building strong foundations for growth.  
-in rnbw, we eliminate the boundary between design and code, recognizing them as one creative act.  
-modern tools can merge creator and medium - like a pianist becoming one with their instrument, we enable this unity in digital creation.  
-our project handy exemplifies this, connecting hands directly to design tools. just as sculptors feel their material, we want creators to have that same tactile connection in the digital realm.  
-with handy, physical and virtual creation become indistinguishable - you'll touch, feel and craft digital work as naturally as physical materials.  
+our self-focused approach ensures solid, tested offerings before expanding to wider markets, building strong foundations for growth.  
 this journey led us to our guiding philosophy, the "holy trinity":
 
 #### simple & complex
 
-we embrace both simplicity and complexity. our tools welcome beginners with intuitive basics - like picking up a guitar for the first time - while offering depths for masters to explore. simple to start, rich with potential, they grow alongside you.
+we embrace both simplicity and complexity. our offerings welcome beginners with intuitive basics while offering depths for masters to explore. simple to start, rich with potential, they grow alongside you.
 
-our tools adapt and grow with you, like musical instruments. whether beginner or master, they flex to your needs - me, you, or santana, the guitar remains the same guitar.
+our approach adapts and grows with you, like a well-designed tool. whether beginner or master, it flexes to your needs.
 
-- adaptive mastery: like water, we shape our tools to be simple to start yet infinitely deep
-- continuous growth: the path of mastery has no end, our tools grow with you
+- adaptive mastery: like water, we shape our offerings to be simple to start yet infinitely deep
+- continuous growth: the path of mastery has no end, our approach grows with you
 - meta-creativity: we shape not just work, but the very way we create
 
 #### open
 
-we believe in radical transparency. our open source approach extends beyond code to knowledge sharing and collaborative creation. we see creativity as an ongoing dialogue.
+we believe in radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation. we see creativity as an ongoing dialogue.
 
 - open exchange: ideas multiply when shared freely
 - community synergy: we grow stronger together, supporting each other
@@ -52,39 +51,39 @@ we believe in radical transparency. our open source approach extends beyond code
 
 ## doing
 
-at under, we're not just dreamers - we're doers. our work spans across multiple dimensions of creativity, from brand strategy to tool development. we create tools and methodologies that empower creators, build systems that evolve with their users, and foster a community of innovation and collaboration. here's what keeps us busy.
+at under, we're not just dreamers - we're doers. our work spans across multiple dimensions of creativity, from brand strategy to design services. we create methodologies that empower creators, build systems that evolve with their users, and foster a community of innovation and collaboration. here's what keeps us busy.
 
 - holistic creation: unifying mind, body and spirit in the creative process
 - purposeful impact: solving real problems and meeting real needs
-- tool transcendence: becoming one with our tools to transcend their limitations
+- design excellence: creating work that transcends expectations
 
 
-#### free
+#### liberate
 
-at under, we're unlocking human creativity by bridging the gap between inspiration and execution. we understand the frustration when tools limit your vision, whether visual, musical, or interactive. our tools seamlessly blend all creative mediums, using ai and natural interfaces to redefine expression.  
+at under, we're unlocking human creativity by bridging the gap between inspiration and execution. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
 
-#### teach
+#### educate
 
-education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our products, demonstrating their creative potential even as we grow.
+education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our work, demonstrating its creative potential even as we grow.
 
 #### design
 
-we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout the product lifecycle, we maintain transparency and collaboration at the core of our open-source design process.
+we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout our process, we maintain transparency and collaboration at the core of our design approach.
 we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. we're here to change that.
 
 "you're successful as soon as you send your work out into the world."
 rick rubin via twitter (2023)
 
-## products
+## products & services
 
-our products are the embodiment of our vision and philosophy. each one is crafted with care, designed to empower creators and push the boundaries of what's possible in the digital realm. from our flagship brand sprint process to our cutting-edge tools like rnbw and handy, we're constantly innovating to meet the evolving needs of the creative community.
+our products and services are the embodiment of our vision and philosophy. each one is crafted with care, designed to empower designers and push the boundaries of what's possible in the creative realm. from our flagship brand sprint process to our lifestyle products for designers, we're constantly innovating to meet the evolving needs of the creative community.
 
 | name | description | indie | enterprise | growth | startup |
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | brandsprint | rapid branding process | freelancers, local businesses, students | large corporations, product launches | fast-growing startups, new market entry | early-stage startups, small businesses |
 | brandscale | brand and design system implementation |  |  |  |  |
-| rnbw | design-to-code toolset | freelancers, students, educators | large design teams, 1000+ employees | medium businesses, 100-999 employees | small businesses, 10-99 employees |
-| handy | next-gen creative interface | tech-savvy creatives, digital artists | r\&d departments, innovative design teams | tech-forward medium businesses | ar/vr startups, innovative studios |
+| design lifestyle products | curated products for designers | freelancers, students, educators | large design teams, 1000+ employees | medium businesses, 100-999 employees | small businesses, 10-99 employees |
+| design services | custom design solutions | tech-savvy creatives, digital artists | r\&d departments, innovative design teams | tech-forward medium businesses | ar/vr startups, innovative studios |
 
 ## who?
 
@@ -93,7 +92,6 @@ by addressing creative professionals' pain points, under builds a community that
 | users | pain points / needs |
 | :---- | :---- |
 | designers | frustrated with design-development gap, inefficient branding processes, seeking better collaboration tools |
-| developers | struggling with design handoff, wanting more creative coding experiences, seeking better designer collaboration |
 | entrepreneurs & founders | overwhelmed by tool fragmentation, need affordable all-in-one solutions, want scalable processes |
 | creative directors & leaders | seeking efficient brand execution, frustrated by team miscommunication, wanting to innovate |
 | students & educators | facing industry-academia gap, need affordable pro tools, want cutting-edge experience |
@@ -104,8 +102,8 @@ by addressing creative professionals' pain points, under builds a community that
 # talk
 
 * crafting and maintaining under's unique voice across all platforms  
-* developing compelling narratives around our products (rnbw, handy, brand sprint)  
-* managing our open-source community engagement and design-in-public initiatives  
+* developing compelling narratives around our products and services  
+* managing our community engagement and design-in-public initiatives  
 * creating content that reflects our core values of simplicity, complexity, and openness  
 * building relationships with key media outlets and industry influencers  
 * coordinating communication strategies for product launches and company announcements  
@@ -115,29 +113,56 @@ by addressing creative professionals' pain points, under builds a community that
 
 we approach content in two ways:
 
-* macro: in-depth content like comprehensive guides, educational series, and thought leadership pieces that establish our expertise  
-* micro: bite-sized, engaging content like social media posts, quick tips, and behind-the-scenes glimpses that maintain daily presence
+* macro: in-depth content like comprehensive guides, educational series, thought leadership pieces, podcasts, campaigns, and original animated videos that establish our expertise  
+* micro: bite-sized, engaging content like social media posts, quick tips, behind-the-scenes glimpses, quotes, reels, and clips from bigger content that maintain daily presence
+* branded generic: when there's no new/macro material, we remix and create graphic elements, system-based posts, and repeated visuals (like showcase snapshots or branded frames)
 
 both strategies work together to tell our story and engage our community effectively.  
 the garyvee model: document → create → distribute → listen → create → distribute
 
 #### routines
 
-* newsletter: weekly updates sent to our community, sharing insights, updates, and stories
+* newsletter: weekly updates sent to our community, sharing insights, updates, and stories - a tight summary with a strong post, standout story, or fresh drop
 * social media: daily posts across our channels to maintain engagement and share our journey
+* brand fuckups: our 5-minute podcast highlighting design mistakes and lessons learned
+* showcases: daily/monthy highlights of our best work, client success stories, and design innovations
+* behind-the-scenes: weekly glimpses into our process, team collaborations, and works-in-progress
+* product updates: immediate announcements when we launch new features or products
+* live sessions: monthly Q&As, design reviews, and collaborative workshops
 * content planning: regular content meetings to align on messaging and strategy
 
-| channel | source |
-| :---- | :---- |
-| site | [https://weareunder.design](https://weareunder.design/) |
-| store | [https://store.weareunder.design](https://store.weareunder.design/) |
-| instagram | instagram.com/under.design |
-| twitter | [twitter.com/underdesign0](http://twitter.com/underdesign0) |
-| youtube | [https://www.youtube.com/@weareunderdesign](https://www.youtube.com/@weareunderdesign) |
-| newsletter | [https://admin.shopify.com/store/under-design-shop](https://admin.shopify.com/store/under-design-shop) |
-| github | [https://github.com/weareunderdesign](https://github.com/weareunderdesign) |
-| behance | behance.net/weareunder |
-| product hunt | [https://www.producthunt.com/products/rnbw-dev](https://www.producthunt.com/products/rnbw-dev) |
+#### content flow
+
+* instagram is our main hub - the core channel for posts, reels, and stories
+* twitter gets the sharp cuts - either repurposed from instagram or micro-thoughts that echo our vibe
+* showcases go to the site and behance - same content, tailored to each platform for wide reach
+* youtube hosts the macro content - full videos promoted through micro content on other channels
+* newsletter goes out weekly - a recap of what's been shared for those who missed it
+
+#### content schedule
+
+* instagram: posts or reels go live on sunday, tuesday, and wednesday
+* twitter: daily updates
+* newsletter: sent on thursday or friday
+* youtube & behance: published whenever something is ready
+
+#### planning & workflow
+
+* monthly kickoff call to define what's coming up, what's going live, and when
+* map out what matters - special drops, sprints, edits worth highlighting
+* write a flexible monthly plan structured by week: formats, topics, tone
+* match content to channels - shape each piece for its destination
+* once approved - create, schedule, publish
+
+| channel | source | purpose |
+| :---- | :---- | :---- |
+| site | [https://weareunder.design](https://weareunder.design/) | showcases and portfolio - updated whenever we launch new work |
+| store | [https://store.weareunder.design](https://store.weareunder.design/) | our products and merchandise |
+| instagram | instagram.com/under.design | main hub - posts/reels on sunday, tuesday, wednesday; stories daily |
+| twitter | [twitter.com/underdesign0](http://twitter.com/underdesign0) | sharp cuts - daily updates, either from instagram or fresh thoughts |
+| youtube | [https://www.youtube.com/@weareunderdesign](https://www.youtube.com/@weareunderdesign) | macro content - full videos published when ready |
+| newsletter | [https://admin.shopify.com/store/under-design-shop](https://admin.shopify.com/store/under-design-shop) | weekly recap (thursday/friday) - highlights and fresh drops |
+| behance | behance.net/weareunder | showcases - updated whenever we launch new work on the site |
 
 ### voice
 
@@ -178,61 +203,9 @@ at under, we've cultivated an environment that seamlessly blends the excitement 
 * feedback: give it, take it, love it - we thrive on feedback like plants thrive on sunlight. be open, be honest, be kind. remember: iteration is the mother of innovation (or something like that).  
 * stay inspired, stay weird - take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
 
-# launch by lunch
-
-a foolproof, fast-track go-to-market checklist for launching products and services.  
-launching a product is like throwing the party of the century – you need the right mix of hype, substance, and a dash of insanity.  
-we follow a "make. tell. sell. bell. scale" method - means we don't sell what we can't make. we don't produce what we can't sell.  
-every product starts with a prototype—designed, tested, and validated. only after sales cover design costs do we scale. no waste. no guesswork. just smart, strategic launches.
-
-here's our recipe:
-
-### 1\. make
-
-innovate → design something impossible to ignore. if it's not bold, it's not worth making.  
-break it down → prototype, refine, and define every spec before selling.  
-lead the conversation → publish unique insights, trends, and future predictions.
-
-### 2\. tell
-
-craft the narrative → part manifesto, part magic—make people believe.  
-compelling messaging, and storytelling that sticks.  
-visuals that pop → stand out. make it so eye-catching, people can't look away. strong visuals. 
-
-### 3\. sell
-
-fomo effect → build anticipation → tease, intrigue, and excite before launch. create exclusivity—make it look like everyone wants in.  
-exclusive access initiatives → offer beta programs or invite-only opportunities.  
-collaborate with the best → team up with key players to amplify reach.  
-tag & engage → interact with potential partners, share their work, and start conversations.  
-mutual wins → communicate why partnering with under design is a no-brainer.  
-social dominance → show up on every relevant platform, engage, and spark conversations.  
-guest appearances → feature on industry podcasts, panels, and blogs.
-
-### 4\. bell
-
-make noise → whether online or irl, turn it into an event.  
-press release magic → craft announcements so irresistible, journalists can't ignore.  
-big brand collaborations → work with well-known companies to attract others.  
-public design challenges → launch interactive projects that invite engagement.
-
-### 5\. scale
-
-highlight traction → showcase real growth, big wins, and social proof.  
-leverage partnerships → expand impact with industry leaders and influential brands.  
-dm & email outreach → personalized messages that show clear value.  
-seo & discoverability → optimize website, blogs, and case studies for inbound interest.  
-aftercare → keep the momentum going with community engagement and stellar support.  
-get featured → appear in top design, branding, and tech publications.  
-press & recognition → win awards, get featured in major media.  
-host the conversations → lead panels, roundtables, and exclusive industry talks.  
-partner shoutouts → highlight brands we admire to spark new connections.
-
-result: under design becomes a must-collaborate brand. always in front of the right people. always launching. always laughing—at everything, everyone, and even ourselves.
-
 # frmwrk
 
-our framework for delivering exceptional products through three core principles:
+our framework for delivering exceptional products and services through three core principles:
 * smart automation - let tools do the heavy lifting
 * clear goals - know exactly where we're heading
 * rapid results - ship fast, learn faster
