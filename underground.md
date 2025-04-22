@@ -2,18 +2,16 @@
 
 this handbook is your ticket to understanding our world. it's a living document that captures our philosophy, methods, and vision. as you explore these pages, you'll discover not just what we do, but why and how we do it.
 
-whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative revolution.
-
-let's create something extraordinary together.
+whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative infrastructure.
 
 ### start
 
-under is a creative movement. founded in 2017 by the dynamic duo eden vidal and inbal lapidot vidal, we're all about empowering creatives.  
+under is a creative movement. founded in 2017 by the duo eden vidal and inbal lapidot vidal, we're all about empowering creatives.  
 eden started his journey as a designer engineer, connecting the worlds of creativity and technology.  
 inbal began as a brand designer, creating remarkable brand identities and studying the edges of design and art.  
-over the years, they moved between design studios, startups, and companies, launching ventures and gathering experience along the way.  
+over the years, they moved between design studios, startups, and companies.
 in 2017, they founded under. their vision crystallized - to empower the creativity of humans, especially designers. they call it meta-creativity, helping humans create amazing things.  
-we're known for our "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
+they're known for their "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
 
 ### being
 
@@ -134,7 +132,7 @@ the garyvee model: document → create → distribute → listen → create → 
 #### content flow
 
 * instagram is our main hub - the core channel for posts, reels, and stories
-* twitter gets the sharp cuts - either repurposed from instagram or micro-thoughts that echo our vibe
+* twitter (and linkedin + disabling comments) gets the sharp cuts - either repurposed from instagram or micro-thoughts that echo our vibe
 * showcases go to the site and behance - same content, tailored to each platform for wide reach
 * youtube hosts the macro content - full videos promoted through micro content on other channels
 * newsletter goes out weekly - a recap of what's been shared for those who missed it
@@ -142,7 +140,7 @@ the garyvee model: document → create → distribute → listen → create → 
 #### content schedule
 
 * instagram: posts or reels go live on sunday, tuesday, and wednesday
-* twitter: daily updates
+* twitter (and lindedin): daily updates
 * newsletter: sent on thursday or friday
 * youtube & behance: published whenever something is ready
 
@@ -238,10 +236,8 @@ comments = action items:
 
 * design → figma
 * planning → calendar
-* tasks → github
 * communication → whatsapp, email
 * files → google drive
-* payments → payoneer, upwork
 
 ## talent
 
