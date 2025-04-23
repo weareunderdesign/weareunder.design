@@ -1,5 +1,6 @@
 function preloadImages() {
   const imageUrls = [
+    "https://weareunder.design/work/handy/00.png",
     "https://weareunder.design/work/chargeflow/00.png",
     "https://weareunder.design/work/aim/0.png",
     "https://weareunder.design/work/artac/0.png",
@@ -153,6 +154,7 @@ function addSidebar() {
 <div id="works-wrapper" class="hidden">
 <div class="view row no-pointer" style="position: relative; z-index: 999; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png');" id="brand-sprints-section">
 <div class="sidebar column has-pointer" data-ix="sidebar" id="sidebar-work">
+  <a href="https://weareunder.design/work/handy/" class="sidebar-project-link" id="handy-846642">handy</a>
   <a href="https://weareunder.design/work/nilus/" class="sidebar-project-link" id="nilus-db160d">nilus</a>
   <a href="https://weareunder.design/work/utila/" class="sidebar-project-link" id="utila-00794E">utila</a>
   <a href="https://weareunder.design/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
@@ -199,6 +201,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
+<img src="https://weareunder.design/work/handy/00.png" class="sidebar-project-image box-l" id="handy" loading="lazy"></img>
 <img src="https://weareunder.design/work/nilus/0.png" class="sidebar-project-image" id="nilus" loading="lazy"></img>
 <img src="https://weareunder.design/work/utila/0.png" class="sidebar-project-image box-l" id="utila" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
