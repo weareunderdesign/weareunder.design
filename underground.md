@@ -122,7 +122,7 @@ the garyvee model: document → create → distribute → listen → create → 
 
 * newsletter: weekly updates sent to our community, sharing insights, updates, and stories - a tight summary with a strong post, standout story, or fresh drop
 * social media: daily posts across our channels to maintain engagement and share our journey
-* brand fuckups: our 5-minute podcast highlighting design mistakes and lessons learned
+* brand fuckups: biweekly 5-minute podcast highlighting design mistakes and lessons learned
 * showcases: daily/monthy highlights of our best work, client success stories, and design innovations
 * behind-the-scenes: weekly glimpses into our process, team collaborations, and works-in-progress
 * product updates: immediate announcements when we launch new features or products
@@ -461,3 +461,62 @@ deadline issues
 5 sustainability over sprints
 
 remember: this system serves you, not vice versa adjust and evolve it based on your experience and needs
+
+# onboarding kit
+how to work with us. fast. clean. no bullshit.
+
+0. principles
+– high standards are not optional
+– “pretty good” isn’t good enough
+– think first. design second. never guess.
+
+1. before we start
+send us:
+– 1 case study you're proud of
+– your strongest skill
+– what you hate doing
+– your working hours
+– your preferred communication channel
+
+2. how to approach a project
+
+read the brief
+
+ask smart questions
+
+gather 5 max inspiration references
+
+propose a written concept
+
+get approval → then design
+
+3. how to present a draft
+– clean Figma. proper naming. no mess
+– short explanation: what’s the idea? why does it work?
+– always 2 directions. never just one
+– a draft is a thought system, not a moodboard
+
+4. feedback
+– fast. brutal. clear
+– never personal
+– your job: improve, not defend
+
+5. final delivery checklist
+– all files clean and organized
+– responsive versions included
+– proper naming throughout
+– nothing left “for later”
+– final handoff ready-to-go
+
+6. golden rules
+– better to ask early than fix later
+– half a great idea > full mediocre one
+– if taste mismatch → speak up
+– no ghosting. no waiting. always update
+
+7. how we measure your work
+– precision
+– speed
+– initiative
+– taste
+– clean execution
