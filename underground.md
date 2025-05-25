@@ -4,7 +4,7 @@ this handbook is your ticket to understanding our world. it's a living document 
 
 whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative infrastructure.
 
-### start
+### starting
 
 under is a creative movement. founded in 2017 by the duo eden vidal and inbal lapidot vidal, we're all about empowering creatives.  
 eden started his journey as a designer engineer, connecting the worlds of creativity and technology.  
@@ -13,7 +13,7 @@ over the years, they moved between design studios, startups, and companies.
 in 2017, they founded under. their vision crystallized - to empower the creativity of humans, especially designers. they call it meta-creativity, helping humans create amazing things.  
 they're known for their "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
 
-### being
+## being
 
 at under, we believe humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond. by breaking barriers, we craft holistic solutions that engage all senses and resonate across mediums.  
 we see a future where creativity connects us more deeply to our work rather than separating us from it. as technology "disappears", we can reconnect creators with their work, removing barriers between idea and execution.  
@@ -26,10 +26,7 @@ this approach allows us to:
 * iterate quickly  
 * maintain clear vision
 
-our self-focused approach ensures solid, tested offerings before expanding to wider markets, building strong foundations for growth.  
-this journey led us to our guiding philosophy, the "holy trinity":
-
-#### duality
+#### dualism
 
 we embrace both simplicity and complexity. our offerings welcome beginners with intuitive basics while offering depths for masters to explore. simple to start, rich with potential, they grow alongside you.
 
@@ -39,13 +36,23 @@ our approach adapts and grows with you, like a well-designed tool. whether begin
 - continuous growth: the path of mastery has no end, our approach grows with you
 - meta-creativity: we shape not just work, but the very way we create
 
-#### open
+we're unlocking human creativity by bridging the gap between inspiration and execution. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
+
+#### education
+
+education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our work, demonstrating its creative potential even as we grow.
 
 we believe in radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation. we see creativity as an ongoing dialogue.
 
 - open exchange: ideas multiply when shared freely
 - community synergy: we grow stronger together, supporting each other
 - joyful engagement: creativity thrives in an environment of play and wonder
+
+we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout our process, we maintain transparency and collaboration at the core of our design approach.
+we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. we're here to change that.
+
+"you're successful as soon as you send your work out into the world."
+rick rubin via twitter (2023)
 
 ## doing
 
@@ -55,24 +62,9 @@ at under, we're not just dreamers - we're doers. our work spans across multiple 
 - purposeful impact: solving real problems and meeting real needs
 - design excellence: creating work that transcends expectations
 
+our self-focused approach ensures solid, tested offerings before expanding to wider markets, building strong foundations for growth.
 
-#### liberate
-
-at under, we're unlocking human creativity by bridging the gap between inspiration and execution. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
-
-#### educate
-
-education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our work, demonstrating its creative potential even as we grow.
-
-#### design
-
-we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout our process, we maintain transparency and collaboration at the core of our design approach.
-we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. we're here to change that.
-
-"you're successful as soon as you send your work out into the world."
-rick rubin via twitter (2023)
-
-## offerings
+### products, services
 
 our products and services are the embodiment of our vision and philosophy. each one is crafted with care, designed to empower designers and push the boundaries of what's possible in the creative realm. from our flagship brand sprint process to our lifestyle products for designers, we're constantly innovating to meet the evolving needs of the creative community.
 
@@ -83,7 +75,7 @@ our products and services are the embodiment of our vision and philosophy. each 
 | design lifestyle products | curated products for designers | freelancers, students, educators | large design teams, 1000+ employees | medium businesses, 100-999 employees | small businesses, 10-99 employees |
 | design services | custom design solutions | tech-savvy creatives, digital artists | r\&d departments, innovative design teams | tech-forward medium businesses | ar/vr startups, innovative studios |
 
-## who?
+### who?
 
 by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite and empower our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
 
@@ -97,7 +89,7 @@ by addressing creative professionals' pain points, under builds a community that
 | product teams | wanting better prototyping tools, need seamless handoff, seeking unified design systems |
 | digital artists | seeking expressive tools, want to blend code and design, need intuitive interfaces |
 
-# content
+## content
 
 * crafting and maintaining under's unique voice across all platforms  
 * developing compelling narratives around our products and services  
@@ -107,7 +99,7 @@ by addressing creative professionals' pain points, under builds a community that
 * coordinating communication strategies for product launches and company announcements  
 * leading our educational content initiatives and knowledge-sharing programs
 
-### model
+#### model
 
 we approach content in two ways:
 
@@ -118,7 +110,7 @@ we approach content in two ways:
 both strategies work together to tell our story and engage our community effectively.  
 the garyvee model: document → create → distribute → listen → create → distribute
 
-### creation
+#### creation
 
 * monthly kickoff call to define what's coming up, what's going live, and when
 * map out what matters - special drops, sprints, edits worth highlighting
@@ -126,7 +118,7 @@ the garyvee model: document → create → distribute → listen → create → 
 * match content to channels - shape each piece for its destination
 * once approved - create, schedule, publish
 
-### types
+#### types
 
 * newsletter: weekly updates sent to our community, sharing insights, updates, and stories - a tight summary with a strong post, standout story, or fresh drop
 * social media: daily posts across our channels to maintain engagement and share our journey
@@ -137,7 +129,7 @@ the garyvee model: document → create → distribute → listen → create → 
 * live sessions: monthly Q&As, design reviews, and collaborative workshops
 * content planning: regular content meetings to align on messaging and strategy
 
-### channels
+#### channels
 
 | channel | source | purpose, flow & schedule |
 | :---- | :---- | :---- |
@@ -149,7 +141,7 @@ the garyvee model: document → create → distribute → listen → create → 
 | newsletter | [https://admin.shopify.com/store/under-design-shop](https://admin.shopify.com/store/under-design-shop) | weekly recap - sent thursday/friday; highlights and fresh drops; recap of what's been shared across platforms |
 | behance | behance.net/weareunder | showcases - published whenever ready; same content as site, tailored for platform |
 
-### voice
+#### voice
 
 at under, our tone of voice and writing style is like that friend who always knows what to say.
 
@@ -177,11 +169,11 @@ at under, our tone of voice and writing style is like that friend who always kno
 * peer voice: teach through sharing - nobody likes being lectured
 * suggest don't command: inspiration beats instruction - trust readers' judgment
 
-# work
+## work
 
 fast. clean. no bullshit.
 
-## environment
+### environment
 
 we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.
 
@@ -189,7 +181,7 @@ four-day sprint madness - we work monday to thursday, 9am-6pm. but hey, if inspi
 
 stay inspired, stay weird - take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
 
-## principles
+### principles
 
 our framework for delivering exceptional products and services through three core principles:
 * smart automation - let tools do the heavy lifting
@@ -203,27 +195,27 @@ high standards are not optional. "pretty good" isn't good enough. think first. d
 * own your milestones: assign, manage, complete
 * move forward, not sideways
 
-## process
+### process
 
-1. **start**
+1. start
    - read the brief
    - ask smart questions
    - gather 5 max inspiration references
    - propose a written concept
    - get approval → then design
 
-2. **build** 
+2. build 
    - scope → validate vision and plan
    - build → execute with daily progress checks
    - ship → assess deliverables and verify satisfaction
 
-3. **present**
+3. present
    - clean figma. proper naming. no mess
    - short explanation: what's the idea? why does it work?
    - always 2 directions. never just one
    - a draft is a thought system, not a moodboard
 
-## workflow
+### workflow
 
 track in figma 📌:
 * 🟢 to-do - ready to tackle
@@ -236,7 +228,7 @@ track in figma 📌:
 * communication → whatsapp, email
 * files → google drive
 
-## delivery
+### delivery
 
 feedback: fast. brutal. clear. never personal. your job: improve, not defend.
 
@@ -246,7 +238,7 @@ final delivery checklist:
 * proper naming throughout
 * final handoff ready-to-go
 
-## rules
+### rules
 
 * better to ask early than fix later
 * half a great idea > full mediocre one
@@ -257,7 +249,7 @@ we measure your work on: precision, speed, initiative, taste, clean execution.
 
 remember: move fast, stay focused, deliver excellence.
 
-# rhythm
+## rhythm
 
 weekly:  
 mon to thu: doing  
@@ -284,7 +276,7 @@ reflection (sunday)
 - midday: adjust next week's priorities  
 - afternoon: document learnings and insights
 
-## monthly  
+### monthly  
 doing weeks (weeks 1-3)  
 - week 1: vision and planning focus  
 - week 2: deep execution  
@@ -300,7 +292,7 @@ being and reflecting week (week 4\)
 - community contribution  
 - extended rest and recovery
 
-## seasonal
+### seasonal
 spring (mar - may): fresh starts, planting seeds, building momentum  
 theme: emergence  
 - project initiation  
@@ -331,7 +323,7 @@ theme: restoration
 
 balance between doing and being keeps energy sustainable and creativity alive. 
 
-## yearly  
+### yearly  
 doing phase (january-september)  
 - q1 (jan-mar): foundation setting  
 - q2 (apr-jun): growth and expansion  
@@ -342,7 +334,7 @@ being phase (october-december)
 - november: integration and reflection  
 - december: vision and renewal
 
-## transitions
+### transitions
 
 do→be  
 1 complete open loops  
@@ -358,7 +350,7 @@ be→do
 4 energy check-in  
 5 intention setting
 
-## fallbacks
+### fallbacks
 
 work in be-time  
 1 assess true urgency  
@@ -374,7 +366,7 @@ energy issues
 4 take micro-breaks  
 5 consider schedule adjustment
 
-## tracking
+### tracking
 
 daily  
 date:   
@@ -400,7 +392,7 @@ pattern recognition:
 system improvements:  
 next month's intentions:
 
-## metrics
+### metrics
 
 quant  
 - deep work hours  
@@ -414,7 +406,7 @@ qual
 - relationship depth  
 - personal growth sense
 
-## implementation
+### implementation
 
 1 start with weekly rhythm  
 2 add monthly layer after 4 weeks  
@@ -422,7 +414,7 @@ qual
 4 build yearly rhythm understanding  
 5 regular system review and adjustment
 
-## emergency
+### emergency
 
 energy crash  
 1 immediate rest period  
@@ -438,7 +430,7 @@ deadline issues
 4 timeline negotiation  
 5 recovery scheduling
 
-## balance
+### balance
 
 1 energy over time  
 2 quality over quantity  
