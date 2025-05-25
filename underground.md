@@ -4,7 +4,7 @@ this handbook is your ticket to understanding our world. it's a living document 
 
 whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative infrastructure.
 
-### starting
+## starting
 
 under is a creative movement. founded in 2017 by the duo eden vidal and inbal lapidot vidal, we're all about empowering creatives.  
 eden started his journey as a designer engineer, connecting the worlds of creativity and technology.  
@@ -91,15 +91,7 @@ by addressing creative professionals' pain points, under builds a community that
 
 ## content
 
-* crafting and maintaining under's unique voice across all platforms  
-* developing compelling narratives around our products and services  
-* managing our community engagement and design-in-public initiatives  
-* creating content that reflects our core values of simplicity, complexity, and openness  
-* building relationships with key media outlets and industry influencers  
-* coordinating communication strategies for product launches and company announcements  
-* leading our educational content initiatives and knowledge-sharing programs
-
-#### model
+we craft and maintain under's unique voice across all platforms, developing compelling narratives around our products and services. we manage community engagement and design-in-public initiatives, creating content that reflects our core values of simplicity, complexity, and openness. we build relationships with key media outlets and industry influencers, coordinate communication strategies for product launches and company announcements, and lead educational content initiatives and knowledge-sharing programs.
 
 we approach content in two ways:
 
@@ -120,26 +112,24 @@ the garyvee model: document → create → distribute → listen → create → 
 
 #### types
 
-* newsletter: weekly updates sent to our community, sharing insights, updates, and stories - a tight summary with a strong post, standout story, or fresh drop
-* social media: daily posts across our channels to maintain engagement and share our journey
+* "branding is broken" videos series: educational content exploring design industry issues and solutions
 * brand fuckups: biweekly 5-minute podcast highlighting design mistakes and lessons learned
-* showcases: daily/monthy highlights of our best work, client success stories, and design innovations
-* behind-the-scenes: weekly glimpses into our process, team collaborations, and works-in-progress
-* product updates: immediate announcements when we launch new features or products
 * live sessions: monthly Q&As, design reviews, and collaborative workshops
-* content planning: regular content meetings to align on messaging and strategy
+* daily random 3-5 "power shots" from projects: quick glimpses of work-in-progress and design details
+* showcases: highlights of our best work, client success stories, and design innovations
+* updates and job descriptions: company news, team updates, and open position announcements
 
 #### channels
 
-| channel | source | purpose, flow & schedule |
-| :---- | :---- | :---- |
-| site | [https://weareunder.design](https://weareunder.design/) | showcases and portfolio - updated whenever we launch new work; receives showcase content from behance |
-| store | [https://store.weareunder.design](https://store.weareunder.design/) | our products and merchandise |
-| instagram | instagram.com/under.design | main hub - posts/reels on sunday, tuesday, wednesday; stories daily; core channel for posts, reels, and stories that feeds other platforms |
-| twitter | [twitter.com/underdesign0](http://twitter.com/underdesign0) | sharp cuts - daily updates, either repurposed from instagram or micro-thoughts that echo our vibe |
-| youtube | [https://www.youtube.com/@weareunderdesign](https://www.youtube.com/@weareunderdesign) | macro content - published whenever ready; promoted through micro content on other channels |
-| newsletter | [https://admin.shopify.com/store/under-design-shop](https://admin.shopify.com/store/under-design-shop) | weekly recap - sent thursday/friday; highlights and fresh drops; recap of what's been shared across platforms |
-| behance | behance.net/weareunder | showcases - published whenever ready; same content as site, tailored for platform |
+| channel | purpose | content type | schedule |
+| :---- | :---- | :---- | :---- |
+| [site](https://weareunder.design/) | showcases and portfolio; receives showcase content from behance | showcases: work highlights, client success stories, design innovations | updated whenever we launch new work |
+| [store](https://store.weareunder.design/) | our products and merchandise | product updates: new features, launches, announcements | updated as needed |
+| [instagram](https://instagram.com/under.design) | main hub; core channel that feeds other platforms | micro: posts, reels, stories, behind-the-scenes glimpses, quick tips | posts/reels on sunday, tuesday, wednesday; stories daily |
+| [twitter](http://twitter.com/underdesign0) | sharp cuts; repurposed from instagram or micro-thoughts | micro: daily updates, repurposed content, quick thoughts | daily updates |
+| [youtube](https://www.youtube.com/@weareunderdesign) | macro content; promoted through micro content on other channels | macro: comprehensive guides, educational series, podcasts, campaigns | published whenever ready |
+| [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap; highlights and fresh drops across platforms | curated: weekly updates, insights, stories, highlights, fresh drops | sent thursday/friday |
+| [behance](https://behance.net/weareunder) | showcases; same content as site, tailored for platform | showcases: work highlights, design innovations, portfolio pieces | published whenever ready |
 
 #### voice
 
@@ -170,10 +160,6 @@ at under, our tone of voice and writing style is like that friend who always kno
 * suggest don't command: inspiration beats instruction - trust readers' judgment
 
 ## work
-
-fast. clean. no bullshit.
-
-### environment
 
 we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.
 
