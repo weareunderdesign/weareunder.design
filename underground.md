@@ -29,7 +29,7 @@ this approach allows us to:
 our self-focused approach ensures solid, tested offerings before expanding to wider markets, building strong foundations for growth.  
 this journey led us to our guiding philosophy, the "holy trinity":
 
-#### simple & complex
+#### duality
 
 we embrace both simplicity and complexity. our offerings welcome beginners with intuitive basics while offering depths for masters to explore. simple to start, rich with potential, they grow alongside you.
 
@@ -72,7 +72,7 @@ we aim to break the isolation of creation - when work goes unshared, motivation 
 "you're successful as soon as you send your work out into the world."
 rick rubin via twitter (2023)
 
-## products & services
+## offerings
 
 our products and services are the embodiment of our vision and philosophy. each one is crafted with care, designed to empower designers and push the boundaries of what's possible in the creative realm. from our flagship brand sprint process to our lifestyle products for designers, we're constantly innovating to meet the evolving needs of the creative community.
 
@@ -97,7 +97,7 @@ by addressing creative professionals' pain points, under builds a community that
 | product teams | wanting better prototyping tools, need seamless handoff, seeking unified design systems |
 | digital artists | seeking expressive tools, want to blend code and design, need intuitive interfaces |
 
-# talk
+# content
 
 * crafting and maintaining under's unique voice across all platforms  
 * developing compelling narratives around our products and services  
@@ -107,7 +107,7 @@ by addressing creative professionals' pain points, under builds a community that
 * coordinating communication strategies for product launches and company announcements  
 * leading our educational content initiatives and knowledge-sharing programs
 
-### content model
+### model
 
 we approach content in two ways:
 
@@ -118,7 +118,15 @@ we approach content in two ways:
 both strategies work together to tell our story and engage our community effectively.  
 the garyvee model: document → create → distribute → listen → create → distribute
 
-#### routines
+### creation
+
+* monthly kickoff call to define what's coming up, what's going live, and when
+* map out what matters - special drops, sprints, edits worth highlighting
+* write a flexible monthly plan structured by week: formats, topics, tone
+* match content to channels - shape each piece for its destination
+* once approved - create, schedule, publish
+
+### types
 
 * newsletter: weekly updates sent to our community, sharing insights, updates, and stories - a tight summary with a strong post, standout story, or fresh drop
 * social media: daily posts across our channels to maintain engagement and share our journey
@@ -129,38 +137,17 @@ the garyvee model: document → create → distribute → listen → create → 
 * live sessions: monthly Q&As, design reviews, and collaborative workshops
 * content planning: regular content meetings to align on messaging and strategy
 
-#### content flow
+### channels
 
-* instagram is our main hub - the core channel for posts, reels, and stories
-* twitter (and linkedin + disabling comments) gets the sharp cuts - either repurposed from instagram or micro-thoughts that echo our vibe
-* showcases go to the site and behance - same content, tailored to each platform for wide reach
-* youtube hosts the macro content - full videos promoted through micro content on other channels
-* newsletter goes out weekly - a recap of what's been shared for those who missed it
-
-#### content schedule
-
-* instagram: posts or reels go live on sunday, tuesday, and wednesday
-* twitter (and lindedin): daily updates
-* newsletter: sent on thursday or friday
-* youtube & behance: published whenever something is ready
-
-#### planning & workflow
-
-* monthly kickoff call to define what's coming up, what's going live, and when
-* map out what matters - special drops, sprints, edits worth highlighting
-* write a flexible monthly plan structured by week: formats, topics, tone
-* match content to channels - shape each piece for its destination
-* once approved - create, schedule, publish
-
-| channel | source | purpose |
+| channel | source | purpose, flow & schedule |
 | :---- | :---- | :---- |
-| site | [https://weareunder.design](https://weareunder.design/) | showcases and portfolio - updated whenever we launch new work |
+| site | [https://weareunder.design](https://weareunder.design/) | showcases and portfolio - updated whenever we launch new work; receives showcase content from behance |
 | store | [https://store.weareunder.design](https://store.weareunder.design/) | our products and merchandise |
-| instagram | instagram.com/under.design | main hub - posts/reels on sunday, tuesday, wednesday; stories daily |
-| twitter | [twitter.com/underdesign0](http://twitter.com/underdesign0) | sharp cuts - daily updates, either from instagram or fresh thoughts |
-| youtube | [https://www.youtube.com/@weareunderdesign](https://www.youtube.com/@weareunderdesign) | macro content - full videos published when ready |
-| newsletter | [https://admin.shopify.com/store/under-design-shop](https://admin.shopify.com/store/under-design-shop) | weekly recap (thursday/friday) - highlights and fresh drops |
-| behance | behance.net/weareunder | showcases - updated whenever we launch new work on the site |
+| instagram | instagram.com/under.design | main hub - posts/reels on sunday, tuesday, wednesday; stories daily; core channel for posts, reels, and stories that feeds other platforms |
+| twitter | [twitter.com/underdesign0](http://twitter.com/underdesign0) | sharp cuts - daily updates, either repurposed from instagram or micro-thoughts that echo our vibe |
+| youtube | [https://www.youtube.com/@weareunderdesign](https://www.youtube.com/@weareunderdesign) | macro content - published whenever ready; promoted through micro content on other channels |
+| newsletter | [https://admin.shopify.com/store/under-design-shop](https://admin.shopify.com/store/under-design-shop) | weekly recap - sent thursday/friday; highlights and fresh drops; recap of what's been shared across platforms |
+| behance | behance.net/weareunder | showcases - published whenever ready; same content as site, tailored for platform |
 
 ### voice
 
@@ -190,32 +177,51 @@ at under, our tone of voice and writing style is like that friend who always kno
 * peer voice: teach through sharing - nobody likes being lectured
 * suggest don't command: inspiration beats instruction - trust readers' judgment
 
-# culture
+# work
 
-where creativity thrives and innovation flourishes...  
-at under, we've cultivated an environment that seamlessly blends the excitement of a startup with the focus of a creative powerhouse. our workspace is a dynamic fusion of productivity and playfulness, where groundbreaking ideas are born and nurtured.
+fast. clean. no bullshit.
 
-* we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.  
-* four-day sprint madness - we work monday to thursday, 9am-6pm. but hey, if inspiration strikes at 3am on a tuesday, who are we to judge? do your best work when you're at your best.  
-* communicate and stay active, ask questions, share your crazy ideas. we're all ears (and eyes, in this case).  
-* feedback: give it, take it, love it - we thrive on feedback like plants thrive on sunlight. be open, be honest, be kind. remember: iteration is the mother of innovation (or something like that).  
-* stay inspired, stay weird - take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
+## environment
 
-# frmwrk
+we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.
+
+four-day sprint madness - we work monday to thursday, 9am-6pm. but hey, if inspiration strikes at 3am on a tuesday, who are we to judge? do your best work when you're at your best.
+
+stay inspired, stay weird - take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
+
+## principles
 
 our framework for delivering exceptional products and services through three core principles:
 * smart automation - let tools do the heavy lifting
 * clear goals - know exactly where we're heading
 * rapid results - ship fast, learn faster
 
-## principles
+high standards are not optional. "pretty good" isn't good enough. think first. design second. never guess.
 
 * focused 1-3 week sprints with clear deliverables
 * value outcomes over hours
 * own your milestones: assign, manage, complete
-* estimate cost (+25-50% buffer)
-* break large projects into manageable sprints
 * move forward, not sideways
+
+## process
+
+1. **start**
+   - read the brief
+   - ask smart questions
+   - gather 5 max inspiration references
+   - propose a written concept
+   - get approval → then design
+
+2. **build** 
+   - scope → validate vision and plan
+   - build → execute with daily progress checks
+   - ship → assess deliverables and verify satisfaction
+
+3. **present**
+   - clean figma. proper naming. no mess
+   - short explanation: what's the idea? why does it work?
+   - always 2 directions. never just one
+   - a draft is a thought system, not a moodboard
 
 ## workflow
 
@@ -225,49 +231,29 @@ track in figma 📌:
 * 🔴 blocked - need help
 * ✅ done - shipped it
 
-comments = action items:
-* tagged = your responsibility
-* open = to-do, resolved = done
-* review first, understand, then act
-* resolve immediately when complete
-* new topic = new comment
-
-## tools
-
 * design → figma
 * planning → calendar
 * communication → whatsapp, email
 * files → google drive
 
-## talent
+## delivery
 
-we believe in:
-* sprint-based collaboration (1-3 weeks)
-* value-based pricing, not hourly
-* clear deliverables and fixed timelines
-* measurable results and accountability
+feedback: fast. brutal. clear. never personal. your job: improve, not defend.
 
-selection criteria:
-* fixed pricing
-* remote-ready
-* proven expertise
-* milestone-based payments
-* ip protection
-* clear terms
+final delivery checklist:
+* all files clean and organized
+* responsive versions included
+* proper naming throughout
+* final handoff ready-to-go
 
-## quality metrics
+## rules
 
-* technical excellence & brand alignment
-* response time & communication clarity
-* documentation quality
-* deadline adherence
-* stakeholder engagement
+* better to ask early than fix later
+* half a great idea > full mediocre one
+* if taste mismatch → speak up
+* no ghosting. no waiting. always update
 
-## sprint rhythm
-
-1. scope → validate vision and plan
-2. build → execute with daily progress checks
-3. ship → assess deliverables and verify satisfaction
+we measure your work on: precision, speed, initiative, taste, clean execution.
 
 remember: move fast, stay focused, deliver excellence.
 
@@ -298,7 +284,7 @@ reflection (sunday)
 - midday: adjust next week's priorities  
 - afternoon: document learnings and insights
 
-## monthly rhythm  
+## monthly  
 doing weeks (weeks 1-3)  
 - week 1: vision and planning focus  
 - week 2: deep execution  
@@ -314,7 +300,7 @@ being and reflecting week (week 4\)
 - community contribution  
 - extended rest and recovery
 
-## seasonal flow
+## seasonal
 spring (mar - may): fresh starts, planting seeds, building momentum  
 theme: emergence  
 - project initiation  
@@ -414,7 +400,7 @@ pattern recognition:
 system improvements:  
 next month's intentions:
 
-## success metrics
+## metrics
 
 quant  
 - deep work hours  
@@ -462,61 +448,3 @@ deadline issues
 
 remember: this system serves you, not vice versa adjust and evolve it based on your experience and needs
 
-# onboarding kit
-how to work with us. fast. clean. no bullshit.
-
-0. principles
-– high standards are not optional
-– “pretty good” isn’t good enough
-– think first. design second. never guess.
-
-1. before we start
-send us:
-– 1 case study you're proud of
-– your strongest skill
-– what you hate doing
-– your working hours
-– your preferred communication channel
-
-2. how to approach a project
-
-read the brief
-
-ask smart questions
-
-gather 5 max inspiration references
-
-propose a written concept
-
-get approval → then design
-
-3. how to present a draft
-– clean Figma. proper naming. no mess
-– short explanation: what’s the idea? why does it work?
-– always 2 directions. never just one
-– a draft is a thought system, not a moodboard
-
-4. feedback
-– fast. brutal. clear
-– never personal
-– your job: improve, not defend
-
-5. final delivery checklist
-– all files clean and organized
-– responsive versions included
-– proper naming throughout
-– nothing left “for later”
-– final handoff ready-to-go
-
-6. golden rules
-– better to ask early than fix later
-– half a great idea > full mediocre one
-– if taste mismatch → speak up
-– no ghosting. no waiting. always update
-
-7. how we measure your work
-– precision
-– speed
-– initiative
-– taste
-– clean execution
