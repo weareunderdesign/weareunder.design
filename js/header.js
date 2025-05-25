@@ -205,6 +205,7 @@ function addSidebar() {
 <div class="projects">
 <img src="https://weareunder.design/work/handy/00.png" class="sidebar-project-image box-l" id="handy" loading="lazy"></img>
 <img src="https://weareunder.design/work/nilus/0.png" class="sidebar-project-image" id="nilus" loading="lazy"></img>
+<img src="https://weareunder.design/work/wonderful/00.png" class="sidebar-project-image" id="wonderful" loading="lazy"></img>
 <img src="https://weareunder.design/work/utila/0.png" class="sidebar-project-image box-l" id="utila" loading="lazy"></img>
 <img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
