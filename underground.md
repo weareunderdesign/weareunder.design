@@ -71,7 +71,6 @@ our products and services are the embodiment of our vision and philosophy. each 
 | name | description | indie | enterprise | growth | startup |
 | :---- | :---- | :---- | :---- | :---- | :---- |
 | brandsprint | rapid branding process | freelancers, local businesses, students | large corporations, product launches | fast-growing startups, new market entry | early-stage startups, small businesses |
-| brandscale | brand and design system implementation |  |  |  |  |
 | design lifestyle products | curated products for designers | freelancers, students, educators | large design teams, 1000+ employees | medium businesses, 100-999 employees | small businesses, 10-99 employees |
 | design services | custom design solutions | tech-savvy creatives, digital artists | r\&d departments, innovative design teams | tech-forward medium businesses | ar/vr startups, innovative studios |
 
