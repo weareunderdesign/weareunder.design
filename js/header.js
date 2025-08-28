@@ -253,16 +253,12 @@ function addSidebar() {
   }
   customElements.define("under-navigation", UnderNavigation);
 
-  var count = 0;
 
-  const animations = $(".lottie-animation");
 
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
+
 
   $(".sidebar").on("mouseover", function () {
-    // document.body.style.overflow = "hidden";
+    // Unused mouseover handler - keeping for future use
   });
 
   $(".sidebar").on("mouseout", function () {
@@ -276,12 +272,7 @@ function addSidebar() {
     $("#works-wrapper").css("display", "block");
     $("#body-content").css("display", "none");
     
-    // Ensure the slider is initialized
-    setTimeout(() => {
-      if (typeof addSlider === 'function') {
-        addSlider();
-      }
-    }, 100);
+    // Note: addSlider function was removed as it was not defined anywhere
   });
 
   $("#sidebar-work").on("mouseleave", function () {

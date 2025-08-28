@@ -6,24 +6,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta property="og:title" content="Under - About Us" />
+    <meta property="og:title" content="Under - 404 Page Not Found" />
     <link rel="icon" href="./images/favicon.svg" />
     <link rel="apple-touch-icon" href="./images/webclip.svg" />
     <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
-    <script defer src="./js/about.js"></script>
-    <title>Under Design: About Us</title>
+    <link rel="stylesheet" href="./under.css" />
+    <script src="./js/pingpong.js"></script>
+    <title>404 - Page Not Found | Under Design</title>
 </head>
 
-<body data-theme="light"> 
-    <under-header></under-header>
+<body data-theme="light">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <div class="hero-section"></div>
+    
+    <under-header></under-header>
+    <under-navigation></under-navigation>
+    <div class="view ping-pong" style="position: relative;">
+        <video src="./animations/light.webm" autoplay muted loop class="fullscreen-video"></video>
+        <a href="/" class="circle circle-brandsprint random-color-change" id="cta-animation">
+            <h4>404</h4>
+        </a>
+    </div>
+    
     <under-footer></under-footer>
+    
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
+    <script src="./js/randomcolorchange.js"></script>
+    
+    <script>
+        // Auto redirect after 8 seconds (longer since user might want to click)
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 8000);
+    </script>
 </body>
 
 </html>

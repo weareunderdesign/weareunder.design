@@ -22,13 +22,12 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="./images/favicon.svg">
   <link rel="apple-touch-icon" href="./images/webclip.svg">
-  <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+  <link rel="stylesheet" href="./under.css" />
   <script src="./js/pingpong.js"></script>
   <title>ūnder</title>
 </head>
 
-<body data-theme="light" data-page="brandsprint">
+<body data-theme="light">
 
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54NVWMCH" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -38,7 +37,7 @@
   <under-header></under-header>
   <under-navigation></under-navigation>
   <div class="view ping-pong" style="position: relative;">
-    <under-slider></under-slider>
+    <video src="./animations/light.webm" autoplay muted loop class="fullscreen-video"></video>
     <a href="https://weareunder.design/brandsprint/" class="circle circle-brandsprint random-color-change"
       id="cta-animation">
       <h4>brand<br>sprint</h4>
@@ -47,73 +46,19 @@
   <a href="https://www.youtube.com/watch?v=X1a33D8wMDs" target="_blank" class="view row"
   style="position: relative;">
   <video src="./brandsprint/videos/ticket_web.webm" autoplay muted loop class="fullscreen-video"></video>
-  <div class="content-overlay padding-xl">
-    <p>branding is broken</p>
-  </div>
 </a>
   <a class="view row project-link" href="./justripe/" style="position: relative;">
     <img src="./images/justripe.png" alt="justripe project" class="project-image">
-    <div class="content-overlay padding-xl">
-      <p>justripe</p>
-    </div>
   </a>
 
 
   <a class="view row project-link random-color-change" href="https://weareunder.design/brandsprint/#brandsprintpagebook"
     style="position: relative;">
     <img src="./images/book.png" alt="brand sprint book" class="project-image">
-    <div class="content-overlay padding-xl">
-      <p>brandsprint (book)</p>
-    </div>
   </a>
-  <style>
-    .circle {
-      cursor: pointer;
-      display: flex;
-      border-radius: 100%;
-      position: absolute;
-      z-index: 4;
-      width: 220px;
-      height: 220px;
-      color: white;
-      right: 50%;
-      top: 30%;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
 
-    @media (max-width: 768px) {
-      .circle {
-        width: 160px;
-        height: 160px;
-      }
-    }
-
-    .content-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: white;
-      mix-blend-mode: difference;
-    }
-
-    .fullscreen-video {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .project-image {
-      object-fit: cover;
-      height: 100vh;
-      width: 100%;
-    }
-  </style>
+  <under-slider></under-slider>
   <under-footer></under-footer>
-
-  <video src="./animations/light.webm" autoplay muted loop class="ambient-video"></video>
   <script src="./js/slider.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/footer.js"></script>

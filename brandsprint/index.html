@@ -28,107 +28,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="../images/favicon.svg" />
     <link rel="apple-touch-icon" href="../images/webclip.svg" />
-    <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
+    <link rel="stylesheet" href="../under.css" />
     <script src="../js/pingpong.js"></script>
     <title>brandsprint by ūnder</title>
 
-    <style>
-        @font-face {
-            font-family: "Nudge";
-            src: url("fonts/VCNudge-BoldItalic.woff2") format("woff2"),
-                url("fonts/VCNudge-BoldItalic.woff") format("woff");
-        }
 
-        .nudge_font {
-            font-family: "Nudge", sans-serif;
-            font-size: 9rem;
-            line-height: 96%;
-        }
-
-        @media screen and (max-width: 768px) {
-            .nudge_font {
-                font-size: 4rem;
-            }
-
-            /* Hide circles on mobile */
-            .circle1,
-            .circle2,
-            .circle3,
-            .circle4,
-            .circle5 {
-                display: none !important;
-            }
-        }
-
-        /* Single scroll utility with vw-based transform */
-        .scroll {
-            animation: scroll 25s linear infinite;
-            flex-wrap: nowrap;
-            display: flex;
-            gap: 5rem;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100vw);
-            }
-        }
-
-        /* Each testimonial quote is fixed to 400px wide */
-        .quote {
-            width: 400px;
-            flex: 0 0 auto;
-        }
-
-        /* New wrapper to prevent horizontal scroll caused by duplicated content */
-        .infinite-wrapper {
-            width: 100vw;
-            overflow-x: hidden;
-            /* The negative margins center the wrapper across the full viewport */
-            margin-left: calc(-50vw + 50%);
-        }
-
-        /* Other styles (divider, schedule-div, etc.) remain unchanged */
-        .divider {
-            width: 1px;
-            height: 240px;
-            background-color: #000;
-            transform: rotate(10deg);
-            margin: auto 0;
-            opacity: 0.2;
-        }
-
-        @media screen and (max-width: 768px) {
-            .divider {
-                display: none;
-            }
-        }
-
-        .schedule-div p {
-            color: black;
-            text-align: center;
-        }
-
-        @media screen and (max-width: 768px) {
-            .schedule-div {
-                text-align: center;
-                align-items: center !important;
-            }
-
-            .schedule-div .date {
-                justify-content: center !important;
-            }
-
-            .schedule-div>div,
-            .schedule-div>a {
-                margin: 0 auto;
-            }
-        }
-    </style>
 </head>
 
 <body data-theme="light" data-page="brandsprint">
@@ -355,8 +259,11 @@
         </div>
         <div class="page gap-xl gap-l">
             <div class="row gap-m" style="flex-wrap: nowrap">
-                <div class="box column gap-l align-start">
-                    <img class="box-l" src="./images/BrandStrategy.svg" />
+                <div class="box column gap-l align-start hover-video-container">
+                    <img class="box-l static-image" src="./images/BrandStrategy.svg" />
+                    <video class="box-l hover-video" muted loop style="display: none;">
+                        <source src="./videos/BrandStrategy.mp4" type="video/mp4">
+                    </video>
                     <div class="column">
                         <h5>brand strategy</h5>
                         <p>
@@ -365,8 +272,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="box column gap-l align-start">
-                    <img class="box-l" src="./images/BrandSystem.svg" />
+                <div class="box column gap-l align-start hover-video-container">
+                    <img class="box-l static-image" src="./images/BrandSystem.svg" />
+                    <video class="box-l hover-video" muted loop style="display: none;">
+                        <source src="./videos/brandsystem.mp4" type="video/mp4">
+                    </video>
                     <div class="column">
                         <h5>brand system</h5>
                         <p>
@@ -380,8 +290,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="box column gap-l align-start">
-                    <img class="box-l" src="./images/Marketing.svg" />
+                <div class="box column gap-l align-start hover-video-container">
+                    <img class="box-l static-image" src="./images/Marketing.svg" />
+                    <video class="box-l hover-video" muted loop style="display: none;">
+                        <source src="./videos/marketing.mp4" type="video/mp4">
+                    </video>
                     <div class="column">
                         <h5>marketing</h5>
                         <p>
@@ -461,7 +374,7 @@
                 </div>
 
                 <div class="orange_background row justify-stretch accordion-section"
-                    style="flex-wrap: nowrap; background-color: #ff4b00">
+                    style="flex-wrap: nowrap; background-color: #ff8200">
                     <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
                         <h4 class="accordion-header">day 1-3 research</h4>
                         <div class="box-l"></div>
@@ -572,7 +485,7 @@
             <h3 class="box-m text-center">spots are limited and usually booked months in advance</h3>
         </div>
 
-        <div class="row gap-xl box-l nowarp-schedule" style="flex-wrap: wrap; justify-content: center">
+        <div class="row gap-xl box-l" style="flex-wrap: wrap; justify-content: center">
             <div class="column box padding-xl align-center gap-xl schedule-div">
                 <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
                     <h5>august</h5>
@@ -661,7 +574,39 @@
     <script src="../js/accordion.js"></script>
     <script src="../js/randomcolorchange.js"></script>
     <script src="../js/slider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+
+    <script>
+        // Hover video functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hoverContainers = document.querySelectorAll('.hover-video-container');
+            
+            hoverContainers.forEach(container => {
+                const staticImage = container.querySelector('.static-image');
+                const hoverVideo = container.querySelector('.hover-video');
+                
+                container.addEventListener('mouseenter', function() {
+                    staticImage.style.display = 'none';
+                    hoverVideo.style.display = 'block';
+                    hoverVideo.play();
+                });
+                
+                container.addEventListener('mouseleave', function() {
+                    hoverVideo.pause();
+                    hoverVideo.currentTime = 0;
+                    hoverVideo.style.display = 'none';
+                    staticImage.style.display = 'block';
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .hover-video-container .static-image,
+        .hover-video-container .hover-video {
+            transition: opacity 0.3s ease;
+        }
+    </style>
+
 
 
 </body>

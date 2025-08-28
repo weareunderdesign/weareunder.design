@@ -45,7 +45,7 @@ const ScrollLottie = (obj) => {
 const lottieAnimations = ["./animations/about.json"];
 
 const randomAnimation =
-  lottieAnimations[getRandomInt(0, lottieAnimations.length - 1)];
+  lottieAnimations[getRandomInt(lottieAnimations.length)];
 
 ScrollLottie({
   target: ".hero-section",
