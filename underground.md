@@ -4,7 +4,7 @@ this handbook is your ticket to understanding our world. it's a living document 
 
 whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative infrastructure.
 
-## starting
+## ūnder
 
 under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal, empowering creatives through meta-creativity.  
 eden started as a designer engineer, connecting creativity and technology.  
@@ -24,6 +24,20 @@ this approach allows us to:
 * iterate quickly  
 * maintain clear vision
 
+education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our work, demonstrating its creative potential even as we grow.
+
+we believe in radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation, seeing creativity as an ongoing dialogue.
+
+- open exchange: ideas multiply when shared freely
+- community synergy: we grow stronger together, supporting each other
+- joyful engagement: creativity thrives in an environment of play and wonder
+
+we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout our process, we maintain transparency and collaboration at the core of our design approach.
+we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. we're here to change that.
+
+"you're successful as soon as you send your work out into the world."
+rick rubin via twitter (2023)
+
 #### simplicity
 
 we welcome beginners with intuitive basics. simple to start, our approach adapts to your needs like a well-designed tool.
@@ -40,22 +54,6 @@ we offer depths for masters to explore. rich with potential, our offerings grow 
 
 we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
 
-#### education
-
-education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our work, demonstrating its creative potential even as we grow.
-
-we believe in radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation, seeing creativity as an ongoing dialogue.
-
-- open exchange: ideas multiply when shared freely
-- community synergy: we grow stronger together, supporting each other
-- joyful engagement: creativity thrives in an environment of play and wonder
-
-we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout our process, we maintain transparency and collaboration at the core of our design approach.
-we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. we're here to change that.
-
-"you're successful as soon as you send your work out into the world."
-rick rubin via twitter (2023)
-
 ## doing
 
 at under, we're doers spanning multiple creativity dimensions - from brand strategy to design services. we create methodologies that empower creators, build evolving systems, and foster collaborative innovation.
@@ -66,7 +64,7 @@ at under, we're doers spanning multiple creativity dimensions - from brand strat
 
 our self-focused approach ensures solid, tested offerings before expanding to wider markets, building strong foundations for growth.
 
-### products, services
+### what
 
 our products and services embody our vision and philosophy. each is crafted with care to push creative boundaries and meet the evolving needs of the creative community.
 
@@ -76,7 +74,7 @@ our products and services embody our vision and philosophy. each is crafted with
 | design lifestyle products | curated products for designers | freelancers, students, educators | large design teams, 1000+ employees | medium businesses, 100-999 employees | small businesses, 10-99 employees |
 | design services | custom design solutions | tech-savvy creatives, digital artists | r\&d departments, innovative design teams | tech-forward medium businesses | ar/vr startups, innovative studios |
 
-### who?
+### who
 
 by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
 
