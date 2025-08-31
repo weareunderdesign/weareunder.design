@@ -14,26 +14,19 @@ they're known for their "brandsprint" - a mind-blowing process that helps compan
 
 ## being
 
-at under, we believe humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond. by breaking barriers between mediums and idea-execution, we craft holistic solutions that engage all senses.  
-we see a future where creativity connects us more deeply to our work. as technology "disappears", we reconnect creators with their work through methodologies that eliminate barriers to creation - something we've optimized since day one.  
-solving our own problems first is core to our philosophy. we ensure our products and services are practical solutions born from real experience.  
-this approach allows us to:
+humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond - breaking barriers between mediums and idea-execution to craft holistic solutions that engage all senses.  
 
-* understand problems deeply  
-* create intuitive solutions  
-* iterate quickly  
-* maintain clear vision
+we see a future where creativity connects us more deeply to our work. as technology "disappears", we reconnect creators through methodologies that eliminate barriers to creation - optimized since day one by solving our own problems first.
 
-education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our work, demonstrating its creative potential even as we grow.
+this approach allows us to understand problems deeply, create intuitive solutions, iterate quickly, and maintain clear vision.
 
-we believe in radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation, seeing creativity as an ongoing dialogue.
+we foster continuous learning and radical transparency - our open approach extends beyond code to knowledge sharing and collaborative creation. we openly share our development journey, incorporating community feedback to maintain collaboration at our design core.
 
 - open exchange: ideas multiply when shared freely
-- community synergy: we grow stronger together, supporting each other
-- joyful engagement: creativity thrives in an environment of play and wonder
+- community synergy: we grow stronger together  
+- joyful engagement: creativity thrives in play and wonder
 
-we openly share our development journey through regular updates and milestones, crafting authentic narratives that reflect our essence. by incorporating community feedback throughout our process, we maintain transparency and collaboration at the core of our design approach.
-we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. we're here to change that.
+we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds.
 
 "you're successful as soon as you send your work out into the world."
 rick rubin via twitter (2023)
