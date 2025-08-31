@@ -26,15 +26,19 @@ this approach allows us to:
 * iterate quickly  
 * maintain clear vision
 
-#### dualism
+#### simplicity
 
-we embrace both simplicity and complexity. our offerings welcome beginners with intuitive basics while offering depths for masters to explore. simple to start, rich with potential, they grow alongside you.
+we welcome beginners with intuitive basics. simple to start, our approach adapts to your needs like a well-designed tool.
 
-our approach adapts and grows with you, like a well-designed tool. whether beginner or master, it flexes to your needs.
-
-- adaptive mastery: like water, we shape our offerings to be simple to start yet infinitely deep
-- continuous growth: the path of mastery has no end, our approach grows with you
+- adaptive mastery: like water, we shape our offerings to be simple to start
 - meta-creativity: we shape not just work, but the very way we create
+
+#### complexity
+
+we offer depths for masters to explore. rich with potential, our offerings grow alongside you as you develop expertise.
+
+- continuous growth: the path of mastery has no end, our approach grows with you
+- infinitely deep exploration for advanced techniques and nuanced applications
 
 we're unlocking human creativity by bridging the gap between inspiration and execution. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
 
