@@ -12,7 +12,7 @@ inbal began as a brand designer, creating remarkable identities and studying des
 after years across design studios, startups, and companies, they founded under with a crystallized vision - to empower human creativity, especially designers, helping humans create amazing things.  
 they're known for their "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
 
-## being
+## be
 
 humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond - breaking barriers between mediums and idea-execution to craft holistic solutions that engage all senses.  
 
@@ -31,14 +31,14 @@ we aim to break the isolation of creation - when work goes unshared, motivation 
 "you're successful as soon as you send your work out into the world."
 rick rubin via twitter (2023)
 
-#### simplicity
+#### simple
 
 we welcome beginners with intuitive basics. simple to start, our approach adapts to your needs like a well-designed tool.
 
 - adaptive mastery: like water, we shape our offerings to be simple to start
 - meta-creativity: we shape not just work, but the very way we create
 
-#### complexity
+#### complex
 
 we offer depths for masters to explore. rich with potential, our offerings grow alongside you as you develop expertise.
 
@@ -47,7 +47,7 @@ we offer depths for masters to explore. rich with potential, our offerings grow 
 
 we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
 
-## doing
+## do
 
 at under, we're doers spanning multiple creativity dimensions - from brand strategy to design services. we create methodologies that empower creators, build evolving systems, and foster collaborative innovation.
 
@@ -81,7 +81,7 @@ by addressing creative professionals' pain points, under builds a community that
 | product teams | wanting better prototyping tools, need seamless handoff, seeking unified design systems |
 | digital artists | seeking expressive tools, want to blend code and design, need intuitive interfaces |
 
-## content
+## amplify
 
 we craft and maintain under's unique voice across all platforms, developing compelling narratives around our products and services. we manage community engagement and design-in-public initiatives, creating content that reflects our core values of simplicity, complexity, and openness. we build relationships with key media outlets and industry influencers, coordinate communication strategies for product launches and company announcements, and lead educational content initiatives and knowledge-sharing programs.
 
