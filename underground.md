@@ -14,9 +14,8 @@ they're known for their "brandsprint" - a mind-blowing process that helps compan
 
 ## being
 
-at under, we believe humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond. by breaking barriers, we craft holistic solutions that engage all senses and resonate across mediums.  
-we see a future where creativity connects us more deeply to our work rather than separating us from it. as technology "disappears", we can reconnect creators with their work, removing barriers between idea and execution.  
-this isn't new for us. since day one, we've optimized our creative process. our journey focuses on developing methodologies that eliminate barriers to creation.  
+at under, we believe humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond. by breaking barriers between mediums and idea-execution, we craft holistic solutions that engage all senses.  
+we see a future where creativity connects us more deeply to our work. as technology "disappears", we reconnect creators with their work through methodologies that eliminate barriers to creation - something we've optimized since day one.  
 solving our own problems first is core to our philosophy. we ensure our products and services are practical solutions born from real experience.  
 this approach allows us to:
 
@@ -39,13 +38,13 @@ we offer depths for masters to explore. rich with potential, our offerings grow 
 - continuous growth: the path of mastery has no end, our approach grows with you
 - infinitely deep exploration for advanced techniques and nuanced applications
 
-we're unlocking human creativity by bridging the gap between inspiration and execution. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
+we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
 
 #### education
 
 education drives innovation at under. we foster continuous learning within our team and creative community, empowering creators at every stage. we showcase real applications of our work, demonstrating its creative potential even as we grow.
 
-we believe in radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation. we see creativity as an ongoing dialogue.
+we believe in radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation, seeing creativity as an ongoing dialogue.
 
 - open exchange: ideas multiply when shared freely
 - community synergy: we grow stronger together, supporting each other
