@@ -105,21 +105,12 @@ we approach content in two ways:
 both strategies work together to tell our story and engage our community effectively.  
 the garyvee model: document → create → distribute → listen → create → distribute
 
-#### creation
-
-* monthly kickoff call to define what's coming up, what's going live, and when
-* map out what matters - special drops, sprints, edits worth highlighting
-* write a flexible monthly plan structured by week: formats, topics, tone
-* match content to channels - shape each piece for its destination
-* once approved - create, schedule, publish
-
 #### types
 
-* "branding is broken" videos series: educational content exploring design industry issues and solutions
-* brand fuckups: biweekly 5-minute podcast highlighting design mistakes and lessons learned
-* live sessions: monthly Q&As, design reviews, and collaborative workshops
-* daily random 3-5 "power shots" from projects: quick glimpses of work-in-progress and design details
-* showcases: highlights of our best work, client success stories, and design innovations
+* branding is broken: videos series: educational content exploring design industry issues and solutions
+* brand fuckups: monthly 5-minute podcast highlighting design mistakes and lessons learned
+* power shots: daily 3 stories from projects - quick glimpses of work-in-progress and design details from past projects.
+* big reveals: showcases and highlights of our work
 * updates and job descriptions: company news, team updates, and open position announcements
 
 #### channels
