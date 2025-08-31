@@ -6,11 +6,10 @@ whether you're a team member, collaborator, or curious mind, we invite you to di
 
 ## starting
 
-under is a creative movement. founded in 2017 by the duo eden vidal and inbal lapidot vidal, we're all about empowering creatives.  
-eden started his journey as a designer engineer, connecting the worlds of creativity and technology.  
-inbal began as a brand designer, creating remarkable brand identities and studying the edges of design and art.  
-over the years, they moved between design studios, startups, and companies.
-in 2017, they founded under. their vision crystallized - to empower the creativity of humans, especially designers. they call it meta-creativity, helping humans create amazing things.  
+under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal, empowering creatives through meta-creativity.  
+eden started as a designer engineer, connecting creativity and technology.  
+inbal began as a brand designer, creating remarkable identities and studying design-art edges.  
+after years across design studios, startups, and companies, they founded under with a crystallized vision - to empower human creativity, especially designers, helping humans create amazing things.  
 they're known for their "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
 
 ## being
@@ -60,7 +59,7 @@ rick rubin via twitter (2023)
 
 ## doing
 
-at under, we're not just dreamers - we're doers. our work spans across multiple dimensions of creativity, from brand strategy to design services. we create methodologies that empower creators, build systems that evolve with their users, and foster a community of innovation and collaboration. here's what keeps us busy.
+at under, we're doers spanning multiple creativity dimensions - from brand strategy to design services. we create methodologies that empower creators, build evolving systems, and foster collaborative innovation.
 
 - holistic creation: unifying mind, body and spirit in the creative process
 - purposeful impact: solving real problems and meeting real needs
@@ -70,7 +69,7 @@ our self-focused approach ensures solid, tested offerings before expanding to wi
 
 ### products, services
 
-our products and services are the embodiment of our vision and philosophy. each one is crafted with care, designed to empower designers and push the boundaries of what's possible in the creative realm. from our flagship brand sprint process to our lifestyle products for designers, we're constantly innovating to meet the evolving needs of the creative community.
+our products and services embody our vision and philosophy. each is crafted with care to push creative boundaries and meet the evolving needs of the creative community.
 
 | name | description | indie | enterprise | growth | startup |
 | :---- | :---- | :---- | :---- | :---- | :---- |
@@ -80,7 +79,7 @@ our products and services are the embodiment of our vision and philosophy. each 
 
 ### who?
 
-by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite and empower our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
+by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
 
 | users | pain points / needs |
 | :---- | :---- |
