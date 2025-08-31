@@ -81,7 +81,7 @@ by addressing creative professionals' pain points, under builds a community that
 | product teams | wanting better prototyping tools, need seamless handoff, seeking unified design systems |
 | digital artists | seeking expressive tools, want to blend code and design, need intuitive interfaces |
 
-## amplify
+## echo
 
 we craft and maintain under's unique voice across all platforms, developing compelling narratives around our products and services. we manage community engagement and design-in-public initiatives, creating content that reflects our core values of simplicity, complexity, and openness. we build relationships with key media outlets and industry influencers, coordinate communication strategies for product launches and company announcements, and lead educational content initiatives and knowledge-sharing programs.
 
@@ -142,7 +142,7 @@ at under, our tone of voice and writing style is like that friend who always kno
 * peer voice: teach through sharing - nobody likes being lectured
 * suggest don't command: inspiration beats instruction - trust readers' judgment
 
-## work
+## flow
 
 we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.
 
@@ -184,39 +184,21 @@ high standards are not optional. "pretty good" isn't good enough. think first. d
    - always 2 directions. never just one
    - a draft is a thought system, not a moodboard
 
-### workflow
+### how
 
-track in figma 📌:
-* 🟢 to-do - ready to tackle
-* 🟡 in progress - crushing it now
-* 🔴 blocked - need help
-* ✅ done - shipped it
+track: 🟢 todo → 🟡 progress → 🔴 blocked → ✅ done  
+tools: figma, calendar, whatsapp, drive  
+feedback: fast, brutal, clear, never personal - improve, don't defend  
+delivery: clean, responsive, named, ready
 
-* design → figma
-* planning → calendar
-* communication → whatsapp, email
-* files → google drive
+rules:
+* ask early > fix later
+* half great > full mediocre  
+* taste mismatch → speak up
+* no ghosting, always update
 
-### delivery
-
-feedback: fast. brutal. clear. never personal. your job: improve, not defend.
-
-final delivery checklist:
-* all files clean and organized
-* responsive versions included
-* proper naming throughout
-* final handoff ready-to-go
-
-### rules
-
-* better to ask early than fix later
-* half a great idea > full mediocre one
-* if taste mismatch → speak up
-* no ghosting. no waiting. always update
-
-we measure your work on: precision, speed, initiative, taste, clean execution.
-
-remember: move fast, stay focused, deliver excellence.
+measure: precision, speed, initiative, taste, execution  
+remember: move fast, stay focused, deliver excellence
 
 ## rhythm
 
