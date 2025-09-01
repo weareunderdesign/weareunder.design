@@ -260,9 +260,9 @@
         <div class="page gap-xl gap-l">
             <div class="row gap-m" style="flex-wrap: nowrap">
                 <div class="box column gap-l align-start hover-video-container">
-                    <img class="box-l static-image" src="./images/BrandStrategy.svg" />
-                    <video class="box-l hover-video" muted loop style="display: none;">
-                        <source src="./videos/BrandStrategy.mp4" type="video/mp4">
+                    <img class="box-l static-image" src="./images/BrandStrategy.svg" style="display: none;" />
+                    <video class="box-l hover-video" muted loop>
+                        <source src="./videos/brandstrategy.webm" type="video/webm">
                     </video>
                     <div class="column">
                         <h5>brand strategy</h5>
@@ -273,9 +273,9 @@
                     </div>
                 </div>
                 <div class="box column gap-l align-start hover-video-container">
-                    <img class="box-l static-image" src="./images/BrandSystem.svg" />
-                    <video class="box-l hover-video" muted loop style="display: none;">
-                        <source src="./videos/brandsystem.mp4" type="video/mp4">
+                    <img class="box-l static-image" src="./images/BrandSystem.svg" style="display: none;" />
+                    <video class="box-l hover-video" muted loop>
+                        <source src="./videos/brandsystem.webm" type="video/webm">
                     </video>
                     <div class="column">
                         <h5>brand system</h5>
@@ -291,9 +291,9 @@
                     </div>
                 </div>
                 <div class="box column gap-l align-start hover-video-container">
-                    <img class="box-l static-image" src="./images/Marketing.svg" />
-                    <video class="box-l hover-video" muted loop style="display: none;">
-                        <source src="./videos/marketing.mp4" type="video/mp4">
+                    <img class="box-l static-image" src="./images/Marketing.svg" style="display: none;" />
+                    <video class="box-l hover-video" muted loop>
+                        <source src="./videos/brandmarketing.webm" type="video/webm">
                     </video>
                     <div class="column">
                         <h5>marketing</h5>
@@ -581,20 +581,16 @@
             const hoverContainers = document.querySelectorAll('.hover-video-container');
             
             hoverContainers.forEach(container => {
-                const staticImage = container.querySelector('.static-image');
                 const hoverVideo = container.querySelector('.hover-video');
                 
                 container.addEventListener('mouseenter', function() {
-                    staticImage.style.display = 'none';
-                    hoverVideo.style.display = 'block';
+                    hoverVideo.loop = true;
                     hoverVideo.play();
                 });
                 
                 container.addEventListener('mouseleave', function() {
                     hoverVideo.pause();
                     hoverVideo.currentTime = 0;
-                    hoverVideo.style.display = 'none';
-                    staticImage.style.display = 'block';
                 });
             });
         });
