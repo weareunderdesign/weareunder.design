@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Under type</title>
+
+  <!-- Metadata -->
+  <meta name="description"
+    content="Under: a modern, adaptive typeface focused on clarity, precision, and pixel-perfect readability from tiny screens to complex UX." />
+  <meta name="theme-color" content="#8159FB" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Phosphor Icons CDN for the copy icon -->
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <!-- Favicon (optional; leave paths as-is or update when we have assets) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS (order: framework → app styles) -->
+  <link rel="preconnect" href="https://weareunder.design/">
+  <link rel="stylesheet" href="https://weareunder.design/undercss">
+  <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+     HERO SECTION (Start)
+     ========================= -->
+
+  <div class="hero" role="banner">
+    <img src="assets/Group 1948755041 (1).svg" alt="Under.type hero graphic" class="hero-image" decoding="async"
+      fetchpriority="high" />
+  </div>
+
+  <!-- =========================
+         HERO SECTION (End)
+         ========================= -->
+
+
+
+  <!-- =========================
+     INTRO / HEADING SECTION (Start)
+     ========================= -->
+
+  <section aria-labelledby="under-type-heading" class="heading-sec">
+    <div class="text-sec text-center">
+      <h1 id="under-type-heading" class="h1-heading">under.type</h1>
+      <div class="first-sec-para">
+        <p class="first-para">
+          we’re under: we׳re all about keeping it simple while embracing complexity. this
+          also works in fonts: imagine we had a font that did all the work. no more digging for 20+ fonts, and
+          its adaptive to anything: from tiny screens, Figma, PDF forms to variable UX projects. you know
+          Arial? you know Inter? you know Source Sans Pro? they׳re fine, but why not make something that truly
+          works for us and works hard? “under” font׳s gonna be more ada’ptive, fluid, and modern. yeah,
+          modern. they׳re, like, totally works for whatever you need
+        </p>
+      </div>
+    </div>
+
+    <!-- Primary actions -->
+    <nav class="but" aria-label="primary actions">
+      <button type="button" class="b1" aria-label="Download font">download</button>
+      <button type="button" class="b2" aria-label="View GitHub repository">
+        <img src="assets/Octicons-mark-github 1.svg" alt="" decoding="async" loading="lazy" />
+        github
+      </button>
+    </nav>
+  </section>
+
+  <!-- =========================
+         INTRO / HEADING SECTION (End)
+         ========================= -->
+
+
+
+  <!-- =========================
+     COPY CODE BLOCK SECTION (Start)
+     ========================= -->
+
+  <section class="copy-code-block-sec">
+    <!-- Main container for the code block -->
+    <div class="code-block-container">
+
+      <!-- Copy button in the top right corner -->
+      <button id="copyButton" class="copy-button" aria-label="Copy code">
+        <i id="copyIcon" class="ph-duotone ph-copy text-2xl"></i>
+      </button>
+
+      <!-- Code content wrapper -->
+      <div class="code-content-wrapper">
+        <pre class="code-content"><code>
+<span class="comment">&lt;!-- custom font --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/undercss"</span><span class="tag">&gt;</span>
+
+<span class="tag">&lt;style&gt;</span>
+<span class="selector">:root</span> {
+<span class="property">font-family:</span> <span class="value">'under'</span>, <span class="value">sans-serif;</span>
+}
+
+<span class="at-rule">@supports</span> (<span class="property">font-variation-settings:</span> <span class="value">normal</span>) {
+<span class="selector">:root</span> {
+    <span class="property">font-family:</span> <span class="value">'under var'</span>, <span class="value">sans-serif;</span>
+}
+}
+<span class="tag">&lt;/style&gt;</span>
+
+<span class="comment">&lt;!-- official cdn --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/undercss"</span><span class="tag">&gt;</span>
+      </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+     COPY CODE BLOCK SECTION (End)
+     ========================= -->
+
+
+
+
+  <!-- =======================
+   Weights Section (Start) 
+   ========================= -->
+
+  <section class="weight-section" style="background-color: #8159FB;" aria-label="font weights">
+    <div class="purple-section">
+
+      <!-- Font weight 100 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 100">100</button>
+        <p class="p1 p-1">under type thin</p>
+      </div>
+
+      <!-- Font weight 200 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 200">200</button>
+        <p class="p1 p2">under type extralight</p>
+      </div>
+
+      <!-- Font weight 300 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 300">300</button>
+        <p class="p1 p3">under type light</p>
+      </div>
+
+      <!-- Font weight 400 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 400">400</button>
+        <p class="p1 p4">under type regular</p>
+      </div>
+
+      <!-- Font weight 500 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 500">500</button>
+        <p class="p1 p5">under type medium</p>
+      </div>
+
+      <!-- Font weight 600 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 600">600</button>
+        <p class="p1 p6">under type semibold</p>
+      </div>
+
+      <!-- Font weight 700 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 700">700</button>
+        <p class="p1 p7">under type bold</p>
+      </div>
+
+      <!-- Font weight 800 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 800">800</button>
+        <p class="p1 p8">under type extrabold</p>
+      </div>
+
+      <!-- Font weight 900 -->
+      <div class="font-1-9-section">
+        <button class="font-weight-section" type="button" aria-label="Weight 900">900</button>
+        <p class="p1 p9">under type black</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================
+   Weights Section (End) 
+   ========================= -->
+
+
+
+
+  <!-- ================= 
+ R Section (Start) 
+ ================= -->
+
+  <section class="r-section" aria-label="R section graphic">
+    <div class="r-container">
+      <img src="assets/94.svg" alt="Letter R graphic" class="r-image" decoding="async" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ================= 
+ R Section (End) 
+ ================= -->
+
+
+
+  <!-- ================= 
+   Weight Bar Section (Start) 
+   ================= -->
+
+  <section class="weight-sec" aria-label="Font weight selector">
+    <div class="weight-bar-wrapper">
+      <div class="weight-bar" id="weightBar">
+        <div class="dot active" data-weight="100"></div>
+        <div class="dot" data-weight="200"></div>
+        <div class="dot" data-weight="300"></div>
+        <div class="dot" data-weight="400"></div>
+        <div class="dot" data-weight="500"></div>
+        <div class="dot" data-weight="600"></div>
+        <div class="dot" data-weight="700"></div>
+        <div class="dot" data-weight="800"></div>
+        <div class="dot" data-weight="900"></div>
+      </div>
+    </div>
+
+    <div class="weight-text">
+      <p>weight</p>
+      <p>100</p>
+    </div>
+
+    <!-- Letters -->
+    <div class="letters" id="letters">
+      ABCDEFGHIJKLM<br>
+      NOPQRSTUVWXYZ<br>
+      abcdefghijklmn<br>
+      opqrstuvwxyz<br>
+      1234567890<br>
+      !?#*:;[]()%+=
+    </div>
+  </section>
+
+  <!-- ================= 
+ Weight Bar Section (End) 
+ ================= -->
+
+
+
+
+  <!-- ================= 
+   Features Section 
+   ================= -->
+
+  <section class="features-sec" aria-labelledby="features-heading">
+    <div class="text-sec text-center">
+      <h1 id="features-heading" class="h1-heading">features</h1>
+      <h3 class="features-h3">Alternative letter</h3>
+      <p class="features-p">
+        The font offers alternative letterforms that can be <br />
+        accessed manually for stylistic variation
+      </p>
+    </div>
+    <div class="img-section">
+      <img src="assets/Group 1948755433.svg" alt="Alternative letter example A" decoding="async" loading="lazy" />
+      <img src="assets/Group 1948755432.svg" alt="Alternative letter example B" decoding="async" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ================= 
+ Superscript / Subscript Section 
+ ================= -->
+
+  <section class="features-sec" aria-labelledby="script-heading">
+    <div class="script-section text-sec text-center">
+      <h3 id="script-heading" class="script-h3">Superscript and Subscript</h3>
+      <p class="script-p">
+        Superscript (sups): raises text to superscript position (e.g., x²). <br />
+        Subscript (subs): lowers text to subscript position (e.g., H₂O).
+      </p>
+    </div>
+    <div class="img-section">
+      <img src="assets/Group 1948755430.svg" alt="Superscript example" decoding="async" loading="lazy" />
+      <img src="assets/Group 1948755431 (1).svg" alt="Subscript example" decoding="async" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ================= 
+ Precision and Control Section 
+ ================= -->
+
+  <section class="features-sec" aria-labelledby="precision-heading">
+    <div class="text-sec text-center">
+      <h3 id="precision-heading" class="precision-h3">Precision and control</h3>
+      <p class="precision-p">
+        custom spacing pairs for precision, and auto letter-spacing for balanced flow. <br />
+        Auto-letter spacing is adjusted per weight for optimal readability.
+      </p>
+    </div>
+    <div class="img-section">
+      <img src="assets/hey Group.svg" alt="Kerning and spacing illustration 1" decoding="async" loading="lazy" />
+      <img src="assets/Group 1948755507.svg" alt="Kerning and spacing illustration 2" decoding="async" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ================= 
+ Precise & Simple Section 
+ ================= -->
+
+  <section class="features-sec" aria-labelledby="precise-simple-heading">
+    <div class="script-section text-sec text-center">
+      <h3 id="precise-simple-heading" class="script-pre">precise and simple</h3>
+      <p class="script-pre-p">
+        clean lines, easy to read. no fancy stuff <br />
+        just clarity and function.
+      </p>
+    </div>
+    <div class="img-section">
+      <img src="assets/Group 1948755485.svg" alt="Minimal letterforms example 1" decoding="async" loading="lazy" />
+      <img src="assets/Group 1948755484.svg" alt="Minimal letterforms example 2" decoding="async" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- ================= 
+ Pixel-Perfect Section 
+ ================= -->
+
+  <section class="features-sec" aria-labelledby="pixel-perfect-heading">
+    <div class="script-section text-sec text-center">
+      <h3 id="pixel-perfect-heading" class="pixel-h3">Pixel-perfect optimization</h3>
+      <p class="pixel-p">
+        specifically optimized for 16px to ensure crisp rendering <br />
+        auto-sizing for small text for better legibility.
+      </p>
+    </div>
+    <div class="img-section">
+      <img src="assets/Group 1948755506 (3).svg" alt="Pixel-perfect optimization example 1" decoding="async"
+        loading="lazy" />
+      <img src="assets/Group 1948755436.svg" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ================= 
+     Typography Cuts Section (Start) 
+     ================= -->
+
+  <div class="container flex-container">
+
+    <!-- ===== Micro Section (Start) ===== -->
+    <div class="text-section text-section-1">
+      <div class="section-header">
+        <span class="section-title">micro: 6-12pt</span>
+        <div class="divider"></div>
+      </div>
+      <p class="section-content micro">
+        under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
+        more air. text sits in between, holding the balance.
+      </p>
+    </div>
+    <!-- ===== Micro Section (End) ===== -->
+
+    <!-- ===== Text Section (Start) ===== -->
+    <div class="text-section text-section-2">
+      <div class="section-header">
+        <span class="section-title">text: 13-20pt</span>
+        <div class="divider"></div>
+      </div>
+      <p class="section-content text-size">
+        under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
+        more air. text sits in between, holding the balance.
+      </p>
+    </div>
+    <!-- ===== Text Section (End) ===== -->
+
+    <!-- ===== Display Section (Start) ===== -->
+    <div class="text-section text-section-3">
+      <div class="section-header">
+        <span class="section-title">display: 21pt and up</span>
+        <div class="divider"></div>
+      </div>
+      <p class="section-content display-size">
+        under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
+        more air. text sits in between, holding the balance.
+      </p>
+    </div>
+    <!-- ===== Display Section (End) ===== -->
+  </div>
+
+  <!-- ================= 
+         Typography Cuts Section (End) 
+         ================= -->
+
+
+
+
+
+  <!-- ================================
+     Extensive Weight Range Section (Start)
+     ================================ -->
+
+  <section class="extensive-wrapper" aria-labelledby="extensive-heading">
+    <div class="extensive-section">
+      <img src="assets/extensive-weight-range.svg" alt="Extensive weight range graphic" decoding="async"
+        loading="lazy" />
+    </div>
+
+    <div>
+      <p class="ext-para" id="extensive-heading">
+        from hairline to black to suit various design needs. <br>
+        Designed to adapt seamlessly, whether for <br>
+        minimal elegance or striking statements
+      </p>
+    </div>
+  </section>
+
+  <!-- ================================
+         Extensive Weight Range Section (End)
+         ================================ -->
+
+
+  <!-- ================================
+     Font Weight Bar Section (Start)
+     ================================ -->
+
+  <section class="weight-bar-sce" aria-labelledby="fontWeightPreview">
+
+    <!-- Labels (Thin → Black) -->
+    <div class="weights">
+      <span data-weight="100" data-step="0">Thin</span>
+      <span data-weight="200" data-step="1">Extralight</span>
+      <span data-weight="300" data-step="2">Light</span>
+      <span data-weight="400" data-step="3" class="active">Regular</span>
+      <span data-weight="500" data-step="4">Medium</span>
+      <span data-weight="600" data-step="5">Semibold</span>
+      <span data-weight="700" data-step="6">Bold</span>
+      <span data-weight="800" data-step="7">Extrabold</span>
+      <span data-weight="900" data-step="8">Black</span>
+    </div>
+
+    <!-- Ruler with progress + ticks -->
+    <div class="ruler-container">
+      <div class="ruler-progress" id="rulerProgress"></div>
+      <div class="ruler-ticks" id="rulerTicks"></div>
+    </div>
+
+    <!-- Preview Text -->
+    <div class="preview" id="preview" aria-live="polite">Aa</div>
+
+  </section>
+
+  <!-- ================================
+     Font Weight Bar Section (End)
+     ================================ -->
+
+
+<!-- Skipped -->
+  <!-- ============================
+     "A" Font Weight Section (Start)
+     ============================ -->
+<section class="abc" aria-label="Font weight showcase for letter A">
+  <div class="cards-container">
+    <!-- Each card shows "a" in a different font weight -->
+    <div class="card" data-weight="100"><span class="large-char">a</span></div>
+    <div class="card" data-weight="200"><span class="large-char">a</span></div>
+    <div class="card" data-weight="300"><span class="large-char">a</span></div>
+    <div class="card" data-weight="400"><span class="large-char">a</span></div>
+    <div class="card" data-weight="500"><span class="large-char">a</span></div>
+    <div class="card" data-weight="600"><span class="large-char">a</span></div>
+    <div class="card" data-weight="700"><span class="large-char">a</span></div>
+    <div class="card" data-weight="800"><span class="large-char">a</span></div>
+    <div class="card" data-weight="900"><span class="large-char">a</span></div>
+  </div>
+</section>
+<!-- ============================
+     "A" Font Weight Section (End)
+     ============================ -->
+
+
+
+
+
+  <!-- Imagine Section -->
+  <section class="imagine-section">
+    <div class="imagine-sec">
+      <img src="assets/Group 1948755431 (2).svg" alt="Imagine Illustration 1" id="imagine-img-1">
+    </div>
+    <div class="imagine-sec">
+      <img src="assets/Group 1948755442 (2).svg" alt="Imagine Illustration 2" id="imagine-img-2">
+    </div>
+    <div class="imagine-sec">
+      <img src="assets/let’s play.svg" alt="Imagine Illustration 2" id="imagine-img-2">
+    </div>
+  </section>
+
+
+
+  <!-- Customizable Hey Section -->
+  <div id="fc-component-root" class="fc-main-wrapper">
+    <div class="fc-controls-container">
+      <!-- Sliders section -->
+      <div class="fc-controls">
+        <div class="test">
+          <!-- Weight slider -->
+          <div class="fc-control">
+            <input id="fc-weightRange" class="fc-range-input" type="range" min="100" max="900" step="1" value="400">
+            <div class="fc-bar-label">
+              <label for="fc-weightRange">WEIGHT</label>
+              <div id="fc-weightValue">400</div>
+            </div>
+          </div>
+
+          <!-- Size slider -->
+          <div class="fc-control">
+            <input id="fc-sizeRange" class="fc-range-input" type="range" min="20" max="300" step="1" value="64">
+            <div class="fc-bar-label">
+              <label for="fc-sizeRange">SIZE</label>
+              <div id="fc-sizeValue">64 PX</div>
+            </div>
+          </div>
+
+          <!-- Spacing slider -->
+          <div class="fc-control">
+            <input id="fc-spacingRange" class="fc-range-input" type="range" min="0" max="2" step="0.05" value="0">
+            <div class="fc-bar-label">
+              <label for="fc-spacingRange">SPACING</label>
+              <div id="fc-spacingValue">0.00 EM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Editable text and button section -->
+      <section class="fc-editable-sec">
+        <div class="fc-text-box">
+          <div id="fc-output" contenteditable="true" spellcheck="false">hey</div>
+          <div class="fc-button-row">
+            <!-- Alignment buttons -->
+            <div class="fc-btn-group fc-align-group">
+              <button class="fc-btn fc-align-btn" data-align="left" aria-label="Align Left">
+                <svg class="fc-left-align" width="17" height="12" viewBox="0 0 17 12" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 0.542969V1.54297H0V0.542969H17Z" fill="currentColor" />
+                  <path d="M9.06641 5.35938V6.35938H0V5.35938H9.06641Z" fill="currentColor" />
+                  <path d="M11.333 10.459V11.459H0V10.459H11.333Z" fill="currentColor" />
+                </svg>
+              </button>
+              <button class="fc-btn fc-align-btn fc-active" data-align="center" aria-label="Align Center">
+                <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 0.542969V1.54297H0V0.542969H17Z" fill="currentColor" />
+                  <path d="M13.0664 5.35938V6.35938H4V5.35938H13.0664Z" fill="currentColor" />
+                  <path d="M14.333 10.459V11.459H3V10.459H14.333Z" fill="currentColor" />
+                </svg></button>
+              <button class="fc-btn fc-align-btn" data-align="right" aria-label="Align Right">
+                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 0.542969V1.54297H0V0.542969H17Z" fill="currentColor" />
+                  <path d="M17.0664 5.35938V6.35938H8V5.35938H17.0664Z" fill="currentColor" />
+                  <path d="M17.333 10.459V11.459H6V10.459H17.333Z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+            <!-- This group contains the case and alt glyph buttons -->
+            <div class="fc-btn-group">
+              <button class="fc-btn">alt a</button>
+              <button class="fc-btn">alt r</button>
+              <button class="fc-btn">alt u</button>
+              <button class="fc-btn">alt y</button>
+              <button class="fc-btn">alt G</button>
+              <button class="fc-btn" data-case="uppercase">uppercase</button>
+              <button class="fc-btn" data-case="lowercase">lowercase</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+  <!-- Keyboard Cutomizable Section -->
+  <section class="customize-text">
+    <div class="wrapper">
+      <!-- Left Panel -->
+      <div class="left">
+        <div class="header">
+          <span>Glyphs set overview</span>
+          <div class="slider-container">
+            <label for="weightSlider">Weight</label>
+            <input type="range" id="weightSlider" min="100" max="900" step="1" value="400">
+            <span id="weightValue">400</span>
+          </div>
+        </div>
+
+        <div class="grid-section">
+          <h3>Uppercase</h3>
+          <div class="grid" id="uppercase"></div>
+
+          <h3>Lowercase</h3>
+          <div class="grid" id="lowercase"></div>
+
+          <h3>Numbers & Symbols</h3>
+          <div class="grid" id="symbols"></div>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right">
+        <div class="guideline ascender"></div>
+        <div class="guideline cap-height"></div>
+        <div class="guideline x-height"></div>
+        <div class="guideline baseline"></div>
+        <div class="guideline descender"></div>
+
+        <div class="label ascender-label">Ascender</div>
+        <div class="label cap-label">Cap Height</div>
+        <div class="label x-label">X-Height</div>
+        <div class="label baseline-label">Baseline</div>
+        <div class="label desc-label">Descender</div>
+
+        <span id="glyphChar">A</span>
+        <div class="code-label" id="unicodeLabel">uni0041</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- motion-section -->
+  <section class="motion-sec">
+    <div class="motion-main-div">
+
+      <!-- Top circles -->
+      <div class="motion-1">
+        <img class="motion-circle" width="130" src="assets/Ellipse 226.png" alt="">
+        <img class="motion-circle" width="130" src="assets/Ellipse 227.svg" alt="">
+      </div>
+
+      <!-- Big middle circle -->
+      <div class="motion-2">
+        <img width="80%" class="motion-circle" src="assets/Ellipse 207.svg" alt="">
+      </div>
+
+      <!-- Bottom icons -->
+      <div class="motion-3">
+        <img width="130" src="assets/Group 1948755508.svg" alt="">
+        <img width="130" src="assets/Polygon 10 (1).svg" alt="">
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- font-in-action-section-->
+  <section class="font-section">
+    <div class="font-action">
+      <h1 class="font-action-h1">Font in action</h1>
+    </div>
+    <div class="img-section">
+      <img src="assets/Poster (2).svg" width="46%" alt="Pixel-perfect optimization example 1" decoding="async"
+        loading="lazy" />
+      <img src="assets/Poster (3).svg" width="46%" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+      <img src="assets/Poster (4).svg" width="46%" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+      <img src="assets/Poster (5).svg" width="46%" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+      <img src="assets/Poster (6).svg" width="46%" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+      <img src="assets/Poster (7).svg" width="46%" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+      <img src="assets/Poster (8).svg" width="46%" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+      <img src="assets/Poster (9).svg" width="46%" alt="Pixel-perfect optimization example 2" decoding="async"
+        loading="lazy" />
+    </div>
+  </section>
+
+  <!-- get-under-font-btn-sec -->
+  <section>
+    <div class="get-button-sec">
+      <button class="get-btn">
+        Get Under font
+      </button>
+    </div>
+  </section>
+
+
+  <!-- get-button-section -->
+  <section>
+    <div class="hero" role="banner">
+      <img src="assets/Group 1948755438 (1).svg" alt="Under.type hero graphic" width="80%" decoding="async"
+        fetchpriority="high" />
+    </div>
+    <div class="go-text-div">
+      <p class="go-text">It’s Free & Open Source. <br>no fine print</p>
+    </div>
+  </section>
+
+
+
+  <!-- ============================
+     "Footer-section (starts)
+     ============================ -->
+
+<section class="foo-sec">
+  <div class="footer">
+    <!-- Logo + copyright -->
+    <div class="footer-col">
+      <img src="assets/Logo.svg" alt="Logo" class="logo">
+      <p class="logo-text">Ⓒ All Rights Reserved</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Request a demo</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <ul>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     "Footer-section (Ends)
+     ============================ -->
+
+
+
+
+  <!-- Scripts -->
+  <script src="index.js" defer></script>
+</body>
+
+</html>
