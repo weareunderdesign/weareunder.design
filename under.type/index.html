@@ -23,7 +23,167 @@
   <link rel="preconnect" href="https://weareunder.design/">
   <link rel="stylesheet" href="https://weareunder.design/undercss">
   <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Font Face Declarations */
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-Thin.woff2') format('woff2'),
+        url('fonts/under-otf/under-Thin.otf') format('opentype');
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-ExtraLight.woff2') format('woff2'),
+        url('fonts/under-otf/under-ExtraLight.otf') format('opentype');
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-Light.woff2') format('woff2'),
+        url('fonts/under-otf/under-Light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-Regular.woff2') format('woff2'),
+        url('fonts/under-otf/under-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-Medium.woff2') format('woff2'),
+        url('fonts/under-otf/under-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-SemiBold.woff2') format('woff2'),
+        url('fonts/under-otf/under-SemiBold.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-Bold.woff2') format('woff2'),
+        url('fonts/under-otf/under-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-ExtraBold.woff2') format('woff2'),
+        url('fonts/under-otf/under-ExtraBold.otf') format('opentype');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Under';
+      src: url('fonts/under-woff2/under-Black.woff2') format('woff2'),
+        url('fonts/under-otf/under-Black.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .under {
+      font-family: Under, Sans-serif;
+
+    }
+
+    .font-under {
+      font-family: Under, Sans-serif;
+      font-size: 9rem;
+
+    }
+
+    .p-under {
+      font-size: 48px;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 900px) {
+      .font-under {
+        font-size: 4rem;
+        font-weight: 600;
+      }
+
+      .p-under {
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+    }
+
+    /* Copy Clipboard */
+
+    .comment {
+      color: #808080;
+    }
+
+    .tag {
+      color: #f5f5f5;
+    }
+
+    .attribute {
+      color: #ffbfe1;
+    }
+
+    .string {
+      color: #02903b;
+    }
+
+    .selector {
+      color: #ffbfe1;
+    }
+
+    .property {
+      color: #02903b;
+    }
+
+    .value {
+      color: #f5f5f5;
+    }
+
+    .at-rule {
+      color: #014add;
+    }
+
+    .white {
+      color: #fff;
+    }
+
+    .black {
+      color: #000;
+    }
+  </style>
 </head>
 
 <body>
@@ -32,240 +192,218 @@
      HERO SECTION (Start)
      ========================= -->
 
-  <div class="view row justify-center align-center margin-m padding-0" role="banner"
-    style="display: flex; justify-content: center; align-items: center; margin: 30px; padding: 0;">
+  <div class=" justify-center align-center box" role="banner" style=" margin-top: 40px;">
     <img src="assets/Group 1948755041 (1).svg" alt="Under.type hero graphic" class="box-l" decoding="async"
-      fetchpriority="high" style="width: 90%; height: auto; display: block;" />
+      fetchpriority="high" style="width: 90%;" />
   </div>
-  <!-- =========================
-         HERO SECTION (End)
-         ========================= -->
-
-
 
   <!-- =========================
-     INTRO / HEADING SECTION (Start)
-     ========================= -->
+           HERO SECTION (End)
+           ========================= -->
 
-  <section aria-labelledby="under-type-heading" class="page column gap-l"
-    style="margin-top: 120px; margin-bottom: 50px; display: flex; flex-direction: column; gap: 30px;">
-    <div class="box column align-center" style="display: flex; flex-direction: column;">
-      <h1 id="under-type-heading" class="text-center"
-        style="color: #000; text-align: center; font-family: Under, sans-serif; font-size: 144px; font-weight: 600; line-height: 1.2; text-transform: lowercase;">
-        under.type
-      </h1>
 
-      <div class="row justify-center align-center" style="display: flex; justify-content: center; align-items: center;">
-        <p class="text-l text-center"
-          style="max-width: 1003px; width: 100%; color: #000; text-align: center; font-family: Under, sans-serif; font-size: 48px; font-weight: 200; line-height: 1.2;">
-          we’re under: we׳re all about keeping it simple while embracing complexity. this
-          also works in fonts: imagine we had a font that did all the work. no more digging for 20+ fonts, and
-          its adaptive to anything: from tiny screens, Figma, PDF forms to variable UX projects. you know
-          Arial? you know Inter? you know Source Sans Pro? they׳re fine, but why not make something that truly
-          works for us and works hard? “under” font׳s gonna be more ada’ptive, fluid, and modern. yeah,
-          modern. they׳re, like, totally works for whatever you need
-        </p>
+
+  <!-- =========================
+       INTRO / HEADING SECTION (Start)
+       ========================= -->
+
+  <div class="view column align-center gap-xl">
+    <div class="page gap-xl">
+      <div class="page gap-xl">
+        <h1 id="under-type-heading" class="text-center align-center font-under" style="font-weight: 600;">
+          under.type
+        </h1>
+        <div class="box column align-center">
+          <p class="box-l text-center p-under">
+            we’re under: we׳re all about keeping it simple while embracing complexity. this
+            also works in fonts: imagine we had a font that did all the work. no more digging for 20+ fonts, and
+            its adaptive to anything: from tiny screens, Figma, PDF forms to variable UX projects. you know
+            Arial? you know Inter? you know Source Sans Pro? they׳re fine, but why not make something that truly
+            works for us and works hard? “under” font׳s gonna be more ada’ptive, fluid, and modern. yeah,
+            modern. they׳re, like, totally works for whatever you need
+          </p>
+        </div>
+
+        <!-- Primary actions -->
+        <nav class="row justify-center align-center gap-l padding-m wrap box" aria-label="primary actions">
+          <a href="#">
+            <button type="button" aria-label="Download font" class="align-center justify-center under"
+              style="border-radius: 50px; border: none; padding: 23.772px 110.248px 23.731px 110.012px; font-size: 39.62px;  transition: all 0.3s ease;  color: #FFBFE1; background: #02903B;">
+              download
+            </button>
+          </a>
+
+          <a href="#">
+            <button type="button" aria-label="View GitHub repository" class="align-center justify-center under gap-m"
+              style="border-radius: 50px; border: none; font-weight: 300; padding: 23.772px 110.248px 23.731px 110.012px; font-size: 39.62px; transition: all 0.3s ease; color: #02903B; background: #FFBFE1;">
+              <img src="assets/Octicons-mark-github 1.svg" alt="" decoding="async" loading="lazy" />
+              github
+            </button>
+          </a>
+        </nav>
       </div>
     </div>
-
-    <!-- Primary actions -->
-    <nav class="row justify-center align-center gap-m padding-m wrap" aria-label="primary actions"
-      style="display: flex; justify-content: center; align-items: center; gap: 2rem; flex-wrap: wrap; padding: 1rem;">
-      <button type="button" aria-label="Download font" class="padding-m"
-        style="border-radius: 50px; cursor: pointer; border: none; text-align: center; text-transform: lowercase; font-style: normal; font-weight: 300; display: inline-flex; justify-content: center; align-items: center; font-family: Under, sans-serif; padding: 23.772px 110.248px 23.731px 110.012px; font-size: 39.62px; line-height: 1.28; transition: all 0.3s ease; min-width: 180px; color: #FFBFE1; background: #02903B;"
-        onmouseover="this.style.background='#027a33'" onmouseout="this.style.background='#02903B'">
-        download
-      </button>
-
-      <button type="button" aria-label="View GitHub repository" class="padding-m row align-center gap-s"
-        style="border-radius: 50px; cursor: pointer; border: none; text-align: center; text-transform: lowercase; font-style: normal; font-weight: 300; display: inline-flex; justify-content: center; align-items: center; font-family: Under, sans-serif; padding: 23.772px 110.248px 23.731px 110.012px; font-size: 39.62px; line-height: 1.28; transition: all 0.3s ease; min-width: 180px; color: #02903B; background: #FFBFE1; gap: 0.5rem;"
-        onmouseover="this.style.background='#f5a5ce'" onmouseout="this.style.background='#FFBFE1'">
-        <img src="assets/Octicons-mark-github 1.svg" alt="" decoding="async" loading="lazy" />
-        github
-      </button>
-    </nav>
+  </div>
   </section>
 
   <!-- =========================
-         INTRO / HEADING SECTION (End)
-         ========================= -->
+           INTRO / HEADING SECTION (End)
+           ========================= -->
 
 
 
   <!-- =========================
-     COPY CODE BLOCK SECTION (Start)
-     ========================= -->
+       COPY CODE BLOCK SECTION (Start)
+       ========================= -->
 
-  <section class="view row justify-center align-center padding-m"
-    style="display: flex; justify-content: center; align-items: center; padding: 1rem; margin-bottom: 70px; font-family: Under, sans-serif; font-size: 20px; font-weight: 300; line-height: normal; color: #808080;">
+  <section class="view row justify-center align-center padding-m box under box-m"
+    style="margin-bottom: 70px; font-size: 20px; font-weight: 300; color: #808080;">
     <!-- Main container for the code block -->
-    <div class="panel"
-      style="position: relative; width: 100%; max-width: 820px; background-color: #000; border-radius: 10px; border: 1px solid #1f2937; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); overflow: hidden;">
+    <div class="panel foreground-primary border shadow box-l code-container"
+      style="position: relative; width: 100%; max-width: 820px; border-radius: 10px; ">
       <!-- Copy button in the top right corner -->
       <button id="copyButton" class="copy-button" aria-label="Copy code"
-        style="position: absolute; top: 1rem; right: 1rem; color: #9ca3af; transition: color 0.2s ease; outline: 2px solid transparent; outline-offset: 2px; cursor: pointer; border: none; background: transparent;"
-        onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'"
-        onfocus="this.style.outlineColor='#4b5563'; this.style.outlineStyle='solid'; this.style.borderRadius='0.5rem'"
-        onblur="this.style.outlineColor='transparent'">
-        <i id="copyIcon" class="ph-duotone ph-copy"
-          style="font-size: 20px; font-family: Under, sans-serif; font-weight: 300; line-height: normal;"></i>
+        style="position: absolute; top: 1rem; right: 1rem; color: #9ca3af; transition: color 0.2s ease; cursor: pointer; border: none; background: transparent;">
+        <i id="copyIcon" class="ph-duotone ph-copy under" style="font-size: 20px; font-weight: 300;"></i>
       </button>
 
       <!-- Code content wrapper -->
-      <div class="scrollable"
-        style="padding: 1.5rem 1.25rem; overflow-x: auto; font-size: 16px; font-family: Under, sans-serif; font-weight: 300; line-height: 1.6; white-space: pre-wrap; word-break: break-word;">
-        <pre class="code-content"><code>
-   <span class="comment" style="color: #808080;">&lt;!-- custom font --&gt;</span>
-   <span class="tag" style="color: #f5f5f5;">&lt;link</span> <span class="attribute" style="color: #ffbfe1;">rel=</span><span class="string" style="color: #02903b;">"preconnect"</span> <span class="attribute" style="color: #ffbfe1;">href=</span><span class="string" style="color: #02903b;">"https://your-font-file-host/"</span><span class="tag" style="color: #f5f5f5;">&gt;</span>
-   <span class="tag" style="color: #f5f5f5;">&lt;link</span> <span class="attribute" style="color: #ffbfe1;">rel=</span><span class="string" style="color: #02903b;">"stylesheet"</span> <span class="attribute" style="color: #ffbfe1;">href=</span><span class="string" style="color: #02903b;">"https://your-font-file-host/undercss"</span><span class="tag" style="color: #f5f5f5;">&gt;</span>
-   
-   <span class="tag" style="color: #f5f5f5;">&lt;style&gt;</span>
-   <span class="selector" style="color: #ffbfe1;">:root</span> {
-   <span class="property" style="color: #02903b;">font-family:</span> <span class="value" style="color: #f5f5f5;">'under'</span>, <span class="value" style="color: #f5f5f5;">sans-serif;</span>
-   }
-   
-   <span class="at-rule" style="color: #014add;">@supports</span> (<span class="property" style="color: #02903b;">font-variation-settings:</span> <span class="value" style="color: #f5f5f5;">normal</span>) {
-   <span class="selector" style="color: #ffbfe1;">:root</span> {
-       <span class="property" style="color: #02903b;">font-family:</span> <span class="value" style="color: #f5f5f5;">'under var'</span>, <span class="value" style="color: #f5f5f5;">sans-serif;</span>
-   }
-   }
-   <span class="tag" style="color: #f5f5f5;">&lt;/style&gt;</span>
-   
-   <span class="comment" style="color: #808080;">&lt;!-- official cdn --&gt;</span>
-   <span class="tag" style="color: #f5f5f5;">&lt;link</span> <span class="attribute" style="color: #ffbfe1;">rel=</span><span class="string" style="color: #02903b;">"preconnect"</span> <span class="attribute" style="color: #ffbfe1;">href=</span><span class="string" style="color: #02903b;">"https://weareunder.design/"</span><span class="tag" style="color: #f5f5f5;">&gt;</span>
-   <span class="tag" style="color: #f5f5f5;">&lt;link</span> <span class="attribute" style="color: #ffbfe1;">rel=</span><span class="string" style="color: #02903b;">"stylesheet"</span> <span class="attribute" style="color: #ffbfe1;">href=</span><span class="string" style="color: #02903b;">"https://weareunder.design/undercss"</span><span class="tag" style="color: #f5f5f5;">&gt;</span>
-         </code></pre>
+      <div class="scrollable under padding-l" style=" overflow-x: auto; font-size: 16px;  font-weight: 300;">
+        <pre class="code-content">
+            <code>
+     <span class="comment">&lt;!-- custom font --&gt;</span>
+     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/"</span><span class="tag">&gt;</span>
+     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/undercss"</span><span class="tag">&gt;</span>
+     
+     <span class="tag";style&gt;></span>
+     <span class="selector">:root</span> {
+     <span class="property">font-family:</span> <span class="value">'under'</span>, <span class="value">sans-serif;</span>
+     }
+     
+     <span class="at-rule">@supports</span> (<span class="property">font-variation-settings:</span> <span class="value">normal</span>) {
+     <span class="selector">:root</span> {
+         <span class="property">font-family:</span> <span class="value">'under var'</span>, <span class="value">sans-serif;</span>
+     }
+     }
+     <span class="tag">&lt;/style&gt;</span>
+     
+     <span class="comment">&lt;!-- official cdn --&gt;</span>
+     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/"</span><span class="tag">&gt;</span>
+     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/undercss"</span><span class="tag">&gt;</span>
+           </code></pre>
       </div>
     </div>
   </section>
 
   <!-- =========================
-     COPY CODE BLOCK SECTION (End)
-     ========================= -->
+       COPY CODE BLOCK SECTION (End)
+       ========================= -->
 
 
 
 
   <!-- =======================
-   Weights Section (Start) 
-   ========================= -->
+     Weights Section (Start) 
+     ========================= -->
 
-  <section class="weight-section bg-[#8159FB]" aria-label="font weights" style="background-color:#8159FB;">
-    <div class="purple-section flex flex-col justify-center items-center gap-5 py-[50px] px-0 w-full box-border">
+  <section aria-label="font weights" style="background-color:#8159FB;">
+    <div class="column justify-center align-center gap-l padding-xl">
 
       <!-- Font weight 100 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 100"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="" aria-label="Weight 100"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           100
         </button>
-        <p class="p1 p-1 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:100;">
+        <p class="text-center under white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 100;">
           under type thin
         </p>
       </div>
 
       <!-- Font weight 200 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 200"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 200"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           200
         </button>
-        <p class="p1 p2 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:200;">
+        <p class="text-center under white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 200;">
           under type extralight
         </p>
       </div>
 
       <!-- Font weight 300 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 300"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 300"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           300
         </button>
-        <p class="p1 p3 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:300;">
+        <p class="text-center under white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 300;">
           under type light
         </p>
       </div>
 
       <!-- Font weight 400 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 400"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 400"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           400
         </button>
-        <p class="p1 p4 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:400;">
+        <p class="text-center under white" style=" font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 400;">
           under type regular
         </p>
       </div>
 
       <!-- Font weight 500 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 500"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 500"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           500
         </button>
-        <p class="p1 p5 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:500;">
+        <p class="text-center under white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 500;">
           under type medium
         </p>
       </div>
 
       <!-- Font weight 600 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 600"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 600"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           600
         </button>
-        <p class="p1 p6 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:600;">
+        <p class="text-center under white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:600;">
           under type semibold
         </p>
       </div>
 
       <!-- Font weight 700 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 700"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 700"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           700
         </button>
-        <p class="p1 p7 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:700;">
+        <p class="text-center under white" style=" font-size:clamp(1.25rem,4vw,4.5rem); font-weight:700;">
           under type bold
         </p>
       </div>
 
       <!-- Font weight 800 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 800"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 800"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           800
         </button>
-        <p class="p1 p8 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:800;">
+        <p class="text-center under white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:800;">
           under type extrabold
         </p>
       </div>
 
       <!-- Font weight 900 -->
-      <div class="font-1-9-section flex justify-center items-center flex-wrap gap-3">
-        <button class="font-weight-section rounded-full cursor-default transition-colors" type="button"
-          aria-label="Weight 900"
-          style="background-color:transparent;border:1px solid #fff;color:#fff;font-size:12px;padding:4px 10px;">
+      <div class="row justify-center align-center gap-s">
+        <button class="white" type="button" aria-label="Weight 900"
+          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           900
         </button>
-        <p class="p1 p9 text-center text-white"
-          style="font-family:Under,sans-serif;font-size:clamp(1.25rem,4vw,4.5rem);line-height:1.3;margin:0;font-weight:900;">
+        <p class="text-center under white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:900;">
           under type black
         </p>
       </div>
@@ -274,1001 +412,68 @@
   </section>
 
   <!-- =======================
-   Weights Section (End) 
-   ========================= -->
+     Weights Section (End) 
+     ========================= -->
 
 
 
 
   <!-- ================= 
- R Section (Start) 
- ================= -->
-
-  <section class="flex justify-center items-center bg-[#F5F5F5]" aria-label="R section graphic"
-    style="background-color:#F5F5F5;display:flex;justify-content:center;align-items:center;padding:40px 20px;">
-    <div class="flex justify-center w-full">
-      <img src="assets/94.svg" alt="Letter R graphic" class="block object-contain"
-        style="max-width:100%;height:auto;display:block;object-fit:contain;" decoding="async" loading="lazy" />
-    </div>
-  </section>
-
-
-  <!-- ================= 
- R Section (End) 
- ================= -->
-
-
-
-  <!-- ================= 
-   Weight Bar Section (Start) 
+   R Section (Start) 
    ================= -->
 
-  <section class="flex col justify-center items-center text-center bg-[#014add] gap-s" aria-label="Font weight selector"
-    style="margin:0;height:fit-content;display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:#014add;font-family:'Inter',sans-serif;color:#fff;text-align:center;padding:65px 15px;gap:16px;">
-    <!-- Bar Wrapper -->
-    <div class="inline-block overflow-auto"
-      style="border:2px solid #fff;border-radius:25px;padding:8px 10px;display:inline-block;overflow-x:auto;width:35%;min-width:280px;">
-      <div class="flex justify-between items-center relative" id="weightBar"
-        style="display:flex;align-items:center;justify-content:space-between;position:relative;min-width:260px;">
-        <!-- Dots -->
-        <div class="dot active" data-weight="100"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;background:#fff;transform:scale(1);">
-        </div>
-        <div class="dot" data-weight="200"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-        <div class="dot" data-weight="300"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-        <div class="dot" data-weight="400"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-        <div class="dot" data-weight="500"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-        <div class="dot" data-weight="600"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-        <div class="dot" data-weight="700"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-        <div class="dot" data-weight="800"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-        <div class="dot" data-weight="900"
-          style="width:17px;height:17px;border:2px solid #fff;border-radius:50%;position:relative;z-index:1;cursor:pointer;transition:background 0.3s,transform 0.2s;flex-shrink:0;">
-        </div>
-      </div>
-    </div>
-
-    <!-- Weight text -->
-    <div class="flex justify-between items-center"
-      style="display:flex;justify-content:space-between;align-items:center;width:35%;min-width:200px;">
-      <p
-        style="color:#fff;font-family:Under,sans-serif;font-size:14px;font-weight:300;line-height:120%;text-transform:capitalize;">
-        weight</p>
-      <p
-        style="color:#fff;font-family:Under,sans-serif;font-size:14px;font-weight:300;line-height:120%;text-transform:capitalize;">
-        100</p>
-    </div>
-
-    <!-- Letters -->
-    <div id="letters" class="text-center"
-      style="color:#fff;text-align:center;font-family:Under,sans-serif;font-size:clamp(32px,12vw,110px);font-weight:100;line-height:1.1;padding-top:20px;word-break:break-word;">
-      ABCDEFGHIJKLM<br>
-      NOPQRSTUVWXYZ<br>
-      abcdefghijklmn<br>
-      opqrstuvwxyz<br>
-      1234567890<br>
-      !?#*:;[]()%+=
+  <section class="justify-center box align-center" aria-label="R section graphic" style="background-color:#F5F5F5;">
+    <div class="justify-center">
+      <img src="assets/94.svg" alt="Letter R graphic" decoding="async" loading="lazy" />
     </div>
   </section>
 
   <!-- ================= 
- Weight Bar Section (End) 
- ================= -->
-
-
-
-
-  <!-- ================= 
-   Features Section 
+   R Section (End) 
    ================= -->
-  <section class="features-sec flex flex-col gap-8 mt-24" aria-labelledby="features-heading"
-    style="margin-top:100px;gap:30px;display:flex;flex-direction:column;">
-    <div class="text-sec text-center">
-      <h1 id="features-heading" class="h1-heading">features</h1>
-      <h3 class="features-h3 text-red"
-        style="color:#FF4B00;font-family:Under;font-size:48px;font-weight:200;line-height:120%;text-transform:lowercase;margin:0;">
-        Alternative letter
-      </h3>
-      <p class="features-p text-red text-center"
-        style="color:#FF4B00;text-align:center;font-family:Under;font-size:24px;font-weight:300;line-height:120%;text-transform:lowercase;">
-        The font offers alternative letterforms that can be <br /> accessed manually for stylistic variation
-      </p>
-    </div>
-    <div class="img-section flex flex-wrap justify-evenly items-center w-100"
-      style="display:flex;flex-wrap:wrap;row-gap:35px;align-items:center;justify-content:space-evenly;width:100%;">
-      <img src="assets/Group 1948755433.svg" alt="Alternative letter example A" decoding="async" loading="lazy" />
-      <img src="assets/Group 1948755432.svg" alt="Alternative letter example B" decoding="async" loading="lazy" />
-    </div>
-  </section>
 
-  <!-- Superscript / Subscript Section -->
-  <section class="features-sec flex flex-col gap-8 mt-24" aria-labelledby="script-heading"
-    style="margin-top:100px;gap:30px;display:flex;flex-direction:column;">
-    <div class="script-section text-sec text-center">
-      <h3 id="script-heading" class="script-h3 text-blue"
-        style="color:#014ADD;font-family:Under;font-size:48px;font-weight:200;line-height:120%;text-transform:lowercase;">
-        Superscript and Subscript
-      </h3>
-      <p class="script-p text-blue text-center"
-        style="color:#014ADD;text-align:center;font-family:Under;font-size:24px;font-weight:300;line-height:120%;text-transform:lowercase;">
-        Superscript (sups): raises text to superscript position (e.g., x²). <br /> Subscript (subs): lowers text to
-        subscript
-        position (e.g., H₂O).
-      </p>
-    </div>
-    <div class="img-section flex flex-wrap justify-evenly items-center w-100"
-      style="display:flex;flex-wrap:wrap;row-gap:35px;align-items:center;justify-content:space-evenly;width:100%;">
-      <img src="assets/Group 1948755430.svg" alt="Superscript example" decoding="async" loading="lazy" />
-      <img src="assets/Group 1948755431 (1).svg" alt="Subscript example" decoding="async" loading="lazy" />
-    </div>
-  </section>
 
-  <!-- Precision and Control Section -->
-  <section class="features-sec flex flex-col gap-8 mt-24" aria-labelledby="precision-heading"
-    style="margin-top:100px;gap:30px;display:flex;flex-direction:column;">
-    <div class="text-sec text-center">
-      <h3 id="precision-heading" class="precision-h3 text-green"
-        style="color:#02903B;font-family:Under;font-size:48px;font-weight:200;line-height:normal;text-transform:lowercase;">
-        Precision and control
-      </h3>
-      <p class="precision-p text-green text-center"
-        style="color:#02903B;text-align:center;font-family:Under;font-size:24px;font-weight:300;line-height:120%;text-transform:lowercase;">
-        custom spacing pairs for precision, and auto letter-spacing for balanced flow. <br /> Auto-letter spacing is
-        adjusted
-        per weight for optimal readability.
-      </p>
-    </div>
-    <div class="img-section flex flex-wrap justify-evenly items-center w-100"
-      style="display:flex;flex-wrap:wrap;row-gap:35px;align-items:center;justify-content:space-evenly;width:100%;">
-      <img src="assets/hey Group.svg" alt="Kerning and spacing illustration 1" decoding="async" loading="lazy" />
-      <img src="assets/Group 1948755507.svg" alt="Kerning and spacing illustration 2" decoding="async" loading="lazy" />
-    </div>
-  </section>
-
-  <!-- Precise & Simple Section -->
-  <section class="features-sec flex flex-col gap-8 mt-24" aria-labelledby="precise-simple-heading"
-    style="margin-top:100px;gap:30px;display:flex;flex-direction:column;">
-    <div class="script-section text-sec text-center">
-      <h3 id="precise-simple-heading" class="script-pre text-red"
-        style="color:#FF4B00;font-family:Under;font-size:48px;font-weight:200;line-height:normal;text-transform:lowercase;">
-        precise and simple
-      </h3>
-      <p class="script-pre-p text-red text-center"
-        style="color:#FF4B00;text-align:center;font-family:Under;font-size:24px;font-weight:300;line-height:120%;text-transform:lowercase;">
-        clean lines, easy to read. no fancy stuff <br /> just clarity and function.
-      </p>
-    </div>
-    <div class="img-section flex flex-wrap justify-evenly items-center w-100"
-      style="display:flex;flex-wrap:wrap;row-gap:35px;align-items:center;justify-content:space-evenly;width:100%;">
-      <img src="assets/Group 1948755485.svg" alt="Minimal letterforms example 1" decoding="async" loading="lazy" />
-      <img src="assets/Group 1948755484.svg" alt="Minimal letterforms example 2" decoding="async" loading="lazy" />
-    </div>
-  </section>
-
-  <!-- Pixel-Perfect Section -->
-  <section class="features-sec flex flex-col gap-8 mt-24" aria-labelledby="pixel-perfect-heading"
-    style="margin-top:100px;gap:30px;display:flex;flex-direction:column;">
-    <div class="script-section text-sec text-center">
-      <h3 id="pixel-perfect-heading" class="pixel-h3 text-purple"
-        style="color:#8159FB;font-family:Under;font-size:48px;font-weight:200;line-height:normal;text-transform:lowercase;">
-        Pixel-perfect optimization
-      </h3>
-      <p class="pixel-p text-purple text-center"
-        style="color:#8159FB;text-align:center;font-family:Under;font-size:24px;font-weight:300;line-height:120%;text-transform:lowercase;">
-        specifically optimized for 16px to ensure crisp rendering <br /> auto-sizing for small text for better
-        legibility.
-      </p>
-    </div>
-    <div class="img-section flex flex-wrap justify-evenly items-center w-100"
-      style="display:flex;flex-wrap:wrap;row-gap:35px;align-items:center;justify-content:space-evenly;width:100%;">
-      <img src="assets/Group 1948755506 (3).svg" alt="Pixel-perfect optimization example 1" decoding="async"
-        loading="lazy" />
-      <img src="assets/Group 1948755436.svg" alt="Pixel-perfect optimization example 2" decoding="async"
-        loading="lazy" />
-    </div>
-  </section>
-
-
-
-
-
-  <!-- ================= 
-<!-- ================= 
- Typography Cuts Section (Start) 
- ================= -->
-  <div class="container flex flex-col gap-8 w-95% mx-auto px-4 py-8 md:flex-row md:justify-between md:items-start"
-    style="font-family:'Under',sans-serif;width:95%;margin:0 auto;padding:2rem 1rem;">
-
-    <!-- ===== Micro Section ===== -->
-    <div class="text-section flex flex-col py-4 w-100 md:w-[18%]"
-      style="display:flex;flex-direction:column;padding:1rem 0;width:100%;">
-      <div class="section-header flex items-center gap-4 mb-2">
-        <span class="section-title text-purple"
-          style="color:#8159FB;font-size:24px;font-weight:300;line-height:1.2;text-transform:lowercase;">
-          micro: 6-12pt
-        </span>
-        <div class="divider flex-grow" style="height:1px;background-color:#6c5ce7;"></div>
-      </div>
-      <p class="section-content micro text-dark" style="font-weight:300;color:#1a1a1a;line-height:1.5;font-size:15px;">
-        under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
-        more air. text sits in between, holding the balance.
-      </p>
-    </div>
-
-    <!-- ===== Text Section ===== -->
-    <div class="text-section flex flex-col py-4 w-100 md:w-[27%]"
-      style="display:flex;flex-direction:column;padding:1rem 0;width:100%;">
-      <div class="section-header flex items-center gap-4 mb-2">
-        <span class="section-title text-purple"
-          style="color:#8159FB;font-size:24px;font-weight:300;line-height:1.2;text-transform:lowercase;">
-          text: 13-20pt
-        </span>
-        <div class="divider flex-grow" style="height:1px;background-color:#6c5ce7;"></div>
-      </div>
-      <p class="section-content text-size text-dark"
-        style="font-weight:300;color:#1a1a1a;line-height:1.5;font-size:24px;">
-        under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
-        more air. text sits in between, holding the balance.
-      </p>
-    </div>
-
-    <!-- ===== Display Section ===== -->
-    <div class="text-section flex flex-col py-4 w-100 md:w-[47%]"
-      style="display:flex;flex-direction:column;padding:1rem 0;width:100%;">
-      <div class="section-header flex items-center gap-4 mb-2">
-        <span class="section-title text-purple"
-          style="color:#8159FB;font-size:24px;font-weight:300;line-height:1.2;text-transform:lowercase;">
-          display: 21pt and up
-        </span>
-        <div class="divider flex-grow" style="height:1px;background-color:#6c5ce7;"></div>
-      </div>
-      <p class="section-content display-size text-dark"
-        style="font-weight:300;color:#1a1a1a;line-height:1.5;font-size:35px;">
-        under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
-        more air. text sits in between, holding the balance.
-      </p>
-    </div>
-  </div>
-
-  <!-- ================= 
-         Typography Cuts Section (End) 
-         ================= -->
-
-
-
-
-
-  <!-- ================================
-     Extensive Weight Range Section (Start)
-     ================================ -->
-
-  <section class="flex flex-col items-center bg-white px-5 py-10" aria-labelledby="extensive-heading"
-    style="display:flex;flex-direction:column;align-items:center;padding:40px 20px;background-color:#fff;">
-
-    <!-- Image -->
-    <div class="flex justify-center items-center mb-5">
-      <img src="assets/extensive-weight-range.svg" alt="Extensive weight range graphic" decoding="async" loading="lazy"
-        class="block" style="max-width:100%;height:auto;display:block;" />
-    </div>
-
-    <!-- Paragraph -->
-    <div>
-      <p id="extensive-heading" class="text-center"
-        style="color:#000;font-family:Under,sans-serif;font-size:clamp(1.5rem,3vw,2.5rem);font-weight:200;line-height:1.4;text-transform:lowercase;margin:0 auto;max-width:900px;padding:0 10px;">
-        from hairline to black to suit various design needs. <br>
-        Designed to adapt seamlessly, whether for <br>
-        minimal elegance or striking statements
-      </p>
-    </div>
-  </section>
-
-  <!-- ================================
-         Extensive Weight Range Section (End)
-         ================================ -->
-
-
-  <!-- ================================
-     Font Weight Bar Section (Start)
-     ================================ -->
-
-  <section class="weight-bar-sce flex flex-col items-center bg-white box-border w-full max-w-[1200px] mx-auto p-5"
-    aria-labelledby="fontWeightPreview" style="margin:0;font-family:Under,sans-serif;">
-
-    <!-- Labels -->
-    <div class="weights flex justify-between w-4/5 mt-5 cursor-pointer select-none"
-      style="font-size:14px;color:#000;font-weight:300;line-height:128%;text-transform:capitalize;">
-      <span data-weight="100" data-step="0">Thin</span>
-      <span data-weight="200" data-step="1">Extralight</span>
-      <span data-weight="300" data-step="2">Light</span>
-      <span data-weight="400" data-step="3" class="active" style="color:#FF4B00;">Regular</span>
-      <span data-weight="500" data-step="4">Medium</span>
-      <span data-weight="600" data-step="5">Semibold</span>
-      <span data-weight="700" data-step="6">Bold</span>
-      <span data-weight="800" data-step="7">Extrabold</span>
-      <span data-weight="900" data-step="8">Black</span>
-    </div>
-
-    <!-- Ruler -->
-    <div class="ruler-container relative w-[90%] my-10 h-px bg-[#999]">
-      <div id="rulerProgress" class="ruler-progress absolute top-0 left-0 h-full bg-[#FF4500]"
-        style="width:0%;transition:width 0.3s ease;"></div>
-      <div id="rulerTicks"
-        class="ruler-ticks absolute top-0 left-0 right-0 translate-y-[1px] h-[6px] pointer-events-none"
-        style="background:repeating-linear-gradient(to right,#999,#999 1px,transparent 1px,transparent calc(100%/8/12));">
-      </div>
-    </div>
-
-    <!-- Preview -->
-    <div id="preview" class="preview text-start"
-      style="line-height:1;color:#FF4B00;font-family:Under;font-size:550px;font-style:normal;transition:font-weight 0.3s ease,color 0.3s ease;"
-      aria-live="polite">
-      Aa
-    </div>
-
-  </section>
-
-
-
-  <!-- ================================
-     Font Weight Bar Section (End)
-     ================================ -->
-
-
-  <!-- Skipped -->
-  <!-- ============================
-     "A" Font Weight Section (Start)
-     ============================ -->
-  <section
-    class="abc flex justify-center items-center overflow-hidden p-4 box-border min-h-screen font-[Under,sans-serif]"
-    aria-label="Font weight showcase for letter A">
-
-    <div
-      class="cards-container flex gap-[var(--border-spacing)] border border-[#02903B] rounded bg-[var(--pink-background)] overflow-x-auto scrollbar-thin p-[var(--border-spacing)] box-border">
-
-      <!-- Generate cards dynamically -->
-      <div class="card" data-weight="100"><span class="large-char">a</span></div>
-      <div class="card" data-weight="200"><span class="large-char">a</span></div>
-      <div class="card" data-weight="300"><span class="large-char">a</span></div>
-      <div class="card" data-weight="400"><span class="large-char">a</span></div>
-      <div class="card" data-weight="500"><span class="large-char">a</span></div>
-      <div class="card" data-weight="600"><span class="large-char">a</span></div>
-      <div class="card" data-weight="700"><span class="large-char">a</span></div>
-      <div class="card" data-weight="800"><span class="large-char">a</span></div>
-      <div class="card" data-weight="900"><span class="large-char">a</span></div>
-    </div>
-  </section>
-
-  <!-- KEEP FUNCTIONAL CSS -->
-  <style>
-    .card {
-      width: var(--card-width-closed);
-      height: var(--card-height);
-      background: var(--pink-background);
-      border: 2px solid #02903B;
-      cursor: pointer;
-      flex-shrink: 0;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: width 0.4s ease-in-out;
-    }
-
-    .card.open {
-      width: var(--card-width-open);
-    }
-
-    .large-char {
-      font-size: var(--font-size-large);
-      color: var(--green-color);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: transform 0.4s ease-in-out, font-weight 0.4s ease-in-out;
-    }
-
-    .card:not(.open) .large-char {
-      transform: translate(-10%, -50%);
-    }
-
-    .card[data-weight="100"] .large-char {
-      font-weight: 100;
-    }
-
-    .card[data-weight="200"] .large-char {
-      font-weight: 200;
-    }
-
-    .card[data-weight="300"] .large-char {
-      font-weight: 300;
-    }
-
-    .card[data-weight="400"] .large-char {
-      font-weight: 400;
-    }
-
-    .card[data-weight="500"] .large-char {
-      font-weight: 500;
-    }
-
-    .card[data-weight="600"] .large-char {
-      font-weight: 600;
-    }
-
-    .card[data-weight="700"] .large-char {
-      font-weight: 700;
-    }
-
-    .card[data-weight="800"] .large-char {
-      font-weight: 800;
-    }
-
-    .card[data-weight="900"] .large-char {
-      font-weight: 900;
-    }
-
-    /* Responsive variables */
-    @media (max-width: 1024px) {
-      :root {
-        --card-height: 180px;
-        --card-width-closed: 50px;
-        --card-width-open: 220px;
-        --font-size-large: 200px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      :root {
-        --card-height: 140px;
-        --card-width-closed: 40px;
-        --card-width-open: 180px;
-        --font-size-large: 140px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      :root {
-        --card-height: 100px;
-        --card-width-closed: 35px;
-        --card-width-open: 140px;
-        --font-size-large: 100px;
-      }
-    }
-  </style>
-
-  <!-- ============================
-     "A" Font Weight Section (End)
-     ============================ -->
-
-
-
-
-
-  <!-- Imagine Section -->
-  <section class="w-full flex flex-col gap-[60px] p-12 px-4 mx-auto" aria-label="Imagine Section">
-
-    <div class="flex justify-center items-center">
-      <img src="assets/Group 1948755431 (2).svg" alt="Imagine Illustration 1" class="block mx-auto max-w-full h-auto"
-        loading="lazy" decoding="async" />
-    </div>
-
-    <div class="flex justify-center items-center">
-      <img src="assets/Group 1948755442 (2).svg" alt="Imagine Illustration 2" class="block mx-auto max-w-full h-auto"
-        loading="lazy" decoding="async" />
-    </div>
-
-    <div class="flex justify-center items-center">
-      <img src="assets/let’s play.svg" alt="Imagine Illustration 3" class="block mx-auto max-w-full h-auto"
-        loading="lazy" decoding="async" />
-    </div>
-
-  </section>
-
-
-
-
-  <!-- Customizable Hey Section -->
-  <div id="fc-component-root" class="fc-main-wrapper">
-    <div class="fc-controls-container">
-      <!-- Sliders section -->
-      <div class="fc-controls">
-        <div class="test">
-          <!-- Weight slider -->
-          <div class="fc-control">
-            <input id="fc-weightRange" class="fc-range-input" type="range" min="100" max="900" step="1" value="400">
-            <div class="fc-bar-label">
-              <label for="fc-weightRange">WEIGHT</label>
-              <div id="fc-weightValue">400</div>
-            </div>
-          </div>
-
-          <!-- Size slider -->
-          <div class="fc-control">
-            <input id="fc-sizeRange" class="fc-range-input" type="range" min="20" max="300" step="1" value="64">
-            <div class="fc-bar-label">
-              <label for="fc-sizeRange">SIZE</label>
-              <div id="fc-sizeValue">64 PX</div>
-            </div>
-          </div>
-
-          <!-- Spacing slider -->
-          <div class="fc-control">
-            <input id="fc-spacingRange" class="fc-range-input" type="range" min="0" max="2" step="0.05" value="0">
-            <div class="fc-bar-label">
-              <label for="fc-spacingRange">SPACING</label>
-              <div id="fc-spacingValue">0.00 EM</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Editable text and button section -->
-      <section class="fc-editable-sec">
-        <div class="fc-text-box">
-          <div id="fc-output" contenteditable="true" spellcheck="false">hey</div>
-          <div class="fc-button-row">
-            <!-- Alignment buttons -->
-            <div class="fc-btn-group fc-align-group">
-              <button class="fc-btn fc-align-btn" data-align="left" aria-label="Align Left">
-                <svg class="fc-left-align" width="17" height="12" viewBox="0 0 17 12" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 0.542969V1.54297H0V0.542969H17Z" fill="currentColor" />
-                  <path d="M9.06641 5.35938V6.35938H0V5.35938H9.06641Z" fill="currentColor" />
-                  <path d="M11.333 10.459V11.459H0V10.459H11.333Z" fill="currentColor" />
-                </svg>
-              </button>
-              <button class="fc-btn fc-align-btn fc-active" data-align="center" aria-label="Align Center">
-                <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 0.542969V1.54297H0V0.542969H17Z" fill="currentColor" />
-                  <path d="M13.0664 5.35938V6.35938H4V5.35938H13.0664Z" fill="currentColor" />
-                  <path d="M14.333 10.459V11.459H3V10.459H14.333Z" fill="currentColor" />
-                </svg></button>
-              <button class="fc-btn fc-align-btn" data-align="right" aria-label="Align Right">
-                <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17 0.542969V1.54297H0V0.542969H17Z" fill="currentColor" />
-                  <path d="M17.0664 5.35938V6.35938H8V5.35938H17.0664Z" fill="currentColor" />
-                  <path d="M17.333 10.459V11.459H6V10.459H17.333Z" fill="currentColor" />
-                </svg>
-              </button>
-            </div>
-            <!-- This group contains the case and alt glyph buttons -->
-            <div class="fc-btn-group">
-              <button class="fc-btn">alt a</button>
-              <button class="fc-btn">alt r</button>
-              <button class="fc-btn">alt u</button>
-              <button class="fc-btn">alt y</button>
-              <button class="fc-btn">alt G</button>
-              <button class="fc-btn" data-case="uppercase">uppercase</button>
-              <button class="fc-btn" data-case="lowercase">lowercase</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-
-
-  <!-- Keyboard Cutomizable Section -->
-  <section class="customize-text r-stack"
-    style="font-family:Under;font-weight:300;margin:0;padding:0;background:#fff;color:#111;">
-    <div class="wrapper r-stack" style="padding:20px;">
-
-      <!-- Header -->
-      <div class="header r-inline"
-        style="display:flex;align-items:center;margin-bottom:10px;font-size:14px;padding-left:20px;width:100%;justify-content:space-between;">
-
-        <!-- Weight bar -->
-        <div class="half-weight-bar r-inline"
-          style="width:47%;display:flex;justify-content:space-between;align-items:center;font-size:14px;">
-          <span>Glyphs set overview</span>
-          <div class="slider-container r-inline" style="display:flex;align-items:center;gap:10px;font-size:14px;">
-            <label for="weightSlider">Weight</label>
-            <input type="range" id="weightSlider" min="100" max="900" step="1" value="400"
-              style="-webkit-appearance:none;width:160px;height:3px;border-radius:2px;background:#ddd;outline:none;">
-            <span id="weightValue">400</span>
-          </div>
-        </div>
-
-        <div class="unicode-div r-inline" style="width:53%;"></div>
-      </div>
-
-      <!-- Main two-panel wrapper -->
-      <div class="wrapper-both-sec r-inline"
-        style="display:flex;justify-content:space-between;padding:20px;padding-top:10px;">
-
-        <!-- Left panel -->
-        <div class="left r-stack" style="width:48%;height:827px;">
-          <div class="grid-section r-stack" style="background:#fafafa;border-radius:6px;padding:10px;height:100%;">
-            <h3 style="margin:10px 0;font-size:13px;font-weight:normal;color:#444;">Uppercase</h3>
-            <div class="grid r-grid" id="uppercase"
-              style="display:grid;grid-template-columns:repeat(9,1fr);row-gap:10px;"></div>
-
-            <h3 style="margin:10px 0;font-size:13px;font-weight:normal;color:#444;">Lowercase</h3>
-            <div class="grid r-grid" id="lowercase"
-              style="display:grid;grid-template-columns:repeat(9,1fr);row-gap:10px;"></div>
-
-            <h3 style="margin:10px 0;font-size:13px;font-weight:normal;color:#444;">Numbers & Symbols</h3>
-            <div class="grid r-grid" id="symbols"
-              style="display:grid;grid-template-columns:repeat(9,1fr);row-gap:10px;"></div>
-          </div>
-        </div>
-
-        <!-- Right panel -->
-        <div class="right r-stack"
-          style="width:48%;height:827px;position:relative;background:#fafafa;border-radius:6px;padding:20px;text-align:center;font-size:562px;display:flex;justify-content:center;">
-
-          <!-- Guidelines -->
-          <div class="guideline ascender"
-            style="position:absolute;left:0;width:100%;height:1px;background:#000;top:8.5%;"></div>
-          <div class="guideline cap-height"
-            style="position:absolute;left:0;width:100%;height:1px;background:#000;top:25.5%;"></div>
-          <div class="guideline x-height"
-            style="position:absolute;left:0;width:100%;height:1px;background:#000;top:37.8%;"></div>
-          <div class="guideline baseline"
-            style="position:absolute;left:0;width:100%;height:1px;background:#000;bottom:25%;"></div>
-          <div class="guideline descender"
-            style="position:absolute;left:0;width:100%;height:1px;background:#000;bottom:10.3%;"></div>
-
-          <!-- Labels -->
-          <div class="label ascender-label"
-            style="position:absolute;left:10px;font-size:14px;font-family:Under;font-weight:300;background:#fafafa;padding:2px 4px;top:11%;transform:translateY(-50%);">
-            Ascender</div>
-          <div class="label cap-label"
-            style="position:absolute;left:10px;font-size:14px;font-family:Under;font-weight:300;background:#fafafa;padding:2px 4px;top:28%;transform:translateY(-50%);">
-            Cap Height</div>
-          <div class="label x-label"
-            style="position:absolute;left:10px;font-size:14px;font-family:Under;font-weight:300;background:#fafafa;padding:2px 4px;top:42%;transform:translateY(-50%);">
-            X-Height</div>
-          <div class="label baseline-label"
-            style="position:absolute;left:10px;font-size:14px;font-family:Under;font-weight:300;background:#fafafa;padding:2px 4px;bottom:23%;transform:translateY(50%);">
-            Baseline</div>
-          <div class="label desc-label"
-            style="position:absolute;left:10px;font-size:14px;font-family:Under;font-weight:300;background:#fafafa;padding:2px 4px;bottom:8%;transform:translateY(50%);">
-            Descender</div>
-
-          <!-- Main glyph -->
-          <span id="glyphChar"
-            style="font-weight:400;font-family:'Under',sans-serif;z-index:2;line-height:1;transition:font-weight 0.1s ease;position:relative;top:17%;">A</span>
-
-          <!-- Unicode -->
-          <div class="code-label" id="unicodeLabel"
-            style="position:absolute;top:8px;right:15px;font-size:13px;color:#666;">uni0041</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ================================
-       Motion Section (Start)
-  ================================  -->
-  <section class="motion-sec">
-    <div class="motion-main-div">
-
-      <!-- Top circles -->
-      <div class="motion-1">
-        <img class="motion-circle" width="130" src="assets/Ellipse 226.png" alt="">
-        <img class="motion-circle" width="130" src="assets/Ellipse 227.svg" alt="">
-      </div>
-
-      <!-- Big middle circle -->
-      <div class="motion-2">
-        <img width="80%" class="motion-circle" src="assets/Ellipse 207.svg" alt="">
-      </div>
-
-      <!-- Bottom icons -->
-      <div class="motion-3">
-        <img width="130" src="assets/Group 1948755508.svg" alt="">
-        <img width="130" src="assets/Polygon 10 (1).svg" alt="">
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================================
-       Motion Section (End)
-  ================================  -->
-
-
-
-
-  <!-- ================= 
-     Font in Action Section (Start) 
-     ================= -->
-     <section class="font-section r-stack r-center" style="width:100%;padding:clamp(10px,3vw,20px) 0;">
-  
-      <!-- Heading -->
-      <div class="font-action r-center" style="padding:clamp(10px,3vw,20px) 0;">
-        <h1 class="font-action-h1" 
-            style="color:#014ADD;text-align:center;font-family:Under,sans-serif;
-                   font-size:clamp(2.625rem,6vw,9rem);font-weight:600;
-                   line-height:1.1;text-transform:lowercase;
-                   margin:clamp(20px,5vw,40px) 20px;">
-          Font in action
-        </h1>
-      </div>
-    
-      <!-- Posters grid -->
-      <div class="img-section r-inline r-center" 
-           style="display:flex;flex-wrap:wrap;justify-content:center;
-                  gap:clamp(10px,3vw,20px);width:100%;">
-        
-        <img src="assets/Poster (2).svg" alt="Pixel-perfect optimization example 1" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-        <img src="assets/Poster (3).svg" alt="Pixel-perfect optimization example 2" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-        <img src="assets/Poster (4).svg" alt="Pixel-perfect optimization example 3" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-        <img src="assets/Poster (5).svg" alt="Pixel-perfect optimization example 4" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-        <img src="assets/Poster (6).svg" alt="Pixel-perfect optimization example 5" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-        <img src="assets/Poster (7).svg" alt="Pixel-perfect optimization example 6" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-        <img src="assets/Poster (8).svg" alt="Pixel-perfect optimization example 7" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-        <img src="assets/Poster (9).svg" alt="Pixel-perfect optimization example 8" decoding="async" loading="lazy"
-             style="width:46%;max-width:100%;height:auto;border-radius:8px;object-fit:contain;">
-    
-      </div>
-    </section>
-    
-  <!-- ================= 
-     Font in Action Section (End) 
-     ================= -->
-
-
-
-  <!-- ================= 
-     Get Under Font Button Section (Start)
-     ================= -->
-     <section class="r-center" style="width:100%;margin:100px 0;">
-      <div class="get-button-sec r-center" style="display:flex;align-items:center;justify-content:center;width:100%;">
-        <button class="get-btn"
-          style="
-            background:#014ADD;
-            border-radius:400px;
-            width:95%;
-            height:450px;
-            color:#FFF;
-            font-family:Under,sans-serif;
-            font-size:162.254px;
-            font-style:normal;
-            font-weight:300;
-            line-height:122%;
-            text-transform:lowercase;
-            border:none;
-            cursor:pointer;
-            transition:all 0.3s ease;
-          "
-          data-r-1200="height:350px;font-size:120px;"
-          data-r-992="height:280px;font-size:90px;"
-          data-r-768="height:200px;font-size:60px;"
-          data-r-480="height:140px;font-size:36px;"
-        >
-          Get Under font
-        </button>
-      </div>
-    </section>
-    
-  <!-- ================= 
-     Get Under Font Button Section (End)
-     ================= -->
-
-
-  <!-- ================= 
-      Go Text Section (Start)
-     ================= -->
-     <section>
-      <div class="hero r-center" role="banner" style="width:100%;display:flex;justify-content:center;">
-        <img 
-          src="assets/Group 1948755438 (1).svg" 
-          alt="Under.type hero graphic" 
-          width="80%" 
-          decoding="async"
-          fetchpriority="high" 
-          style="max-width:80%;height:auto;"
-        />
-      </div>
-    
-      <div 
-        class="go-text-div r-flex" 
-        style="
-          margin-top:-160px;
-          display:flex;
-          justify-content:flex-end;
-          width:86%;
-        "
-        data-r-992="margin-top:-100px;"
-        data-r-768="justify-content:center;margin-top:-60px;width:100%;"
-        data-r-480="margin-top:0;"
-      >
-        <p 
-          class="go-text" 
-          style="
-            color:#000;
-            font-family:Under,sans-serif;
-            font-size:48px;
-            font-style:normal;
-            font-weight:200;
-            line-height:122%;
-            text-transform:lowercase;
-          "
-          data-r-992="font-size:36px;"
-          data-r-768="font-size:28px;text-align:center;"
-          data-r-480="font-size:20px;"
-        >
-          It’s Free & Open Source. <br>no fine print
-        </p>
-      </div>
-    </section>
-    
-  <!-- ================= 
-      Go Text Section (End)
-     ================= -->
-
-
-
-  <!-- ============================
-     "Footer-section (starts)
-     ============================ -->
-
-     <section 
-     class="foo-sec" 
-     style="
-       margin-top:100px;
-       width:100%;
-       padding:60px 20px;
-       background:#f8f8f8;
-       border-top:1px solid #ddd;
-       box-sizing:border-box;
-       font-family:Under,sans-serif;
-       font-size:20px;
-     "
-   >
-     <div 
-       class="footer r-flex" 
-       style="
-         display:flex;
-         align-items:flex-start;
-         justify-content:space-evenly;
-         flex-wrap:wrap;
-         gap:40px;
-         max-width:1200px;
-         margin:0 auto;
-       "
-       data-r-992="justify-content:center;text-align:center;"
-       data-r-600="flex-direction:column;align-items:center;gap:20px;"
-     >
-   
-       <!-- Logo + copyright -->
-       <div 
-         class="footer-col" 
-         style="flex:1 1 200px;min-width:150px;text-align:left;" 
-         data-r-992="flex:1 1 100%;text-align:center;"
-       >
-         <img 
-           src="assets/Logo.svg" 
-           alt="Logo" 
-           class="logo" 
-           style="width:120px;height:auto;margin-bottom:10px;"
-           data-r-600="margin:0 auto;"
-         >
-         <p 
-           class="logo-text" 
-           style="margin-top:10px;font-size:14px;color:#555;"
-         >
-           Ⓒ All Rights Reserved
-         </p>
-       </div>
-   
-       <!-- Links Column 1 -->
-       <div 
-         class="footer-col" 
-         style="flex:1 1 200px;min-width:150px;" 
-         data-r-992="flex:1 1 100%;"
-       >
-         <ul style="list-style:none;padding:0;margin:0;">
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">About</a></li>
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">Product</a></li>
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">Request a demo</a></li>
-         </ul>
-       </div>
-   
-       <!-- Links Column 2 -->
-       <div 
-         class="footer-col" 
-         style="flex:1 1 200px;min-width:150px;" 
-         data-r-992="flex:1 1 100%;"
-       >
-         <ul style="list-style:none;padding:0;margin:0;">
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">Community</a></li>
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">Blog</a></li>
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">Email</a></li>
-         </ul>
-       </div>
-   
-       <!-- Links Column 3 -->
-       <div 
-         class="footer-col" 
-         style="flex:1 1 200px;min-width:150px;" 
-         data-r-992="flex:1 1 100%;"
-       >
-         <ul style="list-style:none;padding:0;margin:0;">
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">Terms of service</a></li>
-           <li style="margin:8px 0;"><a href="#" style="text-decoration:none;color:#333;font-size:15px;transition:color 0.3s ease;">Policy</a></li>
-         </ul>
-       </div>
-   
-     </div>
-   </section>
-   
-
-  <!-- ============================
-     "Footer-section (Ends)
-     ============================ -->
-
-
-
-
-  <!-- Scripts -->
   <script>
     /* =========================
-       COPY CODE BLOCK SECTION (Start)
-       ========================= */
-    
+   COPY CODE BLOCK SECTION (Start)
+   ========================= */
+
     // Elements
     const copyButton = document.getElementById('copyButton');
     const copyIcon = document.getElementById('copyIcon');
     const codeToCopy = document.querySelector('.code-content');
-    
+
     // Copy functionality
     copyButton.addEventListener('click', () => {
       if (!codeToCopy) {
         console.error("Code element not found. Ensure '.code-content' exists.");
         return;
       }
-    
+
       const tempTextArea = document.createElement('textarea');
       tempTextArea.value = codeToCopy.textContent;
       document.body.appendChild(tempTextArea);
       tempTextArea.select();
-    
+
       try {
         document.execCommand('copy');
-    
+
         // Success feedback
         copyIcon.classList.replace('ph-copy', 'ph-check');
         copyButton.style.color = '#22c55e'; // green-500
-    
+
         setTimeout(() => {
           copyIcon.classList.replace('ph-check', 'ph-copy');
           copyButton.style.color = '#9ca3af'; // gray-400
         }, 2000);
-    
+
       } catch (err) {
         console.error('Failed to copy: ', err);
-    
+
         // Error feedback
         copyIcon.classList.replace('ph-copy', 'ph-x');
         copyButton.style.color = '#ef4444'; // red-500
-    
+
         setTimeout(() => {
           copyIcon.classList.replace('ph-x', 'ph-copy');
           copyButton.style.color = '#9ca3af';
@@ -1277,259 +482,12 @@
         document.body.removeChild(tempTextArea);
       }
     });
-    
+
     /* =========================
        COPY CODE BLOCK SECTION (End)
        ========================= */
-    
-    
-    
-    
-    
-    // Get all the dots and the letters element
-    const dots = document.querySelectorAll(".dot");
-    const letters = document.getElementById("letters");
-    const weightTextP = document.querySelector(".weight-text p:last-child");
-    
-    dots.forEach(dot => {
-      dot.addEventListener("click", () => {
-        // Remove active from all
-        dots.forEach(d => d.classList.remove("active"));
-        // Add active to clicked
-        dot.classList.add("active");
-    
-        // Change font weight
-        const weight = dot.getAttribute("data-weight");
-        letters.style.fontWeight = weight;
-    
-        // Update the weight text
-        weightTextP.textContent = weight;
-      });
-    });
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // font-weight-bar
-    (function () {
-        const preview = document.getElementById("preview");
-        const labels = document.querySelectorAll(".weights span");
-        const progress = document.getElementById("rulerProgress");
-        const rulerTicks = document.getElementById("rulerTicks");
-        const rulerContainer = document.querySelector(".ruler-container");
-        const totalSteps = labels.length - 1;
-    
-        labels.forEach(label => {
-            label.addEventListener("click", () => {
-                const weight = label.getAttribute("data-weight");
-                const step = parseInt(label.getAttribute("data-step"));
-    
-                preview.style.fontWeight = weight;
-                preview.style.color = "#FF4500";
-    
-                const percent = (step / totalSteps) * 100;
-                progress.style.width = percent + "%";
-    
-                labels.forEach(l => {
-                    const lStep = parseInt(l.getAttribute("data-step"));
-                    if (lStep <= step) {
-                        l.classList.add("active");
-                    } else {
-                        l.classList.remove("active");
-                    }
-                });
-    
-                rulerTicks.classList.add("active");
-                rulerContainer.style.background = "#FF4500";
-            });
-        });
-    
-        const initialLabel = document.querySelector(".weights span.active");
-        if (initialLabel) {
-            const weight = initialLabel.getAttribute("data-weight");
-            const step = parseInt(initialLabel.getAttribute("data-step"));
-            preview.style.fontWeight = weight;
-            preview.style.color = "#FF4500";
-    
-            labels.forEach(l => {
-                const lStep = parseInt(l.getAttribute("data-step"));
-                if (lStep <= step) {
-                    l.classList.add("active");
-                } else {
-                    l.classList.remove("active");
-                }
-            });
-    
-            const percent = (step / totalSteps) * 100;
-            progress.style.width = percent + "%";
-            rulerTicks.classList.add("active");
-            rulerContainer.style.background = "#FF4500";
-        }
-    })();
-    
-    
-    
-    
-    
-    
-    
-    // Keyboard Cutomizable Section
-    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-    const lowercase = "abcdefghijklmnopqrstuvwxyz".split("");
-    const symbols = "1234567890!?()#%*\\“[]:;@+,.".split("");
-    
-    const glyphChar = document.getElementById("glyphChar");
-    const unicodeLabel = document.getElementById("unicodeLabel");
-    const slider = document.getElementById("weightSlider");
-    const weightValue = document.getElementById("weightValue");
-    
-    function renderGlyphs(containerId, chars) {
-      const container = document.getElementById(containerId);
-      container.innerHTML = ""; // Clear existing content to prevent duplicates
-      chars.forEach(ch => {
-        const div = document.createElement("div");
-        div.className = "glyph";
-        div.textContent = ch;
-        div.addEventListener("click", () => updateGlyphView(ch));
-        container.appendChild(div);
-      });
-    }
-    
-    function updateGlyphView(ch) {
-      glyphChar.textContent = ch;
-      unicodeLabel.textContent = `uni${ch.charCodeAt(0).toString(16).toUpperCase().padStart(4, "0")}`;
-    }
-    
-    function updateFontWeight(weight) {
-      weightValue.textContent = weight;
-    
-      const mainGlyph = document.getElementById('glyphChar');
-      if (mainGlyph) {
-        mainGlyph.style.fontWeight = weight;
-      }
-    }
-    
-    slider.addEventListener("input", () => {
-      updateFontWeight(slider.value);
-    });
-    
-    renderGlyphs("uppercase", uppercase);
-    renderGlyphs("lowercase", lowercase);
-    renderGlyphs("symbols", symbols);
-    updateGlyphView('A'); // Set initial character
-    updateFontWeight(slider.value); // Set initial font weight
-    
-    
-    
-    
-    // Customizable Hey Section
-    function initFontController() {
-        const componentRoot = document.getElementById('fc-component-root');
-    
-        if (!componentRoot) {
-            console.error("Could not find the root element with ID 'fc-component-root'.");
-            return;
-        }
-    
-        // Get all relevant elements by querying within the component's root
-        const output = componentRoot.querySelector('#fc-output');
-        const weightRange = componentRoot.querySelector('#fc-weightRange');
-        const weightValue = componentRoot.querySelector('#fc-weightValue');
-        const sizeRange = componentRoot.querySelector('#fc-sizeRange');
-        const sizeValue = componentRoot.querySelector('#fc-sizeValue');
-        const spacingRange = componentRoot.querySelector('#fc-spacingRange');
-        const spacingValue = componentRoot.querySelector('#fc-spacingValue');
-        const alignButtons = componentRoot.querySelectorAll('.fc-align-btn');
-        const caseButtons = componentRoot.querySelectorAll('.fc-btn[data-case]');
-    
-        // Set initial state based on default values
-        function setInitialState() {
-            output.style.fontVariationSettings = `"wght" ${weightRange.value}`;
-            output.style.fontSize = `${sizeRange.value}px`;
-            output.style.letterSpacing = `${spacingRange.value}em`;
-            output.style.textAlign = 'center';
-        }
-    
-        // Function to update the font weight
-        weightRange.addEventListener('input', () => {
-            const weight = weightRange.value;
-            output.style.fontVariationSettings = `"wght" ${weight}`;
-            weightValue.textContent = weight;
-        });
-    
-        // Function to update the font size
-        sizeRange.addEventListener('input', () => {
-            const size = sizeRange.value;
-            output.style.fontSize = `${size}px`;
-            sizeValue.textContent = `${size} PX`;
-        });
-    
-        // Function to update the letter spacing
-        spacingRange.addEventListener('input', () => {
-            const spacing = parseFloat(spacingRange.value).toFixed(2);
-            output.style.letterSpacing = `${spacing}em`;
-            spacingValue.textContent = `${spacing} EM`;
-        });
-    
-        // Function to handle text alignment buttons
-        alignButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                alignButtons.forEach(btn => btn.classList.remove('fc-active'));
-                button.classList.add('fc-active');
-                const align = button.dataset.align;
-                output.style.textAlign = align;
-            });
-        });
-    
-        // Function to handle text case buttons
-        caseButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const caseType = button.dataset.case;
-                output.style.textTransform = caseType;
-            });
-        });
-    
-        // Initialize the UI with the default values
-        setInitialState();
-    }
-    
-    // Call the function to initialize the component when the page loads
-    document.addEventListener('DOMContentLoaded', initFontController);
-    
-    
-    
-    // "A" Font Weight Section
-    document.addEventListener('DOMContentLoaded', () => {
-        const cards = document.querySelectorAll('.card');
-    
-        // Opens the first card by default to match the image
-        if (cards.length > 0) {
-            cards[0].classList.add('open');
-        }
-    
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                // Check if the clicked card is already open
-                if (!card.classList.contains('open')) {
-                    // Close all other cards first
-                    cards.forEach(otherCard => {
-                        otherCard.classList.remove('open');
-                    });
-                    // Open the clicked card
-                    card.classList.add('open');
-                }
-            });
-        });
-    });
-    </script>
+  </script>
+
 </body>
 
 </html>
