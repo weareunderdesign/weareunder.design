@@ -124,21 +124,9 @@
 
     }
 
-    .p-under {
-      font-size: 48px;
-      font-weight: 200;
-      line-height: 1.2;
-    }
-
     @media (max-width: 900px) {
       .font-under {
         font-size: 4rem;
-        font-weight: 600;
-      }
-
-      .p-under {
-        font-size: 1.5rem;
-        line-height: 1.2;
       }
     }
 
@@ -183,29 +171,102 @@
     .black {
       color: #000;
     }
+
+
+    /* Weight bar section */
+    .dot {
+      width: 22px;
+      height: 22px;
+      border: 2px solid white;
+      border-radius: 50%;
+      z-index: 1;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      flex-shrink: 0;
+      background: none;
+      transform: scale(0.7);
+    }
+
+    .dot.active {
+      background: white;
+    }
+
+    .weight-text {
+      width: 35%;
+    }
+
+    .weight-text p {
+      font-weight: 300;
+    }
+
+    #letters {
+      font-size: clamp(32px, 12vw, 110px);
+      font-weight: 100;
+      line-height: 1.1;
+      word-break: break-word;
+      transition: font-weight 0.4s ease;
+    }
+
+    .weight-bar-wrapper {
+      border: 1.5px solid white;
+      border-radius: 25px;
+      width: 35%;
+    }
+
+    @media (max-width: 1024px) {
+
+      .weight-bar-wrapper,
+      .weight-text {
+        width: 60%;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .weight-bar-wrapper,
+      .weight-text {
+        width: 90%;
+      }
+
+      .weight-bar {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .weight-bar-wrapper,
+      .weight-text {
+        width: 100%;
+      }
+
+      .weight-text {
+        gap: 6px;
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .dot {
+        width: 14px;
+        height: 14px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-     HERO SECTION (Start)
-     ========================= -->
+   <!-- HERO SECTION (Start) -->
 
-  <div class=" justify-center align-center box" role="banner" style=" margin-top: 40px;">
+   <div class="row justify-center align-center box" role="banner" style=" margin-top: 40px;">
     <img src="assets/Group 1948755041 (1).svg" alt="Under.type hero graphic" class="box-l" decoding="async"
       fetchpriority="high" style="width: 90%;" />
   </div>
 
-  <!-- =========================
-           HERO SECTION (End)
-           ========================= -->
+  <!-- HERO SECTION (End)-->
 
 
-
-  <!-- =========================
-       INTRO / HEADING SECTION (Start)
-       ========================= -->
+  <!-- INTRO / HEADING SECTION (Start) -->
 
   <div class="view column align-center gap-xl">
     <div class="page gap-xl">
@@ -214,7 +275,7 @@
           under.type
         </h1>
         <div class="box column align-center">
-          <p class="box-l text-center p-under">
+          <p class="box-l text-center p-under" style="font-size: 48px; font-weight: 200; line-height: 1.2;">
             we’re under: we׳re all about keeping it simple while embracing complexity. this
             also works in fonts: imagine we had a font that did all the work. no more digging for 20+ fonts, and
             its adaptive to anything: from tiny screens, Figma, PDF forms to variable UX projects. you know
@@ -224,7 +285,7 @@
           </p>
         </div>
 
-        <!-- Primary actions -->
+        <!-- Primary  -->
         <nav class="row justify-center align-center gap-l padding-m wrap box" aria-label="primary actions">
           <a href="#">
             <button type="button" aria-label="Download font" class="align-center justify-center under"
@@ -246,71 +307,60 @@
   </div>
   </section>
 
-  <!-- =========================
-           INTRO / HEADING SECTION (End)
-           ========================= -->
+  <!-- INTRO / HEADING SECTION (End) -->
 
 
 
-  <!-- =========================
-       COPY CODE BLOCK SECTION (Start)
-       ========================= -->
+  <!-- COPY CODE BLOCK SECTION (Start) -->
 
-  <section class="view row justify-center align-center padding-m box under box-m"
+  <section class="box row justify-center align-center padding-m box under "
     style="margin-bottom: 70px; font-size: 20px; font-weight: 300; color: #808080;">
-    <!-- Main container for the code block -->
     <div class="panel foreground-primary border shadow box-l code-container"
       style="position: relative; width: 100%; max-width: 820px; border-radius: 10px; ">
-      <!-- Copy button in the top right corner -->
       <button id="copyButton" class="copy-button" aria-label="Copy code"
         style="position: absolute; top: 1rem; right: 1rem; color: #9ca3af; transition: color 0.2s ease; cursor: pointer; border: none; background: transparent;">
         <i id="copyIcon" class="ph-duotone ph-copy under" style="font-size: 20px; font-weight: 300;"></i>
       </button>
 
-      <!-- Code content wrapper -->
       <div class="scrollable under padding-l" style=" overflow-x: auto; font-size: 16px;  font-weight: 300;">
         <pre class="code-content">
-            <code>
-     <span class="comment">&lt;!-- custom font --&gt;</span>
-     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/"</span><span class="tag">&gt;</span>
-     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/undercss"</span><span class="tag">&gt;</span>
-     
-     <span class="tag";style&gt;></span>
-     <span class="selector">:root</span> {
-     <span class="property">font-family:</span> <span class="value">'under'</span>, <span class="value">sans-serif;</span>
-     }
-     
-     <span class="at-rule">@supports</span> (<span class="property">font-variation-settings:</span> <span class="value">normal</span>) {
-     <span class="selector">:root</span> {
-         <span class="property">font-family:</span> <span class="value">'under var'</span>, <span class="value">sans-serif;</span>
-     }
-     }
-     <span class="tag">&lt;/style&gt;</span>
-     
-     <span class="comment">&lt;!-- official cdn --&gt;</span>
-     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/"</span><span class="tag">&gt;</span>
-     <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/undercss"</span><span class="tag">&gt;</span>
-           </code></pre>
+          <code>
+   <span class="comment">&lt;!-- custom font --&gt;</span>
+   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/"</span><span class="tag">&gt;</span>
+   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/undercss"</span><span class="tag">&gt;</span>
+   
+   <span class="tag";style&gt;></span>
+   <span class="selector">:root</span> {
+   <span class="property">font-family:</span> <span class="value">'under'</span>, <span class="value"">sans-serif;</span>
+   }
+   
+   <span class="at-rule">@supports</span> (<span class="property">font-variation-settings:</span> <span class="value">normal</span>) {
+   <span class="selector">:root</span> {
+       <span class="property">font-family:</span> <span class="value">'under var'</span>, <span class="value">sans-serif;</span>
+   }
+   }
+   <span class="tag">&lt;/style&gt;</span>
+   
+   <span class="comment">&lt;!-- official cdn --&gt;</span>
+   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/"</span><span class="tag">&gt;</span>
+   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/undercss"</span><span class="tag">&gt;</span>
+         </code></pre>
       </div>
     </div>
   </section>
 
-  <!-- =========================
-       COPY CODE BLOCK SECTION (End)
-       ========================= -->
+  <!-- COPY CODE BLOCK SECTION (End) -->
 
 
 
 
-  <!-- =======================
-     Weights Section (Start) 
-     ========================= -->
+  <!-- Weights Section (Start) -->
 
   <section aria-label="font weights" style="background-color:#8159FB;">
     <div class="column justify-center align-center gap-l padding-xl">
 
       <!-- Font weight 100 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="" aria-label="Weight 100"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           100
@@ -321,7 +371,7 @@
       </div>
 
       <!-- Font weight 200 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 200"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           200
@@ -332,7 +382,7 @@
       </div>
 
       <!-- Font weight 300 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 300"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           300
@@ -343,7 +393,7 @@
       </div>
 
       <!-- Font weight 400 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 400"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           400
@@ -354,7 +404,7 @@
       </div>
 
       <!-- Font weight 500 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 500"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           500
@@ -365,7 +415,7 @@
       </div>
 
       <!-- Font weight 600 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 600"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           600
@@ -376,7 +426,7 @@
       </div>
 
       <!-- Font weight 700 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 700"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           700
@@ -387,7 +437,7 @@
       </div>
 
       <!-- Font weight 800 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 800"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           800
@@ -398,7 +448,7 @@
       </div>
 
       <!-- Font weight 900 -->
-      <div class="row justify-center align-center gap-s">
+      <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 900"
           style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           900
@@ -411,16 +461,12 @@
     </div>
   </section>
 
-  <!-- =======================
-     Weights Section (End) 
-     ========================= -->
+  <!-- Weights Section (End) -->
 
 
 
 
-  <!-- ================= 
-   R Section (Start) 
-   ================= -->
+  <!-- R Section (Start) -->
 
   <section class="justify-center box align-center" aria-label="R section graphic" style="background-color:#F5F5F5;">
     <div class="justify-center">
@@ -428,9 +474,43 @@
     </div>
   </section>
 
-  <!-- ================= 
-   R Section (End) 
-   ================= -->
+  <!-- R Section (End) -->
+
+
+  <!-- Weight Bar Section (Start) -->
+
+  <section class="under box column justify-center align-center white padding-xl" style="background-color: #014add;"
+    aria-label="Font weight selector">
+    <div class="weight-bar-wrapper padding-xs">
+      <div class="weight-bar box align-center justify-stretch" id="weightBar">
+        <div class="dot active " data-weight="100"></div>
+        <div class="dot" data-weight="200"></div>
+        <div class="dot" data-weight="300"></div>
+        <div class="dot" data-weight="400"></div>
+        <div class="dot" data-weight="500"></div>
+        <div class="dot" data-weight="600"></div>
+        <div class="dot" data-weight="700"></div>
+        <div class="dot" data-weight="800"></div>
+        <div class="dot" data-weight="900"></div>
+      </div>
+    </div>
+
+    <div class="weight-text box align-center justify-stretch under ">
+      <p class="white text-m">Weight</p>
+      <p class="text-m" id="currentWeight">100</p>
+    </div>
+
+    <div class="white text-center padding-l" id="letters">
+      ABCDEFGHIJKLM<br>
+      NOPQRSTUVWXYZ<br>
+      abcdefghijklmn<br>
+      opqrstuvwxyz<br>
+      1234567890<br>
+      !?#*:;[]()%+=
+    </div>
+  </section>
+
+  <!-- Weight Bar Section (End) -->
 
 
   <script>
@@ -438,12 +518,10 @@
    COPY CODE BLOCK SECTION (Start)
    ========================= */
 
-    // Elements
     const copyButton = document.getElementById('copyButton');
     const copyIcon = document.getElementById('copyIcon');
     const codeToCopy = document.querySelector('.code-content');
 
-    // Copy functionality
     copyButton.addEventListener('click', () => {
       if (!codeToCopy) {
         console.error("Code element not found. Ensure '.code-content' exists.");
@@ -486,6 +564,42 @@
     /* =========================
        COPY CODE BLOCK SECTION (End)
        ========================= */
+
+
+       document.addEventListener('DOMContentLoaded', () => {
+            const dots = document.querySelectorAll('.dot');
+            const lettersDiv = document.getElementById('letters');
+            const currentWeightText = document.getElementById('currentWeight');
+
+            // Function to update the UI
+            function updateUI(weight) {
+                // Update font weight of the letters
+                lettersDiv.style.fontWeight = weight;
+
+                // Update the active dot
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                const activeDot = document.querySelector(`.dot[data-weight="${weight}"]`);
+                if (activeDot) {
+                    activeDot.classList.add('active');
+                }
+
+                // Update the weight number text
+                currentWeightText.textContent = weight;
+            }
+
+            // Add click event listeners to each dot
+            dots.forEach(dot => {
+                dot.addEventListener('click', (event) => {
+                    const selectedWeight = event.target.dataset.weight;
+                    updateUI(selectedWeight);
+                });
+            });
+
+            // Set initial state
+            updateUI('100');
+        });
   </script>
 
 </body>
