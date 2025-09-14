@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
 </head>
 
-<body style="margin: 0; padding: 0; box-sizing: border-box;">
+<body style="margin: 0; padding: 0; box-sizing: border-box; overflow-x: hidden;">
 
   <!-- HERO SECTION (Start) -->
 
@@ -60,17 +60,17 @@
         <!-- Responsive buttons -->
         <nav class="row justify-center align-center gap-l padding-m wrap box" aria-label="primary actions">
           <a href="#">
-            <button id="downloadBtn" type="button" aria-label="Download font" class="align-center justify-center" style="border-radius:50px; border:none; padding:23px 110px; font-size:39px;
-                     transition:all 0.3s ease; color:#FFBFE1; background:#02903B;">
+            <button id="downloadBtn" type="button" aria-label="Download font" class="align-center justify-center"
+              style="border-radius:50px; border:none; padding:23px 110px; font-size:39px; color:#FFBFE1; background:#02903B;">
               download
             </button>
           </a>
 
           <a href="#">
             <button id="githubBtn" type="button" aria-label="View GitHub repository"
-              class="align-center justify-center gap-m" style="border-radius:50px; border:none; font-weight:300; padding:23px 110px; font-size:39px;
-                     transition:all 0.3s ease; color:#02903B; background:#FFBFE1;">
-              <img src="assets/Octicons-mark-github 1.svg" alt="" decoding="async" loading="lazy" />
+              class="align-center justify-center gap-m"
+              style="border-radius:50px; border:none; font-weight:300; padding:23px 110px; font-size:39px; color:#02903B; background:#FFBFE1;">
+              <img width="30%" src="assets/Octicons-mark-github 1.svg" alt="" decoding="async" loading="lazy" />
               github
             </button>
           </a>
@@ -290,12 +290,15 @@
       <h1 id="features-heading" class="box-l text-center align-center" style="font-weight: 600;">
         features
       </h1>
-      <h3 class="under text-center box-l" style="color:#FF4B00; font-size:48px; font-weight:200;">
-        alternative letter
-      </h3>
-      <p class="box-l align-center text-center" style="color:#FF4B00; font-size:24px; font-weight:300;">
-        The font offers alternative letterforms that can be <br /> accessed manually for stylistic variation
-      </p>
+      <div class="box-l column justify-center align-center text-center padding-l">
+        <h3 class="under text-center box-l" style="color:#FF4B00; font-size:48px; font-weight:200;">
+          alternative letter
+        </h3>
+        <p class="box-s justify-center align-center text-center"
+          style="color:#FF4B00; font-size:24px; font-weight:300;">
+          The font offers alternative letterforms that can be accessed manually for stylistic variation
+        </p>
+      </div>
     </div>
 
     <div class="row justify-center align-center gap-l box-l padding-l" id="imgSection">
@@ -307,13 +310,13 @@
   </section>
 
   <!-- Superscript / Subscript -->
-  <section aria-labelledby="script-heading" class="column justify-stretch gap-xs" style="margin-top:100px;">
-    <div class="box column align-center text-center">
-      <h3 class="under text-center box-l at-rule" style="font-size:48px; font-weight:200;">
+  <section aria-labelledby="script-heading" class="column justify-stretch gap-xs" style="margin-top:60px;">
+    <div class="box column align-center text-center padding-l">
+      <h3 class="text-center box-l at-rule" style="font-size:48px; font-weight:200;">
         Superscript and Subscript
       </h3>
-      <p class="box-l align-center text-center at-rule" style="font-size:24px; font-weight:300;">
-        Superscript (sups): raises text to superscript position (e.g., x²). <br /> Subscript (subs): lowers text to
+      <p class="box-s justify-center align-center text-center at-rule" style="font-size:24px; font-weight:300;">
+        Superscript (sups): raises text to superscript position (e.g., x²). Subscript (subs): lowers text to
         subscript position (e.g., H₂O).
       </p>
     </div>
@@ -326,13 +329,13 @@
   </section>
 
   <!-- Precision and Control -->
-  <section aria-labelledby="precision-heading" class="column justify-stretch gap-xs" style="margin-top:100px;">
-    <div class="box column align-center text-center">
-      <h3 class="under text-center box-l property" style="font-size:48px; font-weight:200;">
+  <section aria-labelledby="precision-heading" class="column justify-stretch gap-xs" style="margin-top:60px;">
+    <div class="box column align-center text-center padding-l">
+      <h3 class="text-center box-l property" style="font-size:48px; font-weight:200;">
         Precision and control
       </h3>
-      <p class="box-l align-center text-center property" style="font-size:24px; font-weight:300;">
-        custom spacing pairs for precision, and auto letter-spacing for balanced flow. <br /> Auto-letter spacing is
+      <p class="box-s justify-center align-center text-center property" style="font-size:24px; font-weight:300;">
+        custom spacing pairs for precision, and auto letter-spacing for balanced flow. Auto-letter spacing is
         adjusted per weight for optimal readability.
       </p>
     </div>
@@ -347,13 +350,13 @@
 
 
   <!-- Precise & Simple -->
-  <section aria-labelledby="precise-simple-heading" class="column justify-stretch gap-xs" style="margin-top:100px;">
-    <div class="box column align-center text-center">
-      <h3 class="under text-center box-l" style="color:#FF4B00; font-size:48px; font-weight:200;">
+  <section aria-labelledby="precise-simple-heading" class="column justify-stretch gap-xs" style="margin-top:60px;">
+    <div class="box column align-center text-center padding-l">
+      <h3 class="text-center box-l" style="color:#FF4B00; font-size:48px; font-weight:200;">
         precise and simple
       </h3>
-      <p class="box-l align-center text-center" style="color:#FF4B00; font-size:24px; font-weight:300;">
-        clean lines, easy to read. no fancy stuff <br /> just clarity and function.
+      <p class="box-s justify-center align-center text-center" style="color:#FF4B00; font-size:24px; font-weight:300;">
+        clean lines, easy to read. no fancy stuff just clarity and function.
       </p>
     </div>
 
@@ -366,13 +369,13 @@
   </section>
 
   <!-- Pixel-Perfect -->
-  <section aria-labelledby="pixel-perfect-heading" class="column justify-stretch gap-xs" style="margin-top:100px;">
-    <div class="box column align-center text-center">
-      <h3 class="under text-center box-l" style="color:#8159FB; font-size:48px; font-weight:200;">
+  <section aria-labelledby="pixel-perfect-heading" class="column justify-stretch gap-xs" style="margin-top:60px;">
+    <div class="box column align-center text-center padding-l">
+      <h3 class="text-center box-l" style="color:#8159FB; font-size:48px; font-weight:200;">
         Pixel-perfect optimization
       </h3>
-      <p class="box-l align-center text-center" style="color:#8159FB; font-size:24px; font-weight:300;">
-        specifically optimized for 16px to ensure crisp rendering <br /> auto-sizing for small text for better
+      <p class="box-s justify-center align-center text-center" style="color:#8159FB; font-size:24px; font-weight:300;">
+        specifically optimized for 16px to ensure crisp rendering auto-sizing for small text for better
         legibility.
       </p>
     </div>
@@ -457,7 +460,7 @@
 
   <!-- RED FONT WEIGHT RULER SECTION (Start) -->
 
-  <section class="box column align-center justify-center padding-xl box-l hidden-on-mobile" style="width:100%;">
+  <section class="box column align-center justify-center padding-xl box-l hidden-on-mobile text-center">
     <div class="padding-xl box-l">
       <div id="weightLabels" class="box justify-stretch box-l" style="cursor:pointer; font-weight:300;">
         <span style="transition:color 0.3s ease;" data-weight="100" data-step="0">Thin</span>
@@ -528,8 +531,6 @@
 
 
   <!-- CUSTOMIZABLE HEY SECTION (Start) -->
-
-
 
   <div id="fc-component-root" class="box justify-center align-center box-l padding-xl"
     style="background-color:#f6f5f9;">
@@ -625,6 +626,166 @@
   <!-- CUSTOMIZABLE HEY SECTION (End) -->
 
 
+  <!-- Keyboard Cutomizable Section (Start)-->
+
+  <section style="font-weight: 300;">
+    <div class="padding-l">
+      <div class="box align-center text-m padding-l">
+        <div class="half-weight-bar box justify-stretch align-center text-m" style="width: 47%;">
+          <span>Glyphs set overview</span>
+          <div class="box justify-end">
+            <div class="align-center gap-m">
+              <label for="weightSlider">Weight</label>
+              <input type="range" id="weightSlider" min="100" max="900" step="1" value="400">
+              <span id="weightValue">400</span>
+            </div>
+          </div>
+        </div>
+        <div class="unicode-div" style="width: 53%;"> </div>
+      </div>
+
+      <div class="wrapper-both-sec box justify-stretch padding-l" style="padding-top: 0;">
+
+        <!-- Left Panel -->
+        <div class="left">
+          <div class="grid-section padding-l" style="background: #fafafa; border-radius: 6px; height: 100%;">
+            <h3 class="padding-s text-m" style="color: #444;">Uppercase</h3>
+            <div class="grid" id="uppercase"></div>
+            <h3 class="padding-s text-m" style="color: #444;">Lowercase</h3>
+            <div class="grid" id="lowercase"></div>
+            <h3 class="padding-s text-m" style="color: #444;">Numbers & Symbols</h3>
+            <div class="grid" id="symbols"></div>
+          </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right">
+          <div class="box-l label foreground-primary" style="position: absolute; height: 1px; top: 8.5%;"></div>
+          <div class="box-l label foreground-primary" style="position: absolute; height: 1px; top: 25.5%;"></div>
+          <div class="box-l label foreground-primary" style="position: absolute; height: 1px; top: 38%;"></div>
+          <div class="box-l label foreground-primary" style="position: absolute; height: 1px; bottom: 25%;"></div>
+          <div class="box-l label foreground-primary" style="position: absolute; height: 1px; bottom: 10.3%;"></div>
+          <div class="label ascender-label text-m" style="position: absolute; left: 15px; top: 10%;">Ascender</div>
+          <div class="label cap-label text-m" style="position: absolute; left: 15px; top: 27%;">Cap Height</div>
+          <div class="label x-label text-m" style="position: absolute; left: 15px; top: 39.5%;">X-Height</div>
+          <div class="label baseline-label text-m" style="position: absolute; left: 15px; bottom: 22%;">Baseline</div>
+          <div class="label desc-label text-m" style="position: absolute; left: 15px; bottom: 7.5%;">Descender</div>
+          <span id="glyphChar">A</span>
+          <div class="text-m" style="position: absolute; top: 8px; right: 15px; color: #666;" id="unicodeLabel">uni0041
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keyboard Cutomizable Section (End)-->
+
+
+  <!-- Motion Section (Start) -->
+
+  <section class="box justify-center align-center padding-xl background-primary">
+    <div class="padding-xl" style="width: 98.5%; background: #f5f5f5;">
+
+      <div class="box justify-stretch align-center">
+        <img id="motion-circle" width="12%" src="assets/Ellipse 226.png" alt="">
+        <img id="motion-circle" width="12%" src="assets/Ellipse 227.svg" alt="">
+      </div>
+
+      <div class="box justify-center align-center" style="margin-top: -9vw; margin-bottom: -9vw;">
+        <img width="85%" id="motion-circle" src="assets/Ellipse 207.svg" alt="">
+      </div>
+
+      <div class="box justify-stretch align-center">
+        <img width="12%" src="assets/Group 1948755508.svg" alt="">
+        <img width="12%" src="assets/Polygon 10 (1).svg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- Motion Section (End) -->
+
+  <style>
+    #motion-circle {
+      animation: rotate-animation 15s infinite linear;
+    }
+
+    @keyframes rotate-animation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(180deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+
+  <!-- Font in Action Section (Start)  -->
+
+  <section class="padding-xl">
+    <!-- Heading -->
+    <div class="padding-xl">
+      <h1 id="under-type-heading" class="text-center align-center at-rule" style="font-weight:600">
+        font in action
+      </h1>
+    </div>
+
+    <!-- Posters grid -->
+    <div id="imgSection" class="box justify-stretch align-center" style="flex-wrap:wrap; row-gap: 1.5rem;">
+      <img src="assets/Poster (2).svg" alt="Pixel-perfect optimization example 1" decoding="async" loading="lazy"
+        class="box-s">
+      <img src="assets/Poster (3).svg" alt="Pixel-perfect optimization example 2" decoding="async" loading="lazy"
+        class="box-s">
+      <img src="assets/Poster (4).svg" alt="Pixel-perfect optimization example 3" decoding="async" loading="lazy"
+        class="box-s">
+      <img src="assets/Poster (5).svg" alt="Pixel-perfect optimization example 4" decoding="async" loading="lazy"
+        class="box-s">
+      <img src="assets/Poster (6).svg" alt="Pixel-perfect optimization example 5" decoding="async" loading="lazy"
+        class="box-s">
+      <img src="assets/Poster (7).svg" alt="Pixel-perfect optimization example 6" decoding="async" loading="lazy"
+        class="box-s">
+      <img src="assets/Poster (8).svg" alt="Pixel-perfect optimization example 7" decoding="async" loading="lazy"
+        class="box-s">
+      <img src="assets/Poster (9).svg" alt="Pixel-perfect optimization example 8" decoding="async" loading="lazy"
+        class="box-s">
+    </div>
+  </section>
+
+  <!-- Font in Action Section (End) -->
+
+
+  <!-- Go Section (Start) -->
+
+  <section class="padding-xl">
+    <div class="box-l" role="banner" style="position: relative; display:flex; justify-content:center;">
+      <img src="assets/Group 1948755438 (1).svg" alt="Under.type hero graphic" width="75%"
+        style="margin: 0 auto; display:block;" />
+      <p id="go-text" style="font-weight:200; position: absolute; right: 11%; bottom: 5%; margin:0; text-align:right;">
+        it’s free & open source <br>no fine print
+      </p>
+    </div>
+  </section>
+
+  <!-- Go Section (End) -->
+
+
+  <!-- Get under font button (Start) -->
+
+  <section class="box-l padding-xl">
+    <div class=" box-l justify-center align-center">
+      <button class="text-center white" id="responsiveBtn" style="background:#014ADD; border-radius:400px; width:95%; height:450px; font-size:162px; font-weight:300; border:none; cursor:pointer;">
+        get under font
+      </button>
+    </div>
+  </section>
+
+  <!-- Get under font button (End) -->
+
 
   <script>
     // under.type Heading (Start)
@@ -632,8 +793,7 @@
     function applyResponsiveLayout() {
       const heading = document.getElementById("under-type-heading");
       const paragraph = document.getElementById("under-type-paragraph");
-      const downloadBtn = document.getElementById("downloadBtn");
-      const githubBtn = document.getElementById("githubBtn");
+      const btns = [downloadBtn, githubBtn];
 
       const width = window.innerWidth;
 
@@ -656,17 +816,17 @@
         paragraph.style.fontSize = "48px";
       }
 
-      // Button responsiveness
-      if (width <= 600) {
-        downloadBtn.style.padding = "20px 80px";
-        downloadBtn.style.fontSize = "30px";
-        githubBtn.style.padding = "20px 80px";
-        githubBtn.style.fontSize = "30px";
+      if (window.innerWidth < 768) {
+        const scale = Math.max(window.innerWidth / 768, 0.5);
+        btns.forEach(btn => {
+          btn.style.padding = `${23 * scale}px ${110 * scale}px`;
+          btn.style.fontSize = `${39 * scale}px`;
+        });
       } else {
-        downloadBtn.style.padding = "23px 110px";
-        downloadBtn.style.fontSize = "39px";
-        githubBtn.style.padding = "23px 110px";
-        githubBtn.style.fontSize = "39px";
+        btns.forEach(btn => {
+          btn.style.padding = "23px 110px";
+          btn.style.fontSize = "39px";
+        });
       }
     }
 
@@ -682,7 +842,7 @@
       const imgs = document.querySelectorAll("#imgSection img");
       const isMobile = window.innerWidth <= 768;
       imgs.forEach(img => {
-        img.style.maxWidth = isMobile ? "100%" : "48%";
+        img.style.maxWidth = isMobile ? "100%" : "49%";
       });
     }
 
@@ -1169,6 +1329,330 @@
     });
 
     // Customizable Hey Section (End)
+
+
+    // Keyboard Cutomizable Section (Start)
+
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+    const lowercase = "abcdefghijklmnopqrstuvwxyz".split("");
+    const symbols = "1234567890!?()#%*\\“[]:;@+,.".split("");
+
+    const glyphChar = document.getElementById("glyphChar");
+    const unicodeLabel = document.getElementById("unicodeLabel");
+    const slider = document.getElementById("weightSlider");
+    const weightValue = document.getElementById("weightValue");
+
+    function renderGlyphs(containerId, chars) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = "";
+      chars.forEach(ch => {
+        const div = document.createElement("div");
+        div.className = "glyph";
+        div.textContent = ch;
+        div.addEventListener("click", () => updateGlyphView(ch));
+        container.appendChild(div);
+      });
+    }
+
+    function updateGlyphView(ch) {
+      glyphChar.textContent = ch;
+      unicodeLabel.textContent = `uni${ch.charCodeAt(0).toString(16).toUpperCase().padStart(4, "0")}`;
+    }
+
+    function updateFontWeight(weight) {
+      weightValue.textContent = weight;
+
+      const mainGlyph = document.getElementById('glyphChar');
+      if (mainGlyph) {
+        mainGlyph.style.fontWeight = weight;
+      }
+    }
+
+    slider.addEventListener("input", () => {
+      updateFontWeight(slider.value);
+    });
+
+    renderGlyphs("uppercase", uppercase);
+    renderGlyphs("lowercase", lowercase);
+    renderGlyphs("symbols", symbols);
+    updateGlyphView('A');
+    updateFontWeight(slider.value);
+
+    function toggleGuidelines() {
+      const hide = window.innerWidth <= 1024;
+      document.querySelectorAll(".label, .unicode-div").forEach(el => {
+        el.style.display = hide ? "none" : "";
+      });
+    }
+
+    toggleGuidelines();
+    window.addEventListener("resize", toggleGuidelines);
+
+    const style = document.createElement("style");
+    style.textContent = `
+    #weightSlider[type="range"] {
+      -webkit-appearance: none;
+      width: 160px;
+      height: 3px;
+      border-radius: 2px;
+      background: #ddd;
+      outline: none;
+    }
+
+    #weightSlider[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #000;
+      cursor: pointer;
+    }
+
+    #weightSlider[type="range"]::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #000;
+      cursor: pointer;
+    }
+    
+    .left {
+      width: 48%;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+      
+    .grid > * {
+     flex: 0 1 63px;
+    }
+
+    .glyph {
+      display: flex;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+      color: var(--Black, #000);
+      text-align: center;
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 122%;
+      width: 65px;
+      height: 64px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .glyph:hover {
+      background: #f0f0f0;
+    }
+
+    .right {
+      width: 48%;
+      height: 860px;
+      position: relative;
+      background: #fafafa;
+      border-radius: 6px;
+      padding: 20px;
+      text-align: center;
+      font-size: 585px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #glyphChar {
+      font-weight: 400;
+      z-index: 2;
+      transition: font-weight 0.1s ease;
+      position: relative;
+      top: 11.7%;
+    }
+
+     @media (max-width: 1515px) {
+      
+      .grid > * {
+        flex: 0 1 55px;
+        height: 55px;
+        aspect-ratio: 1 / 1;
+        font-size: 22px;
+      }
+
+     }
+
+    @media (max-width: 1024px) {
+      .wrapper-both-sec {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .half-weight-bar {
+        width: 96%;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      .right {
+        font-size: 300px;
+        padding: 15px;
+        min-height: 400px;
+        text-align: center;
+        order: 1;
+      }
+
+      .left {
+        order: 2;
+      }
+
+      #glyphChar {
+        top: 50%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wrapper-both-sec {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .half-weight-bar {
+        width: 96%;
+      }
+
+      .right {
+        order: 1;
+        font-size: 200px;
+        padding: 10px;
+        min-height: 250px;
+        text-align: center;
+      }
+
+      .left {
+        order: 2;
+      }
+
+      #glyphChar {
+        font-size: clamp(120px, 30vw, 200px);
+        top: 0;
+      }
+
+      .grid-section {
+        order: 3;
+      }
+
+      .grid > * {
+        flex: 0 1 40px;
+      }
+
+      .glyph {
+        width: 100%;
+        aspect-ratio: 1/1;
+        font-size: clamp(16px, 5vw, 22px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      input[type="range"] {
+        width: 100%;
+      }
+
+      .half-weight-bar {
+        width: 96%;
+        flex-wrap: wrap;
+        gap: 15px
+      }
+
+      .half-weight-bar div {
+        justify-content: start;
+      }
+
+      .right {
+        font-size: 140px;
+        min-height: 200px;
+        text-align: center;
+      }
+
+      #glyphChar {
+        font-size: clamp(80px, 25vw, 140px);
+      }
+
+      .grid > * {
+        flex: 0 1 32px;
+      }
+
+      .glyph {
+        font-size: clamp(14px, 6vw, 18px);
+      }
+    }
+  `;
+    document.head.appendChild(style);
+
+    // Customizable Keyboard Section (End)
+
+
+    // <!-- Go Section (Start) 
+
+    function applyResponsive() {
+      const text = document.getElementById("go-text");
+      const w = window.innerWidth;
+
+      const min = 10;
+      const max = 48;
+      const scale = (w / 1920) * max;
+      const size = Math.max(min, Math.min(scale, max));
+
+      text.style.fontSize = size + "px";
+    }
+
+    applyResponsive();
+    window.addEventListener("resize", applyResponsive);
+
+    // <!-- Go Section (End) 
+
+
+      // Get under font button (Start)
+
+
+    const btn = document.getElementById('responsiveBtn');
+
+    function updateButtonSize() {
+      const w = window.innerWidth;
+      if (w <= 575) {
+        btn.style.height = '100px';
+        btn.style.fontSize = '30px';
+      } else if (w <= 768) {
+        btn.style.height = '200px';
+        btn.style.fontSize = '60px';
+      } else if (w <= 1050) {
+        btn.style.height = '280px';
+        btn.style.fontSize = '90px';
+      } else if (w <= 1300) {
+        btn.style.height = '350px';
+        btn.style.fontSize = '120px';
+      } else {
+        btn.style.height = '450px';
+        btn.style.fontSize = '150px';
+      }
+    }
+
+    updateButtonSize();
+
+    window.addEventListener('resize', updateButtonSize);
+
+    // Get under font button (End)
+
+
 
   </script>
 
