@@ -25,7 +25,10 @@
   <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
 </head>
 
-<body style="margin: 0; padding: 0; box-sizing: border-box; overflow-x: hidden;">
+<body class="foreground-primary" style="margin: 0; padding: 0; box-sizing: border-box; overflow-x: hidden;">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <under-header></under-header>
+  <under-navigation></under-navigation>
 
   <!-- HERO SECTION (Start) -->
 
@@ -86,7 +89,7 @@
 
   <section class="box row justify-center align-center padding-m box"
     style="margin-bottom: 70px; font-size: 20px; font-weight: 300; color: #808080;">
-    <div class="panel foreground-primary border shadow box-l code-container"
+    <div class="panel border shadow box-l code-container background-primary"
       style="position: relative; width: 100%; max-width: 820px; border-radius: 10px; ">
       <button id="copyButton" class="copy-button" aria-label="Copy code"
         style="position: absolute; top: 1rem; right: 1rem; color: #9ca3af; transition: color 0.2s ease; cursor: pointer; border: none; background: transparent;">
@@ -683,7 +686,7 @@
 
   <!-- Motion Section (Start) -->
 
-  <section class="box justify-center align-center padding-xl background-primary">
+  <section class="box justify-center align-center padding-xl">
     <div class="padding-xl" style="width: 98.5%; background: #f5f5f5;">
 
       <div class="box justify-stretch align-center">
@@ -786,6 +789,9 @@
 
   <!-- Get under font button (End) -->
 
+<under-footer></under-footer>
+  <script src="../js/footer.js"></script>
+  <script src="../js/header.js"></script>
 
   <script>
     // under.type Heading (Start)
@@ -1655,6 +1661,7 @@
 
 
   </script>
+  
 
 </body>
 
