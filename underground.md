@@ -1,10 +1,10 @@
-# ūnderground
+# underground
 
 this handbook is your ticket to understanding our world. it's a living document that captures our philosophy, methods, and vision. as you explore these pages, you'll discover not just what we do, but why and how we do it.
 
 whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative infrastructure.
 
-## ūnder
+## under
 
 under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal, empowering creatives through meta-creativity.  
 eden started as a designer engineer, connecting creativity and technology.  
