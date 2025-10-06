@@ -1,10 +1,10 @@
-# ūnderground
+# underground
 
 this handbook is your ticket to understanding our world. it's a living document that captures our philosophy, methods, and vision. as you explore these pages, you'll discover not just what we do, but why and how we do it.
 
 whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative infrastructure.
 
-## ūnder
+## under
 
 under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal, empowering creatives through meta-creativity.  
 eden started as a designer engineer, connecting creativity and technology.  
@@ -164,41 +164,37 @@ high standards are not optional. "pretty good" isn't good enough. think first. d
 * own your milestones: assign, manage, complete
 * move forward, not sideways
 
-### process
+### freelancer system
 
-1. start
-   - read the brief
-   - ask smart questions
-   - gather 5 max inspiration references
-   - propose a written concept
-   - get approval → then design
+**getting started**
+- receive brief via figma or whatsapp
+- respond within 24hrs with questions and timeline
+- confirm scope, deliverables, deadline
+- start only after written approval
 
-2. build 
-   - scope → validate vision and plan
-   - build → execute with daily progress checks
-   - ship → assess deliverables and verify satisfaction
+**working**
+- daily progress updates in figma comments
+- tag @eden or @inbal for quick decisions
+- share work-in-progress every 2 days maximum
+- ask early, fix later - no surprises at the end
 
-3. present
-   - clean figma. proper naming. no mess
-   - short explanation: what's the idea? why does it work?
-   - always 2 directions. never just one
-   - a draft is a thought system, not a moodboard
+**delivering**
+- clean figma files: organized, named, no mess
+- one strong direction (two maximum if needed)
+- brief explanation: what's the idea? why does it work?
+- files ready for handoff: exported, organized, accessible
 
-### how
+**tools**
+- figma comments = tasks and feedback
+- whatsapp = quick communication and updates
+- calendar = scheduled calls (keep to minimum)
+- drive = final assets and project files
 
-track: 🟢 todo → 🟡 progress → 🔴 blocked → ✅ done  
-tools: figma, calendar, whatsapp, drive  
-feedback: fast, brutal, clear, never personal - improve, don't defend  
-delivery: clean, responsive, named, ready
-
-rules:
-* ask early > fix later
-* half great > full mediocre  
-* taste mismatch → speak up
-* no ghosting, always update
-
-measure: precision, speed, initiative, taste, execution  
-remember: move fast, stay focused, deliver excellence
+**standards**
+- move fast, think first, deliver excellence
+- precision, speed, initiative, taste, execution
+- feedback is brutal but never personal - improve, don't defend
+- half great beats full mediocre
 
 ## rhythm
 
