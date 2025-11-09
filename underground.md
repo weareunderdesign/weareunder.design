@@ -142,6 +142,20 @@ at under, our tone of voice and writing style is like that friend who always kno
 * peer voice: teach through sharing - nobody likes being lectured
 * suggest don't command: inspiration beats instruction - trust readers' judgment
 
+#### visual
+
+our visual content follows a recipe that makes people stop scrolling and start feeling.
+
+* personal: authentic and human - generic visuals get ignored
+* mysterious: intrigue before revealing - curiosity drives engagement
+* timing: rhythm and pacing matter - good content at the wrong time fails
+* visual pleasure: beauty is not optional - aesthetics create emotional connection
+* clean: one strong image - clarity beats clutter
+* strong composition: intentional arrangement - guide the eye deliberately
+* smart color use: purposeful palette - color communicates before words
+* clear typography: readable and eye-catching - type should grab attention
+* minimalist: simple and focused - remove everything unnecessary
+
 ## flow
 
 we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.
