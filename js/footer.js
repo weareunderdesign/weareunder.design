@@ -17,9 +17,8 @@ const footerTemplate = `
         <svg-icon src="https://weareunder.design/images/outlinefooter.svg"></svg-icon>
       </a>
       <span class="box" style="align-self:flex-end;">
-        high-quality, well-designed, <br>
-        creative brands and products<br>
-         for creative people.
+        high-quality, well-designed,<br>
+        brands and products<br>
       </span>
 
       <div class="column gap-s">
