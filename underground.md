@@ -6,80 +6,69 @@ whether you're a team member, collaborator, or curious mind, we invite you to di
 
 ## under
 
-under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal, empowering creatives through meta-creativity.  
-eden started as a designer engineer, connecting creativity and technology.  
-inbal began as a brand designer, creating remarkable identities and studying design-art edges.  
-after years across design studios, startups, and companies, they founded under with a crystallized vision - to empower human creativity, especially designers, helping humans create amazing things.  
+under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal, empowering creatives through meta-creativity.
+eden started as a designer engineer, connecting creativity and technology.
+inbal began as a brand designer, creating remarkable identities and studying design-art edges.
+after years across design studios, startups, and companies, they founded under with a crystallized vision - to empower human creativity, especially designers, helping humans create amazing things.
 they're known for their "brandsprint" - a mind-blowing process that helps companies stand out in a world drowning in mediocre brands. it's about clarity → precision → impact. it's amazing to see how a simple idea can change the way a group of people work.
 
-## be
+## being
 
-humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond - breaking barriers between mediums and idea-execution to craft holistic solutions that engage all senses.  
+our philosophy and values guide everything we create and how we work together.
+
+### vision
+
+humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond - breaking barriers between mediums and idea-execution to craft holistic solutions that engage all senses.
 
 we see a future where creativity connects us more deeply to our work. as technology "disappears", we reconnect creators through methodologies that eliminate barriers to creation - optimized since day one by solving our own problems first.
 
 this approach allows us to understand problems deeply, create intuitive solutions, iterate quickly, and maintain clear vision.
 
-we foster continuous learning and radical transparency - our open approach extends beyond code to knowledge sharing and collaborative creation. we openly share our development journey, incorporating community feedback to maintain collaboration at our design core.
+### values
 
 - open exchange: ideas multiply when shared freely
-- community synergy: we grow stronger together  
+- community synergy: we grow stronger together
 - joyful engagement: creativity thrives in play and wonder
+- holistic creation: unifying mind, body and spirit in the creative process
+- purposeful impact: solving real problems and meeting real needs
+- design excellence: creating work that transcends expectations
 
-we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds.
+we foster continuous learning and radical transparency - our open approach extends beyond code to knowledge sharing and collaborative creation. we openly share our development journey, incorporating community feedback to maintain collaboration at our design core.
+
+we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
 
 "you're successful as soon as you send your work out into the world."
 rick rubin via twitter (2023)
 
-#### simple
+### principles
+
+our framework for delivering exceptional products and services:
+
+- smart automation: let tools do the heavy lifting
+- clear goals: know exactly where we're heading
+- rapid results: ship fast, learn faster
+- focused execution: 1-3 week sprints with clear deliverables
+- value outcomes over hours
+- own your milestones: assign, manage, complete
+- move forward, not sideways
+
+high standards are not optional. "pretty good" isn't good enough. think first. design second. never guess.
+
+### simple
 
 we welcome beginners with intuitive basics. simple to start, our approach adapts to your needs like a well-designed tool.
 
 - adaptive mastery: like water, we shape our offerings to be simple to start
 - meta-creativity: we shape not just work, but the very way we create
 
-#### complex
+### complex
 
 we offer depths for masters to explore. rich with potential, our offerings grow alongside you as you develop expertise.
 
 - continuous growth: the path of mastery has no end, our approach grows with you
 - infinitely deep exploration for advanced techniques and nuanced applications
 
-we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.  
-
-## do
-
-at under, we're doers spanning multiple creativity dimensions - from brand strategy to design services. we create methodologies that empower creators, build evolving systems, and foster collaborative innovation.
-
-- holistic creation: unifying mind, body and spirit in the creative process
-- purposeful impact: solving real problems and meeting real needs
-- design excellence: creating work that transcends expectations
-
-our self-focused approach ensures solid, tested offerings before expanding to wider markets, building strong foundations for growth.
-
-### what
-
-our products and services embody our vision and philosophy. each is crafted with care to push creative boundaries and meet the evolving needs of the creative community.
-
-| name | description | indie | enterprise | growth | startup |
-| :---- | :---- | :---- | :---- | :---- | :---- |
-| brandsprint | rapid branding process | freelancers, local businesses, students | large corporations, product launches | fast-growing startups, new market entry | early-stage startups, small businesses |
-| design lifestyle products | curated products for designers | freelancers, students, educators | large design teams, 1000+ employees | medium businesses, 100-999 employees | small businesses, 10-99 employees |
-| design services | custom design solutions | tech-savvy creatives, digital artists | r\&d departments, innovative design teams | tech-forward medium businesses | ar/vr startups, innovative studios |
-
-### who
-
-by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
-
-| users | pain points / needs |
-| :---- | :---- |
-| designers | frustrated with design-development gap, inefficient branding processes, seeking better collaboration tools |
-| entrepreneurs & founders | overwhelmed by tool fragmentation, need affordable all-in-one solutions, want scalable processes |
-| creative directors & leaders | seeking efficient brand execution, frustrated by team miscommunication, wanting to innovate |
-| students & educators | facing industry-academia gap, need affordable pro tools, want cutting-edge experience |
-| freelancers & agencies | juggling multiple tools, need streamlined workflows, seeking competitive advantage |
-| product teams | wanting better prototyping tools, need seamless handoff, seeking unified design systems |
-| digital artists | seeking expressive tools, want to blend code and design, need intuitive interfaces |
+we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.
 
 ## echo
 
@@ -87,22 +76,14 @@ we craft and maintain under's unique voice across all platforms, developing comp
 
 we approach content in two ways:
 
-* macro: in-depth content like comprehensive guides, educational series, thought leadership pieces, podcasts, campaigns, and original animated videos that establish our expertise  
+* macro: in-depth content like comprehensive guides, educational series, thought leadership pieces, podcasts, campaigns, and original animated videos that establish our expertise
 * micro: bite-sized, engaging content like social media posts, quick tips, behind-the-scenes glimpses, quotes, reels, and clips from bigger content that maintain daily presence
 * branded generic: when there's no new/macro material, we remix and create graphic elements, system-based posts, and repeated visuals (like showcase snapshots or branded frames)
 
-both strategies work together to tell our story and engage our community effectively.  
+both strategies work together to tell our story and engage our community effectively.
 the garyvee model: document → create → distribute → listen → create → distribute
 
-#### types
-
-* branding is broken: videos series: educational content exploring design industry issues and solutions
-* brand fuckups: monthly 5-minute podcast highlighting design mistakes and lessons learned
-* power shots: daily 3 stories from projects - quick glimpses of work-in-progress and design details from past projects.
-* big reveals: showcases and highlights of our work
-* updates and job descriptions: company news, team updates, and open position announcements
-
-#### channels
+### channels
 
 | channel | purpose | content type | schedule |
 | :---- | :---- | :---- | :---- |
@@ -114,7 +95,7 @@ the garyvee model: document → create → distribute → listen → create → 
 | [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap; highlights and fresh drops across platforms | curated: weekly updates, insights, stories, highlights, fresh drops | sent thursday/friday |
 | [behance](https://behance.net/weareunder) | showcases; same content as site, tailored for platform | showcases: work highlights, design innovations, portfolio pieces | published whenever ready |
 
-#### voice
+### voice
 
 at under, our tone of voice and writing style is like that friend who always knows what to say.
 
@@ -142,7 +123,7 @@ at under, our tone of voice and writing style is like that friend who always kno
 * peer voice: teach through sharing - nobody likes being lectured
 * suggest don't command: inspiration beats instruction - trust readers' judgment
 
-#### visual
+### visual
 
 our visual content follows a recipe that makes people stop scrolling and start feeling.
 
@@ -156,29 +137,19 @@ our visual content follows a recipe that makes people stop scrolling and start f
 * clear typography: readable and eye-catching - type should grab attention
 * minimalist: simple and focused - remove everything unnecessary
 
-## flow
+## doing
+
+how we work together - our culture, practices, and systems.
+
+### culture
 
 we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.
 
-four-day sprint madness - we work monday to thursday, 9am-6pm. but hey, if inspiration strikes at 3am on a tuesday, who are we to judge? do your best work when you're at your best.
-
 stay inspired, stay weird - take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
 
-### principles
+do your best work when you're at your best - if inspiration strikes at 3am on a tuesday, who are we to judge?
 
-our framework for delivering exceptional products and services through three core principles:
-* smart automation - let tools do the heavy lifting
-* clear goals - know exactly where we're heading
-* rapid results - ship fast, learn faster
-
-high standards are not optional. "pretty good" isn't good enough. think first. design second. never guess.
-
-* focused 1-3 week sprints with clear deliverables
-* value outcomes over hours
-* own your milestones: assign, manage, complete
-* move forward, not sideways
-
-### freelancer system
+### system
 
 **getting started**
 - receive brief via figma or whatsapp
@@ -212,192 +183,189 @@ high standards are not optional. "pretty good" isn't good enough. think first. d
 
 ## rhythm
 
-weekly:  
-mon to thu: doing  
-fri - saturday: being  
-sunday: reflecting
+our approach to time - balancing doing and being across daily, weekly, monthly, seasonal, and yearly cycles.
 
-monthly:  
-3 weeks: doing  
-1 week: being, reflecting
+### daily practices
 
-doing (monday - thursday) - creating, building, executing, learning, growing, sharing, celebrating, experimenting, collaborating, planning, achieving, moving forward, making progress, taking action, solving problems  
-- morning ritual: 15-min intention setting  
-- 90-min deep work blocks with 15-min breaks  
+**doing days (monday - thursday, 9am-6pm)**
+- morning ritual: 15-min intention setting
+- 90-min deep work blocks with 15-min breaks
 - end-of-day review: 10-min accomplishment log
 
-being (friday - saturday) - resting, reflecting, exploring, existing without pressure, enjoying, appreciating, connecting, relaxing, rejuvenating  
-- no scheduled obligations  
-- nature connection time  
-- creative exploration without goals  
+**being days (friday - saturday)**
+- no scheduled obligations
+- nature connection time
+- creative exploration without goals
 - social connection and rest
 
-reflection (sunday)  
-- morning: review week's progress  
-- midday: adjust next week's priorities  
+**reflection day (sunday)**
+- morning: review week's progress
+- midday: adjust next week's priorities
 - afternoon: document learnings and insights
 
-### monthly  
-doing weeks (weeks 1-3)  
-- week 1: vision and planning focus  
-- week 2: deep execution  
+### monthly rhythm
+
+**doing weeks (weeks 1-3)**
+- week 1: vision and planning focus
+- week 2: deep execution
 - week 3: refinement and completion
 
-being and reflecting week (week 4\)  
-- life admin and organization  
-- skill exploration and learning  
-- social connections and community  
-- creative exploration and play  
-- mindfulness and meditation  
-- nature immersion  
-- community contribution  
+**being and reflecting week (week 4)**
+- life admin and organization
+- skill exploration and learning
+- social connections and community
+- creative exploration and play
+- mindfulness and meditation
+- nature immersion
+- community contribution
 - extended rest and recovery
 
-### seasonal
-spring (mar - may): fresh starts, planting seeds, building momentum  
-theme: emergence  
-- project initiation  
-- skill development  
-- network building  
+### seasonal rhythm
+
+**spring (mar - may): emergence**
+fresh starts, planting seeds, building momentum
+- project initiation
+- skill development
+- network building
 - energy building practices
 
-summer (jun - aug): deep work, expansion, peak energy
-theme: peak expression  
-- major project execution  
-- public sharing and visibility  
-- high-energy collaboration  
+**summer (jun - aug): peak expression**
+deep work, expansion, peak energy
+- major project execution
+- public sharing and visibility
+- high-energy collaboration
 - outdoor activities
 
-fall (sep - nov): harvesting, refining, adjusting, transitioning
-theme: integration  
-- project completion  
-- knowledge documentation  
-- relationship deepening  
+**fall (sep - nov): integration**
+harvesting, refining, adjusting, transitioning
+- project completion
+- knowledge documentation
+- relationship deepening
 - gratitude practices
 
-winter (dec - feb): slowing down, reflecting, resting, visioning
-theme: restoration  
-- vision boarding  
-- deep rest  
-- inner work  
+**winter (dec - feb): restoration**
+slowing down, reflecting, resting, visioning
+- vision boarding
+- deep rest
+- inner work
 - minimal commitments
 
-balance between doing and being keeps energy sustainable and creativity alive. 
+### yearly rhythm
 
-### yearly  
-doing phase (january-september)  
-- q1 (jan-mar): foundation setting  
-- q2 (apr-jun): growth and expansion  
+**doing phase (january-september)**
+- q1 (jan-mar): foundation setting
+- q2 (apr-jun): growth and expansion
 - q3 (jul-sep): peak execution
 
-being phase (october-december)  
-- october: harvest and celebration  
-- november: integration and reflection  
+**being phase (october-december)**
+- october: harvest and celebration
+- november: integration and reflection
 - december: vision and renewal
+
+balance between doing and being keeps energy sustainable and creativity alive.
 
 ### transitions
 
-do→be  
-1 complete open loops  
-2 brain dump remaining tasks  
-3 physical environment reset  
-4 digital detox initiation  
-5 transition activity (walk, meditation, etc)
+**do → be**
+1. complete open loops
+2. brain dump remaining tasks
+3. physical environment reset
+4. digital detox initiation
+5. transition activity (walk, meditation, etc)
 
-be→do  
-1 gentle planning session  
-2 environment preparation  
-3 priority setting  
-4 energy check-in  
-5 intention setting
+**be → do**
+1. gentle planning session
+2. environment preparation
+3. priority setting
+4. energy check-in
+5. intention setting
 
 ### fallbacks
 
-work in be-time  
-1 assess true urgency  
-2 time-box the intervention  
-3 schedule compensation time  
-4 document the exception  
-5 adjust systems if pattern emerges
+**work in be-time**
+1. assess true urgency
+2. time-box the intervention
+3. schedule compensation time
+4. document the exception
+5. adjust systems if pattern emerges
 
-energy issues  
-1 check physical needs (sleep, nutrition, movement)  
-2 adjust work intensity  
-3 shift task types to match energy  
-4 take micro-breaks  
-5 consider schedule adjustment
+**energy issues**
+1. check physical needs (sleep, nutrition, movement)
+2. adjust work intensity
+3. shift task types to match energy
+4. take micro-breaks
+5. consider schedule adjustment
 
 ### tracking
 
-daily  
-date:   
-mode: \[doing/being\]  
-energy level (1-10):   
-main focus:   
-support needed:   
-success looks like: 
+**daily**
+date:
+mode: \[doing/being\]
+energy level (1-10):
+main focus:
+support needed:
+success looks like:
 
-weekly  
-week of:   
-accomplishments:  
-learnings:  
-energy patterns:  
-adjustments needed:  
+**weekly**
+week of:
+accomplishments:
+learnings:
+energy patterns:
+adjustments needed:
 next week's focus:
 
-monthly  
-month:   
-theme:   
-key milestones:  
-pattern recognition:  
-system improvements:  
+**monthly**
+month:
+theme:
+key milestones:
+pattern recognition:
+system improvements:
 next month's intentions:
 
 ### metrics
 
-quant  
-- deep work hours  
-- rest quality (sleep metrics)  
-- project completion rate  
+**quant**
+- deep work hours
+- rest quality (sleep metrics)
+- project completion rate
 - recovery time ratio
 
-qual  
-- energy sustainability  
-- creative output quality  
-- relationship depth  
+**qual**
+- energy sustainability
+- creative output quality
+- relationship depth
 - personal growth sense
 
 ### implementation
 
-1 start with weekly rhythm  
-2 add monthly layer after 4 weeks  
-3 incorporate seasonal awareness  
-4 build yearly rhythm understanding  
-5 regular system review and adjustment
+1. start with weekly rhythm
+2. add monthly layer after 4 weeks
+3. incorporate seasonal awareness
+4. build yearly rhythm understanding
+5. regular system review and adjustment
 
-### emergency
+### emergency protocols
 
-energy crash  
-1 immediate rest period  
-2 basic needs audit  
-3 support system activation  
-4 schedule adjustment  
-5 recovery plan creation
+**energy crash**
+1. immediate rest period
+2. basic needs audit
+3. support system activation
+4. schedule adjustment
+5. recovery plan creation
 
-deadline issues  
-1 priority assessment  
-2 resource reallocation  
-3 support request  
-4 timeline negotiation  
-5 recovery scheduling
+**deadline issues**
+1. priority assessment
+2. resource reallocation
+3. support request
+4. timeline negotiation
+5. recovery scheduling
 
-### balance
+### balance principles
 
-1 energy over time  
-2 quality over quantity  
-3 rhythm over rigid schedules  
-4 progress over perfection  
-5 sustainability over sprints
+1. energy over time
+2. quality over quantity
+3. rhythm over rigid schedules
+4. progress over perfection
+5. sustainability over sprints
 
-remember: this system serves you, not vice versa adjust and evolve it based on your experience and needs
-
+remember: this system serves you, not vice versa. adjust and evolve it based on your experience and needs.
