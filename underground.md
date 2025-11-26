@@ -15,21 +15,15 @@ they're known for their "brandsprint" - a mind-blowing process that helps compan
 
 ## being
 
-our philosophy and values guide everything we create and how we work together.
+humanity is evolving into an interdisciplinary species. we see a future where creativity connects us more deeply to our work - where design practices flow seamlessly across sound, motion, visuals, interaction, and beyond. we're breaking barriers between mediums and idea-execution to craft holistic solutions that engage all senses.
 
-### vision
+as technology "disappears", we reconnect creators through methodologies that eliminate barriers to creation. we solve our own problems first, allowing us to understand problems deeply, create intuitive solutions, iterate quickly, and maintain clear vision.
 
-humanity is evolving into an interdisciplinary species. we integrate design practices across sound, motion, visuals, interaction, and beyond - breaking barriers between mediums and idea-execution to craft holistic solutions that engage all senses.
-we see a future where creativity connects us more deeply to our work. as technology "disappears", we reconnect creators through methodologies that eliminate barriers to creation - optimized since day one by solving our own problems first.
-this approach allows us to understand problems deeply, create intuitive solutions, iterate quickly, and maintain clear vision.
-
-like water, we shape our offerings to be simple to start yet infinitely deep to master. we welcome beginners with intuitive basics while offering depths for masters to explore - adaptive mastery that grows alongside you. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression through meta-creativity - shaping not just work, but the very way we create.
+like water, our offerings are simple to start yet infinitely deep to master. we welcome beginners with intuitive basics while offering depths for masters to explore - adaptive mastery that grows alongside you. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression through meta-creativity - shaping not just work, but the very way we create.
 
 we embrace the chaos of remote work - our partners span the globe like a digital octopus. we find our groove, respect time zones, and do our best work when we're at our best. we stay inspired and weird.
 
-
-### values
-
+what drives us:
 - design excellence: creating work that transcends expectations - half great beats full mediocre
 - move fast, think first: precision, speed, initiative, and taste in execution
 - continuous improvement: feedback is direct but never personal - improve, don't defend
@@ -39,7 +33,7 @@ we embrace the chaos of remote work - our partners span the globe like a digital
 - holistic creation: unifying mind, body and spirit in the creative process
 - purposeful impact: solving real problems and meeting real needs
 
-we foster continuous learning and radical transparency - our open approach extends beyond code to knowledge sharing and collaborative creation. we openly share our development journey, incorporating community feedback to maintain collaboration at our design core.
+we foster continuous learning and radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation. we openly share our development journey, incorporating community feedback to maintain collaboration at our design core.
 
 we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
 
