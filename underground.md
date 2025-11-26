@@ -1,8 +1,8 @@
 # underground
 
-this handbook is your ticket to understanding our world. it's a living document that captures our philosophy, methods, and vision. as you explore these pages, you'll discover not just what we do, but why and how we do it.
+this handbook captures our philosophy, methods, and vision. it's a living document that reveals not just what we do, but why and how we do it.
 
-whether you're a team member, collaborator, or curious mind, we invite you to dive deep into the underground - the foundation upon which we build our creative infrastructure.
+whether you're a team member, collaborator, or curious mind - welcome to the underground, the foundation upon which we build our creative infrastructure.
 
 ## under
 
@@ -19,36 +19,32 @@ humanity is evolving into an interdisciplinary species. we see a future where cr
 
 as technology "disappears", we reconnect creators through methodologies that eliminate barriers to creation. we solve our own problems first, allowing us to understand problems deeply, create intuitive solutions, iterate quickly, and maintain clear vision.
 
-like water, our offerings are simple to start yet infinitely deep to master. we welcome beginners with intuitive basics while offering depths for masters to explore - adaptive mastery that grows alongside you. we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression through meta-creativity - shaping not just work, but the very way we create.
-
-we embrace the chaos of remote work - our partners span the globe like a digital octopus. we find our groove, respect time zones, and do our best work when we're at our best. we stay inspired and weird.
+like water, our offerings are simple to start yet infinitely deep to master. we welcome beginners with intuitive basics while offering depths for masters to explore - adaptive mastery that grows alongside you. our approach redefines expression through meta-creativity, shaping not just work, but the very way we create.
 
 what drives us:
 - design excellence: creating work that transcends expectations - half great beats full mediocre
 - move fast, think first: precision, speed, initiative, and taste in execution
-- continuous improvement: feedback is direct but never personal - improve, don't defend
+- radical transparency: share openly, improve continuously - feedback is direct but never personal
 - open exchange: ideas multiply when shared freely
 - community synergy: we grow stronger together
 - joyful engagement: creativity thrives in play and wonder
 - holistic creation: unifying mind, body and spirit in the creative process
 - purposeful impact: solving real problems and meeting real needs
 
-we foster continuous learning and radical transparency. our open approach extends beyond code to knowledge sharing and collaborative creation. we openly share our development journey, incorporating community feedback to maintain collaboration at our design core.
-
-we aim to break the isolation of creation - when work goes unshared, motivation fades and regret builds. by addressing creative professionals' pain points, under builds a community that feels understood and inspired. when we excite our users, these vocal creatives become enthusiastic advocates, driving organic growth through authentic word-of-mouth.
+we break the isolation of creation. when work goes unshared, motivation fades and regret builds. by addressing creative professionals' pain points and sharing our development journey openly, we build a community that feels understood and inspired - vocal creatives who become enthusiastic advocates through authentic word-of-mouth.
 
 "you're successful as soon as you send your work out into the world." - rick rubin via twitter (2023)
 
 ## echo
 
-we craft and maintain under's unique voice across all platforms, developing compelling narratives around our products and services. we manage community engagement and design-in-public initiatives, creating content that reflects our core values of simplicity, complexity, and openness. we build relationships with key media outlets and industry influencers, coordinate communication strategies for product launches and company announcements, and lead educational content initiatives and knowledge-sharing programs.
+we craft under's voice across all platforms through compelling narratives, design-in-public initiatives, and content that reflects our core values. we build relationships with media and influencers, coordinate launches, and lead knowledge-sharing programs.
 
 we approach content in two ways:
 
-* macro: in-depth content like comprehensive guides, educational series, thought leadership pieces, podcasts, campaigns, and original animated videos that establish our expertise
-* micro: bite-sized, engaging content like social media posts, quick tips, behind-the-scenes glimpses, quotes, reels, clips from bigger content, and remixed branded visuals (showcase snapshots, system-based posts, branded frames) that maintain daily presence
+macro: comprehensive guides, educational series, thought leadership, podcasts, campaigns, animated videos that establish expertise
+micro: social posts, quick tips, behind-the-scenes, quotes, reels, clips, remixed branded visuals that maintain daily presence
 
-both strategies work together to tell our story and engage our community effectively. we follow the cycle: document → create → distribute → listen → create → distribute.
+both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute.
 
 ### channels
 
@@ -65,21 +61,21 @@ both strategies work together to tell our story and engage our community effecti
 ### guidelines
 
 tone
-approachable, authentic, inspiring - like that friend who always knows what to say. be genuine and passionate, show emotion, stay positive. build relationships first, sales follow naturally. teach through sharing, suggest don't command.
+approachable, authentic, inspiring. be genuine and passionate, show emotion, stay positive. build relationships first, sales follow. teach through sharing, suggest don't command.
 
 writing
-simple and clear - short sentences, minimal punctuation (periods and commas only), lowercase signature style. make it skimmable with compelling headlines, strong openings, powerful words, clear structure. quality over quantity - fewer, better posts.
+simple and clear - short sentences, minimal punctuation, lowercase signature style. make it skimmable with compelling headlines, strong openings, powerful words. quality over quantity - fewer, better posts.
 
 visual
-personal and mysterious - authentic visuals that intrigue before revealing. clean composition with one strong image, intentional arrangement, purposeful color palette, eye-catching typography. beauty is not optional - aesthetics create emotional connection. timing and rhythm matter.
+personal and mysterious - authentic visuals that intrigue before revealing. clean composition, intentional arrangement, purposeful color palette, eye-catching typography. beauty is not optional - aesthetics create emotional connection.
 
 ## rhythm
 
 how we work together - balancing doing and being across daily, weekly, monthly, seasonal, and yearly cycles.
 
-### execution
+we embrace the chaos of remote work - our partners span the globe like a digital octopus. we find our groove, respect time zones, and do our best work when we're at our best. we stay inspired and weird.
 
-our framework for delivering exceptional products and services:
+### execution
 
 - smart automation: let tools do the heavy lifting
 - clear goals: know exactly where we're heading
@@ -175,18 +171,14 @@ being phase (october-december)
 - november: integration and reflection
 - december: vision and renewal
 
-balance between doing and being keeps energy sustainable and creativity alive.
-
 ### balance
 
 energy over time. quality over quantity. rhythm over rigid schedules. progress over perfection. sustainability over sprints.
 
 transitions:
-- do → be: complete open loops, brain dump tasks, reset environment, initiate digital detox, transition activity (walk, meditation)
+- do → be: complete loops, brain dump, reset environment, digital detox, transition activity (walk, meditation)
 - be → do: gentle planning, environment prep, priority setting, energy check-in, intention setting
+- urgent work in be-time: assess urgency, time-box it, schedule compensation time
+- energy dips: check physical needs (sleep, nutrition, movement), adjust work intensity, take micro-breaks
 
-when things shift:
-- urgent work in be-time: assess urgency, time-box it, schedule compensation time, adjust systems if it becomes a pattern
-- energy dips: check physical needs (sleep, nutrition, movement), adjust work intensity, shift task types to match energy, take micro-breaks
-
-remember: this system serves you, not vice versa. adjust and evolve it based on your experience and needs.
+remember: this system serves you, not vice versa.
