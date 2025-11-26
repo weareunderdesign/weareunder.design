@@ -26,12 +26,14 @@ this approach allows us to understand problems deeply, create intuitive solution
 
 ### values
 
+- design excellence: creating work that transcends expectations - half great beats full mediocre
+- move fast, think first: precision, speed, initiative, and taste in execution
+- continuous improvement: feedback is direct but never personal - improve, don't defend
 - open exchange: ideas multiply when shared freely
 - community synergy: we grow stronger together
 - joyful engagement: creativity thrives in play and wonder
 - holistic creation: unifying mind, body and spirit in the creative process
 - purposeful impact: solving real problems and meeting real needs
-- design excellence: creating work that transcends expectations
 
 we foster continuous learning and radical transparency - our open approach extends beyond code to knowledge sharing and collaborative creation. we openly share our development journey, incorporating community feedback to maintain collaboration at our design core.
 
@@ -51,24 +53,13 @@ our framework for delivering exceptional products and services:
 - value outcomes over hours
 - own your milestones: assign, manage, complete
 - move forward, not sideways
+- think first, design second: never guess
 
-high standards are not optional. "pretty good" isn't good enough. think first. design second. never guess.
+### approach
 
-### simple
+like water, we shape our offerings to be simple to start yet infinitely deep to master. we welcome beginners with intuitive basics while offering depths for masters to explore - adaptive mastery that grows alongside you.
 
-we welcome beginners with intuitive basics. simple to start, our approach adapts to your needs like a well-designed tool.
-
-- adaptive mastery: like water, we shape our offerings to be simple to start
-- meta-creativity: we shape not just work, but the very way we create
-
-### complex
-
-we offer depths for masters to explore. rich with potential, our offerings grow alongside you as you develop expertise.
-
-- continuous growth: the path of mastery has no end, our approach grows with you
-- infinitely deep exploration for advanced techniques and nuanced applications
-
-we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression.
+we understand the frustration when limitations restrict your vision, whether visual, musical, or interactive. our approach seamlessly blends all creative mediums, redefining expression through meta-creativity - shaping not just work, but the very way we create.
 
 ## echo
 
@@ -77,8 +68,7 @@ we craft and maintain under's unique voice across all platforms, developing comp
 we approach content in two ways:
 
 * macro: in-depth content like comprehensive guides, educational series, thought leadership pieces, podcasts, campaigns, and original animated videos that establish our expertise
-* micro: bite-sized, engaging content like social media posts, quick tips, behind-the-scenes glimpses, quotes, reels, and clips from bigger content that maintain daily presence
-* branded generic: when there's no new/macro material, we remix and create graphic elements, system-based posts, and repeated visuals (like showcase snapshots or branded frames)
+* micro: bite-sized, engaging content like social media posts, quick tips, behind-the-scenes glimpses, quotes, reels, clips from bigger content, and remixed branded visuals (showcase snapshots, system-based posts, branded frames) that maintain daily presence
 
 both strategies work together to tell our story and engage our community effectively.
 the garyvee model: document → create → distribute → listen → create → distribute
@@ -95,122 +85,49 @@ the garyvee model: document → create → distribute → listen → create → 
 | [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap; highlights and fresh drops across platforms | curated: weekly updates, insights, stories, highlights, fresh drops | sent thursday/friday |
 | [behance](https://behance.net/weareunder) | showcases; same content as site, tailored for platform | showcases: work highlights, design innovations, portfolio pieces | published whenever ready |
 
-### voice
+### content guidelines
 
-at under, our tone of voice and writing style is like that friend who always knows what to say.
+tone
+approachable, authentic, inspiring - like that friend who always knows what to say. be genuine and passionate, show emotion, stay positive. build relationships first, sales follow naturally. teach through sharing, suggest don't command.
 
-* approachable: talk like real humans - builds trust and connection with readers
-* authentic: be genuine and passionate - people can spot fake from miles away
-* inspiring: spark imagination - motivation drives action and engagement
-* share real stories: personal experiences resonate - authenticity creates impact
-* write conversationally: friendly tone helps information stick
-* show emotion: feelings create memorable content - facts tell, emotions sell
-* stay positive: focus on possibilities - negativity pushes readers away
-* experience over sales: build relationships first - sales follow naturally
-* keep it simple: short sentences win - complexity loses readers
-* write clearly: if a kid can't understand it, simplify - clarity is king
-* make it skimmable: busy readers need quick value - structure matters
-* minimal punctuation: periods and commas only - keeps flow natural
-* use lowercase: our signature style - stands out while staying approachable
-* strong visuals: images communicate faster than words
-* quality focus: fewer, better posts beat quantity - respect attention spans
-* share authentically: amplify others without editing - builds community
-* be bold: innovation needs courage - mediocrity is forgettable
-* compelling headlines: intrigue readers from the start
-* strong openings: hook attention immediately - first impressions count
-* powerful words: choose language that moves people
-* clear structure: organized thoughts are easier to follow
-* peer voice: teach through sharing - nobody likes being lectured
-* suggest don't command: inspiration beats instruction - trust readers' judgment
+writing style
+simple and clear - short sentences, minimal punctuation (periods and commas only), lowercase signature style. make it skimmable with compelling headlines, strong openings, powerful words, clear structure. quality over quantity - fewer, better posts.
 
-### visual
-
-our visual content follows a recipe that makes people stop scrolling and start feeling.
-
-* personal: authentic and human - generic visuals get ignored
-* mysterious: intrigue before revealing - curiosity drives engagement
-* timing: rhythm and pacing matter - good content at the wrong time fails
-* visual pleasure: beauty is not optional - aesthetics create emotional connection
-* clean: one strong image - clarity beats clutter
-* strong composition: intentional arrangement - guide the eye deliberately
-* smart color use: purposeful palette - color communicates before words
-* clear typography: readable and eye-catching - type should grab attention
-* minimalist: simple and focused - remove everything unnecessary
-
-## doing
-
-how we work together - our culture, practices, and systems.
-
-### culture
-
-we embrace the chaos of remote work - our partners spans the globe like a digital octopus. find your groove, respect time zones, and your home office setup.
-
-stay inspired, stay weird - take time to explore new ideas, experiment, and share what makes your creative juices flow. the weirder, the better.
-
-do your best work when you're at your best - if inspiration strikes at 3am on a tuesday, who are we to judge?
-
-### system
-
-**getting started**
-- receive brief via figma or whatsapp
-- respond within 24hrs with questions and timeline
-- confirm scope, deliverables, deadline
-- start only after written approval
-
-**working**
-- daily progress updates in figma comments
-- tag @eden or @inbal for quick decisions
-- share work-in-progress every 2 days maximum
-- ask early, fix later - no surprises at the end
-
-**delivering**
-- clean figma files: organized, named, no mess
-- one strong direction (two maximum if needed)
-- brief explanation: what's the idea? why does it work?
-- files ready for handoff: exported, organized, accessible
-
-**tools**
-- figma comments = tasks and feedback
-- whatsapp = quick communication and updates
-- calendar = scheduled calls (keep to minimum)
-- drive = final assets and project files
-
-**standards**
-- move fast, think first, deliver excellence
-- precision, speed, initiative, taste, execution
-- feedback is brutal but never personal - improve, don't defend
-- half great beats full mediocre
+visual approach
+personal and mysterious - authentic visuals that intrigue before revealing. clean composition with one strong image, intentional arrangement, purposeful color palette, eye-catching typography. beauty is not optional - aesthetics create emotional connection. timing and rhythm matter.
 
 ## rhythm
 
-our approach to time - balancing doing and being across daily, weekly, monthly, seasonal, and yearly cycles.
+how we work together - balancing doing and being across daily, weekly, monthly, seasonal, and yearly cycles.
+
+we embrace the chaos of remote work - our partners span the globe like a digital octopus. find your groove, respect time zones, do your best work when you're at your best. stay inspired, stay weird.
 
 ### daily practices
 
-**doing days (monday - thursday, 9am-6pm)**
+doing days (monday - thursday, 9am-6pm)
 - morning ritual: 15-min intention setting
 - 90-min deep work blocks with 15-min breaks
 - end-of-day review: 10-min accomplishment log
 
-**being days (friday - saturday)**
+being days (friday - saturday)
 - no scheduled obligations
 - nature connection time
 - creative exploration without goals
 - social connection and rest
 
-**reflection day (sunday)**
+reflection day (sunday)
 - morning: review week's progress
 - midday: adjust next week's priorities
 - afternoon: document learnings and insights
 
 ### monthly rhythm
 
-**doing weeks (weeks 1-3)**
+doing weeks (weeks 1-3)
 - week 1: vision and planning focus
 - week 2: deep execution
 - week 3: refinement and completion
 
-**being and reflecting week (week 4)**
+being and reflecting week (week 4)
 - life admin and organization
 - skill exploration and learning
 - social connections and community
@@ -222,28 +139,28 @@ our approach to time - balancing doing and being across daily, weekly, monthly, 
 
 ### seasonal rhythm
 
-**spring (mar - may): emergence**
+spring (mar - may): emergence
 fresh starts, planting seeds, building momentum
 - project initiation
 - skill development
 - network building
 - energy building practices
 
-**summer (jun - aug): peak expression**
+summer (jun - aug): peak expression
 deep work, expansion, peak energy
 - major project execution
 - public sharing and visibility
 - high-energy collaboration
 - outdoor activities
 
-**fall (sep - nov): integration**
+fall (sep - nov): integration
 harvesting, refining, adjusting, transitioning
 - project completion
 - knowledge documentation
 - relationship deepening
 - gratitude practices
 
-**winter (dec - feb): restoration**
+winter (dec - feb): restoration
 slowing down, reflecting, resting, visioning
 - vision boarding
 - deep rest
@@ -252,120 +169,28 @@ slowing down, reflecting, resting, visioning
 
 ### yearly rhythm
 
-**doing phase (january-september)**
+doing phase (january-september)
 - q1 (jan-mar): foundation setting
 - q2 (apr-jun): growth and expansion
 - q3 (jul-sep): peak execution
 
-**being phase (october-december)**
+being phase (october-december)
 - october: harvest and celebration
 - november: integration and reflection
 - december: vision and renewal
 
 balance between doing and being keeps energy sustainable and creativity alive.
 
-### transitions
-
-**do → be**
-1. complete open loops
-2. brain dump remaining tasks
-3. physical environment reset
-4. digital detox initiation
-5. transition activity (walk, meditation, etc)
-
-**be → do**
-1. gentle planning session
-2. environment preparation
-3. priority setting
-4. energy check-in
-5. intention setting
-
-### fallbacks
-
-**work in be-time**
-1. assess true urgency
-2. time-box the intervention
-3. schedule compensation time
-4. document the exception
-5. adjust systems if pattern emerges
-
-**energy issues**
-1. check physical needs (sleep, nutrition, movement)
-2. adjust work intensity
-3. shift task types to match energy
-4. take micro-breaks
-5. consider schedule adjustment
-
-### tracking
-
-**daily**
-date:
-mode: \[doing/being\]
-energy level (1-10):
-main focus:
-support needed:
-success looks like:
-
-**weekly**
-week of:
-accomplishments:
-learnings:
-energy patterns:
-adjustments needed:
-next week's focus:
-
-**monthly**
-month:
-theme:
-key milestones:
-pattern recognition:
-system improvements:
-next month's intentions:
-
-### metrics
-
-**quant**
-- deep work hours
-- rest quality (sleep metrics)
-- project completion rate
-- recovery time ratio
-
-**qual**
-- energy sustainability
-- creative output quality
-- relationship depth
-- personal growth sense
-
-### implementation
-
-1. start with weekly rhythm
-2. add monthly layer after 4 weeks
-3. incorporate seasonal awareness
-4. build yearly rhythm understanding
-5. regular system review and adjustment
-
-### emergency protocols
-
-**energy crash**
-1. immediate rest period
-2. basic needs audit
-3. support system activation
-4. schedule adjustment
-5. recovery plan creation
-
-**deadline issues**
-1. priority assessment
-2. resource reallocation
-3. support request
-4. timeline negotiation
-5. recovery scheduling
-
 ### balance principles
 
-1. energy over time
-2. quality over quantity
-3. rhythm over rigid schedules
-4. progress over perfection
-5. sustainability over sprints
+energy over time. quality over quantity. rhythm over rigid schedules. progress over perfection. sustainability over sprints.
+
+transitions:
+- do → be: complete open loops, brain dump tasks, reset environment, initiate digital detox, transition activity (walk, meditation)
+- be → do: gentle planning, environment prep, priority setting, energy check-in, intention setting
+
+when things shift:
+- urgent work in be-time: assess urgency, time-box it, schedule compensation time, adjust systems if it becomes a pattern
+- energy dips: check physical needs (sleep, nutrition, movement), adjust work intensity, shift task types to match energy, take micro-breaks
 
 remember: this system serves you, not vice versa. adjust and evolve it based on your experience and needs.
