@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(find:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "WebFetch(domain:unpkg.com)"
     ],
     "deny": [],
     "ask": []

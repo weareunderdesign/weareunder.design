@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
 </head>
 
-<body class="foreground-primary" style="margin: 0; padding: 0; box-sizing: border-box; overflow-x: hidden;">
+<body class="foreground-primary" style="margin: 0; padding: 0; overflow-x: hidden;">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <under-header></under-header>
   <under-navigation></under-navigation>
@@ -32,7 +32,7 @@
 
   <div class="view align-center padding-l" role="banner">
     <img src="assets/hero-graphic.svg" alt="Under.type hero graphic" class="box-l" decoding="async"
-      fetchpriority="high" style="width: 100%;" />
+      fetchpriority="high" />
   </div>
   
 
@@ -45,7 +45,7 @@
         under.type
       </h1>
 
-      <p id="under-type-paragraph" class="box-l text-center" style="font-weight:200; line-height:1.2;">
+      <p id="under-type-paragraph" class="box-l text-center" style="font-weight:200;">
         we're under: we׳re all about keeping it simple while embracing complexity. this
         also works in fonts: imagine we had a font that did all the work. no more digging for 20+ fonts, and
         its adaptive to anything: from tiny screens, Figma, PDF forms to variable UX projects. you know
@@ -65,7 +65,7 @@
         <a href="#">
           <button id="githubBtn" type="button" aria-label="View GitHub repository"
             class="align-center justify-center gap-m"
-            style="border-radius:50px; border:none; font-weight:300; padding:23px 110px; font-size:39px; color:#02903B; background:#FFBFE1;">
+            style="border-radius:50px; border:none; padding:23px 110px; font-size:39px; font-weight:300; color:#02903B; background:#FFBFE1;">
             <img width="30%" src="assets/github-logo.svg" alt="" decoding="async" loading="lazy" />
             github
           </button>
@@ -81,25 +81,25 @@
 
   <div class="view background-primary align-center">
     <pre class="page">
-<code>   <span style="color: #808080;">&lt;!-- custom font --&gt;</span>
-   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"preconnect"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://your-font-file-host/"</span><span style="color: #f5f5f5;">&gt;</span>
-   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"stylesheet"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://your-font-file-host/undercss"</span><span style="color: #f5f5f5;">&gt;</span>
+<code>   <span style="color:#808080;">&lt;!-- custom font --&gt;</span>
+   <span style="color:#f5f5f5;">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"preconnect"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://your-font-file-host/"</span><span style="color:#f5f5f5;">&gt;</span>
+   <span style="color:#f5f5f5;">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"stylesheet"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://your-font-file-host/undercss"</span><span style="color:#f5f5f5;">&gt;</span>
 
-   <span style="color: #f5f5f5;">&lt;style&gt;</span>
-   <span style="color: #ffbfe1;">:root</span> {
-   <span style="color: #02903b;">font-family:</span> <span style="color: #f5f5f5;">'under'</span>, <span style="color: #f5f5f5;">sans-serif;</span>
+   <span style="color:#f5f5f5;">&lt;style&gt;</span>
+   <span style="color:#ffbfe1;">:root</span> {
+   <span style="color:#02903b;">font-family:</span> <span style="color:#f5f5f5;">'under'</span>, <span style="color:#f5f5f5;">sans-serif;</span>
    }
 
-   <span style="color: #014add;">@supports</span> (<span style="color: #02903b;">font-variation-settings:</span> <span style="color: #f5f5f5;">normal</span>) {
-   <span style="color: #ffbfe1;">:root</span> {
-       <span style="color: #02903b;">font-family:</span> <span style="color: #f5f5f5;">'under var'</span>, <span style="color: #f5f5f5;">sans-serif;</span>
+   <span style="color:#014add;">@supports</span> (<span style="color:#02903b;">font-variation-settings:</span> <span style="color:#f5f5f5;">normal</span>) {
+   <span style="color:#ffbfe1;">:root</span> {
+       <span style="color:#02903b;">font-family:</span> <span style="color:#f5f5f5;">'under var'</span>, <span style="color:#f5f5f5;">sans-serif;</span>
    }
    }
-   <span style="color: #f5f5f5;">&lt;/style&gt;</span>
+   <span style="color:#f5f5f5;">&lt;/style&gt;</span>
 
-   <span style="color: #808080;">&lt;!-- official cdn --&gt;</span>
-   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"preconnect"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://weareunder.design/"</span><span style="color: #f5f5f5;">&gt;</span>
-   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"stylesheet"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://weareunder.design/undercss"</span><span style="color: #f5f5f5;">&gt;</span>
+   <span style="color:#808080;">&lt;!-- official cdn --&gt;</span>
+   <span style="color:#f5f5f5;">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"preconnect"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://weareunder.design/"</span><span style="color:#f5f5f5;">&gt;</span>
+   <span style="color:#f5f5f5;">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"stylesheet"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://weareunder.design/undercss"</span><span style="color:#f5f5f5;">&gt;</span>
 </code></pre>
   </div>
 
@@ -108,68 +108,68 @@
 
   
 
-  <div class="view" aria-label="font weights" style="background-color:#8159FB;">
+  <div class="view" aria-label="font weights" style="background:#8159FB;">
     <div class="column justify-center align-center gap-l padding-xl">
 
-      
+
       <div class="row justify-center align-center gap-l">
-        <button class="white" type="" aria-label="Weight 100"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+        <button class="white" type="button" aria-label="Weight 100"
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           100
         </button>
-        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 100;">
+        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:100;">
           under type thin
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 200"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           200
         </button>
-        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 200;">
+        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:200;">
           under type extralight
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 300"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           300
         </button>
-        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 300;">
+        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:300;">
           under type light
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 400"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           400
         </button>
-        <p class="text-center white" style=" font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 400;">
+        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:400;">
           under type regular
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 500"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           500
         </button>
-        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight: 500;">
+        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:500;">
           under type medium
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 600"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           600
         </button>
         <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:600;">
@@ -177,21 +177,21 @@
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 700"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           700
         </button>
-        <p class="text-center white" style=" font-size:clamp(1.25rem,4vw,4.5rem); font-weight:700;">
+        <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:700;">
           under type bold
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 800"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           800
         </button>
         <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:800;">
@@ -199,10 +199,10 @@
         </p>
       </div>
 
-      
+
       <div class="row justify-center align-center gap-l">
         <button class="white" type="button" aria-label="Weight 900"
-          style="background-color:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
+          style="background:transparent; border:1px solid #fff; border-radius:50px; font-size:12px; padding:4px 10px;">
           900
         </button>
         <p class="text-center white" style="font-size:clamp(1.25rem,4vw,4.5rem); font-weight:900;">
@@ -216,9 +216,10 @@
   
 
 
-  
 
-  <div class="view column align-center" aria-label="R section graphic" style="background-color:#F5F5F5;">
+
+
+  <div class="view column align-center" aria-label="R section graphic" style="background:#F5F5F5;">
     <div class="page">
       <img src="assets/letter-r-graphic.svg" alt="Letter R graphic" decoding="async" loading="lazy" />
     </div>
@@ -227,13 +228,13 @@
   
 
 
-  
 
-  <div class="view align-center white padding-xl" style="background-color:#014add;"
+
+  <div class="view align-center white padding-xl" style="background:#014add;"
     aria-label="Font weight selector">
-    <div class="page align-center column" style="align-items: center;">
+    <div class="page align-center column">
       <div id="weightBarWrapper" class="padding-xs box align-center justify-center gap-s"
-        style="border:1.5px solid white; border-radius:25px; width: 45%;">
+        style="border:1.5px solid white; border-radius:25px; width:45%;">
         <div id="weightBar" class="box align-center justify-stretch box-l">
           <div class="dot" data-weight="100"></div>
           <div class="dot" data-weight="200"></div>
@@ -253,7 +254,7 @@
       </div>
 
       <div id="letters" class="white text-center padding-l"
-        style="font-size:clamp(32px,12vw,110px); font-weight:100; line-height:1.1; word-break:break-word;">
+        style="font-size:clamp(32px,12vw,110px); font-weight:100; word-break:break-word;">
         ABCDEFGHIJKLM<br>
         NOPQRSTUVWXYZ<br>
         abcdefghijklmn<br>
@@ -272,7 +273,7 @@
   
   <div aria-labelledby="features-heading" class="view align-center gap-xs" style="margin-top:80px;">
     <div class="page">
-      <h1 id="features-heading" class="box-l text-center" style="font-weight: 600;">
+      <h1 id="features-heading" class="box-l text-center" style="font-weight:600;">
         features
       </h1>
 
@@ -376,14 +377,14 @@
   
 
   <div class="view align-center column">
-    <div id="underBox" class="box page justify-center gap-xl padding-xl row" style="flex-direction: row;">
+    <div id="underBox" class="box page justify-center gap-xl padding-xl row">
 
       <div id="micro" class="box column micro-section">
         <div class="gap-m column">
-          <span style=" font-size: 24px; font-weight: 300; color: #8159FB;">micro: 6-12pt</span>
-          <div style="height: 1px; background-color: #8159FB;"></div>
+          <span style="font-size:24px; font-weight:300; color:#8159FB;">micro: 6-12pt</span>
+          <div style="height:1px; background:#8159FB;"></div>
         </div>
-        <p class="text-l" style="font-weight: 300; line-height: 1.5;">
+        <p class="text-l" style="font-weight:300;">
           under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
           more air. text sits in between, holding the balance.
         </p>
@@ -392,10 +393,10 @@
 
       <div id="text" class="text-section">
         <div class="gap-m column">
-          <span style="font-size: 24px; font-weight: 300; color: #8159FB;">text: 13-20pt</span>
-          <div style="height: 1px; background-color: #8159FB;"></div>
+          <span style="font-size:24px; font-weight:300; color:#8159FB;">text: 13-20pt</span>
+          <div style="height:1px; background:#8159FB;"></div>
         </div>
-        <p class="text" style="font-weight: 300; line-height: 1.5; font-size: 24px;">
+        <p class="text" style="font-weight:300; font-size:24px;">
           under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
           more air. text sits in between, holding the balance.
         </p>
@@ -404,10 +405,10 @@
 
       <div id="display" class="display-section">
         <div class="gap-m column">
-          <span style=" font-size: 24px; font-weight: 300; color: #8159FB;">display: 21pt and up</span>
-          <div style="height: 1px; background-color: #8159FB;"></div>
+          <span style="font-size:24px; font-weight:300; color:#8159FB;">display: 21pt and up</span>
+          <div style="height:1px; background:#8159FB;"></div>
         </div>
-        <p class="display" style="font-weight: 300; line-height: 1.5; font-size: 35px;">
+        <p class="display" style="font-weight:300; font-size:35px;">
           under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
           more air. text sits in between, holding the balance.
         </p>
@@ -452,15 +453,15 @@
         <span style="transition:color 0.3s ease;" data-weight="800" data-step="7">Extrabold</span>
         <span style="transition:color 0.3s ease;" data-weight="900" data-step="8">Black</span>
       </div>
-      <div style="position:relative; margin:20px 0; height:15px;" class="box-l">
+      <div class="box-l" style="position:relative; margin:20px 0; height:15px;">
         <div id="rulerLine" class="box-l"
           style="height:1px; background:linear-gradient(to right,#FF4500 0%,#FF4500 0%,#999 0%,#999 100%); transition:background 0.3s ease;">
         </div>
-        <div id="rulerTicks" class="box justify-stretch " style="position:absolute; top:0; left:0; right:0;">
+        <div id="rulerTicks" class="box justify-stretch" style="position:absolute; top:0; left:0; right:0;">
         </div>
       </div>
       <div id="preview" class="align-center box-l"
-        style="font-size:32rem; transition:font-weight 0.3s ease,color 0.3s ease; color:#FF4B00; overflow-x:auto; white-space:nowrap; ">
+        style="font-size:32rem; transition:font-weight 0.3s ease,color 0.3s ease; color:#FF4B00; overflow-x:auto; white-space:nowrap;">
         Aa
       </div>
     </div>
@@ -471,7 +472,7 @@
 
   
 
-  <div id="cardsContainer" class="justify-center box-xl align-center hidden-on-mobile" style="overflow-x: auto; border-radius:4px;"
+  <div id="cardsContainer" class="justify-center box-xl align-center hidden-on-mobile" style="overflow-x:auto; border-radius:4px;"
     aria-label="Font weight showcase for letter A">
     <div class="card" data-weight="100"><span>a</span></div>
     <div class="card" data-weight="200"><span>a</span></div>
@@ -508,13 +509,13 @@
   
 
   <div id="fc-component-root" class="view box justify-center align-center box-l padding-xl"
-    style="background-color:#f6f5f9;">
+    style="background:#f6f5f9;">
     <div class="box column gap-l page">
       <div class="box justify-center align-center box-l gap-l">
-        <div class="justify-center align-center gap-l" style="width: 100%; flex-wrap: wrap;">
+        <div class="justify-center align-center gap-l" style="width:100%; flex-wrap:wrap;">
 
-          
-          <div class="column align-center gap-s" style=" width: 31%; flex-grow: 1; min-width: 200px;">
+
+          <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px;">
             <input id="fc-weightRange" type="range" min="100" max="900" step="1" value="400" class="box-l"
               style="-webkit-appearance:none; appearance:none; height:17px; background:#8159FB; border-radius:15px;">
             <div class="box justify-stretch box-l black text-s" style="font-weight:400;">
@@ -523,20 +524,20 @@
             </div>
           </div>
 
-          
-          <div class="column align-center gap-s" style="width: 31%;  flex-grow: 1; min-width: 200px;">
+
+          <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px;">
             <input id="fc-sizeRange" type="range" min="20" max="300" step="1" value="64" class="box-l"
-              style="-webkit-appearance:none;appearance:none;height:17px;background:#8159FB;border-radius:15px;">
+              style="-webkit-appearance:none; appearance:none; height:17px; background:#8159FB; border-radius:15px;">
             <div class="box justify-stretch box-l black text-s" style="font-weight:400;">
               <label for="fc-sizeRange">SIZE</label>
               <div id="fc-sizeValue">64 PX</div>
             </div>
           </div>
 
-          
-          <div class="column align-center gap-s" style=" width: 31%; flex-grow: 1; min-width: 200px;">
+
+          <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px;">
             <input id="fc-spacingRange" type="range" min="0" max="2" step="0.05" value="0" class="box-l"
-              style="-webkit-appearance:none;appearance:none;height:17px;background:#8159FB;border-radius:15px;">
+              style="-webkit-appearance:none; appearance:none; height:17px; background:#8159FB; border-radius:15px;">
             <div class="box justify-stretch box-l black text-s" style="font-weight:400;">
               <label for="fc-spacingRange">SPACING</label>
               <div id="fc-spacingValue">0.00 EM</div>
@@ -545,15 +546,16 @@
         </div>
       </div>
 
-      
+
+
       <div class="text-center box-l">
         <div class="box column gap-l fc-text-box box-l">
           <div id="fc-output" contenteditable="true" spellcheck="false" class="padding-l box-l text-center"
-            style="min-height:200px; border:none; outline:none; font-size:64px; font-weight:400; word-wrap:break-word; overflow-wrap:break-word; color:#02903B;transition:all 0.2s ease-in-out;">
+            style="min-height:200px; border:none; outline:none; font-size:64px; font-weight:400; word-wrap:break-word; overflow-wrap:break-word; color:#02903B; transition:all 0.2s ease-in-out;">
             hey
           </div>
 
-          
+
           <div class="box gap-l justify-stretch fc-button-row box-l">
             
             <div class="fc-btn-group fc-align-group box gap-s justify-center">
@@ -583,7 +585,7 @@
             </div>
 
             
-            <div class="fc-btn-group gap-m" style="display: flex; flex-wrap: wrap;">
+            <div class="fc-btn-group gap-m" style="display:flex; flex-wrap:wrap;">
               <button class="fc-btn">alt a</button>
               <button class="fc-btn">alt r</button>
               <button class="fc-btn">alt u</button>
@@ -603,10 +605,10 @@
 
   
 
-  <div style="font-weight: 300;">
+  <div style="font-weight:300;">
     <div class="padding-l">
       <div class="box align-center text-m padding-l">
-        <div class="half-weight-bar box justify-stretch align-center text-m" style="width: 47%;">
+        <div class="half-weight-bar box justify-stretch align-center text-m" style="width:47%;">
           <span>Glyphs set overview</span>
           <div class="box justify-end">
             <div class="align-center gap-m">
@@ -616,37 +618,37 @@
             </div>
           </div>
         </div>
-        <div class="unicode-div" style="width: 53%;"> </div>
+        <div class="unicode-div" style="width:53%;"> </div>
       </div>
 
-      <div class="wrapper-both-sec box justify-stretch padding-l" style="padding-top: 0;">
+      <div class="wrapper-both-sec box justify-stretch padding-l" style="padding-top:0;">
 
-        
+
         <div class="left">
-          <div class="grid-section padding-l" style="background: #fafafa; border-radius: 6px; height: 100%;">
-            <h3 class="padding-s text-m" style="color: #444;">Uppercase</h3>
+          <div class="grid-section padding-l" style="background:#fafafa; border-radius:6px; height:100%;">
+            <h3 class="padding-s text-m" style="color:#444;">Uppercase</h3>
             <div class="grid" id="uppercase"></div>
-            <h3 class="padding-s text-m" style="color: #444;">Lowercase</h3>
+            <h3 class="padding-s text-m" style="color:#444;">Lowercase</h3>
             <div class="grid" id="lowercase"></div>
-            <h3 class="padding-s text-m" style="color: #444;">Numbers & Symbols</h3>
+            <h3 class="padding-s text-m" style="color:#444;">Numbers & Symbols</h3>
             <div class="grid" id="symbols"></div>
           </div>
         </div>
 
-        
+
         <div class="right">
-          <div class="box-l label background-primary" style="position: absolute; height: 1px; top: 8.5%;"></div>
-          <div class="box-l label background-primary" style="position: absolute; height: 1px; top: 25.5%;"></div>
-          <div class="box-l label background-primary" style="position: absolute; height: 1px; top: 38%;"></div>
-          <div class="box-l label background-primary" style="position: absolute; height: 1px; bottom: 25%;"></div>
-          <div class="box-l label background-primary" style="position: absolute; height: 1px; bottom: 10.3%;"></div>
-          <div class="label ascender-label text-m" style="position: absolute; left: 15px; top: 10%;">Ascender</div>
-          <div class="label cap-label text-m" style="position: absolute; left: 15px; top: 27%;">Cap Height</div>
-          <div class="label x-label text-m" style="position: absolute; left: 15px; top: 39.5%;">X-Height</div>
-          <div class="label baseline-label text-m" style="position: absolute; left: 15px; bottom: 22%;">Baseline</div>
-          <div class="label desc-label text-m" style="position: absolute; left: 15px; bottom: 7.5%;">Descender</div>
+          <div class="box-l label background-primary" style="position:absolute; height:1px; top:8.5%;"></div>
+          <div class="box-l label background-primary" style="position:absolute; height:1px; top:25.5%;"></div>
+          <div class="box-l label background-primary" style="position:absolute; height:1px; top:38%;"></div>
+          <div class="box-l label background-primary" style="position:absolute; height:1px; bottom:25%;"></div>
+          <div class="box-l label background-primary" style="position:absolute; height:1px; bottom:10.3%;"></div>
+          <div class="label ascender-label text-m" style="position:absolute; left:15px; top:10%;">Ascender</div>
+          <div class="label cap-label text-m" style="position:absolute; left:15px; top:27%;">Cap Height</div>
+          <div class="label x-label text-m" style="position:absolute; left:15px; top:39.5%;">X-Height</div>
+          <div class="label baseline-label text-m" style="position:absolute; left:15px; bottom:22%;">Baseline</div>
+          <div class="label desc-label text-m" style="position:absolute; left:15px; bottom:7.5%;">Descender</div>
           <span id="glyphChar">A</span>
-          <div class="text-m" style="position: absolute; top: 8px; right: 15px; color: #666;" id="unicodeLabel">uni0041
+          <div class="text-m" style="position:absolute; top:8px; right:15px; color:#666;" id="unicodeLabel">uni0041
           </div>
         </div>
       </div>
@@ -658,14 +660,14 @@
 
   
 
-  <div class="view justify-center align-center padding-xl" style="background: #f5f5f5;">
+  <div class="view justify-center align-center padding-xl" style="background:#f5f5f5;">
     <div class="page">
       <div class="box justify-stretch align-center">
         <img class="motion-circle" width="12%" src="assets/motion-circle-1.png" alt="">
         <img class="motion-circle" width="12%" src="assets/motion-circle-2.svg" alt="">
       </div>
 
-      <div class="box justify-center align-center" style="margin-top: -5vw; margin-bottom: -5vw;">
+      <div class="box justify-center align-center" style="margin-top:-5vw; margin-bottom:-5vw;">
         <img width="85%" class="motion-circle" src="assets/motion-circle-3.svg" alt="">
       </div>
 
@@ -707,7 +709,7 @@
         font in action
       </h1>
 
-      <div id="imgSection" class="box justify-stretch align-center" style="flex-wrap:wrap; row-gap: 1.5rem;">
+      <div id="imgSection" class="box justify-stretch align-center" style="flex-wrap:wrap; row-gap:1.5rem;">
         <img src="assets/font-poster-1.svg" alt="Pixel-perfect optimization example 1" decoding="async" loading="lazy"
           class="box-s">
         <img src="assets/font-poster-2.svg" alt="Pixel-perfect optimization example 2" decoding="async" loading="lazy"
@@ -734,10 +736,10 @@
   
 
   <div class="view padding-xl align-center" role="banner">
-    <div class="page" style="position: relative; display:flex; justify-content:center;">
+    <div class="page" style="position:relative; display:flex; justify-content:center;">
       <img src="assets/hero-closing-graphic.svg" alt="Under.type hero graphic" width="75%"
-        style="margin: 0 auto; display:block;" />
-      <p id="go-text" style="font-weight:200; position: absolute; right: 11%; bottom: 5%; margin:0; text-align:right;">
+        style="margin:0 auto; display:block;" />
+      <p id="go-text" style="font-weight:200; position:absolute; right:11%; bottom:5%; margin:0; text-align:right;">
         it's free & open source <br>no fine print
       </p>
     </div>
@@ -1297,39 +1299,39 @@
     const style = document.createElement("style");
     style.textContent = `
     #weightSlider[type="range"] {
-      -webkit-appearance: none;
-      width: 160px;
-      height: 3px;
-      border-radius: 2px;
+      -webkit-appearance:none;
+      width:160px;
+      height:3px;
+      border-radius:2px;
       background: #ddd;
       outline: none;
     }
 
     #weightSlider[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
+      -webkit-appearance:none;
+      appearance:none;
+      width:12px;
+      height:12px;
+      border-radius:50%;
       background: #000;
       cursor: pointer;
     }
 
     #weightSlider[type="range"]::-moz-range-thumb {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
+      width:12px;
+      height:12px;
+      border-radius:50%;
       background: #000;
       cursor: pointer;
     }
     
     .left {
-      width: 48%;
+      width:48%;
     }
 
     .grid {
-      display: flex;
-      flex-wrap: wrap;
+      display:flex;
+      flex-wrap:wrap;
       gap: 8px;
     }
       
@@ -1338,19 +1340,19 @@
     }
 
     .glyph {
-      display: flex;
-      border: 0.5px solid #e0e0e0;
-      border-radius: 4px;
+      display:flex;
+      border:0.5px solid #e0e0e0;
+      border-radius:4px;
       background: #fff;
       cursor: pointer;
       transition: background 0.2s;
-      color: var(--Black, #000);
+      color:var(--Black, #000);
       text-align: center;
-      font-size: 25px;
-      font-weight: 300;
-      line-height: 122%;
-      width: 65px;
-      height: 64px;
+      font-size:25px;
+      font-weight:300;
+      line-height:122%;
+      width:65px;
+      height:64px;
       justify-content: center;
       align-items: center;
       flex-shrink: 0;
@@ -1361,58 +1363,58 @@
     }
 
     .right {
-      width: 48%;
-      height: 860px;
-      position: relative;
+      width:48%;
+      height:860px;
+      position:relative;
       background: #fafafa;
-      border-radius: 6px;
+      border-radius:6px;
       padding: 20px;
       text-align: center;
-      font-size: 585px;
-      display: flex;
+      font-size:585px;
+      display:flex;
       justify-content: center;
     }
 
     #glyphChar {
-      font-weight: 400;
+      font-weight:400;
       z-index: 2;
       transition: font-weight 0.1s ease;
-      position: relative;
+      position:relative;
       top: 11.7%;
     }
 
-     @media (max-width: 1515px) {
+     @media (max-width:1515px) {
       
       .grid > * {
         flex: 0 1 55px;
-        height: 55px;
+        height:55px;
         aspect-ratio: 1 / 1;
-        font-size: 22px;
+        font-size:22px;
       }
 
      }
 
-    @media (max-width: 1024px) {
+    @media (max-width:1024px) {
       .wrapper-both-sec {
         flex-direction: column;
         gap: 20px;
       }
 
       .half-weight-bar {
-        width: 96%;
+        width:96%;
       }
 
       .left,
       .right {
-        width: 100%;
-        height: auto;
+        width:100%;
+        height:auto;
         text-align: center;
       }
 
       .right {
-        font-size: 300px;
+        font-size:300px;
         padding: 15px;
-        min-height: 400px;
+        min-height:400px;
         text-align: center;
         order: 1;
       }
@@ -1426,21 +1428,21 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width:768px) {
       .wrapper-both-sec {
         flex-direction: column;
         gap: 20px;
       }
 
       .half-weight-bar {
-        width: 96%;
+        width:96%;
       }
 
       .right {
         order: 1;
-        font-size: 200px;
+        font-size:200px;
         padding: 10px;
-        min-height: 250px;
+        min-height:250px;
         text-align: center;
       }
 
@@ -1449,7 +1451,7 @@
       }
 
       #glyphChar {
-        font-size: clamp(120px, 30vw, 200px);
+        font-size:clamp(120px, 30vw, 200px);
         top: 0;
       }
 
@@ -1462,20 +1464,20 @@
       }
 
       .glyph {
-        width: 100%;
+        width:100%;
         aspect-ratio: 1/1;
-        font-size: clamp(16px, 5vw, 22px);
+        font-size:clamp(16px, 5vw, 22px);
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width:480px) {
       input[type="range"] {
-        width: 100%;
+        width:100%;
       }
 
       .half-weight-bar {
-        width: 96%;
-        flex-wrap: wrap;
+        width:96%;
+        flex-wrap:wrap;
         gap: 15px
       }
 
@@ -1484,13 +1486,13 @@
       }
 
       .right {
-        font-size: 140px;
-        min-height: 200px;
+        font-size:140px;
+        min-height:200px;
         text-align: center;
       }
 
       #glyphChar {
-        font-size: clamp(80px, 25vw, 140px);
+        font-size:clamp(80px, 25vw, 140px);
       }
 
       .grid > * {
@@ -1498,7 +1500,7 @@
       }
 
       .glyph {
-        font-size: clamp(14px, 6vw, 18px);
+        font-size:clamp(14px, 6vw, 18px);
       }
     }
   `;
