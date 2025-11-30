@@ -838,6 +838,299 @@
     #go-text {
       font-size: clamp(14px, 2vw, 40px);
     }
+
+    /* Font controller range inputs */
+    #fc-component-root input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      background: #FFBFE1;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(247,180,227,0.5);
+      transition: background 0.2s;
+    }
+
+    #fc-component-root input[type=range]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      background: #f7b4e3;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* Weight slider */
+    #weightSlider[type="range"] {
+      -webkit-appearance: none;
+      width: 160px;
+      height: 3px;
+      border-radius: 2px;
+      background: #ddd;
+      outline: none;
+    }
+
+    #weightSlider[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #000;
+      cursor: pointer;
+    }
+
+    #weightSlider[type="range"]::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #000;
+      cursor: pointer;
+    }
+
+    /* Card styles */
+    .card {
+      width: 120px;
+      height: 450px;
+      background: #FFB3D9;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: width .4s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border: 2px solid #02903B;
+    }
+
+    .card.open {
+      width: 370px;
+    }
+
+    .card span {
+      font-size: 420px;
+      color: #02903B;
+      white-space: nowrap;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-10%, -50%);
+      transition: transform .4s ease-in-out, font-weight .4s ease-in-out;
+    }
+
+    .card[data-weight="100"] span { font-weight: 100; }
+    .card[data-weight="200"] span { font-weight: 200; }
+    .card[data-weight="300"] span { font-weight: 300; }
+    .card[data-weight="400"] span { font-weight: 400; }
+    .card[data-weight="500"] span { font-weight: 500; }
+    .card[data-weight="600"] span { font-weight: 600; }
+    .card[data-weight="700"] span { font-weight: 700; }
+    .card[data-weight="800"] span { font-weight: 800; }
+    .card[data-weight="900"] span { font-weight: 900; }
+
+    .card.open span {
+      transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 1200px) {
+      .card {
+        width: 80px;
+        height: 250px;
+      }
+      .card.open {
+        width: 240px;
+      }
+      .card span {
+        font-size: 200px;
+      }
+    }
+
+    /* Hide labels on mobile */
+    @media (max-width: 1024px) {
+      .label, .unicode-div {
+        display: none;
+      }
+    }
+
+    /* Glyph section styles */
+    .left {
+      width: 48%;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .grid > * {
+     flex: 0 1 63px;
+    }
+
+    .glyph {
+      display: flex;
+      border: 0.5px solid #e0e0e0;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+      color: var(--Black, #000);
+      text-align: center;
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 122%;
+      width: 65px;
+      height: 64px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .glyph:hover {
+      background: #f0f0f0;
+    }
+
+    .right {
+      width: 48%;
+      height: 860px;
+      position: relative;
+      background: #fafafa;
+      border-radius: 6px;
+      padding: 20px;
+      text-align: center;
+      font-size: 585px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #glyphChar {
+      font-weight: 400;
+      z-index: 2;
+      transition: font-weight 0.1s ease;
+      position: relative;
+      top: 11.7%;
+    }
+
+    @media (max-width: 1515px) {
+      .grid > * {
+        flex: 0 1 55px;
+        height: 55px;
+        aspect-ratio: 1 / 1;
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .wrapper-both-sec {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .half-weight-bar {
+        width: 96%;
+      }
+
+      .left,
+      .right {
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      .right {
+        font-size: 300px;
+        padding: 15px;
+        min-height: 400px;
+        text-align: center;
+        order: 1;
+      }
+
+      .left {
+        order: 2;
+      }
+
+      #glyphChar {
+        top: 50%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .wrapper-both-sec {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .half-weight-bar {
+        width: 96%;
+      }
+
+      .right {
+        order: 1;
+        font-size: 200px;
+        padding: 10px;
+        min-height: 250px;
+        text-align: center;
+      }
+
+      .left {
+        order: 2;
+      }
+
+      #glyphChar {
+        font-size: clamp(120px, 30vw, 200px);
+        top: 0;
+      }
+
+      .grid-section {
+        order: 3;
+      }
+
+      .grid > * {
+        flex: 0 1 40px;
+      }
+
+      .glyph {
+        width: 100%;
+        aspect-ratio: 1/1;
+        font-size: clamp(16px, 5vw, 22px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      input[type="range"] {
+        width: 100%;
+      }
+
+      .half-weight-bar {
+        width: 96%;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .half-weight-bar div {
+        justify-content: start;
+      }
+
+      .right {
+        font-size: 140px;
+        min-height: 200px;
+        text-align: center;
+      }
+
+      #glyphChar {
+        font-size: clamp(80px, 25vw, 140px);
+      }
+
+      .grid > * {
+        flex: 0 1 32px;
+      }
+
+      .glyph {
+        font-size: clamp(14px, 6vw, 18px);
+      }
+    }
   </style>
 
 
@@ -996,62 +1289,17 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       const cards = document.querySelectorAll('.card');
-      const container = document.getElementById('cardsContainer');
-
-      const styleCards = () => {
-        const wide = window.innerWidth >= 1200;
-        const sizes = {
-          h: wide ? 450 : 250,
-          closed: wide ? 120 : 80,
-          open: wide ? 370 : 240,
-          font: wide ? 420 : 200
-        };
-
-        cards.forEach(card => {
-          const open = card.classList.contains('open');
-          const span = card.querySelector('span');
-          card.style.cssText = `
-        width:${open ? sizes.open : sizes.closed}px;
-        height:${sizes.h}px;
-        background:#FFB3D9;
-        cursor:pointer;
-        position:relative;
-        overflow:hidden;
-        transition:width .4s ease-in-out;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-shrink:0;
-        border:2px solid #02903B;
-      `;
-          span.style.cssText = `
-        font-size:${sizes.font}px;
-        font-weight:${card.dataset.weight};
-        color:#02903B;
-        white-space:nowrap;
-        position:absolute;
-        top:45%;
-        left:50%;
-        transform:translate(${open ? "-50%" : "-10%"},-50%);
-        transition:transform .4s ease-in-out,font-weight .4s ease-in-out;
-      `;
-        });
-      };
 
       if (cards.length) cards[0].classList.add('open');
-      styleCards();
 
       cards.forEach(card =>
         card.addEventListener('click', () => {
           if (!card.classList.contains('open')) {
             cards.forEach(c => c.classList.remove('open'));
             card.classList.add('open');
-            styleCards();
           }
         })
       );
-
-      window.addEventListener('resize', styleCards);
     });
 
 
@@ -1069,32 +1317,6 @@
       const spacingValue = root.querySelector('#fc-spacingValue');
       const alignButtons = root.querySelectorAll('.fc-align-btn');
       const caseButtons = root.querySelectorAll('.fc-btn[data-case]');
-
-
-      const style = document.createElement("style");
-      style.textContent = `
-    #fc-component-root input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance:none;
-      appearance:none;
-      width:18px;
-      height:18px;
-      background:#FFBFE1;
-      border-radius:50%;
-      cursor:pointer;
-      box-shadow:0 0 5px rgba(247,180,227,0.5);
-      transition:background 0.2s;
-    }
-    #fc-component-root input[type=range]::-moz-range-thumb {
-      width:18px;
-      height:18px;
-      background:#f7b4e3;
-      border-radius:50%;
-      cursor:pointer;
-      border:none;
-    }
-  `;
-      document.head.appendChild(style);
-
 
       function setInitial() {
         applyWeight(weightRange.value);
@@ -1209,226 +1431,6 @@
     renderGlyphs("symbols", symbols);
     updateGlyphView('A');
     updateFontWeight(slider.value);
-
-    function toggleGuidelines() {
-      const hide = window.innerWidth <= 1024;
-      document.querySelectorAll(".label, .unicode-div").forEach(el => {
-        el.style.display = hide ? "none" : "";
-      });
-    }
-
-    toggleGuidelines();
-    window.addEventListener("resize", toggleGuidelines);
-
-    const style = document.createElement("style");
-    style.textContent = `
-    #weightSlider[type="range"] {
-      -webkit-appearance:none;
-      width:160px;
-      height:3px;
-      border-radius:2px;
-      background: #ddd;
-      outline: none;
-    }
-
-    #weightSlider[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance:none;
-      appearance:none;
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      background: #000;
-      cursor: pointer;
-    }
-
-    #weightSlider[type="range"]::-moz-range-thumb {
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      background: #000;
-      cursor: pointer;
-    }
-    
-    .left {
-      width:48%;
-    }
-
-    .grid {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 8px;
-    }
-      
-    .grid > * {
-     flex: 0 1 63px;
-    }
-
-    .glyph {
-      display:flex;
-      border:0.5px solid #e0e0e0;
-      border-radius:4px;
-      background: #fff;
-      cursor: pointer;
-      transition: background 0.2s;
-      color:var(--Black, #000);
-      text-align: center;
-      font-size:25px;
-      font-weight:300;
-      line-height:122%;
-      width:65px;
-      height:64px;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .glyph:hover {
-      background: #f0f0f0;
-    }
-
-    .right {
-      width:48%;
-      height:860px;
-      position:relative;
-      background: #fafafa;
-      border-radius:6px;
-      padding: 20px;
-      text-align: center;
-      font-size:585px;
-      display:flex;
-      justify-content: center;
-    }
-
-    #glyphChar {
-      font-weight:400;
-      z-index: 2;
-      transition: font-weight 0.1s ease;
-      position:relative;
-      top: 11.7%;
-    }
-
-     @media (max-width:1515px) {
-      
-      .grid > * {
-        flex: 0 1 55px;
-        height:55px;
-        aspect-ratio: 1 / 1;
-        font-size:22px;
-      }
-
-     }
-
-    @media (max-width:1024px) {
-      .wrapper-both-sec {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .half-weight-bar {
-        width:96%;
-      }
-
-      .left,
-      .right {
-        width:100%;
-        height:auto;
-        text-align: center;
-      }
-
-      .right {
-        font-size:300px;
-        padding: 15px;
-        min-height:400px;
-        text-align: center;
-        order: 1;
-      }
-
-      .left {
-        order: 2;
-      }
-
-      #glyphChar {
-        top: 50%;
-      }
-    }
-
-    @media (max-width:768px) {
-      .wrapper-both-sec {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .half-weight-bar {
-        width:96%;
-      }
-
-      .right {
-        order: 1;
-        font-size:200px;
-        padding: 10px;
-        min-height:250px;
-        text-align: center;
-      }
-
-      .left {
-        order: 2;
-      }
-
-      #glyphChar {
-        font-size:clamp(120px, 30vw, 200px);
-        top: 0;
-      }
-
-      .grid-section {
-        order: 3;
-      }
-
-      .grid > * {
-        flex: 0 1 40px;
-      }
-
-      .glyph {
-        width:100%;
-        aspect-ratio: 1/1;
-        font-size:clamp(16px, 5vw, 22px);
-      }
-    }
-
-    @media (max-width:480px) {
-      input[type="range"] {
-        width:100%;
-      }
-
-      .half-weight-bar {
-        width:96%;
-        flex-wrap:wrap;
-        gap: 15px
-      }
-
-      .half-weight-bar div {
-        justify-content: start;
-      }
-
-      .right {
-        font-size:140px;
-        min-height:200px;
-        text-align: center;
-      }
-
-      #glyphChar {
-        font-size:clamp(80px, 25vw, 140px);
-      }
-
-      .grid > * {
-        flex: 0 1 32px;
-      }
-
-      .glyph {
-        font-size:clamp(14px, 6vw, 18px);
-      }
-    }
-  `;
-    document.head.appendChild(style);
 
 
 
