@@ -474,15 +474,15 @@
 
   <div id="cardsContainer" class="justify-center box-xl align-center hidden-on-mobile" style="overflow-x:auto; border-radius:4px;"
     aria-label="Font weight showcase for letter A">
-    <div class="card" data-weight="100"><span>a</span></div>
-    <div class="card" data-weight="200"><span>a</span></div>
-    <div class="card" data-weight="300"><span>a</span></div>
-    <div class="card" data-weight="400"><span>a</span></div>
-    <div class="card" data-weight="500"><span>a</span></div>
-    <div class="card" data-weight="600"><span>a</span></div>
-    <div class="card" data-weight="700"><span>a</span></div>
-    <div class="card" data-weight="800"><span>a</span></div>
-    <div class="card" data-weight="900"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="100"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="200"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="300"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="400"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="500"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="600"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="700"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="800"><span>a</span></div>
+    <div class="card align-center justify-center" data-weight="900"><span>a</span></div>
   </div>
 
   
@@ -627,16 +627,16 @@
         <div class="left">
           <div class="grid-section padding-l" style="background:#fafafa; border-radius:6px; height:100%;">
             <h3 class="padding-s text-m" style="color:#444;">Uppercase</h3>
-            <div class="grid" id="uppercase"></div>
+            <div class="grid row" id="uppercase"></div>
             <h3 class="padding-s text-m" style="color:#444;">Lowercase</h3>
-            <div class="grid" id="lowercase"></div>
+            <div class="grid row" id="lowercase"></div>
             <h3 class="padding-s text-m" style="color:#444;">Numbers & Symbols</h3>
-            <div class="grid" id="symbols"></div>
+            <div class="grid row" id="symbols"></div>
           </div>
         </div>
 
 
-        <div class="right">
+        <div class="right justify-center text-center padding-m">
           <div class="box-l label background-primary" style="position:absolute; height:1px; top:8.5%;"></div>
           <div class="box-l label background-primary" style="position:absolute; height:1px; top:25.5%;"></div>
           <div class="box-l label background-primary" style="position:absolute; height:1px; top:38%;"></div>
@@ -898,9 +898,6 @@
       position: relative;
       overflow: hidden;
       transition: width .4s ease-in-out;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       flex-shrink: 0;
       border: 2px solid #02903B;
     }
@@ -960,8 +957,6 @@
     }
 
     .grid {
-      display: flex;
-      flex-wrap: wrap;
       gap: 8px;
     }
 
@@ -970,21 +965,17 @@
     }
 
     .glyph {
-      display: flex;
       border: 0.5px solid #e0e0e0;
       border-radius: 4px;
       background: #fff;
       cursor: pointer;
       transition: background 0.2s;
       color: var(--Black, #000);
-      text-align: center;
       font-size: 25px;
       font-weight: 300;
       line-height: 122%;
       width: 65px;
       height: 64px;
-      justify-content: center;
-      align-items: center;
       flex-shrink: 0;
     }
 
@@ -998,11 +989,7 @@
       position: relative;
       background: #fafafa;
       border-radius: 6px;
-      padding: 20px;
-      text-align: center;
       font-size: 585px;
-      display: flex;
-      justify-content: center;
     }
 
     #glyphChar {
@@ -1401,7 +1388,7 @@
       container.innerHTML = "";
       chars.forEach(ch => {
         const div = document.createElement("div");
-        div.className = "glyph";
+        div.className = "glyph align-center justify-center text-center";
         div.textContent = ch;
         div.addEventListener("click", () => updateGlyphView(ch));
         container.appendChild(div);
