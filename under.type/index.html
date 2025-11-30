@@ -81,28 +81,26 @@
 
   <div class="view background-primary align-center">
     <pre class="page">
-<code>
-   <span class="comment">&lt;!-- custom font --&gt;</span>
-   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/"</span><span class="tag">&gt;</span>
-   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/undercss"</span><span class="tag">&gt;</span>
+<code>   <span style="color: #808080;">&lt;!-- custom font --&gt;</span>
+   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"preconnect"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://your-font-file-host/"</span><span style="color: #f5f5f5;">&gt;</span>
+   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"stylesheet"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://your-font-file-host/undercss"</span><span style="color: #f5f5f5;">&gt;</span>
 
-   <span class="tag";style&gt;></span>
-   <span class="selector">:root</span> {
-   <span class="property">font-family:</span> <span class="value">'under'</span>, <span class="value"">sans-serif;</span>
+   <span style="color: #f5f5f5;">&lt;style&gt;</span>
+   <span style="color: #ffbfe1;">:root</span> {
+   <span style="color: #02903b;">font-family:</span> <span style="color: #f5f5f5;">'under'</span>, <span style="color: #f5f5f5;">sans-serif;</span>
    }
 
-   <span class="at-rule">@supports</span> (<span class="property">font-variation-settings:</span> <span class="value">normal</span>) {
-   <span class="selector">:root</span> {
-       <span class="property">font-family:</span> <span class="value">'under var'</span>, <span class="value">sans-serif;</span>
+   <span style="color: #014add;">@supports</span> (<span style="color: #02903b;">font-variation-settings:</span> <span style="color: #f5f5f5;">normal</span>) {
+   <span style="color: #ffbfe1;">:root</span> {
+       <span style="color: #02903b;">font-family:</span> <span style="color: #f5f5f5;">'under var'</span>, <span style="color: #f5f5f5;">sans-serif;</span>
    }
    }
-   <span class="tag">&lt;/style&gt;</span>
+   <span style="color: #f5f5f5;">&lt;/style&gt;</span>
 
-   <span class="comment">&lt;!-- official cdn --&gt;</span>
-   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/"</span><span class="tag">&gt;</span>
-   <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/undercss"</span><span class="tag">&gt;</span>
-</code>
-    </pre>
+   <span style="color: #808080;">&lt;!-- official cdn --&gt;</span>
+   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"preconnect"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://weareunder.design/"</span><span style="color: #f5f5f5;">&gt;</span>
+   <span style="color: #f5f5f5;">&lt;link</span> <span style="color: #ffbfe1;">rel=</span><span style="color: #02903b;">"stylesheet"</span> <span style="color: #ffbfe1;">href=</span><span style="color: #02903b;">"https://weareunder.design/undercss"</span><span style="color: #f5f5f5;">&gt;</span>
+</code></pre>
   </div>
 
   
@@ -829,26 +827,6 @@
 
 
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const colorMap = {
-        comment: "#808080",
-        tag: "#f5f5f5",
-        attribute: "#ffbfe1",
-        string: "#02903b",
-        selector: "#ffbfe1",
-        property: "#02903b",
-        value: "#f5f5f5",
-        "at-rule": "#014add",
-        white: "#fff",
-        black: "#000"
-      };
-
-      Object.entries(colorMap).forEach(([cls, color]) => {
-        document.querySelectorAll("." + cls).forEach(el => {
-          el.style.color = color;
-        });
-      });
-    });
 
 
 
