@@ -79,40 +79,30 @@
 
   
 
-  <div class="box row justify-center align-center padding-m box"
-    style="margin-bottom: 70px; font-size: 20px; font-weight: 300; color: #808080;">
-    <div class="panel border shadow box-l code-container background-primary"
-      style="position: relative; width: 100%; max-width: 820px; border-radius: 10px; ">
-      <button id="copyButton" class="copy-button" aria-label="Copy code"
-        style="position: absolute; top: 1rem; right: 1rem; color: #9ca3af; transition: color 0.2s ease; cursor: pointer; border: none; background: transparent;">
-        <i id="copyIcon" class="ph-duotone ph-copy" style="font-size: 20px; font-weight: 300;"></i>
-      </button>
-
-      <div class="scrollable padding-l" style=" overflow-x: auto; font-size: 16px;  font-weight: 300;">
-        <pre class="code-content">
-          <code>
+  <div class="view background-primary align-center">
+    <pre class="page">
+<code>
    <span class="comment">&lt;!-- custom font --&gt;</span>
    <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/"</span><span class="tag">&gt;</span>
    <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://your-font-file-host/undercss"</span><span class="tag">&gt;</span>
-   
+
    <span class="tag";style&gt;></span>
    <span class="selector">:root</span> {
    <span class="property">font-family:</span> <span class="value">'under'</span>, <span class="value"">sans-serif;</span>
    }
-   
+
    <span class="at-rule">@supports</span> (<span class="property">font-variation-settings:</span> <span class="value">normal</span>) {
    <span class="selector">:root</span> {
        <span class="property">font-family:</span> <span class="value">'under var'</span>, <span class="value">sans-serif;</span>
    }
    }
    <span class="tag">&lt;/style&gt;</span>
-   
+
    <span class="comment">&lt;!-- official cdn --&gt;</span>
    <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"preconnect"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/"</span><span class="tag">&gt;</span>
    <span class="tag">&lt;link</span> <span class="attribute">rel=</span><span class="string">"stylesheet"</span> <span class="attribute">href=</span><span class="string">"https://weareunder.design/undercss"</span><span class="tag">&gt;</span>
-         </code></pre>
-      </div>
-    </div>
+</code>
+    </pre>
   </div>
 
   
@@ -967,43 +957,6 @@
 
 
 
-    /* Copy Code Block Section (Start)  */
-
-    const copyButton = document.getElementById('copyButton');
-    const copyIcon = document.getElementById('copyIcon');
-    const codeToCopy = document.querySelector('.code-content');
-
-    copyButton.addEventListener('click', () => {
-      if (!codeToCopy) {
-        console.error("Code element not found. Ensure '.code-content' exists.");
-        return;
-      }
-      const tempTextArea = document.createElement('textarea');
-      tempTextArea.value = codeToCopy.textContent;
-      document.body.appendChild(tempTextArea);
-      tempTextArea.select();
-      try {
-        document.execCommand('copy');
-        copyIcon.classList.replace('ph-copy', 'ph-check');
-        copyButton.style.color = '#22c55e';
-        setTimeout(() => {
-          copyIcon.classList.replace('ph-check', 'ph-copy');
-          copyButton.style.color = '#9ca3af';
-        }, 2000);
-      } catch (err) {
-        console.error('Failed to copy: ', err);
-        copyIcon.classList.replace('ph-copy', 'ph-x');
-        copyButton.style.color = '#ef4444';
-        setTimeout(() => {
-          copyIcon.classList.replace('ph-x', 'ph-copy');
-          copyButton.style.color = '#9ca3af';
-        }, 2000);
-      } finally {
-        document.body.removeChild(tempTextArea);
-      }
-    });
-
-    /* Copy Code Block Section (End)  */
 
 
 
