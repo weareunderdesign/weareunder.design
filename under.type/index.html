@@ -377,7 +377,7 @@
   
 
   <div class="view align-center column">
-    <div id="underBox" class="box page justify-center gap-xl padding-xl row">
+    <div id="underBox" class="box page justify-stretch gap-xl padding-xl row">
 
       <div id="micro" class="box column micro-section">
         <div class="gap-m column">
@@ -512,7 +512,7 @@
     style="background:#f6f5f9;">
     <div class="box column gap-l page">
       <div class="box justify-center align-center box-l gap-l">
-        <div class="justify-center align-center gap-l box-l" style="flex-wrap:wrap;">
+        <div class="justify-center align-center gap-l box-l row">
 
 
           <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px;">
@@ -551,7 +551,7 @@
       <div class="text-center box-l">
         <div class="box column gap-l fc-text-box box-l">
           <div id="fc-output" contenteditable="true" spellcheck="false" class="padding-l box-l text-center"
-            style="min-height:200px; border:none; outline:none; font-size:64px; font-weight:400; word-wrap:break-word; overflow-wrap:break-word; color:#02903B; transition:all 0.2s ease-in-out;">
+            style="min-height:200px; border:none; outline:none; font-weight:400; word-wrap:break-word; overflow-wrap:break-word; color:#02903B; transition:all 0.2s ease-in-out;">
             hey
           </div>
 
@@ -681,22 +681,162 @@
   
 
   <style>
+    /* Motion animations */
     .motion-circle {
       animation: rotate-animation 15s infinite linear;
     }
 
     @keyframes rotate-animation {
-      0% {
-        transform: rotate(0deg);
-      }
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(180deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-      50% {
-        transform: rotate(180deg);
-      }
+    /* Dot styles for weight selector */
+    .dot {
+      width: 22px;
+      height: 22px;
+      border: 2px solid white;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+      flex-shrink: 0;
+      background: none;
+      transform: scale(0.7);
+    }
 
-      100% {
-        transform: rotate(360deg);
+    .dot.active {
+      background: white;
+    }
+
+    /* Responsive heading sizes */
+    #under-type-heading {
+      font-size: clamp(3rem, 8vw, 9rem);
+    }
+
+    #under-type-paragraph {
+      font-size: clamp(30px, 4vw, 48px);
+    }
+
+    /* Responsive weight bar wrapper */
+    #weightBarWrapper {
+      width: 45%;
+    }
+
+    #weightText {
+      width: 35%;
+    }
+
+    /* Responsive images in imgSection */
+    #imgSection img {
+      max-width: 49%;
+    }
+
+    /* Responsive underBox layout */
+    #micro { width: 20%; }
+    #text { width: 27%; }
+    #display { width: 48%; }
+
+    /* Responsive breakpoints */
+    @media (max-width: 1024px) {
+      #weightBarWrapper { width: 60%; }
+      #weightText { width: 60%; }
+    }
+
+    @media (max-width: 768px) {
+      #weightBarWrapper { width: 90%; }
+      #weightText { width: 90%; }
+      #imgSection img { max-width: 100%; }
+      #micro, #text, #display { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      #weightBarWrapper { width: 100%; }
+      #weightText {
+        width: 100%;
+        gap: 6px;
+        font-size: 11px;
+        text-align: center;
       }
+      .dot {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    /* Font controller buttons */
+    .fc-btn {
+      background-color: transparent;
+      color: #8159FB;
+      border: 1px solid #8159FB;
+      padding: 0.15rem 0.7rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 400;
+      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .fc-btn:hover:not(.fc-active) {
+      background-color: #f0f0f0;
+    }
+
+    .fc-btn.fc-active {
+      background-color: #8159FB;
+      color: #fff;
+    }
+
+    /* Responsive font output */
+    #fc-output {
+      font-size: 64px;
+    }
+
+    @media (max-width: 768px) {
+      #fc-output { font-size: 48px; }
+      .fc-button-row { width: 100%; }
+    }
+
+    @media (max-width: 480px) {
+      #fc-output { font-size: 32px; }
+    }
+
+    /* Responsive button sizing */
+    #responsiveBtn {
+      height: 350px;
+      font-size: 100px;
+    }
+
+    @media (max-width: 1300px) {
+      #responsiveBtn {
+        height: 300px;
+        font-size: 90px;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      #responsiveBtn {
+        height: 250px;
+        font-size: 75px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #responsiveBtn {
+        height: 200px;
+        font-size: 60px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      #responsiveBtn {
+        height: 100px;
+        font-size: 30px;
+      }
+    }
+
+    /* Responsive go-text sizing */
+    #go-text {
+      font-size: clamp(14px, 2vw, 40px);
     }
   </style>
 
@@ -709,7 +849,7 @@
         font in action
       </h1>
 
-      <div id="imgSection" class="box justify-stretch align-center" style="flex-wrap:wrap; gap:1.5rem;">
+      <div id="imgSection" class="box justify-stretch align-center row" style="gap:1.5rem;">
         <img src="assets/font-poster-1.svg" alt="Pixel-perfect optimization example 1" decoding="async" loading="lazy"
           class="box-s">
         <img src="assets/font-poster-2.svg" alt="Pixel-perfect optimization example 2" decoding="async" loading="lazy"
@@ -738,7 +878,7 @@
   <div class="view padding-xl align-center" role="banner">
     <div class="page justify-center" style="position:relative;">
       <img src="assets/hero-closing-graphic.svg" alt="Under.type hero graphic" width="75%" />
-      <p id="go-text" style="font-weight:200; position:absolute; right:11%; bottom:5%; text-align:right;">
+      <p id="go-text" style="font-weight:200; position:absolute; right:11%; bottom:5%; margin:0; text-align:right;">
         it's free & open source <br>no fine print
       </p>
     </div>
@@ -752,7 +892,7 @@
   <div class="view box-l padding-xl align-center">
     <div class="page">
       <button class="text-center white" id="responsiveBtn"
-        style="background:#014ADD; border-radius:400px; width:95%; height:450px; font-size:162px; font-weight:300; border:none; cursor:pointer;">
+        style="background:#014ADD; border-radius:400px; width:95%; font-weight:300; border:none; cursor:pointer;">
         get under font
       </button>
     </div>
@@ -767,98 +907,18 @@
   <script>
 
 
-    function applyResponsiveLayout() {
-      const heading = document.getElementById("under-type-heading");
-      const paragraph = document.getElementById("under-type-paragraph");
-      const btns = [downloadBtn, githubBtn];
-
-      const width = window.innerWidth;
-
-
-      if (width <= 500) {
-        heading.style.fontSize = "3rem";
-      } else if (width <= 900) {
-        heading.style.fontSize = "4rem";
-      } else {
-        heading.style.fontSize = "9rem";
-      }
-
-
-      if (width <= 768) {
-        paragraph.style.fontSize = "30px";
-        paragraph.style.textAlign = "center";
-      } else if (width <= 1200) {
-        paragraph.style.fontSize = "40px";
-      } else {
-        paragraph.style.fontSize = "48px";
-      }
-
-      if (window.innerWidth < 768) {
-        const scale = Math.max(window.innerWidth / 768, 0.5);
-        btns.forEach(btn => {
-          btn.style.padding = `${23 * scale}px ${110 * scale}px`;
-          btn.style.fontSize = `${39 * scale}px`;
-        });
-      } else {
-        btns.forEach(btn => {
-          btn.style.padding = "23px 110px";
-          btn.style.fontSize = "39px";
-        });
-      }
-    }
-
-    window.addEventListener("resize", applyResponsiveLayout);
-    window.addEventListener("load", applyResponsiveLayout);
-
-
-
-
-
-    function applyResponsiveImages() {
-      const imgs = document.querySelectorAll("#imgSection img");
-      const isMobile = window.innerWidth <= 768;
-      imgs.forEach(img => {
-        img.style.maxWidth = isMobile ? "100%" : "49%";
-      });
-    }
-
-    window.addEventListener("resize", applyResponsiveImages);
-    window.addEventListener("load", applyResponsiveImages);
-
-
-
-
-
-
 
 
     document.addEventListener('DOMContentLoaded', () => {
       const dots = document.querySelectorAll('.dot');
       const lettersDiv = document.getElementById('letters');
       const currentWeightText = document.getElementById('currentWeight');
-      const wrapper = document.getElementById('weightBarWrapper');
-      const weightText = document.getElementById('weightText');
-
-
-      dots.forEach(dot => {
-        dot.style.width = "22px";
-        dot.style.height = "22px";
-        dot.style.border = "2px solid white";
-        dot.style.borderRadius = "50%";
-        dot.style.cursor = "pointer";
-        dot.style.transition = "background 0.3s, transform 0.2s";
-        dot.style.flexShrink = "0";
-        dot.style.background = "none";
-        dot.style.transform = "scale(0.7)";
-      });
 
       function setActiveDot(weight) {
-        dots.forEach(dot => {
-          dot.style.background = "none";
-        });
+        dots.forEach(dot => dot.classList.remove('active'));
         const activeDot = document.querySelector(`.dot[data-weight="${weight}"]`);
         if (activeDot) {
-          activeDot.style.background = "white";
+          activeDot.classList.add('active');
         }
       }
 
@@ -875,64 +935,8 @@
         });
       });
 
-
-      function applyResponsiveLayout() {
-        const w = window.innerWidth;
-        if (w <= 480) {
-          wrapper.style.width = "100%";
-          weightText.style.width = "100%";
-          weightText.style.gap = "6px";
-          weightText.style.fontSize = "11px";
-          weightText.style.textAlign = "center";
-          dots.forEach(dot => {
-            dot.style.width = "14px";
-            dot.style.height = "14px";
-          });
-        } else if (w <= 768) {
-          wrapper.style.width = "90%";
-          wrapper.style.margin = "0 auto";
-          weightText.style.margin = "0 auto";
-          weightText.style.width = "90%";
-          dots.forEach(dot => {
-            dot.style.width = "22px";
-            dot.style.height = "22px";
-          });
-        } else if (w <= 1024) {
-          wrapper.style.width = "60%";
-          weightText.style.width = "60%";
-        } else {
-          wrapper.style.width = "35%";
-          weightText.style.width = "35%";
-        }
-      }
-
-      window.addEventListener("resize", applyResponsiveLayout);
-      window.addEventListener("load", applyResponsiveLayout);
-
-
-      applyResponsiveLayout();
       updateUI('100');
     });
-
-
-
-
-    function applyResponsiveStyles() {
-      const w = window.innerWidth,
-        u = document.getElementById("underBox"),
-        m = document.getElementById("micro"),
-        t = document.getElementById("text"),
-        d = document.getElementById("display");
-
-      u.style.flexDirection = w >= 768 ? "row" : "column";
-      u.style.justifyContent = w >= 768 ? "space-between" : "center";
-
-      [m, t, d].forEach((el, i) =>
-        el.style.width = w >= 768 ? ["20%", "27%", "48%"][i] : "100%"
-      );
-    }
-    window.addEventListener("resize", applyResponsiveStyles);
-    window.addEventListener("load", applyResponsiveStyles);
 
 
 
@@ -1124,12 +1128,8 @@
 
       alignButtons.forEach(button => {
         button.addEventListener('click', () => {
-          alignButtons.forEach(btn => {
-            btn.style.background = "transparent";
-            btn.style.color = "#8159FB";
-          });
-          button.style.background = "#8159FB";
-          button.style.color = "#fff";
+          alignButtons.forEach(btn => btn.classList.remove('fc-active'));
+          button.classList.add('fc-active');
           output.style.textAlign = button.dataset.align;
         });
       });
@@ -1142,99 +1142,24 @@
       });
 
 
-      function responsiveFont() {
-        const w = window.innerWidth;
-        if (w <= 480) output.style.fontSize = "32px";
-        else if (w <= 768) output.style.fontSize = "48px";
-        else output.style.fontSize = sizeRange.value + "px";
-      }
-      window.addEventListener("resize", responsiveFont);
-
       setInitial();
-      responsiveFont();
     }
     document.addEventListener('DOMContentLoaded', initFontController);
 
     document.addEventListener("DOMContentLoaded", () => {
       const buttons = document.querySelectorAll(".fc-btn");
-      const alignGroups = document.querySelectorAll(".fc-align-group");
-
 
       buttons.forEach(btn => {
-        btn.style.backgroundColor = "transparent";
-        btn.style.color = "#8159FB";
-        btn.style.border = "1px solid #8159FB";
-        btn.style.padding = "0.15rem 0.7rem";
-        btn.style.borderRadius = "50px";
-        btn.style.cursor = "pointer";
-        btn.style.fontSize = "15px";
-        btn.style.fontWeight = "400";
-        btn.style.transition = "background-color 0.2s, color 0.2s, border-color 0.2s";
-
-
-        btn.addEventListener("mouseenter", () => {
-          if (!btn.classList.contains("fc-active")) {
-            btn.style.backgroundColor = "#f0f0f0";
-          }
-        });
-        btn.addEventListener("mouseleave", () => {
-          if (!btn.classList.contains("fc-active")) {
-            btn.style.backgroundColor = "transparent";
-          }
-        });
-
-
         btn.addEventListener("click", () => {
           const parentGroup = btn.closest(".fc-align-group");
-
           if (parentGroup) {
-
             parentGroup.querySelectorAll(".fc-btn").forEach(sib => {
               sib.classList.remove("fc-active");
-              sib.style.backgroundColor = "transparent";
-              sib.style.color = "#8159FB";
             });
             btn.classList.add("fc-active");
-            btn.style.backgroundColor = "#8159FB";
-            btn.style.color = "#fff";
           }
         });
       });
-
-
-      document.querySelectorAll(".fc-btn.fc-active").forEach(btn => {
-        btn.style.backgroundColor = "#8159FB";
-        btn.style.color = "#fff";
-      });
-
-
-      const output = document.getElementById("fc-output");
-
-      function applyResponsiveStyles() {
-        if (!output) return;
-
-        if (window.innerWidth <= 480) {
-          output.style.fontSize = "32px";
-        } else if (window.innerWidth <= 768) {
-          output.style.fontSize = "48px";
-        } else {
-          output.style.fontSize = "64px";
-        }
-
-
-        const buttonRow = document.querySelector(".fc-button-row");
-        if (buttonRow) {
-          if (window.innerWidth <= 992) {
-            buttonRow.style.width = "100%";
-          } else {
-            buttonRow.style.width = "auto";
-          }
-        }
-      }
-
-
-      window.addEventListener("resize", applyResponsiveStyles);
-      applyResponsiveStyles();
     });
 
 
@@ -1505,46 +1430,6 @@
   `;
     document.head.appendChild(style);
 
-    function applyResponsive() {
-      const text = document.getElementById("go-text");
-      const w = window.innerWidth;
-
-      const min = 14;
-      const max = 40;
-      const scale = (w / 1920) * max;
-      const size = Math.max(min, Math.min(scale, max));
-
-      text.style.fontSize = size + "px";
-    }
-
-    applyResponsive();
-    window.addEventListener("resize", applyResponsive);
-
-    const btn = document.getElementById('responsiveBtn');
-
-    function updateButtonSize() {
-      const w = window.innerWidth;
-      if (w <= 575) {
-        btn.style.height = '100px';
-        btn.style.fontSize = '30px';
-      } else if (w <= 768) {
-        btn.style.height = '200px';
-        btn.style.fontSize = '60px';
-      } else if (w <= 1050) {
-        btn.style.height = '250px';
-        btn.style.fontSize = '75px';
-      } else if (w <= 1300) {
-        btn.style.height = '300px';
-        btn.style.fontSize = '90px';
-      } else {
-        btn.style.height = '350px';
-        btn.style.fontSize = '100px';
-      }
-    }
-
-    updateButtonSize();
-
-    window.addEventListener('resize', updateButtonSize);
 
 
 
