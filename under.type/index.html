@@ -11,12 +11,27 @@
  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
  <link rel="preconnect" href="https://weareunder.design/">
  <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
+ <style>
+  #falling-svg path,
+  #falling-svg circle {
+   cursor: grab;
+   pointer-events: all;
+  }
+  #falling-svg path:active,
+  #falling-svg circle:active {
+   cursor: grabbing;
+  }
+  #physics-container {
+   background: black;
+  }
+ </style>
 </head>
 <body class="foreground-primary" style="overflow-x:hidden">
  <under-header></under-header>
  <under-navigation></under-navigation>
  <video src="assets/u.mp4" autoplay muted loop playsinline class="box-l padding-l"></video>
- <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <div id="physics-container" style="position: relative; width: 100%; height: 900px; overflow: hidden;">
+ <svg id="falling-svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); max-width: 100%;">
   <rect width="1600" height="900" fill="black"/>
   <path d="M158.632 211L173.378 258.956L22.746 305.274L8 257.318L158.632 211ZM184.332 294.58L199.078 342.535L48.4461 388.853L33.7002 340.898L184.332 294.58ZM117.879 315.013L33.7002 340.898L89.1131 284.866L173.378 258.956L117.879 315.013Z" fill="#02903B"/>
   <path d="M1231.16 431.993L1158.85 398.605L1299.38 273.336L1371.69 306.725L1231.16 431.993ZM1254.67 359.268L1193.46 399.092L1177.37 217L1249.68 250.389L1254.67 359.268Z" fill="#FDC800"/>
@@ -55,7 +70,9 @@
   <circle cx="233.314" cy="282.314" r="48.5" transform="rotate(-18.3718 233.314 282.314)" fill="#FFBFE1"/>
   <circle cx="233.314" cy="282.314" r="25.5972" transform="rotate(-18.3718 233.314 282.314)" stroke="#FF4B00" stroke-width="45.8056" stroke-dasharray="15.6 15.6"/>
   </svg>
-  
+  <canvas id="physics-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+ </div>
+ 
  <div class="view column align-center gap-xl">
   <div class="page">
    <h1 class="title text-center" style="font-weight:800">
@@ -671,6 +688,107 @@
  <under-footer></under-footer>
  <script src="../js/footer.js"></script>
  <script src="../js/header.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+ <script>
+  // Physics setup for falling SVG elements
+  (() => {
+   const svg = document.getElementById('falling-svg');
+   const container = document.getElementById('physics-container');
+   if (!svg || !container) return;
+
+   const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint, Events } = Matter;
+
+   // Create engine
+   const engine = Engine.create();
+   const world = engine.world;
+   world.gravity.y = 0.8;
+
+   // Get all SVG paths and circles (skip background rect)
+   const elements = Array.from(svg.querySelectorAll('path, circle')).filter(el => {
+    return el.tagName !== 'rect';
+   });
+
+   // Store original positions and create physics bodies
+   const bodies = [];
+   elements.forEach((el, i) => {
+    const bbox = el.getBBox();
+    const centerX = bbox.x + bbox.width / 2;
+    const centerY = bbox.y + bbox.height / 2;
+
+    // Store original transform info
+    el.dataset.originalX = centerX;
+    el.dataset.originalY = centerY;
+
+    // Create body starting from above viewport
+    let body;
+    const startX = centerX + (Math.random() - 0.5) * 200; // Add some randomness
+    const startY = -300 - (i * 80);
+
+    if (el.tagName === 'circle') {
+     const radius = parseFloat(el.getAttribute('r')) || 25;
+     body = Bodies.circle(startX, startY, radius, {
+      restitution: 0.7,
+      friction: 0.05,
+      density: 0.001,
+      angle: Math.random() * Math.PI * 2
+     });
+    } else {
+     const width = Math.max(bbox.width, 20);
+     const height = Math.max(bbox.height, 20);
+     body = Bodies.rectangle(startX, startY, width * 0.8, height * 0.8, {
+      restitution: 0.7,
+      friction: 0.05,
+      density: 0.001,
+      angle: Math.random() * Math.PI * 2
+     });
+    }
+
+    body.svgElement = el;
+    bodies.push(body);
+    Composite.add(world, body);
+   });
+
+   // Create boundaries
+   const ground = Bodies.rectangle(800, 920, 1600, 40, { isStatic: true });
+   const leftWall = Bodies.rectangle(-20, 450, 40, 900, { isStatic: true });
+   const rightWall = Bodies.rectangle(1620, 450, 40, 900, { isStatic: true });
+   Composite.add(world, [ground, leftWall, rightWall]);
+
+   // Mouse control for dragging
+   const mouse = Mouse.create(container);
+   mouse.pixelRatio = window.devicePixelRatio;
+   const mouseConstraint = MouseConstraint.create(engine, {
+    mouse: mouse,
+    constraint: {
+     stiffness: 0.2,
+     render: { visible: false }
+    }
+   });
+   Composite.add(world, mouseConstraint);
+
+   // Run engine
+   const runner = Runner.create();
+   Runner.run(runner, engine);
+
+   // Update SVG element positions based on physics
+   Events.on(engine, 'afterUpdate', () => {
+    bodies.forEach(body => {
+     const el = body.svgElement;
+     const originalX = parseFloat(el.dataset.originalX);
+     const originalY = parseFloat(el.dataset.originalY);
+
+     // Calculate offset from original position
+     const offsetX = body.position.x - originalX;
+     const offsetY = body.position.y - originalY;
+     const angle = body.angle * (180 / Math.PI);
+
+     el.style.transform = `translate(${offsetX}px, ${offsetY}px) rotate(${angle}deg)`;
+     el.style.transformOrigin = 'center';
+     el.style.transformBox = 'fill-box';
+    });
+   });
+  })();
+ </script>
  <script>
   document.addEventListener('DOMContentLoaded', () => {
    // Weight selector dots
