@@ -13,7 +13,6 @@
  <link rel="stylesheet" href="https://unpkg.com/@rnbws/renecss/dist/rene.min.css" />
 </head>
 <body class="foreground-primary" style="overflow-x:hidden">
- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
  <under-header></under-header>
  <under-navigation></under-navigation>
  <video src="assets/u.mp4" autoplay muted loop playsinline class="box-l padding-l"></video>
@@ -71,39 +70,39 @@
  <div class="view align-center background-primary" aria-label="font weights" style="background:#8159FB">
   <div class="page">
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">100</div>
+    <div class="weight-badge">100</div>
     <h1 class="title text-center" style="font-weight:100">under thin</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">200</div>
+    <div class="weight-badge">200</div>
     <h1 class="title text-center" style="font-weight:200">under extralight</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">300</div>
+    <div class="weight-badge">300</div>
     <h1 class="title text-center" style="font-weight:300">under light</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">400</div>
+    <div class="weight-badge">400</div>
     <h1 class="title text-center" style="font-weight:400">under regular</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">500</div>
+    <div class="weight-badge">500</div>
     <h1 class="title text-center" style="font-weight:500">under medium</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">600</div>
+    <div class="weight-badge">600</div>
     <h1 class="title text-center" style="font-weight:600">under semibold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">700</div>
+    <div class="weight-badge">700</div>
     <h1 class="title text-center" style="font-weight:700">under bold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">800</div>
+    <div class="weight-badge">800</div>
     <h1 class="title text-center" style="font-weight:800">under extrabold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border:1px solid #fff; border-radius:50px; padding:4px 10px">900</div>
+    <div class="weight-badge">900</div>
     <h1 class="title text-center" style="font-weight:900">under black</h1>
    </div>
   </div>
@@ -185,7 +184,7 @@
    <div id="micro" class="box column micro-section">
     <div class="gap-m column">
      <span style="font-weight:300; color:#8159FB">micro: 6-12pt</span>
-     <div style="height:1px; background:#8159FB"></div>
+     <div class="divider-line"></div>
     </div>
     <p class="text-l" style="font-weight:300; margin:0">
      under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
@@ -195,7 +194,7 @@
    <div id="text" class="text-section">
     <div class="gap-m column">
      <span style="font-weight:300; color:#8159FB">text: 13-20pt</span>
-     <div style="height:1px; background:#8159FB"></div>
+     <div class="divider-line"></div>
     </div>
     <p class="text" style="font-weight:300; margin:0">
      under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
@@ -205,7 +204,7 @@
    <div id="display" class="display-section">
     <div class="gap-m column">
      <span style="font-weight:300; color:#8159FB">display: 21pt and up</span>
-     <div style="height:1px; background:#8159FB"></div>
+     <div class="divider-line"></div>
     </div>
     <p class="display" style="font-weight:300; margin:0">
      under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
@@ -229,15 +228,15 @@
   <div class="box-l">
   <div class="padding-l box-l">
    <div id="weightLabels" class="box justify-stretch box-l" style="cursor:pointer; font-weight:300">
-    <span style="transition:color 0.3s ease" data-weight="100" data-step="0">Thin</span>
-    <span style="transition:color 0.3s ease" data-weight="200" data-step="1">Extralight</span>
-    <span style="transition:color 0.3s ease" data-weight="300" data-step="2">Light</span>
-    <span style="transition:color 0.3s ease; color:#FF4B00" data-weight="400" data-step="3">Regular</span>
-    <span style="transition:color 0.3s ease" data-weight="500" data-step="4">Medium</span>
-    <span style="transition:color 0.3s ease" data-weight="600" data-step="5">Semibold</span>
-    <span style="transition:color 0.3s ease" data-weight="700" data-step="6">Bold</span>
-    <span style="transition:color 0.3s ease" data-weight="800" data-step="7">Extrabold</span>
-    <span style="transition:color 0.3s ease" data-weight="900" data-step="8">Black</span>
+    <span class="weight-label" data-weight="100" data-step="0">Thin</span>
+    <span class="weight-label" data-weight="200" data-step="1">Extralight</span>
+    <span class="weight-label" data-weight="300" data-step="2">Light</span>
+    <span class="weight-label" style="color:#FF4B00" data-weight="400" data-step="3">Regular</span>
+    <span class="weight-label" data-weight="500" data-step="4">Medium</span>
+    <span class="weight-label" data-weight="600" data-step="5">Semibold</span>
+    <span class="weight-label" data-weight="700" data-step="6">Bold</span>
+    <span class="weight-label" data-weight="800" data-step="7">Extrabold</span>
+    <span class="weight-label" data-weight="900" data-step="8">Black</span>
    </div>
    <div class="box-l" style="position:relative; height:15px">
     <div id="rulerLine" class="box-l"
@@ -272,24 +271,21 @@
    <div class="box justify-center align-center box-l gap-l">
     <div class="justify-center align-center gap-l box-l row">
      <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
-      <input id="fc-weightRange" type="range" min="100" max="900" step="1" value="900" class="box-l"
-       style="appearance:none; -webkit-appearance:none; height:17px; background:#8159FB; border-radius:15px">
+      <input id="fc-weightRange" type="range" min="100" max="900" step="1" value="900" class="box-l range-input">
       <div class="box justify-stretch box-l black text-s" style="font-weight:400; margin:0">
        <label for="fc-weightRange">WEIGHT</label>
        <div id="fc-weightValue">900</div>
       </div>
      </div>
      <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
-      <input id="fc-sizeRange" type="range" min="20" max="300" step="1" value="300" class="box-l"
-       style="appearance:none; -webkit-appearance:none; height:17px; background:#8159FB; border-radius:15px">
+      <input id="fc-sizeRange" type="range" min="20" max="300" step="1" value="300" class="box-l range-input">
       <div class="box justify-stretch box-l black text-s" style="font-weight:400; margin:0">
        <label for="fc-sizeRange">SIZE</label>
        <div id="fc-sizeValue">300 PX</div>
       </div>
      </div>
      <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
-      <input id="fc-spacingRange" type="range" min="0" max="2" step="0.05" value="0" class="box-l"
-       style="appearance:none; -webkit-appearance:none; height:17px; background:#8159FB; border-radius:15px">
+      <input id="fc-spacingRange" type="range" min="0" max="2" step="0.05" value="0" class="box-l range-input">
       <div class="box justify-stretch box-l black text-s" style="font-weight:400; margin:0">
        <label for="fc-spacingRange">SPACING</label>
        <div id="fc-spacingValue">0.00 EM</div>
@@ -401,23 +397,13 @@
   </div>
  </div>
  <style>
-  h1, h3, p {
-   margin: 0;
-  }
-  /* Title class - double size */
-  .title {
-   font-size: 5rem;
-  }
-  /* Motion animations */
-  .motion-circle {
-   animation: rotate-animation 15s infinite linear;
-  }
+  h1, h3, p { margin: 0; }
+  .title { font-size: 5rem; }
+  .motion-circle { animation: rotate-animation 15s infinite linear; }
   @keyframes rotate-animation {
-   0% { transform: rotate(0deg); }
+   0%, 100% { transform: rotate(0deg); }
    50% { transform: rotate(180deg); }
-   100% { transform: rotate(360deg); }
   }
-  /* Dot styles for weight selector */
   .dot {
    width: 22px;
    height: 22px;
@@ -429,42 +415,33 @@
    background: none;
    transform: scale(0.7);
   }
-  .dot.active {
-   background: white;
+  .dot.active { background: white; }
+  .weight-badge { border: 1px solid #fff; border-radius: 50px; padding: 4px 10px; }
+  .weight-label { transition: color 0.3s ease; }
+  .range-input {
+   appearance: none;
+   -webkit-appearance: none;
+   height: 17px;
+   background: #8159FB;
+   border-radius: 15px;
   }
-  /* Responsive weight bar wrapper */
-  #weightBarWrapper {
-   width: 45%;
-  }
-  #weightText {
-   width: 35%;
-  }
-  /* Responsive underBox layout */
+  .divider-line { height: 1px; background: #8159FB; }
+  #weightBarWrapper { width: 45%; }
+  #weightText { width: 35%; }
   #micro { width: 20%; }
   #text { width: 27%; }
   #display { width: 48%; }
-  /* Responsive breakpoints */
   @media (max-width: 1024px) {
-   #weightBarWrapper { width: 60%; }
-   #weightText { width: 60%; }
+   #weightBarWrapper, #weightText { width: 60%; }
   }
   @media (max-width: 768px) {
-   #weightBarWrapper { width: 90%; }
-   #weightText { width: 90%; }
+   #weightBarWrapper, #weightText { width: 90%; }
    #micro, #text, #display { width: 100%; }
   }
   @media (max-width: 480px) {
-   #weightBarWrapper { width: 100%; }
-   #weightText {
-    width: 100%;
-    gap: 6px;
-    
-    text-align: center;
-   }
-   .dot {
-    width: 14px;
-    height: 14px;
-   }
+   #weightBarWrapper, #weightText { width: 100%; }
+   #weightText { gap: 6px; text-align: center; }
+   .dot { width: 14px; height: 14px; }
   }
   /* Font controller buttons */
   .fc-btn {
@@ -487,30 +464,11 @@
   @media (max-width: 768px) {
    .fc-button-row { width: 100%; }
   }
-  /* Responsive button sizing */
-  #responsiveBtn {
-   height: 350px;
-  }
-  @media (max-width: 1300px) {
-   #responsiveBtn {
-    height: 300px;
-   }
-  }
-  @media (max-width: 1050px) {
-   #responsiveBtn {
-    height: 250px;
-   }
-  }
-  @media (max-width: 768px) {
-   #responsiveBtn {
-    height: 200px;
-   }
-  }
-  @media (max-width: 575px) {
-   #responsiveBtn {
-    height: 100px;
-   }
-  }
+  #responsiveBtn { height: 350px; }
+  @media (max-width: 1300px) { #responsiveBtn { height: 300px; } }
+  @media (max-width: 1050px) { #responsiveBtn { height: 250px; } }
+  @media (max-width: 768px) { #responsiveBtn { height: 200px; } }
+  @media (max-width: 575px) { #responsiveBtn { height: 100px; } }
   /* Font controller range inputs */
   #fc-component-root input[type=range]::-webkit-slider-thumb {
    -webkit-appearance: none;
@@ -531,31 +489,16 @@
    cursor: pointer;
    border: none;
   }
-  /* Weight slider */
   #weightSlider[type="range"] {
-   appearance: none;
-   -webkit-appearance: none;
-   width: 160px;
-   height: 3px;
-   border-radius: 2px;
-   background: #ddd;
-   outline: none;
+   appearance: none; -webkit-appearance: none;
+   width: 160px; height: 3px; border-radius: 2px;
+   background: #ddd; outline: none;
   }
-  #weightSlider[type="range"]::-webkit-slider-thumb {
-   -webkit-appearance: none;
-   appearance: none;
-   width: 12px;
-   height: 12px;
-   border-radius: 50%;
-   background: #000;
-   cursor: pointer;
-  }
+  #weightSlider[type="range"]::-webkit-slider-thumb,
   #weightSlider[type="range"]::-moz-range-thumb {
-   width: 12px;
-   height: 12px;
-   border-radius: 50%;
-   background: #000;
-   cursor: pointer;
+   -webkit-appearance: none; appearance: none;
+   width: 12px; height: 12px; border-radius: 50%;
+   background: #000; cursor: pointer; border: none;
   }
   /* Card styles */
   .card {
@@ -606,136 +549,48 @@
     font-size: 9rem;
    }
   }
-  /* Hide labels on mobile */
   @media (max-width: 1024px) {
-   .label, .unicode-div {
-    display: none;
-   }
+   .label, .unicode-div { display: none; }
   }
-  /* Glyph section styles */
-  .left {
-   width: 48%;
-  }
-  .grid {
-   gap: 8px;
-  }
-  .grid > * {
-   flex: 0 1 63px;
-  }
+  .left { width: 48%; }
+  .right { width: 48%; height: 860px; position: relative; background: #fafafa; border-radius: 6px; }
+  .grid { gap: 8px; }
+  .grid > * { flex: 0 1 63px; }
   .glyph {
-   border: 0.5px solid #e0e0e0;
-   border-radius: 4px;
-   background: #fff;
-   cursor: pointer;
-   transition: background 0.2s;
-   color: var(--Black, #000);
-   font-weight: 300;
-   line-height: 122%;
-   width: 65px;
-   height: 64px;
-   flex-shrink: 0;
+   border: 0.5px solid #e0e0e0; border-radius: 4px;
+   background: #fff; cursor: pointer; transition: background 0.2s;
+   color: var(--Black, #000); font-weight: 300; line-height: 122%;
+   width: 65px; height: 64px; flex-shrink: 0;
   }
-  .glyph:hover {
-   background: #f0f0f0;
-  }
-  .right {
-   width: 48%;
-   height: 860px;
-   position: relative;
-   background: #fafafa;
-   border-radius: 6px;
-  }
+  .glyph:hover { background: #f0f0f0; }
   #glyphChar {
-   font-weight: 400;
-   z-index: 2;
-   transition: font-weight 0.1s ease;
-   position: relative;
-   top: 11.7%;
+   font-weight: 400; z-index: 2; transition: font-weight 0.1s ease;
+   position: relative; top: 11.7%;
   }
   @media (max-width: 1515px) {
-   .grid > * {
-    flex: 0 1 55px;
-    height: 55px;
-    aspect-ratio: 1 / 1;
-   }
+   .grid > * { flex: 0 1 55px; height: 55px; aspect-ratio: 1 / 1; }
   }
   @media (max-width: 1024px) {
-   .wrapper-both-sec {
-    flex-direction: column;
-    gap: 20px;
-   }
-   .half-weight-bar {
-    width: 96%;
-   }
-   .left,
-   .right {
-    width: 100%;
-    height: auto;
-    text-align: center;
-   }
-   .right {
-    padding: 15px;
-    min-height: 400px;
-    text-align: center;
-    order: 1;
-   }
-   .left {
-    order: 2;
-   }
-   #glyphChar {
-    top: 50%;
-   }
+   .wrapper-both-sec { flex-direction: column; gap: 20px; }
+   .half-weight-bar { width: 96%; }
+   .left, .right { width: 100%; height: auto; text-align: center; }
+   .right { padding: 15px; min-height: 400px; order: 1; }
+   .left { order: 2; }
+   #glyphChar { top: 50%; }
   }
   @media (max-width: 768px) {
-   .wrapper-both-sec {
-    flex-direction: column;
-    gap: 20px;
-   }
-   .half-weight-bar {
-    width: 96%;
-   }
-   .right {
-    order: 1;
-    padding: 10px;
-    min-height: 250px;
-    text-align: center;
-   }
-   .left {
-    order: 2;
-   }
-   #glyphChar {
-    top: 0;
-   }
-   .grid-section {
-    order: 3;
-   }
-   .grid > * {
-    flex: 0 1 40px;
-   }
-   .glyph {
-    width: 100%;
-    aspect-ratio: 1/1;
-   }
+   .right { padding: 10px; min-height: 250px; }
+   #glyphChar { top: 0; }
+   .grid-section { order: 3; }
+   .grid > * { flex: 0 1 40px; }
+   .glyph { width: 100%; aspect-ratio: 1/1; }
   }
   @media (max-width: 480px) {
-   input[type="range"] {
-    width: 100%;
-   }
-   .half-weight-bar {
-    width: 96%;
-    flex-wrap: wrap;
-    gap: 15px;
-   }
-   .half-weight-bar div {
-    justify-content: start;
-   }
-   .right {
-    min-height: 200px;
-    text-align: center;
-   }
-   .grid > * {
-    flex: 0 1 32px;
-   }
+   input[type="range"] { width: 100%; }
+   .half-weight-bar { width: 96%; flex-wrap: wrap; gap: 15px; }
+   .half-weight-bar div { justify-content: start; }
+   .right { min-height: 200px; text-align: center; }
+   .grid > * { flex: 0 1 32px; }
   }
  </style>
  <div class="view align-center">
@@ -783,19 +638,12 @@
    const lettersDiv = document.getElementById('letters');
    const currentWeightText = document.getElementById('currentWeight');
    if (dots.length && lettersDiv && currentWeightText) {
-    function setActiveDot(weight) {
-     dots.forEach(dot => dot.classList.remove('active'));
-     const activeDot = document.querySelector(`.dot[data-weight="${weight}"]`);
-     if (activeDot) activeDot.classList.add('active');
-    }
-    function updateUI(weight) {
+    const updateUI = (weight) => {
+     dots.forEach(dot => dot.classList.toggle('active', dot.dataset.weight === weight));
      lettersDiv.style.fontWeight = weight;
-     setActiveDot(weight);
      currentWeightText.textContent = weight;
-    }
-    dots.forEach(dot => {
-     dot.addEventListener('click', (e) => updateUI(e.target.dataset.weight));
-    });
+    };
+    dots.forEach(dot => dot.addEventListener('click', (e) => updateUI(e.target.dataset.weight)));
     updateUI('100');
    }
    const labels = Array.from(document.querySelectorAll('#weightLabels span'));
@@ -805,165 +653,132 @@
    if (labels.length && rulerLine && rulerTicks && preview) {
     const totalSteps = labels.length - 1;
     const totalTicks = totalSteps * 10;
-    for (let i = 0; i <= totalTicks; i++) {
+    const ticks = Array.from({length: totalTicks + 1}, (_, i) => {
      const tick = document.createElement('span');
      Object.assign(tick.style, {
-      width: '1px',
-      backgroundColor: '#999',
-      transition: 'background-color 0.3s ease',
-      display: 'inline-block',
-      height: (i % 10 === 0) ? '22px' : '15px'
+      width: '1px', backgroundColor: '#999', transition: 'background-color 0.3s ease',
+      display: 'inline-block', height: (i % 10 === 0) ? '22px' : '15px'
      });
      rulerTicks.appendChild(tick);
-    }
-    const ticks = Array.from(rulerTicks.children);
-    function update(stepIndex) {
+     return tick;
+    });
+    const update = (stepIndex) => {
      const percent = (stepIndex / totalSteps) * 100;
      rulerLine.style.background = `linear-gradient(to right,#FF4B00 0%,#FF4B00 ${percent}%,#999 ${percent}%,#999 100%)`;
-     ticks.forEach((tick, i) => {
-      tick.style.backgroundColor = ((i / totalTicks) * 100 <= percent) ? '#FF4B00' : '#999';
-     });
-     labels.forEach(l => {
-      l.style.color = (parseInt(l.getAttribute('data-step'), 10) <= stepIndex) ? '#FF4B00' : '#000';
-     });
-     const chosen = labels.find(l => parseInt(l.getAttribute('data-step'), 10) === stepIndex);
+     ticks.forEach((tick, i) => tick.style.backgroundColor = ((i / totalTicks) * 100 <= percent) ? '#FF4B00' : '#999');
+     labels.forEach(l => l.style.color = (parseInt(l.dataset.step) <= stepIndex) ? '#FF4B00' : '#000');
+     const chosen = labels[stepIndex];
      if (chosen) {
       preview.style.fontWeight = chosen.dataset.weight;
       preview.style.color = '#FF4B00';
      }
-    }
+    };
     let hasPlayed = false;
-
-    const observer = new IntersectionObserver((entries) => {
-     entries.forEach(entry => {
-      if (entry.isIntersecting && !hasPlayed) {
-       hasPlayed = true;
-       let step = 0;
-       const animate = () => {
-        if (step <= totalSteps) {
-         update(step);
-         step++;
-         setTimeout(animate, 300);
-        }
-       };
-       animate();
-      }
-     });
-    }, { threshold: 0.3 });
-
-    const container = document.querySelector('#weightLabels').parentElement.parentElement;
-    observer.observe(container);
-
-    labels.forEach(label => {
-     label.addEventListener('mouseenter', () => {
-      update(parseInt(label.dataset.step, 10));
-     });
-    });
-
-    update(0);
-
+    new IntersectionObserver((entries) => {
+     if (entries[0].isIntersecting && !hasPlayed) {
+      hasPlayed = true;
+      let step = 0;
+      const animate = () => {
+       if (step <= totalSteps) { update(step++); setTimeout(animate, 300); }
+      };
+      animate();
+     }
+    }, { threshold: 0.3 }).observe(document.querySelector('#weightLabels').parentElement.parentElement);
+    labels.forEach(label => label.addEventListener('mouseenter', () => update(parseInt(label.dataset.step))));
     window.addEventListener('resize', () => {
-     const active = labels.find(l => l.style.color === 'rgb(255, 75, 0)');
-     update(active ? parseInt(active.dataset.step, 10) : 0);
+     const active = labels.findIndex(l => l.style.color === 'rgb(255, 75, 0)');
+     update(active !== -1 ? active : 0);
     });
+    update(0);
    }
    // Card interactions
    const cards = document.querySelectorAll('.card');
    if (cards.length) {
     cards[0].classList.add('open');
-    cards.forEach(card => {
-     card.addEventListener('mouseenter', () => {
-      if (!card.classList.contains('open')) {
-       cards.forEach(c => c.classList.remove('open'));
-       card.classList.add('open');
-      }
-     });
-    });
+    cards.forEach(card => card.addEventListener('mouseenter', () => {
+     if (!card.classList.contains('open')) {
+      cards.forEach(c => c.classList.remove('open'));
+      card.classList.add('open');
+     }
+    }));
    }
    // Font controller
-   function initFontController() {
-    const root = document.getElementById('fc-component-root');
-    if (!root) return;
+   const root = document.getElementById('fc-component-root');
+   if (root) {
     const output = root.querySelector('#fc-output');
-    const weightRange = root.querySelector('#fc-weightRange');
-    const weightValue = root.querySelector('#fc-weightValue');
-    const sizeRange = root.querySelector('#fc-sizeRange');
-    const sizeValue = root.querySelector('#fc-sizeValue');
-    const spacingRange = root.querySelector('#fc-spacingRange');
-    const spacingValue = root.querySelector('#fc-spacingValue');
-    const alignButtons = root.querySelectorAll('.fc-align-btn');
-    const caseButtons = root.querySelectorAll('.fc-btn[data-case]');
-    if (!output || !weightRange || !sizeRange || !spacingRange) return;
-    function applyWeight(weight) {
-     output.style.fontVariationSettings = `"wght" ${weight}`;
-     output.style.fontWeight = weight;
-     if (weightValue) weightValue.textContent = weight;
+    const ranges = {
+     weight: root.querySelector('#fc-weightRange'),
+     size: root.querySelector('#fc-sizeRange'),
+     spacing: root.querySelector('#fc-spacingRange')
+    };
+    const values = {
+     weight: root.querySelector('#fc-weightValue'),
+     size: root.querySelector('#fc-sizeValue'),
+     spacing: root.querySelector('#fc-spacingValue')
+    };
+    if (output && ranges.weight && ranges.size && ranges.spacing) {
+     const applyWeight = (w) => {
+      output.style.fontVariationSettings = `"wght" ${w}`;
+      output.style.fontWeight = w;
+      if (values.weight) values.weight.textContent = w;
+     };
+     const applySize = (s) => {
+      output.style.fontSize = s + "px";
+      if (values.size) values.size.textContent = s + " PX";
+     };
+     const applySpacing = (sp) => {
+      const fixed = parseFloat(sp).toFixed(2);
+      output.style.letterSpacing = fixed + "em";
+      if (values.spacing) values.spacing.textContent = fixed + " EM";
+     };
+     ranges.weight.addEventListener('input', e => applyWeight(e.target.value));
+     ranges.size.addEventListener('input', e => applySize(e.target.value));
+     ranges.spacing.addEventListener('input', e => applySpacing(e.target.value));
+     root.querySelectorAll('.fc-align-btn').forEach(btn => btn.addEventListener('click', () => {
+      root.querySelectorAll('.fc-align-btn').forEach(b => b.classList.remove('fc-active'));
+      btn.classList.add('fc-active');
+      output.style.textAlign = btn.dataset.align;
+     }));
+     root.querySelectorAll('.fc-btn[data-case]').forEach(btn =>
+      btn.addEventListener('click', () => output.style.textTransform = btn.dataset.case)
+     );
+     applyWeight(ranges.weight.value);
+     applySize(ranges.size.value);
+     applySpacing(ranges.spacing.value);
+     output.style.textAlign = "center";
     }
-    function applySize(size) {
-     output.style.fontSize = size + "px";
-     if (sizeValue) sizeValue.textContent = size + " PX";
-    }
-    function applySpacing(spacing) {
-     const fixed = parseFloat(spacing).toFixed(2);
-     output.style.letterSpacing = fixed + "em";
-     if (spacingValue) spacingValue.textContent = fixed + " EM";
-    }
-    weightRange.addEventListener('input', e => applyWeight(e.target.value));
-    sizeRange.addEventListener('input', e => applySize(e.target.value));
-    spacingRange.addEventListener('input', e => applySpacing(e.target.value));
-    alignButtons.forEach(button => {
-     button.addEventListener('click', () => {
-      alignButtons.forEach(btn => btn.classList.remove('fc-active'));
-      button.classList.add('fc-active');
-      output.style.textAlign = button.dataset.align;
-     });
-    });
-    caseButtons.forEach(button => {
-     button.addEventListener('click', () => {
-      output.style.textTransform = button.dataset.case;
-     });
-    });
-    applyWeight(weightRange.value);
-    applySize(sizeRange.value);
-    applySpacing(spacingRange.value);
-    output.style.textAlign = "center";
    }
-   initFontController();
    // Glyph rendering
    const glyphChar = document.getElementById("glyphChar");
    const unicodeLabel = document.getElementById("unicodeLabel");
    const slider = document.getElementById("weightSlider");
    const weightValue = document.getElementById("weightValue");
    if (glyphChar && unicodeLabel && slider && weightValue) {
-    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-    const lowercase = "abcdefghijklmnopqrstuvwxyz".split("");
-    const symbols = "1234567890!?()#%*\\\"[]:;@+,.".split("");
-    function renderGlyphs(containerId, chars) {
-     const container = document.getElementById(containerId);
-     if (!container) return;
-     container.innerHTML = "";
-     chars.forEach(ch => {
-      const div = document.createElement("div");
-      div.className = "glyph align-center justify-center text-center";
-      div.textContent = ch;
-      div.addEventListener("click", () => updateGlyphView(ch));
-      container.appendChild(div);
-     });
-    }
-    function updateGlyphView(ch) {
+    const updateGlyphView = (ch) => {
      glyphChar.textContent = ch;
      unicodeLabel.textContent = `uni${ch.charCodeAt(0).toString(16).toUpperCase().padStart(4, "0")}`;
-    }
-    function updateFontWeight(weight) {
-     weightValue.textContent = weight;
-     glyphChar.style.fontWeight = weight;
-    }
-    slider.addEventListener("input", () => updateFontWeight(slider.value));
-    renderGlyphs("uppercase", uppercase);
-    renderGlyphs("lowercase", lowercase);
-    renderGlyphs("symbols", symbols);
+    };
+    const renderGlyphs = (containerId, chars) => {
+     const container = document.getElementById(containerId);
+     if (container) {
+      container.innerHTML = chars.map(ch =>
+       `<div class="glyph align-center justify-center text-center">${ch}</div>`
+      ).join('');
+      container.querySelectorAll('.glyph').forEach((div, i) =>
+       div.addEventListener("click", () => updateGlyphView(chars[i]))
+      );
+     }
+    };
+    slider.addEventListener("input", () => {
+     weightValue.textContent = slider.value;
+     glyphChar.style.fontWeight = slider.value;
+    });
+    renderGlyphs("uppercase", "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+    renderGlyphs("lowercase", "abcdefghijklmnopqrstuvwxyz".split(""));
+    renderGlyphs("symbols", "1234567890!?()#%*\\\"[]:;@+,.".split(""));
     updateGlyphView('A');
-    updateFontWeight(slider.value);
+    glyphChar.style.fontWeight = slider.value;
+    weightValue.textContent = slider.value;
    }
   });
  </script>
