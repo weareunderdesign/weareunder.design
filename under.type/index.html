@@ -32,8 +32,7 @@
  <video src="assets/u.mp4" autoplay muted loop playsinline class="box-l padding-l"></video>
  <div id="physics-container" style="position: relative; width: 100%; height: 900px; overflow: hidden;">
  <video id="webcam" autoplay playsinline style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></video>
- <canvas id="hand-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
- <svg id="falling-svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); max-width: 100%;">
+ <svg id="falling-svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); max-width: 100%; z-index: 1;">
   <rect width="1600" height="900" fill="black"/>
   <circle id="finger-cursor" cx="-100" cy="-100" r="30" fill="#FF4B00" opacity="0.6" style="pointer-events: none; transition: r 0.1s ease;">
    <animate attributeName="r" values="25;35;25" dur="1s" repeatCount="indefinite"/>
@@ -75,7 +74,7 @@
   <circle cx="233.314" cy="282.314" r="48.5" transform="rotate(-18.3718 233.314 282.314)" fill="#FFBFE1"/>
   <circle cx="233.314" cy="282.314" r="25.5972" transform="rotate(-18.3718 233.314 282.314)" stroke="#FF4B00" stroke-width="45.8056" stroke-dasharray="15.6 15.6"/>
   </svg>
-  <canvas id="physics-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+  <canvas id="hand-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;"></canvas>
  </div>
  
  <div class="view column align-center gap-xl">
