@@ -3,7 +3,8 @@
     "allow": [
       "Bash(find:*)",
       "Bash(rm:*)",
-      "WebFetch(domain:unpkg.com)"
+      "WebFetch(domain:unpkg.com)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
