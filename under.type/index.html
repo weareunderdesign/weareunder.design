@@ -31,8 +31,13 @@
  <under-navigation></under-navigation>
  <video src="assets/u.mp4" autoplay muted loop playsinline class="box-l padding-l"></video>
  <div id="physics-container" style="position: relative; width: 100%; height: 900px; overflow: hidden;">
+ <video id="webcam" autoplay playsinline style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></video>
+ <canvas id="hand-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
  <svg id="falling-svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); max-width: 100%;">
   <rect width="1600" height="900" fill="black"/>
+  <circle id="finger-cursor" cx="-100" cy="-100" r="30" fill="#FF4B00" opacity="0.6" style="pointer-events: none; transition: r 0.1s ease;">
+   <animate attributeName="r" values="25;35;25" dur="1s" repeatCount="indefinite"/>
+  </circle>
   <path d="M158.632 211L173.378 258.956L22.746 305.274L8 257.318L158.632 211ZM184.332 294.58L199.078 342.535L48.4461 388.853L33.7002 340.898L184.332 294.58ZM117.879 315.013L33.7002 340.898L89.1131 284.866L173.378 258.956L117.879 315.013Z" fill="#02903B"/>
   <path d="M1231.16 431.993L1158.85 398.605L1299.38 273.336L1371.69 306.725L1231.16 431.993ZM1254.67 359.268L1193.46 399.092L1177.37 217L1249.68 250.389L1254.67 359.268Z" fill="#FDC800"/>
   <path d="M1005.66 265.891L938.226 319.28L744.281 297.315L811.712 243.925L1005.66 265.891ZM896.925 351.981L829.424 405.427L852.452 211.669L919.953 158.223L896.925 351.981Z" fill="#FF4B00"/>
@@ -689,14 +694,24 @@
  <script src="../js/footer.js"></script>
  <script src="../js/header.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
  <script>
   // Physics setup for falling SVG elements
   (() => {
    const svg = document.getElementById('falling-svg');
    const container = document.getElementById('physics-container');
+   const webcam = document.getElementById('webcam');
+   const handCanvas = document.getElementById('hand-canvas');
+   const handCtx = handCanvas.getContext('2d');
+
    if (!svg || !container) return;
 
-   const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint, Events } = Matter;
+   // Set canvas size
+   handCanvas.width = container.offsetWidth;
+   handCanvas.height = container.offsetHeight;
+
+   const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint, Events, Body } = Matter;
 
    // Create engine
    const engine = Engine.create();
@@ -721,7 +736,7 @@
 
     // Create body starting from above viewport
     let body;
-    const startX = centerX + (Math.random() - 0.5) * 200; // Add some randomness
+    const startX = centerX + (Math.random() - 0.5) * 200;
     const startY = -300 - (i * 80);
 
     if (el.tagName === 'circle') {
@@ -766,6 +781,13 @@
    });
    Composite.add(world, mouseConstraint);
 
+   // Create a finger body that will follow the detected finger
+   const fingerBody = Bodies.circle(800, 450, 40, {
+    isStatic: true,
+    render: { visible: false }
+   });
+   Composite.add(world, fingerBody);
+
    // Run engine
    const runner = Runner.create();
    Runner.run(runner, engine);
@@ -777,7 +799,18 @@
      const originalX = parseFloat(el.dataset.originalX);
      const originalY = parseFloat(el.dataset.originalY);
 
-     // Calculate offset from original position
+     // Check if object is out of bounds
+     if (body.position.x < -100 || body.position.x > 1700 ||
+         body.position.y < -100 || body.position.y > 1000) {
+      // Reset to top with random position
+      const resetX = 400 + Math.random() * 800;
+      const resetY = -200 - Math.random() * 300;
+      Body.setPosition(body, { x: resetX, y: resetY });
+      Body.setVelocity(body, { x: 0, y: 0 });
+      Body.setAngularVelocity(body, 0);
+      Body.setAngle(body, Math.random() * Math.PI * 2);
+     }
+
      const offsetX = body.position.x - originalX;
      const offsetY = body.position.y - originalY;
      const angle = body.angle * (180 / Math.PI);
@@ -787,6 +820,154 @@
      el.style.transformBox = 'fill-box';
     });
    });
+
+   // Hand tracking setup
+   let fingerActive = false;
+   let prevHandPos = { x: 0, y: 0 };
+   let handVelocity = { x: 0, y: 0 };
+   const cursor = document.getElementById('finger-cursor');
+
+   // Hand skeleton connections
+   const HAND_CONNECTIONS = [
+    [0, 1], [1, 2], [2, 3], [3, 4], // Thumb
+    [0, 5], [5, 6], [6, 7], [7, 8], // Index
+    [0, 9], [9, 10], [10, 11], [11, 12], // Middle
+    [0, 13], [13, 14], [14, 15], [15, 16], // Ring
+    [0, 17], [17, 18], [18, 19], [19, 20], // Pinky
+    [5, 9], [9, 13], [13, 17] // Palm
+   ];
+
+   function drawHand(landmarks) {
+    handCtx.clearRect(0, 0, handCanvas.width, handCanvas.height);
+
+    const canvasWidth = handCanvas.width;
+    const canvasHeight = handCanvas.height;
+
+    // Draw connections
+    handCtx.strokeStyle = '#FF4B00';
+    handCtx.lineWidth = 3;
+    handCtx.lineCap = 'round';
+
+    HAND_CONNECTIONS.forEach(([start, end]) => {
+     const startPoint = landmarks[start];
+     const endPoint = landmarks[end];
+
+     const x1 = (1 - startPoint.x) * canvasWidth;
+     const y1 = startPoint.y * canvasHeight;
+     const x2 = (1 - endPoint.x) * canvasWidth;
+     const y2 = endPoint.y * canvasHeight;
+
+     handCtx.beginPath();
+     handCtx.moveTo(x1, y1);
+     handCtx.lineTo(x2, y2);
+     handCtx.stroke();
+    });
+
+    // Draw joints
+    landmarks.forEach(landmark => {
+     const x = (1 - landmark.x) * canvasWidth;
+     const y = landmark.y * canvasHeight;
+
+     handCtx.fillStyle = '#FFBFE1';
+     handCtx.beginPath();
+     handCtx.arc(x, y, 5, 0, 2 * Math.PI);
+     handCtx.fill();
+    });
+   }
+
+   function onHandResults(results) {
+    handCtx.clearRect(0, 0, handCanvas.width, handCanvas.height);
+
+    if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+     const hand = results.multiHandLandmarks[0];
+
+     // Draw hand skeleton
+     drawHand(hand);
+
+     // Get multiple finger points for more natural interaction
+     const indexTip = hand[8];
+     const middleTip = hand[12];
+     const wrist = hand[0];
+
+     // Average position for more stable tracking
+     const avgX = (indexTip.x + middleTip.x) / 2;
+     const avgY = (indexTip.y + middleTip.y) / 2;
+
+     // Convert normalized coordinates to SVG coordinates
+     const svgX = (1 - avgX) * 1600; // Flipped for mirror effect
+     const svgY = avgY * 900;
+
+     // Calculate velocity for waving motion
+     handVelocity.x = svgX - prevHandPos.x;
+     handVelocity.y = svgY - prevHandPos.y;
+     const speed = Math.sqrt(handVelocity.x ** 2 + handVelocity.y ** 2);
+
+     // Update cursor position and size based on speed
+     cursor.setAttribute('cx', svgX);
+     cursor.setAttribute('cy', svgY);
+     const cursorSize = Math.min(50, 30 + speed * 0.5);
+     cursor.setAttribute('r', cursorSize);
+
+     // Update finger body position
+     Body.setPosition(fingerBody, { x: svgX, y: svgY });
+
+     // Apply force to nearby objects when waving
+     if (speed > 5) {
+      bodies.forEach(body => {
+       const dx = body.position.x - svgX;
+       const dy = body.position.y - svgY;
+       const distance = Math.sqrt(dx ** 2 + dy ** 2);
+
+       if (distance < 200) {
+        const forceMagnitude = (200 - distance) * 0.0002 * speed;
+        Body.applyForce(body, body.position, {
+         x: handVelocity.x * forceMagnitude,
+         y: handVelocity.y * forceMagnitude
+        });
+       }
+      });
+     }
+
+     prevHandPos.x = svgX;
+     prevHandPos.y = svgY;
+     fingerActive = true;
+    } else {
+     fingerActive = false;
+     // Move finger body and cursor off-screen when no hand detected
+     Body.setPosition(fingerBody, { x: -1000, y: -1000 });
+     cursor.setAttribute('cx', -100);
+     cursor.setAttribute('cy', -100);
+    }
+   }
+
+   // Initialize MediaPipe Hands
+   if (webcam) {
+    const hands = new Hands({
+     locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
+    });
+
+    hands.setOptions({
+     maxNumHands: 1,
+     modelComplexity: 0,
+     minDetectionConfidence: 0.5,
+     minTrackingConfidence: 0.5
+    });
+
+    hands.onResults(onHandResults);
+
+    // Start camera
+    const camera = new Camera(webcam, {
+     onFrame: async () => {
+      await hands.send({ image: webcam });
+     },
+     width: 640,
+     height: 480
+    });
+
+    camera.start().catch(err => {
+     console.log('Camera access denied or not available:', err);
+    });
+   }
   })();
  </script>
  <script>

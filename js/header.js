@@ -21,21 +21,16 @@ function preloadImages() {
     "https://weareunder.design/work/raftt/0.png",
     "https://weareunder.design/work/togetherr/0.png",
     "https://weareunder.design/work/upword/0.png",
-    "https://weareunder.design/work/darna/0.png",
     "https://weareunder.design/work/everafter/0.png",
     "https://weareunder.design/work/faintlines/0.png",
     "https://weareunder.design/work/grain/0.png",
     "https://weareunder.design/work/healthquarters/0.png",
-    "https://weareunder.design/work/iceberg/0.png",
     "https://weareunder.design/work/karma/0.png",
-    "https://weareunder.design/work/larosh/0.png",
-    "https://weareunder.design/work/le_salon/0.png",
     "https://weareunder.design/work/mesh_payments/0.svg",
     "https://weareunder.design/work/notch/0.png",
     "https://weareunder.design/work/perdiem/0.png",
     "https://weareunder.design/work/reeco/0.png",
     "https://weareunder.design/work/reflect/0.png",
-    "https://weareunder.design/work/tagbox/0.png",
     "https://weareunder.design/work/revelations/0.png",
     "https://weareunder.design/work/unit/0.png",
     "https://weareunder.design/work/zigi/0.svg",
@@ -168,8 +163,6 @@ function addSidebar() {
   <a href="https://weareunder.design/work/groundcover/" class="sidebar-project-link" id="groundcover-1BB485">groundcover</a>
   <a href="https://weareunder.design/work/raftt/" class="sidebar-project-link" id="raftt-0C6BEA">raftt</a>
   <a href="https://weareunder.design/work/justripe/" class="sidebar-project-link" id="justripe-221C35">justripe</a>
-  <a href="https://weareunder.design/work/tagbox/" class="sidebar-project-link" id="tagbox-C2A78D">tagbox</a>
-  <a href="https://weareunder.design/work/darna/" class="sidebar-project-link" id="darna-2a52cf">darna</a>
   <a href="https://weareunder.design/work/everafter/" class="sidebar-project-link" id="everafter-FF7051">everafter</a>
   <a href="https://weareunder.design/work/faintlines/" class="sidebar-project-link" id="faintlines-FF0DBD">faintlines</a>
   <a href="https://weareunder.design/work/grain/" class="sidebar-project-link" id="grain-FED164">grain</a>
@@ -177,10 +170,7 @@ function addSidebar() {
   <a href="https://weareunder.design/work/chargeflow/" class="sidebar-project-link" id="chargeflow-0B41FC">chargeflow</a>
   <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
   <a href="https://weareunder.design/work/artac/" class="sidebar-project-link" id="artac-808080">artac</a>
-  <a href="https://weareunder.design/work/iceberg/" class="sidebar-project-link" id="iceberg-EC7926">iceberg</a>
   <a href="https://weareunder.design/work/karma/" class="sidebar-project-link" id="karma-FCAC8B">karma</a>
-  <a href="https://weareunder.design/work/larosh/" class="sidebar-project-link" id="larosh-C0815F">larosh</a>
-  <a href="https://weareunder.design/work/le_salon/" class="sidebar-project-link" id="le_salon-000000">le salon</a>
   <a href="https://weareunder.design/work/mesh_payments/" class="sidebar-project-link" id="mesh_payments-19F08B">mesh payments</a>
   <a href="https://weareunder.design/work/notch/" class="sidebar-project-link" id="notch-CF6AFF">notch</a>
   <a href="https://weareunder.design/work/perdiem/" class="sidebar-project-link" id="perdiem-0171EA">perdiem</a>
@@ -216,8 +206,6 @@ function addSidebar() {
 <img src="https://weareunder.design/work/groundcover/0.png" class="sidebar-project-image" id="groundcover" loading="lazy"></img>
 <img src="https://weareunder.design/work/raftt/0.png" class="sidebar-project-image" id="raftt" loading="lazy"></img>
 <img src="https://weareunder.design/work/justripe/09.png" class="sidebar-project-image box-l" id="justripe" loading="lazy"></img>
-<img src="https://weareunder.design/work/tagbox/0.png" class="sidebar-project-image" id="tagbox" loading="lazy"></img>
-<img src="https://weareunder.design/work/darna/0.png" class="sidebar-project-image" id="darna" loading="lazy"></img>
 <img src="https://weareunder.design/work/everafter/0.png" class="sidebar-project-image" id="everafter" loading="lazy"></img>
 <img src="https://weareunder.design/work/faintlines/0.png" class="sidebar-project-image" id="faintlines" loading="lazy"></img>
 <img src="https://weareunder.design/work/grain/0.png" class="sidebar-project-image" id="grain" loading="lazy"></img>
@@ -225,10 +213,7 @@ function addSidebar() {
 <img src="https://weareunder.design/work/chargeflow/00.png" class="sidebar-project-image" id="chargeflow" loading="lazy"></img>
 <img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
 <img src="https://weareunder.design/work/artac/0.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
-<img src="https://weareunder.design/work/iceberg/0.png" class="sidebar-project-image" id="iceberg" loading="lazy"></img>
 <img src="https://weareunder.design/work/karma/0.png" class="sidebar-project-image" id="karma" loading="lazy"></img>
-<img src="https://weareunder.design/work/larosh/0.png" class="sidebar-project-image" id="larosh" loading="lazy"></img>
-<img src="https://weareunder.design/work/le_salon/0.png" class="sidebar-project-image" id="le_salon" loading="lazy"></img>
 <img src="https://weareunder.design/work/mesh_payments/0.svg" class="sidebar-project-image" id="mesh_payments" loading="lazy"></img>
 <img src="https://weareunder.design/work/notch/0.png" class="sidebar-project-image" id="notch" loading="lazy"></img>
 <img src="https://weareunder.design/work/perdiem/0.png" class="sidebar-project-image" id="perdiem" loading="lazy"></img>
