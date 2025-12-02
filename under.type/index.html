@@ -466,6 +466,7 @@
   .dot.active { background: white; }
   .weight-badge { border: 1px solid #fff; border-radius: 50px; padding: 4px 10px; }
   .weight-label { transition: color 0.3s ease; }
+  #letters { max-width: 100%; overflow: hidden; text-align: center; }
   .range-input {
    appearance: none;
    -webkit-appearance: none;
@@ -857,13 +858,36 @@
    const lettersDiv = document.getElementById('letters');
    const currentWeightText = document.getElementById('currentWeight');
    if (dots.length && lettersDiv && currentWeightText) {
-    const updateUI = (weight) => {
-     dots.forEach(dot => dot.classList.toggle('active', dot.dataset.weight === weight));
+    let currentWeight = 100;
+    let direction = 1;
+    let animating = true;
+
+    const animate = () => {
+     if (animating) {
+      currentWeight += direction * 5;
+      if (currentWeight >= 900) direction = -1;
+      if (currentWeight <= 100) direction = 1;
+
+      lettersDiv.style.fontVariationSettings = `"wght" ${currentWeight}`;
+      lettersDiv.style.fontWeight = currentWeight;
+      currentWeightText.textContent = Math.round(currentWeight / 100) * 100;
+
+      const activeWeight = Math.round(currentWeight / 100) * 100;
+      dots.forEach(dot => dot.classList.toggle('active', dot.dataset.weight === activeWeight.toString()));
+     }
+    };
+
+    const interval = setInterval(animate, 30);
+
+    dots.forEach(dot => dot.addEventListener('click', (e) => {
+     animating = false;
+     clearInterval(interval);
+     const weight = e.target.dataset.weight;
+     dots.forEach(d => d.classList.toggle('active', d.dataset.weight === weight));
+     lettersDiv.style.fontVariationSettings = `"wght" ${weight}`;
      lettersDiv.style.fontWeight = weight;
      currentWeightText.textContent = weight;
-    };
-    dots.forEach(dot => dot.addEventListener('click', (e) => updateUI(e.target.dataset.weight)));
-    updateUI('100');
+    }));
    }
    const labels = Array.from(document.querySelectorAll('#weightLabels span'));
    const rulerLine = document.getElementById('rulerLine');
