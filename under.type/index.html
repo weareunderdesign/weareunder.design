@@ -30,9 +30,9 @@
  <under-header></under-header>
  <under-navigation></under-navigation>
  <video src="assets/u.mp4" autoplay muted loop playsinline class="box-l padding-l"></video>
- <div id="physics-container" style="position: relative; width: 100%; height: 900px; overflow: hidden;">
+ <div id="physics-container" style="position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: hidden;">
  <video id="webcam" autoplay playsinline style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></video>
- <svg id="falling-svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); max-width: 100%; z-index: 1;">
+ <svg id="falling-svg" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
   <rect width="1600" height="900" fill="black"/>
   <circle id="finger-cursor" cx="-100" cy="-100" r="30" fill="#FF4B00" opacity="0.6" style="pointer-events: none; transition: r 0.1s ease;">
    <animate attributeName="r" values="25;35;25" dur="1s" repeatCount="indefinite"/>
@@ -706,16 +706,28 @@
 
    if (!svg || !container) return;
 
+   // Get actual dimensions
+   const getContainerDims = () => ({
+    width: container.offsetWidth,
+    height: container.offsetHeight
+   });
+
+   let dims = getContainerDims();
+
    // Set canvas size
-   handCanvas.width = container.offsetWidth;
-   handCanvas.height = container.offsetHeight;
+   handCanvas.width = dims.width;
+   handCanvas.height = dims.height;
+
+   // SVG coordinate system (fixed reference)
+   const SVG_WIDTH = 1600;
+   const SVG_HEIGHT = 900;
 
    const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint, Events, Body } = Matter;
 
    // Create engine
    const engine = Engine.create();
    const world = engine.world;
-   world.gravity.y = 0.8;
+   world.gravity.y = 0.7;
 
    // Get all SVG paths and circles (skip background rect)
    const elements = Array.from(svg.querySelectorAll('path, circle')).filter(el => {
@@ -741,18 +753,20 @@
     if (el.tagName === 'circle') {
      const radius = parseFloat(el.getAttribute('r')) || 25;
      body = Bodies.circle(startX, startY, radius, {
-      restitution: 0.7,
+      restitution: 0.6,
       friction: 0.05,
-      density: 0.001,
+      density: 0.0015,
+      frictionAir: 0.015,
       angle: Math.random() * Math.PI * 2
      });
     } else {
      const width = Math.max(bbox.width, 20);
      const height = Math.max(bbox.height, 20);
      body = Bodies.rectangle(startX, startY, width * 0.8, height * 0.8, {
-      restitution: 0.7,
+      restitution: 0.6,
       friction: 0.05,
-      density: 0.001,
+      density: 0.0015,
+      frictionAir: 0.015,
       angle: Math.random() * Math.PI * 2
      });
     }
@@ -762,10 +776,10 @@
     Composite.add(world, body);
    });
 
-   // Create boundaries
-   const ground = Bodies.rectangle(800, 920, 1600, 40, { isStatic: true });
-   const leftWall = Bodies.rectangle(-20, 450, 40, 900, { isStatic: true });
-   const rightWall = Bodies.rectangle(1620, 450, 40, 900, { isStatic: true });
+   // Create boundaries (will be updated on resize)
+   let ground = Bodies.rectangle(SVG_WIDTH / 2, SVG_HEIGHT + 20, SVG_WIDTH, 40, { isStatic: true });
+   let leftWall = Bodies.rectangle(-20, SVG_HEIGHT / 2, 40, SVG_HEIGHT, { isStatic: true });
+   let rightWall = Bodies.rectangle(SVG_WIDTH + 20, SVG_HEIGHT / 2, 40, SVG_HEIGHT, { isStatic: true });
    Composite.add(world, [ground, leftWall, rightWall]);
 
    // Mouse control for dragging
@@ -780,12 +794,18 @@
    });
    Composite.add(world, mouseConstraint);
 
-   // Create a finger body that will follow the detected finger
-   const fingerBody = Bodies.circle(800, 450, 40, {
-    isStatic: true,
-    render: { visible: false }
-   });
-   Composite.add(world, fingerBody);
+   // Create finger bodies for multiple hands (up to 6 hands)
+   const MAX_HANDS = 6;
+   const fingerBodies = [];
+   for (let i = 0; i < MAX_HANDS; i++) {
+    const fingerBody = Bodies.circle(-1000, -1000, 50, {
+     isStatic: true,
+     isSensor: true,
+     render: { visible: false }
+    });
+    fingerBodies.push(fingerBody);
+    Composite.add(world, fingerBody);
+   }
 
    // Run engine
    const runner = Runner.create();
@@ -799,10 +819,10 @@
      const originalY = parseFloat(el.dataset.originalY);
 
      // Check if object is out of bounds
-     if (body.position.x < -100 || body.position.x > 1700 ||
-         body.position.y < -100 || body.position.y > 1000) {
+     if (body.position.x < -100 || body.position.x > SVG_WIDTH + 100 ||
+         body.position.y < -100 || body.position.y > SVG_HEIGHT + 100) {
       // Reset to top with random position
-      const resetX = 400 + Math.random() * 800;
+      const resetX = SVG_WIDTH * 0.25 + Math.random() * (SVG_WIDTH * 0.5);
       const resetY = -200 - Math.random() * 300;
       Body.setPosition(body, { x: resetX, y: resetY });
       Body.setVelocity(body, { x: 0, y: 0 });
@@ -821,10 +841,13 @@
    });
 
    // Hand tracking setup
-   let fingerActive = false;
-   let prevHandPos = { x: 0, y: 0 };
-   let handVelocity = { x: 0, y: 0 };
+   const prevHandPositions = Array(MAX_HANDS).fill(null).map(() => ({ x: 0, y: 0 }));
+   const smoothedHandPositions = Array(MAX_HANDS).fill(null).map(() => ({ x: 0, y: 0 }));
+   const handVelocities = Array(MAX_HANDS).fill(null).map(() => ({ x: 0, y: 0 }));
    const cursor = document.getElementById('finger-cursor');
+
+   // Light smoothing to reduce jitter without lag
+   const SMOOTHING = 0.25;
 
    // Hand skeleton connections
    const HAND_CONNECTIONS = [
@@ -836,14 +859,23 @@
     [5, 9], [9, 13], [13, 17] // Palm
    ];
 
-   function drawHand(landmarks) {
-    handCtx.clearRect(0, 0, handCanvas.width, handCanvas.height);
-
+   function drawHand(landmarks, handIndex) {
     const canvasWidth = handCanvas.width;
     const canvasHeight = handCanvas.height;
 
+    // Use different colors for different hands
+    const colors = [
+     { line: '#FF4B00', joint: '#FFBFE1' },
+     { line: '#8159FB', joint: '#FDC800' },
+     { line: '#02903B', joint: '#FF4B00' },
+     { line: '#FDC800', joint: '#8159FB' },
+     { line: '#014ADD', joint: '#02903B' },
+     { line: '#FFBFE1', joint: '#014ADD' }
+    ];
+    const color = colors[handIndex % colors.length];
+
     // Draw connections
-    handCtx.strokeStyle = '#FF4B00';
+    handCtx.strokeStyle = color.line;
     handCtx.lineWidth = 3;
     handCtx.lineCap = 'round';
 
@@ -867,7 +899,7 @@
      const x = (1 - landmark.x) * canvasWidth;
      const y = landmark.y * canvasHeight;
 
-     handCtx.fillStyle = '#FFBFE1';
+     handCtx.fillStyle = color.joint;
      handCtx.beginPath();
      handCtx.arc(x, y, 5, 0, 2 * Math.PI);
      handCtx.fill();
@@ -877,63 +909,104 @@
    function onHandResults(results) {
     handCtx.clearRect(0, 0, handCanvas.width, handCanvas.height);
 
+    // Reset all finger bodies off-screen first
+    fingerBodies.forEach(fingerBody => {
+     Body.setPosition(fingerBody, { x: -1000, y: -1000 });
+    });
+
     if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
-     const hand = results.multiHandLandmarks[0];
+     // Process each detected hand
+     results.multiHandLandmarks.forEach((hand, handIndex) => {
+      if (handIndex >= fingerBodies.length) {
+       console.log(`Hand ${handIndex + 1} detected but exceeds max (${MAX_HANDS})`);
+       return;
+      }
 
-     // Draw hand skeleton
-     drawHand(hand);
+      // Draw hand skeleton
+      drawHand(hand, handIndex);
 
-     // Get multiple finger points for more natural interaction
-     const indexTip = hand[8];
-     const middleTip = hand[12];
-     const wrist = hand[0];
+      // Get multiple finger points for more natural interaction
+      const indexTip = hand[8];
+      const middleTip = hand[12];
+      const wrist = hand[0];
 
-     // Average position for more stable tracking
-     const avgX = (indexTip.x + middleTip.x) / 2;
-     const avgY = (indexTip.y + middleTip.y) / 2;
+      // Average position for stable tracking
+      const avgX = (indexTip.x + middleTip.x) / 2;
+      const avgY = (indexTip.y + middleTip.y) / 2;
 
-     // Convert normalized coordinates to SVG coordinates
-     const svgX = (1 - avgX) * 1600; // Flipped for mirror effect
-     const svgY = avgY * 900;
+      // Convert to SVG coordinates (use fixed SVG coordinate system)
+      const rawX = (1 - avgX) * SVG_WIDTH;
+      const rawY = avgY * SVG_HEIGHT;
 
-     // Calculate velocity for waving motion
-     handVelocity.x = svgX - prevHandPos.x;
-     handVelocity.y = svgY - prevHandPos.y;
-     const speed = Math.sqrt(handVelocity.x ** 2 + handVelocity.y ** 2);
+      // Light smoothing to reduce jitter
+      const smoothedPos = smoothedHandPositions[handIndex];
+      if (smoothedPos.x === 0) {
+       smoothedPos.x = rawX;
+       smoothedPos.y = rawY;
+      } else {
+       smoothedPos.x = smoothedPos.x * SMOOTHING + rawX * (1 - SMOOTHING);
+       smoothedPos.y = smoothedPos.y * SMOOTHING + rawY * (1 - SMOOTHING);
+      }
 
-     // Update cursor position and size based on speed
-     cursor.setAttribute('cx', svgX);
-     cursor.setAttribute('cy', svgY);
-     const cursorSize = Math.min(50, 30 + speed * 0.5);
-     cursor.setAttribute('r', cursorSize);
+      const svgX = smoothedPos.x;
+      const svgY = smoothedPos.y;
 
-     // Update finger body position
-     Body.setPosition(fingerBody, { x: svgX, y: svgY });
+      // Calculate velocity
+      const handVelocity = handVelocities[handIndex];
+      handVelocity.x = svgX - prevHandPositions[handIndex].x;
+      handVelocity.y = svgY - prevHandPositions[handIndex].y;
+      const speed = Math.sqrt(handVelocity.x ** 2 + handVelocity.y ** 2);
 
-     // Apply force to nearby objects when waving
-     if (speed > 5) {
-      bodies.forEach(body => {
-       const dx = body.position.x - svgX;
-       const dy = body.position.y - svgY;
+      // Update cursor
+      if (handIndex === 0) {
+       cursor.setAttribute('cx', svgX);
+       cursor.setAttribute('cy', svgY);
+       const cursorSize = Math.min(50, 25 + speed * 0.4);
+       cursor.setAttribute('r', cursorSize);
+       cursor.setAttribute('opacity', speed > 15 ? '0.7' : '0.5');
+      }
+
+      // Update finger body position
+      Body.setPosition(fingerBodies[handIndex], { x: svgX, y: svgY });
+
+      // Apply force to nearby objects
+      bodies.forEach(bodyObj => {
+       const dx = bodyObj.position.x - svgX;
+       const dy = bodyObj.position.y - svgY;
        const distance = Math.sqrt(dx ** 2 + dy ** 2);
 
-       if (distance < 200) {
-        const forceMagnitude = (200 - distance) * 0.0002 * speed;
-        Body.applyForce(body, body.position, {
-         x: handVelocity.x * forceMagnitude,
-         y: handVelocity.y * forceMagnitude
-        });
+       if (distance < 180) {
+        if (speed < 15) {
+         // HOLD: Gentle pull + damping
+         if (distance > 50) {
+          const pullForce = (180 - distance) * 0.00005;
+          Body.applyForce(bodyObj, bodyObj.position, {
+           x: -dx * pullForce,
+           y: -dy * pullForce
+          });
+         }
+         if (distance < 120) {
+          Body.setVelocity(bodyObj, {
+           x: bodyObj.velocity.x * 0.88,
+           y: bodyObj.velocity.y * 0.88
+          });
+         }
+        } else {
+         // THROW: Directional push
+         const pushForce = (180 - distance) * 0.0001 * (speed / 15);
+         Body.applyForce(bodyObj, bodyObj.position, {
+          x: handVelocity.x * pushForce,
+          y: handVelocity.y * pushForce
+         });
+        }
        }
       });
-     }
 
-     prevHandPos.x = svgX;
-     prevHandPos.y = svgY;
-     fingerActive = true;
+      prevHandPositions[handIndex].x = svgX;
+      prevHandPositions[handIndex].y = svgY;
+     });
     } else {
-     fingerActive = false;
-     // Move finger body and cursor off-screen when no hand detected
-     Body.setPosition(fingerBody, { x: -1000, y: -1000 });
+     // No hands detected - hide cursor
      cursor.setAttribute('cx', -100);
      cursor.setAttribute('cy', -100);
     }
@@ -946,7 +1019,7 @@
     });
 
     hands.setOptions({
-     maxNumHands: 1,
+     maxNumHands: MAX_HANDS,
      modelComplexity: 0,
      minDetectionConfidence: 0.5,
      minTrackingConfidence: 0.5
@@ -967,6 +1040,17 @@
      console.log('Camera access denied or not available:', err);
     });
    }
+
+   // Handle window resize
+   let resizeTimeout;
+   window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+     dims = getContainerDims();
+     handCanvas.width = dims.width;
+     handCanvas.height = dims.height;
+    }, 250);
+   });
   })();
  </script>
  <script>
