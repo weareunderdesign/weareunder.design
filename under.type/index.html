@@ -14,7 +14,7 @@
 </head>
 <body class="foreground-primary" style="overflow-x:hidden">
  <div id="physics-container" style="position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: hidden; background: black;">
- <video id="webcam" autoplay playsinline style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></video>
+ <video id="webcam" autoplay playsinline style="position: absolute; top: 0; left: 0; width: 1px; height: 1px; opacity: 0;"></video>
  <svg id="falling-svg" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
   <rect width="1600" height="900" fill="black"/>
   <circle id="finger-cursor" cx="-100" cy="-100" r="30" fill="#FF4B00" opacity="0.6" style="pointer-events: none; transition: r 0.1s ease;">
@@ -115,40 +115,40 @@
  <div class="view align-center background-primary" aria-label="font weights" style="background:#8159FB">
   <div class="padding-l">
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">100</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:100; white-space:nowrap; margin: 0;" contenteditable="true">under thin</h1>
+    <div class="weight-badge">100</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:100;" contenteditable="true">under thin</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">200</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:200; white-space:nowrap; margin: 0;" contenteditable="true">under extralight</h1>
+    <div class="weight-badge">200</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:200;" contenteditable="true">under extralight</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">300</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:300; white-space:nowrap; margin: 0;" contenteditable="true">under light</h1>
+    <div class="weight-badge">300</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:300;" contenteditable="true">under light</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">400</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:400; white-space:nowrap; margin: 0;" contenteditable="true">under regular</h1>
+    <div class="weight-badge">400</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:400;" contenteditable="true">under regular</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">500</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:500; white-space:nowrap; margin: 0;" contenteditable="true">under medium</h1>
+    <div class="weight-badge">500</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:500;" contenteditable="true">under medium</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">600</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:600; white-space:nowrap; margin: 0;" contenteditable="true">under semibold</h1>
+    <div class="weight-badge">600</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:600;" contenteditable="true">under semibold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">700</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:700; white-space:nowrap; margin: 0;" contenteditable="true">under bold</h1>
+    <div class="weight-badge">700</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:700;" contenteditable="true">under bold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">800</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:800; white-space:nowrap; margin: 0;" contenteditable="true">under extrabold</h1>
+    <div class="weight-badge">800</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:800;" contenteditable="true">under extrabold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
-    <div style="border: 1px solid #fff; border-radius: 50px; padding: 4px 10px;">900</div>
-    <h1 class="text-center" style="font-size: 5rem; font-weight:900; white-space:nowrap; margin: 0;" contenteditable="true">under black</h1>
+    <div class="weight-badge">900</div>
+    <h1 class="weight-showcase-title text-center" style="font-weight:900;" contenteditable="true">under black</h1>
    </div>
   </div>
  </div>
@@ -156,22 +156,22 @@
  <div class="view align-center column padding-xl background-primary" style="background:#014add">
    <div class="column gap-xs align-center">
     <div id="weightBarWrapper" class="box justify-stretch gap-s padding-xs" style="border:1px solid white; border-radius:25px;">
-     <div data-role="dot" data-weight="100" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="200" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="300" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="400" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="500" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="600" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="700" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="800" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
-     <div data-role="dot" data-weight="900" style="width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7);"></div>
+     <div data-role="dot" data-weight="100" class="weight-dot"></div>
+     <div data-role="dot" data-weight="200" class="weight-dot"></div>
+     <div data-role="dot" data-weight="300" class="weight-dot"></div>
+     <div data-role="dot" data-weight="400" class="weight-dot"></div>
+     <div data-role="dot" data-weight="500" class="weight-dot"></div>
+     <div data-role="dot" data-weight="600" class="weight-dot"></div>
+     <div data-role="dot" data-weight="700" class="weight-dot"></div>
+     <div data-role="dot" data-weight="800" class="weight-dot"></div>
+     <div data-role="dot" data-weight="900" class="weight-dot"></div>
     </div>
     <div id="weightText" class="box-l justify-stretch">
-     <p style="margin: 0;">Weight</p>
-     <p id="currentWeight" style="margin: 0;">100</p>
+     <p class="no-margin">Weight</p>
+     <p id="currentWeight" class="no-margin">100</p>
     </div>
    </div>
-   <h1 id="letters" class="text-center" style="font-size: 5rem; width:100%; text-align:center; font-family:'under var', sans-serif; white-space:nowrap; margin: 0;">
+   <h1 id="letters" class="text-center no-margin" style="font-size: 5rem; width:100%; font-family:'under var', sans-serif; white-space:nowrap;">
     ABCDEFGHIJKLM<br>
     NOPQRSTUVWXYZ<br>
     abcdefghijklmn<br>
@@ -187,40 +187,40 @@
    <video src="assets/go go go.mp4" autoplay muted loop playsinline class="box-l"></video>
 
    <div class="column">
-    <h3 class="text-center" style="color:#FF4B00; font-weight:200; margin: 0;">alternative letter</h3>
-    <p class="text-center" style="color:#FF4B00; font-weight:300; margin: 0;">The font offers alternative letterforms that can be accessed manually for stylistic variation</p>
+    <h3 class="text-center no-margin" style="color:#FF4B00; font-weight:200;">alternative letter</h3>
+    <p class="text-center no-margin" style="color:#FF4B00; font-weight:300;">The font offers alternative letterforms that can be accessed manually for stylistic variation</p>
    </div>
    <div class="box justify-center align-center gap-m">
     <video src="assets/a-a.mp4" autoplay muted loop playsinline class="box-s"></video>
     <video src="assets/r-r.mp4" autoplay muted loop playsinline class="box-s"></video>
    </div>
    <div class="column">
-    <h3 class="text-center" style="font-weight:200; margin: 0;">Superscript and Subscript</h3>
-    <p class="text-center" style="font-weight:300; margin: 0;">Superscript (sups): raises text to superscript position (e.g., x²). Subscript (subs): lowers text to subscript position (e.g., H₂O).</p>
+    <h3 class="text-center no-margin" style="font-weight:200;">Superscript and Subscript</h3>
+    <p class="text-center no-margin" style="font-weight:300;">Superscript (sups): raises text to superscript position (e.g., x²). Subscript (subs): lowers text to subscript position (e.g., H₂O).</p>
    </div>
    <div class="box justify-center align-center gap-m">
     <video src="assets/X2.mp4" autoplay muted loop playsinline class="box-s"></video>
     <video src="assets/O2.mp4" autoplay muted loop playsinline class="box-s"></video>
    </div>
    <div class="column">
-    <h3 class="text-center" style="font-weight:200; margin: 0;">Precision and control</h3>
-    <p class="text-center" style="font-weight:300; margin: 0;">custom spacing pairs for precision, and auto letter-spacing for balanced flow. Auto-letter spacing is adjusted per weight for optimal readability.</p>
+    <h3 class="text-center no-margin" style="font-weight:200;">Precision and control</h3>
+    <p class="text-center no-margin" style="font-weight:300;">custom spacing pairs for precision, and auto letter-spacing for balanced flow. Auto-letter spacing is adjusted per weight for optimal readability.</p>
    </div>
    <div class="box justify-center align-center gap-m">
     <video src="assets/hey.mp4" autoplay muted loop playsinline class="box-s"></video>
     <video src="assets/ab.mp4" autoplay muted loop playsinline class="box-s"></video>
    </div>
    <div class="column">
-    <h3 class="text-center" style="color:#FF4B00; font-weight:200; margin: 0;">precise and simple</h3>
-    <p class="text-center" style="color:#FF4B00; font-weight:300; margin: 0;">clean lines, easy to read. no fancy stuff just clarity and function.</p>
+    <h3 class="text-center no-margin" style="color:#FF4B00; font-weight:200;">precise and simple</h3>
+    <p class="text-center no-margin" style="color:#FF4B00; font-weight:300;">clean lines, easy to read. no fancy stuff just clarity and function.</p>
    </div>
    <div class="box justify-center align-center gap-m">
     <video src="assets/k 2.mp4" autoplay muted loop playsinline class="box-s"></video>
     <video src="assets/g.mp4" autoplay muted loop playsinline class="box-s"></video>
    </div>
    <div class="column">
-    <h3 class="text-center" style="color:#8159FB; font-weight:200; margin: 0;">Pixel-perfect optimization</h3>
-    <p class="text-center" style="color:#8159FB; font-weight:300; margin: 0;">specifically optimized for 16px to ensure crisp rendering auto-sizing for small text for better legibility.</p>
+    <h3 class="text-center no-margin" style="color:#8159FB; font-weight:200;">Pixel-perfect optimization</h3>
+    <p class="text-center no-margin" style="color:#8159FB; font-weight:300;">specifically optimized for 16px to ensure crisp rendering auto-sizing for small text for better legibility.</p>
    </div>
    <div class="box justify-center align-center gap-m">
     <video src="assets/AAA 04.mp4" autoplay muted loop playsinline class="box-s"></video>
@@ -232,7 +232,7 @@
      <span style="font-weight:300; color:#8159FB">micro: 6-12pt</span>
      <div style="height: 1px; background: #8159FB;"></div>
     </div>
-    <p class="text-l" style="font-weight:300; margin:0">
+    <p class="text-l no-margin" style="font-weight:300;">
      under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
      more air. text sits in between, holding the balance.
     </p>
@@ -242,7 +242,7 @@
      <span style="font-weight:300; color:#8159FB">text: 13-20pt</span>
      <div style="height: 1px; background: #8159FB;"></div>
     </div>
-    <p class="text" style="font-weight:300; margin:0">
+    <p class="text no-margin" style="font-weight:300;">
      under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
      more air. text sits in between, holding the balance.
     </p>
@@ -252,7 +252,7 @@
      <span style="font-weight:300; color:#8159FB">display: 21pt and up</span>
      <div style="height: 1px; background: #8159FB;"></div>
     </div>
-    <p class="display" style="font-weight:300; margin:0">
+    <p class="display no-margin" style="font-weight:300;">
      under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
      more air. text sits in between, holding the balance.
     </p>
@@ -264,8 +264,8 @@
   <div class="page">
    <img src="assets/extensive-weight-range.svg" alt="Extensive weight range graphic" decoding="async"
     loading="lazy" />
-   <p id="extensive-heading" class="text-center black"
-    style="font-weight:200; line-height:1.4; margin: 0;">
+   <p id="extensive-heading" class="text-center black no-margin"
+    style="font-weight:200; line-height:1.4;">
     from hairline to black to suit various design needs.
     designed to adapt seamlessly, whether for
     minimal elegance or striking statements
@@ -299,15 +299,15 @@
   </div>
   <div id="cardsContainer" class="justify-center box-xl align-center hidden-on-mobile" style="overflow-x:auto; border-radius:4px"
    aria-label="Font weight showcase for letter A">
-   <div data-role="card" class="align-center justify-center" data-weight="100" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 100;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="200" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 200;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="300" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 300;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="400" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 400;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="500" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 500;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="600" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 600;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="700" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 700;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="800" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 800;">a</span></div>
-   <div data-role="card" class="align-center justify-center" data-weight="900" style="width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B;"><span style="font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; font-weight: 900;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="100"><span class="weight-card-letter" style="font-weight: 100;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="200"><span class="weight-card-letter" style="font-weight: 200;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="300"><span class="weight-card-letter" style="font-weight: 300;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="400"><span class="weight-card-letter" style="font-weight: 400;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="500"><span class="weight-card-letter" style="font-weight: 500;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="600"><span class="weight-card-letter" style="font-weight: 600;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="700"><span class="weight-card-letter" style="font-weight: 700;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="800"><span class="weight-card-letter" style="font-weight: 800;">a</span></div>
+   <div data-role="card" class="weight-card align-center justify-center" data-weight="900"><span class="weight-card-letter" style="font-weight: 900;">a</span></div>
   </div>
  </div>
  <div id="fc-component-root" class="view box justify-center align-center box-l padding-xl"
@@ -316,22 +316,22 @@
    <div class="box justify-center align-center box-l gap-l">
     <div class="justify-center align-center gap-l box-l row">
      <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
-      <input id="fc-weightRange" type="range" min="100" max="900" step="1" value="900" class="box-l" style="appearance: none; -webkit-appearance: none; height: 17px; background: #8159FB; border-radius: 15px;">
-      <div class="box justify-stretch box-l black text-s" style="font-weight:400; margin:0">
+      <input id="fc-weightRange" type="range" min="100" max="900" step="1" value="900" class="range-slider box-l">
+      <div class="box justify-stretch box-l black text-s no-margin" style="font-weight:400;">
        <label for="fc-weightRange" data-hide-mobile>WEIGHT</label>
        <div id="fc-weightValue">900</div>
       </div>
      </div>
      <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
-      <input id="fc-sizeRange" type="range" min="20" max="300" step="1" value="300" class="box-l" style="appearance: none; -webkit-appearance: none; height: 17px; background: #8159FB; border-radius: 15px;">
-      <div class="box justify-stretch box-l black text-s" style="font-weight:400; margin:0">
+      <input id="fc-sizeRange" type="range" min="20" max="300" step="1" value="300" class="range-slider box-l">
+      <div class="box justify-stretch box-l black text-s no-margin" style="font-weight:400;">
        <label for="fc-sizeRange" data-hide-mobile>SIZE</label>
        <div id="fc-sizeValue">300 PX</div>
       </div>
      </div>
      <div class="column align-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
-      <input id="fc-spacingRange" type="range" min="0" max="2" step="0.05" value="0" class="box-l" style="appearance: none; -webkit-appearance: none; height: 17px; background: #8159FB; border-radius: 15px;">
-      <div class="box justify-stretch box-l black text-s" style="font-weight:400; margin:0">
+      <input id="fc-spacingRange" type="range" min="0" max="2" step="0.05" value="0" class="range-slider box-l">
+      <div class="box justify-stretch box-l black text-s no-margin" style="font-weight:400;">
        <label for="fc-spacingRange" data-hide-mobile>SPACING</label>
        <div id="fc-spacingValue">0.00 EM</div>
       </div>
@@ -340,27 +340,27 @@
    </div>
    <div class="text-center box-l">
     <div class="box column gap-l fc-text-box box-l">
-     <h1 id="fc-output" contenteditable="true" spellcheck="false" class="padding-l box-l text-center"
-      style="font-size: 5rem; border:none; outline:none; font-weight:900; font-size:300px; word-wrap:break-word; overflow-wrap:break-word; color:#02903B; transition:all 0.2s ease-in-out; margin: 0;">
+     <h1 id="fc-output" contenteditable="true" spellcheck="false" class="padding-l box-l text-center no-margin"
+      style="font-size: 5rem; border:none; outline:none; font-weight:900; font-size:300px; word-wrap:break-word; overflow-wrap:break-word; color:#02903B; transition:all 0.2s ease-in-out;">
       hey
     </h1>
      <div class="box gap-l justify-stretch box-l">
       <div class="fc-btn-group fc-align-group box gap-s justify-center">
-       <button data-role="fc-btn" class="align-center" data-align="left" aria-label="Align Left" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">
+       <button data-role="fc-btn" class="fc-btn-base align-center" data-align="left" aria-label="Align Left">
         <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
          <path d="M17 0.54V1.54H0V0.54H17Z" fill="currentColor" />
          <path d="M9.07 5.36V6.36H0V5.36H9.07Z" fill="currentColor" />
          <path d="M11.33 10.46V11.46H0V10.46H11.33Z" fill="currentColor" />
         </svg>
        </button>
-       <button data-role="fc-btn" data-active="true" class="align-center" data-align="center" aria-label="Align Center" style="background-color: #8159FB; color: #fff; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">
+       <button data-role="fc-btn" data-active="true" class="fc-btn-base fc-btn-active align-center" data-align="center" aria-label="Align Center">
         <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
          <path d="M17 0.54V1.54H0V0.54H17Z" fill="currentColor" />
          <path d="M13.07 5.36V6.36H4V5.36H13.07Z" fill="currentColor" />
          <path d="M14.33 10.46V11.46H3V10.46H14.33Z" fill="currentColor" />
         </svg>
        </button>
-       <button data-role="fc-btn" class="align-center" data-align="right" aria-label="Align Right" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">
+       <button data-role="fc-btn" class="fc-btn-base align-center" data-align="right" aria-label="Align Right">
         <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
          <path d="M17 0.54V1.54H0V0.54H17Z" fill="currentColor" />
          <path d="M17.07 5.36V6.36H8V5.36H17.07Z" fill="currentColor" />
@@ -369,20 +369,20 @@
        </button>
       </div>
       <div class="fc-btn-group gap-m row">
-       <button data-role="fc-btn" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">alt a</button>
-       <button data-role="fc-btn" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">alt r</button>
-       <button data-role="fc-btn" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">alt u</button>
-       <button data-role="fc-btn" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">alt y</button>
-       <button data-role="fc-btn" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">alt G</button>
-       <button data-role="fc-btn" data-case="uppercase" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">uppercase</button>
-       <button data-role="fc-btn" data-case="lowercase" style="background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s;">lowercase</button>
+       <button data-role="fc-btn" class="fc-btn-base">alt a</button>
+       <button data-role="fc-btn" class="fc-btn-base">alt r</button>
+       <button data-role="fc-btn" class="fc-btn-base">alt u</button>
+       <button data-role="fc-btn" class="fc-btn-base">alt y</button>
+       <button data-role="fc-btn" class="fc-btn-base">alt G</button>
+       <button data-role="fc-btn" data-case="uppercase" class="fc-btn-base">uppercase</button>
+       <button data-role="fc-btn" data-case="lowercase" class="fc-btn-base">lowercase</button>
       </div>
      </div>
     </div>
    </div>
   </div>
  </div>
- <div style="font-weight:300; margin:0">
+ <div class="no-margin" style="font-weight:300;">
   <div class="padding-l">
    <div class="box align-center text-m padding-l">
     <div class="box justify-stretch align-center text-m" style="width:47%">
@@ -395,30 +395,29 @@
       </div>
      </div>
     </div>
-    <div style="width:53%"> </div>
    </div>
    <div data-glyph-section class="box justify-stretch padding-l" style="padding-top:0; flex-direction: row; gap: 20px;">
     <div style="width: 48%;">
      <div class="padding-l" style="background:#fafafa; border-radius:6px; height:100%">
-      <h3 class="padding-s text-m" style="color:#444; margin: 0;">Uppercase</h3>
+      <h3 class="padding-s text-m no-margin" style="color:#444;">Uppercase</h3>
       <div class="row" id="uppercase" style="gap: 8px;"></div>
-      <h3 class="padding-s text-m" style="color:#444; margin: 0;">Lowercase</h3>
+      <h3 class="padding-s text-m no-margin" style="color:#444;">Lowercase</h3>
       <div class="row" id="lowercase" style="gap: 8px;"></div>
-      <h3 class="padding-s text-m" style="color:#444; margin: 0;">Numbers & Symbols</h3>
+      <h3 class="padding-s text-m no-margin" style="color:#444;">Numbers & Symbols</h3>
       <div class="row" id="symbols" style="gap: 8px;"></div>
      </div>
     </div>
     <div style="width: 48%; height: 860px; position: relative; background: #fafafa; border-radius: 6px;" class="justify-center text-center padding-m">
-     <div class="box-l background-primary" style="position:absolute; height:1px; top:8.5%; display: block;"></div>
-     <div class="box-l background-primary" style="position:absolute; height:1px; top:25.5%; display: block;"></div>
-     <div class="box-l background-primary" style="position:absolute; height:1px; top:38%; display: block;"></div>
-     <div class="box-l background-primary" style="position:absolute; height:1px; bottom:25%; display: block;"></div>
-     <div class="box-l background-primary" style="position:absolute; height:1px; bottom:10.3%; display: block;"></div>
-     <div class="text-m" style="position:absolute; left:15px; top:10%; display: block;">Ascender</div>
-     <div class="text-m" style="position:absolute; left:15px; top:27%; display: block;">Cap Height</div>
-     <div class="text-m" style="position:absolute; left:15px; top:39.5%; display: block;">X-Height</div>
-     <div class="text-m" style="position:absolute; left:15px; bottom:22%; display: block;">Baseline</div>
-     <div class="text-m" style="position:absolute; left:15px; bottom:7.5%; display: block;">Descender</div>
+     <div class="box-l background-primary typography-guide-line" style="top:8.5%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="top:25.5%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="top:38%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="bottom:25%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="bottom:10.3%;"></div>
+     <div class="text-m typography-label" style="top:10%;">Ascender</div>
+     <div class="text-m typography-label" style="top:27%;">Cap Height</div>
+     <div class="text-m typography-label" style="top:39.5%;">X-Height</div>
+     <div class="text-m typography-label" style="bottom:22%;">Baseline</div>
+     <div class="text-m typography-label" style="bottom:7.5%;">Descender</div>
      <span id="glyphChar" style="font-weight: 400; z-index: 2; transition: font-weight 0.1s ease; position: relative; top: 11.7%;">A</span>
      <div class="text-m" style="position:absolute; top:8px; right:15px; color:#666" id="unicodeLabel">uni0041
      </div>
@@ -455,8 +454,8 @@
     <img src="assets/font-poster-8.svg" alt="Pixel-perfect optimization example 8" decoding="async" loading="lazy"
      class="box-s">
    </div>
-   <h1 class="text-center align-center background-primary" id="responsiveBtn"
-    style="font-size: 5rem; background:#014ADD; border-radius:400px; width:95%; font-weight:300; border:none; cursor:pointer; padding:1rem; margin: 0; height: 350px;">
+   <h1 class="text-center align-center background-primary no-margin" id="responsiveBtn"
+    style="font-size: 5rem; background:#014ADD; border-radius:400px; width:95%; font-weight:300; border:none; cursor:pointer; padding:1rem; height: 350px;">
     download
    </h1>
   </div>
@@ -817,7 +816,7 @@
      const container = document.getElementById(containerId);
      if (container) {
       container.innerHTML = chars.map(ch =>
-       `<div data-role="glyph" class="align-center justify-center text-center" style="border: 0.5px solid #e0e0e0; border-radius: 4px; background: #fff; cursor: pointer; transition: background 0.2s; color: var(--Black, #000); font-weight: 300; line-height: 122%; width: 65px; height: 64px; flex-shrink: 0; flex: 0 1 63px;">${ch}</div>`
+       `<div data-role="glyph" class="glyph-cell align-center justify-center text-center">${ch}</div>`
       ).join('');
       container.querySelectorAll('[data-role="glyph"]').forEach((div, i) => {
        div.addEventListener("click", () => updateGlyphView(chars[i]));
@@ -886,6 +885,19 @@
    [data-glyph-section] > div:last-child { min-height: 200px; text-align: center; }
    #uppercase > div, #lowercase > div, #symbols > div { flex: 0 1 32px !important; }
   }
+  /* Utility classes for repeated inline styles */
+  .weight-showcase-title { font-size: 5rem; white-space: nowrap; margin: 0; }
+  .weight-badge { border: 1px solid #fff; border-radius: 50px; padding: 4px 10px; }
+  .weight-dot { width: 22px; height: 22px; border: 2px solid white; border-radius: 50%; cursor: pointer; transition: background 0.3s, transform 0.2s; flex-shrink: 0; background: none; transform: scale(0.7); }
+  .weight-card { width: 120px; height: 450px; background: #FFB3D9; cursor: pointer; position: relative; overflow: hidden; transition: width .4s ease-in-out; flex-shrink: 0; border: 1px solid #02903B; }
+  .weight-card-letter { font-size: 16rem; color: #02903B; white-space: nowrap; position: absolute; top: 45%; left: 50%; transform: translate(-10%, -50%); transition: transform .4s ease-in-out, font-weight .4s ease-in-out; }
+  .range-slider { appearance: none; -webkit-appearance: none; height: 17px; background: #8159FB; border-radius: 15px; }
+  .fc-btn-base { background-color: transparent; color: #8159FB; border: 1px solid #8159FB; padding: 0.15rem 0.7rem; border-radius: 50px; cursor: pointer; font-weight: 400; transition: background-color 0.2s, color 0.2s, border-color 0.2s; }
+  .fc-btn-active { background-color: #8159FB; color: #fff; }
+  .glyph-cell { border: 0.5px solid #e0e0e0; border-radius: 4px; background: #fff; cursor: pointer; transition: background 0.2s; color: #000; font-weight: 300; line-height: 122%; width: 65px; height: 64px; flex-shrink: 0; flex: 0 1 63px; }
+  .typography-guide-line { position: absolute; height: 1px; }
+  .typography-label { position: absolute; left: 15px; }
+  .no-margin { margin: 0; }
  </style>
 </body>
 </html>
