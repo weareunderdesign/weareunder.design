@@ -167,9 +167,8 @@
   </div>
  </div>
  <video src="assets/RrRrRr.mp4" autoplay muted loop playsinline class="box-l"></video>
- <div class="view column align-center padding-xl background-primary" style="background:#014add">
-  <div class="padding-l column align-center gap-m">
-   <div class="column align-center gap-xs">
+ <div class="view padding-xl background-primary" style="background:#014add">
+   <div class="box align-center gap-xs">
     <div id="weightBarWrapper" class="row align-center gap-s padding-xs" style="border:1.5px solid white; border-radius:25px">
      <div class="dot" data-weight="100"></div>
      <div class="dot" data-weight="200"></div>
@@ -194,7 +193,6 @@
     1234567890<br>
     !?#*:;[]()%+=
    </h1>
-  </div>
  </div>
  <div class="view align-center">
   <div class="column padding-l gap-xl">
@@ -479,22 +477,13 @@
    border-radius: 15px;
   }
   .divider-line { height: 1px; background: #8159FB; }
-  #weightBarWrapper { width: 45%; }
-  #weightText { width: 35%; }
+  #weightBarWrapper { max-width: 600px; width: 100%; }
+  #weightText { max-width: 400px; width: 100%; }
   #micro { width: 20%; }
   #text { width: 27%; }
   #display { width: 48%; }
-  @media (max-width: 1024px) {
-   #weightBarWrapper, #weightText { width: 60%; }
-  }
   @media (max-width: 768px) {
-   #weightBarWrapper, #weightText { width: 90%; }
    #micro, #text, #display { width: 100%; }
-  }
-  @media (max-width: 480px) {
-   #weightBarWrapper, #weightText { width: 100%; }
-   #weightText { gap: 6px; text-align: center; }
-   .dot { width: 14px; height: 14px; }
   }
   /* Font controller buttons */
   .fc-btn {
