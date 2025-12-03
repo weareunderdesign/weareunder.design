@@ -80,9 +80,6 @@
 
  <div class="view column align-center gap-xl">
   <div class="page">
-   <h1 class="title text-center" style="font-weight:800">
-    under.type
-   </h1>
    <h3 class="box-l text-center" style="font-weight:200">
     we're under: we׳re all about keeping it simple while embracing complexity. this
     also works in fonts: imagine we had a font that did all the work. no more digging for 20+ fonts, and
@@ -130,48 +127,48 @@
 </code></pre>
  </div>
  <div class="view align-center background-primary" aria-label="font weights" style="background:#8159FB">
-  <div class="page">
+  <div class="padding-l">
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">100</div>
-    <h1 class="title text-center" style="font-weight:100">under thin</h1>
+    <h1 class="title text-center" style="font-weight:100" contenteditable="true">under thin</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">200</div>
-    <h1 class="title text-center" style="font-weight:200">under extralight</h1>
+    <h1 class="title text-center" style="font-weight:200" contenteditable="true">under extralight</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">300</div>
-    <h1 class="title text-center" style="font-weight:300">under light</h1>
+    <h1 class="title text-center" style="font-weight:300" contenteditable="true">under light</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">400</div>
-    <h1 class="title text-center" style="font-weight:400">under regular</h1>
+    <h1 class="title text-center" style="font-weight:400" contenteditable="true">under regular</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">500</div>
-    <h1 class="title text-center" style="font-weight:500">under medium</h1>
+    <h1 class="title text-center" style="font-weight:500" contenteditable="true">under medium</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">600</div>
-    <h1 class="title text-center" style="font-weight:600">under semibold</h1>
+    <h1 class="title text-center" style="font-weight:600" contenteditable="true">under semibold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">700</div>
-    <h1 class="title text-center" style="font-weight:700">under bold</h1>
+    <h1 class="title text-center" style="font-weight:700" contenteditable="true">under bold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">800</div>
-    <h1 class="title text-center" style="font-weight:800">under extrabold</h1>
+    <h1 class="title text-center" style="font-weight:800" contenteditable="true">under extrabold</h1>
    </div>
    <div class="row justify-center align-center gap-l">
     <div class="weight-badge">900</div>
-    <h1 class="title text-center" style="font-weight:900">under black</h1>
+    <h1 class="title text-center" style="font-weight:900" contenteditable="true">under black</h1>
    </div>
   </div>
  </div>
  <video src="assets/RrRrRr.mp4" autoplay muted loop playsinline class="box-l"></video>
  <div class="view column align-center padding-xl background-primary" style="background:#014add">
-  <div class="page column align-center gap-m">
+  <div class="padding-l column align-center gap-m">
    <div class="column align-center gap-xs">
     <div id="weightBarWrapper" class="row align-center gap-s padding-xs" style="border:1.5px solid white; border-radius:25px">
      <div class="dot" data-weight="100"></div>
@@ -201,7 +198,7 @@
  </div>
  <div class="view align-center">
   <div class="column padding-l gap-xl">
-   <h1 id="features-heading" class="title text-center" style="font-weight:800">features</h1>
+   <img src="assets/imagine-illustration-1.svg" alt="" class="box-l" loading="lazy" decoding="async" />
    <div class="column">
     <h3 class="text-center" style="color:#FF4B00; font-weight:200">alternative letter</h3>
     <p class="text-center" style="color:#FF4B00; font-weight:300">The font offers alternative letterforms that can be accessed manually for stylistic variation</p>
@@ -325,7 +322,6 @@
    <div class="card align-center justify-center" data-weight="800"><span>a</span></div>
    <div class="card align-center justify-center" data-weight="900"><span>a</span></div>
   </div>
-  <img src="assets/imagine-illustration-1.svg" alt="Imagine Illustration 1" class="box-l padding-xl" loading="lazy" decoding="async" />
  </div>
  <div id="fc-component-root" class="view box justify-center align-center box-l padding-xl"
   style="background:#f6f5f9">
@@ -471,6 +467,8 @@
    text-align: center;
    font-family: 'under var', sans-serif;
   }
+  pre, code { font-size: 1.2rem; }
+  [contenteditable="true"]:focus { outline: none; }
   .range-input {
    appearance: none;
    -webkit-appearance: none;
@@ -648,6 +646,8 @@
  </style>
  <div class="view align-center">
   <div class="column align-center padding-l gap-l">
+ <img src="assets/imagine-illustration-2.svg" alt="Imagine Illustration 2" class="box-l padding-xl" loading="lazy" decoding="async" />
+
    <img src="assets/lets-play.svg" alt="Imagine Illustration 3" loading="lazy" decoding="async" />
    <div class="box-l justify-center align-center gap-m">
     <img src="assets/font-poster-1.svg" alt="Pixel-perfect optimization example 1" decoding="async" loading="lazy"
@@ -680,7 +680,6 @@
    </button>
   </div>
  </div>
- <img src="assets/imagine-illustration-2.svg" alt="Imagine Illustration 2" class="box-l padding-xl" loading="lazy" decoding="async" />
  <under-footer></under-footer>
  <script src="../js/footer.js"></script>
  <script src="../js/header.js"></script>
