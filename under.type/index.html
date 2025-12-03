@@ -92,24 +92,18 @@
   </div>
  </div>
  <div class="view background-primary align-center">
-  <pre class="page">
-<code>  <span style="color:#808080">&lt;!-- custom font --&gt;</span>
-  <span style="color:#f5f5f5">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"preconnect"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://your-font-file-host/"</span><span style="color:#f5f5f5;">&gt;</span>
-  <span style="color:#f5f5f5">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"stylesheet"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://your-font-file-host/undercss"</span><span style="color:#f5f5f5;">&gt;</span>
+  <div class="page" onclick="copyCodeToClipboard()" style="cursor:pointer;">
+   <pre style="margin:0;">
+<code id="codeBlock">  <span style="color:#808080">&lt;!-- official cdn --&gt;</span>
+  <span style="color:#f5f5f5">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"preconnect"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://weareunderdesign.github.io"</span><span style="color:#f5f5f5;">&gt;</span>
+  <span style="color:#f5f5f5">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"stylesheet"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://weareunderdesign.github.io/under/under.css"</span><span style="color:#f5f5f5;">&gt;</span>
   <span style="color:#f5f5f5">&lt;style&gt;</span>
   <span style="color:#ffbfe1">:root</span> {
   <span style="color:#02903b">font-family:</span> <span style="color:#f5f5f5;">'under'</span>, <span style="color:#f5f5f5;">sans-serif;</span>
   }
-  <span style="color:#014add">@supports</span> (<span style="color:#02903b;">font-variation-settings:</span> <span style="color:#f5f5f5;">normal</span>) {
-  <span style="color:#ffbfe1">:root</span> {
-    <span style="color:#02903b">font-family:</span> <span style="color:#f5f5f5;">'under var'</span>, <span style="color:#f5f5f5;">sans-serif;</span>
-  }
-  }
   <span style="color:#f5f5f5">&lt;/style&gt;</span>
-  <span style="color:#808080">&lt;!-- official cdn --&gt;</span>
-  <span style="color:#f5f5f5">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"preconnect"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://weareunder.design/"</span><span style="color:#f5f5f5;">&gt;</span>
-  <span style="color:#f5f5f5">&lt;link</span> <span style="color:#ffbfe1;">rel=</span><span style="color:#02903b;">"stylesheet"</span> <span style="color:#ffbfe1;">href=</span><span style="color:#02903b;">"https://weareunder.design/undercss"</span><span style="color:#f5f5f5;">&gt;</span>
 </code></pre>
+  </div>
  </div>
  <div class="view align-center background-primary" aria-label="font weights" style="background:#8159FB">
   <div class="padding-l">
@@ -546,6 +540,40 @@
  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
  <script>
+  // Copy code to clipboard with typewriter effect
+  function copyCodeToClipboard() {
+   const code = `<!-- official cdn -->
+  <link rel="preconnect" href="https://weareunderdesign.github.io">
+  <link rel="stylesheet" href="https://weareunderdesign.github.io/under/under.css">
+  <style>
+  :root {
+  font-family: 'under', sans-serif;
+  }
+  </style>`;
+
+   navigator.clipboard.writeText(code).then(() => {
+    const codeBlock = document.getElementById('codeBlock');
+    const originalContent = codeBlock.innerHTML;
+    const message = 'copied to clipboard.';
+    let i = 0;
+
+    codeBlock.textContent = '';
+
+    const typeWriter = setInterval(() => {
+     if (i < message.length) {
+      codeBlock.textContent += message.charAt(i);
+      i++;
+     } else {
+      clearInterval(typeWriter);
+      setTimeout(() => {
+       codeBlock.innerHTML = originalContent;
+      }, 2000);
+     }
+    }, 50);
+   });
+  }
+
+
   // Physics setup
   (() => {
    const svg = document.getElementById('falling-svg');
