@@ -62,7 +62,7 @@
 
  <under-header></under-header>
  <under-navigation></under-navigation>
- <video src="assets/u.mp4" autoplay muted loop playsinline class="box-l padding-l"></video>
+ <video src="assets/big u .mp4" autoplay muted loop playsinline class="box-l padding-l"></video>
 
  <div class="view column align-center gap-xl">
   <div class="page">
@@ -182,7 +182,7 @@
  </div>
  <div class="view align-center">
   <div class="column padding-l gap-xl">
-    <video src="assets/Poster.mp4" autoplay muted loop playsinline class="box-l"></video>
+    <video src="assets/circus.mp4" autoplay muted loop playsinline class="box-l"></video>
    <img src="assets/imagine-illustration-1.svg" alt="" class="box-l" loading="lazy" decoding="async" />
    <video src="assets/go go go.mp4" autoplay muted loop playsinline class="box-l"></video>
 
@@ -207,7 +207,7 @@
     <p class="text-center no-margin" style="font-weight:300;">custom spacing pairs for precision, and auto letter-spacing for balanced flow. Auto-letter spacing is adjusted per weight for optimal readability.</p>
    </div>
    <div class="box justify-center align-center gap-m">
-    <video src="assets/hey.mp4" autoplay muted loop playsinline class="box-s"></video>
+    <video src="assets/hey .mp4" autoplay muted loop playsinline class="box-s"></video>
     <video src="assets/ab.mp4" autoplay muted loop playsinline class="box-s"></video>
    </div>
    <div class="column">
@@ -215,7 +215,7 @@
     <p class="text-center no-margin" style="color:#FF4B00; font-weight:300;">clean lines, easy to read. no fancy stuff just clarity and function.</p>
    </div>
    <div class="box justify-center align-center gap-m">
-    <video src="assets/k 2.mp4" autoplay muted loop playsinline class="box-s"></video>
+    <video src="assets/k.mp4" autoplay muted loop playsinline class="box-s"></video>
     <video src="assets/g.mp4" autoplay muted loop playsinline class="box-s"></video>
    </div>
    <div class="column">
@@ -223,8 +223,8 @@
     <p class="text-center no-margin" style="color:#8159FB; font-weight:300;">specifically optimized for 16px to ensure crisp rendering auto-sizing for small text for better legibility.</p>
    </div>
    <div class="box justify-center align-center gap-m">
-    <video src="assets/AAA 04.mp4" autoplay muted loop playsinline class="box-s"></video>
-    <video src="assets/AAA 03.mp4" autoplay muted loop playsinline class="box-s"></video>
+    <video src="assets/AAA 01.mp4" autoplay muted loop playsinline class="box-s"></video>
+    <video src="assets/AAA 02.mp4" autoplay muted loop playsinline class="box-s"></video>
    </div>
    <div id="underBox" class="box justify-stretch gap-l row">
    <div id="micro" class="box column">
@@ -406,17 +406,17 @@
      </div>
     </div>
     <div class="box justify-center text-center" style="height: 860px; position: relative; background: #fafafa; border-radius: 6px;">
-     <div class="box-l background-primary typography-guide-line" style="top:8.5%;"></div>
-     <div class="box-l background-primary typography-guide-line" style="top:25.5%;"></div>
-     <div class="box-l background-primary typography-guide-line" style="top:38%;"></div>
-     <div class="box-l background-primary typography-guide-line" style="bottom:25%;"></div>
-     <div class="box-l background-primary typography-guide-line" style="bottom:10.3%;"></div>
-     <div class="text-m typography-label" style="top:10%;">Ascender</div>
-     <div class="text-m typography-label" style="top:27%;">Cap Height</div>
-     <div class="text-m typography-label" style="top:39.5%;">X-Height</div>
-     <div class="text-m typography-label" style="bottom:22%;">Baseline</div>
-     <div class="text-m typography-label" style="bottom:7.5%;">Descender</div>
-     <span id="glyphChar" style="font-weight: 400; z-index: 2; transition: font-weight 0.1s ease; position: relative; top: 11.7%;">A</span>
+     <div class="box-l background-primary typography-guide-line" style="top:15%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="top:23%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="top:53%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="top:77%;"></div>
+     <div class="box-l background-primary typography-guide-line" style="top:85%;"></div>
+     <div class="text-m typography-label" style="top:16.5%;">Ascender</div>
+     <div class="text-m typography-label" style="top:24.5%;">Cap Height</div>
+     <div class="text-m typography-label" style="top:54.5%;">X-Height</div>
+     <div class="text-m typography-label" style="top:78.5%;">Baseline</div>
+     <div class="text-m typography-label" style="top:86.5%;">Descender</div>
+     <span id="glyphChar" style="font-size: 32rem; line-height: 1; font-weight: 400; z-index: 2; transition: font-weight 0.1s ease; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">A</span>
      <div class="text-m" style="position:absolute; top:8px; right:15px; color:#666" id="unicodeLabel">uni0041
      </div>
     </div>
@@ -911,6 +911,55 @@
     updateGlyphView('A');
     glyphChar.style.fontWeight = slider.value;
     weightValue.textContent = slider.value;
+
+    // Position typography guide lines based on actual font metrics
+    const positionGuideLines = () => {
+     const container = glyphChar.parentElement;
+     const containerHeight = container.offsetHeight;
+     const charRect = glyphChar.getBoundingClientRect();
+     const containerRect = container.getBoundingClientRect();
+
+     // Calculate positions relative to container
+     const charTop = charRect.top - containerRect.top;
+     const charBottom = charRect.bottom - containerRect.top;
+     const charHeight = charRect.height;
+
+     // Get all guide lines
+     const lines = container.querySelectorAll('.typography-guide-line');
+     const labels = container.querySelectorAll('.typography-label');
+
+     if (lines.length >= 5 && labels.length >= 5) {
+      // Ascender: slightly above the letter
+      const ascenderPos = (charTop - 30) / containerHeight * 100;
+      lines[0].style.top = ascenderPos + '%';
+      labels[0].style.top = (ascenderPos + 1.5) + '%';
+
+      // Cap Height: at the top of the letter
+      const capHeightPos = charTop / containerHeight * 100;
+      lines[1].style.top = capHeightPos + '%';
+      labels[1].style.top = (capHeightPos + 1.5) + '%';
+
+      // X-Height: approximately 70% down from top
+      const xHeightPos = (charTop + charHeight * 0.55) / containerHeight * 100;
+      lines[2].style.top = xHeightPos + '%';
+      labels[2].style.top = (xHeightPos + 1.5) + '%';
+
+      // Baseline: at the bottom of the letter
+      const baselinePos = charBottom / containerHeight * 100;
+      lines[3].style.top = baselinePos + '%';
+      labels[3].style.top = (baselinePos - 3) + '%';
+
+      // Descender: slightly below the letter
+      const descenderPos = (charBottom + 30) / containerHeight * 100;
+      lines[4].style.top = descenderPos + '%';
+      labels[4].style.top = (descenderPos - 3) + '%';
+     }
+    };
+
+    // Position guide lines on load and when character or weight changes
+    setTimeout(positionGuideLines, 100);
+    slider.addEventListener("input", () => setTimeout(positionGuideLines, 50));
+    glyphChar.addEventListener('DOMSubtreeModified', () => setTimeout(positionGuideLines, 50));
    }
   });
  </script>
