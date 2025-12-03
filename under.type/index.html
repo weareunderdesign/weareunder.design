@@ -384,15 +384,13 @@
  </div>
  <div class="no-margin" style="font-weight:300;">
   <div class="padding-l">
-   <div class="box align-center text-m padding-l">
-    <div class="box justify-stretch align-center text-m" style="width:47%">
-     <span>Glyphs set overview</span>
-     <div class="box justify-end">
-      <div class="align-center gap-m">
-       <label for="weightSlider" data-hide-mobile>Weight</label>
-       <input type="range" id="weightSlider" min="100" max="900" step="1" value="400" style="appearance: none; -webkit-appearance: none; width: 160px; height: 3px; border-radius: 2px; background: #ddd; outline: none;">
-       <span id="weightValue">400</span>
-      </div>
+   <div class="box-l justify-stretch align-center gap-l padding-l">
+    <span class="text-m">Glyphs set overview</span>
+    <div class="column align-center gap-s">
+     <input type="range" id="weightSlider" min="100" max="900" step="1" value="400" class="range-slider box-l">
+     <div class="box justify-stretch box-l black text-s no-margin" style="font-weight:400;">
+      <label for="weightSlider" data-hide-mobile>WEIGHT</label>
+      <div id="weightValue">400</div>
      </div>
     </div>
    </div>
@@ -407,7 +405,7 @@
       <div class="row gap-xs" id="symbols"></div>
      </div>
     </div>
-    <div class="box justify-center text-center padding-m" style="height: 860px; position: relative; background: #fafafa; border-radius: 6px;">
+    <div class="box justify-center text-center" style="height: 860px; position: relative; background: #fafafa; border-radius: 6px;">
      <div class="box-l background-primary typography-guide-line" style="top:8.5%;"></div>
      <div class="box-l background-primary typography-guide-line" style="top:25.5%;"></div>
      <div class="box-l background-primary typography-guide-line" style="top:38%;"></div>
