@@ -417,7 +417,7 @@
       </div>
       <div class="box text-center justify-center align-center">
           <h1 id="fc-output" contenteditable="true" spellcheck="false" class="padding-l box-l text-center no-margin"
-            style="font-size: 5rem; border:none; outline:none; font-weight:900; font-size:300px; word-wrap:break-word; overflow-wrap:break-word; color:#02903B; transition:all 0.2s ease-in-out;">
+            style="font-size: 5rem; border:none; outline:none; font-weight:900; font-size:300px; word-wrap:break-word; overflow-wrap:break-word; word-break:break-word; color:#02903B; transition:all 0.2s ease-in-out;">
             hey
           </h1>
       </div>
@@ -1011,18 +1011,16 @@
           ranges.size.addEventListener('input', e => applySize(e.target.value));
           ranges.spacing.addEventListener('input', e => applySpacing(e.target.value));
           root.querySelectorAll('[data-role="fc-btn"][data-align]').forEach(btn => btn.addEventListener('click', () => {
-            root.querySelectorAll('[data-role="fc-btn"][data-align]').forEach(b => {
-              b.removeAttribute('data-active');
-              b.style.backgroundColor = 'transparent';
-              b.style.color = '#8159FB';
-            });
+            root.querySelectorAll('[data-role="fc-btn"][data-align]').forEach(b => b.removeAttribute('data-active'));
             btn.setAttribute('data-active', 'true');
-            btn.style.backgroundColor = '#8159FB';
-            btn.style.color = '#fff';
             output.style.textAlign = btn.dataset.align;
           }));
           root.querySelectorAll('[data-role="fc-btn"][data-case]').forEach(btn =>
-            btn.addEventListener('click', () => output.style.textTransform = btn.dataset.case)
+            btn.addEventListener('click', () => {
+              const isActive = btn.hasAttribute('data-active');
+              btn.toggleAttribute('data-active');
+              output.style.textTransform = isActive ? 'none' : btn.dataset.case;
+            })
           );
           const altFeatures = new Set();
           const featureMap = { 'a': 'ss03', 'r': 'ss01', 'u': 'ss02', 'y': 'ss04', 'G': 'ss05' };
@@ -1033,13 +1031,9 @@
               if (altFeatures.has(feature)) {
                 altFeatures.delete(feature);
                 btn.removeAttribute('data-active');
-                btn.style.backgroundColor = 'transparent';
-                btn.style.color = '#8159FB';
               } else {
                 altFeatures.add(feature);
                 btn.setAttribute('data-active', 'true');
-                btn.style.backgroundColor = '#8159FB';
-                btn.style.color = '#fff';
               }
               const featureString = Array.from(altFeatures).map(f => `'${f}'`).join(', ');
               output.style.fontFeatureSettings = featureString || 'normal';
@@ -1347,10 +1341,14 @@
       border-radius: 50px;
       cursor: pointer;
       font-weight: 400;
-      transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+      transition: all 0.2s ease;
     }
 
-    .fc-btn-active {
+    .fc-btn-base:hover {
+      background-color: rgba(129, 89, 251, 0.1);
+    }
+
+    .fc-btn-base[data-active="true"] {
       background-color: #8159FB;
       color: #fff;
     }
