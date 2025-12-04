@@ -1024,15 +1024,25 @@
           root.querySelectorAll('[data-role="fc-btn"][data-case]').forEach(btn =>
             btn.addEventListener('click', () => output.style.textTransform = btn.dataset.case)
           );
+          const altFeatures = new Set();
+          const featureMap = { 'a': 'ss03', 'r': 'ss01', 'u': 'ss02', 'y': 'ss04', 'G': 'ss05' };
           root.querySelectorAll('[data-role="fc-btn"][data-alt]').forEach(btn => {
             btn.addEventListener('click', () => {
               const char = btn.dataset.alt;
-              const currentText = output.textContent;
-              if (currentText.includes(char)) {
-                output.textContent = currentText.replace(new RegExp(char, 'g'), '');
+              const feature = featureMap[char];
+              if (altFeatures.has(feature)) {
+                altFeatures.delete(feature);
+                btn.removeAttribute('data-active');
+                btn.style.backgroundColor = 'transparent';
+                btn.style.color = '#8159FB';
               } else {
-                output.textContent = currentText + char;
+                altFeatures.add(feature);
+                btn.setAttribute('data-active', 'true');
+                btn.style.backgroundColor = '#8159FB';
+                btn.style.color = '#fff';
               }
+              const featureString = Array.from(altFeatures).map(f => `'${f}'`).join(', ');
+              output.style.fontFeatureSettings = featureString || 'normal';
             });
           });
           applyWeight(ranges.weight.value);
