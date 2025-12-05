@@ -1122,6 +1122,17 @@
     });
   </script>
   <style>
+    /* Prevent horizontal scrolling on mobile */
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    * {
+      max-width: 100%;
+    }
+
     /* Browser-specific pseudo-elements that cannot be inlined */
     #fc-component-root input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
