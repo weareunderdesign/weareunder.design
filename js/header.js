@@ -145,6 +145,7 @@ function addSidebar() {
 <div id="works-wrapper" class="hidden">
 <div class="view row no-pointer" style="position: relative; z-index: 999; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png');" id="brand-sprints-section">
 <div class="sidebar column has-pointer" data-ix="sidebar" id="sidebar-work">
+  <a href="https://weareunder.design/work/atlit/" class="sidebar-project-link" id="atlit-F7410F">atlit</a>
   <a href="https://weareunder.design/work/able/" class="sidebar-project-link" id="able-E03500">able</a>
   <a href="https://weareunder.design/work/wonderful/" class="sidebar-project-link" id="wonderful-000000">wonderful</a>
   <a href="https://weareunder.design/work/handy/" class="sidebar-project-link" id="handy-846642">handy</a>
@@ -182,7 +183,6 @@ function addSidebar() {
   <a href="https://weareunder.design/work/unit/" class="sidebar-project-link" id="unit-000000">unit</a>
   <a href="https://weareunder.design/work/zigi/" class="sidebar-project-link" id="zigi-22D285">zigi</a>
   <a href="https://weareunder.design/work/zoog/" class="sidebar-project-link" id="zoog-FF7051">zoog</a>
-  <a href="https://weareunder.design/work/atlit/" class="sidebar-project-link" id="atlit-F7410F">atlit</a>
 </div>
 </div>
 </div>
