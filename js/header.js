@@ -37,6 +37,7 @@ function preloadImages() {
     "https://weareunder.design/work/zoog/0.png",
     "https://weareunder.design/work/pointfive/0.png",
     "https://weareunder.design/work/wonderful/00.png",
+    "https://weareunder.design/work/atlit/48.png",
   ];
 
   imageUrls.forEach((url) => {
@@ -181,6 +182,7 @@ function addSidebar() {
   <a href="https://weareunder.design/work/unit/" class="sidebar-project-link" id="unit-000000">unit</a>
   <a href="https://weareunder.design/work/zigi/" class="sidebar-project-link" id="zigi-22D285">zigi</a>
   <a href="https://weareunder.design/work/zoog/" class="sidebar-project-link" id="zoog-FF7051">zoog</a>
+  <a href="https://weareunder.design/work/atlit/" class="sidebar-project-link" id="atlit-F7410F">atlit</a>
 </div>
 </div>
 </div>
@@ -224,6 +226,7 @@ function addSidebar() {
 <img src="https://weareunder.design/work/unit/0.png" class="sidebar-project-image" id="unit" loading="lazy"></img>
 <img src="https://weareunder.design/work/zigi/0.svg" class="sidebar-project-image" id="zigi" loading="lazy"></img>
 <img src="https://weareunder.design/work/zoog/0.png" class="sidebar-project-image" id="zoog" loading="lazy"></img>
+<img src="https://weareunder.design/work/atlit/48.png" class="sidebar-project-image" id="atlit" loading="lazy"></img>
 </div>
     `;
 
