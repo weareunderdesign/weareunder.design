@@ -129,47 +129,31 @@ being and reflecting week (week 4)
 - community contribution
 - extended rest and recovery
 
-### seasonal
+### yearly
 
-spring (mar - may): emergence
-fresh starts, planting seeds, building momentum
+q1 / spring (jan-mar): emergence
+fresh starts, foundation setting, building momentum
 - project initiation
 - skill development
 - network building
-- energy building practices
 
-summer (jun - aug): peak expression
-deep work, expansion, peak energy
+q2 / summer (apr-jun): peak expression
+growth, expansion, high energy
 - major project execution
 - public sharing and visibility
 - high-energy collaboration
-- outdoor activities
 
-fall (sep - nov): integration
-harvesting, refining, adjusting, transitioning
+q3 / late summer (jul-sep): integration
+harvesting, refining, peak execution
 - project completion
 - knowledge documentation
 - relationship deepening
-- gratitude practices
 
-winter (dec - feb): restoration
-slowing down, reflecting, resting, visioning
-- vision boarding
-- deep rest
-- inner work
-- minimal commitments
-
-### yearly
-
-doing phase (january-september)
-- q1 (jan-mar): foundation setting
-- q2 (apr-jun): growth and expansion
-- q3 (jul-sep): peak execution
-
-being phase (october-december)
-- october: harvest and celebration
-- november: integration and reflection
-- december: vision and renewal
+q4 / fall-winter (oct-dec): restoration
+slowing down, reflecting, renewal
+- harvest and celebration
+- deep rest and inner work
+- vision and planning
 
 ### balance
 
