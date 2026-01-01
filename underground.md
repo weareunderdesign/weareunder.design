@@ -71,7 +71,9 @@ personal and mysterious - authentic visuals that intrigue before revealing. clea
 
 ## rhythm
 
-how we work together - balancing doing and being across daily, weekly, monthly, seasonal, and yearly cycles.
+how we work together - balancing doing and being across daily, monthly, and yearly cycles.
+- doing: focused execution, deep work, output-oriented
+- being: rest, exploration, learning, connection without outcomes
 
 we embrace the chaos of remote work - our partners span the globe like a digital octopus. we find our groove, respect time zones, and do our best work when we're at our best. we stay inspired and weird.
 
@@ -85,14 +87,6 @@ we embrace the chaos of remote work - our partners span the globe like a digital
 - own your milestones: assign, manage, complete
 - move forward, not sideways
 - think first, design second: never guess
-
-### modes
-
-we structure our time around two complementary modes:
-- doing: focused execution, deep work, output-oriented activities
-- being: rest, exploration, learning, connection without specific outcomes
-
-this balance prevents burnout and sustains creativity over the long term.
 
 ### daily
 
