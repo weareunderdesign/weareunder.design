@@ -41,22 +41,22 @@ we craft under's voice across all platforms through compelling narratives, desig
 
 we approach content in two ways:
 
-macro: comprehensive guides, educational series, thought leadership, podcasts, campaigns, animated videos that establish expertise
+macro: comprehensive guides, educational series, thought leadership, campaigns, animated videos that establish expertise
 micro: social posts, quick tips, behind-the-scenes, quotes, reels, clips, remixed branded visuals that maintain daily presence
 
 both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute.
 
 ### channels
 
-| channel | purpose | content type | schedule |
-| :---- | :---- | :---- | :---- |
-| [site](https://weareunder.design/) | showcases and portfolio; receives showcase content from behance | showcases: work highlights, client success stories, design innovations | updated whenever we launch new work |
-| [store](https://store.weareunder.design/) | our products and merchandise | product updates: new features, launches, announcements | updated as needed |
-| [instagram](https://instagram.com/under.design) | main hub; core channel that feeds other platforms | micro: posts, reels, stories, behind-the-scenes glimpses, quick tips | posts/reels on sunday, tuesday, wednesday; stories daily |
-| [twitter](http://twitter.com/underdesign0) | sharp cuts; repurposed from instagram or micro-thoughts | micro: daily updates, repurposed content, quick thoughts | daily updates |
-| [youtube](https://www.youtube.com/@weareunderdesign) | macro content; promoted through micro content on other channels | macro: comprehensive guides, educational series, podcasts, campaigns | published whenever ready |
-| [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap; highlights and fresh drops across platforms | curated: weekly updates, insights, stories, highlights, fresh drops | sent thursday/friday |
-| [behance](https://behance.net/weareunder) | showcases; same content as site, tailored for platform | showcases: work highlights, design innovations, portfolio pieces | published whenever ready |
+| channel | what | schedule |
+| :---- | :---- | :---- |
+| [site](https://weareunder.design/) | showcases and portfolio | when we launch work |
+| [store](https://store.weareunder.design/) | products and merchandise | as needed |
+| [instagram](https://instagram.com/under.design) | main hub - posts, reels, stories, behind-the-scenes | sun/tue/wed + daily stories |
+| [twitter](http://twitter.com/underdesign0) | sharp cuts - repurposed micro-thoughts | daily |
+| [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns | when ready |
+| [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap - highlights and fresh drops | thu/fri |
+| [behance](https://behance.net/weareunder) | showcases - mirrors site | when ready |
 
 ### guidelines
 
@@ -71,7 +71,9 @@ personal and mysterious - authentic visuals that intrigue before revealing. clea
 
 ## rhythm
 
-how we work together - balancing doing and being across daily, weekly, monthly, seasonal, and yearly cycles.
+how we work together - balancing doing and being across daily, monthly, and yearly cycles.
+- doing: focused execution, deep work, output-oriented
+- being: rest, exploration, learning, connection without outcomes
 
 we embrace the chaos of remote work - our partners span the globe like a digital octopus. we find our groove, respect time zones, and do our best work when we're at our best. we stay inspired and weird.
 
@@ -85,14 +87,6 @@ we embrace the chaos of remote work - our partners span the globe like a digital
 - own your milestones: assign, manage, complete
 - move forward, not sideways
 - think first, design second: never guess
-
-### modes
-
-we structure our time around two complementary modes:
-- doing: focused execution, deep work, output-oriented activities
-- being: rest, exploration, learning, connection without specific outcomes
-
-this balance prevents burnout and sustains creativity over the long term.
 
 ### daily
 
@@ -129,47 +123,31 @@ being and reflecting week (week 4)
 - community contribution
 - extended rest and recovery
 
-### seasonal
+### yearly
 
-spring (mar - may): emergence
-fresh starts, planting seeds, building momentum
+q1 / spring (jan-mar): emergence
+fresh starts, foundation setting, building momentum
 - project initiation
 - skill development
 - network building
-- energy building practices
 
-summer (jun - aug): peak expression
-deep work, expansion, peak energy
+q2 / summer (apr-jun): peak expression
+growth, expansion, high energy
 - major project execution
 - public sharing and visibility
 - high-energy collaboration
-- outdoor activities
 
-fall (sep - nov): integration
-harvesting, refining, adjusting, transitioning
+q3 / late summer (jul-sep): integration
+harvesting, refining, peak execution
 - project completion
 - knowledge documentation
 - relationship deepening
-- gratitude practices
 
-winter (dec - feb): restoration
-slowing down, reflecting, resting, visioning
-- vision boarding
-- deep rest
-- inner work
-- minimal commitments
-
-### yearly
-
-doing phase (january-september)
-- q1 (jan-mar): foundation setting
-- q2 (apr-jun): growth and expansion
-- q3 (jul-sep): peak execution
-
-being phase (october-december)
-- october: harvest and celebration
-- november: integration and reflection
-- december: vision and renewal
+q4 / fall-winter (oct-dec): restoration
+slowing down, reflecting, renewal
+- harvest and celebration
+- deep rest and inner work
+- vision and planning
 
 ### balance
 
