@@ -41,22 +41,22 @@ we craft under's voice across all platforms through compelling narratives, desig
 
 we approach content in two ways:
 
-macro: comprehensive guides, educational series, thought leadership, podcasts, campaigns, animated videos that establish expertise
+macro: comprehensive guides, educational series, thought leadership, campaigns, animated videos that establish expertise
 micro: social posts, quick tips, behind-the-scenes, quotes, reels, clips, remixed branded visuals that maintain daily presence
 
 both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute.
 
 ### channels
 
-| channel | purpose | content type | schedule |
-| :---- | :---- | :---- | :---- |
-| [site](https://weareunder.design/) | showcases and portfolio; receives showcase content from behance | showcases: work highlights, client success stories, design innovations | updated whenever we launch new work |
-| [store](https://store.weareunder.design/) | our products and merchandise | product updates: new features, launches, announcements | updated as needed |
-| [instagram](https://instagram.com/under.design) | main hub; core channel that feeds other platforms | micro: posts, reels, stories, behind-the-scenes glimpses, quick tips | posts/reels on sunday, tuesday, wednesday; stories daily |
-| [twitter](http://twitter.com/underdesign0) | sharp cuts; repurposed from instagram or micro-thoughts | micro: daily updates, repurposed content, quick thoughts | daily updates |
-| [youtube](https://www.youtube.com/@weareunderdesign) | macro content; promoted through micro content on other channels | macro: comprehensive guides, educational series, podcasts, campaigns | published whenever ready |
-| [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap; highlights and fresh drops across platforms | curated: weekly updates, insights, stories, highlights, fresh drops | sent thursday/friday |
-| [behance](https://behance.net/weareunder) | showcases; same content as site, tailored for platform | showcases: work highlights, design innovations, portfolio pieces | published whenever ready |
+| channel | what | schedule |
+| :---- | :---- | :---- |
+| [site](https://weareunder.design/) | showcases and portfolio | when we launch work |
+| [store](https://store.weareunder.design/) | products and merchandise | as needed |
+| [instagram](https://instagram.com/under.design) | main hub - posts, reels, stories, behind-the-scenes | sun/tue/wed + daily stories |
+| [twitter](http://twitter.com/underdesign0) | sharp cuts - repurposed micro-thoughts | daily |
+| [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns | when ready |
+| [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap - highlights and fresh drops | thu/fri |
+| [behance](https://behance.net/weareunder) | showcases - mirrors site | when ready |
 
 ### guidelines
 
