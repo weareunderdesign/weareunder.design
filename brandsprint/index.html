@@ -42,7 +42,84 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon-192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="../images/favicon-512.png" />
-    <link rel="stylesheet" href="../under.css" />
+    <link rel="stylesheet" href="https://renecss.org/rene.css" />
+    <style>
+        @font-face {
+            font-family: "Nudge";
+            src: url("./fonts/VCNudge-BoldItalic.woff2") format("woff2"),
+                url("./fonts/VCNudge-BoldItalic.woff") format("woff");
+        }
+
+        .nudge_font {
+            font-family: "Nudge", sans-serif;
+            font-size: 9rem;
+            line-height: 96%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nudge_font {
+                font-size: 4rem;
+            }
+        }
+
+        .scroll {
+            animation: scroll 25s linear infinite;
+            flex-wrap: nowrap;
+            display: flex;
+            gap: 5rem;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100vw);
+            }
+        }
+
+        .infinite-wrapper {
+            width: 100vw;
+            overflow-x: hidden;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .divider {
+            width: 1px;
+            height: 240px;
+            background-color: #000;
+            transform: rotate(10deg);
+            margin: auto 0;
+            opacity: 0.2;
+        }
+
+        @media screen and (max-width: 768px) {
+            .divider {
+                display: none;
+            }
+        }
+
+        .schedule-div p {
+            color: black;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .schedule-div {
+                text-align: center;
+                align-items: center !important;
+            }
+
+            .schedule-div .date {
+                justify-content: center !important;
+            }
+
+            .schedule-div>div,
+            .schedule-div>a {
+                margin: 0 auto;
+            }
+        }
+    </style>
     <script src="../js/pingpong.js"></script>
     <title>brand sprint | 10-day brand identity by under</title>
     <script type="application/ld+json">
