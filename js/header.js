@@ -245,10 +245,6 @@ function addSidebar() {
 
 
 
-  $(".sidebar").on("mouseover", function () {
-    // Unused mouseover handler - keeping for future use
-  });
-
   $(".sidebar").on("mouseout", function () {
     document.body.style.overflow = "auto";
   });
@@ -259,8 +255,6 @@ function addSidebar() {
     $("#under-nav").css("display", "none");
     $("#works-wrapper").css("display", "block");
     $("#body-content").css("display", "none");
-    
-    // Note: addSlider function was removed as it was not defined anywhere
   });
 
   $("#sidebar-work").on("mouseleave", function () {

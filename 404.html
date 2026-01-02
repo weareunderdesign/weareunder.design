@@ -10,7 +10,38 @@
     <link rel="icon" href="./images/favicon.svg" />
     <link rel="apple-touch-icon" href="./images/webclip.svg" />
     <link rel="stylesheet" href="https://renecss.org/rene.css" />
-    <link rel="stylesheet" href="./under.css" />
+    <style>
+        .circle {
+            cursor: pointer;
+            display: flex;
+            border-radius: 100%;
+            position: absolute;
+            z-index: 4;
+            width: 220px;
+            height: 220px;
+            color: white;
+            background-color: #EC5A29;
+            right: 50%;
+            top: 30%;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .circle {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        .fullscreen-video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
     <script src="./js/pingpong.js"></script>
     <title>404 - Page Not Found | Under Design</title>
 </head>
