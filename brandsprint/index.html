@@ -119,8 +119,28 @@
                 margin: 0 auto;
             }
         }
+
+        .nav-circle {
+            position: absolute;
+            border-radius: 100%;
+            z-index: 2;
+            height: 160px;
+            width: 160px;
+        }
+
+        .slot {
+            border-radius: 100%;
+            height: 160px;
+            width: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slot.closed {
+            border: 1px solid black;
+        }
     </style>
-    <script src="../js/pingpong.js"></script>
     <title>brand sprint | 10-day brand identity by under</title>
     <script type="application/ld+json">
     {
@@ -187,55 +207,19 @@
 
     <div class="view random-color-change column align-center" style="padding-bottom: 5vw; overflow: hidden">
         <div class="view row align-center padding-xl ping-pong" style="position: relative">
-            <a href="#what" class="column align-center text-center circle1" style="
-            position: absolute;
-            border-radius: 100%;
-            z-index: 2;
-            height: 160px;
-            width: 160px;
-            background-color: #fdc800;
-            top: 10vh;
-            left: 15vw;
-          ">
+            <a href="#what" class="column align-center text-center circle1 nav-circle" style="background-color: #fdc800; top: 10vh; left: 15vw;">
                 <h4>what</h4>
             </a>
 
-            <a href="#when" class="column align-center text-center circle2" style="
-            position: absolute;
-            border-radius: 100%;
-            z-index: 2;
-            height: 160px;
-            width: 160px;
-            background-color: #ffbfe1;
-            bottom: -20vh;
-            right: 10vw;
-          ">
+            <a href="#when" class="column align-center text-center circle2 nav-circle" style="background-color: #ffbfe1; bottom: -20vh; right: 10vw;">
                 <h4>when</h4>
             </a>
 
-            <a href="#how" class="column align-center text-center circle3" style="
-            position: absolute;
-            border-radius: 100%;
-            z-index: 2;
-            height: 160px;
-            width: 160px;
-            background-color: #014add;
-            bottom: 5vh;
-            left: 25vw;
-          ">
+            <a href="#how" class="column align-center text-center circle3 nav-circle" style="background-color: #014add; bottom: 5vh; left: 25vw;">
                 <h4>how</h4>
             </a>
 
-            <a href="#why" class="column align-center text-center circle4" style="
-            position: absolute;
-            border-radius: 100%;
-            z-index: 2;
-            height: 160px;
-            width: 160px;
-            background-color: #ff4b00;
-            top: 30vh;
-            right: 20vw;
-          ">
+            <a href="#why" class="column align-center text-center circle4 nav-circle" style="background-color: #ff4b00; top: 30vh; right: 20vw;">
                 <h4>why</h4>
             </a>
             <div class="page gap-xl" style="align-items: center">
@@ -535,73 +519,40 @@
                     <h5>december</h5>
                     <h3>12</h3>
                 </div>
-                <div style="
-              border-radius: 100%;
-              height: 160px;
-              width: 160px;
-              border: 1px solid black;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            ">
+                <div class="slot closed">
                     <p>closed</p>
                 </div>
             </div>
-            <div class="divider"
-                style="@media (max-width: 768px) {width: 80%; height: 1px; transform: none; margin: 0 auto}"></div>
+            <div class="divider"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
                 <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
                     <h5>january</h5>
                     <h3>01</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change" style="
-                border-radius: 100%;
-                height: 160px;
-                width: 160px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
+                    <div class="slot random-color-change">
                         <p>let's talk</p>
                     </div>
                 </a>
             </div>
-            <div class="divider"
-                style="@media (max-width: 768px) {width: 80%; height: 1px; transform: none; margin: 0 auto}"></div>
+            <div class="divider"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
                 <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
                     <h5>february</h5>
                     <h3>02</h3>
                 </div>
-                <div style="
-              border-radius: 100%;
-              height: 160px;
-              width: 160px;
-              border: 1px solid black;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            ">
+                <div class="slot closed">
                     <p>closed</p>
                 </div>
             </div>
-            <div class="divider"
-                style="@media (max-width: 768px) {width: 80%; height: 1px; transform: none; margin: 0 auto}"></div>
+            <div class="divider"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
                 <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
                     <h5>march</h5>
                     <h3>03</h3>
                 </div>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="random-color-change" style="
-                border-radius: 100%;
-                height: 160px;
-                width: 160px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
+                    <div class="slot random-color-change">
                         <p>let's talk</p>
                     </div>
                 </a>
