@@ -33,28 +33,18 @@ const footerTemplate = `
           </div>
         
           <div class="column align-start gap-s">
-            <a href="https://x.com/underdesign_" target="_blank">
-              <span>x</span>
-            </a>
-
             <a href="https://www.youtube.com/@weareunderdesign">
               <span>youtube</span>
             </a>
-          </div>
-
-           <div class="column align-start gap-s">
-           <a href="mailto:hello@weareunder.design">
+            <a href="mailto:hello@weareunder.design">
               <span>contact</span>
-            </a>
-            <a href="#" id="theme-toggle">
-              <span id="theme-name" class="opacity-l">system</span>
             </a>
           </div>
         </div>
          <span id="subscribeButton">newsletter</span>
    
          <div style="display:none; flex-direction:row; align-items:center;" id="subscribeForm">
-          <input type="email" id="emailInput" placeholder="subscribe" style="outline:none; border:none; max-width:20.5ch; min-width:150px;">
+          <input type="email" id="emailInput" placeholder="newsletter" style="outline:none; border:none; max-width:20.5ch; min-width:150px;">
           <span class="hidden" id="submit-newsletter">
             →
           </span>
@@ -111,8 +101,8 @@ class underFooter extends HTMLElement {
     super();
     this.ensureSvgIconLoaded().then(() => {
       this.innerHTML = footerTemplate;
-      this.initializeThemeToggle();
       this.handleSubscribe();
+      updateThemeElementsVisibility();
     });
   }
 
@@ -129,22 +119,6 @@ class underFooter extends HTMLElement {
     return Promise.resolve();
   }
 
-  initializeThemeToggle() {
-    const themeToggle = this.querySelector('#theme-toggle');
-    const themeName = this.querySelector('#theme-name');
-
-    if (themeToggle && themeName) {
-      const storedTheme = localStorage.getItem("theme");
-      themeName.textContent = storedTheme || "system";
-
-      themeToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        toggleTheme();
-      });
-    }
-
-    updateThemeElementsVisibility();
-  }
   handleSubscribe() {
 
     const subscribeButton = document.getElementById('subscribeButton');
@@ -207,37 +181,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const themeName = document.querySelector("#theme-name");
-  if (themeName) {
-    const storedTheme = localStorage.getItem("theme");
-    themeName.textContent = storedTheme || "system";
-  }
-});
-
-function toggleTheme() {
-  const themeName = document.querySelector("#theme-name");
-  if (!themeName) return;
-
-  switch (themeName.textContent) {
-    case "system":
-      document.documentElement.setAttribute("data-theme", "light");
-      themeName.textContent = "light";
-      localStorage.setItem("theme", "light");
-      break;
-    case "light":
-      document.documentElement.setAttribute("data-theme", "dark");
-      themeName.textContent = "dark";
-      localStorage.setItem("theme", "dark");
-      break;
-    case "dark":
-      localStorage.removeItem("theme");
-      themeName.textContent = "system";
-      setSystemTheme();
-      break;
-  }
-  updateThemeElementsVisibility();
-}
 
 function switchFavicon(theme) {
   const link = document.querySelector("link[rel*='icon']");

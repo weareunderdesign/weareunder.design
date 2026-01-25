@@ -63,19 +63,10 @@
         }
 
         .scroll {
-            animation: scroll 25s linear infinite;
             flex-wrap: nowrap;
             display: flex;
             gap: 5rem;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100vw);
-            }
+            width: max-content;
         }
 
         .infinite-wrapper {
@@ -138,6 +129,18 @@
 
         .slot.closed {
             border: 1px solid black;
+        }
+
+        .quote {
+            min-width: 400px;
+            max-width: 400px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .quote {
+                min-width: 280px;
+                max-width: 280px;
+            }
         }
     </style>
     <title>brand sprint | 10-day brand identity by under</title>
@@ -361,6 +364,56 @@
         </div>
     </div>
     <div class="padding-xl"></div>
+    <div class="column align-center gap-xl text-center">
+        <div class="infinite-wrapper">
+            <div class="scroll align-center">
+                <div class="quote">
+                    <h4>the brand sprint as a process is the right one for all startups.</h4>
+                    <p>yoav oren, ceo, zoog</p>
+                </div>
+                <div class="quote">
+                    <h4>working w/ under is one of those rare cases where trade-offs are almost non-existent.</h4>
+                    <p>yishay harel, ceo, dymension</p>
+                </div>
+                <div class="quote">
+                    <h4>
+                        you are soul players who understand the market needs - efficiency, creativity, and know-how
+                        to smile.
+                    </h4>
+                    <p>bar geron, ceo, balance</p>
+                </div>
+                <div class="quote">
+                    <h4>
+                        you would never be able to tell that this high-quality brand work was done in a single
+                        10-day sprint.
+                    </h4>
+                    <p>noga sapir, ceo, reflect innovation</p>
+                </div>
+                <div class="quote">
+                    <h4>
+                        i was chasing inbal & eden for a couple of months using every trick in the book, and it paid
+                        off big time.
+                    </h4>
+                    <p>maayan patito, head of marketing, raftt</p>
+                </div>
+                <div class="quote">
+                    <h4>
+                        we loved the productive mindset, out-of-the-box thinking, creativity with openness to
+                        feedback, and speedy iterations.
+                    </h4>
+                    <p>roee bark, ceo, upword</p>
+                </div>
+                <div class="quote">
+                    <h4>
+                        you perfectly captured the 'glilot dna'! bold, high-conviction, and entirely focused on the
+                        momentum of our founders.
+                    </h4>
+                    <p>glilot capital</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="padding-xl"></div>
     <div class="view column align-center gap-xl">
         <div class="page gap-xl column" style="align-items: center">
             <div id="how" class="nudge_font text-center box-m">10-day plan</div>
@@ -573,18 +626,32 @@
     <script src="../js/slider.js"></script>
 
     <script>
-        // Hover video functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Seamless infinite scroll
+            document.querySelectorAll('.scroll').forEach(scroll => {
+                scroll.innerHTML += scroll.innerHTML;
+                let position = 0;
+                const speed = 0.5;
+
+                function animate() {
+                    position += speed;
+                    if (position >= scroll.scrollWidth / 2) {
+                        position = 0;
+                    }
+                    scroll.style.transform = `translateX(-${position}px)`;
+                    requestAnimationFrame(animate);
+                }
+                animate();
+            });
+
+            // Hover video functionality
             const hoverContainers = document.querySelectorAll('.hover-video-container');
-            
             hoverContainers.forEach(container => {
                 const hoverVideo = container.querySelector('.hover-video');
-                
                 container.addEventListener('mouseenter', function() {
                     hoverVideo.loop = true;
                     hoverVideo.play();
                 });
-                
                 container.addEventListener('mouseleave', function() {
                     hoverVideo.pause();
                     hoverVideo.currentTime = 0;
