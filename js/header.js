@@ -95,6 +95,19 @@ function addSidebar() {
       height: auto;
     }
 
+    .logo-mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .logo-full {
+        display: none;
+      }
+      .logo-mobile {
+        display: block;
+      }
+    }
+
     #under-nav {
       display: flex;
       flex-direction: row;
@@ -117,7 +130,8 @@ function addSidebar() {
 
 <div style="display: flex; position: fixed; z-index: 998; mix-blend-mode: difference; justify-content: space-between; width: 100%; align-items: start;" class="padding-xl no-pointer">
       <a href="https://weareunder.design/" class="has-pointer">
-        <img src="https://weareunder.design/images/header/under.svg">
+        <img src="https://weareunder.design/images/header/under.svg" class="logo-full">
+        <img src="/images/header/under-mobile.svg" class="logo-mobile">
       </a>
 
 

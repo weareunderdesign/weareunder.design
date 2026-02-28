@@ -58,7 +58,11 @@
 
         @media screen and (max-width: 768px) {
             .nudge_font {
-                font-size: 4rem;
+                font-size: 3.2rem;
+            }
+
+            .nav-circle {
+                display: none !important;
             }
         }
 
@@ -94,21 +98,6 @@
             text-align: center;
         }
 
-        @media screen and (max-width: 768px) {
-            .schedule-div {
-                text-align: center;
-                align-items: center !important;
-            }
-
-            .schedule-div .date {
-                justify-content: center !important;
-            }
-
-            .schedule-div>div,
-            .schedule-div>a {
-                margin: 0 auto;
-            }
-        }
 
         .nav-circle {
             position: absolute;
@@ -141,6 +130,16 @@
                 min-width: 280px;
                 max-width: 280px;
             }
+        }
+
+        .project-image {
+            object-fit: cover;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .accordion-header {
+            margin: 0;
         }
     </style>
     <title>brand sprint | 10-day brand identity by under</title>
@@ -232,9 +231,8 @@
     </div>
 
     <div class="view column align-center gap-xl" id="why">
-        <div class="page gap-xl">
+        <div class="page">
 
-            <div class="page gap-xl">
 
                 <h1 class="nudge_font text-center">
                     stand out better & faster
@@ -245,7 +243,6 @@
                         most brands get lost in the noise. most branding takes too long. we fix
                         both. 10 days. one team.
                     </h3>
-                </div>
             </div>
             <div class="column justify-stretch gap-l">
                 <div class="row gap-m" style="flex-wrap: nowrap">
@@ -282,7 +279,7 @@
 
     <div class="view column align-center gap-xl">
         <div class="page gap-xl column" style="align-items: center">
-            <div id="what" class="nudge_font text-center gap-xl align-center">
+            <div id="what" class="nudge_font text-center align-center">
                 <div>what you get</div>
             </div>
 
@@ -418,7 +415,7 @@
         <div class="page gap-xl column" style="align-items: center">
             <div id="how" class="nudge_font text-center box-m">10-day plan</div>
             <h3 class="box-m text-center">
-                it's all about starting big, then getting more and more focused until you
+                it's all about starting with a big story, then getting more and more focused until you
                 create a brand that sticks
             </h3>
         </div>
@@ -463,7 +460,7 @@
                 <div class="orange_background row justify-stretch accordion-section"
                     style="flex-wrap: nowrap; background-color: #ff8200">
                     <div class="padding-l column" style="writing-mode: vertical-lr; align-content: flex-end">
-                        <h4 class="accordion-header">day 1 research</h4>
+                        <h4 class="accordion-header">day 1 story</h4>
                         <div class="box-l"></div>
                     </div>
                     <div class="column justify-stretch align-end accordion-content gap-l">
@@ -560,17 +557,21 @@
     </div>
 
     <div class="view column padding-xl align-center gap-xl">
-        <div class="page gap-xl column" style="align-items: center">
+        <div class="column" style="align-items: center">
             <div id="when" class="nudge_font box-m text-center">if you know, you know</div>
-            <h3 class="box-m text-center">one champion. full conviction, fast decisions. only 7 spots a year. $100k.</h3>
+            <h3 class="box-m text-center">one champion. full conviction, fast decisions. <br> only 7 spots a year. $100k.</h3>
         </div>
 
         <div class="row gap-xl box-l" style="flex-wrap: wrap; justify-content: center">
             <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
-                    <h5>march</h5>
-                    <h3>03</h3>
+                <h5>march</h5>
+                <div class="slot closed">
+                    <p>running</p>
                 </div>
+            </div>
+            <div class="divider"></div>
+            <div class="column box padding-xl align-center gap-xl schedule-div">
+                <h5>april</h5>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
                     <div class="slot random-color-change">
                         <p>let's talk</p>
@@ -579,10 +580,7 @@
             </div>
             <div class="divider"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
-                    <h5>april</h5>
-                    <h3>04</h3>
-                </div>
+                <h5>may</h5>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
                     <div class="slot random-color-change">
                         <p>let's talk</p>
@@ -591,22 +589,7 @@
             </div>
             <div class="divider"></div>
             <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
-                    <h5>may</h5>
-                    <h3>05</h3>
-                </div>
-                <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-                    <div class="slot random-color-change">
-                        <p>let's talk</p>
-                    </div>
-                </a>
-            </div>
-            <div class="divider"></div>
-            <div class="column box padding-xl align-center gap-xl schedule-div">
-                <div class="date row justify-stretch" style="flex-wrap: nowrap; width: 100%">
-                    <h5>june</h5>
-                    <h3>06</h3>
-                </div>
+                <h5>june</h5>
                 <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
                     <div class="slot random-color-change">
                         <p>let's talk</p>
@@ -628,15 +611,23 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Seamless infinite scroll
-            document.querySelectorAll('.scroll').forEach(scroll => {
+            document.querySelectorAll('.scroll').forEach((scroll, index) => {
                 scroll.innerHTML += scroll.innerHTML;
-                let position = 0;
                 const speed = 0.5;
+                const reverse = index === 1;
+                let position = reverse ? scroll.scrollWidth / 2 : 0;
 
                 function animate() {
-                    position += speed;
-                    if (position >= scroll.scrollWidth / 2) {
-                        position = 0;
+                    if (reverse) {
+                        position -= speed;
+                        if (position <= 0) {
+                            position = scroll.scrollWidth / 2;
+                        }
+                    } else {
+                        position += speed;
+                        if (position >= scroll.scrollWidth / 2) {
+                            position = 0;
+                        }
                     }
                     scroll.style.transform = `translateX(-${position}px)`;
                     requestAnimationFrame(animate);
