@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-54NVWMCH');</script>
+  <script defer data-domain="weareunder.design" src="https://plausible.io/js/plausible.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="under store">
+  <meta property="og:title" content="under | store">
+  <meta property="og:description" content="under store">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="stylesheet" href="https://renecss.org/rene.css" />
+  <style>
+    under-store {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--xl);
+    }
+
+    .product-card img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    .buy-btn {
+      border: 1px solid currentColor;
+      background: none;
+      color: inherit;
+      padding: var(--xs) var(--m);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      width: fit-content;
+    }
+
+    .buy-btn:hover {
+      background: currentColor;
+    }
+
+    .buy-btn:hover {
+      color: var(--background);
+      background: var(--foreground);
+    }
+  </style>
+  <title>store | under</title>
+</head>
+
+<body data-theme="light">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../js/header.js"></script>
+  <under-navigation></under-navigation>
+
+  <div class="padding-xl" style="padding-top: 120px;">
+    <h1 class="text-xl" style="margin-bottom: var(--xl);">store</h1>
+    <under-store></under-store>
+  </div>
+
+  <script src="../js/shop.js"></script>
+  <script src="../js/footer.js"></script>
+  <under-footer></under-footer>
+</body>
+
+</html>
