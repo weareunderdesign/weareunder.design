@@ -13,8 +13,8 @@ const footerTemplate = `
 <footer class="padding-xl box-l">
   <div class="gap-s row align-start box-l">
     <div class="gap-xl row align-start box-l">
-      <a class="footer-logo" href="https://weareunder.design/">
-        <svg-icon src="https://weareunder.design/images/outlinefooter.svg"></svg-icon>
+      <a class="footer-logo" href="/">
+        <svg-icon src="/images/outlinefooter.svg"></svg-icon>
       </a>
       <span class="box" style="align-self:flex-end;">
         high-quality, well-designed,<br>
