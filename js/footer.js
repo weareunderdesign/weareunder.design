@@ -158,12 +158,33 @@ class underFooter extends HTMLElement {
 
       // Add event listener for submit button
       const submitButton = document.getElementById('submit-newsletter');
-      submitButton.addEventListener('click', () => {
-        e.target.style.display = 'block';
-        subscribeForm.style.display = 'none';
-        e.target.innerHTML = 'thanks for subscribing!';
-        e.target.style.pointerEvents = 'none';
-        window.open('https://store.weareunder.design/pages/newsletter?email=' + emailInput.value);
+      submitButton.addEventListener('click', async () => {
+        const email = emailInput.value;
+        try {
+          const res = await fetch('https://under-design-shop.myshopify.com/api/2024-01/graphql.json', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': 'b6401a2b2ce8bef08562615388c7d7af' },
+            body: JSON.stringify({ query: `mutation { customerCreate(input: { email: "${email}", acceptsMarketing: true }) { customer { id } customerUserErrors { message } } }` })
+          });
+          const { data } = await res.json();
+          const errors = data?.customerCreate?.customerUserErrors;
+          if (errors?.length && !errors.some(e => e.message.includes('has already been taken'))) {
+            e.target.style.display = 'block';
+            subscribeForm.style.display = 'none';
+            e.target.innerHTML = 'something went wrong, try again';
+            e.target.style.pointerEvents = 'auto';
+          } else {
+            e.target.style.display = 'block';
+            subscribeForm.style.display = 'none';
+            e.target.innerHTML = 'thanks for subscribing!';
+            e.target.style.pointerEvents = 'none';
+          }
+        } catch {
+          e.target.style.display = 'block';
+          subscribeForm.style.display = 'none';
+          e.target.innerHTML = 'something went wrong, try again';
+          e.target.style.pointerEvents = 'auto';
+        }
       });
     });
   }

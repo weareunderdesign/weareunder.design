@@ -552,3 +552,18 @@ async function SideBarFunctionality() {
 SideBarFunctionality();
 
 addSidebar();
+
+// Show cart count on all pages
+(function() {
+  const cartId = localStorage.getItem('cart');
+  if (!cartId) return;
+  fetch('https://under-design-shop.myshopify.com/api/2024-01/graphql.json', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': 'b6401a2b2ce8bef08562615388c7d7af' },
+    body: JSON.stringify({ query: `{ cart(id:"${cartId}") { totalQuantity } }` })
+  }).then(r => r.json()).then(d => {
+    const qty = d.data?.cart?.totalQuantity;
+    const b = document.getElementById('cart-count');
+    if (b && qty) { b.textContent = qty; b.style.display = 'flex'; }
+  }).catch(() => {});
+})();
