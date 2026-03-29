@@ -143,8 +143,8 @@ function addSidebar() {
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="https://weareunder.design/store/" data-page="store">
-<div class="column align-center gap-xs">
-<img src="https://weareunder.design/images/header/store.svg">
+<div class="column align-center gap-xs" style="position:relative">
+<span style="position:relative"><img src="https://weareunder.design/images/header/store.svg"><span id="cart-count" class="text-l" style="position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:white;mix-blend-mode:difference;padding-top:16px"></span></span>
 <span class="text-m" style="text-decoration: none; display: none; color: white;">store</span> 
 </div>
 </a>

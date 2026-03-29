@@ -42,7 +42,7 @@ function sync(c) {
   localStorage.setItem('cart', c.id);
   renderCart(c);
   const b = document.getElementById('cart-count');
-  if (b) { b.textContent = c.totalQuantity || ''; b.style.display = c.totalQuantity ? 'inline' : 'none'; }
+  if (b) { b.textContent = c.totalQuantity || ''; b.style.display = c.totalQuantity ? 'flex' : 'none'; }
 }
 
 // Cart UI
