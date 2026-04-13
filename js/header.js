@@ -1,45 +1,46 @@
 function preloadImages() {
   const imageUrls = [
-    "https://weareunder.design/work/glilotcapital/12.png",
-    "https://weareunder.design/work/able/03.png",
-    "https://weareunder.design/work/handy/00.png",
-    "https://weareunder.design/work/chargeflow/00.png",
-    "https://weareunder.design/work/aim/0.png",
-    "https://weareunder.design/work/artac/0.png",
-    "https://weareunder.design/work/bounce/0.png",
-    "https://weareunder.design/work/rnbw/1.png",
-    "https://weareunder.design/work/spacetop/0.png",
-    "https://weareunder.design/work/blockaid/0.png",
-    "https://weareunder.design/work/soli/19.png",
-    "https://weareunder.design/work/justripe/09.png",
-    "https://weareunder.design/work/utila/0.png",
-    "https://weareunder.design/work/balance/0.png",
-    "https://weareunder.design/work/visioncamp/6.png",
-    "https://weareunder.design/work/dymension/0.png",
-    "https://weareunder.design/work/finaloop/0.png",
-    "https://weareunder.design/work/groundcover/0.png",
-    "https://weareunder.design/work/nilus/0.png",
-    "https://weareunder.design/work/raftt/0.png",
-    "https://weareunder.design/work/togetherr/0.png",
-    "https://weareunder.design/work/upword/0.png",
-    "https://weareunder.design/work/everafter/0.png",
-    "https://weareunder.design/work/faintlines/0.png",
-    "https://weareunder.design/work/grain/0.png",
-    "https://weareunder.design/work/healthquarters/0.png",
-    "https://weareunder.design/work/karma/0.png",
-    "https://weareunder.design/work/mesh_payments/0.svg",
-    "https://weareunder.design/work/notch/0.png",
-    "https://weareunder.design/work/perdiem/0.png",
-    "https://weareunder.design/work/reeco/0.png",
-    "https://weareunder.design/work/reflect/0.png",
-    "https://weareunder.design/work/revelations/0.png",
-    "https://weareunder.design/work/unit/0.png",
-    "https://weareunder.design/work/zigi/0.svg",
-    "https://weareunder.design/work/zoog/0.png",
-    "https://weareunder.design/work/pointfive/0.png",
-    "https://weareunder.design/work/wonderful/00.png",
-    "https://weareunder.design/work/atlit/48.png",
-    "https://weareunder.design/work/bridge/17.png",
+    "/work/moonshot/104.png",
+    "/work/glilotcapital/12.png",
+    "/work/able/03.png",
+    "/work/handy/00.png",
+    "/work/chargeflow/00.png",
+    "/work/aim/0.png",
+    "/work/artac/0.png",
+    "/work/bounce/0.png",
+    "/work/rnbw/1.png",
+    "/work/spacetop/0.png",
+    "/work/blockaid/0.png",
+    "/work/soli/19.png",
+    "/work/justripe/09.png",
+    "/work/utila/0.png",
+    "/work/balance/0.png",
+    "/work/visioncamp/6.png",
+    "/work/dymension/0.png",
+    "/work/finaloop/0.png",
+    "/work/groundcover/0.png",
+    "/work/nilus/0.png",
+    "/work/raftt/0.png",
+    "/work/togetherr/0.png",
+    "/work/upword/0.png",
+    "/work/everafter/0.png",
+    "/work/faintlines/0.png",
+    "/work/grain/0.png",
+    "/work/healthquarters/0.png",
+    "/work/karma/0.png",
+    "/work/mesh_payments/0.svg",
+    "/work/notch/0.png",
+    "/work/perdiem/0.png",
+    "/work/reeco/0.png",
+    "/work/reflect/0.png",
+    "/work/revelations/0.png",
+    "/work/unit/0.png",
+    "/work/zigi/0.svg",
+    "/work/zoog/0.png",
+    "/work/pointfive/0.png",
+    "/work/wonderful/00.png",
+    "/work/atlit/48.png",
+    "/work/bridge/17.png",
   ];
 
   imageUrls.forEach((url) => {
@@ -129,28 +130,28 @@ function addSidebar() {
   </style>
 
 <div style="display: flex; position: fixed; z-index: 998; mix-blend-mode: difference; justify-content: space-between; width: 100%; align-items: start;" class="padding-xl no-pointer">
-      <a href="https://weareunder.design/" class="has-pointer">
-        <img src="https://weareunder.design/images/header/under.svg" class="logo-full">
+      <a href="/" class="has-pointer">
+        <img src="/images/header/under.svg" class="logo-full">
         <img src="/images/header/under-mobile.svg" class="logo-mobile">
       </a>
 
 
   <div id="under-nav" class="has-pointer">
-<a class="header-link" href="https://weareunder.design/brandsprint/" data-page="brandsprint">
+<a class="header-link" href="/brandsprint/" data-page="brandsprint">
 <div class="column align-center gap-xs">
-<img src="https://weareunder.design/images/header/brandsprint.svg">
+<img src="/images/header/brandsprint.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
-<a class="header-link" style="cursor: pointer" href="https://store.weareunder.design" data-page="store">
-<div class="column align-center gap-xs">
-<img src="https://weareunder.design/images/header/store.svg">
-<span class="text-m" style="text-decoration: none; display: none; color: white;">store</span> 
+<a class="header-link" style="cursor: pointer" href="/store/" data-page="store">
+<div class="column align-center gap-xs" style="position:relative">
+<span style="position:relative"><img src="/images/header/store.svg"><span id="cart-count" class="text-l" style="position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:white;mix-blend-mode:difference;padding-top:16px;text-decoration:none"></span></span>
+<span class="text-m" style="text-decoration: none; display: none; color: white;">store</span>
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" id="nav-work" data-page="design">
 <div class="column align-center gap-xs">
-<img src="https://weareunder.design/images/header/design.svg">
+<img src="/images/header/design.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">design</span>
 </div>
 </a>
@@ -161,92 +162,94 @@ function addSidebar() {
 <div id="works-wrapper" class="hidden">
 <div class="view row no-pointer" style="position: relative; z-index: 999; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png');" id="brand-sprints-section">
 <div class="sidebar column has-pointer" data-ix="sidebar" id="sidebar-work">
-  <a href="https://weareunder.design/work/bridge/" class="sidebar-project-link" id="bridge-000000">bridge</a>
-  <a href="https://weareunder.design/work/glilotcapital/" class="sidebar-project-link" id="glilotcapital-1B0CDB">glilot capital</a>
-  <a href="https://weareunder.design/work/atlit/" class="sidebar-project-link" id="atlit-F7410F">atlit</a>
-  <a href="https://weareunder.design/work/able/" class="sidebar-project-link" id="able-E03500">able</a>
-  <a href="https://weareunder.design/work/wonderful/" class="sidebar-project-link" id="wonderful-000000">wonderful</a>
-  <a href="https://weareunder.design/work/handy/" class="sidebar-project-link" id="handy-846642">handy</a>
-  <a href="https://weareunder.design/work/nilus/" class="sidebar-project-link" id="nilus-db160d">nilus</a>
-  <a href="https://weareunder.design/work/utila/" class="sidebar-project-link" id="utila-00794E">utila</a>
-  <a href="https://weareunder.design/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
-  <a href="https://weareunder.design/work/blockaid/" class="sidebar-project-link" id="blockaid-FF4500">blockaid</a>
-  <a href="https://weareunder.design/work/visioncamp/" class="sidebar-project-link" id="visioncamp-0700FD">visioncamp</a>
-  <a href="https://weareunder.design/work/balance/" class="sidebar-project-link" id="balance-1d1d1d">balance</a>
-  <a href="https://weareunder.design/work/finaloop/" class="sidebar-project-link" id="finaloop-FF0000">finaloop</a>
-  <a href="https://weareunder.design/work/dymension/" class="sidebar-project-link" id="dymension-24201F">dymension</a>
-  <a href="https://weareunder.design/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>
-  <a href="https://weareunder.design/work/rnbw/" class="sidebar-project-link" id="rnbw-000000">rnbw</a>
-  <a href="https://weareunder.design/work/bounce/" class="sidebar-project-link" id="bounce-03542C">bounce</a>
-  <a href="https://weareunder.design/work/soli/" class="sidebar-project-link" id="soli-FF8A00">soli</a>
-  <a href="https://weareunder.design/work/togetherr/" class="sidebar-project-link" id="togetherr-000000">togetherr</a>
-  <a href="https://weareunder.design/work/groundcover/" class="sidebar-project-link" id="groundcover-1BB485">groundcover</a>
-  <a href="https://weareunder.design/work/raftt/" class="sidebar-project-link" id="raftt-0C6BEA">raftt</a>
-  <a href="https://weareunder.design/work/justripe/" class="sidebar-project-link" id="justripe-221C35">justripe</a>
-  <a href="https://weareunder.design/work/everafter/" class="sidebar-project-link" id="everafter-FF7051">everafter</a>
-  <a href="https://weareunder.design/work/faintlines/" class="sidebar-project-link" id="faintlines-FF0DBD">faintlines</a>
-  <a href="https://weareunder.design/work/grain/" class="sidebar-project-link" id="grain-FED164">grain</a>
-  <a href="https://weareunder.design/work/healthquarters/" class="sidebar-project-link" id="healthquarters-0E305A">healthquarters</a>
-  <a href="https://weareunder.design/work/chargeflow/" class="sidebar-project-link" id="chargeflow-0B41FC">chargeflow</a>
-  <a href="https://weareunder.design/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
-  <a href="https://weareunder.design/work/artac/" class="sidebar-project-link" id="artac-808080">artac</a>
-  <a href="https://weareunder.design/work/karma/" class="sidebar-project-link" id="karma-FCAC8B">karma</a>
-  <a href="https://weareunder.design/work/mesh_payments/" class="sidebar-project-link" id="mesh_payments-19F08B">mesh payments</a>
-  <a href="https://weareunder.design/work/notch/" class="sidebar-project-link" id="notch-CF6AFF">notch</a>
-  <a href="https://weareunder.design/work/perdiem/" class="sidebar-project-link" id="perdiem-0171EA">perdiem</a>
-  <a href="https://weareunder.design/work/reeco/" class="sidebar-project-link" id="reeco-0FCB71">reeco</a>
-  <a href="https://weareunder.design/work/reflect/" class="sidebar-project-link" id="reflect-D1A8FD">reflect</a>
-  <a href="https://weareunder.design/work/revelations/" class="sidebar-project-link" id="revelations-000000">revelations</a>
-  <a href="https://weareunder.design/work/upword/" class="sidebar-project-link" id="upword-B8A4FD">upword</a>
-  <a href="https://weareunder.design/work/unit/" class="sidebar-project-link" id="unit-000000">unit</a>
-  <a href="https://weareunder.design/work/zigi/" class="sidebar-project-link" id="zigi-22D285">zigi</a>
-  <a href="https://weareunder.design/work/zoog/" class="sidebar-project-link" id="zoog-FF7051">zoog</a>
+  <a href="/work/moonshot/" class="sidebar-project-link" id="moonshot-000000">moonshot</a>
+  <a href="/work/bridge/" class="sidebar-project-link" id="bridge-008129">bridge</a>
+  <a href="/work/glilotcapital/" class="sidebar-project-link" id="glilotcapital-1B0CDB">glilot capital</a>
+  <a href="/work/atlit/" class="sidebar-project-link" id="atlit-F7410F">atlit</a>
+  <a href="/work/able/" class="sidebar-project-link" id="able-E03500">able</a>
+  <a href="/work/wonderful/" class="sidebar-project-link" id="wonderful-000000">wonderful</a>
+  <a href="/work/handy/" class="sidebar-project-link" id="handy-846642">handy</a>
+  <a href="/work/nilus/" class="sidebar-project-link" id="nilus-db160d">nilus</a>
+  <a href="/work/utila/" class="sidebar-project-link" id="utila-00794E">utila</a>
+  <a href="/work/spacetop/" class="sidebar-project-link" id="spacetop-1E1E1E">spacetop</a>
+  <a href="/work/blockaid/" class="sidebar-project-link" id="blockaid-FF4500">blockaid</a>
+  <a href="/work/visioncamp/" class="sidebar-project-link" id="visioncamp-0700FD">visioncamp</a>
+  <a href="/work/balance/" class="sidebar-project-link" id="balance-1d1d1d">balance</a>
+  <a href="/work/finaloop/" class="sidebar-project-link" id="finaloop-FF0000">finaloop</a>
+  <a href="/work/dymension/" class="sidebar-project-link" id="dymension-24201F">dymension</a>
+  <a href="/work/pointfive/" class="sidebar-project-link" id="pointfive-0216C9">pointfive</a>
+  <a href="/work/rnbw/" class="sidebar-project-link" id="rnbw-000000">rnbw</a>
+  <a href="/work/bounce/" class="sidebar-project-link" id="bounce-03542C">bounce</a>
+  <a href="/work/soli/" class="sidebar-project-link" id="soli-FF8A00">soli</a>
+  <a href="/work/togetherr/" class="sidebar-project-link" id="togetherr-000000">togetherr</a>
+  <a href="/work/groundcover/" class="sidebar-project-link" id="groundcover-1BB485">groundcover</a>
+  <a href="/work/raftt/" class="sidebar-project-link" id="raftt-0C6BEA">raftt</a>
+  <a href="/work/justripe/" class="sidebar-project-link" id="justripe-221C35">justripe</a>
+  <a href="/work/everafter/" class="sidebar-project-link" id="everafter-FF7051">everafter</a>
+  <a href="/work/faintlines/" class="sidebar-project-link" id="faintlines-FF0DBD">faintlines</a>
+  <a href="/work/grain/" class="sidebar-project-link" id="grain-FED164">grain</a>
+  <a href="/work/healthquarters/" class="sidebar-project-link" id="healthquarters-0E305A">healthquarters</a>
+  <a href="/work/chargeflow/" class="sidebar-project-link" id="chargeflow-0B41FC">chargeflow</a>
+  <a href="/work/aim/" class="sidebar-project-link" id="aim-008000">aim</a>
+  <a href="/work/artac/" class="sidebar-project-link" id="artac-808080">artac</a>
+  <a href="/work/karma/" class="sidebar-project-link" id="karma-FCAC8B">karma</a>
+  <a href="/work/mesh_payments/" class="sidebar-project-link" id="mesh_payments-19F08B">mesh payments</a>
+  <a href="/work/notch/" class="sidebar-project-link" id="notch-CF6AFF">notch</a>
+  <a href="/work/perdiem/" class="sidebar-project-link" id="perdiem-0171EA">perdiem</a>
+  <a href="/work/reeco/" class="sidebar-project-link" id="reeco-0FCB71">reeco</a>
+  <a href="/work/reflect/" class="sidebar-project-link" id="reflect-D1A8FD">reflect</a>
+  <a href="/work/revelations/" class="sidebar-project-link" id="revelations-000000">revelations</a>
+  <a href="/work/upword/" class="sidebar-project-link" id="upword-B8A4FD">upword</a>
+  <a href="/work/unit/" class="sidebar-project-link" id="unit-000000">unit</a>
+  <a href="/work/zigi/" class="sidebar-project-link" id="zigi-22D285">zigi</a>
+  <a href="/work/zoog/" class="sidebar-project-link" id="zoog-FF7051">zoog</a>
 </div>
 </div>
 </div>
 
 <div id="main-content">
 <div class="projects">
-<img src="https://weareunder.design/work/bridge/17.png" class="sidebar-project-image" id="bridge" loading="lazy"></img>
-<img src="https://weareunder.design/work/glilotcapital/12.png" class="sidebar-project-image" id="glilotcapital" loading="lazy"></img>
-<img src="https://weareunder.design/work/able/07.png" class="sidebar-project-image box-l" id="able" loading="lazy"></img>
-<img src="https://weareunder.design/work/handy/00.png" class="sidebar-project-image box-l" id="handy" loading="lazy"></img>
-<img src="https://weareunder.design/work/nilus/0.png" class="sidebar-project-image" id="nilus" loading="lazy"></img>
-<img src="https://weareunder.design/work/wonderful/00.png" class="sidebar-project-image" id="wonderful" loading="lazy"></img>
-<img src="https://weareunder.design/work/utila/0.png" class="sidebar-project-image box-l" id="utila" loading="lazy"></img>
-<img src="https://weareunder.design/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
-<img src="https://weareunder.design/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
-<img src="https://weareunder.design/work/visioncamp/6.png" class="sidebar-project-image box-l" id="visioncamp" loading="lazy"></img>
-<img src="https://weareunder.design/work/balance/0.png" class="sidebar-project-image box-l" id="balance" loading="lazy"></img>
-<img src="https://weareunder.design/work/finaloop/0.png" class="sidebar-project-image" id="finaloop" loading="lazy"></img>
-<img src="https://weareunder.design/work/dymension/0.png" class="sidebar-project-image" id="dymension" loading="lazy"></img>
-<img src="https://weareunder.design/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
-<img src="https://weareunder.design/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
-<img src="https://weareunder.design/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
-<img src="https://weareunder.design/work/soli/19.png" class="sidebar-project-image box-l" id="soli" loading="lazy"></img>
-<img src="https://weareunder.design/work/togetherr/0.png" class="sidebar-project-image" id="togetherr" loading="lazy"></img>
-<img src="https://weareunder.design/work/groundcover/0.png" class="sidebar-project-image" id="groundcover" loading="lazy"></img>
-<img src="https://weareunder.design/work/raftt/0.png" class="sidebar-project-image" id="raftt" loading="lazy"></img>
-<img src="https://weareunder.design/work/justripe/09.png" class="sidebar-project-image box-l" id="justripe" loading="lazy"></img>
-<img src="https://weareunder.design/work/everafter/0.png" class="sidebar-project-image" id="everafter" loading="lazy"></img>
-<img src="https://weareunder.design/work/faintlines/0.png" class="sidebar-project-image" id="faintlines" loading="lazy"></img>
-<img src="https://weareunder.design/work/grain/0.png" class="sidebar-project-image" id="grain" loading="lazy"></img>
-<img src="https://weareunder.design/work/healthquarters/0.png" class="sidebar-project-image" id="healthquarters" loading="lazy"></img>
-<img src="https://weareunder.design/work/chargeflow/00.png" class="sidebar-project-image" id="chargeflow" loading="lazy"></img>
-<img src="https://weareunder.design/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
-<img src="https://weareunder.design/work/artac/0.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
-<img src="https://weareunder.design/work/karma/0.png" class="sidebar-project-image" id="karma" loading="lazy"></img>
-<img src="https://weareunder.design/work/mesh_payments/0.svg" class="sidebar-project-image" id="mesh_payments" loading="lazy"></img>
-<img src="https://weareunder.design/work/notch/0.png" class="sidebar-project-image" id="notch" loading="lazy"></img>
-<img src="https://weareunder.design/work/perdiem/0.png" class="sidebar-project-image" id="perdiem" loading="lazy"></img>
-<img src="https://weareunder.design/work/reeco/0.png" class="sidebar-project-image" id="reeco" loading="lazy"></img>
-<img src="https://weareunder.design/work/reflect/0.png" class="sidebar-project-image" id="reflect" loading="lazy"></img>
-<img src="https://weareunder.design/work/revelations/0.png" class="sidebar-project-image" id="revelations" loading="lazy"></img>
-<img src="https://weareunder.design/work/upword/0.png" class="sidebar-project-image" id="upword" loading="lazy"></img>
-<img src="https://weareunder.design/work/unit/0.png" class="sidebar-project-image" id="unit" loading="lazy"></img>
-<img src="https://weareunder.design/work/zigi/0.svg" class="sidebar-project-image" id="zigi" loading="lazy"></img>
-<img src="https://weareunder.design/work/zoog/0.png" class="sidebar-project-image" id="zoog" loading="lazy"></img>
-<img src="https://weareunder.design/work/atlit/48.png" class="sidebar-project-image" id="atlit" loading="lazy"></img>
+<img src="/work/moonshot/104.png" class="sidebar-project-image" id="moonshot" loading="lazy"></img>
+<img src="/work/bridge/17.png" class="sidebar-project-image" id="bridge" loading="lazy"></img>
+<img src="/work/glilotcapital/12.png" class="sidebar-project-image" id="glilotcapital" loading="lazy"></img>
+<img src="/work/able/07.png" class="sidebar-project-image box-l" id="able" loading="lazy"></img>
+<img src="/work/handy/00.png" class="sidebar-project-image box-l" id="handy" loading="lazy"></img>
+<img src="/work/nilus/0.png" class="sidebar-project-image" id="nilus" loading="lazy"></img>
+<img src="/work/wonderful/00.png" class="sidebar-project-image" id="wonderful" loading="lazy"></img>
+<img src="/work/utila/0.png" class="sidebar-project-image box-l" id="utila" loading="lazy"></img>
+<img src="/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
+<img src="/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
+<img src="/work/visioncamp/6.png" class="sidebar-project-image box-l" id="visioncamp" loading="lazy"></img>
+<img src="/work/balance/0.png" class="sidebar-project-image box-l" id="balance" loading="lazy"></img>
+<img src="/work/finaloop/0.png" class="sidebar-project-image" id="finaloop" loading="lazy"></img>
+<img src="/work/dymension/0.png" class="sidebar-project-image" id="dymension" loading="lazy"></img>
+<img src="/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
+<img src="/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
+<img src="/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
+<img src="/work/soli/19.png" class="sidebar-project-image box-l" id="soli" loading="lazy"></img>
+<img src="/work/togetherr/0.png" class="sidebar-project-image" id="togetherr" loading="lazy"></img>
+<img src="/work/groundcover/0.png" class="sidebar-project-image" id="groundcover" loading="lazy"></img>
+<img src="/work/raftt/0.png" class="sidebar-project-image" id="raftt" loading="lazy"></img>
+<img src="/work/justripe/09.png" class="sidebar-project-image box-l" id="justripe" loading="lazy"></img>
+<img src="/work/everafter/0.png" class="sidebar-project-image" id="everafter" loading="lazy"></img>
+<img src="/work/faintlines/0.png" class="sidebar-project-image" id="faintlines" loading="lazy"></img>
+<img src="/work/grain/0.png" class="sidebar-project-image" id="grain" loading="lazy"></img>
+<img src="/work/healthquarters/0.png" class="sidebar-project-image" id="healthquarters" loading="lazy"></img>
+<img src="/work/chargeflow/00.png" class="sidebar-project-image" id="chargeflow" loading="lazy"></img>
+<img src="/work/aim/0.png" class="sidebar-project-image" id="aim" loading="lazy"></img>
+<img src="/work/artac/0.png" class="sidebar-project-image" id="artac" loading="lazy"></img>
+<img src="/work/karma/0.png" class="sidebar-project-image" id="karma" loading="lazy"></img>
+<img src="/work/mesh_payments/0.svg" class="sidebar-project-image" id="mesh_payments" loading="lazy"></img>
+<img src="/work/notch/0.png" class="sidebar-project-image" id="notch" loading="lazy"></img>
+<img src="/work/perdiem/0.png" class="sidebar-project-image" id="perdiem" loading="lazy"></img>
+<img src="/work/reeco/0.png" class="sidebar-project-image" id="reeco" loading="lazy"></img>
+<img src="/work/reflect/0.png" class="sidebar-project-image" id="reflect" loading="lazy"></img>
+<img src="/work/revelations/0.png" class="sidebar-project-image" id="revelations" loading="lazy"></img>
+<img src="/work/upword/0.png" class="sidebar-project-image" id="upword" loading="lazy"></img>
+<img src="/work/unit/0.png" class="sidebar-project-image" id="unit" loading="lazy"></img>
+<img src="/work/zigi/0.svg" class="sidebar-project-image" id="zigi" loading="lazy"></img>
+<img src="/work/zoog/0.png" class="sidebar-project-image" id="zoog" loading="lazy"></img>
+<img src="/work/atlit/48.png" class="sidebar-project-image" id="atlit" loading="lazy"></img>
 </div>
     `;
 
@@ -549,3 +552,18 @@ async function SideBarFunctionality() {
 SideBarFunctionality();
 
 addSidebar();
+
+// Show cart count on all pages
+(function() {
+  const cartId = localStorage.getItem('cart');
+  if (!cartId) return;
+  fetch('https://under-design-shop.myshopify.com/api/2024-01/graphql.json', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': 'b6401a2b2ce8bef08562615388c7d7af' },
+    body: JSON.stringify({ query: `{ cart(id:"${cartId}") { totalQuantity } }` })
+  }).then(r => r.json()).then(d => {
+    const qty = d.data?.cart?.totalQuantity;
+    const b = document.getElementById('cart-count');
+    if (b && qty) { b.textContent = qty; b.style.display = 'flex'; }
+  }).catch(() => {});
+})();

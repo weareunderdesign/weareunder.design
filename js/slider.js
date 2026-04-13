@@ -28,7 +28,7 @@ class UnderSlider extends HTMLElement {
             const id = link.id.split('-')[0];
             const imagePath = imageMap[id] || '0.png';
             return `<a href="${link.href}" class="view row project-link">
-                <img src="https://weareunder.design/work/${id}/${imagePath}" class="project-image">
+                <img src="/work/${id}/${imagePath}" class="project-image">
             </a>`;
         }).join('');
 
