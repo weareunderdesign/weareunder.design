@@ -1,6 +1,6 @@
 function preloadImages() {
   const imageUrls = [
-    "/work/moonshot/104.png",
+    "/work/moonshot/01.png",
     "/work/glilotcapital/12.png",
     "/work/able/03.png",
     "/work/handy/00.png",
@@ -209,7 +209,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
-<img src="/work/moonshot/104.png" class="sidebar-project-image" id="moonshot" loading="lazy"></img>
+<img src="/work/moonshot/01.png" class="sidebar-project-image" id="moonshot" loading="lazy"></img>
 <img src="/work/bridge/17.png" class="sidebar-project-image" id="bridge" loading="lazy"></img>
 <img src="/work/glilotcapital/12.png" class="sidebar-project-image" id="glilotcapital" loading="lazy"></img>
 <img src="/work/able/07.png" class="sidebar-project-image box-l" id="able" loading="lazy"></img>
