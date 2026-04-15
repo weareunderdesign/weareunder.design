@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="under store">
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
   <link rel="stylesheet" href="https://renecss.org/rene.css" />
   <style>
     under-store { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: calc(var(--base-size) * 10); }
@@ -24,15 +24,19 @@
   <div class="padding-xl" style="padding-top:120px">
     <under-store></under-store>
   </div>
-  <script src="../js/header.js"></script>
-  <script src="../js/shop.js"></script>
+  <script src="/js/header.js"></script>
+  <script src="/js/shop.js"></script>
+  <script>
+    const rp = sessionStorage.getItem("redirectPath");
+    if (rp) { sessionStorage.removeItem("redirectPath"); history.replaceState({}, "", rp); }
+  </script>
   <script>
     document.querySelector('[data-page="store"]').addEventListener('click', function(e) {
       e.preventDefault();
       openCart();
     });
   </script>
-  <script src="../js/footer.js"></script>
+  <script src="/js/footer.js"></script>
   <under-footer></under-footer>
 </body>
 </html>

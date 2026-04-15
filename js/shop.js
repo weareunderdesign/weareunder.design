@@ -14,6 +14,19 @@ const CART = `id checkoutUrl totalQuantity
   } } } } }
   cost { totalAmount { amount currencyCode } }`;
 
+// Routing
+function getHandle() {
+  const parts = location.pathname.replace(/\/$/, '').split('/');
+  // /store/some-handle → parts = ['', 'store', 'some-handle']
+  return parts.length >= 3 && parts[2] ? parts[2] : null;
+}
+
+function navigate(handle) {
+  const path = handle ? `/store/${handle}` : '/store/';
+  history.pushState({}, '', path);
+  initStore();
+}
+
 // Cart
 async function cart() {
   const id = localStorage.getItem('cart');
@@ -60,7 +73,7 @@ function renderCart(c) {
       return `<div class="row gap-s">
         ${m.image ? `<img src="${m.image.url}" style="width:64px;height:64px;object-fit:cover;flex-shrink:0">` : ''}
         <div class="column gap-xs" style="flex:1">
-          <a href="/store.html?product=${m.product.handle}">${m.product.title}</a>
+          <a href="/store/${m.product.handle}">${m.product.title}</a>
           ${m.title !== 'Default Title' ? `<span class="text-s">${m.title}</span>` : ''}
           <span>${m.price.amount} ${m.price.currencyCode}</span>
           <div class="row gap-s align-center">
@@ -85,7 +98,7 @@ function renderGrid(products, el) {
   el.innerHTML = products.map(p => {
     const img = p.images.edges[0]?.node;
     const pr = p.priceRange.minVariantPrice;
-    return `<a class="column gap-s" href="?product=${p.handle}" style="text-decoration:none;color:inherit">
+    return `<a class="column gap-s" href="/store/${p.handle}" onclick="event.preventDefault();navigate('${p.handle}')" style="text-decoration:none;color:inherit">
       ${img ? `<img src="${img.url}" alt="${img.altText || p.title}" style="width:100%;aspect-ratio:1;object-fit:cover">` : ''}
       <span class="text-l">${p.title}</span><span>${pr.amount} ${pr.currencyCode}</span>
     </a>`;
@@ -98,7 +111,6 @@ function renderProduct(p, el) {
   const v = variants[0];
 
   el.innerHTML = `<div class="product-detail">
-
     <div class="row gap-xl">
       <div class="column gap-s box">${images.map(i => `<img src="${i.url}" alt="${i.altText || p.title}" style="width:100%">`).join('')}</div>
       <div class="column gap-m box" style="position:sticky;top:120px;align-self:start">
@@ -113,23 +125,29 @@ function renderProduct(p, el) {
 }
 
 // Init
+async function initStore() {
+  const el = document.querySelector('under-store');
+  if (!el) return;
+  el.innerHTML = '<p>loading...</p>';
+  const handle = getHandle();
+  try {
+    if (handle) {
+      const d = await q(`{ product(handle:"${handle}") { ${PRODUCT} } }`);
+      d.product ? renderProduct(d.product, el) : el.innerHTML = '<p>not found</p>';
+    } else {
+      const d = await q(`{ products(first:20) { edges { node { ${PRODUCT} } } } }`);
+      const p = n(d.products.edges);
+      p.length ? renderGrid(p, el) : el.innerHTML = '<p>no products yet</p>';
+    }
+  } catch(e) { el.innerHTML = '<p>could not load</p>'; console.error(e); }
+}
+
 class UnderStore extends HTMLElement {
-  async connectedCallback() {
-    this.innerHTML = '<p>loading...</p>';
-    const handle = new URLSearchParams(location.search).get('product');
-    try {
-      if (handle) {
-        const d = await q(`{ product(handle:"${handle}") { ${PRODUCT} } }`);
-        d.product ? renderProduct(d.product, this) : this.innerHTML = '<p>not found</p>';
-      } else {
-        const d = await q(`{ products(first:20) { edges { node { ${PRODUCT} } } } }`);
-        const p = n(d.products.edges);
-        p.length ? renderGrid(p, this) : this.innerHTML = '<p>no products yet</p>';
-      }
-    } catch(e) { this.innerHTML = '<p>could not load</p>'; console.error(e); }
-  }
+  connectedCallback() { initStore(); }
 }
 customElements.define('under-store', UnderStore);
+
+window.addEventListener('popstate', initStore);
 
 // Cart drawer setup
 document.body.insertAdjacentHTML('beforeend', '<div id="cart-overlay" onclick="closeCart()"></div><div id="cart-drawer"></div>');
