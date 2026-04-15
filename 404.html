@@ -65,10 +65,13 @@
     <script src="./js/randomcolorchange.js"></script>
     
     <script>
-        // Auto redirect after 8 seconds (longer since user might want to click)
-        setTimeout(() => {
-            window.location.href = '/';
-        }, 8000);
+        const path = window.location.pathname;
+        if (path.startsWith("/store")) {
+            sessionStorage.setItem("redirectPath", path);
+            window.location.replace("/store/");
+        } else {
+            setTimeout(() => { window.location.href = "/"; }, 8000);
+        }
     </script>
 </body>
 
