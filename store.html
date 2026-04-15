@@ -9,22 +9,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
   <link rel="stylesheet" href="https://renecss.org/rene.css" />
   <style>
-    under-store { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--xl); }
+    under-store { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: calc(var(--base-size) * 10); }
     under-store:has(.product-detail) { display: block; }
-    .product-card { text-decoration: none; color: inherit; }
-    .product-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-    .product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--xl); }
-    .product-info { position: sticky; top: 120px; align-self: start; }
-    .buy-btn, .variant-select, .qty-btn { border: 1px solid currentColor; background: none; color: inherit; padding: var(--xs) var(--m); cursor: pointer; font: inherit; }
-    .buy-btn { width: fit-content; }
-    .buy-btn:hover { color: var(--background); background: var(--foreground); }
-    .buy-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-    .qty-btn { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; padding: 0; }
     #cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.3); z-index: 1001; opacity: 0; pointer-events: none; transition: opacity .2s; }
     #cart-overlay.open { opacity: 1; pointer-events: auto; }
-    #cart-drawer { position: fixed; top: 0; right: 0; width: 380px; max-width: 90vw; height: 100vh; z-index: 1002; padding: var(--xl); display: flex; flex-direction: column; background: var(--background, #fff); color: var(--foreground, #000); transform: translateX(100%); transition: transform .25s ease; overflow: auto; }
+    #cart-drawer { position: fixed; top: 0; right: 0; width: 380px; max-width: 90vw; height: 100vh; z-index: 1002; background: var(--color-primary-background); color: var(--color-primary-foreground); transform: translateX(100%); transition: transform .25s ease; overflow: auto; }
     #cart-drawer.open { transform: translateX(0); }
-    @media (max-width: 768px) { .product-layout { grid-template-columns: 1fr; } }
   </style>
   <title>store | under</title>
 </head>
