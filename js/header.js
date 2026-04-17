@@ -1,6 +1,6 @@
 function preloadImages() {
   const imageUrls = [
-    "/work/moonshot/01.png",
+    // "/work/moonshot/01.png",
     "/work/glilotcapital/12.png",
     "/work/able/03.png",
     "/work/handy/00.png",
@@ -162,7 +162,7 @@ function addSidebar() {
 <div id="works-wrapper" class="hidden">
 <div class="view row no-pointer" style="position: relative; z-index: 999; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url('../work/utila/0.png');" id="brand-sprints-section">
 <div class="sidebar column has-pointer" data-ix="sidebar" id="sidebar-work">
-  <a href="/work/moonshot/" class="sidebar-project-link" id="moonshot-000000">moonshot</a>
+  <!-- <a href="/work/moonshot/" class="sidebar-project-link" id="moonshot-000000">moonshot</a> -->
   <a href="/work/bridge/" class="sidebar-project-link" id="bridge-008129">bridge</a>
   <a href="/work/glilotcapital/" class="sidebar-project-link" id="glilotcapital-1B0CDB">glilot capital</a>
   <a href="/work/atlit/" class="sidebar-project-link" id="atlit-F7410F">atlit</a>
@@ -209,7 +209,7 @@ function addSidebar() {
 
 <div id="main-content">
 <div class="projects">
-<img src="/work/moonshot/01.png" class="sidebar-project-image" id="moonshot" loading="lazy"></img>
+<!-- <img src="/work/moonshot/01.png" class="sidebar-project-image" id="moonshot" loading="lazy"></img> -->
 <img src="/work/bridge/17.png" class="sidebar-project-image" id="bridge" loading="lazy"></img>
 <img src="/work/glilotcapital/12.png" class="sidebar-project-image" id="glilotcapital" loading="lazy"></img>
 <img src="/work/able/07.png" class="sidebar-project-image box-l" id="able" loading="lazy"></img>
