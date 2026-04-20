@@ -10,13 +10,13 @@
 })();
 
 const footerTemplate = `
-<footer class="padding-xl box-l">
-  <div class="gap-s row align-start box-l">
-    <div class="gap-xl row align-start box-l">
+<footer class="padding-xl flex width-full">
+  <div class="gap-s row align-start flex width-full">
+    <div class="gap-xl row align-start flex width-full">
       <a class="footer-logo" href="/">
         <svg-icon src="/images/outlinefooter.svg"></svg-icon>
       </a>
-      <span class="box" style="align-self:flex-end;">
+      <span class="flex-1" style="align-self:flex-end;">
         high-quality, well-designed,<br>
         brands and products<br>
       </span>
