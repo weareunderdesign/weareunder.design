@@ -212,25 +212,25 @@ function addSidebar() {
 <!-- <img src="/work/moonshot/01.png" class="sidebar-project-image" id="moonshot" loading="lazy"></img> -->
 <img src="/work/bridge/17.png" class="sidebar-project-image" id="bridge" loading="lazy"></img>
 <img src="/work/glilotcapital/12.png" class="sidebar-project-image" id="glilotcapital" loading="lazy"></img>
-<img src="/work/able/07.png" class="sidebar-project-image box-l" id="able" loading="lazy"></img>
-<img src="/work/handy/00.png" class="sidebar-project-image box-l" id="handy" loading="lazy"></img>
+<img src="/work/able/07.png" class="sidebar-project-image flex width-full" id="able" loading="lazy"></img>
+<img src="/work/handy/00.png" class="sidebar-project-image flex width-full" id="handy" loading="lazy"></img>
 <img src="/work/nilus/0.png" class="sidebar-project-image" id="nilus" loading="lazy"></img>
 <img src="/work/wonderful/00.png" class="sidebar-project-image" id="wonderful" loading="lazy"></img>
-<img src="/work/utila/0.png" class="sidebar-project-image box-l" id="utila" loading="lazy"></img>
+<img src="/work/utila/0.png" class="sidebar-project-image flex width-full" id="utila" loading="lazy"></img>
 <img src="/work/spacetop/0.png" class="sidebar-project-image" id="spacetop" loading="lazy"></img>
 <img src="/work/blockaid/0.png" class="sidebar-project-image" id="blockaid" loading="lazy"></img>
-<img src="/work/visioncamp/6.png" class="sidebar-project-image box-l" id="visioncamp" loading="lazy"></img>
-<img src="/work/balance/0.png" class="sidebar-project-image box-l" id="balance" loading="lazy"></img>
+<img src="/work/visioncamp/6.png" class="sidebar-project-image flex width-full" id="visioncamp" loading="lazy"></img>
+<img src="/work/balance/0.png" class="sidebar-project-image flex width-full" id="balance" loading="lazy"></img>
 <img src="/work/finaloop/0.png" class="sidebar-project-image" id="finaloop" loading="lazy"></img>
 <img src="/work/dymension/0.png" class="sidebar-project-image" id="dymension" loading="lazy"></img>
 <img src="/work/pointfive/0.png" class="sidebar-project-image" id="pointfive" loading="lazy"></img>
 <img src="/work/rnbw/1.png" class="sidebar-project-image" id="rnbw" loading="lazy"></img>
-<img src="/work/bounce/0.png" class="sidebar-project-image" id="bounce" loading="lazy"></img>
-<img src="/work/soli/19.png" class="sidebar-project-image box-l" id="soli" loading="lazy"></img>
+<img src="/work/bounce/0.png" class="sidebar-project-image" id="" loading="lazy"></img>
+<img src="/work/soli/19.png" class="sidebar-project-image flex width-full" id="soli" loading="lazy"></img>
 <img src="/work/togetherr/0.png" class="sidebar-project-image" id="togetherr" loading="lazy"></img>
 <img src="/work/groundcover/0.png" class="sidebar-project-image" id="groundcover" loading="lazy"></img>
 <img src="/work/raftt/0.png" class="sidebar-project-image" id="raftt" loading="lazy"></img>
-<img src="/work/justripe/09.png" class="sidebar-project-image box-l" id="justripe" loading="lazy"></img>
+<img src="/work/justripe/09.png" class="sidebar-project-image flex width-full" id="justripe" loading="lazy"></img>
 <img src="/work/everafter/0.png" class="sidebar-project-image" id="everafter" loading="lazy"></img>
 <img src="/work/faintlines/0.png" class="sidebar-project-image" id="faintlines" loading="lazy"></img>
 <img src="/work/grain/0.png" class="sidebar-project-image" id="grain" loading="lazy"></img>

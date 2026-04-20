@@ -63,7 +63,7 @@ function renderCart(c) {
   const d = document.getElementById('cart-drawer');
   if (!d) return;
   const lines = n(c.lines.edges);
-  const close = `<div class="row justify-stretch align-center justify-center padding-l"><span class="text-l">cart</span><span style="cursor:pointer" onclick="closeCart()">&times;</span></div>`;
+  const close = `<div class="row justify-between align-center justify-center padding-l"><span class="text-l">cart</span><span style="cursor:pointer" onclick="closeCart()">&times;</span></div>`;
 
   if (!lines.length) { d.innerHTML = `${close}<p class="padding-l">empty</p>`; return; }
 
@@ -85,7 +85,7 @@ function renderCart(c) {
       </div>`;
     }).join('')}</div>
     <div class="column gap-s padding-l border-top">
-      <div class="row justify-stretch"><span class="text-l">total</span><span class="text-l">${c.cost.totalAmount.amount} ${c.cost.totalAmount.currencyCode}</span></div>
+      <div class="row justify-between"><span class="text-l">total</span><span class="text-l">${c.cost.totalAmount.amount} ${c.cost.totalAmount.currencyCode}</span></div>
       <button style="width:100%;text-align:center;border:1px solid currentColor;background:none;color:inherit;padding:calc(var(--base-size)*2) calc(var(--base-size)*3);cursor:pointer;font:inherit" onclick="location.href='${c.checkoutUrl}'">checkout</button>
     </div>`;
 }
@@ -112,8 +112,8 @@ function renderProduct(p, el) {
 
   el.innerHTML = `<div class="product-detail">
     <div class="row gap-xl">
-      <div class="column gap-s box">${images.map(i => `<img src="${i.url}" alt="${i.altText || p.title}" style="width:100%">`).join('')}</div>
-      <div class="column gap-m box" style="position:sticky;top:120px;align-self:start">
+      <div class="column gap-s flex-1">${images.map(i => `<img src="${i.url}" alt="${i.altText || p.title}" style="width:100%">`).join('')}</div>
+      <div class="column gap-m flex-1" style="position:sticky;top:120px;align-self:start">
         <h1 class="text-xl">${p.title}</h1>
         <span class="text-l">${v.price.amount} ${v.price.currencyCode}</span>
         ${multi ? `<select style="border:1px solid currentColor;background:none;color:inherit;padding:calc(var(--base-size)*2) calc(var(--base-size)*3);cursor:pointer;font:inherit" onchange="this.parentNode.querySelector('.add-btn').dataset.variant=this.value">${variants.map(x => `<option value="${x.id}" ${!x.availableForSale ? 'disabled' : ''}>${x.title}</option>`).join('')}</select>` : ''}
