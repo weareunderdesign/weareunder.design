@@ -63,7 +63,7 @@ function renderCart(c) {
   const d = document.getElementById('cart-drawer');
   if (!d) return;
   const lines = n(c.lines.edges);
-  const close = `<div class="row justify-stretch align-center padding-l"><span class="text-l">cart</span><span style="cursor:pointer" onclick="closeCart()">&times;</span></div>`;
+  const close = `<div class="row justify-stretch align-center justify-center padding-l"><span class="text-l">cart</span><span style="cursor:pointer" onclick="closeCart()">&times;</span></div>`;
 
   if (!lines.length) { d.innerHTML = `${close}<p class="padding-l">empty</p>`; return; }
 
@@ -76,7 +76,7 @@ function renderCart(c) {
           <a href="/store/${m.product.handle}">${m.product.title}</a>
           ${m.title !== 'Default Title' ? `<span class="text-s">${m.title}</span>` : ''}
           <span>${m.price.amount} ${m.price.currencyCode}</span>
-          <div class="row gap-s align-center">
+          <div class="row gap-s align-center justify-center">
             <button style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid currentColor;background:none;cursor:pointer;font:inherit" onclick="updateLine('${l.id}',${l.quantity - 1})">&minus;</button>
             <span>${l.quantity}</span>
             <button style="width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid currentColor;background:none;cursor:pointer;font:inherit" onclick="updateLine('${l.id}',${l.quantity + 1})">+</button>

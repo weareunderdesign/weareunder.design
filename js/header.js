@@ -138,19 +138,19 @@ function addSidebar() {
 
   <div id="under-nav" class="has-pointer">
 <a class="header-link" href="/brandsprint/" data-page="brandsprint">
-<div class="column align-center gap-xs">
+<div class="column align-center justify-center gap-xs">
 <img src="/images/header/brandsprint.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="/store/" data-page="store">
-<div class="column align-center gap-xs" style="position:relative">
+<div class="column align-center justify-center gap-xs" style="position:relative">
 <span style="position:relative"><img src="/images/header/store.svg"><span id="cart-count" class="text-l" style="position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:white;mix-blend-mode:difference;padding-top:16px;text-decoration:none"></span></span>
 <span class="text-m" style="text-decoration: none; display: none; color: white;">store</span>
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" id="nav-work" data-page="design">
-<div class="column align-center gap-xs">
+<div class="column align-center justify-center gap-xs">
 <img src="/images/header/design.svg">
 <span class="text-m" style="text-decoration: none; display: none; color: white;">design</span>
 </div>
