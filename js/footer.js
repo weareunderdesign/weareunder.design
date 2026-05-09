@@ -10,6 +10,9 @@
 })();
 
 const footerTemplate = `
+<style>
+.footer-logo i{display:inline-block;width:33px;height:40px;background-color:currentColor;-webkit-mask:var(--svg-src) center/contain no-repeat;mask:var(--svg-src) center/contain no-repeat}
+</style>
 <footer class="padding-xl flex width-full">
   <div class="gap-s row align-start flex width-full">
     <div class="gap-xl row align-start flex width-full">
