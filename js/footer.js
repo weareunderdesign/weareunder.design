@@ -14,7 +14,7 @@ const footerTemplate = `
   <div class="gap-s row align-start flex width-full">
     <div class="gap-xl row align-start flex width-full">
       <a class="footer-logo" href="/">
-        <svg-icon src="/images/outlinefooter.svg"></svg-icon>
+        <i style="--svg-src:url(/images/outlinefooter.svg)"></i>
       </a>
       <span class="flex-1" style="align-self:flex-end;">
         high-quality, well-designed,<br>
@@ -99,24 +99,9 @@ const setSystemTheme = () => {
 class underFooter extends HTMLElement {
   constructor() {
     super();
-    this.ensureSvgIconLoaded().then(() => {
-      this.innerHTML = footerTemplate;
-      this.handleSubscribe();
-      updateThemeElementsVisibility();
-    });
-  }
-
-  async ensureSvgIconLoaded() {
-    if (!customElements.get('svg-icon')) {
-      return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = 'https://bicyclecomputer.github.io/svg-icon/svg-icon.js';
-        script.onload = resolve;
-        script.onerror = reject;
-        document.head.appendChild(script);
-      });
-    }
-    return Promise.resolve();
+    this.innerHTML = footerTemplate;
+    this.handleSubscribe();
+    updateThemeElementsVisibility();
   }
 
   handleSubscribe() {
