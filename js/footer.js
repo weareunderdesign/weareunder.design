@@ -97,8 +97,7 @@ const setSystemTheme = () => {
 };
 
 class underFooter extends HTMLElement {
-  constructor() {
-    super();
+  connectedCallback() {
     this.innerHTML = footerTemplate;
     this.handleSubscribe();
     updateThemeElementsVisibility();
