@@ -22,6 +22,7 @@ as technology "disappears", we reconnect creators through methodologies that eli
 like water, our offerings are simple to start yet infinitely deep to master. we welcome beginners with intuitive basics while offering depths for masters to explore - adaptive mastery that grows alongside you. our approach redefines expression through meta-creativity, shaping not just work, but the very way we create.
 
 what drives us:
+
 - design excellence: creating work that transcends expectations - half great beats full mediocre
 - move fast, think first: precision, speed, initiative, and taste in execution
 - radical transparency: share openly, improve continuously - feedback is direct but never personal
@@ -44,7 +45,7 @@ we approach content in two ways:
 macro: comprehensive guides, educational series, thought leadership, campaigns, animated videos that establish expertise
 micro: social posts, quick tips, behind-the-scenes, quotes, reels, clips, remixed branded visuals that maintain daily presence
 
-both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute.
+both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute. distribution is a habit — a release isn't done when it goes live, it's done when we've pushed it for weeks. when something works, that's the signal to push harder.
 
 ### channels
 
@@ -72,6 +73,7 @@ personal and mysterious - authentic visuals that intrigue before revealing. clea
 ## rhythm
 
 how we work together - balancing doing and being across daily, monthly, and yearly cycles.
+
 - doing: focused execution, deep work, output-oriented
 - being: rest, exploration, learning, connection without outcomes
 
@@ -91,17 +93,20 @@ we embrace the chaos of remote work - our partners span the globe like a digital
 ### daily
 
 doing days (monday - thursday, 9am-6pm)
+
 - morning ritual: 15-min intention setting
 - 90-min deep work blocks with 15-min breaks
 - end-of-day review: 10-min accomplishment log
 
 being days (friday - saturday)
+
 - no scheduled obligations
 - nature connection time
 - creative exploration without goals
 - social connection and rest
 
 reflection day (sunday)
+
 - morning: review week's progress
 - midday: adjust next week's priorities
 - afternoon: document learnings and insights
@@ -109,11 +114,13 @@ reflection day (sunday)
 ### monthly
 
 doing weeks (weeks 1-3)
+
 - week 1: vision and planning focus
 - week 2: deep execution
 - week 3: refinement and completion
 
 being and reflecting week (week 4)
+
 - life admin and organization
 - skill exploration and learning
 - social connections and community
@@ -127,24 +134,28 @@ being and reflecting week (week 4)
 
 q1 / spring (jan-mar): emergence
 fresh starts, foundation setting, building momentum
+
 - project initiation
 - skill development
 - network building
 
 q2 / summer (apr-jun): peak expression
 growth, expansion, high energy
+
 - major project execution
 - public sharing and visibility
 - high-energy collaboration
 
 q3 / late summer (jul-sep): integration
 harvesting, refining, peak execution
+
 - project completion
 - knowledge documentation
 - relationship deepening
 
 q4 / fall-winter (oct-dec): restoration
 slowing down, reflecting, renewal
+
 - harvest and celebration
 - deep rest and inner work
 - vision and planning
@@ -154,6 +165,7 @@ slowing down, reflecting, renewal
 energy over time. quality over quantity. rhythm over rigid schedules. progress over perfection. sustainability over sprints.
 
 transitions:
+
 - do → be: complete loops, brain dump, reset environment, digital detox, transition activity (walk, meditation)
 - be → do: gentle planning, environment prep, priority setting, energy check-in, intention setting
 - urgent work in be-time: assess urgency, time-box it, schedule compensation time
