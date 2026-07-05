@@ -45,7 +45,7 @@ we approach content in two ways:
 macro: comprehensive guides, educational series, thought leadership, campaigns, animated videos that establish expertise
 micro: social posts, quick tips, behind-the-scenes, quotes, reels, clips, remixed branded visuals that maintain daily presence
 
-both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute. a release isn't done when it goes live — it's done when we've pushed it for weeks. when something works, push harder.
+both strategies work together to tell our story and engage our community. we follow the cycle: capture → convert → distribute → listen → convert → distribute. a release isn't done when it goes live — it's done when we've pushed it for weeks. when something works, push harder.
 
 ### channels
 
