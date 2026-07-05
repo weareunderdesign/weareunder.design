@@ -45,7 +45,7 @@ we approach content in two ways:
 macro: comprehensive guides, educational series, thought leadership, campaigns, animated videos that establish expertise
 micro: social posts, quick tips, behind-the-scenes, quotes, reels, clips, remixed branded visuals that maintain daily presence
 
-both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute. distribution is a habit — a release isn't done when it goes live, it's done when we've pushed it for weeks. when something works, that's the signal to push harder.
+both strategies work together to tell our story and engage our community. we follow the cycle: document → create → distribute → listen → create → distribute. a release isn't done when it goes live — it's done when we've pushed it for weeks. when something works, push harder.
 
 ### channels
 
@@ -87,22 +87,19 @@ how we work together - balancing doing and being across daily, monthly, and year
 
 we embrace the chaos of remote work - our partners span the globe like a digital octopus. we find our groove, respect time zones, and do our best work when we're at our best. we stay inspired and weird.
 
-### execution
+### how we work
 
 - smart automation: let tools do the heavy lifting
 - clear goals: know exactly where we're heading
 - rapid results: ship fast, learn faster
 - focused execution: 1-3 week sprints with clear deliverables
-- value outcomes over hours
 - own your milestones: assign, manage, complete
 - move forward, not sideways
 - think first, design second: never guess
 
-life is unexpected. an idea hits at 11pm, a sprint blows up, a week vanishes. we don't schedule our energy - we read it. we move between doing and being as the work and the day ask, and we protect being-time fiercely. no timetable survives contact with a real week, so we don't keep one.
-
-### balance
-
 energy over time. quality over quantity. rhythm over rigid schedules. progress over perfection. sustainability over sprints.
+
+life is unexpected. an idea hits at 11pm, a sprint blows up, a week vanishes. we don't schedule our energy - we read it. we move between doing and being as the work and the day ask, and we protect being-time fiercely. no timetable survives contact with a real week, so we don't keep one.
 
 transitions:
 
