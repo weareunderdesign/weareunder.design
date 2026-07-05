@@ -68,6 +68,16 @@ simple and clear - short sentences, minimal punctuation, lowercase signature sty
 visual
 personal and mysterious - authentic visuals that intrigue before revealing. clean composition, intentional arrangement, purposeful color palette, eye-catching typography. beauty is not optional - aesthetics create emotional connection.
 
+### publish
+
+the capture → convert → approve loop.
+
+- capture (you, 2 min/day): leave raw traces while you work — screenshots, 15-sec clips, two-line notes. one folder. don't edit, don't think platform.
+- convert (operator + tools, 2x/week): raw → reels, captions, tweets, newsletter, published on schedule. tools do ~70% — ai drafts, auto-scheduler, clip cutter.
+- approve (you, 15 min/week): taste gate. approve, kill, fix tone. never touch instagram yourself.
+
+no capture, no machine. the 2 min/day is the only thing you can't skip. test it: run week 1 as capture-only, publish nothing. leave traces consistently and you have a machine. if not, it's a habit to fix before hiring.
+
 ## rhythm
 
 how we work together - balancing doing and being across daily, monthly, and yearly cycles.
