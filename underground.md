@@ -49,13 +49,13 @@ both strategies work together to tell our story and engage our community. we fol
 
 ### channels
 
-| channel | what | schedule |
-| :---- | :---- | :---- |
-| [site](https://weareunder.design/) | showcases and portfolio | when we launch work |
-| [store](https://weareunder.design/store/) | products and merchandise | as needed |
-| [instagram](https://instagram.com/under.design) | main hub - posts, reels, stories, behind-the-scenes | sun/tue/wed + daily stories |
-| [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns | when ready |
-| [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap - highlights and fresh drops | thu/fri |
+| channel | what |
+| :---- | :---- |
+| [site](https://weareunder.design/) | showcases and portfolio |
+| [store](https://weareunder.design/store/) | products and merchandise |
+| [instagram](https://instagram.com/under.design) | main hub - posts, reels, stories, behind-the-scenes |
+| [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns |
+| [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap - highlights and fresh drops |
 
 ### guidelines
 
@@ -73,7 +73,7 @@ personal and mysterious - authentic visuals that intrigue before revealing. clea
 the capture → convert → approve loop.
 
 - capture (you, 2 min/day): leave raw traces while you work — screenshots, 15-sec clips, two-line notes. one folder. don't edit, don't think platform.
-- convert (operator + tools, 2x/week): raw → reels, captions, tweets, newsletter, published on schedule. tools do ~70% — ai drafts, auto-scheduler, clip cutter.
+- convert (operator + tools): raw → reels, captions, tweets, newsletter, published when ready. tools do ~70% — ai drafts, auto-scheduler, clip cutter.
 - approve (you, 15 min/week): taste gate. approve, kill, fix tone. never touch instagram yourself.
 
 no capture, no machine. the 2 min/day is the only thing you can't skip. test it: run week 1 as capture-only, publish nothing. leave traces consistently and you have a machine. if not, it's a habit to fix before hiring.
