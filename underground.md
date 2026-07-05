@@ -108,4 +108,3 @@ transitions:
 - energy dips: check physical needs (sleep, nutrition, movement), adjust work intensity, take micro-breaks
 
 remember: this system serves you, not vice versa.
-
