@@ -52,7 +52,7 @@ both strategies work together to tell our story and engage our community. we fol
 | channel | what | schedule |
 | :---- | :---- | :---- |
 | [site](https://weareunder.design/) | showcases and portfolio | when we launch work |
-| [store](https://under-design-shop.myshopify.com/) | products and merchandise | as needed |
+| [store](https://weareunder.design/store/) | products and merchandise | as needed |
 | [instagram](https://instagram.com/under.design) | main hub - posts, reels, stories, behind-the-scenes | sun/tue/wed + daily stories |
 | [twitter](http://twitter.com/underdesign0) | sharp cuts - repurposed micro-thoughts | daily |
 | [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns | when ready |
