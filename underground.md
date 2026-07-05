@@ -57,7 +57,6 @@ both strategies work together to tell our story and engage our community. we fol
 | [twitter](http://twitter.com/underdesign0) | sharp cuts - repurposed micro-thoughts | daily |
 | [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns | when ready |
 | [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap - highlights and fresh drops | thu/fri |
-| [behance](https://behance.net/weareunder) | showcases - mirrors site | when ready |
 
 ### guidelines
 
