@@ -80,7 +80,7 @@ no capture, no machine. the 2 min/day is the only thing you can't skip. test it:
 
 ## rhythm
 
-how we work together - balancing doing and being across daily, monthly, and yearly cycles.
+how we work together - balancing doing and being.
 
 - doing: focused execution, deep work, output-oriented
 - being: rest, exploration, learning, connection without outcomes
@@ -95,9 +95,8 @@ we embrace the chaos of remote work - our partners span the globe like a digital
 - focused execution: 1-3 week sprints with clear deliverables
 - own your milestones: assign, manage, complete
 - move forward, not sideways
-- think first, design second: never guess
 
-energy over time. quality over quantity. rhythm over rigid schedules. progress over perfection. sustainability over sprints.
+energy over time. quality over quantity. progress over perfection.
 
 life is unexpected. an idea hits at 11pm, a sprint blows up, a week vanishes. we don't schedule our energy - we read it. we move between doing and being as the work and the day ask, and we protect being-time fiercely. no timetable survives contact with a real week, so we don't keep one.
 
