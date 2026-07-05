@@ -42,7 +42,7 @@
             const slugify = (t) => t.replace(/<[^>]*>/g, '').toLowerCase().trim().replace(/[^\w]+/g, '-').replace(/^-|-$/g, '');
 
             renderer.heading = function (text, level) {
-                if (level === 3) {
+                if (level === 2) {
                     return `<h${level} id="${slugify(text)}">${text}</h${level}>`;
                 }
                 if (level === 5) {
@@ -82,9 +82,9 @@
             const htmlContent = marked(markdownText);
             document.getElementById('markdown-content').innerHTML = htmlContent;
 
-            // Build the table of contents from rendered h3s
+            // Build the table of contents from rendered h2 sections
             const aside = document.querySelector('aside');
-            const heads = document.querySelectorAll('#markdown-content h3[id]');
+            const heads = document.querySelectorAll('#markdown-content h2[id]');
             if (aside && heads.length) {
                 const nav = document.createElement('nav');
                 nav.className = 'column gap-s';
