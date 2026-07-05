@@ -76,21 +76,6 @@
             const htmlContent = marked(markdownText);
             document.getElementById('markdown-content').innerHTML = htmlContent;
 
-            // Build the table of contents from rendered h2 sections
-            const aside = document.querySelector('aside');
-            const heads = document.querySelectorAll('#markdown-content h2[id]');
-            if (aside && heads.length) {
-                const nav = document.createElement('nav');
-                nav.className = 'column gap-s';
-                heads.forEach(h => {
-                    const a = document.createElement('a');
-                    a.href = '#' + h.id;
-                    a.textContent = h.textContent;
-                    nav.appendChild(a);
-                });
-                aside.appendChild(nav);
-            }
-
         } catch (error) {
             console.error('Error loading markdown:', error);
         }
