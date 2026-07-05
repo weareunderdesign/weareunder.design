@@ -54,7 +54,6 @@ both strategies work together to tell our story and engage our community. we fol
 | [site](https://weareunder.design/) | showcases and portfolio | when we launch work |
 | [store](https://weareunder.design/store/) | products and merchandise | as needed |
 | [instagram](https://instagram.com/under.design) | main hub - posts, reels, stories, behind-the-scenes | sun/tue/wed + daily stories |
-| [twitter](http://twitter.com/underdesign0) | sharp cuts - repurposed micro-thoughts | daily |
 | [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns | when ready |
 | [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap - highlights and fresh drops | thu/fri |
 
