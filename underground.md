@@ -40,12 +40,7 @@ we break the isolation of creation. when work goes unshared, motivation fades an
 
 we craft under's voice across all platforms through compelling narratives, design-in-public initiatives, and content that reflects our core values. we build relationships with media and influencers, coordinate launches, and lead knowledge-sharing programs.
 
-we approach content in two ways:
-
-macro: comprehensive guides, educational series, thought leadership, campaigns, animated videos that establish expertise
-micro: social posts, quick tips, behind-the-scenes, quotes, reels, clips, remixed branded visuals that maintain daily presence
-
-both strategies work together to tell our story and engage our community. we follow the cycle: capture → convert → distribute → listen → convert → distribute. a release isn't done when it goes live — it's done when we've pushed it for weeks. when something works, push harder.
+we follow the cycle: capture → convert → distribute → listen. a release isn't done when it goes live — it's done when we've pushed it for weeks. when something works, push harder.
 
 ### channels
 
@@ -53,8 +48,8 @@ both strategies work together to tell our story and engage our community. we fol
 | :---- | :---- |
 | [site](https://weareunder.design/) | showcases and portfolio |
 | [store](https://weareunder.design/store/) | products and merchandise |
-| [instagram](https://instagram.com/under.design) | main hub - posts, reels, stories, behind-the-scenes |
-| [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, campaigns |
+| [instagram](https://instagram.com/under.design) | main hub, micro - posts, reels, stories, behind-the-scenes, quick tips, clips |
+| [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, thought leadership, campaigns |
 | [newsletter](https://admin.shopify.com/store/under-design-shop) | weekly recap - highlights and fresh drops |
 
 ### guidelines
