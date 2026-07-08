@@ -1,0 +1,8 @@
+{
+  "bundle": {
+    "icon": [
+      "icons/icon-dev.icns",
+      "icons/icon-dev.png"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+.DS_Store
+.env
+node_modules/
+src-tauri/target/
+launch.md
+type.md
+
+data/
