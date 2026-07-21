@@ -39,6 +39,9 @@ const footerTemplate = `
             <a href="mailto:hello@weareunder.design">
               <span>contact</span>
             </a>
+            <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
+              <span>book a call</span>
+            </a>
           </div>
         </div>
          <span id="subscribeButton">newsletter</span>
