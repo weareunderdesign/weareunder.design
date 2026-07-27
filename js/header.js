@@ -166,23 +166,26 @@ function addSidebar() {
   }
   customElements.define("under-navigation", UnderNavigation);
 
-  $(".sidebar").on("mouseout", function () {
+  const display = (id, value) => {
+    const node = document.getElementById(id);
+    if (node) node.style.display = value;
+  };
+
+  document.querySelector(".sidebar").addEventListener("mouseout", () => {
     document.body.style.overflow = "auto";
   });
 
-  $("#nav-work").on("click", function () {
+  document.getElementById("nav-work").addEventListener("click", () => {
     window.scrollTo({ top: 0 });
-    $("#under-nav").css("display", "none");
-    $("#works-wrapper").css("display", "block");
-    $("#body-content").css("display", "none");
+    display("under-nav", "none");
+    display("works-wrapper", "block");
+    display("body-content", "none");
   });
 
-  $("#sidebar-work").on("mouseleave", function () {
-    $("#under-nav").css({
-      "display": "flex"
-    });
-    $("#works-wrapper").css("display", "none");
-    $("#body-content").css("display", "block");
+  document.getElementById("sidebar-work").addEventListener("mouseleave", () => {
+    display("under-nav", "flex");
+    display("works-wrapper", "none");
+    display("body-content", "block");
   });
 
   function setActiveNavItem() {
@@ -204,26 +207,19 @@ function addSidebar() {
     });
   }
 
-  $(".header-link").on("mouseover", function () {
-    const img = $(this).find("img");
-    const originalSrc = img.attr("src");
+  document.querySelectorAll(".header-link").forEach((link) => {
+    const img = link.querySelector("img");
+    const label = link.querySelector(".text-m");
 
-    if (!$(this).hasClass('active')) {
-      img.attr("src", originalSrc.replace(".svg", "h.svg"));
-      $(this).find(".text-m").css("display", "block");
-    } else {
-      $(this).find(".text-m").css("display", "block");
-    }
-  }).on("mouseout", function () {
-    const img = $(this).find("img");
-    const originalSrc = img.attr("src");
+    const hover = (labelDisplay, from, to) => () => {
+      label.style.display = labelDisplay;
+      if (!link.classList.contains("active")) {
+        img.setAttribute("src", img.getAttribute("src").replace(from, to));
+      }
+    };
 
-    if (!$(this).hasClass('active')) {
-      img.attr("src", originalSrc.replace("h.svg", ".svg"));
-      $(this).find(".text-m").css("display", "none");
-    } else {
-      $(this).find(".text-m").css("display", "none");
-    }
+    link.addEventListener("mouseover", hover("block", ".svg", "h.svg"));
+    link.addEventListener("mouseout", hover("none", "h.svg", ".svg"));
   });
 
   setActiveNavItem();
