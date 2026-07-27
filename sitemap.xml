@@ -31,6 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://weareunder.design/work/moonshot/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://weareunder.design/work/gertrud/</loc>
     <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>

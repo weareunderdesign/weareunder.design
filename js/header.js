@@ -1,4 +1,5 @@
 const PROJECTS = [
+  { slug: "moonshot", name: "moonshot", color: "#000000", cover: "/work/moonshot/01.png" },
   { slug: "gertrud", name: "gertrud", color: "#2B2A26", cover: "/work/gertrud/06.png" },
   { slug: "bridge", name: "bridge", color: "#008129", cover: "/work/bridge/17.png" },
   { slug: "glilotcapital", name: "glilot capital", color: "#1B0CDB", cover: "/work/glilotcapital/12.png" },
