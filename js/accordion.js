@@ -1,16 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Find all accordion containers
     const accordionContainers = document.querySelectorAll('.accordion-container');
     
     accordionContainers.forEach(container => {
         const sections = container.querySelectorAll('.accordion-section');
         
         sections.forEach(section => {
-            // Set initial styles
             section.style.transition = 'flex-grow 0.3s ease';
             section.style.flexGrow = '0';
             
-            // Hide content initially except for first section
             const content = section.querySelector('.accordion-content');
             const text = section.querySelector('.accordion-text');
             const image = section.querySelector('.imageaccordion');
@@ -19,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (text) text.style.display = 'none';
             if (image) image.style.display = 'none';
             
-            // Show first section's content
             if (section === sections[0]) {
                 section.style.flexGrow = '1';
                 if (content) content.style.display = 'flex';
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (image) image.style.display = 'flex';
             }
 
-            // Add click handler
             section.addEventListener('click', () => {
                 sections.forEach(s => {
                     const sContent = s.querySelector('.accordion-content');
@@ -50,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Handle vertical text rotation
     function setHeaderStyles() {
         const accordionHeaders = document.querySelectorAll('.accordion-header');
         if (window.innerWidth <= 768) {

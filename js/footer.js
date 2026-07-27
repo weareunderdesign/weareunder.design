@@ -1,4 +1,3 @@
-// Immediate theme initialization
 (function initializeTheme() {
   const storedTheme = localStorage.getItem("theme");
   if (storedTheme) {
@@ -77,33 +76,14 @@ function updateThemeElementsVisibility() {
   darkElements.forEach((element) => {
     element.style.display = theme === "dark" ? "" : "none";
   });
-
-  try {
-    updateThemeImageNew(theme);
-  } catch (error) {
-    console.error('Error in updateThemeImageNew:', error);
-  } finally {
-    updateThemeImage(theme);
-  }
 }
 
 function handleSystemThemeChange(e) {
-  const storedTheme = localStorage.getItem("theme");
-  if (storedTheme) return; // Don't override user preference
+  if (localStorage.getItem("theme")) return;
 
-  const theme = e.matches ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light");
   updateThemeElementsVisibility();
-  switchFavicon(theme);
 }
-
-const setSystemTheme = () => {
-  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const theme = isDark ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", theme);
-  updateThemeElementsVisibility();
-  switchFavicon(theme);
-};
 
 class underFooter extends HTMLElement {
   connectedCallback() {
@@ -152,45 +132,3 @@ class underFooter extends HTMLElement {
 customElements.define("under-footer", underFooter);
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", handleSystemThemeChange);
-
-const currentYear = new Date().getFullYear();
-document.addEventListener('DOMContentLoaded', function () {
-  const yearElement = document.getElementById("year");
-  if (yearElement) {
-    yearElement.textContent = currentYear;
-  }
-});
-
-
-function switchFavicon(theme) {
-  const link = document.querySelector("link[rel*='icon']");
-  if (link && link.href.includes('favico.svg')) {
-    link.type = 'image/png';
-    link.rel = 'shortcut icon';
-    link.href = `https://rnbw.design/images/favicon-${theme}.png`;
-  }
-}
-
-function updateThemeImage(theme) {
-  const image = document.getElementById('theme-image');
-  const footerLogo = document.querySelector('img[src*="underfooter"]');
-
-  if (image) {
-    image.src = theme === 'dark' ? 'images/guide-dark.png' : 'images/guide-light.png';
-  }
-  if (footerLogo) {
-    footerLogo.src = `https://rnbw.design/images/under/underfooter-${theme}.svg`;
-  }
-}
-
-function updateThemeImageNew(theme) {
-  const image = document.getElementById('theme-image-new');
-  if (image) {
-    if (theme === 'dark') {
-      image.src = 'images/new-dark.svg';
-    } else {
-      image.src = 'images/new-light.svg';
-    }
-  }
-}
-

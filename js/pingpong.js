@@ -26,7 +26,6 @@ function updatePlayground(element) {
     vars.yMin = vars.containerBounds.top - dotBounds.top;
 }
 
-// This function ensures that a given ball is fully inside its container
 function ensureInsideContainer(ball) {
     const container = window.pingPongVars.container || document.querySelector('.ping-pong');
     if (!container) return;
@@ -46,7 +45,6 @@ function ensureInsideContainer(ball) {
         deltaY = containerRect.bottom - ballRect.bottom;
     }
     
-    // Parse any existing translation and add the delta adjustments
     let currentX = 0, currentY = 0;
     const transform = ball.style.transform;
     if (transform) {
@@ -75,7 +73,6 @@ function startAnimationLoop() {
             }
         });
         
-        // Check collisions less frequently for better performance
         if (vars.balls.length > 1) {
             vars.balls.forEach(ball => {
                 if (!ball.isHovered) {
@@ -112,7 +109,6 @@ function setupBallInteraction(element) {
     element.addEventListener("mouseenter", mouseEnterHandler);
     element.addEventListener("mouseleave", mouseLeaveHandler);
     
-    // Store handlers for cleanup
     element._pingpongHandlers = { mouseEnterHandler, mouseLeaveHandler };
 }
 
@@ -121,11 +117,9 @@ function initializeCircles() {
         const vars = window.pingPongVars;
         const circles = document.querySelectorAll('[class*="circle"]');
         
-        // Clear previous balls and stop animation
         stopAnimationLoop();
         vars.balls = [];
         
-        // Cache container element and bounds
         vars.container = document.querySelector(".ping-pong");
         if (!vars.container) return;
         
@@ -133,12 +127,9 @@ function initializeCircles() {
         
         circles.forEach(circle => {
             updatePlayground(circle);
-            // Ensure the ball starts inside the container
             ensureInsideContainer(circle);
-            // Reduced velocity by 50% (from 3,2 to 1.5,1)
             circle.velocity = { x: 2, y: 2 };
             
-            // Cache element dimensions to avoid repeated getBoundingClientRect calls
             const rect = circle.getBoundingClientRect();
             circle._cachedDimensions = {
                 width: rect.width,
@@ -175,21 +166,17 @@ function updateBallPosition(ball) {
     const ballRect = ball.getBoundingClientRect();
     const ballDimensions = ball._cachedDimensions;
 
-    // Calculate next position
     const nextX = currentX + ball.velocity.x;
     const nextY = currentY + ball.velocity.y;
     
-    // Calculate ball boundaries for next position
     const nextLeft = ballRect.left - currentX + nextX;
     const nextRight = nextLeft + ballDimensions.width;
     const nextTop = ballRect.top - currentY + nextY;
     const nextBottom = nextTop + ballDimensions.height;
 
-    // Bounce off left/right boundaries
     if (nextLeft <= containerBounds.left || nextRight >= containerBounds.right) {
         ball.velocity.x *= -1;
     }
-    // Bounce off top/bottom boundaries
     if (nextTop <= containerBounds.top || nextBottom >= containerBounds.bottom) {
         ball.velocity.y *= -1;
     }
@@ -206,7 +193,6 @@ function resolveCollision(ball) {
     const ballDimensions = ball._cachedDimensions;
     const ballRect = ball.getBoundingClientRect();
     
-    // getBoundingClientRect already includes transforms, so we can use it directly
     const ballCenter = {
         x: ballRect.left + ballDimensions.radius,
         y: ballRect.top + ballDimensions.radius
@@ -229,17 +215,14 @@ function resolveCollision(ball) {
         const minDist = ballDimensions.radius + otherDimensions.radius;
 
         if (distance < minDist && distance > 0) {
-            // Simple velocity exchange for collision
             const tempVelocity = { ...ball.velocity };
             ball.velocity = { ...otherBall.velocity };
             otherBall.velocity = tempVelocity;
             
-            // Separate balls to prevent sticking
             const overlap = minDist - distance;
             const separationX = (dx / distance) * overlap * 0.5;
             const separationY = (dy / distance) * overlap * 0.5;
             
-            // Get current transform positions
             let ballX = 0, ballY = 0;
             const ballTransform = ball.style.transform;
             if (ballTransform) {
@@ -260,7 +243,6 @@ function resolveCollision(ball) {
                 }
             }
             
-            // Apply separation
             ball.style.transform = `translate(${ballX + separationX}px, ${ballY + separationY}px)`;
             otherBall.style.transform = `translate(${otherX - separationX}px, ${otherY - separationY}px)`;
         }
@@ -272,7 +254,6 @@ document.addEventListener('DOMContentLoaded', initializeCircles);
 function bringCircleToInitialPosition() {
     const vars = window.pingPongVars;
     vars.balls.forEach(circle => {
-        // Instead of resetting to "none", ensure they are well positioned inside the container.
         ensureInsideContainer(circle);
     });
 }
@@ -330,7 +311,6 @@ function handlePingPongMediaQueryChange(mediaQuery) {
             });
         }
     } else {
-        // Update container bounds when switching back to desktop
         const vars = window.pingPongVars;
         if (vars.container) {
             vars.containerBounds = vars.container.getBoundingClientRect();
@@ -350,7 +330,6 @@ function handlePingPongMediaQueryChange(mediaQuery) {
     }
 }
 
-// Add resize handler to update container bounds when window is resized
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -358,7 +337,6 @@ window.addEventListener('resize', () => {
         const vars = window.pingPongVars;
         if (vars.container) {
             vars.containerBounds = vars.container.getBoundingClientRect();
-            // Ensure balls are still inside after resize
             bringCircleToInitialPosition();
         }
     }, 100);

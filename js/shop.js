@@ -14,10 +14,8 @@ const CART = `id checkoutUrl totalQuantity
   } } } } }
   cost { totalAmount { amount currencyCode } }`;
 
-// Routing
 function getHandle() {
   const parts = location.pathname.replace(/\/$/, '').split('/');
-  // /store/some-handle → parts = ['', 'store', 'some-handle']
   return parts.length >= 3 && parts[2] ? parts[2] : null;
 }
 
@@ -27,7 +25,6 @@ function navigate(handle) {
   initStore();
 }
 
-// Cart
 async function cart() {
   const id = localStorage.getItem('cart');
   if (id) { const d = await q(`{ cart(id:"${id}") { ${CART} } }`); if (d.cart) return d.cart; }
@@ -58,7 +55,6 @@ function sync(c) {
   if (b) { b.textContent = c.totalQuantity || ''; b.style.display = c.totalQuantity ? 'flex' : 'none'; }
 }
 
-// Cart UI
 function renderCart(c) {
   const d = document.getElementById('cart-drawer');
   if (!d) return;
@@ -93,7 +89,6 @@ function renderCart(c) {
 function openCart() { document.getElementById('cart-drawer')?.classList.add('open'); document.getElementById('cart-overlay')?.classList.add('open'); }
 function closeCart() { document.getElementById('cart-drawer')?.classList.remove('open'); document.getElementById('cart-overlay')?.classList.remove('open'); }
 
-// Products
 function renderGrid(products, el) {
   el.innerHTML = products.map(p => {
     const img = p.images.edges[0]?.node;
@@ -124,7 +119,6 @@ function renderProduct(p, el) {
   </div>`;
 }
 
-// Init
 async function initStore() {
   const el = document.querySelector('under-store');
   if (!el) return;
@@ -149,6 +143,5 @@ customElements.define('under-store', UnderStore);
 
 window.addEventListener('popstate', initStore);
 
-// Cart drawer setup
 document.body.insertAdjacentHTML('beforeend', '<div id="cart-overlay" onclick="closeCart()"></div><div id="cart-drawer"></div>');
 cart().then(sync);
