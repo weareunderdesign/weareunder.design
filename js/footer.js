@@ -10,6 +10,12 @@
 })();
 
 const footerTemplate = `
+<style>
+  #emailInput::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+</style>
 <footer class="padding-xl flex width-full">
   <div class="gap-s row align-start flex width-full">
     <div class="gap-xl row align-start flex width-full">
@@ -23,15 +29,18 @@ const footerTemplate = `
 
       <div class="column gap-s">
         <div class="row gap-xl">
-          <div class="column gap-s">
+          <div class="column align-start gap-s">
             <a href="https://github.com/weareunderdesign" target="_blank">
               <span>github</span>
             </a>
-                        <a href="https://www.instagram.com/under.design/" target="_blank">
+            <a href="https://www.instagram.com/under.design/" target="_blank">
               <span>instagram</span>
             </a>
+            <a href="https://bicycle.computer/under" target="_blank">
+              <span>bicycle</span>
+            </a>
           </div>
-        
+
           <div class="column align-start gap-s">
             <a href="https://www.youtube.com/@weareunderdesign">
               <span>youtube</span>
@@ -44,18 +53,15 @@ const footerTemplate = `
             </a>
           </div>
         </div>
-         <span id="subscribeButton">newsletter</span>
-   
-         <div style="display:none; flex-direction:row; align-items:center;" id="subscribeForm">
-          <input type="email" id="emailInput" placeholder="newsletter" style="outline:none; border:none; max-width:20.5ch; min-width:150px;">
+        <div style="display:flex; flex-direction:row; align-items:center;">
+          <input type="email" id="emailInput" placeholder="newsletter" style="font:inherit; color:inherit; background:none; outline:none; border:none; padding:0; width:10ch;">
           <span class="hidden" id="submit-newsletter">
             →
           </span>
-         </div>
         </div>
       </div>
-    </div> 
-  </div>
+      </div>
+    </div>
 </footer>
 `;
 
@@ -107,72 +113,38 @@ class underFooter extends HTMLElement {
   }
 
   handleSubscribe() {
+    const emailInput = document.getElementById('emailInput');
+    if (!emailInput) return;
+    const arrow = document.getElementById('submit-newsletter');
 
-    const subscribeButton = document.getElementById('subscribeButton');
+    const settle = (word) => {
+      emailInput.value = '';
+      emailInput.placeholder = word;
+      arrow.classList.add('hidden');
+    };
 
-    if (!subscribeButton) return;
-    subscribeButton.addEventListener('click', (e) => {
+    emailInput.addEventListener('input', () => {
+      arrow.classList.toggle('hidden', !(emailInput.validity.valid && emailInput.value));
+    });
 
-      const subscribeForm = document.getElementById('subscribeForm');
-      subscribeForm.style.display = 'flex';
-      //focus on input
-      const emailInput = document.getElementById('emailInput');
-      emailInput.focus();
+    emailInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') arrow.click();
+    });
 
-      //hide this button
-      e.target.style.display = 'none';
-
-      // Add event listener to email input for validation
-      emailInput.addEventListener('input', () => {
-        let chars = emailInput.value.length;
-
-        emailInput.style.width = `${chars}ch`;
-        const submitButtonIcon = subscribeForm.querySelector('#submit-newsletter');
-        if (emailInput.validity.valid && emailInput.value) {
-          submitButtonIcon.classList.remove('hidden');
-        } else {
-          submitButtonIcon.classList.add('hidden');
-        }
-      });
-
-      // Add event listener for Enter key press
-      emailInput.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-          const submitButton = document.getElementById('submit-newsletter');
-          submitButton.click();
-        }
-      });
-
-      // Add event listener for submit button
-      const submitButton = document.getElementById('submit-newsletter');
-      submitButton.addEventListener('click', async () => {
-        const email = emailInput.value;
-        try {
-          const res = await fetch('https://under-design-shop.myshopify.com/api/2024-01/graphql.json', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': 'b6401a2b2ce8bef08562615388c7d7af' },
-            body: JSON.stringify({ query: `mutation { customerCreate(input: { email: "${email}", acceptsMarketing: true }) { customer { id } customerUserErrors { message } } }` })
-          });
-          const { data } = await res.json();
-          const errors = data?.customerCreate?.customerUserErrors;
-          if (errors?.length && !errors.some(e => e.message.includes('has already been taken'))) {
-            e.target.style.display = 'block';
-            subscribeForm.style.display = 'none';
-            e.target.innerHTML = 'something went wrong, try again';
-            e.target.style.pointerEvents = 'auto';
-          } else {
-            e.target.style.display = 'block';
-            subscribeForm.style.display = 'none';
-            e.target.innerHTML = 'thanks for subscribing!';
-            e.target.style.pointerEvents = 'none';
-          }
-        } catch {
-          e.target.style.display = 'block';
-          subscribeForm.style.display = 'none';
-          e.target.innerHTML = 'something went wrong, try again';
-          e.target.style.pointerEvents = 'auto';
-        }
-      });
+    arrow.addEventListener('click', async () => {
+      const email = emailInput.value;
+      try {
+        const res = await fetch('https://under-design-shop.myshopify.com/api/2024-01/graphql.json', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Shopify-Storefront-Access-Token': 'b6401a2b2ce8bef08562615388c7d7af' },
+          body: JSON.stringify({ query: `mutation { customerCreate(input: { email: "${email}", acceptsMarketing: true }) { customer { id } customerUserErrors { message } } }` })
+        });
+        const { data } = await res.json();
+        const errors = data?.customerCreate?.customerUserErrors;
+        settle(errors?.length && !errors.some(e => e.message.includes('has already been taken')) ? 'try again' : 'subscribed');
+      } catch {
+        settle('try again');
+      }
     });
   }
 }
