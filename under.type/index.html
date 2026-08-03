@@ -17,6 +17,8 @@
 
 <body data-theme="light" style="overflow-x:hidden">
   <under-navigation></under-navigation>
+  <button id="langToggle" type="button" aria-label="toggle language"
+    style="position:fixed; bottom:20px; right:20px; z-index:1000; border:none; border-radius:50px; padding:0.5rem 1.2rem; background:#02903B; color:#FFBFE1; cursor:pointer; font-size:1rem;">עברית</button>
   <div id="physics-container"
     style="position: relative; width: 100%; height: 100vh; min-height: 600px; overflow: hidden; background: black;">
     <video id="webcam" autoplay playsinline
@@ -133,7 +135,7 @@
 
   <div class="view column align-center justify-center gap-xl">
     <div class="column padding-xl width-full" style="max-width:1140px">
-      <h3 class="flex width-full text-center" style="font-weight:200">
+      <h3 class="flex width-full text-center" style="font-weight:200" data-i18n="intro">
         we're under. simple on the surface, complex underneath.
         so we made a font that works the same way.
         one font. does all the work. adapts to tiny screens, figma files, pdf forms, whatever you throw at it. auto line
@@ -145,7 +147,7 @@
         <a href="https://github.com/weareunderdesign/under/archive/refs/heads/under.zip" download>
           <button type="button" aria-label="Download font" class="align-center justify-center padding-xl"
             style="border-radius:50px; border:none; color:#FFBFE1; background:#02903B">
-            <h3>download</h3>
+            <h3 data-i18n="download">download</h3>
           </button>
         </a>
         <a href="https://github.com/weareunderdesign/under" target="_blank" rel="noopener noreferrer">
@@ -174,42 +176,42 @@
     <div class="padding-l">
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">100</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:100;" contenteditable="true">under thin</h1>
+        <h1 class="weight-showcase-title text-center" style="font-weight:100;" contenteditable="true" data-i18n="w100">under thin</h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">200</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:200;" contenteditable="true">under extralight
+        <h1 class="weight-showcase-title text-center" style="font-weight:200;" contenteditable="true" data-i18n="w200">under extralight
         </h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">300</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:300;" contenteditable="true">under light</h1>
+        <h1 class="weight-showcase-title text-center" style="font-weight:300;" contenteditable="true" data-i18n="w300">under light</h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">400</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:400;" contenteditable="true">under regular</h1>
+        <h1 class="weight-showcase-title text-center" style="font-weight:400;" contenteditable="true" data-i18n="w400">under regular</h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">500</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:500;" contenteditable="true">under medium</h1>
+        <h1 class="weight-showcase-title text-center" style="font-weight:500;" contenteditable="true" data-i18n="w500">under medium</h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">600</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:600;" contenteditable="true">under semibold
+        <h1 class="weight-showcase-title text-center" style="font-weight:600;" contenteditable="true" data-i18n="w600">under semibold
         </h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">700</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:700;" contenteditable="true">under bold</h1>
+        <h1 class="weight-showcase-title text-center" style="font-weight:700;" contenteditable="true" data-i18n="w700">under bold</h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">800</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:800;" contenteditable="true">under extrabold
+        <h1 class="weight-showcase-title text-center" style="font-weight:800;" contenteditable="true" data-i18n="w800">under extrabold
         </h1>
       </div>
       <div class="row justify-center align-center justify-center gap-l">
         <div class="weight-badge">900</div>
-        <h1 class="weight-showcase-title text-center" style="font-weight:900;" contenteditable="true">under black</h1>
+        <h1 class="weight-showcase-title text-center" style="font-weight:900;" contenteditable="true" data-i18n="w900">under black</h1>
       </div>
     </div>
   </div>
@@ -229,11 +231,11 @@
         <div data-role="dot" data-weight="900" class="weight-dot"></div>
       </div>
       <div id="weightText" class="flex width-full justify-between">
-        <p class="no-margin">weight</p>
+        <p class="no-margin" data-i18n="weight-label">weight</p>
         <p id="currentWeight" class="no-margin">100</p>
       </div>
     </div>
-    <h1 id="letters" class="text-center no-margin"
+    <h1 id="letters" class="text-center no-margin" data-i18n="alphabet"
       style="font-size: 5rem; width:100%; font-family:'under var', sans-serif; white-space:nowrap;">
       ABCDEFGHIJKLM<br>
       NOPQRSTUVWXYZ<br>
@@ -250,8 +252,8 @@
       <video src="assets/go go go.mp4" autoplay muted loop playsinline class="flex width-full"></video>
 
       <div class="column">
-        <h3 class="text-center no-margin" style="color:#FF4B00; font-weight:200;">alternative letter</h3>
-        <p class="text-center no-margin" style="color:#FF4B00; font-weight:300;">the font offers alternative letterforms
+        <h3 class="text-center no-margin" style="color:#FF4B00; font-weight:200;" data-i18n="alt-h">alternative letter</h3>
+        <p class="text-center no-margin" style="color:#FF4B00; font-weight:300;" data-i18n="alt-p">the font offers alternative letterforms
           that can be accessed manually for stylistic variation</p>
       </div>
       <div class="flex-1 justify-center align-center justify-center gap-m stack">
@@ -259,8 +261,8 @@
         <video src="assets/r-r.mp4" autoplay muted loop playsinline class="flex width-50"></video>
       </div>
       <div class="column">
-        <h3 class="text-center no-margin" style="font-weight:200;">superscript and subscript</h3>
-        <p class="text-center no-margin" style="font-weight:300;">superscript (sups): raises text to superscript
+        <h3 class="text-center no-margin" style="font-weight:200;" data-i18n="sup-h">superscript and subscript</h3>
+        <p class="text-center no-margin" style="font-weight:300;" data-i18n="sup-p">superscript (sups): raises text to superscript
           position (e.g., x²). subscript (subs): lowers text to subscript position (e.g., H₂O).</p>
       </div>
       <div class="flex-1 justify-center align-center justify-center gap-m stack">
@@ -268,8 +270,8 @@
         <video src="assets/O2.mp4" autoplay muted loop playsinline class="flex width-50"></video>
       </div>
       <div class="column">
-        <h3 class="text-center no-margin" style="font-weight:200;">precision and control</h3>
-        <p class="text-center no-margin" style="font-weight:300;">custom spacing pairs for precision, and auto
+        <h3 class="text-center no-margin" style="font-weight:200;" data-i18n="prec-h">precision and control</h3>
+        <p class="text-center no-margin" style="font-weight:300;" data-i18n="prec-p">custom spacing pairs for precision, and auto
           letter-spacing for balanced flow. auto-letter spacing is adjusted per weight for optimal readability.</p>
       </div>
       <div class="flex-1 justify-center align-center justify-center gap-m stack">
@@ -277,8 +279,8 @@
         <video src="assets/ab.mp4" autoplay muted loop playsinline class="flex width-50"></video>
       </div>
       <div class="column">
-        <h3 class="text-center no-margin" style="color:#FF4B00; font-weight:200;">precise and simple</h3>
-        <p class="text-center no-margin" style="color:#FF4B00; font-weight:300;">clean lines, easy to read. no fancy
+        <h3 class="text-center no-margin" style="color:#FF4B00; font-weight:200;" data-i18n="simple-h">precise and simple</h3>
+        <p class="text-center no-margin" style="color:#FF4B00; font-weight:300;" data-i18n="simple-p">clean lines, easy to read. no fancy
           stuff just clarity and function.</p>
       </div>
       <div class="flex-1 justify-center align-center justify-center gap-m stack">
@@ -286,8 +288,8 @@
         <video src="assets/g.mp4" autoplay muted loop playsinline class="flex width-50"></video>
       </div>
       <div class="column">
-        <h3 class="text-center no-margin" style="color:#8159FB; font-weight:200;">pixel-perfect optimization</h3>
-        <p class="text-center no-margin" style="color:#8159FB; font-weight:300;">specifically optimized for 16px to
+        <h3 class="text-center no-margin" style="color:#8159FB; font-weight:200;" data-i18n="pixel-h">pixel-perfect optimization</h3>
+        <p class="text-center no-margin" style="color:#8159FB; font-weight:300;" data-i18n="pixel-p">specifically optimized for 16px to
           ensure crisp rendering auto-sizing for small text for better legibility.</p>
       </div>
       <div class="flex-1 justify-center align-center justify-center gap-m stack">
@@ -297,30 +299,30 @@
       <div id="underBox" class="flex-1 justify-between gap-l row stack">
         <div id="micro" class="flex-1 column">
           <div class="gap-m column">
-            <span style="font-weight:300; color:#8159FB">micro: 6-12pt</span>
+            <span style="font-weight:300; color:#8159FB" data-i18n="micro-label">micro: 6-12pt</span>
             <div style="height: 1px; background: #8159FB;"></div>
           </div>
-          <p class="text-l no-margin" style="font-weight:300;">
+          <p class="text-l no-margin" style="font-weight:300;" data-i18n="cuts-p">
             under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
             more air. text sits in between, holding the balance.
           </p>
         </div>
         <div id="text" class="flex-1 column">
           <div class="gap-m column">
-            <span style="font-weight:300; color:#8159FB">text: 13-20pt</span>
+            <span style="font-weight:300; color:#8159FB" data-i18n="text-label">text: 13-20pt</span>
             <div style="height: 1px; background: #8159FB;"></div>
           </div>
-          <p class="text no-margin" style="font-weight:300;">
+          <p class="text no-margin" style="font-weight:300;" data-i18n="cuts-p">
             under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
             more air. text sits in between, holding the balance.
           </p>
         </div>
         <div id="display" class="flex-1 column">
           <div class="gap-m column">
-            <span style="font-weight:300; color:#8159FB">display: 21pt and up</span>
+            <span style="font-weight:300; color:#8159FB" data-i18n="display-label">display: 21pt and up</span>
             <div style="height: 1px; background: #8159FB;"></div>
           </div>
-          <p class="display no-margin" style="font-weight:300;">
+          <p class="display no-margin" style="font-weight:300;" data-i18n="cuts-p">
             under comes in three cuts: display, text, micro. display goes tight and sharp. micro opens up less contrast,
             more air. text sits in between, holding the balance.
           </p>
@@ -332,7 +334,7 @@
     <div class="column padding-xl width-full" style="max-width:1140px">
       <img src="assets/extensive-weight-range.svg" alt="Extensive weight range graphic" decoding="async"
         loading="lazy" />
-      <p id="extensive-heading" class="text-center black no-margin" style="font-weight:200; line-height:1.4;">
+      <p id="extensive-heading" class="text-center black no-margin" style="font-weight:200; line-height:1.4;" data-i18n="extensive">
         from hairline to black to suit various design needs.
         designed to adapt seamlessly, whether for
         minimal elegance or striking statements
@@ -341,15 +343,15 @@
     <div class="flex width-full hidden-on-mobile">
       <div class="padding-l flex width-full">
         <div id="weightLabels" class="flex-1 justify-between flex width-full" style="cursor:pointer; font-weight:300">
-          <span style="transition: color 0.3s ease;" data-weight="100" data-step="0">thin</span>
-          <span style="transition: color 0.3s ease;" data-weight="200" data-step="1">extralight</span>
-          <span style="transition: color 0.3s ease;" data-weight="300" data-step="2">light</span>
-          <span style="color:#FF4B00; transition: color 0.3s ease;" data-weight="400" data-step="3">regular</span>
-          <span style="transition: color 0.3s ease;" data-weight="500" data-step="4">medium</span>
-          <span style="transition: color 0.3s ease;" data-weight="600" data-step="5">semibold</span>
-          <span style="transition: color 0.3s ease;" data-weight="700" data-step="6">bold</span>
-          <span style="transition: color 0.3s ease;" data-weight="800" data-step="7">extrabold</span>
-          <span style="transition: color 0.3s ease;" data-weight="900" data-step="8">black</span>
+          <span style="transition: color 0.3s ease;" data-weight="100" data-step="0" data-i18n="n100">thin</span>
+          <span style="transition: color 0.3s ease;" data-weight="200" data-step="1" data-i18n="n200">extralight</span>
+          <span style="transition: color 0.3s ease;" data-weight="300" data-step="2" data-i18n="n300">light</span>
+          <span style="color:#FF4B00; transition: color 0.3s ease;" data-weight="400" data-step="3" data-i18n="n400">regular</span>
+          <span style="transition: color 0.3s ease;" data-weight="500" data-step="4" data-i18n="n500">medium</span>
+          <span style="transition: color 0.3s ease;" data-weight="600" data-step="5" data-i18n="n600">semibold</span>
+          <span style="transition: color 0.3s ease;" data-weight="700" data-step="6" data-i18n="n700">bold</span>
+          <span style="transition: color 0.3s ease;" data-weight="800" data-step="7" data-i18n="n800">extrabold</span>
+          <span style="transition: color 0.3s ease;" data-weight="900" data-step="8" data-i18n="n900">black</span>
         </div>
         <div class="flex width-full" style="position:relative; height:15px">
           <div id="rulerLine" class="flex width-full"
@@ -358,7 +360,7 @@
           <div id="rulerTicks" class="flex-1 justify-between" style="position:absolute; top:0; left:0; right:0">
           </div>
         </div>
-        <div id="preview" class="align-center justify-center flex width-full"
+        <div id="preview" class="align-center justify-center flex width-full" data-i18n="preview"
           style="transition:font-weight 0.3s ease,color 0.3s ease; color:#FF4B00; overflow-x:auto; white-space:nowrap; font-size: 32rem;">
           Aa
         </div>
@@ -393,28 +395,28 @@
           <div class="column align-center justify-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
             <input id="fc-weightRange" type="range" min="100" max="900" step="1" value="900" class="range-slider flex width-full">
             <div class="flex-1 justify-between flex width-full black text-s no-margin" style="font-weight:400;">
-              <label for="fc-weightRange" data-hide-mobile>weight</label>
+              <label for="fc-weightRange" data-hide-mobile data-i18n="weight-label">weight</label>
               <div id="fc-weightValue">900</div>
             </div>
           </div>
           <div class="column align-center justify-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
             <input id="fc-sizeRange" type="range" min="20" max="300" step="1" value="300" class="range-slider flex width-full">
             <div class="flex-1 justify-between flex width-full black text-s no-margin" style="font-weight:400;">
-              <label for="fc-sizeRange" data-hide-mobile>size</label>
+              <label for="fc-sizeRange" data-hide-mobile data-i18n="size-label">size</label>
               <div id="fc-sizeValue">300 px</div>
             </div>
           </div>
           <div class="column align-center justify-center gap-s" style="width:31%; flex-grow:1; min-width:200px">
             <input id="fc-spacingRange" type="range" min="0" max="2" step="0.05" value="0" class="range-slider flex width-full">
             <div class="flex-1 justify-between flex width-full black text-s no-margin" style="font-weight:400;">
-              <label for="fc-spacingRange" data-hide-mobile>spacing</label>
+              <label for="fc-spacingRange" data-hide-mobile data-i18n="spacing-label">spacing</label>
               <div id="fc-spacingValue">0.00 em</div>
             </div>
           </div>
         </div>
       </div>
       <div class="flex-1 text-center justify-center align-center justify-center">
-          <h1 id="fc-output" contenteditable="true" spellcheck="false" class="padding-l flex width-full text-center no-margin"
+          <h1 id="fc-output" contenteditable="true" spellcheck="false" data-i18n="hey" class="padding-l flex width-full text-center no-margin"
             style="font-size: 5rem; border:none; outline:none; font-weight:900; font-size:300px; word-wrap:break-word; overflow-wrap:break-word; word-break:break-word; color:#02903B; transition:all 0.2s ease-in-out;">
             hey
           </h1>
@@ -459,22 +461,22 @@
 
     <div data-glyph-section class="row flex width-full padding-l gap-l hidden-on-mobile">
       <div class="flex width-full justify-between align-center justify-center gap-l">
-        <span class="text-m">glyphs set overview</span>
+        <span class="text-m" data-i18n="glyphs-title">glyphs set overview</span>
         <div class="column align-center justify-center gap-s">
           <input type="range" id="weightSlider" min="100" max="900" step="1" value="400" class="range-slider flex width-full">
           <div class="flex-1 justify-between flex width-full black text-s no-margin" style="font-weight:400;">
-            <label for="weightSlider" data-hide-mobile>weight</label>
+            <label for="weightSlider" data-hide-mobile data-i18n="weight-label">weight</label>
             <div id="weightValue">400</div>
           </div>
         </div>
       </div>
       <div class="flex-1">
         <div class="padding-l" style="background:#fafafa; border-radius:6px; height:100%">
-          <h2 class="padding-s text-m no-margin" style="color:#444;">uppercase</h2>
+          <h2 class="padding-s text-m no-margin" style="color:#444;" data-i18n="gl-upper">uppercase</h2>
           <div class="row gap-xs" id="uppercase"></div>
-          <h2 class="padding-s text-m no-margin" style="color:#444;">lowercase</h2>
+          <h2 class="padding-s text-m no-margin" style="color:#444;" data-i18n="gl-lower">lowercase</h2>
           <div class="row gap-xs" id="lowercase"></div>
-          <h2 class="padding-s text-m no-margin" style="color:#444;">numbers & symbols</h2>
+          <h2 class="padding-s text-m no-margin" style="color:#444;" data-i18n="gl-symbols">numbers & symbols</h2>
           <div class="row gap-xs" id="symbols"></div>
         </div>
       </div>
@@ -646,7 +648,7 @@
           class="flex width-50">
       </div>
       <a href="https://github.com/weareunderdesign/under/archive/refs/heads/under.zip" download style="text-decoration:none;" class="flex width-full">
-        <h1 class="text-center align-center justify-center inverse-primary no-margin flex width-full"
+        <h1 class="text-center align-center justify-center inverse-primary no-margin flex width-full" data-i18n="download"
           style="background:#014ADD; border-radius:400px; border:none; cursor:pointer; padding:1rem; height: 350px;">
           download
         </h1>
@@ -1069,10 +1071,19 @@
           weightValue.textContent = slider.value;
           glyphChar.style.fontWeight = slider.value;
         });
-        renderGlyphs("uppercase", "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
-        renderGlyphs("lowercase", "abcdefghijklmnopqrstuvwxyz".split(""));
-        renderGlyphs("symbols", "1234567890!?()#%*\\\"[]:;@+,.".split(""));
-        updateGlyphView('A');
+        const glyphSets = {
+          en: { upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", lower: "abcdefghijklmnopqrstuvwxyz", start: 'A' },
+          he: { upper: "אבגדהוזחטיכלמנסעפצקרשת", lower: "ךםןףץ", start: 'א' }
+        };
+        const setGlyphLang = (lang) => {
+          const set = glyphSets[lang] || glyphSets.en;
+          renderGlyphs("uppercase", set.upper.split(""));
+          renderGlyphs("lowercase", set.lower.split(""));
+          renderGlyphs("symbols", "1234567890!?()#%*\\\"[]:;@+,.".split(""));
+          updateGlyphView(set.start);
+        };
+        window.addEventListener('underlang', e => setGlyphLang(e.detail));
+        setGlyphLang('en');
         glyphChar.style.fontWeight = slider.value;
         weightValue.textContent = slider.value;
 
@@ -1117,6 +1128,77 @@
         glyphChar.addEventListener('DOMSubtreeModified', () => setTimeout(positionGuideLines, 50));
       }
     });
+  </script>
+  <script>
+    // hebrew / english toggle: swaps text + flips direction. assets stay english for now.
+    (() => {
+      const he = {
+        'intro': 'אנחנו אנדר. פשוטים על פני השטח, מורכבים מתחת. אז עשינו פונט שעובד בדיוק ככה. פונט אחד. עושה את כל העבודה. מתאים למסכים קטנים, קבצי פיגמה, טפסי pdf, מה שלא תזרקו עליו. גובה שורה אוטומטי. ריווח אוטומטי. צימוד אוטומטי. וריאבילי. קוד פתוח. מכירים את אינטר? הלווטיקה? הם בסדר. אבל רצינו משהו שעובד קשה כמונו. תחתית הוא הפונט הזה.',
+        'download': 'הורדה',
+        'w100': 'תחתית דקיק',
+        'w200': 'תחתית דק במיוחד',
+        'w300': 'תחתית דק',
+        'w400': 'תחתית רגיל',
+        'w500': 'תחתית בינוני',
+        'w600': 'תחתית חצי שמן',
+        'w700': 'תחתית שמן',
+        'w800': 'תחתית שמן במיוחד',
+        'w900': 'תחתית שחור',
+        'weight-label': 'משקל',
+        'size-label': 'גודל',
+        'spacing-label': 'ריווח',
+        'alphabet': 'אבגדהוזחטי<br>כךלמםנןסעפ<br>ףצץקרשת<br>1234567890<br>!?#*:;[]()%+=',
+        'alt-h': 'אות חלופית',
+        'alt-p': 'הפונט מציע צורות אות חלופיות שאפשר להפעיל ידנית לגיוון סגנוני',
+        'sup-h': 'כתב עילי וכתב תחתי',
+        'sup-p': 'כתב עילי (sups): מרים את הטקסט למעלה (למשל x²). כתב תחתי (subs): מוריד את הטקסט למטה (למשל H₂O).',
+        'prec-h': 'דיוק ושליטה',
+        'prec-p': 'זוגות ריווח מותאמים לדיוק, וריווח אותיות אוטומטי לזרימה מאוזנת. הריווח האוטומטי מכוון לכל משקל לקריאות מיטבית.',
+        'simple-h': 'מדויק ופשוט',
+        'simple-p': 'קווים נקיים, קל לקריאה. בלי קישוטים — רק בהירות ותפקוד.',
+        'pixel-h': 'אופטימיזציה מדויקת לפיקסל',
+        'pixel-p': 'מותאם במיוחד ל־16 פיקסלים לרינדור חד, עם התאמת גודל אוטומטית לטקסט קטן לקריאות טובה יותר.',
+        'micro-label': 'מיקרו: 6–12 נק׳',
+        'text-label': 'טקסט: 13–20 נק׳',
+        'display-label': 'דיספליי: 21 נק׳ ומעלה',
+        'cuts-p': 'תחתית מגיע בשלושה חיתוכים: דיספליי, טקסט, מיקרו. דיספליי הולך צמוד וחד. מיקרו נפתח — פחות קונטרסט, יותר אוויר. טקסט יושב באמצע ומחזיק את האיזון.',
+        'extensive': 'מדקיק ועד שחור, לכל צורך עיצובי. מותאם בצורה חלקה — מאלגנטיות מינימלית ועד הצהרות בולטות.',
+        'n100': 'דקיק',
+        'n200': 'דק במיוחד',
+        'n300': 'דק',
+        'n400': 'רגיל',
+        'n500': 'בינוני',
+        'n600': 'חצי שמן',
+        'n700': 'שמן',
+        'n800': 'שמן במיוחד',
+        'n900': 'שחור',
+        'preview': 'אב',
+        'hey': 'היי',
+        'glyphs-title': 'סקירת מערך הגליפים',
+        'gl-upper': 'אותיות',
+        'gl-lower': 'אותיות סופיות',
+        'gl-symbols': 'מספרים וסימנים'
+      };
+      const btn = document.getElementById('langToggle');
+      if (!btn) return;
+      let lang = 'en';
+      const apply = () => {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.dataset.i18n;
+          if (!(key in he)) return;
+          if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
+          el.innerHTML = lang === 'he' ? he[key] : el.dataset.en;
+        });
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'he' ? 'rtl' : 'ltr';
+        btn.textContent = lang === 'he' ? 'english' : 'עברית';
+        window.dispatchEvent(new CustomEvent('underlang', { detail: lang }));
+      };
+      btn.addEventListener('click', () => {
+        lang = lang === 'he' ? 'en' : 'he';
+        apply();
+      });
+    })();
   </script>
   <style>
     /* Prevent horizontal scrolling on mobile */
