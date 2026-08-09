@@ -58,6 +58,9 @@
             rotate: -13deg;
             font-size: clamp(2.6rem, 15vw, 13rem);
             white-space: nowrap;
+            /* max-content, or the box reports the container width and the fit math lies */
+            width: max-content;
+            flex-shrink: 0;
             /* js scales this down until the rotated word + its flinch room fits the viewport */
             transform-origin: center center;
             user-select: none;
@@ -282,23 +285,12 @@
         <div id="splain-hint" class="text-m">move to get splained</div>
     </div>
 
-    <div class="view column padding-xl align-center justify-center gap-xl">
-        <div class="column stack" style="align-items: center">
-            <div class="nudge_font width-75 text-center">branding is broken.<br>let's fix it.</div>
-            <h3 class="flex width-75 text-center">
-                from zero to brand. the startup sprint to identity.
-            </h3>
-        </div>
-        <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-            <div class="slot slot-lg random-color-change">
-                <h3>invite us</h3>
-            </div>
-        </a>
-    </div>
-
     <div class="view column align-center justify-center">
         <div class="column padding-xl width-full gap-xl" style="max-width:1140px">
-            <h1 class="nudge_font">the talk</h1>
+            <div class="nudge_font">branding is broken.<br>let's fix it.</div>
+            <h3 class="flex width-75">
+                from zero to brand. the startup sprint to identity.
+            </h3>
             <h3 class="flex width-75">
                 branding got captured by process. workshops that produce adjectives. decks nobody
                 opens. committees averaging taste into mush. we take it apart out loud - what
@@ -306,45 +298,16 @@
                 the theater.
             </h3>
             <h3 class="flex width-75">
-                then we show the alternative: a full brand - strategy, story, system, marketing -
-                built in 10 days. one champion, one direction, no decision fatigue. real sprints,
-                real work, and the moments it nearly broke.
+                then the alternative: a full brand - strategy, story, system, marketing - built in
+                10 days. one champion, one direction, no decision fatigue. real sprints, real work,
+                and the moments it nearly broke. you'll disagree with something. that's the point.
             </h3>
         </div>
     </div>
 
-    <div class="view column align-center justify-center" style="background-color: #ff4b00; color: white">
+    <div class="view column align-center justify-center gap-xl" style="background-color: #ff4b00; color: white; overflow: hidden">
         <div class="column padding-xl width-full gap-xl" style="max-width:1140px">
-            <h1 class="nudge_font">you leave with</h1>
-            <div class="column width-full">
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>a bullshit detector</dt>
-                    <dd class="flex">the difference between brand work and brand theater, in one sitting.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>a decision model</dt>
-                    <dd class="flex">who decides, when, and why consensus kills identity.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>the 10-day map</dt>
-                    <dd class="flex">the actual sprint - day by day, what goes in, what comes out.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>an argument</dt>
-                    <dd class="flex">you will disagree with something. that's the point. q&a runs long.</dd>
-                </dl>
-                <div class="rule"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="view column align-center justify-center">
-        <div class="column padding-xl width-full gap-xl" style="max-width:1140px">
-            <h1 class="nudge_font">the details</h1>
+            <div class="nudge_font">the details</div>
             <div class="column width-full">
                 <div class="rule"></div>
                 <dl class="spec-row">
@@ -358,11 +321,6 @@
                 </dl>
                 <div class="rule"></div>
                 <dl class="spec-row">
-                    <dt>where</dt>
-                    <dd class="flex">anywhere. we're based in tel aviv and we get on planes. travel is on you, the talk is the same.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
                     <dt>language</dt>
                     <dd class="flex">english or hebrew.</dd>
                 </dl>
@@ -372,13 +330,11 @@
                     <dd class="flex">inbal &amp; eden. the two people who run the sprint.</dd>
                 </dl>
                 <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>where</dt>
+                    <dd class="flex">anywhere. tel aviv is home, the stage isn't. travel is on you, the talk is the same.</dd>
+                </dl>
             </div>
-        </div>
-    </div>
-
-    <div class="column align-center justify-center gap-xl" style="overflow: hidden">
-        <div class="padding-xl width-full column align-center">
-            <h3 class="flex width-75 text-center">we get on planes. tel aviv is home, the stage isn't.</h3>
         </div>
         <div class="infinite-wrapper">
             <div class="scroll nudge_font" style="gap: 3rem">
@@ -397,7 +353,6 @@
                 <span>your city</span><span>·</span>
             </div>
         </div>
-        <div class="padding-xl"></div>
     </div>
 
     <div class="view column padding-xl align-center justify-center gap-xl random-color-change">
@@ -482,7 +437,7 @@
             });
             const spans = [...word.querySelectorAll("span")];
 
-            const PUSH = 26;
+            const PUSH = 12;
 
             // the word wants to be as big as the screen allows - but never cropped.
             // scale it down until the rotated bounding box plus flinch room fits.
