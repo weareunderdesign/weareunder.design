@@ -222,6 +222,19 @@
             opacity: 0.6;
         }
 
+        .heb {
+            font-family: var(--font-primary);
+            font-weight: 700;
+        }
+
+        .strip-cta {
+            display: block;
+        }
+
+        .strip-cta:hover span {
+            text-decoration: none;
+        }
+
         .rule {
             width: 100%;
             height: 1px;
@@ -356,7 +369,7 @@
         <div class="infinite-wrapper">
             <div class="scroll nudge_font" data-dir="-1" style="gap: 3rem">
                 <span>english</span><span>&middot;</span>
-                <span>hebrew</span><span>&middot;</span>
+                <span class="heb">עברית</span><span>&middot;</span>
             </div>
         </div>
         <div class="padding-l"></div>
@@ -384,19 +397,19 @@
         <div class="padding-l"></div>
     </div>
 
-    <div class="view column padding-xl align-center justify-center gap-xl random-color-change">
-        <div class="column stack" style="align-items: center">
-            <div class="nudge_font width-75 text-center" style="color: white">invite us to talk</div>
-            <h3 class="flex width-75 text-center">
-                tell us the room, the date, and who's in it. we'll bring the rest.
-            </h3>
-        </div>
-        <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
-            <div class="slot slot-lg" style="background-color: white; color: black">
-                <h3>let's talk</h3>
+    <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank" class="strip strip-cta random-color-change" style="color: white">
+        <div class="padding-l"></div>
+        <div class="infinite-wrapper">
+            <div class="scroll nudge_font" data-dir="-1" style="gap: 3rem">
+                <span>invite us to talk</span><span>&middot;</span>
+                <span>invite us to talk</span><span>&middot;</span>
+                <span>invite us to talk</span><span>&middot;</span>
+                <span>invite us to talk</span><span>&middot;</span>
+                <span>invite us to talk</span><span>&middot;</span>
             </div>
-        </a>
-    </div>
+        </div>
+        <div class="padding-l"></div>
+    </a>
 
     <under-footer></under-footer>
 
