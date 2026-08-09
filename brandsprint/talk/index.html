@@ -416,7 +416,24 @@
             const layer = document.getElementById("splain-layer");
             const counter = document.getElementById("splain-counter");
             const hint = document.getElementById("splain-hint");
+            const word = document.getElementById("splain-word");
             if (!layer) return;
+
+            // biggest size that still fits the screen whole. never cropped.
+            function fit() {
+                word.style.scale = "1";
+                const r = word.getBoundingClientRect();
+                const room = window.innerWidth > 768 ? 64 : 24;
+                word.style.scale = Math.min(
+                    1,
+                    (window.innerWidth - room) / r.width,
+                    (window.innerHeight - room) / r.height
+                ).toFixed(4);
+            }
+
+            fit();
+            window.addEventListener("resize", fit);
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 
             function shuffle(a) {
                 for (let i = a.length - 1; i > 0; i--) {
