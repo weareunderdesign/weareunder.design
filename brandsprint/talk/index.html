@@ -6,16 +6,16 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="invite us to talk. brandsplaining: branding is broken, let's fix it. from zero to brand: the startup sprint to identity. talks and workshops by under." />
+    <meta name="description" content="invite us to talk. brandsplaining: branding is broken, let's fix it. from zero to brand - the startup sprint to identity. a talk by under." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://weareunder.design/brandsprint/talk/" />
-    <meta property="og:title" content="invite us to talk | under" />
-    <meta property="og:description" content="brandsplaining. branding is broken. let's fix it. from zero to brand. the startup sprint to identity." />
+    <meta property="og:title" content="brandsplaining | invite us to talk" />
+    <meta property="og:description" content="branding is broken. let's fix it. from zero to brand - the startup sprint to identity." />
     <meta property="og:image" content="https://weareunder.design/brandsprint/images/cover.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://weareunder.design/brandsprint/talk/" />
-    <meta name="twitter:title" content="invite us to talk | under" />
-    <meta name="twitter:description" content="brandsplaining. branding is broken. let's fix it. from zero to brand. the startup sprint to identity." />
+    <meta name="twitter:title" content="brandsplaining | invite us to talk" />
+    <meta name="twitter:description" content="branding is broken. let's fix it. from zero to brand - the startup sprint to identity." />
     <meta name="twitter:image" content="https://weareunder.design/brandsprint/images/cover.png" />
     <link rel="canonical" href="https://weareunder.design/brandsprint/talk/" />
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png" />
@@ -43,17 +43,143 @@
             }
         }
 
-        .scroll {
-            flex-wrap: nowrap;
-            display: flex;
-            gap: 5rem;
-            width: max-content;
+        /* ---------- hero: the splain layer ---------- */
+
+        #hero {
+            position: relative;
+            overflow: hidden;
+            cursor: crosshair;
         }
 
-        .infinite-wrapper {
-            width: 100%;
-            overflow-x: hidden;
+        #splain-word {
+            position: relative;
+            z-index: 2;
+            color: white;
+            rotate: -13deg;
+            font-size: clamp(2.6rem, 15vw, 13rem);
+            user-select: none;
         }
+
+        #splain-word span {
+            display: inline-block;
+            transition: transform 220ms cubic-bezier(.2, .8, .2, 1);
+        }
+
+        #splain-layer {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .splain {
+            position: absolute;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 260ms ease, transform 260ms ease;
+            white-space: nowrap;
+            max-width: 42vw;
+        }
+
+        .splain.on {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .splain-dot {
+            position: absolute;
+            left: -7px;
+            top: -7px;
+            width: 14px;
+            height: 14px;
+            border-radius: 100%;
+            background: white;
+        }
+
+        .splain-line {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 1px;
+            width: 64px;
+            background: white;
+            transform-origin: left center;
+        }
+
+        .splain-label {
+            position: absolute;
+            left: 64px;
+            top: -1.1em;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.95rem;
+            line-height: 1;
+            color: black;
+            background: white;
+            white-space: nowrap;
+        }
+
+        .splain.flip .splain-label {
+            left: auto;
+            right: 64px;
+        }
+
+        .splain.flip .splain-line {
+            transform: scaleX(-1);
+        }
+
+        #splain-counter {
+            position: absolute;
+            z-index: 4;
+            bottom: 32px;
+            left: 32px;
+            color: white;
+            mix-blend-mode: difference;
+        }
+
+        #splain-hint {
+            position: absolute;
+            z-index: 4;
+            bottom: 32px;
+            right: 32px;
+            color: white;
+            mix-blend-mode: difference;
+        }
+
+        @media screen and (max-width: 768px) {
+            .splain-label {
+                font-size: 0.8rem;
+                padding: 5px 10px;
+            }
+
+            .splain-line {
+                width: 34px;
+            }
+
+            .splain-label {
+                left: 34px;
+            }
+
+            .splain.flip .splain-label {
+                right: 34px;
+            }
+
+            #splain-counter,
+            #splain-hint {
+                bottom: 16px;
+                font-size: 0.8rem;
+            }
+
+            #splain-hint {
+                right: 16px;
+            }
+
+            #splain-counter {
+                left: 16px;
+            }
+        }
+
+        /* ---------- rest ---------- */
 
         .slot {
             border-radius: 100%;
@@ -73,39 +199,56 @@
             margin: 0;
         }
 
-        .quote {
-            min-width: 400px;
-            max-width: 400px;
+        .rule {
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.15;
+        }
+
+        .spec-row {
+            display: flex;
+            gap: 2rem;
+            padding: 1.25rem 0;
+            flex-wrap: nowrap;
+        }
+
+        .spec-row dt {
+            min-width: 220px;
+            margin: 0;
+            opacity: 0.5;
+        }
+
+        .spec-row dd {
+            margin: 0;
         }
 
         @media screen and (max-width: 768px) {
-            .quote {
-                min-width: 280px;
-                max-width: 280px;
+            .spec-row {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .spec-row dt {
+                min-width: 0;
             }
         }
-
-        .talk-number {
-            font-family: "Nudge", sans-serif;
-            font-size: 2rem;
-            opacity: 0.5;
-        }
     </style>
-    <title>invite us to talk | under</title>
+    <title>brandsplaining | invite us to talk</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "name": "talks & workshops by under",
+      "name": "brandsplaining - a talk by under",
       "provider": {
         "@type": "Organization",
         "name": "under",
         "url": "https://weareunder.design"
       },
-      "description": "talks and workshops on branding for startups. brandsplaining: branding is broken, let's fix it. from zero to brand: the startup sprint to identity.",
+      "description": "branding is broken. let's fix it. from zero to brand - the startup sprint to identity. a talk for founders, teams, funds and accelerators.",
       "url": "https://weareunder.design/brandsprint/talk/",
       "areaServed": "Worldwide",
-      "serviceType": "keynote talk, workshop"
+      "serviceType": "keynote talk"
     }
     </script>
 
@@ -115,174 +258,112 @@
 
     <under-navigation></under-navigation>
 
-    <div class="view random-color-change column align-center justify-center" style="padding-bottom: 5vw; overflow: hidden">
-        <div class="view row align-center justify-center padding-xl ping-pong" style="position: relative">
-            <div class="column padding-xl width-full gap-xl" style="align-items: center">
-                <h1 class="nudge_font text-center" style="color: white; rotate: -13deg; font-size: clamp(3rem, 16vw, 12rem);">
-                    invite us<br>to talk
-                </h1>
-            </div>
+    <div class="view random-color-change column align-center justify-center" id="hero">
+        <div class="view row align-center justify-center padding-xl" style="position: relative">
+            <h1 class="nudge_font text-center" id="splain-word">brandsplaining</h1>
         </div>
+        <div id="splain-layer"></div>
+        <div id="splain-counter" class="text-m">0 opinions</div>
+        <div id="splain-hint" class="text-m">move to get splained</div>
     </div>
 
     <div class="view column padding-xl align-center justify-center gap-xl">
         <div class="column stack" style="align-items: center">
-            <div class="nudge_font width-75 text-center">we come with<br>opinions</div>
+            <div class="nudge_font width-75 text-center">branding is broken.<br>let's fix it.</div>
             <h3 class="flex width-75 text-center">
-                two talks. one about why branding is broken. one about how to build a brand from zero.
-                both built on 100+ startup brands, and a 10-day sprint that shouldn't work but does.
+                from zero to brand. the startup sprint to identity.
             </h3>
         </div>
         <a href="https://calendar.app.google/qQKygiDXCRbZbD366" target="_blank">
             <div class="slot slot-lg random-color-change">
-                <h3>let's talk</h3>
+                <h3>invite us</h3>
             </div>
         </a>
     </div>
 
-    <div class="view column align-center justify-center gap-xl" id="talks">
-        <div class="column padding-xl width-full gap-l" style="max-width:1140px">
-
-            <div class="column padding-xl gap-l" style="background-color: #ff4b00">
-                <div class="talk-number">talk 01</div>
-                <h1 class="nudge_font" style="color: white">brandsplaining</h1>
-                <h3 class="flex width-75">branding is broken. let's fix it.</h3>
-                <p class="flex width-75">
-                    branding got captured by process. workshops that produce adjectives.
-                    decks nobody opens. committees averaging taste into mush.
-                    we take it apart in public - what actually makes a brand work,
-                    what's theater, and why the industry keeps selling the theater.
-                </p>
-                <p class="flex width-75">
-                    for: founders, marketers, designers, anyone who's ever sat through a rebrand.
-                </p>
-            </div>
-
-            <div class="column padding-xl gap-l" style="background-color: #ffbfe1">
-                <div class="talk-number">talk 02</div>
-                <h1 class="nudge_font">from zero to brand</h1>
-                <h3 class="flex width-75">the startup sprint to identity.</h3>
-                <p class="flex width-75">
-                    the whole method, out loud. how a full brand - strategy, story, system,
-                    marketing - gets built in 10 days. one champion, one direction,
-                    no decision fatigue. we walk through real sprints, real work, real
-                    moments where it nearly broke.
-                </p>
-                <p class="flex width-75">
-                    for: early-stage founders, accelerators, vc portfolios, design teams.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="view column align-center justify-center gap-xl" id="format">
-        <div class="column padding-xl width-full gap-xl stack" style="max-width:1140px;align-items: center">
-            <div class="nudge_font text-center">how it runs</div>
-            <h3 class="flex width-75 text-center">
-                keynote, workshop, or a room full of founders. english or hebrew. on stage or on a call.
+    <div class="view column align-center justify-center">
+        <div class="column padding-xl width-full gap-xl" style="max-width:1140px">
+            <h1 class="nudge_font">the talk</h1>
+            <h3 class="flex width-75">
+                branding got captured by process. workshops that produce adjectives. decks nobody
+                opens. committees averaging taste into mush. we take it apart out loud - what
+                actually makes a brand work, what's theater, and why the industry keeps selling
+                the theater.
+            </h3>
+            <h3 class="flex width-75">
+                then we show the alternative: a full brand - strategy, story, system, marketing -
+                built in 10 days. one champion, one direction, no decision fatigue. real sprints,
+                real work, and the moments it nearly broke.
             </h3>
         </div>
-        <div class="column padding-xl width-full gap-l" style="max-width:1140px">
-            <div class="row gap-m stack" style="flex-wrap: nowrap">
-                <div class="flex-1 column gap-l align-start">
-                    <img class="flex width-full" src="../images/quick.svg" alt="talk format" />
-                    <div class="column">
-                        <h5>keynote</h5>
-                        <p>30-45 minutes. one story, told hard. plus q&a that usually runs long.</p>
-                    </div>
-                </div>
-                <div class="flex-1 column gap-l align-start">
-                    <img class="flex width-full" src="../images/team.svg" alt="workshop format" />
-                    <div class="column">
-                        <h5>workshop</h5>
-                        <p>half a day. your team, your brand, real decisions made in the room.</p>
-                    </div>
-                </div>
-                <div class="flex-1 column gap-l align-start">
-                    <img class="flex width-full" src="../images/Handshake.svg" alt="portfolio session format" />
-                    <div class="column">
-                        <h5>portfolio session</h5>
-                        <p>for funds and accelerators. one session, many founders, no fluff.</p>
-                    </div>
-                </div>
+    </div>
+
+    <div class="view column align-center justify-center" style="background-color: #ff4b00; color: white">
+        <div class="column padding-xl width-full gap-xl" style="max-width:1140px">
+            <h1 class="nudge_font">you leave with</h1>
+            <div class="column width-full">
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>a bullshit detector</dt>
+                    <dd class="flex">the difference between brand work and brand theater, in one sitting.</dd>
+                </dl>
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>a decision model</dt>
+                    <dd class="flex">who decides, when, and why consensus kills identity.</dd>
+                </dl>
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>the 10-day map</dt>
+                    <dd class="flex">the actual sprint - day by day, what goes in, what comes out.</dd>
+                </dl>
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>an argument</dt>
+                    <dd class="flex">you will disagree with something. that's the point. q&a runs long.</dd>
+                </dl>
+                <div class="rule"></div>
             </div>
         </div>
     </div>
 
-    <div class="padding-xl"></div>
-    <div class="infinite-wrapper">
-        <div class="scroll">
-            <img src="../logos/Logo1.svg" alt="under client logo" />
-            <img src="../logos/Logo2.svg" alt="under client logo" />
-            <img src="../logos/Logo3.svg" alt="under client logo" />
-            <img src="../logos/Logo4.svg" alt="under client logo" />
-            <img src="../logos/Logo5.svg" alt="under client logo" />
-            <img src="../logos/Logo6.svg" alt="under client logo" />
-            <img src="../logos/Logo7.svg" alt="under client logo" />
-            <img src="../logos/Logo8.svg" alt="under client logo" />
-            <img src="../logos/Logo9.svg" alt="under client logo" />
-            <img src="../logos/Logo10.svg" alt="under client logo" />
-            <img src="../logos/Logo11.svg" alt="under client logo" />
-            <img src="../logos/Logo12.svg" alt="under client logo" />
-            <img src="../logos/Logo13.svg" alt="under client logo" />
-            <img src="../logos/Logo14.svg" alt="under client logo" />
-            <img src="../logos/Logo15.svg" alt="under client logo" />
-            <img src="../logos/Logo16.svg" alt="under client logo" />
-            <img src="../logos/Logo17.svg" alt="under client logo" />
-            <img src="../logos/Logo18.svg" alt="under client logo" />
-            <img src="../logos/Logo19.svg" alt="under client logo" />
-            <img src="../logos/Logo20.svg" alt="under client logo" />
-            <img src="../logos/Logo21.svg" alt="under client logo" />
-            <img src="../logos/Logo22.svg" alt="under client logo" />
-            <img src="../logos/Logo23.svg" alt="under client logo" />
-            <img src="../logos/Logo24.svg" alt="under client logo" />
-            <img src="../logos/Logo25.svg" alt="under client logo" />
-            <img src="../logos/Logo26.svg" alt="under client logo" />
-        </div>
-    </div>
-    <div class="padding-xl"></div>
-
-    <div class="column align-center justify-center gap-xl text-center">
-        <div class="infinite-wrapper">
-            <div class="scroll align-center justify-center">
-                <div class="quote">
-                    <h4>the brand sprint as a process is the right one for all startups.</h4>
-                    <p>yoav oren, ceo, zoog</p>
-                </div>
-                <div class="quote">
-                    <h4>working w/ under is one of those rare cases where trade-offs are almost non-existent.</h4>
-                    <p>yishay harel, ceo, dymension</p>
-                </div>
-                <div class="quote">
-                    <h4>
-                        you are soul players who understand the market needs - efficiency, creativity, and know-how
-                        to smile.
-                    </h4>
-                    <p>bar geron, ceo, balance</p>
-                </div>
-                <div class="quote">
-                    <h4>
-                        you would never be able to tell that this high-quality brand work was done in a single
-                        10-day sprint.
-                    </h4>
-                    <p>noga sapir, ceo, reflect innovation</p>
-                </div>
-                <div class="quote">
-                    <h4>
-                        you perfectly captured the 'glilot dna'! bold, high-conviction, and entirely focused on the
-                        momentum of our founders.
-                    </h4>
-                    <p>glilot capital</p>
-                </div>
+    <div class="view column align-center justify-center">
+        <div class="column padding-xl width-full gap-xl" style="max-width:1140px">
+            <h1 class="nudge_font">the details</h1>
+            <div class="column width-full">
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>length</dt>
+                    <dd class="flex">30-45 minutes as a keynote. half a day as a workshop with your team.</dd>
+                </dl>
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>room</dt>
+                    <dd class="flex">conferences, portfolio days, accelerators, in-house teams. on stage or on a call.</dd>
+                </dl>
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>where</dt>
+                    <dd class="flex">anywhere. we're based in tel aviv and we get on planes. travel is on you, the talk is the same.</dd>
+                </dl>
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>language</dt>
+                    <dd class="flex">english or hebrew.</dd>
+                </dl>
+                <div class="rule"></div>
+                <dl class="spec-row">
+                    <dt>who's talking</dt>
+                    <dd class="flex">inbal &amp; eden. the two people who run the sprint.</dd>
+                </dl>
+                <div class="rule"></div>
             </div>
         </div>
     </div>
-    <div class="padding-xl"></div>
 
     <div class="view column padding-xl align-center justify-center gap-xl random-color-change">
         <div class="column stack" style="align-items: center">
-            <div class="nudge_font width-75 text-center" style="color: white">book us</div>
+            <div class="nudge_font width-75 text-center" style="color: white">invite us to talk</div>
             <h3 class="flex width-75 text-center">
                 tell us the room, the date, and who's in it. we'll bring the rest.
             </h3>
@@ -294,41 +375,144 @@
         </a>
     </div>
 
-    <under-slider></under-slider>
     <under-footer></under-footer>
 
     <script src="../../js/footer.js"></script>
     <script src="../../js/header.js"></script>
-    <script src="../../js/pingpong.js"></script>
     <script src="../../js/randomcolorchange.js"></script>
-    <script src="../../js/slider.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.scroll').forEach((scroll, index) => {
-                scroll.innerHTML += scroll.innerHTML;
-                const speed = 0.5;
-                const reverse = index === 1;
-                let position = reverse ? scroll.scrollWidth / 2 : 0;
+        // the hero splains itself. move the mouse, collect opinions.
+        (function () {
+            const OPINIONS = [
+                "can you make it pop?",
+                "make the logo bigger",
+                "our competitor uses blue",
+                "let's do a workshop first",
+                "my wife didn't like it",
+                "can we see 3 more directions?",
+                "it needs to feel more premium",
+                "is this on brand?",
+                "let's a/b test the logo",
+                "the board wants a gradient",
+                "can it be more human?",
+                "we need a brand book. 200 pages.",
+                "let's align on the alignment",
+                "what does the data say?",
+                "just play with it a bit",
+                "i'll know it when i see it",
+                "can you make it more apple?",
+                "circle back next quarter",
+                "the kerning feels off. it isn't.",
+                "add ai to the tagline",
+            ];
 
-                function animate() {
-                    if (reverse) {
-                        position -= speed;
-                        if (position <= 0) {
-                            position = scroll.scrollWidth / 2;
-                        }
-                    } else {
-                        position += speed;
-                        if (position >= scroll.scrollWidth / 2) {
-                            position = 0;
-                        }
-                    }
-                    scroll.style.transform = `translateX(-${position}px)`;
-                    requestAnimationFrame(animate);
-                }
-                animate();
+            const word = document.getElementById("splain-word");
+            const layer = document.getElementById("splain-layer");
+            const counter = document.getElementById("splain-counter");
+            const hint = document.getElementById("splain-hint");
+            const hero = document.getElementById("hero");
+            if (!word || !layer) return;
+
+            // split the word into letters so it can flinch away from the cursor
+            const letters = word.textContent.split("");
+            word.textContent = "";
+            letters.forEach((ch) => {
+                const s = document.createElement("span");
+                s.textContent = ch;
+                word.appendChild(s);
             });
-        });
+            const spans = [...word.querySelectorAll("span")];
+
+            let count = 0;
+            let queue = shuffle([...OPINIONS]);
+            let last = 0;
+            let hinted = false;
+
+            function shuffle(a) {
+                for (let i = a.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [a[i], a[j]] = [a[j], a[i]];
+                }
+                return a;
+            }
+
+            function splain(x, y) {
+                if (!queue.length) queue = shuffle([...OPINIONS]);
+                const text = queue.pop();
+
+                const el = document.createElement("div");
+                el.className = "splain";
+                if (x > window.innerWidth * 0.55) el.classList.add("flip");
+                el.style.left = x + "px";
+                el.style.top = y + "px";
+                el.style.rotate = (Math.random() * 10 - 5).toFixed(1) + "deg";
+                el.innerHTML =
+                    '<div class="splain-dot"></div>' +
+                    '<div class="splain-line"></div>' +
+                    '<div class="splain-label">' + text + "</div>";
+                layer.appendChild(el);
+
+                requestAnimationFrame(() => el.classList.add("on"));
+
+                count++;
+                counter.textContent = count + (count === 1 ? " opinion" : " opinions");
+                if (!hinted) {
+                    hint.textContent = "this is the problem";
+                    hinted = true;
+                }
+
+                setTimeout(() => el.classList.remove("on"), 2200);
+                setTimeout(() => el.remove(), 2700);
+
+                // keep the layer honest
+                while (layer.children.length > 9) layer.firstChild.remove();
+            }
+
+            function flinch(x, y) {
+                const rect = word.getBoundingClientRect();
+                spans.forEach((s) => {
+                    const r = s.getBoundingClientRect();
+                    const cx = r.left + r.width / 2;
+                    const cy = r.top + r.height / 2;
+                    const dx = cx - x;
+                    const dy = cy - y;
+                    const d = Math.hypot(dx, dy);
+                    const radius = Math.max(160, rect.height * 1.2);
+                    if (d < radius) {
+                        const push = (1 - d / radius) * 26;
+                        s.style.transform =
+                            "translate(" + (dx / (d || 1)) * push + "px," + (dy / (d || 1)) * push + "px)";
+                    } else {
+                        s.style.transform = "";
+                    }
+                });
+            }
+
+            function onMove(x, y) {
+                flinch(x, y);
+                const now = performance.now();
+                if (now - last > 420) {
+                    last = now;
+                    splain(x, y);
+                }
+            }
+
+            hero.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
+            hero.addEventListener("touchmove", (e) => {
+                const t = e.touches[0];
+                if (t) onMove(t.clientX, t.clientY);
+            }, { passive: true });
+            hero.addEventListener("mouseleave", () => spans.forEach((s) => (s.style.transform = "")));
+
+            // an opinion arrives whether you asked for it or not
+            setTimeout(function seed() {
+                if (count === 0) {
+                    splain(window.innerWidth * 0.3, window.innerHeight * 0.7);
+                    setTimeout(seed, 2600);
+                }
+            }, 1400);
+        })();
     </script>
 
 </body>
