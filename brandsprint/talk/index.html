@@ -213,6 +213,15 @@
             padding: 0.12em 0 0.2em;
         }
 
+        .strip {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .strip .text-m {
+            opacity: 0.6;
+        }
+
         .rule {
             width: 100%;
             height: 1px;
@@ -302,9 +311,61 @@
         </div>
     </div>
 
-    <div class="view column align-center justify-center gap-xl" style="background-color: #ff4b00; color: white; overflow: hidden">
+    <div class="strip" style="background-color: #fdc800; color: #000">
+        <div class="padding-l"><span class="text-m">length</span></div>
         <div class="infinite-wrapper">
-            <div class="scroll nudge_font" style="gap: 3rem">
+            <div class="scroll nudge_font" data-dir="1" style="gap: 3rem">
+                <span>30-45 minutes</span><span>&middot;</span>
+                <span>a keynote</span><span>&middot;</span>
+                <span>half a day</span><span>&middot;</span>
+                <span>a workshop</span><span>&middot;</span>
+            </div>
+        </div>
+        <div class="padding-l"></div>
+    </div>
+
+    <div class="strip" style="background-color: #014add; color: #fff">
+        <div class="padding-l"><span class="text-m">who it's for</span></div>
+        <div class="infinite-wrapper">
+            <div class="scroll nudge_font" data-dir="-1" style="gap: 3rem">
+                <span>founders</span><span>&middot;</span>
+                <span>vcs</span><span>&middot;</span>
+                <span>accelerators</span><span>&middot;</span>
+                <span>conferences</span><span>&middot;</span>
+                <span>in-house teams</span><span>&middot;</span>
+                <span>anyone who sat through a rebrand</span><span>&middot;</span>
+            </div>
+        </div>
+        <div class="padding-l"></div>
+    </div>
+
+    <div class="strip" style="background-color: #ffbfe1; color: #000">
+        <div class="padding-l"><span class="text-m">who's talking</span></div>
+        <div class="infinite-wrapper">
+            <div class="scroll nudge_font" data-dir="1" style="gap: 3rem">
+                <span>inbal</span><span>&middot;</span>
+                <span>eden</span><span>&middot;</span>
+                <span>the two people who run the sprint</span><span>&middot;</span>
+            </div>
+        </div>
+        <div class="padding-l"></div>
+    </div>
+
+    <div class="strip" style="background-color: #02903b; color: #fff">
+        <div class="padding-l"><span class="text-m">language</span></div>
+        <div class="infinite-wrapper">
+            <div class="scroll nudge_font" data-dir="-1" style="gap: 3rem">
+                <span>english</span><span>&middot;</span>
+                <span>hebrew</span><span>&middot;</span>
+            </div>
+        </div>
+        <div class="padding-l"></div>
+    </div>
+
+    <div class="strip" style="background-color: #ff4b00; color: #fff">
+        <div class="padding-l"><span class="text-m">where</span></div>
+        <div class="infinite-wrapper">
+            <div class="scroll nudge_font" data-dir="1" style="gap: 3rem">
                 <span>tel aviv</span><span>&middot;</span>
                 <span>new york</span><span>&middot;</span>
                 <span>london</span><span>&middot;</span>
@@ -318,35 +379,6 @@
                 <span>singapore</span><span>&middot;</span>
                 <span>toronto</span><span>&middot;</span>
                 <span>your city</span><span>&middot;</span>
-            </div>
-        </div>
-        <div class="column padding-xl width-full gap-xl" style="max-width:1140px">
-            <div class="column width-full">
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>length</dt>
-                    <dd class="flex">30-45 minutes as a keynote. half a day as a workshop with your team.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>who it's for</dt>
-                    <dd class="flex">founders, and the people around them - vcs, accelerators, conferences, in-house teams.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>language</dt>
-                    <dd class="flex">english or hebrew.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>who's talking</dt>
-                    <dd class="flex">inbal &amp; eden. the two people who run the sprint.</dd>
-                </dl>
-                <div class="rule"></div>
-                <dl class="spec-row">
-                    <dt>where</dt>
-                    <dd class="flex">anywhere. tel aviv is home, the stage isn't. travel is on you, the talk is the same.</dd>
-                </dl>
             </div>
         </div>
         <div class="padding-l"></div>
@@ -377,12 +409,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.scroll').forEach((scroll) => {
                 scroll.innerHTML += scroll.innerHTML;
-                const speed = 0.5;
-                let position = 0;
+                const speed = 0.5 * (scroll.dataset.dir === "-1" ? -1 : 1);
+                let position = scroll.dataset.dir === "-1" ? scroll.scrollWidth / 2 : 0;
 
                 function animate() {
                     position += speed;
                     if (position >= scroll.scrollWidth / 2) position = 0;
+                    if (position <= 0) position = scroll.scrollWidth / 2;
                     scroll.style.transform = `translateX(-${position}px)`;
                     requestAnimationFrame(animate);
                 }
