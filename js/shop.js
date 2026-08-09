@@ -129,8 +129,10 @@ async function initStore() {
       const d = await q(`{ product(handle:"${handle}") { ${PRODUCT} } }`);
       d.product ? renderProduct(d.product, el) : el.innerHTML = '<p>not found</p>';
     } else {
-      const d = await q(`{ products(first:20) { edges { node { ${PRODUCT} } } } }`);
-      const p = n(d.products.edges);
+      let d = await q(`{ collection(handle:"home-page") { products(first:50) { edges { node { ${PRODUCT} } } } } }`);
+      let conn = d.collection?.products;
+      if (!conn) conn = (await q(`{ products(first:50) { edges { node { ${PRODUCT} } } } }`)).products;
+      const p = n(conn.edges);
       p.length ? renderGrid(p, el) : el.innerHTML = '<p>no products yet</p>';
     }
   } catch(e) { el.innerHTML = '<p>could not load</p>'; console.error(e); }
