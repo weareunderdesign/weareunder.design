@@ -27,9 +27,22 @@
       color: var(--ink);
     }
 
+    h2 {
+      direction: ltr;
+      text-align: left;
+      max-width: 1600px;
+      margin: 56px auto 16px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .45;
+    }
+    h2:first-of-type { margin-top: 0; }
+
     .sheet {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 40px;
       direction: ltr;
       max-width: 1600px;
@@ -39,7 +52,6 @@
     .label {
       font-size: 11px;
       letter-spacing: .08em;
-      text-transform: lowercase;
       opacity: .5;
       margin-bottom: 6px;
       direction: ltr;
@@ -57,7 +69,6 @@
       flex-direction: column;
     }
 
-    /* meta rails */
     .meta {
       position: absolute;
       inset-inline: 4cqw;
@@ -72,25 +83,28 @@
     .meta.bot { bottom: 4cqw; }
 
     .fill { flex: 1; display: flex; align-items: center; justify-content: center; }
+    .art { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .rot { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-90deg); white-space: nowrap; }
+    .band { flex: 1; display: flex; align-items: center; justify-content: center; }
   </style>
 </head>
 
 <body>
+
+  <h2>A · wordmark</h2>
   <div class="sheet">
 
-    <!-- 01 — word takes the whole sheet -->
+    <!-- 01 -->
     <div>
       <div class="label">01 · word / full bleed</div>
       <div class="p" style="background:var(--orange);color:var(--paper)">
         <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
-        <div class="fill">
-          <span style="font-size:22cqw;font-weight:900;line-height:.78;letter-spacing:-.02em">תחתית</span>
-        </div>
+        <div class="fill"><span style="font-size:22cqw;font-weight:900;line-height:.78;letter-spacing:-.02em">תחתית</span></div>
         <div class="meta bot"><span>פונט משתנה</span><span>100–900</span></div>
       </div>
     </div>
 
-    <!-- 02 — weight ladder -->
+    <!-- 02 -->
     <div>
       <div class="label">02 · weight ladder 100→900</div>
       <div class="p" style="background:var(--blue);color:var(--paper);justify-content:center;gap:.4cqw;padding:12cqw 5cqw">
@@ -108,109 +122,26 @@
       </div>
     </div>
 
-    <!-- 03 — alphabet sheet, colour cycled -->
+    <!-- 03 -->
     <div>
-      <div class="label">03 · alphabet sheet</div>
-      <div class="p" style="padding:11cqw 5cqw">
-        <div class="meta top"><span>תחתית</span><span>מערך הגליפים</span></div>
-        <div class="fill" style="display:grid;grid-template-columns:repeat(9,1fr);place-items:center;align-content:center;row-gap:3cqw;font-size:15cqw;font-weight:800;line-height:1;padding:0 1cqw"><span style="color:var(--orange)">א</span><span style="color:var(--blue)">ב</span><span style="color:var(--green)">ג</span><span style="color:var(--purple)">ד</span><span style="color:var(--yellow)">ה</span><span style="color:var(--pink)">ו</span><span style="color:var(--orange)">ז</span><span style="color:var(--blue)">ח</span><span style="color:var(--green)">ט</span><span style="color:var(--purple)">י</span><span style="color:var(--yellow)">כ</span><span style="color:var(--pink)">ל</span><span style="color:var(--orange)">מ</span><span style="color:var(--blue)">נ</span><span style="color:var(--green)">ס</span><span style="color:var(--purple)">ע</span><span style="color:var(--yellow)">פ</span><span style="color:var(--pink)">צ</span><span style="color:var(--orange)">ק</span><span style="color:var(--blue)">ר</span><span style="color:var(--green)">ש</span><span style="color:var(--purple)">ת</span><span style="color:var(--yellow)">ך</span><span style="color:var(--pink)">ם</span><span style="color:var(--orange)">ן</span><span style="color:var(--blue)">ף</span><span style="color:var(--green)">ץ</span></div>
-        <div class="meta bot"><span>22 אותיות</span><span>5 סופיות</span></div>
+      <div class="label">03 · shrinking rainbow stack</div>
+      <div class="p" style="background:var(--ink);justify-content:center;align-items:center;gap:.6cqw">
+        <div class="meta top" style="color:var(--paper)"><span>תחתית</span><span>גרסה 1</span></div>
+        <span style="font-size:19cqw;font-weight:900;line-height:.95;color:var(--orange)">תחתית</span>
+        <span style="font-size:17cqw;font-weight:800;line-height:.95;color:var(--yellow)">תחתית</span>
+        <span style="font-size:15cqw;font-weight:700;line-height:.95;color:var(--green)">תחתית</span>
+        <span style="font-size:13cqw;font-weight:600;line-height:.95;color:var(--blue)">תחתית</span>
+        <span style="font-size:11cqw;font-weight:500;line-height:.95;color:var(--purple)">תחתית</span>
+        <span style="font-size:9cqw;font-weight:400;line-height:.95;color:var(--pink)">תחתית</span>
+        <span style="font-size:7cqw;font-weight:300;line-height:.95;color:var(--orange)">תחתית</span>
+        <div class="meta bot" style="color:var(--paper)"><span>פונט משתנה</span><span>100–900</span></div>
       </div>
     </div>
 
-    <!-- 04 — one giant glyph -->
+    <!-- 04 -->
     <div>
-      <div class="label">04 · single glyph</div>
-      <div class="p" style="background:var(--green)">
-        <div class="meta top" style="color:var(--paper)"><span>תחתית</span><span>א</span></div>
-        <div class="fill">
-          <span style="font-size:78cqw;font-weight:900;color:var(--blue);line-height:.8">א</span>
-        </div>
-        <div class="meta bot" style="color:var(--paper)"><span>אלף</span><span>uni05D0</span></div>
-      </div>
-    </div>
-
-    <!-- 05 — statement, two colours, split -->
-    <div>
-      <div class="label">05 · statement split</div>
-      <div class="p" style="background:var(--ink);color:var(--paper);justify-content:center;padding:0 5cqw">
-        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
-        <span style="font-size:17cqw;font-weight:300;line-height:.95">אות אחת.</span>
-        <span style="font-size:17cqw;font-weight:900;line-height:.95;color:var(--yellow)">אלף</span>
-        <span style="font-size:17cqw;font-weight:900;line-height:.95;color:var(--yellow)">אפשרויות.</span>
-        <div class="meta bot"><span>פונט משתנה</span><span>100–900</span></div>
-      </div>
-    </div>
-
-    <!-- 06 — optical size bands -->
-    <div>
-      <div class="label">06 · optical sizes</div>
-      <div class="p" style="padding:0">
-        <div style="flex:1;background:var(--pink);display:flex;align-items:center;justify-content:center">
-          <span style="font-size:4cqw;font-weight:500">תחתית מיקרו · 6–12 נק׳</span>
-        </div>
-        <div style="flex:1;background:var(--orange);display:flex;align-items:center;justify-content:center;color:var(--paper)">
-          <span style="font-size:9cqw;font-weight:600">תחתית טקסט · 13–20</span>
-        </div>
-        <div style="flex:1;background:var(--ink);display:flex;align-items:center;justify-content:center;color:var(--paper)">
-          <span style="font-size:18cqw;font-weight:800">דיספליי</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- 07 — geometry + vertical lockup -->
-    <div>
-      <div class="label">07 · shape + vertical lockup</div>
-      <div class="p" style="background:var(--paper)">
-        <div class="meta top"><span>תחתית</span><span>פונט משתנה</span></div>
-        <svg viewBox="0 0 420 594" style="position:absolute;inset:0;width:100%;height:100%">
-          <circle cx="150" cy="250" r="130" fill="var(--orange)" />
-          <rect x="150" y="250" width="230" height="230" fill="var(--blue)" />
-          <path d="M20 480 L150 250 L150 480 Z" fill="var(--green)" />
-        </svg>
-        <div style="position:absolute;left:10cqw;top:50%;transform:translate(-50%,-50%) rotate(-90deg);font-size:11cqw;font-weight:900;color:var(--ink);z-index:2;white-space:nowrap;line-height:1">תחתית</div>
-        <div class="meta bot"><span>מלמטה למעלה</span><span>100–900</span></div>
-      </div>
-    </div>
-
-    <!-- 08 — final letters -->
-    <div>
-      <div class="label">08 · final letters, colour columns</div>
-      <div class="p" style="flex-direction:row;padding:0">
-        <div style="flex:1;background:var(--orange);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ך</span></div>
-        <div style="flex:1;background:var(--blue);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ם</span></div>
-        <div style="flex:1;background:var(--yellow);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900">ן</span></div>
-        <div style="flex:1;background:var(--green);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ף</span></div>
-        <div style="flex:1;background:var(--purple);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ץ</span></div>
-        <div class="meta bot" style="color:var(--paper)"><span>אותיות סופיות</span><span>5</span></div>
-      </div>
-    </div>
-
-    <!-- 09 — rotated statement -->
-    <div>
-      <div class="label">09 · rotated statement</div>
-      <div class="p" style="background:var(--yellow);align-items:center;justify-content:center">
-        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
-        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap;font-size:14cqw;font-weight:900;line-height:1;color:var(--ink)">מלמטה למעלה</div>
-        <div class="meta bot"><span>פונט עברי משתנה</span><span>100–900</span></div>
-      </div>
-    </div>
-
-    <!-- 10 — numerals -->
-    <div>
-      <div class="label">10 · numerals / range</div>
-      <div class="p" style="background:var(--purple);color:var(--paper);justify-content:center;align-items:center;gap:0">
-        <div class="meta top"><span>תחתית</span><span>טווח משקלים</span></div>
-        <span style="font-size:40cqw;font-weight:100;line-height:.8;direction:ltr">100</span>
-        <span style="font-size:40cqw;font-weight:900;line-height:.8;direction:ltr">900</span>
-        <div class="meta bot"><span>דקיק · שחור</span><span>9 משקלים</span></div>
-      </div>
-    </div>
-
-    <!-- 11 — condensed colour columns -->
-    <div>
-      <div class="label">11 · letters as colour bars</div>
-      <div class="p" style="background:var(--paper);padding:11cqw 0 0">
+      <div class="label">04 · letters as colour bars</div>
+      <div class="p" style="padding:11cqw 0 0">
         <div class="meta top"><span>תחתית</span><span>פונט משתנה</span></div>
         <div style="flex:1;display:flex;align-items:stretch;gap:.8cqw;padding:0 4cqw 4cqw">
           <div style="flex:1;background:var(--pink);display:flex;align-items:flex-start;justify-content:center"><span style="font-size:15cqw;font-weight:900;line-height:1.15;color:var(--paper)">ת</span></div>
@@ -222,26 +153,706 @@
       </div>
     </div>
 
-    <!-- 12 — spec / blueprint -->
+    <!-- 05 -->
     <div>
-      <div class="label">12 · spec sheet</div>
+      <div class="label">05 · diagonal repeat band</div>
+      <div class="p" style="background:var(--green)">
+        <div class="meta top" style="color:var(--paper);z-index:4"><span>תחתית</span><span>גרסה 1</span></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-18deg);display:flex;flex-direction:column;gap:1cqw">
+          <span style="font-size:15cqw;font-weight:900;color:var(--yellow);white-space:nowrap;line-height:1">תחתית תחתית תחתית</span>
+          <span style="font-size:15cqw;font-weight:900;color:var(--paper);white-space:nowrap;line-height:1">תחתית תחתית תחתית</span>
+          <span style="font-size:15cqw;font-weight:900;color:var(--orange);white-space:nowrap;line-height:1">תחתית תחתית תחתית</span>
+        </div>
+        <div class="meta bot" style="color:var(--paper);z-index:4"><span>פונט משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 06 -->
+    <div>
+      <div class="label">06 · thin / black pair</div>
+      <div class="p" style="background:var(--yellow);justify-content:center;align-items:center;gap:2cqw">
+        <div class="meta top"><span>תחתית</span><span>דקיק · שחור</span></div>
+        <span style="font-size:18cqw;font-weight:100;line-height:1;color:var(--ink)">תחתית</span>
+        <span style="font-size:18cqw;font-weight:900;line-height:1;color:var(--ink)">תחתית</span>
+        <div class="meta bot"><span>100</span><span>900</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>B · glyphs &amp; specimen</h2>
+  <div class="sheet">
+
+    <!-- 07 -->
+    <div>
+      <div class="label">07 · alphabet specimen 9×3</div>
+      <div class="p" style="padding:11cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>מערך הגליפים</span></div>
+        <div class="fill" style="display:grid;grid-template-columns:repeat(9,1fr);place-items:center;align-content:center;row-gap:3cqw;font-size:15cqw;font-weight:800;line-height:1"><span style="color:var(--orange)">א</span><span style="color:var(--blue)">ב</span><span style="color:var(--green)">ג</span><span style="color:var(--purple)">ד</span><span style="color:var(--yellow)">ה</span><span style="color:var(--pink)">ו</span><span style="color:var(--orange)">ז</span><span style="color:var(--blue)">ח</span><span style="color:var(--green)">ט</span><span style="color:var(--purple)">י</span><span style="color:var(--yellow)">כ</span><span style="color:var(--pink)">ל</span><span style="color:var(--orange)">מ</span><span style="color:var(--blue)">נ</span><span style="color:var(--green)">ס</span><span style="color:var(--purple)">ע</span><span style="color:var(--yellow)">פ</span><span style="color:var(--pink)">צ</span><span style="color:var(--orange)">ק</span><span style="color:var(--blue)">ר</span><span style="color:var(--green)">ש</span><span style="color:var(--purple)">ת</span><span style="color:var(--yellow)">ך</span><span style="color:var(--pink)">ם</span><span style="color:var(--orange)">ן</span><span style="color:var(--blue)">ף</span><span style="color:var(--green)">ץ</span></div>
+        <div class="meta bot"><span>22 אותיות</span><span>5 סופיות</span></div>
+      </div>
+    </div>
+
+    <!-- 08 -->
+    <div>
+      <div class="label">08 · single glyph</div>
+      <div class="p" style="background:var(--green)">
+        <div class="meta top" style="color:var(--paper)"><span>תחתית</span><span>א</span></div>
+        <div class="fill"><span style="font-size:78cqw;font-weight:900;color:var(--blue);line-height:.8">א</span></div>
+        <div class="meta bot" style="color:var(--paper)"><span>אלף</span><span>uni05D0</span></div>
+      </div>
+    </div>
+
+    <!-- 09 -->
+    <div>
+      <div class="label">09 · final letters, colour columns</div>
+      <div class="p" style="flex-direction:row;padding:0">
+        <div style="flex:1;background:var(--orange);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ך</span></div>
+        <div style="flex:1;background:var(--blue);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ם</span></div>
+        <div style="flex:1;background:var(--yellow);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900">ן</span></div>
+        <div style="flex:1;background:var(--green);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ף</span></div>
+        <div style="flex:1;background:var(--purple);display:flex;align-items:flex-end;justify-content:center;padding-bottom:11cqw"><span style="font-size:16cqw;font-weight:900;color:var(--paper)">ץ</span></div>
+        <div class="meta bot" style="color:var(--paper)"><span>אותיות סופיות</span><span>5</span></div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div>
+      <div class="label">10 · א grid, weight ramp</div>
+      <div class="p" style="background:var(--pink);padding:11cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>9 משקלים</span></div>
+        <div class="fill" style="display:grid;grid-template-columns:repeat(5,1fr);place-items:center;align-content:center;row-gap:1cqw;color:var(--orange);font-size:14cqw;line-height:1">
+          <span style="font-weight:100">א</span><span style="font-weight:150">א</span><span style="font-weight:200">א</span><span style="font-weight:250">א</span><span style="font-weight:300">א</span>
+          <span style="font-weight:350">א</span><span style="font-weight:400">א</span><span style="font-weight:450">א</span><span style="font-weight:500">א</span><span style="font-weight:550">א</span>
+          <span style="font-weight:600">א</span><span style="font-weight:650">א</span><span style="font-weight:700">א</span><span style="font-weight:750">א</span><span style="font-weight:800">א</span>
+          <span style="font-weight:850">א</span><span style="font-weight:900">א</span><span style="font-weight:900">א</span><span style="font-weight:900">א</span><span style="font-weight:900">א</span>
+        </div>
+        <div class="meta bot"><span>אלף</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div>
+      <div class="label">11 · אא repetition grid</div>
+      <div class="p" style="padding:11cqw 4cqw">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <div class="fill" style="display:grid;grid-template-columns:repeat(4,1fr);align-content:center;gap:1cqw;font-size:11cqw;line-height:1">
+          <span style="color:var(--blue);font-weight:100">אא</span><span style="color:var(--orange);font-weight:300">אא</span><span style="color:var(--yellow);font-weight:500">אא</span><span style="color:var(--blue);font-weight:900">אא</span>
+          <span style="color:var(--green);font-weight:200">אא</span><span style="color:var(--purple);font-weight:400">אא</span><span style="color:var(--orange);font-weight:600">אא</span><span style="color:var(--green);font-weight:900">אא</span>
+          <span style="color:var(--purple);font-weight:100">אא</span><span style="color:var(--pink);font-weight:400">אא</span><span style="color:var(--blue);font-weight:700">אא</span><span style="color:var(--purple);font-weight:900">אא</span>
+          <span style="color:var(--orange);font-weight:200">אא</span><span style="color:var(--green);font-weight:500">אא</span><span style="color:var(--pink);font-weight:800">אא</span><span style="color:var(--orange);font-weight:900">אא</span>
+        </div>
+        <div class="meta bot"><span>אלף</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div>
+      <div class="label">12 · numerals grid</div>
+      <div class="p" style="padding:11cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>ספרות</span></div>
+        <div class="fill" style="display:grid;grid-template-columns:repeat(3,1fr);place-items:center;align-content:center;font-size:22cqw;font-weight:800;line-height:1.05;direction:ltr">
+          <span style="color:var(--orange)">0</span><span style="color:var(--blue)">1</span><span style="color:var(--green)">2</span>
+          <span style="color:var(--purple)">3</span><span style="color:var(--yellow)">4</span><span style="color:var(--pink)">5</span>
+          <span style="color:var(--green)">6</span><span style="color:var(--orange)">7</span><span style="color:var(--blue)">8</span>
+        </div>
+        <div class="meta bot"><span>0–9</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div>
+      <div class="label">13 · symbols &amp; punctuation</div>
+      <div class="p" style="background:var(--blue);color:var(--paper);padding:11cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>סימנים</span></div>
+        <div class="fill" style="flex-wrap:wrap;align-content:center;justify-content:center;gap:2cqw 3cqw;font-size:13cqw;font-weight:700;line-height:1;direction:ltr">
+          <span>!</span><span>?</span><span>#</span><span>*</span><span>:</span><span>;</span><span>[</span><span>]</span><span>(</span><span>)</span><span>%</span><span>+</span><span>=</span><span>׳</span>
+        </div>
+        <div class="meta bot"><span>פיסוק וגרש</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div>
+      <div class="label">14 · descenders ק ן ף ץ</div>
+      <div class="p" style="background:var(--purple);color:var(--paper);padding:0">
+        <div class="meta top"><span>תחתית</span><span>זנבות</span></div>
+        <svg class="art" viewBox="0 0 420 594"><line x1="0" y1="330" x2="420" y2="330" stroke="var(--yellow)" stroke-width="3" /></svg>
+        <div class="fill" style="gap:3cqw;position:relative;z-index:2;font-size:26cqw;font-weight:900;line-height:1">
+          <span>ק</span><span>ן</span><span>ף</span><span>ץ</span>
+        </div>
+        <div class="meta bot"><span>קו הבסיס</span><span>opsz 16–48</span></div>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div>
+      <div class="label">15 · kerning pairs</div>
+      <div class="p" style="padding:11cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>זוגות ריווח</span></div>
+        <div class="fill" style="flex-direction:column;gap:1cqw;font-size:20cqw;font-weight:800;line-height:1">
+          <span style="color:var(--orange)">לא</span>
+          <span style="color:var(--blue)">רו</span>
+          <span style="color:var(--green)">שי</span>
+          <span style="color:var(--purple)">כך</span>
+        </div>
+        <div class="meta bot"><span>ריווח מותאם</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 16 -->
+    <div>
+      <div class="label">16 · ס ring pattern</div>
+      <div class="p" style="padding:11cqw 4cqw">
+        <div class="meta top"><span>תחתית</span><span>סמך</span></div>
+        <div class="fill" style="display:grid;grid-template-columns:repeat(3,1fr);place-items:center;align-content:center;font-size:26cqw;font-weight:400;line-height:1.05">
+          <span style="color:var(--green)">ס</span><span style="color:var(--orange)">ס</span><span style="color:var(--blue)">ס</span>
+          <span style="color:var(--pink)">ס</span><span style="color:var(--yellow)">ס</span><span style="color:var(--purple)">ס</span>
+          <span style="color:var(--blue)">ס</span><span style="color:var(--green)">ס</span><span style="color:var(--orange)">ס</span>
+        </div>
+        <div class="meta bot"><span>uni05E1</span><span>100–900</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>C · statements</h2>
+  <div class="sheet">
+
+    <!-- 17 -->
+    <div>
+      <div class="label">17 · statement split</div>
+      <div class="p" style="background:var(--ink);color:var(--paper);justify-content:center;padding:0 5cqw">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <span style="font-size:17cqw;font-weight:300;line-height:.95">אות אחת.</span>
+        <span style="font-size:17cqw;font-weight:900;line-height:.95;color:var(--yellow)">אלף</span>
+        <span style="font-size:17cqw;font-weight:900;line-height:.95;color:var(--yellow)">אפשרויות.</span>
+        <div class="meta bot"><span>פונט משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 18 -->
+    <div>
+      <div class="label">18 · rotated statement</div>
+      <div class="p" style="background:var(--yellow)">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <div class="rot" style="font-size:14cqw;font-weight:900;line-height:1;color:var(--ink)">מלמטה למעלה</div>
+        <div class="meta bot"><span>פונט עברי משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 19 -->
+    <div>
+      <div class="label">19 · מא׳ ועד ת׳</div>
+      <div class="p" style="background:var(--orange);color:var(--paper);justify-content:center;padding:0 5cqw">
+        <div class="meta top"><span>תחתית</span><span>מערך הגליפים</span></div>
+        <span style="font-size:30cqw;font-weight:900;line-height:.85">מא׳</span>
+        <span style="font-size:16cqw;font-weight:300;line-height:1.1">ועד</span>
+        <span style="font-size:30cqw;font-weight:900;line-height:.85">ת׳</span>
+        <div class="meta bot"><span>27 אותיות</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 20 -->
+    <div>
+      <div class="label">20 · the greatest / sphere</div>
+      <div class="p" style="justify-content:space-between;padding:13cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <span style="font-size:11cqw;font-weight:400;line-height:1;text-align:center">הפונט העברי</span>
+        <svg viewBox="0 0 300 300" style="width:80%;align-self:center">
+          <defs><clipPath id="s20"><circle cx="150" cy="150" r="145" /></clipPath></defs>
+          <g clip-path="url(#s20)">
+            <rect width="300" height="300" fill="var(--blue)" />
+            <g fill="var(--green)">
+              <ellipse cx="150" cy="150" rx="145" ry="30" /><ellipse cx="150" cy="150" rx="110" ry="145" />
+              <ellipse cx="150" cy="150" rx="40" ry="145" />
+            </g>
+            <g fill="var(--blue)"><ellipse cx="150" cy="150" rx="75" ry="145" /><ellipse cx="150" cy="150" rx="12" ry="145" /></g>
+          </g>
+        </svg>
+        <span style="font-size:11cqw;font-weight:400;line-height:1;text-align:center">הכי טוב בעולם</span>
+        <div class="meta bot"><span>פונט משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 21 -->
+    <div>
+      <div class="label">21 · free &amp; open source</div>
+      <div class="p" style="background:var(--ink);color:var(--paper);justify-content:center;align-items:center;gap:1cqw">
+        <div class="meta top"><span>תחתית</span><span>רישיון פתוח</span></div>
+        <span style="font-size:26cqw;font-weight:900;line-height:.9;color:var(--green)">חינם</span>
+        <span style="font-size:13cqw;font-weight:400;line-height:1">וקוד פתוח</span>
+        <span style="font-size:5cqw;font-weight:400;line-height:1;opacity:.6">בלי אותיות קטנות</span>
+        <div class="meta bot"><span>SIL OFL</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 22 -->
+    <div>
+      <div class="label">22 · precise &amp; simple</div>
+      <div class="p" style="background:var(--pink);justify-content:center;padding:0 5cqw">
+        <div class="meta top"><span>תחתית</span><span>מדויק ופשוט</span></div>
+        <span style="font-size:19cqw;font-weight:900;line-height:.95;color:var(--ink)">בלי</span>
+        <span style="font-size:19cqw;font-weight:900;line-height:.95;color:var(--ink)">קישוטים.</span>
+        <span style="font-size:19cqw;font-weight:300;line-height:.95;color:var(--orange)">רק</span>
+        <span style="font-size:19cqw;font-weight:300;line-height:.95;color:var(--orange)">בהירות.</span>
+        <div class="meta bot"><span>קווים נקיים</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 23 -->
+    <div>
+      <div class="label">23 · 27 letters, no excuses</div>
+      <div class="p" style="background:var(--blue);color:var(--paper);justify-content:center;align-items:center">
+        <div class="meta top"><span>תחתית</span><span>מערך הגליפים</span></div>
+        <span style="font-size:50cqw;font-weight:900;line-height:.85;direction:ltr;color:var(--yellow)">27</span>
+        <span style="font-size:12cqw;font-weight:500;line-height:1.2">אותיות.</span>
+        <span style="font-size:12cqw;font-weight:500;line-height:1.2">אין תירוצים.</span>
+        <div class="meta bot"><span>22 + 5 סופיות</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 24 -->
+    <div>
+      <div class="label">24 · heavy weight / dumbbell</div>
+      <div class="p" style="background:var(--ink);color:var(--paper)">
+        <div class="meta top"><span>תחתית</span><span>900</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <g fill="var(--purple)">
+            <rect x="120" y="290" width="200" height="34" transform="rotate(-43 220 307)" />
+            <circle cx="130" cy="400" r="80" /><circle cx="310" cy="230" r="80" />
+          </g>
+          <g fill="var(--green)">
+            <path d="M50 400a80 80 0 0 1 160 0z" /><path d="M230 230a80 80 0 0 1 160 0z" />
+          </g>
+        </svg>
+        <div style="position:absolute;right:5cqw;top:16cqw;transform-origin:right top;transform:rotate(-90deg) translate(-100%,0);font-size:11cqw;font-weight:900;line-height:1;white-space:nowrap;z-index:2">משקל כבד</div>
+        <div class="meta bot"><span>שמן במיוחד · שחור</span><span>800–900</span></div>
+      </div>
+    </div>
+
+    <!-- 25 -->
+    <div>
+      <div class="label">25 · under pressure</div>
+      <div class="p" style="background:var(--yellow);justify-content:center;padding:0 5cqw">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <span style="font-size:15cqw;font-weight:400;line-height:1.05;color:var(--ink)">כמה טוב</span>
+        <span style="font-size:15cqw;font-weight:400;line-height:1.05;color:var(--ink)">הפונט שלך</span>
+        <span style="font-size:15cqw;font-weight:900;line-height:1.05;color:var(--orange)">מחזיק לחץ?</span>
+        <div class="meta bot"><span>פונט משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 26 -->
+    <div>
+      <div class="label">26 · totem / four verbs</div>
+      <div class="p">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <circle cx="210" cy="205" r="46" fill="var(--yellow)" />
+          <g fill="var(--green)"><circle cx="210" cy="292" r="44" /><circle cx="166" cy="292" r="26" /><circle cx="254" cy="292" r="26" /><circle cx="210" cy="248" r="26" /><circle cx="210" cy="336" r="26" /></g>
+          <circle cx="210" cy="292" r="18" fill="var(--pink)" />
+          <path d="M210 430 L164 384 a26 26 0 0 1 46-26 a26 26 0 0 1 46 26 Z" fill="var(--orange)" />
+          <rect x="176" y="452" width="68" height="68" transform="rotate(45 210 486)" fill="var(--blue)" />
+          <rect x="150" y="536" width="120" height="20" fill="var(--purple)" />
+        </svg>
+        <div style="position:absolute;top:15cqw;width:100%;text-align:center;font-size:7cqw;color:var(--orange);font-weight:500;z-index:2">לישון טוב</div>
+        <div style="position:absolute;top:44%;right:3cqw;font-size:7cqw;color:var(--orange);font-weight:500;z-index:2">לאכול נקי</div>
+        <div style="position:absolute;top:44%;left:3cqw;font-size:7cqw;color:var(--orange);font-weight:500;z-index:2">לאהוב</div>
+        <div style="position:absolute;bottom:10cqw;width:100%;text-align:center;font-size:7cqw;color:var(--orange);font-weight:500;z-index:2">ליצור אמנות</div>
+      </div>
+    </div>
+
+    <!-- 27 -->
+    <div>
+      <div class="label">27 · art shapes life</div>
+      <div class="p">
+        <div style="position:absolute;top:8cqw;right:5cqw;font-size:14cqw;font-weight:700;z-index:2;line-height:1">אמנות</div>
+        <svg class="art" viewBox="0 0 420 594">
+          <circle cx="290" cy="210" r="55" fill="var(--green)" /><circle cx="335" cy="305" r="38" fill="var(--green)" />
+          <circle cx="90" cy="430" r="42" fill="var(--green)" /><circle cx="160" cy="482" r="28" fill="var(--green)" />
+          <circle cx="205" cy="258" r="34" fill="var(--yellow)" />
+          <path d="M120 185 L175 290 L65 290 Z" fill="var(--blue)" />
+          <path d="M120 335 L200 435 L60 435 Z" fill="var(--pink)" />
+          <path d="M235 355 h60 v115 a60 60 0 0 1 -120 0 v-38 h60 z" fill="var(--orange)" />
+        </svg>
+        <div style="position:absolute;bottom:8cqw;left:5cqw;font-size:14cqw;font-weight:700;z-index:2;line-height:1">מעצבת חיים</div>
+      </div>
+    </div>
+
+    <!-- 28 -->
+    <div>
+      <div class="label">28 · sits right</div>
+      <div class="p" style="background:var(--green);color:var(--paper);justify-content:center;padding:0 5cqw">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <span style="font-size:24cqw;font-weight:900;line-height:.92">עברית</span>
+        <span style="font-size:24cqw;font-weight:900;line-height:.92">שיושבת</span>
+        <span style="font-size:24cqw;font-weight:900;line-height:.92;color:var(--yellow)">נכון.</span>
+        <div class="meta bot"><span>ריווח אוטומטי</span><span>100–900</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>D · technical</h2>
+  <div class="sheet">
+
+    <!-- 29 -->
+    <div>
+      <div class="label">29 · spec sheet ש</div>
       <div class="p" style="background:var(--ink);color:var(--paper)">
         <div class="meta top"><span>תחתית</span><span>רגיל · 400</span></div>
-        <svg viewBox="0 0 420 594" style="position:absolute;inset:0;width:100%;height:100%">
+        <svg class="art" viewBox="0 0 420 594">
           <g stroke="var(--green)" stroke-width="1" opacity=".6">
             <line x1="0" y1="180" x2="420" y2="180" /><line x1="0" y1="420" x2="420" y2="420" />
             <line x1="0" y1="140" x2="420" y2="140" stroke-dasharray="4 4" /><line x1="0" y1="460" x2="420" y2="460" stroke-dasharray="4 4" />
             <line x1="90" y1="0" x2="90" y2="594" /><line x1="330" y1="0" x2="330" y2="594" />
           </g>
         </svg>
-        <div class="fill">
-          <span style="font-size:52cqw;font-weight:400;line-height:.8;position:relative;z-index:2">ש</span>
-        </div>
+        <div class="fill"><span style="font-size:52cqw;font-weight:400;line-height:.8;position:relative;z-index:2">ש</span></div>
         <div class="meta bot"><span>uni05E9</span><span>opsz 16–48</span></div>
       </div>
     </div>
 
+    <!-- 30 -->
+    <div>
+      <div class="label">30 · node blueprint ם</div>
+      <div class="p" style="background:var(--ink);color:var(--paper)">
+        <div class="meta top"><span>תחתית</span><span>uni05DD</span></div>
+        <div class="fill"><span style="font-size:58cqw;font-weight:500;line-height:.8;color:var(--blue)">ם</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <g stroke="var(--paper)" stroke-width="1" opacity=".5"><rect x="122" y="212" width="176" height="168" fill="none" /></g>
+          <g fill="var(--paper)">
+            <circle cx="122" cy="212" r="4" /><circle cx="298" cy="212" r="4" /><circle cx="122" cy="380" r="4" /><circle cx="298" cy="380" r="4" />
+            <circle cx="210" cy="212" r="4" /><circle cx="210" cy="380" r="4" /><circle cx="122" cy="296" r="4" /><circle cx="298" cy="296" r="4" />
+          </g>
+        </svg>
+        <div class="meta bot"><span>מם סופית</span><span>weight 500</span></div>
+      </div>
+    </div>
+
+    <!-- 31 -->
+    <div>
+      <div class="label">31 · measured ל</div>
+      <div class="p" style="background:var(--pink)">
+        <div class="meta top"><span>תחתית</span><span>מידות</span></div>
+        <div class="fill"><span style="font-size:60cqw;font-weight:800;line-height:.8;color:var(--orange)">ל</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <g stroke="var(--ink)" stroke-width="1" fill="none">
+            <path d="M60 140 h30 M60 470 h30 M75 140 v330" />
+            <path d="M140 520 v30 M330 520 v30 M140 535 h190" />
+          </g>
+          <g fill="var(--ink)" font-size="13" font-family="under" text-anchor="middle">
+            <text x="44" y="308" transform="rotate(-90 44 308)">1180</text>
+            <text x="235" y="530">1024</text>
+          </g>
+        </svg>
+        <div class="meta bot"><span>uni05DC</span><span>800</span></div>
+      </div>
+    </div>
+
+    <!-- 32 -->
+    <div>
+      <div class="label">32 · interpolation curve</div>
+      <div class="p" style="padding:11cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>ציר משקל</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <path d="M70 470 C 150 460, 200 380, 250 280 S 340 140, 360 120" stroke="var(--ink)" stroke-width="1.5" fill="none" />
+          <circle cx="70" cy="470" r="7" fill="var(--pink)" /><circle cx="160" cy="428" r="7" fill="var(--yellow)" />
+          <circle cx="250" cy="280" r="7" fill="var(--green)" /><circle cx="311" cy="188" r="7" fill="var(--blue)" />
+          <circle cx="360" cy="120" r="7" fill="var(--orange)" />
+        </svg>
+        <div style="position:absolute;right:7cqw;bottom:15cqw;font-size:10cqw;font-weight:100;z-index:2;line-height:1">א</div>
+        <div style="position:absolute;left:7cqw;top:15cqw;font-size:15cqw;font-weight:900;z-index:2;line-height:1">א</div>
+        <div class="meta bot"><span>100</span><span>900</span></div>
+      </div>
+    </div>
+
+    <!-- 33 -->
+    <div>
+      <div class="label">33 · weight names list</div>
+      <div class="p" style="background:var(--ink);justify-content:center;padding:0 6cqw;gap:.6cqw">
+        <div class="meta top" style="color:var(--paper)"><span>תחתית</span><span>9 משקלים</span></div>
+        <span style="font-size:9cqw;font-weight:100;color:var(--pink)">דקיק <span style="font-size:4cqw;opacity:.7">100</span></span>
+        <span style="font-size:9cqw;font-weight:200;color:var(--blue)">דק במיוחד <span style="font-size:4cqw;opacity:.7">200</span></span>
+        <span style="font-size:9cqw;font-weight:300;color:var(--green)">דק <span style="font-size:4cqw;opacity:.7">300</span></span>
+        <span style="font-size:9cqw;font-weight:400;color:var(--paper)">רגיל <span style="font-size:4cqw;opacity:.7">400</span></span>
+        <span style="font-size:9cqw;font-weight:500;color:var(--orange)">בינוני <span style="font-size:4cqw;opacity:.7">500</span></span>
+        <span style="font-size:9cqw;font-weight:600;color:var(--yellow)">חצי שמן <span style="font-size:4cqw;opacity:.7">600</span></span>
+        <span style="font-size:9cqw;font-weight:700;color:var(--green)">שמן <span style="font-size:4cqw;opacity:.7">700</span></span>
+        <span style="font-size:9cqw;font-weight:800;color:var(--blue)">שמן במיוחד <span style="font-size:4cqw;opacity:.7">800</span></span>
+        <span style="font-size:9cqw;font-weight:900;color:var(--purple)">שחור <span style="font-size:4cqw;opacity:.7">900</span></span>
+        <div class="meta bot" style="color:var(--paper)"><span>ציר wght</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 34 -->
+    <div>
+      <div class="label">34 · optical sizes</div>
+      <div class="p" style="padding:0">
+        <div class="band" style="background:var(--pink)"><span style="font-size:4cqw;font-weight:500">תחתית מיקרו · 6–12 נק׳</span></div>
+        <div class="band" style="background:var(--orange);color:var(--paper)"><span style="font-size:9cqw;font-weight:600">תחתית טקסט · 13–20</span></div>
+        <div class="band" style="background:var(--ink);color:var(--paper)"><span style="font-size:18cqw;font-weight:800">דיספליי</span></div>
+      </div>
+    </div>
+
+    <!-- 35 -->
+    <div>
+      <div class="label">35 · sups &amp; subs</div>
+      <div class="p" style="justify-content:center;align-items:center;gap:3cqw">
+        <div class="meta top"><span>תחתית</span><span>עילי · תחתי</span></div>
+        <span style="font-size:24cqw;font-weight:700;direction:ltr;color:var(--blue);line-height:1">x<sup style="font-size:.5em">2</sup></span>
+        <span style="font-size:24cqw;font-weight:700;direction:ltr;color:var(--orange);line-height:1">H<sub style="font-size:.5em">2</sub>O</span>
+        <span style="font-size:5cqw;font-weight:400;text-align:center;max-width:70%;line-height:1.4">כתב עילי מרים את הטקסט. כתב תחתי מוריד אותו.</span>
+        <div class="meta bot"><span>sups · subs</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 36 -->
+    <div>
+      <div class="label">36 · pixel perfect at 16</div>
+      <div class="p" style="background:var(--ink);color:var(--paper);justify-content:center;padding:0 6cqw">
+        <div class="meta top"><span>תחתית</span><span>מיקרו</span></div>
+        <span style="font-size:36cqw;font-weight:900;line-height:.85;direction:ltr;color:var(--green)">16</span>
+        <span style="font-size:9cqw;font-weight:500;line-height:1.15">פיקסלים.</span>
+        <span style="font-size:9cqw;font-weight:500;line-height:1.15;color:var(--yellow)">חד לגמרי.</span>
+        <div class="meta bot"><span>אופטימיזציה לפיקסל</span><span>opsz 16</span></div>
+      </div>
+    </div>
+
+    <!-- 37 -->
+    <div>
+      <div class="label">37 · text specimen, two columns</div>
+      <div class="p" style="padding:12cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>טקסט · 400</span></div>
+        <div class="fill" style="align-items:flex-start;gap:4cqw;font-size:3.1cqw;line-height:1.55;text-align:justify">
+          <p style="flex:1">תחתית הוא פונט גיאומטרי משתנה שמשלב דיוק ורכות. עוצב לבהירות, לגמישות ולזהות חזותית מודרנית. הריווח האוטומטי מכוון לכל משקל בנפרד כדי לשמור על זרימה מאוזנת בכל גודל.</p>
+          <p style="flex:1">שלושה חיתוכים: דיספליי, טקסט, מיקרו. דיספליי הולך צמוד וחד. מיקרו נפתח — פחות קונטרסט, יותר אוויר. טקסט יושב באמצע ומחזיק את האיזון בין השניים.</p>
+        </div>
+        <div class="meta bot"><span>גוף טקסט</span><span>13–20 נק׳</span></div>
+      </div>
+    </div>
+
+    <!-- 38 -->
+    <div>
+      <div class="label">38 · cuts comparison</div>
+      <div class="p" style="background:var(--blue);color:var(--paper);justify-content:center;padding:0 5cqw;gap:2cqw">
+        <div class="meta top"><span>תחתית</span><span>3 חיתוכים</span></div>
+        <div><span style="font-size:16cqw;font-weight:800;line-height:1">אבג</span> <span style="font-size:4cqw;opacity:.75">דיספליי</span></div>
+        <div><span style="font-size:16cqw;font-weight:500;line-height:1">אבג</span> <span style="font-size:4cqw;opacity:.75">טקסט</span></div>
+        <div><span style="font-size:16cqw;font-weight:300;line-height:1">אבג</span> <span style="font-size:4cqw;opacity:.75">מיקרו</span></div>
+        <div class="meta bot"><span>opsz 16–48</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
   </div>
+
+  <h2>E · geometry &amp; play</h2>
+  <div class="sheet">
+
+    <!-- 39 -->
+    <div>
+      <div class="label">39 · shape + rotated lockup</div>
+      <div class="p">
+        <div class="meta top"><span>תחתית</span><span>פונט משתנה</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <circle cx="150" cy="250" r="130" fill="var(--orange)" />
+          <rect x="150" y="250" width="230" height="230" fill="var(--blue)" />
+          <path d="M20 480 L150 250 L150 480 Z" fill="var(--green)" />
+        </svg>
+        <div style="position:absolute;left:10cqw;top:50%;transform:translate(-50%,-50%) rotate(-90deg);font-size:11cqw;font-weight:900;z-index:2;white-space:nowrap;line-height:1">תחתית</div>
+        <div class="meta bot"><span>מלמטה למעלה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 40 -->
+    <div>
+      <div class="label">40 · striped balloon</div>
+      <div class="p" style="background:var(--blue)">
+        <div class="meta top" style="color:var(--paper)"><span>תחתית</span><span>פונט משתנה</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <defs>
+            <clipPath id="b40"><circle cx="210" cy="250" r="150" /></clipPath>
+            <clipPath id="c40"><path d="M210 400 L330 560 H90 Z" /></clipPath>
+          </defs>
+          <g clip-path="url(#b40)">
+            <rect x="60" y="100" width="300" height="300" fill="var(--paper)" />
+            <g fill="var(--orange)"><rect x="72" y="100" width="26" height="300" /><rect x="132" y="100" width="26" height="300" /><rect x="192" y="100" width="26" height="300" /><rect x="252" y="100" width="26" height="300" /><rect x="312" y="100" width="26" height="300" /></g>
+          </g>
+          <g clip-path="url(#c40)">
+            <rect x="90" y="400" width="240" height="160" fill="var(--paper)" />
+            <g fill="var(--orange)"><rect x="100" y="400" width="22" height="160" /><rect x="150" y="400" width="22" height="160" /><rect x="200" y="400" width="22" height="160" /><rect x="250" y="400" width="22" height="160" /><rect x="300" y="400" width="22" height="160" /></g>
+          </g>
+        </svg>
+        <div class="meta bot" style="color:var(--paper)"><span>קל וכבד</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 41 -->
+    <div>
+      <div class="label">41 · weight cake</div>
+      <div class="p" style="background:var(--orange);color:var(--paper)">
+        <div class="meta top"><span>תחתית</span><span>9 משקלים</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <g fill="var(--blue)" stroke="var(--paper)" stroke-width="6">
+            <ellipse cx="210" cy="170" rx="52" ry="16" /><rect x="158" y="170" width="104" height="36" stroke="none" /><ellipse cx="210" cy="206" rx="52" ry="16" />
+            <ellipse cx="210" cy="250" rx="78" ry="20" /><rect x="132" y="250" width="156" height="42" stroke="none" /><ellipse cx="210" cy="292" rx="78" ry="20" />
+            <ellipse cx="210" cy="342" rx="106" ry="24" /><rect x="104" y="342" width="212" height="50" stroke="none" /><ellipse cx="210" cy="392" rx="106" ry="24" />
+            <ellipse cx="210" cy="452" rx="140" ry="30" /><rect x="70" y="452" width="280" height="62" stroke="none" /><ellipse cx="210" cy="514" rx="140" ry="30" />
+          </g>
+        </svg>
+        <div style="position:absolute;inset:0;z-index:2;font-size:2.6cqw;font-weight:500;color:var(--paper)">
+          <div style="position:absolute;top:30%;width:100%;text-align:center">דק</div>
+          <div style="position:absolute;top:45.5%;width:100%;text-align:center">רגיל</div>
+          <div style="position:absolute;top:62%;width:100%;text-align:center">שמן</div>
+          <div style="position:absolute;top:81%;width:100%;text-align:center">שחור</div>
+        </div>
+        <div class="meta bot"><span>פונט משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 42 -->
+    <div>
+      <div class="label">42 · radial burst</div>
+      <div class="p">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <svg class="art" viewBox="0 0 420 594">
+          <defs><path id="ray42" d="M0 0 L-13 -215 L13 -215 Z" /></defs>
+          <g transform="translate(210 320)" fill="var(--orange)">
+            <use href="#ray42" /><use href="#ray42" transform="rotate(15)" /><use href="#ray42" transform="rotate(30)" /><use href="#ray42" transform="rotate(45)" />
+            <use href="#ray42" transform="rotate(60)" /><use href="#ray42" transform="rotate(75)" /><use href="#ray42" transform="rotate(90)" />
+            <use href="#ray42" transform="rotate(105)" /><use href="#ray42" transform="rotate(120)" /><use href="#ray42" transform="rotate(135)" />
+            <use href="#ray42" transform="rotate(150)" /><use href="#ray42" transform="rotate(165)" /><use href="#ray42" transform="rotate(180)" />
+            <use href="#ray42" transform="rotate(195)" /><use href="#ray42" transform="rotate(210)" /><use href="#ray42" transform="rotate(225)" />
+            <use href="#ray42" transform="rotate(240)" /><use href="#ray42" transform="rotate(255)" /><use href="#ray42" transform="rotate(270)" />
+            <use href="#ray42" transform="rotate(285)" /><use href="#ray42" transform="rotate(300)" /><use href="#ray42" transform="rotate(315)" />
+            <use href="#ray42" transform="rotate(330)" /><use href="#ray42" transform="rotate(345)" />
+            <circle r="26" fill="var(--paper)" />
+          </g>
+        </svg>
+        <div style="position:absolute;top:10cqw;width:100%;text-align:center;font-size:11cqw;font-weight:900;color:var(--blue);z-index:2;line-height:1">פונט משתנה</div>
+        <div class="meta bot"><span>תחתית</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 43 -->
+    <div>
+      <div class="label">43 · circus tent</div>
+      <div class="p" style="background:var(--green);padding:0">
+        <div style="position:absolute;top:8cqw;width:100%;text-align:center;font-size:12cqw;font-weight:800;z-index:2;color:var(--yellow);line-height:1">תחתית</div>
+        <svg class="art" viewBox="0 0 420 594">
+          <path d="M210 190 L360 410 H60 Z" fill="var(--orange)" />
+          <path d="M210 186 l16 -34 l32 8 l-32 18 z" fill="var(--yellow)" />
+          <rect x="60" y="410" width="300" height="60" fill="var(--pink)" />
+          <g fill="var(--purple)"><path d="M60 410 h50 l-25 60 z" /><path d="M160 410 h50 l-25 60 z" /><path d="M260 410 h50 l-25 60 z" /></g>
+          <g fill="var(--ink)"><path d="M110 410 h50 l-25 60 z" /><path d="M210 410 h50 l-25 60 z" /><path d="M310 410 h50 l-25 60 z" /></g>
+          <g fill="var(--pink)"><circle cx="90" cy="500" r="30" /><circle cx="150" cy="500" r="30" /><circle cx="210" cy="500" r="30" /><circle cx="270" cy="500" r="30" /><circle cx="330" cy="500" r="30" /></g>
+        </svg>
+        <div class="meta bot" style="color:var(--paper)"><span>פונט משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 44 -->
+    <div>
+      <div class="label">44 · ם as frame</div>
+      <div class="p" style="background:var(--yellow)">
+        <div class="meta top"><span>תחתית</span><span>מם סופית</span></div>
+        <div class="fill"><span style="font-size:88cqw;font-weight:300;line-height:.8;color:var(--ink)">ם</span></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-45%);font-size:5cqw;font-weight:600;text-align:center;line-height:1.35;z-index:2;width:34%;color:var(--yellow)">כל מה שצריך<br>נמצא בפנים</div>
+        <div class="meta bot"><span>uni05DD</span><span>300</span></div>
+      </div>
+    </div>
+
+    <!-- 45 -->
+    <div>
+      <div class="label">45 · checkerboard letters</div>
+      <div class="p" style="padding:0">
+        <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;font-size:13cqw;font-weight:900">
+          <div style="background:var(--orange);display:grid;place-items:center;color:var(--paper)">ת</div>
+          <div style="background:var(--paper);display:grid;place-items:center;color:var(--orange)">ח</div>
+          <div style="background:var(--blue);display:grid;place-items:center;color:var(--paper)">ת</div>
+          <div style="background:var(--paper);display:grid;place-items:center;color:var(--blue)">י</div>
+          <div style="background:var(--green);display:grid;place-items:center;color:var(--paper)">ת</div>
+          <div style="background:var(--paper);display:grid;place-items:center;color:var(--green)">א</div>
+          <div style="background:var(--purple);display:grid;place-items:center;color:var(--paper)">ב</div>
+          <div style="background:var(--paper);display:grid;place-items:center;color:var(--purple)">ג</div>
+          <div style="background:var(--pink);display:grid;place-items:center">ד</div>
+          <div style="background:var(--paper);display:grid;place-items:center;color:var(--pink)">ה</div>
+          <div style="background:var(--yellow);display:grid;place-items:center">ו</div>
+          <div style="background:var(--ink);display:grid;place-items:center;color:var(--yellow)">ז</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 46 -->
+    <div>
+      <div class="label">46 · badge lockup</div>
+      <div class="p">
+        <div class="meta top"><span>תחתית</span><span>גרסה 1</span></div>
+        <div class="fill" style="flex-direction:column;gap:0">
+          <svg viewBox="0 0 300 220" style="width:76%">
+            <path d="M150 20 L285 210 H15 Z" fill="var(--yellow)" />
+            <circle cx="150" cy="150" r="42" fill="var(--pink)" />
+            <circle cx="150" cy="106" r="26" fill="var(--pink)" />
+            <circle cx="112" cy="154" r="22" fill="var(--pink)" /><circle cx="188" cy="154" r="22" fill="var(--pink)" />
+          </svg>
+          <span style="font-size:17cqw;font-weight:900;color:var(--blue);line-height:1">תחתית</span>
+        </div>
+        <div class="meta bot"><span>פונט משתנה</span><span>100–900</span></div>
+      </div>
+    </div>
+
+    <!-- 47 -->
+    <div>
+      <div class="label">47 · catalogue grid</div>
+      <div class="p" style="padding:11cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>ערכה בסיסית</span></div>
+        <div class="fill" style="display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:1fr;gap:1.4cqw;align-content:center">
+          <div style="background:var(--orange)"></div><div style="background:var(--blue);border-radius:50%"></div><div style="background:var(--green)"></div>
+          <div style="background:var(--pink);border-radius:50% 50% 0 0"></div><div style="background:var(--yellow)"></div><div style="background:var(--purple);border-radius:50%"></div>
+          <div style="background:var(--blue)"></div><div style="background:var(--orange);border-radius:50% 0 0 50%"></div><div style="background:var(--pink)"></div>
+          <div style="background:var(--green);border-radius:50%"></div><div style="background:var(--purple)"></div><div style="background:var(--yellow);border-radius:0 0 50% 50%"></div>
+          <div style="background:var(--pink)"></div><div style="background:var(--green)"></div><div style="background:var(--blue);border-radius:50%"></div>
+          <div style="background:var(--yellow)"></div><div style="background:var(--orange)"></div><div style="background:var(--purple);border-radius:50% 50% 0 0"></div>
+        </div>
+        <div class="meta bot"><span>2026</span><span>גרסה 1</span></div>
+      </div>
+    </div>
+
+    <!-- 48 -->
+    <div>
+      <div class="label">48 · rainbow columns</div>
+      <div class="p" style="padding:0">
+        <div class="meta top" style="z-index:4"><span>תחתית</span><span>פונט משתנה</span></div>
+        <svg class="art" viewBox="0 0 420 594" preserveAspectRatio="none">
+          <rect x="0" y="120" width="60" height="474" fill="var(--pink)" />
+          <rect x="60" y="120" width="60" height="474" fill="var(--orange)" />
+          <rect x="120" y="120" width="60" height="474" fill="var(--yellow)" />
+          <rect x="180" y="120" width="60" height="474" fill="var(--green)" />
+          <rect x="240" y="120" width="60" height="474" fill="var(--blue)" />
+          <rect x="300" y="120" width="60" height="474" fill="var(--purple)" />
+          <rect x="360" y="120" width="60" height="474" fill="var(--pink)" />
+        </svg>
+        <div style="position:absolute;bottom:8cqw;width:100%;text-align:center;font-size:19cqw;font-weight:900;color:var(--paper);z-index:3;line-height:1">תחתית</div>
+      </div>
+    </div>
+
+    <!-- 49 -->
+    <div>
+      <div class="label">49 · closing / credit</div>
+      <div class="p" style="background:var(--ink);color:var(--paper);justify-content:space-between;padding:13cqw 5cqw">
+        <div class="meta top"><span>תחתית</span><span>2026</span></div>
+        <span style="font-size:26cqw;font-weight:900;line-height:.85">תחתית</span>
+        <div style="display:flex;flex-direction:column;gap:1cqw;margin-bottom:4cqw">
+          <span style="font-size:4.4cqw;font-weight:400">פונט עברי משתנה · 9 משקלים · 3 חיתוכים</span>
+          <span style="font-size:4.4cqw;font-weight:400;color:var(--yellow);direction:ltr;text-align:right">weareunder.design</span>
+        </div>
+        <div class="meta bot"><span>חינם וקוד פתוח</span><span>100–900</span></div>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 
 </html>
