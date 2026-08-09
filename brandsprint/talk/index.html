@@ -56,7 +56,9 @@
             z-index: 2;
             color: white;
             rotate: -13deg;
-            font-size: clamp(2.6rem, 15vw, 13rem);
+            /* sized so all 14 letters fit with room to flinch, rotation included */
+            font-size: clamp(1.7rem, 7.4vw, 8rem);
+            white-space: nowrap;
             user-select: none;
         }
 
@@ -532,9 +534,12 @@
                     const d = Math.hypot(dx, dy);
                     const radius = Math.max(160, rect.height * 1.2);
                     if (d < radius) {
-                        const push = (1 - d / radius) * 26;
+                        // mostly vertical push, so the line never grows past the viewport
+                        const push = (1 - d / radius) * 22;
+                        const ux = dx / (d || 1);
+                        const uy = dy / (d || 1);
                         s.style.transform =
-                            "translate(" + (dx / (d || 1)) * push + "px," + (dy / (d || 1)) * push + "px)";
+                            "translate(" + ux * push * 0.35 + "px," + uy * push + "px)";
                     } else {
                         s.style.transform = "";
                     }
