@@ -1,0 +1,21 @@
+/* under — variable font */
+
+@font-face {
+  font-family: 'under';
+  src: url('under.woff2') format('woff2'),
+       url('under.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Utility classes */
+.under-thin { font-family: 'under', sans-serif; font-weight: 100; }
+.under-extralight { font-family: 'under', sans-serif; font-weight: 200; }
+.under-light { font-family: 'under', sans-serif; font-weight: 300; }
+.under-regular { font-family: 'under', sans-serif; font-weight: 400; }
+.under-medium { font-family: 'under', sans-serif; font-weight: 500; }
+.under-semibold { font-family: 'under', sans-serif; font-weight: 600; }
+.under-bold { font-family: 'under', sans-serif; font-weight: 700; }
+.under-extrabold { font-family: 'under', sans-serif; font-weight: 800; }
+.under-black { font-family: 'under', sans-serif; font-weight: 900; }
