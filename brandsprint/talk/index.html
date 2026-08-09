@@ -48,7 +48,6 @@
         #hero {
             position: relative;
             overflow: hidden;
-            cursor: crosshair;
         }
 
         #splain-word {
@@ -58,17 +57,11 @@
             rotate: -13deg;
             font-size: clamp(2.6rem, 15vw, 13rem);
             white-space: nowrap;
-            /* max-content, or the box reports the container width and the fit math lies */
+            /* max-content, or the box reports the flex container's width and fit() lies */
             width: max-content;
             flex-shrink: 0;
-            /* js scales this down until the rotated word + its flinch room fits the viewport */
             transform-origin: center center;
             user-select: none;
-        }
-
-        #splain-word span {
-            display: inline-block;
-            transition: transform 220ms cubic-bezier(.2, .8, .2, 1);
         }
 
         #splain-layer {
@@ -282,7 +275,7 @@
         </div>
         <div id="splain-layer"></div>
         <div id="splain-counter" class="text-m">0 opinions</div>
-        <div id="splain-hint" class="text-m">move to get splained</div>
+        <div id="splain-hint" class="text-m">everyone has one</div>
     </div>
 
     <div class="view column align-center justify-center">
@@ -395,7 +388,7 @@
     </script>
 
     <script>
-        // the hero splains itself. move the mouse, collect opinions.
+        // the hero splains itself. opinions arrive on their own, one after another.
         (function () {
             const OPINIONS = [
                 "can you make it pop?",
@@ -420,47 +413,10 @@
                 "add ai to the tagline",
             ];
 
-            const word = document.getElementById("splain-word");
             const layer = document.getElementById("splain-layer");
             const counter = document.getElementById("splain-counter");
             const hint = document.getElementById("splain-hint");
-            const hero = document.getElementById("hero");
-            if (!word || !layer) return;
-
-            // split the word into letters so it can flinch away from the cursor
-            const letters = word.textContent.split("");
-            word.textContent = "";
-            letters.forEach((ch) => {
-                const s = document.createElement("span");
-                s.textContent = ch;
-                word.appendChild(s);
-            });
-            const spans = [...word.querySelectorAll("span")];
-
-            const PUSH = 12;
-
-            // the word wants to be as big as the screen allows - but never cropped.
-            // scale it down until the rotated bounding box plus flinch room fits.
-            function fit() {
-                word.style.scale = "1";
-                const r = word.getBoundingClientRect();
-                const room = PUSH * 2 + (window.innerWidth > 768 ? 48 : 20);
-                const k = Math.min(
-                    1,
-                    (window.innerWidth - room) / r.width,
-                    (window.innerHeight - room) / r.height
-                );
-                word.style.scale = k.toFixed(4);
-            }
-
-            fit();
-            window.addEventListener("resize", fit);
-            if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
-
-            let count = 0;
-            let queue = shuffle([...OPINIONS]);
-            let last = 0;
-            let hinted = false;
+            if (!layer) return;
 
             function shuffle(a) {
                 for (let i = a.length - 1; i > 0; i--) {
@@ -470,13 +426,22 @@
                 return a;
             }
 
-            function splain(x, y) {
+            let queue = shuffle([...OPINIONS]);
+            let count = 0;
+
+            function splain() {
                 if (!queue.length) queue = shuffle([...OPINIONS]);
                 const text = queue.pop();
 
+                const w = window.innerWidth;
+                const h = window.innerHeight;
+                const flip = Math.random() > 0.5;
+                // keep the pill inside the frame: anchor left half or right half
+                const x = flip ? w * (0.6 + Math.random() * 0.28) : w * (0.12 + Math.random() * 0.28);
+                const y = h * (0.14 + Math.random() * 0.68);
+
                 const el = document.createElement("div");
-                el.className = "splain";
-                if (x > window.innerWidth * 0.55) el.classList.add("flip");
+                el.className = "splain" + (flip ? " flip" : "");
                 el.style.left = x + "px";
                 el.style.top = y + "px";
                 el.style.rotate = (Math.random() * 10 - 5).toFixed(1) + "deg";
@@ -490,61 +455,18 @@
 
                 count++;
                 counter.textContent = count + (count === 1 ? " opinion" : " opinions");
-                if (!hinted) {
-                    hint.textContent = "this is the problem";
-                    hinted = true;
-                }
+                if (count === 3 && hint) hint.textContent = "this is the problem";
 
-                setTimeout(() => el.classList.remove("on"), 2200);
-                setTimeout(() => el.remove(), 2700);
+                setTimeout(() => el.classList.remove("on"), 2600);
+                setTimeout(() => el.remove(), 3100);
 
-                // keep the layer honest
-                while (layer.children.length > 9) layer.firstChild.remove();
+                while (layer.children.length > 8) layer.firstChild.remove();
             }
 
-            function flinch(x, y) {
-                const rect = word.getBoundingClientRect();
-                spans.forEach((s) => {
-                    const r = s.getBoundingClientRect();
-                    const cx = r.left + r.width / 2;
-                    const cy = r.top + r.height / 2;
-                    const dx = cx - x;
-                    const dy = cy - y;
-                    const d = Math.hypot(dx, dy);
-                    const radius = Math.max(160, rect.height * 1.2);
-                    if (d < radius) {
-                        const push = (1 - d / radius) * PUSH;
-                        s.style.transform =
-                            "translate(" + (dx / (d || 1)) * push + "px," + (dy / (d || 1)) * push + "px)";
-                    } else {
-                        s.style.transform = "";
-                    }
-                });
-            }
-
-            function onMove(x, y) {
-                flinch(x, y);
-                const now = performance.now();
-                if (now - last > 420) {
-                    last = now;
-                    splain(x, y);
-                }
-            }
-
-            hero.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
-            hero.addEventListener("touchmove", (e) => {
-                const t = e.touches[0];
-                if (t) onMove(t.clientX, t.clientY);
-            }, { passive: true });
-            hero.addEventListener("mouseleave", () => spans.forEach((s) => (s.style.transform = "")));
-
-            // an opinion arrives whether you asked for it or not
-            setTimeout(function seed() {
-                if (count === 0) {
-                    splain(window.innerWidth * 0.3, window.innerHeight * 0.7);
-                    setTimeout(seed, 2600);
-                }
-            }, 1400);
+            setTimeout(function tick() {
+                splain();
+                setTimeout(tick, 700 + Math.random() * 500);
+            }, 600);
         })();
     </script>
 
