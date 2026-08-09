@@ -208,6 +208,9 @@
             display: flex;
             gap: 5rem;
             width: max-content;
+            /* overflow-x:hidden on the wrapper also clips y - give descenders room */
+            line-height: 1.15;
+            padding: 0.12em 0 0.2em;
         }
 
         .rule {
@@ -347,6 +350,7 @@
                 <span>your city</span><span>·</span>
             </div>
         </div>
+        <div class="padding-l"></div>
     </div>
 
     <div class="view column padding-xl align-center justify-center gap-xl random-color-change">
