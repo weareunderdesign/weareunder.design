@@ -19,6 +19,4 @@ the `---` ends it. the next note starts under it. images and video go in this fo
 
 write it in the spirit of every note before it — read them first. lowercase. plain. present tense. what it feels like, never how it's built. lead with the one thing that carries the note; fold the rest into a paragraph or two of prose, no bullets.
 
-the last note is `dna` — what we believe. it has no date and it stays at the bottom. bedrock.
-
 `index.html` and `marked.js` draw the page. you never need to open them.
