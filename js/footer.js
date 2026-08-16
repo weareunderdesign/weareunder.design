@@ -29,6 +29,9 @@ const footerTemplate = `
       <div class="column gap-s">
         <div class="row gap-xl">
           <div class="column align-start gap-s">
+            <a href="/underground/">
+              <span>underground</span>
+            </a>
             <a href="https://www.instagram.com/under.design/" target="_blank">
               <span>instagram</span>
             </a>

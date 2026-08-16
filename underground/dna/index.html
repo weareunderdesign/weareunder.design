@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="/js/head.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="who we are, what we believe, how we publish, how we work.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://weareunder.design/underground/dna/">
+  <meta property="og:title" content="ūnder | dna">
+  <meta property="og:description" content="who we are, what we believe, how we publish, how we work.">
+  <meta property="og:image" content="https://weareunder.design/images/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
+  <link rel="stylesheet" href="https://renecss.org/rene.css">
+  <script src="../marked.js"></script>
+  <title>ūnder | dna</title>
+  <link rel="canonical" href="https://weareunder.design/underground/dna/">
+</head>
+
+<body data-theme="light">
+
+  <under-navigation></under-navigation>
+
+  <div class="padding-xl margin-auto" id="dna" style="max-width: 40rem"></div>
+
+  <under-footer></under-footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      dna.innerHTML = marked.parse(await (await fetch('underground.md')).text());
+    });
+  </script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="/js/head.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="the record. launches, drops, the process, the drafts, the failures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://weareunder.design/underground/">
+  <meta property="og:title" content="ūnder | underground">
+  <meta property="og:description" content="the record. launches, drops, the process, the drafts, the failures.">
+  <meta property="og:image" content="https://weareunder.design/images/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://weareunder.design/underground/">
+  <meta name="twitter:title" content="ūnder | underground">
+  <meta name="twitter:description" content="the record. launches, drops, the process, the drafts, the failures.">
+  <meta name="twitter:image" content="https://weareunder.design/images/cover.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
+  <link rel="stylesheet" href="https://renecss.org/rene.css">
+  <script src="marked.js"></script>
+  <style>
+    .note { max-width: 40rem; }
+  </style>
+  <title>ūnder | underground</title>
+  <link rel="canonical" href="https://weareunder.design/underground/">
+</head>
+
+<body data-theme="light">
+
+  <under-navigation></under-navigation>
+
+  <div id="underground" class="padding-top-xl padding-bottom-xl"></div>
+
+  <under-footer></under-footer>
+
+  <script>
+    const fmtDate = d => new Date(d + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).toLowerCase();
+
+    const renderMedia = media => (media || []).map(m => {
+      const tag = m.type === 'video'
+        ? `<video class="width-full margin-top-l margin-bottom-l" src="${m.src}" autoplay muted loop playsinline></video>`
+        : `<img class="width-full margin-top-l margin-bottom-l" src="${m.src}" alt="${m.caption || ''}">`;
+      return `<figure>${tag}${m.caption ? `<figcaption class="text-s text-secondary text-center">${m.caption}</figcaption>` : ''}</figure>`;
+    }).join('');
+
+    const renderNote = e => `<article class="margin-top-xl margin-bottom-xl">
+      <div class="note margin-auto padding-left-l padding-right-l margin-bottom-l">
+        <h2>${e.title}</h2>
+        <p class="text-s text-secondary">${fmtDate(e.date)}</p>
+      </div>
+      ${renderMedia(e.media)}
+      <div class="note margin-auto padding-left-l padding-right-l">${marked.parse(e.body)}</div>
+    </article>`;
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const raw = await (await fetch('underground.json')).json();
+      underground.innerHTML = [...raw.filter(e => e.pinned), ...raw.filter(e => !e.pinned)].map(renderNote).join('');
+    });
+  </script>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+
+</body>
+
+</html>

@@ -66,6 +66,8 @@
         if (path.startsWith("/store")) {
             sessionStorage.setItem("redirectPath", path);
             window.location.replace("/store/");
+        } else if (path.startsWith("/underground")) {
+            window.location.replace("/underground/");
         } else {
             setTimeout(() => { window.location.href = "/"; }, 8000);
         }
