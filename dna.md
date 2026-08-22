@@ -31,31 +31,21 @@ work doesn't count until it's out in the world. unshared work drains motivation 
 
 "you're successful as soon as you send your work out into the world." - rick rubin
 
-echo is the machine that executes this belief: capture → convert → distribute → listen. a release isn't done when it goes live — it's done when we've pushed it for weeks. when something works, push harder. around the loop, echo builds relationships with media and influencers, coordinates launches, and leads knowledge-sharing.
+there is no publishing machine — the trace is the post. we're always making something, so there is always something to tell. one question sorts all of it: how long should this live?
 
 ### channels
 
-| channel | what |
-| :---- | :---- |
-| [site](https://weareunder.design/) | showcases and portfolio |
-| [store](https://weareunder.design/store/) | products and merchandise |
-| [instagram](https://instagram.com/under.design) | main hub, micro - posts, reels, stories, behind-the-scenes, quick tips, clips |
-| [youtube](https://www.youtube.com/@weareunderdesign) | macro - guides, series, thought leadership, campaigns |
-| newsletter | weekly recap - highlights and fresh drops |
+| tier | lives | what | where |
+| :---- | :---- | :---- | :---- |
+| story | a day | raw traces from work in progress — daily, unedited, nobody approves it | instagram |
+| feed | a season | one finished thing, told well — macro, ad hoc, edited | instagram, linkedin, youtube |
+| record | forever | what shipped, and what we learned shipping it | [underground](https://weareunder.design/underground/), newsletter |
+
+the story is cheap because it expires — that's what makes it honest. above that line everything earns its life: half great beats full mediocre starts at the feed, and nothing is posted to fill a gap. the [site](https://weareunder.design/) and the [store](https://weareunder.design/store/) are home; rented land points back to owned. a release isn't done when it goes live — it's done when we've pushed it for weeks, and when something works we push harder. echo also builds relationships with media and influencers, coordinates launches, and leads knowledge-sharing.
 
 ### voice
 
 approachable, authentic, inspiring — teach through sharing, suggest don't command. relationships first; sales follow. writing is simple and clear: short sentences, lowercase, skimmable, strong openings. visuals are personal and mysterious: clean, intentional, beautiful — aesthetics create emotional connection.
-
-### publish
-
-the capture → convert → approve loop.
-
-- capture (you, 2 min/day): leave raw traces while you work — screenshots, 15-sec clips, two-line notes. one folder. don't edit, don't think platform.
-- convert (operator + tools): raw → reels, captions, tweets, newsletter, published when ready. tools do ~70% — ai drafts, auto-scheduler, clip cutter.
-- approve (you, 15 min/week): taste gate. approve, kill, fix tone. never touch instagram yourself.
-
-no capture, no machine. the 2 min/day is the only thing you can't skip. test it: run week 1 as capture-only, publish nothing. leave traces consistently and you have a machine. if not, it's a habit to fix before hiring.
 
 ## rhythm
 
