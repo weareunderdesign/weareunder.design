@@ -27,7 +27,7 @@ principles:
 
 ## echo
 
-work doesn't count until it's out in the world. unshared work drains motivation and builds regret; shared work multiplies — ideas grow when exchanged, feedback lands direct but never personal, and the people watching become the community. so we share everything: the process, the drafts, the failures.
+work doesn't count until it's out in the world. shared work multiplies — ideas grow when exchanged, feedback lands direct but never personal, and the people watching become the community. so we share everything: the process, the drafts, the failures.
 
 "you're successful as soon as you send your work out into the world." - rick rubin
 
@@ -41,7 +41,7 @@ there is no publishing machine — the trace is the post. we're always making so
 | feed | a season | one finished thing, told well — macro, ad hoc, edited | instagram, linkedin, youtube |
 | record | forever | what shipped, and what we learned shipping it | [underground](https://weareunder.design/underground/), newsletter |
 
-the story is cheap because it expires — that's what makes it honest. above that line everything earns its life: half great beats full mediocre starts at the feed, and nothing is posted to fill a gap. the [site](https://weareunder.design/) and the [store](https://weareunder.design/store/) are home; rented land points back to owned. a release isn't done when it goes live — it's done when we've pushed it for weeks, and when something works we push harder. echo also builds relationships with media and influencers, coordinates launches, and leads knowledge-sharing.
+the story is cheap because it expires — that's what makes it honest. above that line everything earns its life: half great beats full mediocre starts at the feed, nothing is posted to fill a gap, and a release isn't done when it goes live but when we've pushed it for weeks — harder when it works. rented land points back to owned: the [site](https://weareunder.design/) and the [store](https://weareunder.design/store/) are home.
 
 ### voice
 
