@@ -29,7 +29,7 @@ principles:
 
 "you're successful as soon as you send your work out into the world." - rick rubin
 
-shared work multiplies — ideas grow when exchanged, feedback lands direct but never personal, and the people watching become the community. so we share everything: the process, the drafts, the failures.
+we share the process, the drafts, the failures. feedback lands direct but never personal, and the people watching become the community.
 
 the trace is the post. we're always making something, so there is always something to tell. one question sorts all of it: how long should this live?
 
