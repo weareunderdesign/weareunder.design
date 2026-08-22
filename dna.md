@@ -1,6 +1,6 @@
 # underground
 
-one idea runs through everything under does: remove the barriers between creating and sharing. this is that idea, applied — who we are, what we believe, how we publish, how we work.
+one idea runs through everything under does: remove the barriers between creating and sharing. this is that idea, applied — who we are, what we believe, how we share it.
 
 ## under
 
@@ -23,7 +23,7 @@ principles:
 - let tools do the heavy lifting: automate everything that isn't judgment.
 - purposeful impact: solve real problems — our own first, so we understand them deeply and keep clear vision.
 - joyful engagement: creativity thrives in play and wonder. stay inspired and weird.
-- holistic creation: mind, body, and spirit in one process.
+- energy over time: doing and being both count — mind, body, and spirit in one process. we read energy instead of scheduling it, and protect being-time fiercely. no timetable survives a real week.
 
 ## echo
 
@@ -46,14 +46,3 @@ the story is cheap because it expires — that's what makes it honest. above tha
 ### voice
 
 approachable, authentic, inspiring — teach through sharing, suggest don't command. relationships first; sales follow. writing is simple and clear: short sentences, lowercase, skimmable, strong openings. visuals are personal and mysterious: clean, intentional, beautiful — aesthetics create emotional connection.
-
-## rhythm
-
-how we work together — balancing doing and being.
-
-- doing: focused execution, deep work, output-oriented
-- being: rest, exploration, learning, connection without outcomes
-
-our partners span the globe like a digital octopus, and life is unexpected — an idea hits at 11pm, a sprint blows up, a week vanishes. so we don't schedule our energy, we read it. energy over time, progress over perfection. we respect time zones, move between doing and being as the work and the day ask, and protect being-time fiercely. no timetable survives contact with a real week, so we don't keep one.
-
-remember: this system serves you, not vice versa.
