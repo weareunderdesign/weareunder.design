@@ -41,7 +41,7 @@ the trace is the post. we're always making something, so there is always somethi
 | feed | a season | one finished thing, told well — macro, ad hoc, edited | instagram, linkedin, youtube |
 | record | forever | what shipped, and what we learned shipping it | [underground](https://weareunder.design/underground/), newsletter |
 
-the story is cheap because it expires — that's what makes it honest. above that line everything earns its life: half great beats full mediocre starts at the feed, nothing is posted to fill a gap, and a release isn't done when it goes live but when we've pushed it for weeks — harder when it works. rented land points back to owned: the [site](https://weareunder.design/) and the [store](https://weareunder.design/store/) are home.
+the story is cheap because it expires — that's what makes it honest. everything above that line earns its life: half great beats full mediocre, nothing is posted to fill a gap, and a release isn't done when it goes live but when we've pushed it for weeks — harder when it works.
 
 ### voice
 
