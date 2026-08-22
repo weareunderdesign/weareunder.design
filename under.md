@@ -1,6 +1,6 @@
 # under
 
-under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal. one came from code, one from brand. enough studios, startups, and companies between them to keep seeing the same break: the work is fine, the way it gets made is broken. so they built for that instead.
+founded in 2017 by eden vidal and inbal lapidot vidal — one from code, one from brand. enough studios, startups, and companies between them to keep seeing the same break: the work is fine, the way it gets made is broken. so they built for that instead.
 
 they're known for their "brandsprint" - a process that helps companies stand out in a world drowning in mediocre brands. clarity → precision → impact. a simple idea can change the way a group of people work.
 
