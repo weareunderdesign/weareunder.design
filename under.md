@@ -4,7 +4,7 @@ founded in 2017 by eden vidal and inbal lapidot vidal — one from code, one fro
 
 they're known for their "brandsprint" - a process that helps companies stand out in a world drowning in mediocre brands. clarity → precision → impact. a simple idea can change the way a group of people work.
 
-like water, everything we make is simple to start yet infinitely deep to master. beginners get intuitive basics; masters find depth that grows alongside them. our work shapes not just what gets made, but the way it gets made — meta-creativity.
+like water, everything we make is simple to start yet infinitely deep to master. our work shapes not just what gets made, but the way it gets made — meta-creativity.
 
 half great beats full mediocre. fewer, better things, written simple and lowercase, made clean and beautiful. precision, speed, initiative, taste — ship fast, learn faster, forward and not sideways. clear goals, 1-3 week sprints, your own milestones from assignment to done. let tools do the heavy lifting and automate everything that isn't judgment. solve real problems, our own first, so we understand them deeply and keep clear vision. creativity thrives in play and wonder, so stay inspired and weird, approachable and human — we suggest, never command, and relationships come before sales. doing and being both count, mind and body and spirit in one process: we read energy instead of scheduling it and protect being-time fiercely, because no timetable survives a real week.
 
