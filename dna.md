@@ -1,7 +1,5 @@
 # underground
 
-one idea runs through everything under does: remove the barriers between creating and sharing. this is that idea, applied — who we are, what we believe, how we share it.
-
 ## under
 
 under is a creative movement founded in 2017 by eden vidal and inbal lapidot vidal, empowering creatives through meta-creativity.
@@ -33,10 +31,6 @@ we share the process, the drafts, the failures. feedback lands direct but never 
 
 the trace is the post. we're always making something, so there is always something to tell. one question sorts all of it: how long should this live?
 
-| tier | lives | what | where |
-| :---- | :---- | :---- | :---- |
-| story | a day | raw traces from work in progress — daily, unedited, nobody approves it | instagram |
-| feed | a season | one finished thing, told well — macro, ad hoc, edited | instagram, linkedin, youtube |
-| record | forever | what shipped, and what we learned shipping it | [underground](https://weareunder.design/underground/), newsletter |
+raw traces expire in a day — unedited, daily, nobody approves them. a finished thing, told well, lasts a season. what shipped, and what we learned shipping it, stays forever.
 
-the story is cheap because it expires — that's what makes it honest. everything above that line earns its life: half great beats full mediocre, nothing is posted to fill a gap, and a release isn't done when it goes live but when we've pushed it for weeks — harder when it works.
+what expires is free, and that's what makes it honest. everything that outlives the day earns it: nothing is posted to fill a gap, and a release isn't done when it goes live but when we've pushed it for weeks — harder when it works.
