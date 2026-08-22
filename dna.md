@@ -31,7 +31,7 @@ principles:
 
 shared work multiplies — ideas grow when exchanged, feedback lands direct but never personal, and the people watching become the community. so we share everything: the process, the drafts, the failures.
 
-there is no publishing machine — the trace is the post. we're always making something, so there is always something to tell. one question sorts all of it: how long should this live?
+the trace is the post. we're always making something, so there is always something to tell. one question sorts all of it: how long should this live?
 
 ### channels
 
