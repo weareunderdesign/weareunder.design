@@ -17,12 +17,12 @@ like water, everything we make is simple to start yet infinitely deep to master.
 
 principles:
 
-- design excellence: half great beats full mediocre. quality over quantity — fewer, better things.
+- design excellence: half great beats full mediocre. fewer, better things — written simple and lowercase, made clean and beautiful.
 - move fast, think first: precision, speed, initiative, taste. ship fast, learn faster. forward, not sideways.
 - own it: clear goals, 1-3 week sprints, your milestones from assignment to done.
 - let tools do the heavy lifting: automate everything that isn't judgment.
 - purposeful impact: solve real problems — our own first, so we understand them deeply and keep clear vision.
-- joyful engagement: creativity thrives in play and wonder. stay inspired and weird.
+- joyful engagement: creativity thrives in play and wonder. stay inspired and weird, approachable and human — we suggest, never command. relationships first; sales follow.
 - energy over time: doing and being both count — mind, body, and spirit in one process. we read energy instead of scheduling it, and protect being-time fiercely. no timetable survives a real week.
 
 ## echo
@@ -33,8 +33,6 @@ we share the process, the drafts, the failures. feedback lands direct but never 
 
 the trace is the post. we're always making something, so there is always something to tell. one question sorts all of it: how long should this live?
 
-### channels
-
 | tier | lives | what | where |
 | :---- | :---- | :---- | :---- |
 | story | a day | raw traces from work in progress — daily, unedited, nobody approves it | instagram |
@@ -42,7 +40,3 @@ the trace is the post. we're always making something, so there is always somethi
 | record | forever | what shipped, and what we learned shipping it | [underground](https://weareunder.design/underground/), newsletter |
 
 the story is cheap because it expires — that's what makes it honest. everything above that line earns its life: half great beats full mediocre, nothing is posted to fill a gap, and a release isn't done when it goes live but when we've pushed it for weeks — harder when it works.
-
-### voice
-
-approachable, authentic, inspiring — teach through sharing, suggest don't command. relationships first; sales follow. writing is simple and clear: short sentences, lowercase, skimmable, strong openings. visuals are personal and mysterious: clean, intentional, beautiful — aesthetics create emotional connection.
