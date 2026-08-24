@@ -21,8 +21,6 @@ fewer, better things, written simple and lowercase, made clean and beautiful.
 
 precision, speed, initiative, taste. ship fast, learn faster, forward and not sideways.
 
-clear goals, 1-3 week sprints, your own milestones from assignment to done. let tools do the heavy lifting and automate everything that isn't judgment.
-
 solve real problems, our own first, so we understand them deeply and keep clear vision.
 
 creativity thrives in play and wonder, so stay inspired and weird, approachable and human. we suggest, never command. relationships come before sales.
