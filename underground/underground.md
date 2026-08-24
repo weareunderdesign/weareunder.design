@@ -17,7 +17,7 @@ like water, everything we make is simple to start yet infinitely deep to master.
 
 half great beats full mediocre.
 
-solve real problems, our own first, so we understand them deeply and keep clear vision.
+solve real problems. our own first.
 
 doing and being both count. we follow energy, not the clock.
 
