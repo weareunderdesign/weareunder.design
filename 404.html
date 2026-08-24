@@ -49,7 +49,10 @@
     
     <under-navigation></under-navigation>
     <div class="view ping-pong" style="position: relative;">
-        <video src="./animations/light.webm" autoplay muted loop class="fullscreen-video"></video>
+        <video autoplay muted loop playsinline class="fullscreen-video">
+            <source src="./animations/light.mp4" type="video/mp4">
+            <source src="./animations/light.webm" type="video/webm">
+        </video>
         <a href="/" class="circle circle-brandsprint random-color-change" id="cta-animation">
             <h4>404</h4>
         </a>
