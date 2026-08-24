@@ -13,8 +13,6 @@ like water, everything we make is simple to start yet infinitely deep to master.
 
 half great beats full mediocre.
 
-fewer, better things, written simple and lowercase, made clean and beautiful.
-
 solve real problems, our own first, so we understand them deeply and keep clear vision.
 
 creativity thrives in play and wonder, so stay inspired and weird, approachable and human. we suggest, never command. relationships come before sales.
