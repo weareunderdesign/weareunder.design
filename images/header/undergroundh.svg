@@ -2,6 +2,7 @@
 <g transform="rotate(45 42.5 42.5)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M32 6H53V16.5H32V6ZM36 9.5H49V13H36V9.5Z" fill="white"/>
 <path d="M40 17.5H45V24H40V17.5Z" fill="white"/>
-<path d="M26 25H59V63L45.5 79H39.5L26 63V25Z" fill="white"/>
+<path d="M26 25H42V79H39.5L26 63V25Z" fill="white"/>
+<path d="M43 25H59V63L45.5 79H43V25Z" fill="white"/>
 </g>
 </svg>
