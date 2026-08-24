@@ -33,16 +33,6 @@ so we work in the open.
 
 we share the process, the drafts, the failures. feedback lands direct but never personal, and the people watching become the community.
 
-the trace is the post. we're always making something, so there is always something to tell. one question sorts all of it: how long should this live?
-
-raw traces expire in a day. unedited, daily, nobody approves them.
-
-a finished thing, told well, lasts a season.
-
-what shipped, and what we learned shipping it, stays forever.
-
-what expires is free, and that's what makes it honest. everything that outlives the day earns it: nothing is posted to fill a gap. a release isn't done when it goes live but when we've pushed it for weeks. harder when it works.
-
 there is no real boundary.
 
 there is only creation.
