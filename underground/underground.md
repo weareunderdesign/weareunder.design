@@ -13,21 +13,25 @@ no gap between idea and execution.
 
 we go after the gap, not the output.
 
-like water, everything we make is simple to start yet infinitely deep to master.
+like water. simple to start. endless to master.
+
+me, you, or santana. the guitar is the same guitar.
 
 half great beats full mediocre.
 
 solve real problems. our own first.
 
-doing and being both count. we follow energy, not the clock.
-
 what closes the gap is knowledge, not property.
 
 so we work in the open.
 
+work you never show turns into regret.
+
 > "you're successful as soon as you send your work out into the world." - rick rubin
 
 we share the process, the drafts, the failures.
+
+doing and being are one thing.
 
 there is no real boundary.
 
