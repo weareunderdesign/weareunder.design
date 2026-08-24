@@ -25,7 +25,7 @@ solve real problems, our own first, so we understand them deeply and keep clear 
 
 creativity thrives in play and wonder, so stay inspired and weird, approachable and human. we suggest, never command. relationships come before sales.
 
-doing and being both count, mind and body and spirit in one process: we read energy instead of scheduling it and protect being-time fiercely, because no timetable survives a real week.
+doing and being both count. we follow energy, not the clock.
 
 what closes the gap is knowledge, not property.
 
