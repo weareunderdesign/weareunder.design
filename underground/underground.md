@@ -3,8 +3,6 @@
 
 founded in 2017 by eden vidal and inbal lapidot vidal. one from code, one from brand. enough studios, startups, and companies between them to keep seeing the same break: the work is fine. the way it gets made is broken.
 
-clarity, then precision, then impact.
-
 technology is disappearing into the work. at the piano you stop thinking about the piano. you and it become one thing.
 
 that's the aim everywhere else: no gap between idea and execution, between intention and result.
