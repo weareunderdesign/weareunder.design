@@ -19,8 +19,6 @@ half great beats full mediocre.
 
 fewer, better things, written simple and lowercase, made clean and beautiful.
 
-precision, speed, initiative, taste. ship fast, learn faster, forward and not sideways.
-
 solve real problems, our own first, so we understand them deeply and keep clear vision.
 
 creativity thrives in play and wonder, so stay inspired and weird, approachable and human. we suggest, never command. relationships come before sales.
