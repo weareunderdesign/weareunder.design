@@ -3,8 +3,6 @@
 
 eden and inbal. both design. one from code. one from brand.
 
-atlit. on the sea. three girls.
-
 we kept seeing the same break.
 
 the work is fine. the way it gets made is broken.
@@ -34,6 +32,8 @@ work you never show turns into regret.
 we share the process, the drafts, the failures.
 
 doing and being are one thing.
+
+atlit. three girls. the work. the same day.
 
 there is no real boundary.
 
