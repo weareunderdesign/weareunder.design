@@ -1,7 +1,7 @@
 ## under
 2017
 
-eden and inbal. one from code, one from brand.
+eden and inbal. both design. one from code. one from brand.
 
 we kept seeing the same break.
 
