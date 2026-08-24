@@ -1,5 +1,5 @@
 <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g transform="rotate(45 42.5 42.5)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M32 -4H53V6.5H45V42H59V80L45.5 96H39.5L26 80V42H40V6.5H32V-4ZM36 -0.5H49V3H36V-0.5Z" fill="white" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M32 0H53V10.5H45V31H59V69L45.5 85H39.5L26 69V31H40V10.5H32V0ZM36 3.5H49V7H36V3.5Z" fill="white" stroke="white"/>
 </g>
 </svg>
