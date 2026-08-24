@@ -1,23 +1,25 @@
 <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g>
-<animateTransform attributeName="transform" type="translate" values="0 0;0 -1.4;0 0" dur="0.3s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="0.3s" repeatCount="indefinite"/>
+<g transform="rotate(7 50 20)">
 <g>
-<animateTransform attributeName="transform" type="rotate" values="0 41 29;12 41 29;0 41 29;-14 41 29;0 41 29" dur="0.6s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="rotate" values="0 41 29;-50 41 29;0 41 29" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="0.6s" repeatCount="indefinite"/>
 <path d="M44.5 27L42.39 25.78L22.69 25.38L11.14 38.28L20.54 44.73L27.91 34.85L28.33 34.65L34.77 34.85L38.5 36.5Z" fill="white" stroke="white"/>
 </g>
 <g>
-<animateTransform attributeName="transform" type="rotate" values="0 33 42;-14 33 42;0 33 42;12 33 42;0 33 42" dur="0.6s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="rotate" values="0 33 42;-70 33 42;0 33 42" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="0.6s" repeatCount="indefinite"/>
 <path d="M37 34.5L40 55.5L38.4 57.15L28.15 64.45L8.47 64.45L8.47 50.35L24.08 50.35L26.78 49.61L27.07 49.38L35.18 35.6Z" fill="white" stroke="white"/>
 </g>
 <g>
-<animateTransform attributeName="transform" type="rotate" values="0 44 48;12 44 48;0 44 48;-10 44 48;0 44 48" dur="0.6s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="rotate" values="0 44 48;60 44 48;0 44 48" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="0.6s" repeatCount="indefinite"/>
 <path d="M42 44L46.5 44.5L45.93 47.82L46.39 48.07L59.42 55.18L59.42 76.53L44.22 76.53L44.22 61.25L44.03 61.1L38.99 57.16L38.7 56.93Z" fill="white" stroke="white"/>
 </g>
 <g>
-<animateTransform attributeName="transform" type="rotate" values="0 56 29;-14 56 29;0 56 29;10 56 29;0 56 29" dur="0.6s" repeatCount="indefinite"/>
+<animateTransform attributeName="transform" type="rotate" values="0 56 29;50 56 29;0 56 29" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="0.6s" repeatCount="indefinite"/>
 <path d="M56 24.5L59.38 25.87L63.63 15.25L75.35 19.72L67.86 35.45L53.88 35.45L51.5 33Z" fill="white" stroke="white"/>
 </g>
 <path d="M42.39 25.3L59.4 25.7L53.9 36L46 48.5L36 49.7L27 49.4L35.2 35.4Z" fill="white" stroke="white"/>
 <circle cx="50.24" cy="16" r="7.53" fill="white" stroke="white"/>
+</g>
 </g>
 </svg>
