@@ -139,6 +139,12 @@ function addSidebar() {
 <span class="text-m" style="text-decoration: none; display: none; color: white;">store</span>
 </div>
 </a>
+<a class="header-link" href="/underground/" data-page="underground">
+<div class="column align-center justify-center gap-xs">
+<img src="/images/header/underground.svg">
+<span class="text-m" style="text-decoration: none; display: none; color: white;">underground</span>
+</div>
+</a>
 <a class="header-link" style="cursor: pointer" id="nav-work" data-page="design">
 <div class="column align-center justify-center gap-xs">
 <img src="/images/header/design.svg">
