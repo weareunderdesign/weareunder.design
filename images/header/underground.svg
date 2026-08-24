@@ -2,7 +2,8 @@
 <g transform="rotate(45 42.5 42.5)">
 <path d="M32 6H53V16.5H32V6Z" stroke="white"/>
 <path d="M36 9.5H49V13H36V9.5Z" stroke="white"/>
-<path d="M40 18.5H45V23H40V18.5Z" stroke="white"/>
+<path d="M40 16.5V25" stroke="white"/>
+<path d="M45 16.5V25" stroke="white"/>
 <path d="M26 25H59V63L45.5 79H39.5L26 63V25Z" stroke="white"/>
 </g>
 </svg>
