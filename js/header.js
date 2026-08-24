@@ -86,6 +86,29 @@ function addSidebar() {
       height: auto;
     }
 
+    .icon-swap {
+      position: relative;
+      display: inline-block;
+      line-height: 0;
+    }
+    .icon-swap img {
+      transition: opacity 200ms ease;
+    }
+    .icon-swap .icon-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .header-link:hover .icon-line,
+    .header-link.active .icon-line {
+      opacity: 0;
+    }
+    .header-link:hover .icon-fill,
+    .header-link.active .icon-fill {
+      opacity: 1;
+    }
+
     .logo-mobile {
       display: none;
     }
@@ -129,25 +152,25 @@ function addSidebar() {
   <div id="under-nav" class="has-pointer">
 <a class="header-link" href="/brandsprint/" data-page="brandsprint">
 <div class="column align-center justify-center gap-xs">
-<img src="/images/header/brandsprint.svg">
+<span class="icon-swap"><img src="/images/header/brandsprint.svg" class="icon-line"><img src="/images/header/brandsprinth.svg" class="icon-fill"></span>
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" href="/store/" data-page="store">
 <div class="column align-center justify-center gap-xs" style="position:relative">
-<span style="position:relative"><img src="/images/header/store.svg"><span id="cart-count" class="text-l" style="position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:white;mix-blend-mode:difference;padding-top:16px;text-decoration:none"></span></span>
+<span style="position:relative"><span class="icon-swap"><img src="/images/header/store.svg" class="icon-line"><img src="/images/header/storeh.svg" class="icon-fill"></span><span id="cart-count" class="text-l" style="position:absolute;inset:0;display:none;align-items:center;justify-content:center;color:white;mix-blend-mode:difference;padding-top:16px;text-decoration:none"></span></span>
 <span class="text-m" style="text-decoration: none; display: none; color: white;">store</span>
 </div>
 </a>
 <a class="header-link" href="/underground/" data-page="underground">
 <div class="column align-center justify-center gap-xs">
-<img src="/images/header/underground.svg">
+<span class="icon-swap"><img src="/images/header/underground.svg" class="icon-line"><img src="/images/header/undergroundh.svg" class="icon-fill"></span>
 <span class="text-m" style="text-decoration: none; display: none; color: white;">underground</span>
 </div>
 </a>
 <a class="header-link" style="cursor: pointer" id="nav-work" data-page="design">
 <div class="column align-center justify-center gap-xs">
-<img src="/images/header/design.svg">
+<span class="icon-swap"><img src="/images/header/design.svg" class="icon-line"><img src="/images/header/designh.svg" class="icon-fill"></span>
 <span class="text-m" style="text-decoration: none; display: none; color: white;">design</span>
 </div>
 </a>
@@ -205,28 +228,15 @@ function addSidebar() {
 
       if (currentPath !== '/' && currentPath.includes(dataPage)) {
         link.classList.add('active');
-        const img = link.querySelector('img');
-        if (img) {
-          const src = img.getAttribute('src');
-          img.setAttribute('src', src.replace('.svg', 'h.svg'));
-        }
       }
     });
   }
 
   document.querySelectorAll(".header-link").forEach((link) => {
-    const img = link.querySelector("img");
     const label = link.querySelector(".text-m");
 
-    const hover = (labelDisplay, from, to) => () => {
-      label.style.display = labelDisplay;
-      if (!link.classList.contains("active")) {
-        img.setAttribute("src", img.getAttribute("src").replace(from, to));
-      }
-    };
-
-    link.addEventListener("mouseover", hover("block", ".svg", "h.svg"));
-    link.addEventListener("mouseout", hover("none", "h.svg", ".svg"));
+    link.addEventListener("mouseover", () => { label.style.display = "block"; });
+    link.addEventListener("mouseout", () => { label.style.display = "none"; });
   });
 
   setActiveNavItem();
