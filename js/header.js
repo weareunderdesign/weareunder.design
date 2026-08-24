@@ -94,18 +94,11 @@ function addSidebar() {
     .icon-swap img {
       transition: opacity 200ms ease;
     }
-    .icon-swap .icon-fill,
-    .icon-swap .icon-run {
+    .icon-swap .icon-fill {
       position: absolute;
       top: 0;
       left: 0;
       opacity: 0;
-    }
-    .header-link.has-run:hover .icon-fill {
-      opacity: 0;
-    }
-    .header-link.has-run:hover .icon-run {
-      opacity: 1;
     }
     .header-link:hover .icon-line,
     .header-link.active .icon-line {
@@ -157,9 +150,9 @@ function addSidebar() {
 
 
   <div id="under-nav" class="has-pointer">
-<a class="header-link has-run" href="/brandsprint/" data-page="brandsprint">
+<a class="header-link" href="/brandsprint/" data-page="brandsprint">
 <div class="column align-center justify-center gap-xs">
-<span class="icon-swap"><img src="/images/header/brandsprint.svg" class="icon-line"><img src="/images/header/brandsprinth.svg" class="icon-fill"><img src="/images/header/brandsprintr.svg" class="icon-run"></span>
+<span class="icon-swap"><img src="/images/header/brandsprint.svg" class="icon-line"><img src="/images/header/brandsprinth.svg" class="icon-fill"></span>
 <span class="text-m" style="text-decoration: none; display: none; color: white;">brandsprint</span> 
 </div>
 </a>
