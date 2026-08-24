@@ -120,6 +120,40 @@ function addSidebar() {
       transform-origin: 70% 20%;
     }
 
+    @keyframes sprint {
+      0% { transform: rotate(0) translateX(0); }
+      25% { transform: rotate(6deg) translateX(-2px); }
+      55% { transform: rotate(4deg) translateX(4px); }
+      100% { transform: rotate(0) translateX(0); }
+    }
+    .header-link[data-page="brandsprint"]:hover .icon-swap {
+      animation: sprint 450ms ease-out;
+      transform-origin: 50% 80%;
+    }
+
+    @keyframes pickup {
+      0% { transform: translateY(0); }
+      35% { transform: translateY(-4px); }
+      65% { transform: translateY(1px); }
+      82% { transform: translateY(-1px); }
+      100% { transform: translateY(0); }
+    }
+    .header-link[data-page="store"]:hover .icon-swap {
+      animation: pickup 600ms ease-in-out;
+      transform-origin: 50% 0%;
+    }
+
+    @keyframes draw {
+      0% { transform: rotate(0) translateX(0); }
+      30% { transform: rotate(-8deg) translateX(-1px); }
+      60% { transform: rotate(-6deg) translateX(2px); }
+      100% { transform: rotate(0) translateX(0); }
+    }
+    .header-link[data-page="design"]:hover .icon-swap {
+      animation: draw 600ms ease-in-out;
+      transform-origin: 50% 90%;
+    }
+
     .logo-mobile {
       display: none;
     }
