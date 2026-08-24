@@ -33,7 +33,7 @@ what closes the gap is knowledge, not property.
 
 so we work in the open.
 
-"you're successful as soon as you send your work out into the world." - rick rubin
+> "you're successful as soon as you send your work out into the world." - rick rubin
 
 we share the process, the drafts, the failures. feedback lands direct but never personal, and the people watching become the community.
 
