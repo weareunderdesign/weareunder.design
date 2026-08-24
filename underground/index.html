@@ -51,8 +51,9 @@
 
     const renderNote = note => {
       const [, title, rest] = note.match(/^##\s*(.+)\n([\s\S]*)$/);
-      const [, date, body] = rest.match(/^\s*(\d{4}-\d{2}-\d{2})?([\s\S]*)$/);
-      const when = date && new Date(date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).toLowerCase();
+      const [, date, body] = rest.match(/^\s*(\d{4}(?:-\d{2}-\d{2})?)?([\s\S]*)$/);
+      const when = date && (date.length === 4 ? date
+        : new Date(date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).toLowerCase());
       return `<article>
         <h2 id="${slug(title)}">${title}</h2>
         ${when ? `<p class="text-s text-secondary">${when}</p>` : ''}
