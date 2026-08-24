@@ -9,20 +9,20 @@
 <g transform="translate(34 46)">
 <g>
 <animateTransform attributeName="transform" type="rotate" values="40;-15;-40;5;40" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" dur="0.55s" repeatCount="indefinite"/>
-<path d="M-3.5 -4L3.5 -4L3 15L-3 15Z" fill="white" stroke="white"/>
+<path d="M-3.5 -4L3.5 -4L3 20L-3 20Z" fill="white" stroke="white"/>
 <g>
-<animateTransform attributeName="transform" type="rotate" values="25 0 14;110 0 14;15 0 14;25 0 14;25 0 14" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" dur="0.55s" repeatCount="indefinite"/>
-<path d="M-3 13L3 13L3 22.5L10 22.5L10 27L-3 27Z" fill="white" stroke="white"/>
+<animateTransform attributeName="transform" type="rotate" values="25 0 19;110 0 19;15 0 19;25 0 19;25 0 19" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" dur="0.55s" repeatCount="indefinite"/>
+<path d="M-3 18L3 18L3 31L10 31L10 35.5L-3 35.5Z" fill="white" stroke="white"/>
 </g>
 </g>
 </g>
 <g transform="translate(41 46)">
 <g>
 <animateTransform attributeName="transform" type="rotate" values="-40;5;40;-15;-40" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" dur="0.55s" repeatCount="indefinite"/>
-<path d="M-3.5 -4L3.5 -4L3 15L-3 15Z" fill="white" stroke="white"/>
+<path d="M-3.5 -4L3.5 -4L3 20L-3 20Z" fill="white" stroke="white"/>
 <g>
-<animateTransform attributeName="transform" type="rotate" values="15 0 14;25 0 14;25 0 14;110 0 14;15 0 14" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" dur="0.55s" repeatCount="indefinite"/>
-<path d="M-3 13L3 13L3 22.5L10 22.5L10 27L-3 27Z" fill="white" stroke="white"/>
+<animateTransform attributeName="transform" type="rotate" values="15 0 19;25 0 19;25 0 19;110 0 19;15 0 19" keyTimes="0;0.25;0.5;0.75;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1;0.4 0 0.6 1" dur="0.55s" repeatCount="indefinite"/>
+<path d="M-3 18L3 18L3 31L10 31L10 35.5L-3 35.5Z" fill="white" stroke="white"/>
 </g>
 </g>
 </g>
