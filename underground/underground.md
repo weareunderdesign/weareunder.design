@@ -15,8 +15,6 @@ half great beats full mediocre.
 
 solve real problems, our own first, so we understand them deeply and keep clear vision.
 
-creativity thrives in play and wonder, so stay inspired and weird, approachable and human. we suggest, never command. relationships come before sales.
-
 doing and being both count. we follow energy, not the clock.
 
 what closes the gap is knowledge, not property.
@@ -25,7 +23,7 @@ so we work in the open.
 
 > "you're successful as soon as you send your work out into the world." - rick rubin
 
-we share the process, the drafts, the failures. feedback lands direct but never personal, and the people watching become the community.
+we share the process, the drafts, the failures. we suggest, never command. feedback lands direct but never personal, and the people watching become the community.
 
 there is no real boundary.
 
