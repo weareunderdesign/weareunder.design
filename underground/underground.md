@@ -13,7 +13,7 @@ that's the aim everywhere else: no gap between idea and execution, between inten
 
 we go after the gap, not the output.
 
-like water, everything we make is simple to start yet infinitely deep to master. our work shapes not just what gets made, but the way it gets made. meta-creativity.
+like water, everything we make is simple to start yet infinitely deep to master.
 
 half great beats full mediocre.
 
@@ -27,7 +27,7 @@ so we work in the open.
 
 > "you're successful as soon as you send your work out into the world." - rick rubin
 
-we share the process, the drafts, the failures. we suggest, never command. feedback lands direct but never personal, and the people watching become the community.
+we share the process, the drafts, the failures. we suggest, never command. feedback lands direct but never personal.
 
 there is no real boundary.
 
