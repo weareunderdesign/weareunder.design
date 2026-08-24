@@ -109,6 +109,17 @@ function addSidebar() {
       opacity: 1;
     }
 
+    @keyframes dig {
+      0% { transform: rotate(0) translateY(0); }
+      30% { transform: rotate(-14deg) translateY(2px); }
+      60% { transform: rotate(-10deg) translateY(7px); }
+      100% { transform: rotate(0) translateY(0); }
+    }
+    .header-link[data-page="underground"]:hover .icon-swap {
+      animation: dig 600ms ease-in-out;
+      transform-origin: 70% 20%;
+    }
+
     .logo-mobile {
       display: none;
     }
