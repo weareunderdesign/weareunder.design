@@ -3,7 +3,7 @@
 
 eden and inbal. both design. one from code. one from brand.
 
-atlit. on the sea.
+atlit. on the sea. three girls.
 
 we kept seeing the same break.
 
