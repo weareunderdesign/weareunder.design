@@ -75,6 +75,9 @@ function startAnimationLoop() {
         
         if (vars.balls.length > 1) {
             vars.balls.forEach(ball => {
+                ball._rect = ball.getBoundingClientRect();
+            });
+            vars.balls.forEach(ball => {
                 if (!ball.isHovered) {
                     resolveCollision(ball);
                 }
@@ -191,7 +194,7 @@ function resolveCollision(ball) {
     const balls = vars.balls;
     
     const ballDimensions = ball._cachedDimensions;
-    const ballRect = ball.getBoundingClientRect();
+    const ballRect = ball._rect;
     
     const ballCenter = {
         x: ballRect.left + ballDimensions.radius,
@@ -202,7 +205,7 @@ function resolveCollision(ball) {
         if (otherBall === ball || otherBall.isHovered) return;
         
         const otherDimensions = otherBall._cachedDimensions;
-        const otherRect = otherBall.getBoundingClientRect();
+        const otherRect = otherBall._rect;
         
         const otherCenter = {
             x: otherRect.left + otherDimensions.radius,
