@@ -7,16 +7,15 @@ function kusamaRoom() {
   const style = document.createElement('style');
   style.textContent = `
     .kusama-dot { position: absolute; border-radius: 100%; z-index: 4; }
-    .kusama-line { position: absolute; left: 40px; bottom: 40px; z-index: 6; line-height: 1.35; color: #111; }
+    .kusama-line { position: absolute; left: 40px; bottom: 40px; z-index: 3; line-height: 1.35; color: #000; }
     .kusama-line span { opacity: .5; }
-    [data-theme="dark"] .kusama-line { color: #fff; }
     @media (max-width: 768px) { .kusama-line { left: 20px; bottom: 20px; } }
   `;
   document.head.appendChild(style);
 
   const line = document.createElement('div');
   line.className = 'kusama-line';
-  line.innerHTML = '<span>yayoi kusama 1929&ndash;2026</span><br>cover the world in dots.';
+  line.innerHTML = '<span>yayoi kusama 1929&ndash;2026</span><br>cover the world in dots forever';
   hero.appendChild(line);
 
   let colour = 0;
