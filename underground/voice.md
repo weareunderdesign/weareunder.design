@@ -1,9 +1,11 @@
 ## under, spoken
-~45 seconds
+~60 seconds
 
 we're under. eden and inbal. two designers. one came from code, one from brand.
 
-we spent years in studios and startups, and we kept seeing the same break. the work was fine. the way it got made was broken.
+we've worked together since forever. a hundred brands, ten days each. and every time we saw the same break. the work was fine. the way it got made was broken. revisions. more revisions. safe. fine.
+
+fine isn't memorable.
 
 so that's what we went after. not the output. the gap.
 
@@ -13,11 +15,15 @@ no gap between idea and execution.
 
 me, you, or santana. same guitar.
 
-half great beats full mediocre.
+we don't just make things. we make things that make things.
+
+half great beats full mediocre. different beats better.
 
 we solve real problems. our own first.
 
 and we work in the open. the drafts, the failures, all of it. because work you never show turns into regret.
+
+being is doing. every damn day.
 
 atlit. three girls. the work. all the same day.
 
