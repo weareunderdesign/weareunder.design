@@ -15,7 +15,9 @@ so we cut it. you can be cautious or you can be creative. with no time for revis
 
 and something happens when the time is short that months never gave us. at the piano you stop thinking about the piano. you and it become one thing. no gap between idea and execution. that gap is what we go after. not the output.
 
-me, you, or santana. the guitar is the same guitar. the tool isn't the difference. but we create tools and then they shape us. so we make things that make things. our own first.
+me, you, or santana. the guitar is the same guitar. the tool isn't the difference. but we create tools and then they shape us. so the real work is not the work. it's how the work gets made. we make things that make things. our own first.
+
+that ten days became a tool. we called it brandsprint. a hundred brands went through it. but it's a byproduct. the urge is upstream. making the thing that makes the thing.
 
 what closes the gap is knowledge, not property. so we work in the open. the process, the drafts, the failures. work you never show turns into regret.
 
