@@ -1,32 +1,22 @@
 ## under, spoken
-~60 seconds
+~60 seconds. every line is something eden actually said on stage.
 
-we're under. eden and inbal. two designers. one came from code, one from brand.
+i'm eden. i run a design studio with my wife inbal. it's called under. we run it from the third floor of our house in atlit. three girls. we work monday to thursday.
 
-we've worked together since forever. a hundred brands, ten days each. and every time we saw the same break. the work was fine. the way it got made was broken. revisions. more revisions. safe. fine.
+everything i do is design. i write code, it's design. i talk with someone, it's design. it's all bad design, good design, or remarkable design. no design is also design.
 
-fine isn't memorable.
+one day inbal said, what if we do a sprint for branding. and i said no, branding is emotional, it needs time. and as i was saying it i was like, oh my god, i'm lying to myself. everyone are lying.
 
-so that's what we went after. not the output. the gap.
+since then, a hundred brands. ten days each.
 
-you know that moment at the piano when you stop thinking about the piano? you and it become one thing. that's what technology is doing now. it's disappearing into the work.
+branding is broken. revisions. more revisions. can we make it pop. it leaves you with something fine. fine is not memorable.
 
-no gap between idea and execution.
+you can be cautious or you can be creative.
 
-me, you, or santana. same guitar.
+your identity is going to be ninety-nine percent like everything else. the one percent weird is the difference between good and remarkable. different is better than better.
 
-we don't just make things. we make things that make things.
+we create tools and then they shape us. so we make things that make things.
 
-half great beats full mediocre. different beats better.
+a brand is not a logo. it's your being. and the sprint is where the being becomes the doing.
 
-we solve real problems. our own first.
-
-and we work in the open. the drafts, the failures, all of it. because work you never show turns into regret.
-
-being is doing. every damn day.
-
-atlit. three girls. the work. all the same day.
-
-there's no real boundary.
-
-there's only creation.
+one plus one equals three. every day.
