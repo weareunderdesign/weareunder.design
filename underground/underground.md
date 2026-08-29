@@ -17,7 +17,7 @@ that's when we understood what we were actually after. there's a gap. between th
 
 and once you see it you see it everywhere. between idea and execution. between the person and the tool. we create tools and then they shape us. so we make our own. things that make things. the ten days became one, we called it brandsprint, a hundred brands went through it. it's a byproduct. the urge is upstream.
 
-but a tool alone doesn't close it. me, you, or santana. same guitar. what closes the gap is knowledge, not property. so we work in the open. the process, the drafts, the failures. work you never show turns into regret.
+but a tool alone doesn't close it. me, you, or santana. same guitar. low floor, no ceiling. simple enough to pick up, deep enough to never finish. that's the only kind of tool worth making. and the only way to keep it that way is in the open. the process, the drafts, the failures. work you never show turns into regret.
 
 you are not what you think you are. you are not what you say you are. you are what you do. the being becomes the doing.
 
