@@ -33,9 +33,13 @@ ROUND_TOP = {'cap': 0.97, 'x': 0.84}
 # radius, from a side extreme 0.55 of the vertical radius (measured from O, o, n).
 ROUND = {'hx': 0.675, 'hy': 0.55}
 
-# 4 Counters: one factor per weight. Horizontally, width = counters x factor + strokes.
+# 4 Counters (fitted to the reference font's widths): one factor per weight. Horizontally, width = counters x factor + strokes.
 # Vertically, counters never shrink below Regular x factor; strokes give way instead.
-COUNTER = {'Thin': 1.28, 'Regular': 1.0, 'Bold': 0.72, 'Black': 0.5}
+# Round counters respond more strongly than straight ones: factor ** ROUND_RESPONSE.
+COUNTER = {'Thin': 1.33, 'Regular': 1.0, 'Bold': 0.78, 'Black': 0.40}
+ROUND_RESPONSE = 1.10
+# Capital counters have more room and respond less: factor ** CAP_RESPONSE (fitted on H, O).
+CAP_RESPONSE = 0.55
 
 # 5 Joins: thickness where a curve leaves a stem, as a fraction of the bar.
 JOIN = {'Thin': 1.10, 'Regular': 0.94, 'Bold': 0.80, 'Black': 0.67}
@@ -69,6 +73,7 @@ class Master:
         self.R = w['stem'] * w['gain']
         self.join = self.bar * JOIN[weight] * o['join']
         self.cf = COUNTER[weight]
+        self.cf_round = COUNTER[weight] ** ROUND_RESPONSE
         self.aperture = COUNTER[weight] * o['aperture']
         self.sb_scale = SPACING[weight] * o['spacing']
 
@@ -76,18 +81,22 @@ class Master:
     def stroke(self, k):
         return {'V': self.V, 'R': self.R}[k]
 
-    def ink(self, regular_ink, strokes):
+    def factor(self, round_=False, cap=False):
+        return COUNTER[self.weight] ** ((ROUND_RESPONSE if round_ else 1) * (CAP_RESPONSE if cap else 1))
+
+    def ink(self, regular_ink, strokes, round_=False, cap=False):
         counter = regular_ink - sum(REGULAR.stroke(k) for k in strokes)
-        return counter * self.cf + sum(self.stroke(k) for k in strokes)
+        return counter * self.factor(round_, cap) + sum(self.stroke(k) for k in strokes)
 
     # 4 vertically
-    def budget(self, total, strokes, counters):
+    def budget(self, total, strokes, counters, round_=False, cap=False):
         """Split a fixed height between strokes (at this master's rule thickness)
         and counters (given at Regular). Counters never go below Regular x factor."""
+        cf = self.factor(round_, cap)
         free = total - sum(strokes)
         cs = [c * free / sum(counters) for c in counters]
-        if self.cf < 1 and free < sum(counters) * self.cf:
-            cs = [c * self.cf for c in counters]
+        if cf < 1 and free < sum(counters) * cf:
+            cs = [c * cf for c in counters]
             room = total - sum(cs)
             strokes = [s * room / sum(strokes) for s in strokes]
         return strokes, cs

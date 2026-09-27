@@ -9,6 +9,7 @@ from PIL import Image, ImageDraw
 from fontTools.ttLib import TTFont
 from fontTools.pens.basePen import BasePen
 from spec import MASTERS, ZONES, OVERSHOOT
+from letters import DRAWING
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TTF = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, '..', 'next', 'under-next.ttf')
@@ -90,8 +91,8 @@ def main():
             check(f'{ch} overshoot bottom', (ys[-1] + 1) - oy, OVERSHOOT[zone])
             cols = np.nonzero(r.any(0))[0]
             mid = (cols[0] + cols[-1]) // 2
-            reg_counter = {'cap': 591, 'x': 429}[zone]
-            (want_top, _), _ = m.budget(m.top(zone) - m.bottom(zone), [m.round_top(zone)] * 2, [reg_counter])
+            reg_counter = DRAWING[ch]['counter_h']
+            (want_top, _), _ = m.budget(m.top(zone) - m.bottom(zone), [m.round_top(zone)] * 2, [reg_counter], round_=True, cap=zone == 'cap')
             check(f'{ch} top thickness', runs(r[:, mid])[0][1], want_top)
             yc = oy - (ZONES[zone] // 2)
             check(f'{ch} side thickness', runs(r[yc])[0][1], m.R)
