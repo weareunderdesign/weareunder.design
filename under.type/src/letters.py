@@ -108,7 +108,7 @@ def e(m, d):
 
 
 def a(m, d):
-    W, V = m.ink(d['ink'], 'VR'), m.V
+    W, V = m.ink(d['ink'], 'VR', round_=True), m.V
     R0 = W - V
     y0, top = m.bottom('x'), m.top('x')
     bowl_top = d['bowl_top'] * XH
