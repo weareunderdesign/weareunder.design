@@ -7,6 +7,10 @@ the last node is the start point (Glyphs convention).
 from spec import ROUND, CORNER
 
 
+class Hole(list):
+    """A contour that cuts a counter. Everything else is ink."""
+
+
 class Pen:
     def __init__(self, start):
         self.start = start
@@ -103,6 +107,15 @@ def ellipse(x0, y0, x1, y1, h=ROUND):
     return [quad(R, T, True, h), quad(T, L, False, h), quad(L, B, True, h), quad(B, R, False, h)]
 
 
+def ellipse_at(x0, y0, x1, y1, top_x=None, bottom_x=None, h=ROUND):
+    """Superellipse whose top and bottom extremes can sit off-centre."""
+    cy = (y0 + y1) / 2
+    tx = (x0 + x1) / 2 if top_x is None else top_x
+    bx = (x0 + x1) / 2 if bottom_x is None else bottom_x
+    R, T, L, B = (x1, cy), (tx, y1), (x0, cy), (bx, y0)
+    return [quad(R, T, True, h), quad(T, L, False, h), quad(L, B, True, h), quad(B, R, False, h)]
+
+
 def from_cubics(cubics):
     pen = Pen(cubics[0][0])
     for c in cubics:
@@ -115,7 +128,7 @@ def rect(x0, y0, x1, y1):
 
 
 def ring(outer, inner, h=ROUND):
-    return [orient(from_cubics(ellipse(*outer, h=h))), orient(from_cubics(ellipse(*inner, h=h)), outer=False)]
+    return [orient(from_cubics(ellipse(*outer, h=h))), Hole(orient(from_cubics(ellipse(*inner, h=h)), outer=False))]
 
 
 def quad_nodes(pen, c):

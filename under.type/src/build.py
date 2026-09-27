@@ -6,27 +6,18 @@ import os
 import subprocess
 import sys
 from glyphsLib import classes as G
-from spec import MASTERS, ZONES, UPM, REGULAR
+from spec import MASTERS, ZONES, UPM, REGULAR, SPACE
 from letters import GLYPHS
-from geom import area, reverse
-
-
-def bbox(c):
-    xs, ys = [p[0] for p in c], [p[1] for p in c]
-    return min(xs), min(ys), max(xs), max(ys)
-
-
-def is_hole(i, contours):
-    a = bbox(contours[i])
-    return any(j != i and b[0] <= a[0] and b[1] <= a[1] and b[2] >= a[2] and b[3] >= a[3]
-               for j, b in ((j, bbox(c)) for j, c in enumerate(contours)))
+from geom import area, reverse, Hole
 
 
 def flips(ch):
     """Which contours to reverse, decided once on the Regular master so every
-    master keeps the same node order: outer contours counter-clockwise, holes clockwise."""
+    master keeps the same node order: ink counter-clockwise, holes clockwise."""
+    if ch == ' ':
+        return []
     ref, _ = GLYPHS[ch](REGULAR)
-    return [(area(c) > 0) == is_hole(i, ref) for i, c in enumerate(ref)]
+    return [(area(c) > 0) == isinstance(c, Hole) for c in ref]
 
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -37,6 +28,8 @@ WEIGHT_NAMES = [(100, 'Thin'), (200, 'ExtraLight'), (300, 'Light'), (400, 'Regul
 
 
 def glyph_for(m, ch):
+    if ch == ' ':
+        return [], SPACE * (0.5 + 0.5 * m.sb_scale)
     contours, (left, right) = GLYPHS[ch](m)
     contours = [reverse(c) if f else c for c, f in zip(contours, flips(ch))]
     xs = [x for c in contours for x, _, t in c if t != 'offcurve']
@@ -71,7 +64,7 @@ def build():
             inst.axes = [w, opsz]
             inst.weightClass = w
             font.instances.append(inst)
-    for ch in GLYPHS:
+    for ch in [' '] + list(GLYPHS):
         g = G.GSGlyph(f'uni{ord(ch):04X}')
         g.unicode = f'{ord(ch):04X}'
         font.glyphs.append(g)

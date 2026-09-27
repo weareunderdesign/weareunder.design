@@ -38,7 +38,7 @@ COUNTER = {'Thin': 1.28, 'Regular': 1.0, 'Bold': 0.72, 'Black': 0.5}
 ROUND_TOP = {'cap': 0.97, 'x': 0.84}
 
 # Sidebearings at Regular text, scaled per weight and optical size.
-SIDEBEARING = {'cap_straight': 67, 'cap_round': 53, 'x_straight': 51, 'x_round': 46, 'diagonal': 36}
+SIDEBEARING = {'cap_straight': 67, 'cap_round': 53, 'x_straight': 51, 'x_round': 46, 'diagonal': 36, 'dot': 32}
 SIDEBEARING_SCALE = {'Thin': 1.45, 'Regular': 1.0, 'Bold': 0.85, 'Black': 0.72}
 
 # Optical size: text is the reference; display gets more contrast, finer joins,
@@ -61,6 +61,41 @@ E_BAR = {'Thin': 1.10, 'Regular': 0.96, 'Bold': 0.60, 'Black': 0.33}
 OPEN_COUNTER = {'Thin': 1.0, 'Regular': 1.0, 'Bold': 0.82, 'Black': 0.62}
 # Secondary strokes (ה leg, א arms) thin out in heavy weights to keep counters open.
 SECONDARY = {'Thin': 1.0, 'Regular': 1.0, 'Bold': 0.90, 'Black': 0.82}
+
+# Word space, scaled with the spacing of the master.
+SPACE = 241
+
+# Diagonals meeting at a vertex (v w V W): the flat vertex widens with weight so the
+# crotch stays open. Extra width as a fraction of the stem.
+VERTEX = {'Thin': 0.6, 'Regular': 0.06, 'Bold': 0.25, 'Black': 0.42}
+
+# Dots (. , : i j) are optically square in light weights and flatten in Black so
+# they don't read as blobs. (width, height) as fractions of the stem.
+DOT = {'Thin': (1.42, 1.46), 'Regular': (1.14, 1.16), 'Bold': (1.0, 0.85), 'Black': (0.85, 0.56)}
+
+# s: terminal heights inside the stroke's inner box (0 bottom, 1 top).
+# s: two stacked rings; their overlap is the spine. Terminal heights as fractions
+# of the x-height; the upper ring is narrower than the lower one.
+S_RINGS = {'upper_width': 0.94, 'spine': 1.12, 'term_upper': 0.69, 'term_lower': 0.315}
+# The spine leaves the upper ring part-way round its lower-left curve and lands
+# part-way round the lower ring's upper-right curve (curve parameter, 1 = at the
+# level extreme). Light weights leave early for a diagonal; Black leaves at the
+# extreme for a flat slab.
+S_SPINE = {'Thin': 0.52, 'Regular': 0.6, 'Bold': 0.8, 'Black': 0.97}
+
+# 1: flag length, and flag top as a fraction of cap height.
+ONE_FLAG = {'length': 156, 'top': 0.8}
+
+# Single-story g tail, per weight.
+G_TAIL = {
+    'Thin':    dict(bottom=-216, bowl=-12, outer=-1, inner=-1, term_x=0.06,  term_y=-81),
+    'Regular': dict(bottom=-216, bowl=-10, outer=32, inner=32, term_x=0.053, term_y=-42),
+    'Bold':    dict(bottom=-228, bowl=5,   outer=60, inner=20, term_x=0.03,  term_y=-20),
+    'Black':   dict(bottom=-241, bowl=23,  outer=96, inner=9,  term_x=0.0,   term_y=1),
+}
+
+# Hebrew U-shapes (ש, and later ם ס-like bottoms): squarer bottom than o.
+U_ROUND = {'hx': 0.8, 'hy': 0.45}
 
 
 class Master:
