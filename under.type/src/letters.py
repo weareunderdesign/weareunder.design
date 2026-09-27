@@ -86,7 +86,7 @@ def e(m, d):
     W = m.ink(d['ink'], 'RR', round_=True)
     y0, y1 = m.bottom('x'), m.top('x')
     t = m.round_top('x')
-    (tt, eb, tb), (eye, low) = m.budget(y1 - y0, [t, d['bar'] * m.bar, t], [d['eye'], d['low']], round_=True)
+    (tt, eb, tb), (eye, low) = m.budget(y1 - y0, [t, d['bar'] * m.bar, t], [d['eye'], d['low']], round_=True, joins=(1,))
     it = y1 - tt
     bt = it - eye
     bb = bt - eb
@@ -109,23 +109,40 @@ def e(m, d):
 
 
 def a(m, d):
-    W, V = m.ink(d['ink'], 'VR', round_=True), m.V
+    """Stem, a hook over it, and a flat-topped bowl leaning right into the stem."""
+    W, V, R, J = m.ink(d['ink'], 'VR', round_=True), m.V, m.R, m.join
     R0 = W - V
     y0, top = m.bottom('x'), m.top('x')
-    bowl_top = d['bowl_top'] * XH
-    (tb, tt), _ = m.budget(bowl_top - y0, [m.round_top('x'), m.join], [d['bowl_counter']], round_=True)
-    lean = d.get('lean', 0) * R0
-    bx = (R0 + V / 2) / 2
-    bowl = [ellipse_ring((0, y0, R0 + V / 2, bowl_top), (m.R, y0 + tb, R0, bowl_top - tt), bx + lean, bx - lean)]
-    bowl = bowl[0]
-    yht = bowl_top + d['aperture'] * m.aperture
+    bt = d['bowl_top'] * XH
+    (bb, jt), _ = m.budget(bt - y0, [m.bar * d['bowl_bottom'], J], [d['bowl_counter']], round_=True, joins=(1,))
+    # outer bowl: flat top into the stem, round left and bottom, rising into the stem on the right
+    xt, yl, xb = d['top_flat'] * R0, d['left_y'] * bt, d['bottom_x'] * R0
+    xr, yr = R0 + d['right_x'] * R0, d['right_y'] * bt
+    outer = Pen((R0, bt)).line((xt, bt))
+    outer.curve(*quad((xt, bt), (0, yl), False)[1:])
+    outer.curve(*quad((0, yl), (xb, y0), True)[1:])
+    outer.curve(*quad((xb, y0), (xr, yr), False)[1:])
+    outer.line((xr, bt))
+    # counter: same shape one stroke in, with a straight right wall just inside the stem
+    # counter: the outer shape one stroke in. Its extremes sit a fixed part of a stem
+    # inward from the outer ones (measured: the same fraction in Regular and Black).
+    e = 4
+    xti = xt + d['top_in'] * V
+    xbi = xb + d['bottom_in'] * V
+    yri = d['right_in'] * bt
+    inner = Pen((R0 - e, bt - jt)).line((xti, bt - jt))
+    inner.curve(*quad((xti, bt - jt), (R, yl), False)[1:])
+    inner.curve(*quad((R, yl), (xbi, y0 + bb), True)[1:])
+    inner.curve(*quad((xbi, y0 + bb), (R0 - e, yri), False)[1:])
+    # hook
+    yht = bt + d['aperture'] * m.aperture
     x_to = d['term_x'] * W
     x_ti = x_to + V
     apex = d['apex'] * W
-    J = m.join
-    ry_i = (top - J) - yht
-    hook = arch_band((x_to, W, yht, top, ry_i + J, apex), (x_ti, R0, yht, top - J, ry_i, apex), sides=False)
-    return [rect(R0, 0, W, yht + J / 2), hook] + bowl, ('round', 'straight')
+    ht = J * d['hook_top']
+    ry_i = (top - ht) - yht
+    hook = arch_band((x_to, W, yht, top, ry_i + ht, apex), (x_ti, R0, yht, top - ht, ry_i, apex), sides=False)
+    return [rect(R0, 0, W, yht + ht / 2), hook, outer.close(), hole(inner.close())], ('round', 'straight')
 
 
 def s(m, d):
@@ -189,22 +206,32 @@ def b(m, d):
 
 
 def g(m, d):
-    W, V = m.ink(d['ink'], 'RV', round_=True), m.V
+    """A full-width bowl with the stem inside its right edge, and a tail that keeps its
+    counter: in heavy weights it deepens to the descender, then the bowl gives it room."""
+    W, V, R = m.ink(d['ink'], 'RV', round_=True), m.V, m.R
     R0 = W - V
     y0, y1 = m.bottom('x'), m.top('x')
     t = m.round_top('x')
-    (tb_, tt_), _ = m.budget(y1 - y0, [t, t], [d['counter_h']], round_=True)
-    bowl = ring((0, y0, R0 + V / 2, y1), (m.R, y0 + tb_, R0 - d.get('inset', 0) * m.cf_round, y1 - tt_))
-    (tt,), (depth,) = m.budget(-TAIL, [t], [d['tail_counter']], round_=True)
-    ib, tb = -depth, TAIL
+    ts = m.join * d['tail_stroke']
+    avail = y0 - TAIL
+    tc = max(m.floor(), avail - ts)
+    extra = max(0.0, tc + ts - avail)
+    deepen = min(extra, TAIL - ZONES['descender'])
+    tb = TAIL - deepen
+    y0b = y0 + (extra - deepen)
+    ib = tb + ts
+    (tt, tb_), _ = m.budget(y1 - y0b, [t, t], [d['counter_h']], round_=True)
+    bowl = ring((0, y0b, W, y1), (R, y0b + tb_, R0 - max(0.0, d['inset']) * m.cf_round, y1 - tt))
+    # tail: right side a quarter from the stem at yc down to the bottom; left side rises to a level cut
     rx_i, ry_i = d['tail_rx'] * m.cf_round, d['tail_ry'] * m.cf_round
     xb = R0 - rx_i
     yc = ib + ry_i
-    term = y0 - d['aperture'] * m.aperture
+    term = y0b - d['aperture'] * m.aperture
     o_right = quad((W, yc), (xb, tb), True)
     i_right = quad((R0, yc), (xb, ib), True)
-    o_left = quad((xb, tb), (0, tb + ry_i + tt), False)
-    i_left = quad((xb, ib), (V, ib + ry_i), False)
+    rx_l, ry_l = d['left_rx'] * m.cf_round, d['left_ry'] * m.cf_round
+    o_left = quad((xb, tb), (xb - rx_l - V, tb + ry_l + ts), False)
+    i_left = quad((xb, ib), (xb - rx_l, ib + ry_l), False)
     o_left = split(o_left, t_at(o_left, 1, term))[0]
     i_left = split(i_left, t_at(i_left, 1, term))[0]
     p = Pen((R0, XH)).line((W, XH)).line((W, yc)).curve(*o_right[1:]).curve(*o_left[1:])
@@ -213,11 +240,14 @@ def g(m, d):
 
 
 def v(m, d):
-    W, Vd = m.ink(d['ink'], 'RR'), m.R
-    span = Vd + max(0.0, m.V - m.join)
-    b0 = W / 2 - span / 2
-    left = Pen((0, XH)).line((b0, 0)).line((b0 + Vd, 0)).line((Vd, XH)).close()
-    right = Pen((W - Vd, XH)).line((b0 + span - Vd, 0)).line((b0 + span, 0)).line((W, XH)).close()
+    """Two diagonals. Their inner edges cross at the crotch, whose height follows the counter."""
+    W, w = m.ink(d['ink'], 'DD'), m.stroke('D')
+    h = XH - (XH - d['crotch']) * m.cf ** 0.7
+    t = 1 - h / XH
+    F = W - (W - 2 * w) / t
+    b0 = (W - F) / 2
+    left = Pen((0, XH)).line((b0, 0)).line((b0 + w, 0)).line((w, XH)).close()
+    right = Pen((W - w, XH)).line((b0 + F - w, 0)).line((b0 + F, 0)).line((W, XH)).close()
     return [left, right], ('diagonal', 'diagonal')
 
 
@@ -246,8 +276,10 @@ def samekh(m, d):
 
 
 def he(m, d):
-    W, V, bar = m.ink(d['ink'], 'VV'), m.V, m.bar
-    ri_h, ri_v = d['corner_h'] * m.cf, d['corner_v'] * m.cf
+    W, V, bar = m.ink(d['ink'], 'VS', hebrew=True), m.V, m.bar
+    S = m.stroke('S')
+    cf = m.factor(hebrew=True)
+    ri_h, ri_v = d['corner_h'] * cf, d['corner_v'] * cf
     ro_h, ro_v = ri_h + V, ri_v + bar
     yb = XH - bar
     p = Pen((W - V, yb - ri_v))
@@ -257,14 +289,15 @@ def he(m, d):
     p.line((W, 0)).line((W - V, 0))
     yu = yb - d['aperture'] * m.aperture
     yl = yu - min(d['cut'] * V, 0.1 * XH)
-    leg = Pen((0, 0)).line((V, 0)).line((V, yu)).line((0, yl)).close()
+    leg = Pen((0, 0)).line((S, 0)).line((S, yu)).line((0, yl)).close()
     return [p.close(), leg], ('straight', 'straight')
 
 
 def alef(m, d):
     """A diagonal, and two strokes that bend toward it and stop where they touch it."""
-    W, V, Vd, J = m.ink(d['ink'], 'VR'), m.V, m.R, m.join
-    c_t = d['counter_top'] * m.cf
+    W, V, Vd, J = m.ink(d['ink'], 'SD', hebrew=True), m.stroke('S'), m.stroke('D'), m.join
+    cf = m.factor(hebrew=True)
+    c_t = d['counter_top'] * cf
     xtl = max(0.0, W - V - Vd - c_t)
     ax = xtl + Vd + c_t
     edge_r = lambda y: (xtl + Vd) + (W - xtl - Vd) * (1 - y / XH)
@@ -275,7 +308,7 @@ def alef(m, d):
         """Carry a cut point half-way into the diagonal so the join is hidden in ink."""
         return (p[0] + side * Vd / 2, p[1])
 
-    rx, ry = d['arm_rx'] * m.cf, d['arm_ry'] * m.cf
+    rx, ry = d['arm_rx'] * cf, d['arm_ry'] * cf
     a_in = quad((ax, XH), (ax - rx, XH - ry), True)
     # a bend is never flatter than round
     ro = min(rx + V, ry + J)
@@ -285,7 +318,7 @@ def alef(m, d):
     arm = Pen((ax, XH)).curve(*a_in[1:]).line(tuck(a_in[3], -1)).line(tuck(a_out[3], -1)).line(a_out[3])
     arm.curve(a_out[2], a_out[1], a_out[0])
 
-    rx, ry = d['leg_rx'] * m.cf, d['leg_ry'] * m.cf
+    rx, ry = d['leg_rx'] * cf, d['leg_ry'] * cf
     l_in = quad((V, 0), (V + rx, ry), True)
     ro = min(V + rx, ry + J)
     l_out = quad((0, 0), (ro, ry + J), True)
@@ -298,27 +331,29 @@ def alef(m, d):
 
 def shin(m, d):
     """The U silhouette minus two counters. The middle arm is what's left between them."""
-    W, V = m.ink(d['ink'], 'VVV'), m.V
-    xm = V + d['notch_w'] * m.cf
+    W, V = m.ink(d['ink'], 'VVV', hebrew=True), m.V
+    cf = m.factor(hebrew=True)
+    xm = V + d['notch_w'] * cf
     y0 = m.bottom('x')
-    (t,), (inner_h,) = m.budget(XH - y0, [m.round_top('x') * d['bottom']], [474])
-
-    # right counter: bounded by the arm's edge, the bowl's inner curve and the right wall
+    t = m.round_top('x') * d['bottom']
+    # vertical stack at the arm: notch, the arm's landing, the counter below it, the bottom
+    (A, t), (D, below) = m.budget(XH - y0, [0.7 * m.join, t], [d['notch_depth'], d['below']], joins=(0,))
+    vs = D / d['notch_depth']
+    inner_h = XH - y0 - t
+    ry_i = min(d['bowl_ry'] * (W - 2 * V) / 2, 0.9 * inner_h)
     yb = y0 + t
-    ry = min(d['bowl_ry'] * (W - 2 * V) / 2, 0.9 * inner_h)
-    bowl_l = quad((V, yb + ry), (W / 2, yb), True)
-    bowl_r = quad((W / 2, yb), (W - V, yb + ry), False)
+    bowl_l = quad((V, yb + ry_i), (W / 2, yb), True)
+    bowl_r = quad((W / 2, yb), (W - V, yb + ry_i), False)
     # The arm's lower edge is the right counter's upper-left corner. A bend is never
     # flatter than round, so its width is capped by its height. When the arm is wider
     # than the bend (heavy weights), the edge dips and turns back up into the bowl.
-    ylb, ryl = XH - d['notch_depth'] * m.cf, d['notch_ry'] * m.cf
+    ylb, ryl = XH - D, d['notch_ry'] * vs
     ya = ylb + ryl
-    ry_e = ryl + 0.7 * m.join
+    ry_e = ryl + A
     rx_e = min(xm, ry_e)
     low = (xm + V - rx_e, ya - ry_e)
     down = quad((xm + V, ya), low, True)
     reach = low[0] - V
-    # the arm keeps at least half a join of thickness where it meets the left wall
     up = quad(low, (V, min(low[1] + d['return'] * reach * ry_e / rx_e, ylb - 0.5 * m.join)), False)
 
     def wall(y):
@@ -331,9 +366,10 @@ def shin(m, d):
         down_in, up_in = split(split(down, crossing(down, inside))[0], 0.97)
     crotch = up_in[3]
     bowl_in = split(bowl_l, t_at(bowl_l, 1, crotch[1]))[1] if crotch[1] < bowl_l[0][1] else bowl_l
-    up_in = list(up_in[:3]) + [bowl_in[0]]   # meet the bowl exactly at the crotch
-    # One outline: the U, with both open counters cut in from the top.
-    ry_o = d['turn'] * (XH - y0)
+
+    # One outline: the U (its outer curve turns where the counter's does), with both
+    # open counters cut in from the top.
+    ry_o = yb + ry_i - y0
     p = Pen((0, XH)).line((0, y0 + ry_o))
     p.curve(*quad((0, y0 + ry_o), (W / 2, y0), True)[1:])
     p.curve(*quad((W / 2, y0), (W, y0 + ry_o), False)[1:])

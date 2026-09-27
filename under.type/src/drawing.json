@@ -11,55 +11,67 @@
   "counter_h": 440.3953
  },
  "n": {
-  "ink": 452.6573,
-  "apex": 0.605,
-  "ry": 0.6235,
-  "outer_x0": 0.6727,
-  "shoulder": 0.114
+  "ink": 455.1361,
+  "apex": 0.5264,
+  "ry": 0.6737,
+  "outer_x0": 0.7136,
+  "shoulder": 0.1332
  },
  "e": {
-  "ink": 479.3844,
-  "bar": 0.9868,
-  "eye": 182.7764,
-  "low": 176.5803,
-  "aperture": 52.868
+  "ink": 482.7995,
+  "bar": 0.9678,
+  "eye": 189.6093,
+  "low": 186.2477,
+  "aperture": 58.2204
  },
  "a": {
-  "ink": 448.0479,
-  "bowl_top": 0.6266,
-  "bowl_counter": 87.8228,
-  "aperture": 50.1347,
-  "term_x": 0.0751,
-  "apex": 0.5636,
-  "lean": 0.1011
+  "ink": 449.2755,
+  "bowl_top": 0.6348,
+  "bowl_bottom": 1.0567,
+  "bowl_counter": 241.6062,
+  "top_flat": 0.7072,
+  "left_y": 0.4673,
+  "bottom_x": 0.5757,
+  "right_x": 0.1078,
+  "right_y": 0.7885,
+  "top_in": 0.3601,
+  "bottom_in": 0.3024,
+  "right_in": 0.6375,
+  "aperture": 45.7184,
+  "term_x": 0.0767,
+  "apex": 0.5563,
+  "hook_top": 0.8987
  },
  "s": {
-  "ink": 455.7022,
-  "stroke": 0.9558,
-  "spine": 1.0829,
-  "counter": 183.608,
-  "upper": 0.9374,
-  "ap_upper": 58.9629,
-  "ap_lower": 59.9587,
-  "leave": 0.6911,
-  "pull": 0.308
+  "ink": 456.6521,
+  "stroke": 0.9618,
+  "spine": 1.1111,
+  "counter": 189.7439,
+  "upper": 0.9419,
+  "ap_upper": 60.5791,
+  "ap_lower": 61.6447,
+  "leave": 0.7717,
+  "pull": 0.2986
  },
  "b": {
-  "ink": 497.1073,
-  "counter_h": 398.6707,
-  "bowl_x0": 0.5075
+  "ink": 495.629,
+  "counter_h": 429.8083,
+  "bowl_x0": 0.5161
  },
  "g": {
-  "ink": 512.7728,
-  "counter_h": 618.2823,
-  "tail_counter": 208.7444,
-  "tail_rx": 130.8517,
-  "tail_ry": 183.1472,
-  "aperture": 33.4336,
-  "inset": 6.507
+  "ink": 509.5018,
+  "counter_h": 541.5886,
+  "inset": 6.5833,
+  "tail_stroke": 0.9626,
+  "tail_rx": 152.7637,
+  "tail_ry": 151.5305,
+  "left_rx": 150.5241,
+  "left_ry": 163.6498,
+  "aperture": 34.5285
  },
  "v": {
-  "ink": 523.4022
+  "ink": 523.0,
+  "crotch": 118.0
  },
  "1": {
   "flag": 155.8524,
@@ -75,21 +87,21 @@
   "cut": 0.6853
  },
  "א": {
-  "ink": 486.0388,
-  "counter_top": 275.0471,
-  "arm_rx": 254.2085,
-  "arm_ry": 262.8208,
-  "leg_rx": 382.2775,
-  "leg_ry": 430.7031
+  "ink": 486.1072,
+  "counter_top": 281.1974,
+  "arm_rx": 243.6687,
+  "arm_ry": 251.2864,
+  "leg_rx": 426.0341,
+  "leg_ry": 440.432
  },
  "ש": {
-  "ink": 595.7853,
-  "notch_w": 180.1793,
-  "notch_depth": 288.7102,
-  "notch_ry": 210.7852,
-  "return": 0.6845,
-  "bowl_ry": 1.2212,
-  "turn": 0.6052,
-  "bottom": 1.201
+  "ink": 597.9404,
+  "notch_w": 180.7502,
+  "notch_depth": 302.8581,
+  "notch_ry": 230.5047,
+  "return": 0.728,
+  "bowl_ry": 1.2997,
+  "bottom": 1.1842,
+  "below": 136.5535
  }
 }

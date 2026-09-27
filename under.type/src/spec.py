@@ -15,15 +15,15 @@ shape minus its counters; every other weight and size comes from these rules.
 UPM = 1000
 
 # 1 Zones
-ZONES = {'cap': 727, 'x': 545, 'desc': -181, 'tail': -216}
+ZONES = {'cap': 727, 'x': 545, 'desc': -181, 'tail': -216, 'descender': -241}
 OVERSHOOT = {'cap': 12, 'x': 10}
 
 # 2 Strokes. stem, bar as a fraction of stem, and the extra weight rounds carry.
 WEIGHTS = {
-    'Thin':    dict(wght=100, stem=24,  bar=0.85, gain=1.06),
-    'Regular': dict(wght=400, stem=92,  bar=0.88, gain=1.08),
-    'Bold':    dict(wght=700, stem=200, bar=0.80, gain=1.06),
-    'Black':   dict(wght=900, stem=342, bar=0.67, gain=1.02),
+    'Thin':    dict(wght=100, stem=24,  bar=0.85, gain=1.00),
+    'Regular': dict(wght=400, stem=92,  bar=0.88, gain=1.11),
+    'Bold':    dict(wght=700, stem=200, bar=0.80, gain=1.04),
+    'Black':   dict(wght=900, stem=342, bar=0.67, gain=0.97),
 }
 
 # Rounds carry thinner tops and bottoms than straight bars (fraction of the bar).
@@ -34,17 +34,23 @@ ROUND_TOP = {'cap': 0.97, 'x': 0.84}
 ROUND = {'hx': 0.675, 'hy': 0.55}
 
 # 4 Counters (fitted to the original's Latin): one factor per weight. Horizontally, width = counters x factor + strokes.
-# Vertically, counters never shrink below Regular x factor; strokes give way instead.
+# Vertically, strokes keep their weight and counters take what is left, but no counter
+# ever shrinks below the floor (a round top's thickness x the factor); then strokes give
+# way, joins twice as fast as edges.
 # Round counters respond more strongly than straight ones: factor ** ROUND_RESPONSE.
-COUNTER = {'Thin': 1.22, 'Regular': 1.0, 'Bold': 0.78, 'Black': 0.52}
-ROUND_RESPONSE = 1.64
+COUNTER = {'Thin': 1.25, 'Regular': 1.0, 'Bold': 0.78, 'Black': 0.60}
+ROUND_RESPONSE = 1.56
 # Capital counters have more room and respond less: factor ** CAP_RESPONSE.
-CAP_RESPONSE = 0.82
-# Vertically, counters keep more of themselves than horizontally: factor ** VERTICAL_RESPONSE.
-VERTICAL_RESPONSE = 1.11
+CAP_RESPONSE = 0.84
 
 # 5 Joins: thickness where a curve leaves a stem, as a fraction of the bar.
-JOIN = {'Thin': 1.10, 'Regular': 0.94, 'Bold': 0.80, 'Black': 0.67}
+JOIN = {'Thin': 1.10, 'Regular': 0.94, 'Bold': 0.72, 'Black': 0.53}
+# A secondary stroke (a leg or arm that is not the letter's main stem) sits between
+# the stem and the join: stem - (stem - join) x SECONDARY. Measured on ה: 0.96 V Regular, 0.82 V Black.
+SECONDARY = 0.35
+# Diagonals are the mean of the stem and the round stroke (measured on v: 97 Regular, 337 Black).
+# Hebrew counters respond more strongly than Latin: factor ** HEBREW_RESPONSE (fitted).
+HEBREW_RESPONSE = 1.60
 
 # Optical size: display gets more contrast, finer joins, tighter apertures (6) and spacing (7).
 OPSZ = {
@@ -81,26 +87,37 @@ class Master:
 
     # 4 horizontally
     def stroke(self, k):
-        return {'V': self.V, 'R': self.R}[k]
+        return {'V': self.V, 'R': self.R, 'S': self.V - (self.V - self.join) * SECONDARY, 'D': (self.V + self.R) / 2}[k]
 
-    def factor(self, round_=False, cap=False):
-        return COUNTER[self.weight] ** ((ROUND_RESPONSE if round_ else 1) * (CAP_RESPONSE if cap else 1))
+    def factor(self, round_=False, cap=False, hebrew=False):
+        return COUNTER[self.weight] ** ((ROUND_RESPONSE if round_ else 1) * (CAP_RESPONSE if cap else 1) * (HEBREW_RESPONSE if hebrew else 1))
 
-    def ink(self, regular_ink, strokes, round_=False, cap=False):
+    def ink(self, regular_ink, strokes, round_=False, cap=False, hebrew=False):
         counter = regular_ink - sum(REGULAR.stroke(k) for k in strokes)
-        return counter * self.factor(round_, cap) + sum(self.stroke(k) for k in strokes)
+        return counter * self.factor(round_, cap, hebrew) + sum(self.stroke(k) for k in strokes)
 
     # 4 vertically
-    def budget(self, total, strokes, counters, round_=False, cap=False):
-        """Split a fixed height between strokes (at this master's rule thickness)
-        and counters (given at Regular). Counters never go below Regular x factor."""
-        cf = COUNTER[self.weight] ** (VERTICAL_RESPONSE * (CAP_RESPONSE if cap else 1))
+    def floor(self, zone='x'):
+        return self.round_top(zone) * COUNTER[self.weight]
+
+    def budget(self, total, strokes, counters, round_=False, cap=False, joins=(), hebrew=False):
+        """Split a fixed height between strokes (at this master's rule thickness) and
+        counters (given at Regular). Strokes keep their weight and counters take the rest,
+        but never less than the floor; then strokes give way, joins (by index) twice as fast."""
+        strokes = list(strokes)
         free = total - sum(strokes)
-        cs = [c * free / sum(counters) for c in counters]
-        if cf < 1 and free < sum(counters) * cf:
-            cs = [c * cf for c in counters]
+        share = [c / sum(counters) for c in counters]
+        cs = [free * sh for sh in share]
+        fl = self.floor()
+        if free < fl * len(counters):
+            cs = [fl] * len(counters)
             room = total - sum(cs)
-            strokes = [s * room / sum(strokes) for s in strokes]
+            lo, hi = 0.0, 1.0
+            for _ in range(50):
+                k = (lo + hi) / 2
+                got = sum(st * (k * k if i in joins else k) for i, st in enumerate(strokes))
+                lo, hi = (k, hi) if got < room else (lo, k)
+            strokes = [st * (k * k if i in joins else k) for i, st in enumerate(strokes)]
         return strokes, cs
 
     def round_top(self, zone):

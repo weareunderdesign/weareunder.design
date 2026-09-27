@@ -93,7 +93,10 @@ def reference(ch, wght=400, opsz=16):
 
 
 def ours(ch, m, drawing):
+    from build import flips
+    from geom import reverse
     contours, _ = letters.make(ch, m, drawing)
+    contours = [reverse(c) if fl else c for c, fl in zip(contours, flips(ch))]
     return rasterize([flatten(c) for c in contours])
 
 
