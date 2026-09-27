@@ -259,37 +259,62 @@ def alef(m):
 
 
 def shin(m):
+    """The U silhouette minus two counters. The middle arm is what's left between them."""
     W, V = m.ink(601, 'VVV'), m.V
-    cl = 182 * m.cf
-    xm = V + cl
+    xm = V + 182 * m.cf
     y0 = m.bottom('x')
     (t,), (inner_h,) = m.budget(XH - y0, [m.round_top('x') * 1.1], [474])
-    # Silhouette and counter each keep their own proportion: the counter's bottom
-    # stays nearly round in every weight, the silhouette turns 58% of the way down.
-    ry_o = 0.58 * (XH - y0)
-    ry_i = min(1.18 * (W - 2 * V) / 2, 0.9 * inner_h)
-    u = cup(0, W, XH, y0, ry_o)
-    u_counter = hole(cup(V, W - V, XH, y0 + t, ry_i))
-    J = m.landing
-    dl, ryl = 289 * m.cf, 106 * m.cf
-    ylb = XH - dl
-    q_out = quad((0, y0 + ry_o), (W / 2, y0), True)
-    q_in = quad((V, y0 + t + ry_i), (W / 2, y0 + t), True)
+    silhouette = cup(0, W, XH, y0, 0.58 * (XH - y0))
 
-    def land(y):
-        """Middle of the U's left stroke at height y: the arm lands inside the ink."""
-        xo = 0 if y >= q_out[0][1] else at(q_out, t_at(q_out, 1, y))[0]
-        xi = V if y >= q_in[0][1] else at(q_in, t_at(q_in, 1, y))[0]
-        return (xo + xi) / 2, xi
+    # right counter: bounded by the arm's edge, the bowl's inner curve and the right wall
+    yb = y0 + t
+    ry = min(1.18 * (W - 2 * V) / 2, 0.9 * inner_h)
+    bowl_l = quad((V, yb + ry), (W / 2, yb), True)
+    bowl_r = quad((W / 2, yb), (W - V, yb + ry), False)
+    # The arm's lower edge is the right counter's upper-left corner. A bend is never
+    # flatter than round, so its width is capped by its height. When the arm is wider
+    # than the bend (heavy weights), the edge dips and turns back up into the bowl.
+    ylb, ryl = XH - 289 * m.cf, 216 * m.cf
+    ya = ylb + ryl
+    ry_e = ryl + 0.7 * m.join
+    rx_e = min(xm, ry_e)
+    low = (xm + V - rx_e, ya - ry_e)
+    down = quad((xm + V, ya), low, True)
+    d = low[0] - V
+    up = quad(low, (V, low[1] + 0.5 * d * ry_e / rx_e), False)
 
-    mid_top, in_top = land(ylb)
-    mid_bot, in_bot = land(ylb - J)
-    p = Pen((xm, XH)).line((xm, ylb + ryl))
-    p.curve(*quad((xm, ylb + ryl), (in_top, ylb), True)[1:])
-    p.line((mid_top, ylb)).line((mid_bot, ylb - J)).line((in_bot, ylb - J))
-    p.curve(*quad((in_bot, ylb - J), (xm + V, ylb + ryl), False)[1:])
-    p.line((xm + V, XH))
-    return [u, u_counter, p.close()], ('straight', 'straight')
+    def wall(y):
+        return V if y >= bowl_l[0][1] else at(bowl_l, t_at(bowl_l, 1, y))[0]
+
+    def meet(c):
+        """Parameter where curve c crosses the bowl wall, or None if it stays inside."""
+        if at(c, 0)[0] <= wall(at(c, 0)[1]):
+            return 0.0
+        if at(c, 1)[0] > wall(at(c, 1)[1]):
+            return None
+        lo, hi = 0.0, 1.0
+        for _ in range(60):
+            mid = (lo + hi) / 2
+            px, py = at(c, mid)
+            lo, hi = (mid, hi) if px > wall(py) else (lo, mid)
+        return lo
+
+    t_up = meet(up)
+    if t_up is not None:
+        down_in, up_in = down, split(up, t_up)[0]
+    else:
+        down_in = split(down, meet(down))[0]
+        p0 = down_in[3]
+        up_in = [p0, p0, p0, p0]
+    crotch = up_in[3]
+    bowl_in = split(bowl_l, t_at(bowl_l, 1, crotch[1]))[1] if crotch[1] < bowl_l[0][1] else bowl_l
+    right = Pen((xm + V, XH)).line((xm + V, ya)).curve(*down_in[1:]).curve(*up_in[1:])
+    right.line(bowl_in[0]).curve(*bowl_in[1:]).curve(*bowl_r[1:]).line((W - V, XH))
+
+    # left counter: a notch between the left wall and the arm
+    left = Pen((V, XH)).line((V, ylb))
+    left.curve(*quad((V, ylb), (xm, ya), False)[1:]).line((xm, XH))
+    return [silhouette, hole(right.close()), hole(left.close())], ('straight', 'straight')
 
 
 GLYPHS = {
