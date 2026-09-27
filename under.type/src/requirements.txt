@@ -1,0 +1,5 @@
+fonttools
+glyphsLib
+fontmake
+numpy
+pillow
