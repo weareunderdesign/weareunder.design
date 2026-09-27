@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 from fontTools.ttLib import TTFont
 from fontTools.pens.basePen import BasePen
-from spec import MASTERS, ZONES, OVERSHOOT, ROUND_TOP
+from spec import MASTERS, ZONES, OVERSHOOT
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TTF = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, '..', 'next', 'under-next.ttf')
@@ -90,9 +90,11 @@ def main():
             check(f'{ch} overshoot bottom', (ys[-1] + 1) - oy, OVERSHOOT[zone])
             cols = np.nonzero(r.any(0))[0]
             mid = (cols[0] + cols[-1]) // 2
-            check(f'{ch} top thickness', runs(r[:, mid])[0][1], m.round_top(zone))
+            reg_counter = {'cap': 591, 'x': 429}[zone]
+            (want_top, _), _ = m.budget(m.top(zone) - m.bottom(zone), [m.round_top(zone)] * 2, [reg_counter])
+            check(f'{ch} top thickness', runs(r[:, mid])[0][1], want_top)
             yc = oy - (ZONES[zone] // 2)
-            check(f'{ch} side thickness', runs(r[yc])[0][1], m.round_side)
+            check(f'{ch} side thickness', runs(r[yc])[0][1], m.R)
         print(f'\n{m.name}')
         print('\n'.join(rows))
     print(f'\n{fails} failing checks')

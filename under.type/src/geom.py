@@ -4,7 +4,7 @@ structure, so the same glyph built for any master is interpolation-compatible.
 A contour is a list of (x, y, type) with type in 'line', 'curve', 'offcurve';
 the last node is the start point (Glyphs convention).
 """
-from spec import ROUND, CORNER
+from spec import ROUND
 
 
 class Hole(list):
@@ -133,3 +133,27 @@ def ring(outer, inner, h=ROUND):
 
 def quad_nodes(pen, c):
     pen.curve(c[1], c[2], c[3])
+
+
+def arch(x0, x1, y_bottom, y_top, ry, apex=None):
+    """Flat bottom, superellipse top (n counter, n silhouette, ascending shapes). Ink direction."""
+    ax = (x0 + x1) / 2 if apex is None else apex
+    p = Pen((x1, y_bottom)).line((x1, y_top - ry))
+    p.curve(*quad((x1, y_top - ry), (ax, y_top), True)[1:])
+    p.curve(*quad((ax, y_top), (x0, y_top - ry), False)[1:])
+    p.line((x0, y_bottom))
+    return p.close()
+
+
+def cup(x0, x1, y_top, y_bottom, ry, low=None):
+    """Flat top, superellipse bottom (u, U, ש). Ink direction."""
+    bx = (x0 + x1) / 2 if low is None else low
+    p = Pen((x0, y_top)).line((x0, y_bottom + ry))
+    p.curve(*quad((x0, y_bottom + ry), (bx, y_bottom), True)[1:])
+    p.curve(*quad((bx, y_bottom), (x1, y_bottom + ry), False)[1:])
+    p.line((x1, y_top))
+    return p.close()
+
+
+def hole(contour):
+    return Hole(reverse(contour))
