@@ -13,7 +13,7 @@ anything changes with weight or size comes only from the rules in spec.py:
 import json
 import os
 from spec import ZONES, EXCEPTIONS, REGULAR
-from geom import Pen, rect, ring, ellipse, ellipse_at, split, t_at, at, quad, arch, cup, hole, Hole, orient, from_cubics
+from geom import Pen, rect, ring, ellipse, ellipse_at, split, t_at, at, quad, arch, arch_band, cup, hole, Hole, orient, from_cubics
 
 CAP, XH, TAIL = ZONES['cap'], ZONES['x'], ZONES['tail']
 DRAWING_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'drawing.json')
@@ -77,9 +77,9 @@ def n(m, d):
     c = W - 2 * V
     apex = V + d['apex'] * c
     ry = d['ry'] * c
-    ink = arch(d['outer_x0'] * V, W, 0, top, ry + J, apex + d.get('shoulder', 0) * c)
-    counter = hole(arch(V, W - V, 0, top - J, ry, apex))
-    return [rect(0, 0, V, XH), ink, counter], ('straight', 'straight')
+    band = arch_band((d['outer_x0'] * V, W, 0, top, ry + J, apex + d.get('shoulder', 0) * c),
+                     (V, W - V, 0, top - J, ry, apex))
+    return [rect(0, 0, V, XH), band], ('straight', 'straight')
 
 
 def e(m, d):
@@ -93,18 +93,19 @@ def e(m, d):
     cut = bb - d['aperture'] * m.aperture
     oRT, oTL, oLB, oBR = ellipse(0, y0, W, y1)
     iRT, iTL, iLB, iBR = ellipse(m.R, y0 + tb, W - m.R, it)
-    silhouette = Pen(oRT[0])
-    for q in (oRT, oTL, oLB, oBR):
-        silhouette.curve(*q[1:])
+    # the eye is closed: a hole. The lower counter is open: it is cut into the outline.
     eye_r = split(iRT, t_at(iRT, 1, bt))[1]
     eye_l = split(iTL, t_at(iTL, 1, bt))[0]
     eye_h = Pen(eye_r[0]).curve(*eye_r[1:]).curve(*eye_l[1:]).close()
+    o_low = split(oBR, t_at(oBR, 1, cut))[0]
+    o_bar = split(oBR, t_at(oBR, 1, bb))[1]
+    i_low = split(iBR, t_at(iBR, 1, cut))[0]
     i_lb = split(iLB, t_at(iLB, 1, bb))[1]
-    i_br = split(iBR, t_at(iBR, 1, cut))[0]
-    o_ap = split(oBR, t_at(oBR, 1, cut))[1]
-    o_ap = split(o_ap, t_at(o_ap, 1, bb))[0]
-    low_h = Pen(i_lb[0]).curve(*i_lb[1:]).curve(*i_br[1:]).line(o_ap[0]).curve(*o_ap[1:]).close()
-    return [silhouette.close(), hole(eye_h), hole(low_h)], ('round', 'round')
+    p = Pen(oLB[0]).curve(*oLB[1:]).curve(*o_low[1:])
+    p.line(i_low[3]).curve(i_low[2], i_low[1], i_low[0])
+    p.curve(i_lb[2], i_lb[1], i_lb[0]).line(o_bar[0])
+    p.curve(*o_bar[1:]).curve(*oRT[1:]).curve(*oTL[1:])
+    return [p.close(), hole(eye_h)], ('round', 'round')
 
 
 def a(m, d):
@@ -123,9 +124,8 @@ def a(m, d):
     apex = d['apex'] * W
     J = m.join
     ry_i = (top - J) - yht
-    hook = arch(x_to, W, yht, top, ry_i + J, apex)
-    hook_counter = hole(arch(x_ti, R0, yht, top - J, ry_i, apex))
-    return [rect(R0, 0, W, yht), hook, hook_counter] + bowl, ('round', 'straight')
+    hook = arch_band((x_to, W, yht, top, ry_i + J, apex), (x_ti, R0, yht, top - J, ry_i, apex), sides=False)
+    return [rect(R0, 0, W, yht + J / 2), hook] + bowl, ('round', 'straight')
 
 
 def s(m, d):
@@ -302,7 +302,6 @@ def shin(m, d):
     xm = V + d['notch_w'] * m.cf
     y0 = m.bottom('x')
     (t,), (inner_h,) = m.budget(XH - y0, [m.round_top('x') * d['bottom']], [474])
-    silhouette = cup(0, W, XH, y0, d['turn'] * (XH - y0))
 
     # right counter: bounded by the arm's edge, the bowl's inner curve and the right wall
     yb = y0 + t
@@ -319,7 +318,8 @@ def shin(m, d):
     low = (xm + V - rx_e, ya - ry_e)
     down = quad((xm + V, ya), low, True)
     reach = low[0] - V
-    up = quad(low, (V, low[1] + d['return'] * reach * ry_e / rx_e), False)
+    # the arm keeps at least half a join of thickness where it meets the left wall
+    up = quad(low, (V, min(low[1] + d['return'] * reach * ry_e / rx_e, ylb - 0.5 * m.join)), False)
 
     def wall(y):
         return V if y >= bowl_l[0][1] else at(bowl_l, t_at(bowl_l, 1, y))[0]
@@ -332,13 +332,20 @@ def shin(m, d):
     crotch = up_in[3]
     bowl_in = split(bowl_l, t_at(bowl_l, 1, crotch[1]))[1] if crotch[1] < bowl_l[0][1] else bowl_l
     up_in = list(up_in[:3]) + [bowl_in[0]]   # meet the bowl exactly at the crotch
-    right = Pen((xm + V, XH)).line((xm + V, ya)).curve(*down_in[1:]).curve(*up_in[1:])
-    right.line(bowl_in[0]).curve(*bowl_in[1:]).curve(*bowl_r[1:]).line((W - V, XH))
-
-    # left counter: a notch between the left wall and the arm
-    left = Pen((V, XH)).line((V, ylb))
-    left.curve(*quad((V, ylb), (xm, ya), False)[1:]).line((xm, XH))
-    return [silhouette, hole(right.close()), hole(left.close())], ('straight', 'straight')
+    # One outline: the U, with both open counters cut in from the top.
+    ry_o = d['turn'] * (XH - y0)
+    p = Pen((0, XH)).line((0, y0 + ry_o))
+    p.curve(*quad((0, y0 + ry_o), (W / 2, y0), True)[1:])
+    p.curve(*quad((W / 2, y0), (W, y0 + ry_o), False)[1:])
+    p.line((W, XH)).line((W - V, XH)).line(bowl_r[3])
+    p.curve(bowl_r[2], bowl_r[1], bowl_r[0])
+    p.curve(bowl_in[2], bowl_in[1], bowl_in[0])
+    p.curve(up_in[2], up_in[1], up_in[0])
+    p.curve(down_in[2], down_in[1], down_in[0])
+    p.line((xm + V, XH)).line((xm, XH)).line((xm, ya))
+    notch = quad((V, ylb), (xm, ya), False)
+    p.curve(notch[2], notch[1], notch[0]).line((V, XH))
+    return [p.close()], ('straight', 'straight')
 
 
 _CONSTRUCT = {

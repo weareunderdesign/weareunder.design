@@ -157,3 +157,25 @@ def cup(x0, x1, y_top, y_bottom, ry, low=None):
 
 def hole(contour):
     return Hole(reverse(contour))
+
+
+def arch_band(outer, inner, sides=True):
+    """An arch with its counter cut in, as one outline (open counters belong to the outline).
+    outer/inner: (x0, x1, y_bottom, y_top, ry, apex)."""
+    ox0, ox1, yb, oyt, ory, oax = outer
+    ix0, ix1, iyb, iyt, iry, iax = inner
+    p = Pen((ox1, yb))
+    if sides:
+        p.line((ox1, oyt - ory))
+    p.curve(*quad((ox1, oyt - ory), (oax, oyt), True)[1:])
+    p.curve(*quad((oax, oyt), (ox0, oyt - ory), False)[1:])
+    if sides:
+        p.line((ox0, yb))
+    p.line((ix0, iyb))
+    if sides:
+        p.line((ix0, iyt - iry))
+    p.curve(*quad((ix0, iyt - iry), (iax, iyt), True)[1:])
+    p.curve(*quad((iax, iyt), (ix1, iyt - iry), False)[1:])
+    if sides:
+        p.line((ix1, iyb))
+    return p.close()

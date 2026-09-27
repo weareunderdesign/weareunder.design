@@ -85,7 +85,32 @@ def build():
     return path
 
 
+def validate():
+    """Outlines never cross themselves, and holes never touch the outline: a hole sharing an
+    edge with the outside shows up as a hairline between masters."""
+    from shapely.geometry import Polygon
+    from shapely.ops import unary_union
+    from fit import flatten
+    problems = []
+    for ch in GLYPHS:
+        for m in MASTERS:
+            contours, _ = GLYPHS[ch](m)
+            polys = [(c, Polygon(flatten(c))) for c in contours]
+            for i, (c, p) in enumerate(polys):
+                if not p.is_valid:
+                    problems.append(f'{ch} {m.name}: contour {i} crosses itself')
+            ink = unary_union([p for c, p in polys if not isinstance(c, Hole)])
+            for i, (c, p) in enumerate(polys):
+                if isinstance(c, Hole) and not ink.buffer(-2).contains(p):
+                    problems.append(f'{ch} {m.name}: hole {i} touches the outline')
+    return problems
+
+
 if __name__ == '__main__':
+    issues = validate()
+    if issues:
+        print('\n'.join(sorted(set(issues))))
+        sys.exit(1)
     p = build()
     print('wrote', os.path.relpath(p))
     if '--no-ttf' not in sys.argv:
