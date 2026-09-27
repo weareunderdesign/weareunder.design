@@ -264,13 +264,16 @@ def shin(m):
     xm = V + cl
     y0 = m.bottom('x')
     (t,), (inner_h,) = m.budget(XH - y0, [m.round_top('x') * 1.1], [474])
-    ry_i = min(247 * m.cf, 0.9 * inner_h)
-    u = cup(0, W, XH, y0, ry_i + t)
+    # Silhouette and counter each keep their own proportion: the counter's bottom
+    # stays nearly round in every weight, the silhouette turns 58% of the way down.
+    ry_o = 0.58 * (XH - y0)
+    ry_i = min(1.18 * (W - 2 * V) / 2, 0.9 * inner_h)
+    u = cup(0, W, XH, y0, ry_o)
     u_counter = hole(cup(V, W - V, XH, y0 + t, ry_i))
-    J = m.join
+    J = m.landing
     dl, ryl = 289 * m.cf, 106 * m.cf
     ylb = XH - dl
-    q_out = quad((0, y0 + ry_i + t), (W / 2, y0), True)
+    q_out = quad((0, y0 + ry_o), (W / 2, y0), True)
     q_in = quad((V, y0 + t + ry_i), (W / 2, y0 + t), True)
 
     def land(y):

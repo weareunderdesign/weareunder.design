@@ -7,7 +7,8 @@ shape minus its counters; every other weight and size comes from these rules.
 2  Strokes         stem and bar thickness per weight
 3  One curve       every round is the same superellipse
 4  Counters        white space scales by one factor per weight, and wins when space runs out
-5  Joins           where a curve meets a stem it thins to the join thickness
+5  Joins           where a curve meets a stem it thins to the join thickness;
+                   landing on another curve it never gets thicker than the Regular join
 6  Apertures       openings are counters too; optical size tightens them
 7  Spacing         sidebearings from the edge type, scaled per weight and size
 """
@@ -106,4 +107,5 @@ class Master:
 
 
 REGULAR = Master('Regular', 'text')
+Master.landing = property(lambda self: min(self.join, REGULAR.join))
 MASTERS = [Master(w, s) for s in ('text', 'display') for w in ('Thin', 'Regular', 'Bold', 'Black')]
